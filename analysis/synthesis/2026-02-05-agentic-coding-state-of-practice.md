@@ -157,6 +157,26 @@ The adoption curve also has a social dimension. Practitioners who work alongside
 
 ---
 
+## 10. Parallel Agents at Scale: Evidence from the Carlini Compiler Project
+
+Nicholas Carlini (Anthropic Safeguards researcher) stress-tested autonomous LLM capabilities by running 16 parallel Claude instances to build a 100,000-line Rust-based C compiler from scratch. Key findings that reinforce and extend the existing patterns:
+
+- **Harness engineering scales:** At 2,000 sessions and $20K spend, the test harness was the single most important investment. Carlini's rule: "the task verifier must be nearly perfect, otherwise Claude will solve the wrong problem." This validates harness engineering as the highest-leverage practice identified in the synthesis.
+
+- **Anthropomorphic test design is a new sub-discipline:** Tests must be designed for the LLM's cognition — limited verbosity, pre-computed aggregates, grep-friendly error formatting, random fast-path sampling. Claude will "happily spend hours running tests instead of making progress" without these constraints.
+
+- **Parallelism has sharp limits:** When tasks decompose cleanly (many failing tests), 16 agents provide near-linear speedup. When the task is monolithic (kernel compilation), all agents converge on the same bottleneck and overwrite each other. The scoping problem from the earlier analysis directly determines whether parallelism helps.
+
+- **Agent specialization works:** Rather than N identical agents, deploying role-specialized agents (core dev, deduplicator, optimizer, quality critic, docs maintainer) enables parallel progress on orthogonal concerns.
+
+- **Git as coordination protocol:** No orchestration agent needed. Agents coordinate through git (task lock files, merge workflows, fresh sessions reading git history). Conversation memory is deliberately discarded each iteration — persistence lives in the repo.
+
+- **Model capability is a moving target:** Opus 4.0 could "barely produce a functional compiler." Opus 4.5 passed test suites but couldn't compile real projects. Opus 4.6 crossed the threshold for kernel compilation. Each generation opens new frontiers.
+
+- **The verification concern persists:** Even at 99% test pass rate, Carlini (with penetration testing background) warns: "The thought of programmers deploying software they've never personally verified is a real concern." Passing tests provides false confidence.
+
+---
+
 ## 9. Open Questions
 
 Several significant questions remain unresolved across these sources:

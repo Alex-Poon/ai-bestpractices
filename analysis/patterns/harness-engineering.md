@@ -137,3 +137,47 @@ This is counterintuitive because prompt engineering gets most of the attention i
 - **Hashimoto, Stage 5:** Identifies the transition to infrastructure-building (harness engineering) as a distinct and advanced stage of AI adoption, beyond prompting proficiency.
 - **EastLondonCoder** (HN): Coined the phrase "continuously tightening the harness" to describe the iterative process of documenting mistakes and constraints.
 - **fix4fun** (HN): Described building custom tools specifically for agent consumption, distinct from human-facing tooling, as a key productivity multiplier.
+
+## Evidence from Scale: The Carlini Compiler Project
+
+Nicholas Carlini's parallel Claude agents project provides the strongest empirical evidence to date for harness engineering as the dominant factor in agent productivity. The project used 16 parallel Claude instances to build a 100,000-line C-to-x86 compiler in Rust over two weeks, at a total cost of approximately $20,000. The compiler successfully compiled the Linux kernel, QEMU, FFmpeg, and Doom.
+
+The project's results validate every principle in this pattern and add several new insights about harness design at scale.
+
+### The Verifier Must Be Nearly Perfect
+
+Carlini stated directly: "Claude will work autonomously to solve whatever problem I give it. So it's important that the task verifier is nearly perfect, otherwise Claude will solve the wrong problem."
+
+This is the harness engineering thesis in one sentence. When agents run autonomously across thousands of sessions, the harness is the only thing standing between productive work and systematic drift. A flawed verifier does not just miss errors --- it actively teaches agents to produce wrong solutions that satisfy the verifier. At scale, this compounds catastrophically.
+
+### Anthropomorphic Test Design
+
+The project introduced a concept worth naming: **anthropomorphic test design** --- designing test infrastructure for the LLM's cognition, not for human developers. This goes beyond "structured output" into deliberately shaping the information environment the agent operates in.
+
+Specific techniques used:
+
+- **Limited output verbosity.** Test output was kept minimal to prevent context window pollution. Verbose test output wastes tokens and increases the chance of the agent fixating on irrelevant details rather than the actual failure.
+
+- **Pre-computed aggregate statistics.** Summary statistics (pass rates, failure counts, regression counts) were computed by the harness and presented to the agent, rather than requiring the agent to recalculate them from raw output. Every token the agent spends on arithmetic is a token not spent on reasoning about the actual problem.
+
+- **ERROR-prefixed single-line formatting.** Error messages were formatted with an "ERROR" prefix on single lines, making them grep-friendly for both agents and humans. This is structured output taken to its logical extreme --- the format is optimized for mechanical parsing, not human readability.
+
+- **Fast random sampling (`--fast` option).** A `--fast` flag ran only 1-10% of tests, randomly sampled. Carlini observed that without this, agents would "happily spend hours running tests instead of making progress." This is a critical insight: agents have no internal sense of time-cost tradeoff. The harness must impose it.
+
+- **Agent-maintained READMEs and progress files.** Agents were required to update README files and progress logs frequently. Since each session starts fresh (no conversation memory), these files served as the persistent memory layer --- exactly the AGENTS.md pattern described above, but written by the agents themselves as part of their workflow.
+
+### CI/CD as Harness Enforcement
+
+The project enforced a strict rule: new commits cannot break existing passing tests. This is CI/CD used not as a development convenience but as a hard constraint on agent behavior. It prevents the common failure mode where an agent "fixes" one thing by breaking three others, and the breakage is not caught until much later.
+
+### The Economics of Harness Investment
+
+The total project cost was approximately $20,000 across roughly 2,000 sessions, producing 100,000 lines of working compiler code. The harness infrastructure --- the test suite, the anthropomorphic output formatting, the CI enforcement, the task locking system --- represented a significant upfront investment. But the return was unambiguous: 100,000 lines of code that compiled real-world software.
+
+Without the harness, 16 parallel agents would have produced 16 parallel streams of confidently wrong code overwriting each other. The harness is what converted raw compute into usable output.
+
+This is the strongest quantitative evidence yet that **harness engineering is the bottleneck, not model capability.** The model was the same Claude available to everyone. The harness is what made the difference.
+
+### Source
+
+- **Carlini, Nicholas.** "Building a C compiler with Claude as my coding agent." Anthropic Engineering Blog. https://www.anthropic.com/engineering/building-c-compiler

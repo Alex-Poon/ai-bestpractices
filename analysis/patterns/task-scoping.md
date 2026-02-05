@@ -99,3 +99,50 @@ Before delegating, ask yourself: "If I explained this task to a competent develo
 - **apercu** (HN): Noted that inability to articulate success criteria signals a task is not ready for delegation.
 - **EastLondonCoder** (HN): Connected scoping discipline to the broader practice of harness tightening.
 - **Hashimoto, Stage 2**: Describes the transition from chatbot usage to scoped task delegation as the key skill inflection point.
+
+## Parallelism and Scoping: Lessons from 16 Agents
+
+Nicholas Carlini's parallel compiler project (16 Claude instances building a C compiler in Rust) provides direct empirical evidence for how task scoping interacts with parallelism. The core lesson: **parallelism requires task structure. If you cannot decompose the problem, more agents do not help.**
+
+### When Parallelism Is Trivial
+
+When many independent tasks exist, parallelism is straightforward. In the compiler project, when the test suite had hundreds of failing tests, each agent could pick a different failing test and work on it independently. The tasks were naturally decomposed --- each test represented a self-contained problem with clear success criteria. This is the ideal case: the work is already scoped at the leaf level, and agents simply claim leaves from the tree.
+
+### When Parallelism Fails
+
+When the task is monolithic, parallelism provides zero advantage. Carlini encountered this when attempting to compile the Linux kernel: all 16 agents would hit the same bug, independently produce the same fix, and then overwrite each other when attempting to commit. More agents did not mean faster progress --- it meant more wasted compute on duplicate work.
+
+This is a direct consequence of poor scoping. A single undifferentiated task ("make the compiler work on the Linux kernel") has no natural decomposition points. Every agent sees the same problem, applies the same reasoning, and arrives at the same (or conflicting) solution.
+
+### Oracle-Based Testing: Creating Task Boundaries Where None Exist
+
+The project's solution to monolithic tasks is worth studying as a scoping technique: **oracle-based testing**. When compiling a large program produced a single opaque failure, the project used GCC (a known-good compiler) as an oracle:
+
+1. Compile the program with GCC to produce a known-correct binary.
+2. Randomly split compilation units between the project compiler and GCC.
+3. Binary-search to identify which specific compilation unit causes the failure.
+4. The failing compilation unit becomes a scoped, self-contained task an agent can work on.
+
+This technique **manufactures task boundaries** where none naturally exist. It converts a monolithic problem ("the compiled program crashes") into a leaf-level task ("this specific function in this specific file is compiled incorrectly"). The technique is generalizable: whenever you face an opaque failure, use a known-good reference implementation to bisect the problem space.
+
+### Agent Role Specialization as a Scoping Strategy
+
+Rather than deploying N identical generic agents, the project used role specialization to create orthogonal task scopes:
+
+- **Core developers** worked on fixing failing tests and adding features.
+- **A deduplicator agent** identified and consolidated duplicate code across the codebase.
+- **A performance optimizer** focused exclusively on improving compilation speed.
+- **A code quality critic** reviewed code for style, correctness patterns, and potential issues.
+- **A documentation maintainer** kept README files and progress logs current.
+
+Each specialist works on a different dimension of the problem. Their scopes are orthogonal by design --- the deduplicator's changes rarely conflict with the optimizer's changes. This is task scoping applied at the agent level: instead of scoping individual tasks, you scope entire agent roles so that their work products do not overlap.
+
+### Key Insight
+
+The relationship between parallelism and scoping is fundamental: parallel agents amplify whatever task structure exists. If the work is well-decomposed into independent leaves, N agents provide up to Nx speedup. If the work is a single monolithic task, N agents provide 1x speedup at Nx cost.
+
+Before adding more agents, ask: "Can I define N independent tasks with clear success criteria?" If not, invest in creating task structure (oracle testing, role specialization, feature decomposition) before investing in parallelism.
+
+### Source
+
+- **Carlini, Nicholas.** "Building a C compiler with Claude as my coding agent." Anthropic Engineering Blog. https://www.anthropic.com/engineering/building-c-compiler
