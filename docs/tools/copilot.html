@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GitHub Copilot | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="Where inline completion fits in the age of agentic coding.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="GitHub Copilot">
+  <meta property="og:description" content="Where inline completion fits in the age of agentic coding.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-tools"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../tools/index.html">Tool Landscape</a></li>
+      
+    
+    <li aria-current="page">GitHub Copilot</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">GitHub Copilot</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">3 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/copilot.html" class="tag-pill">copilot</a>
+  
+  
+  
+  
+  <a href="../tags/tool-comparison.html" class="tag-pill">tool-comparison</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <p>GitHub Copilot is the most widely deployed AI coding tool, with access available to over 100 million developers through the GitHub ecosystem. It started as an inline autocomplete tool and has gradually expanded into chat and agentic capabilities, but its core strength remains fast, in-flow code completion.</p>
+<h2 id="what-copilot-does">What Copilot Does</h2>
+<p><strong>Inline autocomplete.</strong> Copilot&rsquo;s primary feature is suggesting code as you type. It runs as an extension in VS Code, JetBrains, Neovim, and other editors, providing context-aware completions drawn from the current file and surrounding project context. This is what most users know Copilot for, and it remains the most polished autocomplete experience available.</p>
+<p><strong>Copilot Chat.</strong> A conversational interface within the IDE for asking questions about code, generating snippets, and explaining existing code. Uses the same model infrastructure as the completion engine.</p>
+<p><strong>Copilot Workspace.</strong> GitHub&rsquo;s agentic offering, where users describe a task and the system plans and implements changes across files. This moves Copilot toward the autonomous execution model that Claude Code and Amp offer, though it is newer and less battle-tested.</p>
+<h2 id="where-copilot-fits-in-the-landscape">Where Copilot Fits in the Landscape</h2>
+<p>Copilot&rsquo;s positioning is distinct from the agentic tools covered elsewhere in this section:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Dimension</th>
+          <th>Copilot</th>
+          <th>Agentic Tools (Claude Code, Amp)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Primary mode</td>
+          <td>Autocomplete</td>
+          <td>Task delegation</td>
+      </tr>
+      <tr>
+          <td>User role</td>
+          <td>Writing code with suggestions</td>
+          <td>Describing tasks, reviewing output</td>
+      </tr>
+      <tr>
+          <td>Feedback loop</td>
+          <td>Immediate (keystroke-level)</td>
+          <td>Delayed (task-level)</td>
+      </tr>
+      <tr>
+          <td>Pricing</td>
+          <td>$10-19/month</td>
+          <td>$100-200/month or pay-as-you-go</td>
+      </tr>
+      <tr>
+          <td>Editor support</td>
+          <td>Broad (VS Code, JetBrains, Neovim+)</td>
+          <td>Narrow (CLI or single IDE)</td>
+      </tr>
+  </tbody>
+</table>
+<p>The fundamental difference is the unit of interaction. Copilot operates at the line or block level &ndash; you write code and it helps you write it faster. Agentic tools operate at the task level &ndash; you describe what needs to happen and the agent executes it. These are complementary, not competing, workflows.</p>
+<h2 id="strengths">Strengths</h2>
+<ul>
+<li><strong>Breadth of editor support.</strong> Copilot works in more editors than any competitor, making it the default choice for teams with diverse editor preferences.</li>
+<li><strong>Low cost.</strong> At $10-19/month, Copilot is the cheapest option in the market. For teams, the cost difference compared to agentic tools is significant.</li>
+<li><strong>Low friction.</strong> Autocomplete requires no change in workflow. Developers write code exactly as before; suggestions appear automatically.</li>
+<li><strong>GitHub ecosystem integration.</strong> For teams already using GitHub for source control, CI/CD, and project management, Copilot fits naturally into the existing toolchain.</li>
+</ul>
+<h2 id="limitations">Limitations</h2>
+<ul>
+<li><strong>Autocomplete ceiling.</strong> Inline completion accelerates writing code you already know how to write. It is less useful for tasks that require multi-file reasoning, architectural decisions, or working in unfamiliar codebases &ndash; areas where agentic tools excel.</li>
+<li><strong>Agentic features are newer.</strong> Copilot Workspace is a step toward agentic workflows, but it has less practitioner data and fewer battle-tested capabilities than dedicated tools like Claude Code or Amp.</li>
+<li><strong>Model transparency.</strong> Copilot is primarily OpenAI-powered, but the specific models and routing are not as transparent as tools that let users select or observe which model handles each task.</li>
+</ul>
+<h2 id="practical-guidance">Practical Guidance</h2>
+<p>Many practitioners use Copilot alongside an agentic tool. Copilot handles the moment-to-moment coding flow &ndash; completing lines, suggesting patterns, filling in boilerplate. The agentic tool handles larger tasks &ndash; multi-file refactors, feature implementation from scratch, debugging complex issues.</p>
+<p>If your team is evaluating whether to adopt AI coding tools, Copilot is often the lowest-risk starting point: cheap, broadly supported, and requiring no workflow changes. If your team already uses Copilot and wants more, the next step is typically adding an agentic tool for tasks that autocomplete cannot address.</p>
+<p>For the broader decision framework, see the <a href="../references/tool-landscape.html">Practitioner&rsquo;s Tool Comparison</a>.</p>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../tools/mcp-ecosystem.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">The MCP Ecosystem</span>
+        </a>
+        
+        
+        <a href="../tools/amp.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Amp Code</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-copilot-does">What Copilot Does</a></li>
+    <li><a href="#where-copilot-fits-in-the-landscape">Where Copilot Fits in the Landscape</a></li>
+    <li><a href="#strengths">Strengths</a></li>
+    <li><a href="#limitations">Limitations</a></li>
+    <li><a href="#practical-guidance">Practical Guidance</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

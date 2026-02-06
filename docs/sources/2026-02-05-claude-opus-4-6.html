@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claude Opus 4.6 | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Claude Opus 4.6">
+  <meta property="og:description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-sources"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../sources/index.html">Sources</a></li>
+      
+    
+    <li aria-current="page">Claude Opus 4.6</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Claude Opus 4.6</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-05">
+    February 5, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">3 min read</span>
+
+  
+  <span class="tier-badge tier-badge--2">Tier 2</span>
+  
+
+  <div class="meta-links">
+    
+    <a href="https://www.anthropic.com/news/claude-opus-4-6" class="meta-link" target="_blank" rel="noopener">Source &#8599;</a>
+    
+    
+    
+    <a href="https://news.ycombinator.com/item?id=46902223" class="meta-link" target="_blank" rel="noopener">HN &#8599;</a>
+    
+    
+  </div>
+
+  
+  <span class="meta-stat">1981 points</span>
+  
+  
+  
+  <span class="meta-stat">106 comments</span>
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/model-release.html" class="tag-pill">model-release</a>
+  
+  
+  
+  
+  <a href="../tags/anthropic.html" class="tag-pill">anthropic</a>
+  
+  
+  
+  
+  <a href="../tags/claude.html" class="tag-pill">claude</a>
+  
+  
+  
+  
+  <a href="../tags/opus.html" class="tag-pill">opus</a>
+  
+  
+  
+  
+  <a href="../tags/benchmarks.html" class="tag-pill">benchmarks</a>
+  
+  
+  
+  
+  <a href="../tags/agent-teams.html" class="tag-pill">agent-teams</a>
+  
+  
+  
+  
+  <a href="../tags/long-context.html" class="tag-pill">long-context</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <h2 id="summary">Summary</h2>
+<p>Anthropic announced Claude Opus 4.6, their most advanced model to date, featuring a landmark 1 million token context window in beta &ndash; the first for an Opus-class model. The release emphasizes substantial improvements in agentic coding, long-context work, and sustained multi-step workflows.</p>
+<p>On benchmarks, Opus 4.6 achieved the top score on Terminal-Bench 2.0 for agentic coding and led on Humanity&rsquo;s Last Exam for complex reasoning. On GDPval-AA, which measures economically valuable work tasks, it outperformed the industry&rsquo;s next-best model by a significant margin. Long-context retrieval accuracy hit 76% on needle-in-haystack tests compared to much lower scores from competitors.</p>
+<p>The release coincided with Claude Code version 2.1.32, which introduced several notable features: a research preview of agent teams for multi-agent collaboration, automatic memory recording and recall during work sessions, and a &ldquo;Summarize from here&rdquo; message selector feature. The agent teams feature requires an experimental flag and is described as token-intensive.</p>
+<p>Anthropic also offered promotional credits to encourage testing the new model. The release came less than 35 minutes before OpenAI announced GPT-5.3 Codex, creating a memorable moment of simultaneous frontier model launches.</p>
+<p>Beyond coding, the model handles financial analysis, research, and document work. Safety evaluations show it maintains or exceeds standards of prior frontier models with low rates of misaligned behavior.</p>
+<h2 id="key-insights">Key Insights</h2>
+<ul>
+<li><strong>1M context is the real headline</strong>: While benchmarks impress, the Opus-class 1M token context window opens new use cases for working with entire codebases</li>
+<li><strong>Agent teams go native</strong>: Multi-agent collaboration is now built into Claude Code, reducing friction compared to third-party coordination tools</li>
+<li><strong>Competitive pressure accelerates releases</strong>: The near-simultaneous launch with GPT-5.3 Codex highlights the pace of frontier model competition</li>
+</ul>
+<h2 id="notable-quotes">Notable Quotes</h2>
+<blockquote>
+<p>&ldquo;We build Claude with Claude&rdquo; — Anthropic (per blibble&rsquo;s commentary)</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;1M context on an Opus-class model is the real headline&rdquo; — dmk</p>
+</blockquote>
+<h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
+<p>The discussion generated 1981 points and 106 comments. Key themes:</p>
+<p><strong>Benchmark performance and real-world testing</strong></p>
+<ul>
+<li><strong>ck_one</strong>: Tested the 1M context by searching all Harry Potter books for spells, finding 49 of 50 documented spells across four books fitting within the context window</li>
+<li><strong>gizmodo59</strong>: Noted OpenAI&rsquo;s GPT-5.3 Codex launched within 35 minutes claiming higher Terminal-Bench scores, calling it the shortest-lived benchmark lead</li>
+<li><strong>blueblisters</strong>: Found Opus 4.6 helpful when GPT-5.2 got stuck on unusual tasks like debugging VIO algorithms, though considers GPT models to have higher raw intelligence for coding</li>
+</ul>
+<p><strong>Practical concerns and limitations</strong></p>
+<ul>
+<li><strong>hmaxwell</strong>: Complained about strict rate limits making it impractical despite good output quality</li>
+<li><strong>replwoacause</strong>: Described being conditioned to avoid Opus models on the Pro plan because light usage depletes daily allocation</li>
+<li><strong>atonse</strong>: Reported the model making basic mistakes in its first 15 minutes of use, particularly when editing its own MCP configs</li>
+</ul>
+<p><strong>Agent teams and multi-agent collaboration</strong></p>
+<ul>
+<li><strong>pjot</strong>: Documented the Claude Code 2.1.32 release notes showing agent teams as a research preview requiring an experimental flag</li>
+<li><strong>anupamchugh</strong>: Compared the built-in agent teams to existing mcp-agent-mail patterns, noting the native version wins on reduced friction for within-session coordination</li>
+<li><strong>Someone1234</strong>: Raised questions about the economics of running multiple LLM agents and whether costs are falling enough to make agent teams practical</li>
+</ul>
+<p><strong>Strategic observations</strong></p>
+<ul>
+<li><strong>legitster</strong>: Questioned Anthropic&rsquo;s strategy of pursuing both consumer and developer markets, noting Claude excels at coding but ChatGPT and Gemini perform better for general research</li>
+</ul>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../sources/2026-01-29-claude-code-benchmarks.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Claude Code daily benchmarks for degradation tracking</span>
+        </a>
+        
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#key-insights">Key Insights</a></li>
+    <li><a href="#notable-quotes">Notable Quotes</a></li>
+    <li><a href="#hn-discussion-highlights">HN Discussion Highlights</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

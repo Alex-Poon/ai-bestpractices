@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026: The Year the IDE Died (Steve Yegge and Gene Kim) | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="2026: The Year the IDE Died (Steve Yegge and Gene Kim)">
+  <meta property="og:description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-sources"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../sources/index.html">Sources</a></li>
+      
+    
+    <li aria-current="page">2026: The Year the IDE Died (Steve Yegge and Gene Kim)</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">2026: The Year the IDE Died (Steve Yegge and Gene Kim)</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2025-12-10">
+    December 10, 2025
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">3 min read</span>
+
+  
+  <span class="tier-badge tier-badge--2">Tier 2</span>
+  
+
+  <div class="meta-links">
+    
+    <a href="https://www.youtube.com/watch?v=7Dtu2bilcFs" class="meta-link" target="_blank" rel="noopener">Source &#8599;</a>
+    
+    
+    
+    <a href="https://news.ycombinator.com/item?id=46218922" class="meta-link" target="_blank" rel="noopener">HN &#8599;</a>
+    
+    
+  </div>
+
+  
+  <span class="meta-stat">7 points</span>
+  
+  
+  
+  <span class="meta-stat">4 comments</span>
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/ide.html" class="tag-pill">ide</a>
+  
+  
+  
+  
+  <a href="../tags/ai-coding-tools.html" class="tag-pill">ai-coding-tools</a>
+  
+  
+  
+  
+  <a href="../tags/vibe-coding.html" class="tag-pill">vibe-coding</a>
+  
+  
+  
+  
+  <a href="../tags/developer-workflows.html" class="tag-pill">developer-workflows</a>
+  
+  
+  
+  
+  <a href="../tags/future-of-coding.html" class="tag-pill">future-of-coding</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <h2 id="summary">Summary</h2>
+<p>This HN submission links to a YouTube talk by Steve Yegge and Gene Kim exploring how AI coding tools might replace the traditional IDE as the primary programming environment. The submitter (mikebiglan) frames the discussion around several key questions: how far IDEs will change, whether developers will still read and reason about code directly, and what the shift means for both senior developers and students entering the field.</p>
+<p>The talk argues that what we think of as the IDE today will not remain the primary programming tool of the future. The vision includes modularity and swarms of agents working in parallel, with context windows as a key architectural constraint. The speakers suggest that the transition is already underway, with AI-first and workflow-first environments replacing file-and-buffer-first approaches.</p>
+<p>The HN discussion, though small (4 comments), produced a notably detailed response from the submitter outlining a nuanced position. The key argument is that while AI will dramatically change the developer environment, the idea that professionals will stop reading code entirely is premature. For production systems that need debugging, security auditing, and team handoffs, developers still need to understand invariants, trace execution, and reason about state. Even if AI writes 95% of the code, humans must validate it against real-world constraints.</p>
+<p>The discussion also raised the importance of static typing and guaranteed-safe refactoring tools as prerequisites for AI coding to improve further, suggesting that languages like C# with tools like ReSharper, combined with AI that can call those tools and run unit tests, represent a promising direction.</p>
+<h2 id="key-insights">Key Insights</h2>
+<ul>
+<li><strong>IDE evolution, not death</strong>: The primary programming environment will become AI-first and workflow-first, but it will retain familiar IDE-like features for navigation, diffs, and debugging, representing evolution rather than complete replacement.</li>
+<li><strong>Code reading remains essential</strong>: For non-trivial production systems, professionals will continue reading code, reviewing diffs, and reasoning about critical paths, even as AI handles most code generation.</li>
+<li><strong>Agent orchestration as the new paradigm</strong>: The future developer workflow centers on decomposing work, letting agents propose changes in isolated branches, and spending most time reviewing and steering rather than typing.</li>
+<li><strong>Risk of skill atrophy for newcomers</strong>: Students who rely entirely on AI without building mental models of data structures, control flow, and debugging will be building on sand.</li>
+</ul>
+<h2 id="notable-quotes">Notable Quotes</h2>
+<blockquote>
+<p>&ldquo;shifting more of your time from typing to thinking&rdquo; — mikebiglan (HN)</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;building on sand&rdquo; — mikebiglan (HN, on students who skip fundamentals)</p>
+</blockquote>
+<h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
+<p>The discussion generated 7 points and 4 comments. Key themes:</p>
+<p><strong>Static Typing as Enabler</strong></p>
+<ul>
+<li><strong>raw_anon_1111</strong>: Argued that AI coding will only improve significantly with statically typed languages and tools that can do guaranteed-safe refactoring, envisioning a combination of C#, ReSharper-style tools, and AI that can do deterministic type checks.</li>
+</ul>
+<p><strong>Talk Reception</strong></p>
+<ul>
+<li><strong>lkbm</strong>: Found Yegge&rsquo;s talks always fun and insightful but noted this particular one was light on concrete content.</li>
+<li><strong>Sevii</strong>: Expressed enthusiasm for Claude Code making IDEs less necessary, preferring a terminal-and-light-editor workflow.</li>
+</ul>
+<p><strong>Nuanced Future View</strong></p>
+<ul>
+<li><strong>mikebiglan</strong>: Provided a detailed five-point framework arguing that (1) the IDE will evolve into a new category, (2) professionals will still read code, (3) senior devs risk dismissing the new modality, (4) students must still learn fundamentals, and (5) humans should stay in control of the development process.</li>
+</ul>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../sources/2026-02-01-state-of-ai-2026.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">State of AI in 2026: LLMs, Coding, Scaling Laws, China, Agents, GPUs, AGI</span>
+        </a>
+        
+        
+        <a href="../sources/2026-01-01-deepseek-bigger-models-less.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">DeepSeek kicks off 2026 with paper signalling push to train bigger models for less</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#key-insights">Key Insights</a></li>
+    <li><a href="#notable-quotes">Notable Quotes</a></li>
+    <li><a href="#hn-discussion-highlights">HN Discussion Highlights</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

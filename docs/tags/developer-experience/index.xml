@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Developer-Experience on AI Best Practices Knowledge Base</title>
+    <link>/tags/developer-experience.html</link>
+    <description>Recent content in Developer-Experience on AI Best Practices Knowledge Base</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/developer-experience/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Opus 4.5 is not the normal AI agent experience</title>
+      <link>/sources/2026-01-06-opus-4-5-agent-experience.html</link>
+      <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-01-06-opus-4-5-agent-experience.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Burke Holland wrote an enthusiastic account of his experience using Claude&amp;rsquo;s Opus 4.5 model, arguing it represents a fundamental shift in AI agent capabilities that goes beyond anything he had previously experienced. His central claim is that Opus 4.5 delivers on promises that earlier AI coding agents could not fulfill, particularly around autonomous problem-solving and first-attempt success rates.&lt;/p&gt;&#xA;&lt;p&gt;Holland completed four substantial projects in rapid succession: an image conversion utility, a video editor, a social media automation app, and a route optimization tool. He highlighted the model&amp;rsquo;s ability to handle full-stack development spanning frontend, backend, authentication, database integration, and cloud infrastructure &amp;ndash; areas that had traditionally been weak points for AI agents.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How Vibe Coding Is Killing Open Source</title>
+      <link>/sources/2026-02-02-vibe-coding-killing-open-source.html</link>
+      <pubDate>Mon, 02 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-02-02-vibe-coding-killing-open-source.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This Hackaday article reports on research examining how vibe coding — using LLM chatbots to generate code — creates systemic problems for open source projects. The core argument is that AI-mediated coding disrupts the traditional feedback loops between developers and open source communities in several damaging ways.&lt;/p&gt;&#xA;&lt;p&gt;First, developer engagement shifts away from open source communities entirely. Instead of visiting project websites, consulting documentation, or participating in forums, users interact exclusively with chatbots, eliminating opportunities for sponsorships, bug reports, and community building. Second, LLMs introduce library selection bias by favoring dependencies most prevalent in their training data rather than promoting merit-based adoption, concentrating usage around already-popular projects while marginalizing smaller initiatives. Third, a quality control crisis emerges because LLMs will not interact with library developers, submit usable bug reports, or be aware of potential issues.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tell HN: Claude Has Had 57 Incidents in the Past 3 Months</title>
+      <link>/sources/2026-02-04-claude-57-incidents-3-months.html</link>
+      <pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-02-04-claude-57-incidents-3-months.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This HN text post by shikkra documents reliability concerns with Anthropic&amp;rsquo;s Claude service, providing a detailed incident count from the official status page (status.claude.com). The author, a $100/month Max plan subscriber, was prompted to investigate after encountering a retry issue where Claude attempted to generate a response 10 times with Opus 4.5 and extended thinking enabled before silently switching to a different model without indication or confirmation.&lt;/p&gt;&#xA;&lt;p&gt;The incident data paints a concerning picture of service reliability. February 2026 had 10 incidents in just 4 days. January 2026 had 26 incidents. December 2025 had 21 incidents. At least 16 of these directly affected Claude Opus 4.5: 3 incidents in December (21-23), 9 in January (across 7-28), and 4 in February (1-4). Ten additional incidents affected the claude.ai platform itself.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI coding assistants are getting worse?</title>
+      <link>/sources/2026-01-08-ai-coding-getting-worse.html</link>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-01-08-ai-coding-getting-worse.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This IEEE Spectrum article by Jamie Twiss presents the provocative claim that AI coding assistants are experiencing degradation rather than improvement. The central narrative comes from power users who report that these tools have hit a plateau, with some even declining in capability. The article identifies what it calls &amp;ldquo;silent failures&amp;rdquo; &amp;ndash; situations where AI coding tools appear functional on the surface but are actually underperforming in subtle, hard-to-detect ways.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AGENTS.md Guide | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="How to write effective AGENTS.md and CLAUDE.md files — the evidence-backed approach to AI harness configuration.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="AGENTS.md Guide">
+  <meta property="og:description" content="How to write effective AGENTS.md and CLAUDE.md files — the evidence-backed approach to AI harness configuration.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-workflows"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../workflows/index.html">Workflows</a></li>
+      
+    
+    <li aria-current="page">AGENTS.md Guide</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">AGENTS.md Guide</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">6 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/agents-md.html" class="tag-pill">agents-md</a>
+  
+  
+  
+  
+  <a href="../tags/harness-engineering.html" class="tag-pill">harness-engineering</a>
+  
+  
+  
+  
+  <a href="../tags/claude-code.html" class="tag-pill">claude-code</a>
+  
+  
+  
+  
+  <a href="../tags/best-practices.html" class="tag-pill">best-practices</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <p>AGENTS.md and CLAUDE.md are project-root files that AI coding agents read at the start of every session. They give agents persistent, project-specific context that would otherwise be lost between conversations. Different tools use different filenames &ndash; Claude Code reads CLAUDE.md, Amp reads AGENTS.md, and most tools now support both &ndash; but the purpose is identical: tell the agent how to work in this codebase.</p>
+<p>This guide covers what to put in these files, how to maintain them, and the evaluation evidence showing why this approach works.</p>
+<h2 id="why-passive-context-wins">Why Passive Context Wins</h2>
+<p>Vercel&rsquo;s engineering team ran a formal evaluation comparing two approaches to providing agents with documentation: AGENTS.md files (passive context in the system prompt) versus skills (active retrieval tools the agent invokes on demand). The results were decisive.</p>
+<p>A compressed 8KB documentation index embedded in AGENTS.md achieved a 100% pass rate on evaluation tasks targeting Next.js 16 APIs absent from model training data. Skills-based retrieval maxed out at 79% &ndash; and that required explicit instructions telling the agent to use the skill. Without those instructions, skills performed no better than the 53% baseline. The root cause: in over half of eval cases, the agent simply never invoked the skill. It failed to recognize when it needed documentation help.</p>
+<p>The takeaway is structural. Passive context eliminates the decision point that trips up active retrieval. There is no sequencing issue, no need for the agent to decide whether to look something up. The documentation is present in every turn. Small wording changes in skill instructions produced dramatic behavioral shifts, revealing the fragility of the retrieval approach. Passive context sidesteps this fragility entirely.</p>
+<p>For the full evaluation details, see <a href="../sources/2026-01-29-agents-md-outperforms-skills/">AGENTS.md Outperforms Skills</a>.</p>
+<h2 id="what-to-include">What to Include</h2>
+<h3 id="build-and-test-commands">Build and Test Commands</h3>
+<p>The most immediately useful entries. Every agent session should know how to build the project and run its tests without asking.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#75715e">## Build &amp; Test
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Build: <span style="color:#e6db74">`make build`</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Run all tests: <span style="color:#e6db74">`make test`</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Run single test file: <span style="color:#e6db74">`pytest tests/test_specific.py -v`</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Lint: <span style="color:#e6db74">`make lint`</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Parser-only tests (fast): <span style="color:#e6db74">`make test-parser`</span>
+</span></span></code></pre></div><p>Include the fast paths. Agents have no internal sense of time-cost tradeoff &ndash; without a fast test command, they will run the full suite on every iteration.</p>
+<h3 id="architecture-constraints">Architecture Constraints</h3>
+<p>Rules about how modules relate to each other. These are things the agent cannot infer from reading individual files &ndash; they require understanding the system design.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#75715e">## Architecture
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Module <span style="color:#e6db74">`api/`</span> never imports from <span style="color:#e6db74">`cli/`</span>. Data flows through <span style="color:#e6db74">`core/`</span>.
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> All database access goes through <span style="color:#e6db74">`db/repository.py`</span>. No raw SQL elsewhere.
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Frontend components in <span style="color:#e6db74">`components/`</span> must not import from <span style="color:#e6db74">`pages/`</span>.
+</span></span></code></pre></div><h3 id="coding-conventions">Coding Conventions</h3>
+<p>Style rules that differ from common defaults. Do not duplicate what your linter already enforces &ndash; focus on conventions the agent cannot learn from tooling alone.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#75715e">## Conventions
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Error handling: use Result types, not exceptions, in the core module.
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Naming: snake_case for functions, PascalCase for classes. No abbreviations.
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Use <span style="color:#e6db74">`clock.now()`</span> from <span style="color:#e6db74">`utils/clock.py`</span>, never <span style="color:#e6db74">`datetime.now()`</span>.
+</span></span></code></pre></div><h3 id="known-mistakes">Known Mistakes</h3>
+<p>Hard-won corrections from real agent errors. These are the highest-value entries because they prevent specific, observed failure modes.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#75715e">## Known Mistakes
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> When modifying the parser, run <span style="color:#e6db74">`make test-parser`</span> first. Full suite takes
+</span></span><span style="display:flex;"><span>  10 minutes; parser subset takes 30 seconds.
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> The <span style="color:#e6db74">`config.yaml`</span> loader silently ignores unknown keys. If you add a new
+</span></span><span style="display:flex;"><span>  config field, also update the schema validator in <span style="color:#e6db74">`config/schema.py`</span>.
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Do NOT use <span style="color:#e6db74">`datetime.now()`</span> anywhere. Use <span style="color:#e6db74">`clock.now()`</span> from <span style="color:#e6db74">`utils/clock.py`</span>
+</span></span><span style="display:flex;"><span>  so tests can control time.
+</span></span></code></pre></div><p>The best entries follow the pattern: &ldquo;When doing X, always Y, because Z.&rdquo; The &ldquo;because&rdquo; clause helps the agent generalize rather than memorize a brittle rule.</p>
+<h3 id="never-do-this-rules">&ldquo;Never Do This&rdquo; Rules</h3>
+<p>Explicit prohibitions that prevent recurring categories of mistakes.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#75715e">## Never Do This
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Never commit directly to <span style="color:#e6db74">`main`</span>. Always use a feature branch.
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Never disable type checking with <span style="color:#e6db74">`# type: ignore`</span> without a comment.
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Never use <span style="color:#e6db74">`subprocess.shell=True`</span>. Use the <span style="color:#e6db74">`run_command()`</span> wrapper.
+</span></span></code></pre></div><h2 id="how-to-start">How to Start</h2>
+<p>Do not spend an hour writing rules before your first agent session. Run the session, see what goes wrong, then document.</p>
+<ol>
+<li>Start with just build and test commands</li>
+<li>After each session, add entries for any mistakes you corrected</li>
+<li>After a week, you will have a file that reflects your codebase&rsquo;s actual failure modes</li>
+</ol>
+<p>Premature rules tend to be either too vague to help or wrong about what actually matters. Let the file grow empirically.</p>
+<h2 id="maintenance-discipline">Maintenance Discipline</h2>
+<p><strong>Add entries immediately.</strong> When you correct an agent mistake, add the entry before moving on. This takes thirty seconds. &ldquo;Later&rdquo; means &ldquo;never.&rdquo; If you find yourself typing the same correction twice across sessions, it belongs in the file.</p>
+<p><strong>Remove stale entries weekly.</strong> Rules referencing deprecated APIs, resolved bugs, or refactored modules add noise and can mislead the agent. A stale file is worse than no file at all.</p>
+<p><strong>Reorganize when it gets long.</strong> If the file exceeds roughly 200 lines, split it. Many tools support directory-level files (e.g., <code>src/api/CLAUDE.md</code> for API-specific rules). Keep each file focused and relevant to the code nearby.</p>
+<p><strong>Compress aggressively.</strong> The Vercel evaluation showed that an 8KB compressed index performed as well as full documentation content. Brevity is not a compromise &ndash; it is a feature. Agents process concise, structured rules better than narrative text.</p>
+<h2 id="anti-patterns">Anti-Patterns</h2>
+<h3 id="over-documenting-before-you-have-data">Over-Documenting Before You Have Data</h3>
+<p>Writing extensive rules before your first session. You do not know what the agent will get wrong yet. Start sparse, add entries empirically.</p>
+<h3 id="duplicating-what-the-code-already-says">Duplicating What the Code Already Says</h3>
+<p>If your linter enforces a rule, you do not need to repeat it in AGENTS.md. Focus on things the agent cannot learn from the code or tooling alone: architectural intent, non-obvious constraints, historical context.</p>
+<h3 id="writing-rules-without-verification-commands">Writing Rules Without Verification Commands</h3>
+<p>A rule like &ldquo;always ensure tests pass&rdquo; is useless without the command to run them. Every constraint should include the command or check the agent can use to verify compliance.</p>
+<h3 id="documentation-without-structure">Documentation Without Structure</h3>
+<p>Long paragraphs instead of scannable rules. Agents process bullet points, headers, and explicit &ldquo;do this / not that&rdquo; formatting more reliably than prose.</p>
+<h3 id="harness-rot">Harness Rot</h3>
+<p>Letting the file accumulate outdated entries without periodic review. Old rules that reference removed modules or deprecated patterns actively mislead the agent. Review weekly and prune aggressively.</p>
+<h2 id="advanced-compressed-documentation-indexes">Advanced: Compressed Documentation Indexes</h2>
+<p>The Vercel evaluation validated a technique worth adopting: compressing documentation into an index format that fits within the system prompt. Rather than including full documentation text, create a condensed index of API signatures, key patterns, and common gotchas.</p>
+<p>This works because agents need to know what exists and when to use it, not the full specification. The compressed index provides enough context to guide correct usage while staying within token budgets. Vercel provides a codemod tool for Next.js projects, but the principle applies to any framework: distill your key documentation into the densest useful format and embed it in the harness file.</p>
+<h2 id="template">Template</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># Project: [name]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Brief description of what this codebase does.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Build &amp; Test
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Build, test, lint commands with fast-path options]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Architecture Constraints
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Module boundaries, data flow rules, technology choices]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Coding Conventions
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Style rules that differ from defaults, naming, error handling]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Known Mistakes
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Observed agent errors with corrections -- &#34;When X, always Y, because Z&#34;]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Testing Requirements
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[How to run tests, what constitutes passing, common fixtures]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Never Do This
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Hard prohibitions from past mistakes]
+</span></span></code></pre></div><p>Adapt the sections to your project. Start with what you know and let the file grow from real usage.</p>
+<h2 id="sources">Sources</h2>
+<ul>
+<li><a href="../sources/2026-01-29-agents-md-outperforms-skills/">AGENTS.md Outperforms Skills in Our Agent Evals</a> &ndash; Vercel&rsquo;s evaluation showing 100% pass rate for passive context versus 79% for active retrieval</li>
+<li><a href="../patterns/harness-engineering/">Harness Engineering Pattern</a> &ndash; The conceptual foundations and compounding dynamics</li>
+<li><a href="../references/agents-md-guide/">AGENTS.md / CLAUDE.md Reference</a> &ndash; The condensed template version</li>
+<li><a href="../sources/2026-01-26-karpathy-claude-coding-notes/">Karpathy&rsquo;s Claude Coding Notes</a> &ndash; Observations on persistent configuration in practice</li>
+</ul>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../workflows/vibe-coding-spectrum.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">The Vibe Coding Spectrum</span>
+        </a>
+        
+        
+        <a href="../workflows/parallel-agents.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Parallel Agent Coordination</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#why-passive-context-wins">Why Passive Context Wins</a></li>
+    <li><a href="#what-to-include">What to Include</a>
+      <ul>
+        <li><a href="#build-and-test-commands">Build and Test Commands</a></li>
+        <li><a href="#architecture-constraints">Architecture Constraints</a></li>
+        <li><a href="#coding-conventions">Coding Conventions</a></li>
+        <li><a href="#known-mistakes">Known Mistakes</a></li>
+        <li><a href="#never-do-this-rules">&ldquo;Never Do This&rdquo; Rules</a></li>
+      </ul>
+    </li>
+    <li><a href="#how-to-start">How to Start</a></li>
+    <li><a href="#maintenance-discipline">Maintenance Discipline</a></li>
+    <li><a href="#anti-patterns">Anti-Patterns</a>
+      <ul>
+        <li><a href="#over-documenting-before-you-have-data">Over-Documenting Before You Have Data</a></li>
+        <li><a href="#duplicating-what-the-code-already-says">Duplicating What the Code Already Says</a></li>
+        <li><a href="#writing-rules-without-verification-commands">Writing Rules Without Verification Commands</a></li>
+        <li><a href="#documentation-without-structure">Documentation Without Structure</a></li>
+        <li><a href="#harness-rot">Harness Rot</a></li>
+      </ul>
+    </li>
+    <li><a href="#advanced-compressed-documentation-indexes">Advanced: Compressed Documentation Indexes</a></li>
+    <li><a href="#template">Template</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

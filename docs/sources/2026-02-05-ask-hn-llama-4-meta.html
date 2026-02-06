@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ask HN: 10 months since the Llama-4 release: what happened to Meta AI? | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Ask HN: 10 months since the Llama-4 release: what happened to Meta AI?">
+  <meta property="og:description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-sources"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../sources/index.html">Sources</a></li>
+      
+    
+    <li aria-current="page">Ask HN: 10 months since the Llama-4 release: what happened to Meta AI?</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Ask HN: 10 months since the Llama-4 release: what happened to Meta AI?</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-05">
+    February 5, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">3 min read</span>
+
+  
+  <span class="tier-badge tier-badge--2">Tier 2</span>
+  
+
+  <div class="meta-links">
+    
+    
+    
+    <a href="https://news.ycombinator.com/item?id=46909060" class="meta-link" target="_blank" rel="noopener">HN &#8599;</a>
+    
+    
+  </div>
+
+  
+  <span class="meta-stat">25 points</span>
+  
+  
+  
+  <span class="meta-stat">7 comments</span>
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/meta.html" class="tag-pill">meta</a>
+  
+  
+  
+  
+  <a href="../tags/llama.html" class="tag-pill">llama</a>
+  
+  
+  
+  
+  <a href="../tags/open-source-ai.html" class="tag-pill">open-source-ai</a>
+  
+  
+  
+  
+  <a href="../tags/industry-analysis.html" class="tag-pill">industry-analysis</a>
+  
+  
+  
+  
+  <a href="../tags/model-release.html" class="tag-pill">model-release</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <h2 id="summary">Summary</h2>
+<p>An Ask HN post raised questions about the state of Meta&rsquo;s AI efforts roughly 10 months after the Llama 4 release, which was widely considered a disappointment. The original poster noted that Meta&rsquo;s API remained waitlist-only even after that long period, suggesting significant organizational or strategic problems.</p>
+<p>The discussion paints a picture of a company that, despite enormous resources, has struggled to maintain momentum in the open-source AI space. Multiple commenters pointed to internal dysfunction and leadership issues as likely explanations rather than technical limitations. The consensus was that Meta has the financial and engineering resources to compete but may be hampered by organizational challenges at the executive level.</p>
+<p>Some commenters suggested that Meta&rsquo;s research divisions have continued producing valuable specialized tools &ndash; such as updated segmentation models (SAM 3D Objects, SAM3) &ndash; but that the flagship LLM effort has stalled. Others speculated that highly-paid AI researchers may not be delivering proportional value, and that the open-source model strategy may be losing relevance as competitors like DeepSeek gain traction internationally.</p>
+<p>The thread reflects broader concerns about the sustainability of the open-source frontier model approach, particularly when the sponsoring company faces internal execution challenges. It also highlights how quickly the competitive landscape shifts in AI, where 10 months of inactivity can move a company from leader to afterthought.</p>
+<h2 id="key-insights">Key Insights</h2>
+<ul>
+<li><strong>Internal dysfunction trumps resources</strong>: Meta&rsquo;s struggles suggest organizational problems can outweigh financial and talent advantages in the AI race</li>
+<li><strong>Open-source AI sustainability questions</strong>: The Llama stall raises doubts about whether corporate-sponsored open-source frontier models are a reliable long-term strategy</li>
+<li><strong>Specialization vs. frontier competition</strong>: Meta&rsquo;s research teams continue producing valuable specialized tools even as the flagship LLM effort lags</li>
+</ul>
+<h2 id="notable-quotes">Notable Quotes</h2>
+<blockquote>
+<p>&ldquo;They certainly have the resources to keep the same release pace&rdquo; — verdverm</p>
+</blockquote>
+<h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
+<p>The discussion generated 25 points and 7 comments. Key themes:</p>
+<p><strong>Leadership and organizational issues</strong></p>
+<ul>
+<li><strong>hasperdi</strong>: Claimed Zuckerberg restructured the entire department and suggested nothing significant or open would come from Meta AI anymore</li>
+<li><strong>BoredPositron</strong>: Argued that when Zuckerberg takes personal interest in a project, it tends to derail, comparing to previous obsessions</li>
+<li><strong>dhruv3006</strong>: Simply attributed it to poor leadership despite abundant resources</li>
+<li><strong>verdverm</strong>: Cited rumors that highly-compensated AI hires are underperforming because they know firing them would reflect badly on leadership</li>
+</ul>
+<p><strong>Strategic observations</strong></p>
+<ul>
+<li><strong>joriJordan</strong>: Pointed to Meta&rsquo;s updated segmentation models (SAM 3D Objects, SAM3) as examples of valuable ongoing research work, arguing these are more valuable to the ecosystem than AI-as-a-service</li>
+<li><strong>casey2</strong>: Questioned Zuckerberg&rsquo;s open platform strategy when users outside the US predominantly use DeepSeek</li>
+<li><strong>fuzzfactor</strong>: Sardonically noted Meta already has an ad platform, implying their AI efforts may be misdirected</li>
+</ul>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../sources/2026-01-19-ai-bubble-bursts-2026.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">How the AI Bubble Bursts in 2026</span>
+        </a>
+        
+        
+        <a href="../sources/2026-01-08-ai-coding-getting-worse.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">AI coding assistants are getting worse?</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

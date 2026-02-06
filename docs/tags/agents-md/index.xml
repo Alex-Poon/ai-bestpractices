@@ -2,25 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Agents-Md on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1313/tags/agents-md.html</link>
+    <link>/tags/agents-md.html</link>
     <description>Recent content in Agents-Md on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/agents-md/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/agents-md/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Pattern: Harness Engineering</title>
-      <link>//localhost:1313/patterns/harness-engineering.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/patterns/harness-engineering.html</guid>
-      <description>&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;&#xA;&lt;p&gt;The agent keeps making the same mistakes. You correct it in-session, it complies, and then the next session it makes the identical error because it has no memory of the previous correction. You find yourself re-explaining the same project conventions, re-specifying the same constraints, and re-fixing the same categories of errors across every interaction.&lt;/p&gt;&#xA;&lt;p&gt;There is no institutional memory across sessions. Each session starts from zero.&lt;/p&gt;&#xA;&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;&#xA;&lt;p&gt;Build persistent infrastructure that constrains and guides agents across sessions. This infrastructure &amp;mdash; the &amp;ldquo;harness&amp;rdquo; &amp;mdash; takes two complementary forms: documentation files that agents read, and purpose-built tools that agents use.&lt;/p&gt;</description>
+      <title>Harness Engineering</title>
+      <link>/skills/harness-engineering.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/skills/harness-engineering.html</guid>
+      <description>&lt;p&gt;Harness engineering is the practice of building persistent infrastructure that constrains and guides AI agents across sessions. It is the highest-leverage investment in AI-assisted development because it compounds: every mistake you document is a mistake that never recurs.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-the-harness-matters-more-than-the-prompt&#34;&gt;Why the Harness Matters More Than the Prompt&lt;/h2&gt;&#xA;&lt;p&gt;A well-harnessed mediocre prompt outperforms a perfect prompt with no harness. This is counterintuitive because prompt engineering gets most of the public attention. But practitioners who have been using agents for months consistently report that their investment in configuration files and custom tools delivers more value than any improvement in prompting technique.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>The AGENTS.md / CLAUDE.md Guide</title>
-      <link>//localhost:1313/references/agents-md-guide.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/references/agents-md-guide.html</guid>
-      <description>&lt;h2 id=&#34;what-these-files-are&#34;&gt;What These Files Are&lt;/h2&gt;&#xA;&lt;p&gt;AGENTS.md and CLAUDE.md are project-root files that AI coding agents read at the start of every session. They give agents persistent, project-specific context that would otherwise be lost between conversations. Different tools use different filenames &amp;ndash; Claude Code reads CLAUDE.md, Amp reads AGENTS.md, and most tools now support both &amp;ndash; but the purpose is identical: tell the agent how to work in this codebase.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-they-matter-the-compounding-effect&#34;&gt;Why They Matter: The Compounding Effect&lt;/h2&gt;&#xA;&lt;p&gt;Every time you correct an agent&amp;rsquo;s mistake, you face a choice: fix it once and move on, or document the correction so it never happens again. The AGENTS.md file is where those corrections accumulate.&lt;/p&gt;</description>
+      <title>AGENTS.md Guide</title>
+      <link>/workflows/agents-md-guide.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/workflows/agents-md-guide.html</guid>
+      <description>&lt;p&gt;AGENTS.md and CLAUDE.md are project-root files that AI coding agents read at the start of every session. They give agents persistent, project-specific context that would otherwise be lost between conversations. Different tools use different filenames &amp;ndash; Claude Code reads CLAUDE.md, Amp reads AGENTS.md, and most tools now support both &amp;ndash; but the purpose is identical: tell the agent how to work in this codebase.&lt;/p&gt;&#xA;&lt;p&gt;This guide covers what to put in these files, how to maintain them, and the evaluation evidence showing why this approach works.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AGENTS.md Outperforms Skills in Our Agent Evals</title>
+      <link>/sources/2026-01-29-agents-md-outperforms-skills.html</link>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-01-29-agents-md-outperforms-skills.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Vercel&amp;rsquo;s engineering team published an evaluation comparing two approaches to providing AI coding agents with documentation: AGENTS.md files (passive context embedded in the system prompt) versus skills (active retrieval tools the agent can invoke on demand). The evaluation targeted Next.js 16 APIs that were absent from model training data, including new patterns like &lt;code&gt;&#39;use cache&#39;&lt;/code&gt;, &lt;code&gt;connection()&lt;/code&gt;, &lt;code&gt;forbidden()&lt;/code&gt;, and async &lt;code&gt;cookies()&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The results were striking. A compressed 8KB documentation index embedded in AGENTS.md achieved a 100% pass rate on the evaluation tasks, while skills maxed out at 79% even with explicit instructions telling the agent to use them. Without explicit instructions, skills performed no better than the 53% baseline. The root cause was that in 56% of eval cases, the skill was never invoked at all — the agent simply failed to recognize when it needed documentation help.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

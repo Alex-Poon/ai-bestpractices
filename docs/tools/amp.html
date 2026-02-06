@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amp Code | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="Sourcegraph&#39;s multi-model coding agent — architecture and practitioner reception.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Amp Code">
+  <meta property="og:description" content="Sourcegraph&#39;s multi-model coding agent — architecture and practitioner reception.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-tools"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../tools/index.html">Tool Landscape</a></li>
+      
+    
+    <li aria-current="page">Amp Code</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Amp Code</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">4 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/amp-code.html" class="tag-pill">amp-code</a>
+  
+  
+  
+  
+  <a href="../tags/multi-model.html" class="tag-pill">multi-model</a>
+  
+  
+  
+  
+  <a href="../tags/agent-architecture.html" class="tag-pill">agent-architecture</a>
+  
+  
+  
+  
+  <a href="../tags/tool-comparison.html" class="tag-pill">tool-comparison</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <p>Amp Code is a coding agent built by the team behind Sourcegraph&rsquo;s code intelligence platform. Available as a CLI, VS Code extension, and JetBrains plugin, it is the most explicit implementation of multi-model routing in a production coding tool. Rather than letting users pick a single model, Amp routes tasks automatically based on type &ndash; sending planning, implementation, review, and search to whichever model is best suited for each.</p>
+<h2 id="the-multi-model-architecture">The Multi-Model Architecture</h2>
+<p>Amp&rsquo;s core design principle is that no single model is best at everything. Different cognitive tasks &ndash; planning, code generation, search, review, visual analysis &ndash; have different performance profiles across models. Amp makes this explicit by maintaining a routing table across three providers (Anthropic, OpenAI, Google):</p>
+<ul>
+<li><strong>Main coding agent</strong>: Claude Opus 4.5 for implementation</li>
+<li><strong>Extended reasoning</strong> (&ldquo;Deep mode&rdquo;): GPT-5.2 Codex, which reads and navigates the codebase for 5-15 minutes before making changes</li>
+<li><strong>Second opinion</strong> (&ldquo;Oracle&rdquo;): GPT-5.2 with medium reasoning effort, serving as a dedicated planning check</li>
+<li><strong>Code review and search</strong>: Gemini models, leveraging fast large-context processing</li>
+<li><strong>Cross-repo search</strong> (&ldquo;Librarian&rdquo;): Claude Sonnet 4.5 for searching public GitHub repositories for usage patterns</li>
+</ul>
+<p>This routing has evolved significantly over time. The main agent model progressed through multiple generations, and the Oracle model moved through several OpenAI versions. This evolution illustrates both the advantage (always upgrade to the best available) and the risk (your system depends on providers you do not control) of multi-model routing.</p>
+<p>For a deeper treatment of the multi-model concept, see <a href="../deep-dives/multi-model-agents.html">The Multi-Model Agent Landscape</a>.</p>
+<h2 id="key-features-beyond-routing">Key Features Beyond Routing</h2>
+<p><strong>Parallel sub-agents.</strong> Amp can spawn multiple independent agents on subtasks simultaneously, similar to Claude Code&rsquo;s swarm feature but available earlier and with multi-model flexibility.</p>
+<p><strong>AGENTS.md support.</strong> Like Claude Code&rsquo;s CLAUDE.md, Amp reads project-level instruction files for persistent context. See the <a href="../references/agents-md-guide.html">AGENTS.md Guide</a>.</p>
+<p><strong>No autocomplete.</strong> Amp dropped inline autocomplete entirely in January 2026 to focus exclusively on agentic workflows. This was a deliberate product decision reflecting the belief that autocomplete and agentic modes require different design tradeoffs.</p>
+<p><strong>Cross-repository search.</strong> The Librarian feature uses code intelligence from Sourcegraph&rsquo;s platform to search public repositories for usage patterns and documentation &ndash; a capability that leverages Sourcegraph&rsquo;s existing infrastructure.</p>
+<h2 id="pricing-pay-as-you-go">Pricing: Pay-As-You-Go</h2>
+<p>Because Amp routes to multiple providers with different cost structures, it uses pay-as-you-go pricing with no markup for individual users rather than a flat subscription. Most tasks cost cents to a few dollars, but costs scale with usage. Power users report monthly spend exceeding $1,000.</p>
+<p>Cost unpredictability is the most frequently cited weakness among Amp users. Without a flat cap, heavy usage during complex refactors or multi-agent sessions can produce surprising bills. The flip side is no rate limits or throttling &ndash; you never hit a usage ceiling.</p>
+<h2 id="community-reception">Community Reception</h2>
+<p>Practitioner reception reflects the tradeoffs of the multi-model approach:</p>
+<p><strong>Strengths users highlight:</strong></p>
+<ul>
+<li>The ability to use the best model for each task type, rather than compromising on one</li>
+<li>No rate limits or throttling, even during heavy use</li>
+<li>Strong code search capabilities via the Sourcegraph backend</li>
+<li>The Oracle &ldquo;second opinion&rdquo; feature catches planning mistakes other tools miss</li>
+</ul>
+<p><strong>Weaknesses users highlight:</strong></p>
+<ul>
+<li>Cost unpredictability, especially during intensive sessions</li>
+<li>Complexity of debugging when output quality drops (which model in the chain caused the issue?)</li>
+<li>Dependence on external model providers who may change performance or pricing</li>
+<li>The &ldquo;no moat&rdquo; concern: if the value is orchestrating others&rsquo; models, what prevents those providers from building their own orchestration?</li>
+</ul>
+<h2 id="the-strategic-question">The Strategic Question</h2>
+<p>Amp represents a bet that orchestration &ndash; knowing which model to use when, how to transfer context, how to parallelize effectively &ndash; is the defensible skill in AI coding tools. Claude Code bets on having the best single model. Cursor bets on the best IDE experience. Each reflects a different theory about where lasting value accrues.</p>
+<p>For practitioners, the relevant question is less about which tool wins and more about understanding the multi-model concept. Even if you use a single-model tool, you can apply multi-model thinking by switching modes (standard vs extended thinking) or models manually based on task type.</p>
+<p>For the broader decision framework, see the <a href="../references/tool-landscape.html">Practitioner&rsquo;s Tool Comparison</a>.</p>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../tools/copilot.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">GitHub Copilot</span>
+        </a>
+        
+        
+        <a href="../tools/cursor.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Cursor</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-multi-model-architecture">The Multi-Model Architecture</a></li>
+    <li><a href="#key-features-beyond-routing">Key Features Beyond Routing</a></li>
+    <li><a href="#pricing-pay-as-you-go">Pricing: Pay-As-You-Go</a></li>
+    <li><a href="#community-reception">Community Reception</a></li>
+    <li><a href="#the-strategic-question">The Strategic Question</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

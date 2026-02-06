@@ -2,18 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Agent-Architecture on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1313/tags/agent-architecture.html</link>
+    <link>/tags/agent-architecture.html</link>
     <description>Recent content in Agent-Architecture on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/agent-architecture/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/agent-architecture/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>The Multi-Model Agent Landscape</title>
-      <link>//localhost:1313/deep-dives/multi-model-agents.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/deep-dives/multi-model-agents.html</guid>
-      <description>&lt;h2 id=&#34;why-one-model-is-not-enough&#34;&gt;Why One Model Is Not Enough&lt;/h2&gt;&#xA;&lt;p&gt;Every frontier language model has a performance profile. Some excel at planning and reasoning over large contexts. Others are fast and cheap enough for routine lookups. Still others have been tuned for code generation, image understanding, or structured review. No single model is best at everything, and the gap between models on specific tasks can be significant.&lt;/p&gt;&#xA;&lt;p&gt;This is not a theoretical observation. Practitioners who use AI coding agents daily have noticed that the same model that writes excellent code may produce mediocre plans, and the model that reasons carefully through a complex architecture decision may be too slow and expensive for quick file searches. The question is no longer whether to use AI for coding but how to match the right model to the right subtask.&lt;/p&gt;</description>
+      <title>How to Code Claude Code in 200 Lines of Code</title>
+      <link>/sources/2026-01-08-claude-code-200-lines.html</link>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-01-08-claude-code-200-lines.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Mihail Eric&amp;rsquo;s article, provocatively titled &amp;ldquo;The Emperor Has No Clothes,&amp;rdquo; argues that AI coding assistants are not magical — they follow a simple architectural loop. The user sends a request, the LLM decides which tools to call, your code executes those tools locally, and the results flow back to the LLM for context. The critical mental model is that the LLM never actually touches your filesystem; it asks for things to happen, and your code makes them happen.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Amp Code</title>
+      <link>/tools/amp.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tools/amp.html</guid>
+      <description>&lt;p&gt;Amp Code is a coding agent built by the team behind Sourcegraph&amp;rsquo;s code intelligence platform. Available as a CLI, VS Code extension, and JetBrains plugin, it is the most explicit implementation of multi-model routing in a production coding tool. Rather than letting users pick a single model, Amp routes tasks automatically based on type &amp;ndash; sending planning, implementation, review, and search to whichever model is best suited for each.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-multi-model-architecture&#34;&gt;The Multi-Model Architecture&lt;/h2&gt;&#xA;&lt;p&gt;Amp&amp;rsquo;s core design principle is that no single model is best at everything. Different cognitive tasks &amp;ndash; planning, code generation, search, review, visual analysis &amp;ndash; have different performance profiles across models. Amp makes this explicit by maintaining a routing table across three providers (Anthropic, OpenAI, Google):&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

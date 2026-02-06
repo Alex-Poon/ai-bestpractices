@@ -11,26 +11,33 @@
 
   <span class="meta-reading-time">{{ .ReadingTime }} min read</span>
 
+  {{ with .Params.tier }}
+  <span class="tier-badge tier-badge--{{ . }}">Tier {{ . }}</span>
+  {{ end }}
+
   <div class="meta-links">
+    {{ with .Params.source_url }}
+    <a href="{{ . }}" class="meta-link" target="_blank" rel="noopener">Source &#8599;</a>
+    {{ end }}
     {{ with .Params.source }}
-    <a href="{{ . }}" class="meta-link meta-link--source" target="_blank" rel="noopener">
-      Source &#8599;
-    </a>
+    <a href="{{ . }}" class="meta-link" target="_blank" rel="noopener">Source &#8599;</a>
+    {{ end }}
+    {{ with .Params.hn_url }}
+    <a href="{{ . }}" class="meta-link" target="_blank" rel="noopener">HN &#8599;</a>
     {{ end }}
     {{ with .Params.hn_link }}
-    <a href="{{ . }}" class="meta-link meta-link--hn" target="_blank" rel="noopener">
-      HN Discussion &#8599;
-    </a>
-    {{ end }}
-    {{ with .Params.article_source }}
-    <a href="{{ . }}" class="meta-link meta-link--article" target="_blank" rel="noopener">
-      Article &#8599;
-    </a>
+    <a href="{{ . }}" class="meta-link" target="_blank" rel="noopener">HN &#8599;</a>
     {{ end }}
   </div>
 
+  {{ with .Params.hn_points }}
+  <span class="meta-stat">{{ . }} points</span>
+  {{ end }}
   {{ with .Params.points }}
   <span class="meta-stat">{{ . }} points</span>
+  {{ end }}
+  {{ with .Params.hn_comment_count }}
+  <span class="meta-stat">{{ . }} comments</span>
   {{ end }}
   {{ with .Params.comments }}
   <span class="meta-stat">{{ . }} comments</span>

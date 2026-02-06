@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tell HN: Claude Has Had 57 Incidents in the Past 3 Months | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Tell HN: Claude Has Had 57 Incidents in the Past 3 Months">
+  <meta property="og:description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-sources"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../sources/index.html">Sources</a></li>
+      
+    
+    <li aria-current="page">Tell HN: Claude Has Had 57 Incidents in the Past 3 Months</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Tell HN: Claude Has Had 57 Incidents in the Past 3 Months</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-04">
+    February 4, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">2 min read</span>
+
+  
+  <span class="tier-badge tier-badge--1">Tier 1</span>
+  
+
+  <div class="meta-links">
+    
+    <a href="https://news.ycombinator.com/item?id=46885666" class="meta-link" target="_blank" rel="noopener">Source &#8599;</a>
+    
+    
+    
+    <a href="https://news.ycombinator.com/item?id=46885666" class="meta-link" target="_blank" rel="noopener">HN &#8599;</a>
+    
+    
+  </div>
+
+  
+  <span class="meta-stat">2 points</span>
+  
+  
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/claude.html" class="tag-pill">claude</a>
+  
+  
+  
+  
+  <a href="../tags/reliability.html" class="tag-pill">reliability</a>
+  
+  
+  
+  
+  <a href="../tags/anthropic.html" class="tag-pill">anthropic</a>
+  
+  
+  
+  
+  <a href="../tags/service-quality.html" class="tag-pill">service-quality</a>
+  
+  
+  
+  
+  <a href="../tags/developer-experience.html" class="tag-pill">developer-experience</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <h2 id="summary">Summary</h2>
+<p>This HN text post by shikkra documents reliability concerns with Anthropic&rsquo;s Claude service, providing a detailed incident count from the official status page (status.claude.com). The author, a $100/month Max plan subscriber, was prompted to investigate after encountering a retry issue where Claude attempted to generate a response 10 times with Opus 4.5 and extended thinking enabled before silently switching to a different model without indication or confirmation.</p>
+<p>The incident data paints a concerning picture of service reliability. February 2026 had 10 incidents in just 4 days. January 2026 had 26 incidents. December 2025 had 21 incidents. At least 16 of these directly affected Claude Opus 4.5: 3 incidents in December (21-23), 9 in January (across 7-28), and 4 in February (1-4). Ten additional incidents affected the claude.ai platform itself.</p>
+<p>Beyond the status page incidents, the author describes a recurring bug where Claude generates a nearly complete response only for something to go wrong and wipe the entire thing from the conversation with no way to recover it — representing wasted tokens for paying customers. The post questions why Anthropic, as one of the highest-valued AI companies with substantial engineering resources, is not prioritizing reliability.</p>
+<p>This post connects to the broader theme of AI coding tool degradation discussed in the IEEE Spectrum article and the Claude Code daily benchmarks tracker, suggesting reliability concerns span both the API and consumer products.</p>
+<h2 id="key-insights">Key Insights</h2>
+<ul>
+<li><strong>57 incidents in 3 months</strong>: A quantified reliability problem that may be underappreciated by users who attribute issues to their own usage</li>
+<li><strong>Silent model switching</strong>: The system switching from Opus 4.5 to a different model without user notification undermines trust and reproducibility</li>
+<li><strong>Opus 4.5 specifically affected</strong>: 16 of the incidents directly impacted the most capable (and most expensive) model</li>
+<li><strong>Lost responses are not recoverable</strong>: Completed responses being wiped without recovery options represents a poor user experience for paying customers</li>
+<li><strong>Reliability as competitive differentiator</strong>: As AI tools become mission-critical for development workflows, uptime and consistency matter more than raw capability</li>
+</ul>
+<h2 id="notable-quotes">Notable Quotes</h2>
+<blockquote>
+<p>&ldquo;How is Anthropic not addressing this?&rdquo; — shikkra</p>
+</blockquote>
+<h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
+<p>The discussion generated 2 points and 0 comments. No community engagement beyond the original post, though the topic of Claude reliability surfaces frequently in other HN threads.</p>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../sources/2026-01-18-model-matters-more-than-prompts.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Coding with LLMs in 2026: The Model Matters More Than the Prompts</span>
+        </a>
+        
+        
+        <a href="../sources/2026-01-04-llm-coding-workflow-2026.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">My LLM Coding Workflow Going into 2026</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

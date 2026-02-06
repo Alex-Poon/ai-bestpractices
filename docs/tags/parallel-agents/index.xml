@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Parallel-Agents on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1313/tags/parallel-agents.html</link>
+    <link>/tags/parallel-agents.html</link>
     <description>Recent content in Parallel-Agents on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/parallel-agents/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/parallel-agents/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>What 100 Parallel AI Agents Taught Us About Harness Engineering</title>
-      <link>//localhost:1313/deep-dives/parallel-compiler-lessons.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/deep-dives/parallel-compiler-lessons.html</guid>
-      <description>&lt;p&gt;If you want to understand the future of autonomous AI development, ignore the code and study the harness.&lt;/p&gt;&#xA;&lt;p&gt;Nicholas Carlini&amp;rsquo;s compiler project &amp;ndash; 16 parallel Claude instances producing a 100,000-line Rust-based C compiler over two weeks &amp;ndash; is the most data-rich public experiment in parallel agentic coding to date. The compiler passed 99% of the GCC torture test suite and successfully compiled the Linux 6.9 kernel across x86, ARM, and RISC-V architectures. But the real value of the project lies not in the artifact it produced. It lies in what it revealed about how autonomous agents succeed and fail at scale.&lt;/p&gt;</description>
+      <title>Case Study: Building a C Compiler with AI Agents</title>
+      <link>/evidence/carlini-compiler.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/evidence/carlini-compiler.html</guid>
+      <description>&lt;p&gt;Nicholas Carlini set out to answer a simple question: can you build real, production-grade software using nothing but parallel AI agents? The result was a 100,000-line Rust-based C compiler, produced by 16 parallel Claude instances over two weeks, that passed 99% of the GCC torture test suite and compiled the Linux 6.9 kernel across x86, ARM, and RISC-V architectures.&lt;/p&gt;&#xA;&lt;p&gt;The compiler itself is impressive. But the lasting value of this experiment lies in what it revealed about how autonomous agents succeed and fail at scale &amp;ndash; and why the infrastructure surrounding the agents matters more than the agents themselves.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Pattern: Parallel Agent Coordination</title>
-      <link>//localhost:1313/patterns/parallel-agent-coordination.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/patterns/parallel-agent-coordination.html</guid>
-      <description>&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;&#xA;&lt;p&gt;A single agent is too slow for large projects. Building a 100,000-line codebase one session at a time could take months. The obvious solution &amp;mdash; running multiple agents in parallel &amp;mdash; introduces new failure modes: agents overwrite each other&amp;rsquo;s work, duplicate effort on the same problem, create merge conflicts, and produce inconsistent code because they have no shared context.&lt;/p&gt;&#xA;&lt;p&gt;Naively adding agents does not scale. Without coordination infrastructure, more agents can mean less progress.&lt;/p&gt;</description>
+      <title>Parallel Agent Coordination</title>
+      <link>/workflows/parallel-agents.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/workflows/parallel-agents.html</guid>
+      <description>&lt;p&gt;A single agent is often too slow for large projects. Running multiple agents in parallel is the obvious solution, but naive parallelism introduces failure modes that can waste more time and money than sequential work. This page covers when parallel agents help, when they hurt, and the coordination infrastructure that makes the difference.&lt;/p&gt;&#xA;&lt;p&gt;The strongest empirical evidence comes from Nicholas Carlini&amp;rsquo;s compiler project, where 16 parallel Claude instances produced 100,000 lines of working Rust compiler code over two weeks. The full case study is covered in &lt;a href=&#34;../../deep-dives/parallel-compiler-lessons/&#34;&gt;What 100 Parallel Agents Taught Us&lt;/a&gt;. This page focuses on the reusable coordination patterns.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Case Study: Building a C Compiler with AI Agents | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="Carlini&#39;s experiment with parallel Claude agents on a real compiler project.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Case Study: Building a C Compiler with AI Agents">
+  <meta property="og:description" content="Carlini&#39;s experiment with parallel Claude agents on a real compiler project.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-evidence"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../evidence/index.html">Evidence &amp; Case Studies</a></li>
+      
+    
+    <li aria-current="page">Case Study: Building a C Compiler with AI Agents</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Case Study: Building a C Compiler with AI Agents</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">5 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/case-study.html" class="tag-pill">case-study</a>
+  
+  
+  
+  
+  <a href="../tags/parallel-agents.html" class="tag-pill">parallel-agents</a>
+  
+  
+  
+  
+  <a href="../tags/autonomous-coding.html" class="tag-pill">autonomous-coding</a>
+  
+  
+  
+  
+  <a href="../tags/test-design.html" class="tag-pill">test-design</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <p>Nicholas Carlini set out to answer a simple question: can you build real, production-grade software using nothing but parallel AI agents? The result was a 100,000-line Rust-based C compiler, produced by 16 parallel Claude instances over two weeks, that passed 99% of the GCC torture test suite and compiled the Linux 6.9 kernel across x86, ARM, and RISC-V architectures.</p>
+<p>The compiler itself is impressive. But the lasting value of this experiment lies in what it revealed about how autonomous agents succeed and fail at scale &ndash; and why the infrastructure surrounding the agents matters more than the agents themselves.</p>
+<h2 id="the-setup">The setup</h2>
+<p>Carlini ran 16 Claude instances simultaneously, each in an isolated Docker container sharing a common upstream git repository. There was no orchestration agent. Coordination happened through git: agents claimed tasks by writing lock files to a <code>current_tasks/</code> directory, then followed a standard pull-merge-push cycle. Context between sessions was maintained through repository history and documentation files, not conversation memory.</p>
+<p>Over roughly 2,000 sessions and $20,000 in API costs, the system compiled major open-source projects including SQLite, Redis, libjpeg, Lua, PostgreSQL, QEMU, FFmpeg, and Doom.</p>
+<h2 id="what-worked">What worked</h2>
+<p><strong>Embarrassingly parallel early work.</strong> In the initial phases, hundreds of failing test cases created natural task boundaries. Each agent could independently pick up a different failure and fix it without coordination. Sixteen agents meant roughly sixteen times the throughput. When the work decomposes cleanly, parallelism delivers proportional gains.</p>
+<p><strong>Agent specialization.</strong> Rather than running 16 identical agents, the team deployed specialists: core compiler developers, a deduplication agent that coalesced redundant implementations, a performance optimizer, a code quality critic working from a Rust-developer perspective, and a documentation maintainer. Specialization prevented the common failure where all agents converge on the most obvious next problem and duplicate each other&rsquo;s effort.</p>
+<p><strong>Git as the coordination protocol.</strong> The simplicity of the coordination mechanism is instructive. The temptation in multi-agent systems is to build elaborate orchestration layers. This project demonstrated that a shared repository with lock files can coordinate 16 agents producing 100,000 lines of code. The coordination protocol that already exists &ndash; version control &ndash; was sufficient.</p>
+<p><strong>Test harness quality.</strong> The project integrated established, high-quality test suites (the GCC torture tests) and built verifiers around real open-source projects. A CI pipeline enforced that new commits could never break existing functionality. The quality ceiling of agent output was determined by the quality of the verification infrastructure, not the quality of the prompts.</p>
+<h2 id="what-failed">What failed</h2>
+<p><strong>Monolithic tasks destroyed parallelism.</strong> Compiling the Linux kernel was a single, undivided task. All 16 agents encountered the same bugs, independently produced the same fixes, and overwrote each other&rsquo;s changes on merge. More agents produced zero additional value. Parallelism is a property of task structure, not of agent count &ndash; if you cannot decompose the problem, adding more agents adds more merge conflicts.</p>
+<p><strong>Agent time blindness.</strong> Left unconstrained, Claude would happily run exhaustive test suites for hours without recognizing diminishing returns. The team had to build a <code>--fast</code> option that ran 1-10% random test samples, imposing the time discipline the agent lacked. This is a fundamental design lesson: the harness must compensate for cognitive limitations the agent cannot self-correct.</p>
+<p><strong>Context window pollution.</strong> Dumping thousands of lines of test output into the agent&rsquo;s context destroyed its ability to reason about failures. The team pre-computed aggregate statistics and formatted errors with single-line <code>ERROR</code> prefixes to keep output parse-friendly. Test infrastructure had to be designed around how the agent processes information, not how a human would.</p>
+<p><strong>Feature regressions.</strong> New functionality regularly broke existing behavior despite CI enforcement. The generated Rust code was functional but far below expert quality. The assembler and linker remained buggy. Code generation efficiency lagged behind GCC even with optimizations disabled.</p>
+<h2 id="the-oracle-recovery">The oracle recovery</h2>
+<p>The most inventive moment in the project came when the team hit the Linux kernel compilation wall. They designed an oracle-based testing approach: GCC served as the known-good compiler, and the test harness randomly compiled most kernel files with GCC and the remainder with Claude&rsquo;s compiler. If the build succeeded, Claude&rsquo;s subset was correct. Failures enabled binary-search-style refinement across different file combinations.</p>
+<p>This transformed a monolithic task into a decomposable one. The lesson is that when parallelism breaks down, the solution is not better agents but better task decomposition &ndash; and sometimes that requires creative engineering of the verification infrastructure itself.</p>
+<h2 id="model-capability-as-a-moving-target">Model capability as a moving target</h2>
+<p>The project tracked results across three model generations. Opus 4.0 could barely produce a functional compiler. Opus 4.5 first passed large test suites but could not compile real projects. Opus 4.6 crossed the threshold enabling Linux kernel compilation on multiple architectures.</p>
+<p>Each generation opened capability frontiers that the previous one could not reach. This has a practical implication for infrastructure design: the harness must verify outcomes rigorously without micromanaging the path to those outcomes, because a harness that over-constrains for current limitations will need rebuilding when the model improves.</p>
+<h2 id="implications-for-practitioners">Implications for practitioners</h2>
+<p>This case study validates several principles that experienced practitioners have identified independently:</p>
+<ol>
+<li>
+<p><strong>The test harness is the product.</strong> Agent output quality is bounded by verification quality, not prompt quality. If you invest in one thing when deploying agents, invest in the harness. See <a href="../patterns/harness-engineering.html">Harness Engineering</a>.</p>
+</li>
+<li>
+<p><strong>Decomposition determines parallelism.</strong> You cannot make a monolithic task faster by adding agents. You can only make a decomposable task faster by matching agent count to the number of independent work units. See <a href="../patterns/task-scoping.html">Task Scoping</a>.</p>
+</li>
+<li>
+<p><strong>Design for agent cognition.</strong> Test output formatting, execution time limits, and progress tracking all need to account for how the agent processes information. Human-oriented tooling often works poorly for agents.</p>
+</li>
+<li>
+<p><strong>Version control is sufficient coordination.</strong> Before building an orchestration layer, try git. It worked for 16 agents and 100,000 lines of code.</p>
+</li>
+<li>
+<p><strong>Human judgment remains the final gate.</strong> A 99% pass rate sounds reassuring until you consider what the remaining 1% might contain. Autonomous development without human verification remains a genuine concern &ndash; one the project&rsquo;s author, whose background is in security research, was candid about.</p>
+</li>
+</ol>
+<p>The full technical details are available in <a href="https://www.anthropic.com/engineering/building-c-compiler">Anthropic&rsquo;s engineering blog post</a>. The deep-dive analysis of harness engineering lessons is in <a href="../deep-dives/parallel-compiler-lessons.html">What 100 Parallel AI Agents Taught Us About Harness Engineering</a>.</p>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../evidence/hashimoto-journey.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Case Study: Hashimoto&#39;s AI Adoption Journey</span>
+        </a>
+        
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-setup">The setup</a></li>
+    <li><a href="#what-worked">What worked</a></li>
+    <li><a href="#what-failed">What failed</a></li>
+    <li><a href="#the-oracle-recovery">The oracle recovery</a></li>
+    <li><a href="#model-capability-as-a-moving-target">Model capability as a moving target</a></li>
+    <li><a href="#implications-for-practitioners">Implications for practitioners</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

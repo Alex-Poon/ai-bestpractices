@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI coding assistants are getting worse? | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="AI coding assistants are getting worse?">
+  <meta property="og:description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-sources"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../sources/index.html">Sources</a></li>
+      
+    
+    <li aria-current="page">AI coding assistants are getting worse?</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">AI coding assistants are getting worse?</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-01-08">
+    January 8, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">4 min read</span>
+
+  
+  <span class="tier-badge tier-badge--3">Tier 3</span>
+  
+
+  <div class="meta-links">
+    
+    <a href="https://spectrum.ieee.org/ai-coding-degrades" class="meta-link" target="_blank" rel="noopener">Source &#8599;</a>
+    
+    
+    
+    <a href="https://news.ycombinator.com/item?id=46542036" class="meta-link" target="_blank" rel="noopener">HN &#8599;</a>
+    
+    
+  </div>
+
+  
+  <span class="meta-stat">451 points</span>
+  
+  
+  
+  <span class="meta-stat">82 comments</span>
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/ai-coding-tools.html" class="tag-pill">ai-coding-tools</a>
+  
+  
+  
+  
+  <a href="../tags/model-degradation.html" class="tag-pill">model-degradation</a>
+  
+  
+  
+  
+  <a href="../tags/evaluation.html" class="tag-pill">evaluation</a>
+  
+  
+  
+  
+  <a href="../tags/developer-experience.html" class="tag-pill">developer-experience</a>
+  
+  
+  
+  
+  <a href="../tags/skepticism.html" class="tag-pill">skepticism</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <h2 id="summary">Summary</h2>
+<p>This IEEE Spectrum article by Jamie Twiss presents the provocative claim that AI coding assistants are experiencing degradation rather than improvement. The central narrative comes from power users who report that these tools have hit a plateau, with some even declining in capability. The article identifies what it calls &ldquo;silent failures&rdquo; &ndash; situations where AI coding tools appear functional on the surface but are actually underperforming in subtle, hard-to-detect ways.</p>
+<p>The specific test case presented involves giving AI models Python code that references a nonexistent column in a pandas DataFrame, then asking models to fix the error without commentary. Since the problem is fundamentally about missing data rather than code logic, the ideal response would be a refusal or debugging assistance. The article evaluates how different GPT versions handled this scenario over time.</p>
+<p>However, the article sparked significant pushback on HN. Many commenters criticized both the methodology and conclusions. The test case was widely viewed as unrepresentative &ndash; a single three-line code snippet that tests an edge case rather than typical coding workflows. Several commenters pointed out that the article&rsquo;s author praised models that defied the prompt instructions (by providing commentary despite being asked not to), while criticizing models that followed the instructions as given.</p>
+<p>The deeper debate centers on whether perceived degradation reflects actual model regression, or whether it stems from changing user expectations, improved instructability that breaks old workflows, possible dynamic model routing to smaller models during high demand, or the poisoning of training data as less experienced users generate feedback signals. The article touched a nerve because many developers have experienced inconsistency with AI coding tools, even if the specific evidence presented was seen as weak.</p>
+<h2 id="key-insights">Key Insights</h2>
+<ul>
+<li><strong>Perception vs. reality of degradation</strong>: The sense that AI coding tools are getting worse is widespread among users, but the evidence presented is largely anecdotal and based on edge cases rather than systematic evaluation.</li>
+<li><strong>Instructability can look like regression</strong>: Models that better follow instructions may produce worse results when given poorly specified prompts, creating the impression of degradation when the real issue is the prompt.</li>
+<li><strong>Training data feedback loops</strong>: One theory suggests that as less experienced users accept mediocre AI-generated code, the resulting feedback signal degrades future model performance, creating a vicious cycle.</li>
+<li><strong>Consistency is the real problem</strong>: Many commenters agreed the core issue is not consistent decline but unpredictable variation in quality from session to session and month to month.</li>
+</ul>
+<h2 id="notable-quotes">Notable Quotes</h2>
+<blockquote>
+<p>&ldquo;The results are not repeatable. The problem is much worse.&rdquo; — renegade-otter (HN)</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;garbage in and garbage out&rdquo; — sosodev (HN)</p>
+</blockquote>
+<h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
+<p>The discussion generated 451 points and 82 comments, making it one of the more actively debated topics. Key themes:</p>
+<p><strong>Methodology Critique</strong></p>
+<ul>
+<li><strong>bee_rider</strong>: Provided a detailed technical rebuttal, noting the author praised models that defied the prompt (providing commentary when told not to) while criticizing GPT-5 for actually following instructions. The test essentially measured how models fail on impossible tasks under restrictive constraints.</li>
+<li><strong>ronbenton</strong>: Noted this is an opinion piece with anecdata rather than a technical paper, and the conclusions are not substantiated by the evidence presented.</li>
+<li><strong>crazygringo</strong>: Called it a sweeping generalization based on a single non-representative three-line test.</li>
+</ul>
+<p><strong>Alternative Explanations</strong></p>
+<ul>
+<li><strong>Kuinox</strong>: Speculated that LLM providers may be dynamically serving smaller models during usage spikes or before new model releases, explaining perceived inconsistency.</li>
+<li><strong>renegade-otter</strong>: Argued the real problem is not that models are worse but that results are not repeatable, and warned that the current pricing is subsidized and unsustainable.</li>
+<li><strong>nyrikki</strong>: Explained how the feedback signal from accepted code is fundamentally flawed &ndash; experienced users often accept suggestions then heavily edit them, which is indistinguishable from approval in the training data.</li>
+</ul>
+<p><strong>Scaffolding and Workflow</strong></p>
+<ul>
+<li><strong>theptip</strong>: Pushed back strongly, arguing models are getting better but users haven&rsquo;t figured out the scaffolding needed. Unit tests, proper prompts, and understanding the contours of AI capabilities are necessary, and the article&rsquo;s eval is not representative of real agent-based workflows like Claude Code.</li>
+<li><strong>jackfranklyn</strong>: Observed that results vary depending on whether the domain is well-represented in training data versus novel, and noted that fresh context windows sometimes produce better results than long conversation histories.</li>
+</ul>
+<p><strong>User Experience</strong></p>
+<ul>
+<li><strong>anttiharju</strong>: Shared a balanced view &ndash; AI is net positive for productivity but makes it easy to gloss over details, leading to more backtracking.</li>
+<li><strong>kristopolous</strong>: Reported abandoning AI coding tools entirely due to being burned too many times, now using them only as an interactive search tool.</li>
+<li><strong>StarlaAtNight</strong>: Proposed that users should be able to pin to specific model versions, similar to software package versioning.</li>
+</ul>
+<p><strong>Broader Concerns</strong></p>
+<ul>
+<li><strong>CashWasabi</strong>: Raised the long-term worry about what happens when LLMs destroy the information sources they crawl &ndash; if Stack Overflow and open-source code decline, will models cannibalize themselves?</li>
+<li><strong>amelius</strong>: Quipped that a pre-2024 training dataset will soon be worth billions.</li>
+</ul>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../sources/2026-02-05-ask-hn-llama-4-meta.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Ask HN: 10 months since the Llama-4 release: what happened to Meta AI?</span>
+        </a>
+        
+        
+        <a href="../sources/2025-12-30-openai-cash-burn.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">OpenAI&#39;s cash burn will be one of the big bubble questions of 2026</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#key-insights">Key Insights</a></li>
+    <li><a href="#notable-quotes">Notable Quotes</a></li>
+    <li><a href="#hn-discussion-highlights">HN Discussion Highlights</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

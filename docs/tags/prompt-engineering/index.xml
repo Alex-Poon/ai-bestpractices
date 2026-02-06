@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prompt-Engineering on AI Best Practices Knowledge Base</title>
+    <link>/tags/prompt-engineering.html</link>
+    <description>Recent content in Prompt-Engineering on AI Best Practices Knowledge Base</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 29 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/prompt-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AGENTS.md Outperforms Skills in Our Agent Evals</title>
+      <link>/sources/2026-01-29-agents-md-outperforms-skills.html</link>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-01-29-agents-md-outperforms-skills.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Vercel&amp;rsquo;s engineering team published an evaluation comparing two approaches to providing AI coding agents with documentation: AGENTS.md files (passive context embedded in the system prompt) versus skills (active retrieval tools the agent can invoke on demand). The evaluation targeted Next.js 16 APIs that were absent from model training data, including new patterns like &lt;code&gt;&#39;use cache&#39;&lt;/code&gt;, &lt;code&gt;connection()&lt;/code&gt;, &lt;code&gt;forbidden()&lt;/code&gt;, and async &lt;code&gt;cookies()&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The results were striking. A compressed 8KB documentation index embedded in AGENTS.md achieved a 100% pass rate on the evaluation tasks, while skills maxed out at 79% even with explicit instructions telling the agent to use them. Without explicit instructions, skills performed no better than the 53% baseline. The root cause was that in 56% of eval cases, the skill was never invoked at all — the agent simply failed to recognize when it needed documentation help.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My LLM Coding Workflow Going into 2026</title>
+      <link>/sources/2026-01-04-llm-coding-workflow-2026.html</link>
+      <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-01-04-llm-coding-workflow-2026.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Addy Osmani, a well-known figure in the web development community, shares his comprehensive approach to AI-augmented software engineering. The central philosophy treats LLMs as powerful pair programmers that require clear direction, context, and human oversight rather than autonomous replacements for developers.&lt;/p&gt;&#xA;&lt;p&gt;The workflow is structured around several core practices. First, planning comes before coding — create detailed specifications, use AI to iteratively flesh out requirements and edge cases, and generate project plans that break work into bite-sized tasks. Osmani describes this as completing a &amp;ldquo;waterfall in 15 minutes&amp;rdquo; to prevent wasted development cycles. Second, iterative chunking — break projects into small manageable pieces rather than requesting monolithic outputs, processing one feature at a time while maintaining context of previous work. Third, context provision — feed the AI all relevant code, documentation, and constraints using tools like gitingest or repo2txt to bundle repository information, and provide style guides through CLAUDE.md files.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Coding with LLMs in 2026: The Model Matters More Than the Prompts</title>
+      <link>/sources/2026-01-18-model-matters-more-than-prompts.html</link>
+      <pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-01-18-model-matters-more-than-prompts.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This post by @slow_developer on X (formerly Twitter) argues that the shift from 2025 to 2026 in AI-assisted coding has been defined by a fundamental rebalancing: model choice now outweighs prompt engineering as the primary lever for coding quality. Where 2025 workflows focused heavily on crafting precise prompts and structuring interactions carefully, the advancements in frontier models have made the underlying model capability the dominant factor in output quality.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LLM coding workflow going into 2026</title>
+      <link>/sources/2026-01-10-llm-coding-workflow-2026.html</link>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-01-10-llm-coding-workflow-2026.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Addy Osmani, a well-known Google engineering leader, shared his comprehensive approach to integrating LLMs into daily coding workflows. The article frames LLMs not as autonomous coders but as powerful pair programmers requiring clear direction, context, and consistent oversight.&lt;/p&gt;&#xA;&lt;p&gt;The workflow begins with collaborative planning, where the developer works with an AI to develop detailed specifications and project plans before writing code. Osmani describes this as achieving a traditional waterfall planning cycle compressed into roughly 15 minutes. Implementation then proceeds in small, iterative chunks sized to fit within context windows and remain comprehensible for human review.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

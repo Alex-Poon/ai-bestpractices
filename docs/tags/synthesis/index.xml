@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Synthesis on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1313/tags/synthesis.html</link>
+    <link>/tags/synthesis.html</link>
     <description>Recent content in Synthesis on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/synthesis/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/synthesis/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The State of Agentic Coding Practice (Feb 2026)</title>
-      <link>//localhost:1313/synthesis/state-of-practice-feb-2026.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/synthesis/state-of-practice-feb-2026.html</guid>
-      <description>&lt;p&gt;A synthesis of where serious practitioners have landed on AI-assisted development, drawn from Mitchell Hashimoto&amp;rsquo;s adoption journey, its Hacker News discussion (147+ points), and the emerging multi-model agent landscape (Amp Code and similar tools).&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-where-practitioners-actually-are&#34;&gt;1. Where Practitioners Actually Are&lt;/h2&gt;&#xA;&lt;p&gt;Most serious practitioners have converged on a remarkably similar workflow loop:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Plan in chat -&amp;gt; Execute narrow diffs via agent -&amp;gt; Verify fast -&amp;gt; Tighten harness&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;The variation between practitioners is in degree, not in kind. Whether someone uses Claude Code, Cursor, Amp, or Copilot, the operational rhythm looks the same. The key shift that experienced users describe is that the bottleneck has moved from &lt;em&gt;writing&lt;/em&gt; code to &lt;em&gt;reading and verifying&lt;/em&gt; code. This is a fundamental change in the nature of programming work. You spend less time with your hands on the keyboard producing code and more time reviewing, testing, and understanding what the agent produced.&lt;/p&gt;</description>
+      <link>/synthesis/state-of-practice-feb-2026.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/synthesis/state-of-practice-feb-2026.html</guid>
+      <description>&lt;p&gt;A synthesis of where serious practitioners have landed on AI-assisted development, drawn from 35+ articles and Hacker News discussions spanning late 2025 through early 2026.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-where-practitioners-actually-are&#34;&gt;1. Where Practitioners Actually Are&lt;/h2&gt;&#xA;&lt;p&gt;Most serious practitioners have converged on a remarkably similar workflow loop:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Plan in chat → Execute narrow diffs via agent → Verify fast → Tighten harness&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;The variation between practitioners is in degree, not in kind. Whether someone uses Claude Code, Cursor, Amp, or Copilot, the operational rhythm looks the same. The key shift that experienced users describe is that the bottleneck has moved from &lt;em&gt;writing&lt;/em&gt; code to &lt;em&gt;reading and verifying&lt;/em&gt; code. This is a fundamental change in the nature of programming work.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

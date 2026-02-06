@@ -2,39 +2,60 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Harness-Engineering on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1313/tags/harness-engineering.html</link>
+    <link>/tags/harness-engineering.html</link>
     <description>Recent content in Harness-Engineering on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/harness-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/harness-engineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>What 100 Parallel AI Agents Taught Us About Harness Engineering</title>
-      <link>//localhost:1313/deep-dives/parallel-compiler-lessons.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/deep-dives/parallel-compiler-lessons.html</guid>
-      <description>&lt;p&gt;If you want to understand the future of autonomous AI development, ignore the code and study the harness.&lt;/p&gt;&#xA;&lt;p&gt;Nicholas Carlini&amp;rsquo;s compiler project &amp;ndash; 16 parallel Claude instances producing a 100,000-line Rust-based C compiler over two weeks &amp;ndash; is the most data-rich public experiment in parallel agentic coding to date. The compiler passed 99% of the GCC torture test suite and successfully compiled the Linux 6.9 kernel across x86, ARM, and RISC-V architectures. But the real value of the project lies not in the artifact it produced. It lies in what it revealed about how autonomous agents succeed and fail at scale.&lt;/p&gt;</description>
+      <title>Claude Code Deep Dive</title>
+      <link>/tools/claude-code.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tools/claude-code.html</guid>
+      <description>&lt;p&gt;Claude Code is Anthropic&amp;rsquo;s CLI-first coding agent. It runs in the terminal, takes natural language task descriptions, and executes autonomously &amp;ndash; reading files, running commands, editing code, and iterating on failures. It is single-model (Anthropic&amp;rsquo;s Claude family), available through Claude Max subscriptions at $100-200/month, and focused entirely on agentic workflows with no autocomplete mode.&lt;/p&gt;&#xA;&lt;p&gt;What sets Claude Code apart from other agents is its extensibility. It supports CLAUDE.md project files, custom sub-agents, hooks for CI/CD integration, and MCP servers for structured tool access. This page covers the major features and developments that matter to practitioners.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Pattern: Harness Engineering</title>
-      <link>//localhost:1313/patterns/harness-engineering.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/patterns/harness-engineering.html</guid>
-      <description>&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;&#xA;&lt;p&gt;The agent keeps making the same mistakes. You correct it in-session, it complies, and then the next session it makes the identical error because it has no memory of the previous correction. You find yourself re-explaining the same project conventions, re-specifying the same constraints, and re-fixing the same categories of errors across every interaction.&lt;/p&gt;&#xA;&lt;p&gt;There is no institutional memory across sessions. Each session starts from zero.&lt;/p&gt;&#xA;&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;&#xA;&lt;p&gt;Build persistent infrastructure that constrains and guides agents across sessions. This infrastructure &amp;mdash; the &amp;ldquo;harness&amp;rdquo; &amp;mdash; takes two complementary forms: documentation files that agents read, and purpose-built tools that agents use.&lt;/p&gt;</description>
+      <title>Case Study: Hashimoto&#39;s AI Adoption Journey</title>
+      <link>/evidence/hashimoto-journey.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/evidence/hashimoto-journey.html</guid>
+      <description>&lt;p&gt;Mitchell Hashimoto &amp;ndash; co-founder of HashiCorp, creator of Vagrant, Terraform, and Consul &amp;ndash; published a detailed account of his personal journey adopting AI coding tools. The article resonated far beyond the usual AI discourse because Hashimoto is not a hype-prone commentator. He is a practitioner with decades of experience shipping infrastructure software used by millions of developers. When he says something works, the community pays attention.&lt;/p&gt;&#xA;&lt;p&gt;His account became a focal point for one of the most grounded Hacker News discussions on AI-assisted development, drawing dozens of experienced practitioners into a conversation about what actually works, what fails, and what remains genuinely uncertain.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>The Six Stages of AI Adoption</title>
-      <link>//localhost:1313/guides/adoption-stages.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/guides/adoption-stages.html</guid>
-      <description>&lt;p&gt;Developers who successfully adopt AI coding agents tend to follow the same progression. Not because someone prescribed it, but because each stage builds the calibration and infrastructure required by the next. Skipping stages leads to frustration, wasted effort, and the conclusion that agents do not work &amp;mdash; when the real problem was missing foundations.&lt;/p&gt;&#xA;&lt;p&gt;This framework synthesizes practitioner experience into six stages. Most developers who abandon AI-assisted development get stuck between Stages 1 and 2. Most developers who succeed credit the investments made in Stages 2 and 5.&lt;/p&gt;</description>
+      <title>Harness Engineering</title>
+      <link>/skills/harness-engineering.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/skills/harness-engineering.html</guid>
+      <description>&lt;p&gt;Harness engineering is the practice of building persistent infrastructure that constrains and guides AI agents across sessions. It is the highest-leverage investment in AI-assisted development because it compounds: every mistake you document is a mistake that never recurs.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-the-harness-matters-more-than-the-prompt&#34;&gt;Why the Harness Matters More Than the Prompt&lt;/h2&gt;&#xA;&lt;p&gt;A well-harnessed mediocre prompt outperforms a perfect prompt with no harness. This is counterintuitive because prompt engineering gets most of the public attention. But practitioners who have been using agents for months consistently report that their investment in configuration files and custom tools delivers more value than any improvement in prompting technique.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>The AGENTS.md / CLAUDE.md Guide</title>
-      <link>//localhost:1313/references/agents-md-guide.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/references/agents-md-guide.html</guid>
-      <description>&lt;h2 id=&#34;what-these-files-are&#34;&gt;What These Files Are&lt;/h2&gt;&#xA;&lt;p&gt;AGENTS.md and CLAUDE.md are project-root files that AI coding agents read at the start of every session. They give agents persistent, project-specific context that would otherwise be lost between conversations. Different tools use different filenames &amp;ndash; Claude Code reads CLAUDE.md, Amp reads AGENTS.md, and most tools now support both &amp;ndash; but the purpose is identical: tell the agent how to work in this codebase.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-they-matter-the-compounding-effect&#34;&gt;Why They Matter: The Compounding Effect&lt;/h2&gt;&#xA;&lt;p&gt;Every time you correct an agent&amp;rsquo;s mistake, you face a choice: fix it once and move on, or document the correction so it never happens again. The AGENTS.md file is where those corrections accumulate.&lt;/p&gt;</description>
+      <title>AGENTS.md Guide</title>
+      <link>/workflows/agents-md-guide.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/workflows/agents-md-guide.html</guid>
+      <description>&lt;p&gt;AGENTS.md and CLAUDE.md are project-root files that AI coding agents read at the start of every session. They give agents persistent, project-specific context that would otherwise be lost between conversations. Different tools use different filenames &amp;ndash; Claude Code reads CLAUDE.md, Amp reads AGENTS.md, and most tools now support both &amp;ndash; but the purpose is identical: tell the agent how to work in this codebase.&lt;/p&gt;&#xA;&lt;p&gt;This guide covers what to put in these files, how to maintain them, and the evaluation evidence showing why this approach works.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AGENTS.md Outperforms Skills in Our Agent Evals</title>
+      <link>/sources/2026-01-29-agents-md-outperforms-skills.html</link>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-01-29-agents-md-outperforms-skills.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Vercel&amp;rsquo;s engineering team published an evaluation comparing two approaches to providing AI coding agents with documentation: AGENTS.md files (passive context embedded in the system prompt) versus skills (active retrieval tools the agent can invoke on demand). The evaluation targeted Next.js 16 APIs that were absent from model training data, including new patterns like &lt;code&gt;&#39;use cache&#39;&lt;/code&gt;, &lt;code&gt;connection()&lt;/code&gt;, &lt;code&gt;forbidden()&lt;/code&gt;, and async &lt;code&gt;cookies()&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The results were striking. A compressed 8KB documentation index embedded in AGENTS.md achieved a 100% pass rate on the evaluation tasks, while skills maxed out at 79% even with explicit instructions telling the agent to use them. Without explicit instructions, skills performed no better than the 53% baseline. The root cause was that in 56% of eval cases, the skill was never invoked at all — the agent simply failed to recognize when it needed documentation help.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude Code&#39;s New Hidden Feature: Swarms</title>
+      <link>/sources/2026-01-24-claude-code-swarms.html</link>
+      <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-01-24-claude-code-swarms.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;A tweet by @NicerInPerson revealed that Claude Code contains hidden multi-agent orchestration capabilities, colloquially referred to as &amp;ldquo;swarms.&amp;rdquo; The discovery, corroborated by a GitHub repository (claude-sneakpeek by mikekelly), showed that Anthropic had built native sub-agent coordination features including a TeammateTool, delegate mode for spawning background agents, and a team coordination system with messaging and task ownership. Rather than relying on third-party orchestration frameworks, these capabilities are built directly into Claude Code but gated behind feature flags not yet available in general release.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Klaus – a Claude Code native delegating agentic harness</title>
+      <link>/sources/2026-01-25-klaus-agentic-harness.html</link>
+      <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-01-25-klaus-agentic-harness.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Klaus Baudelaire is an open-source agentic harness built entirely on top of Claude Code&amp;rsquo;s native features, designed to automate task delegation and agent routing without external APIs or services. The system addresses the overhead of manually deciding which agent configuration to use for a given prompt by implementing a keyword-based scoring algorithm that evaluates prompt complexity and routes tasks to the appropriate execution tier.&lt;/p&gt;&#xA;&lt;p&gt;The core mechanism works through a single &lt;code&gt;UserPromptSubmit&lt;/code&gt; hook. When a user submits a prompt, Klaus analyzes it by assigning scores based on keyword complexity (terms like &amp;ldquo;system architecture&amp;rdquo; or &amp;ldquo;oauth&amp;rdquo; increase scores, while &amp;ldquo;fix typo&amp;rdquo; decreases them) and prompt length. The resulting score maps to one of four tiers: DIRECT (score 0-2, no agents needed for simple edits), LIGHT (3-4, single agent for basic features), MEDIUM (5-6, four agents for multi-file changes), and FULL (7+ for complex architecture requiring six agents).&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

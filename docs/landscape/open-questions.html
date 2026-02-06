@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open Questions | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="The debates still raging in the AI coding community.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Open Questions">
+  <meta property="og:description" content="The debates still raging in the AI coding community.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-landscape"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../landscape/index.html">Landscape</a></li>
+      
+    
+    <li aria-current="page">Open Questions</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Open Questions</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">7 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/debate.html" class="tag-pill">debate</a>
+  
+  
+  
+  
+  <a href="../tags/open-questions.html" class="tag-pill">open-questions</a>
+  
+  
+  
+  
+  <a href="../tags/ai-skepticism.html" class="tag-pill">ai-skepticism</a>
+  
+  
+  
+  
+  <a href="../tags/skill-atrophy.html" class="tag-pill">skill-atrophy</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <p>Not everything about AI-assisted development is settled. Several major questions remain genuinely open, with credible evidence and strong opinions on multiple sides. This page captures the debates as they stand in early 2026.</p>
+<h2 id="is-ai-making-coding-skills-atrophy">Is AI Making Coding Skills Atrophy?</h2>
+<p>Anthropic&rsquo;s own randomized controlled study provides the most rigorous data point. Junior developers using AI assistance scored 17% lower on comprehension quizzes &mdash; a gap the researchers characterized as equivalent to nearly two letter grades, with the largest deficit appearing in debugging skills. The speed gains (roughly two minutes faster) were not statistically significant.</p>
+<p>But the study also found that engagement style matters profoundly. Developers who asked follow-up questions, requested explanations, and posed conceptual queries retained significantly better understanding than those who simply delegated. The manner of AI interaction predicts learning outcomes more than whether AI is used at all.</p>
+<p>Karpathy reported experiencing atrophy firsthand, finding it harder to recall syntax and implementation details. But he argued this may be acceptable: code review skills persist even as writing fluency declines, similar to how reading comprehension persists when spelling degrades.</p>
+<p>The concern is sharpest for junior engineers. <strong>FitchApps</strong> on HN raised the scenario of agents being unavailable during a midnight production deployment, arguing developers risk becoming unable to debug their own systems. <strong>postalcoder</strong> observed that older models forced developers to do 30% of the tough work themselves, but current models are too capable, removing the productive struggle that builds intuition.</p>
+<p>The counterargument from <strong>dr_dshiv</strong>: they have been learning software concepts faster since offloading implementation to AI. <strong>visarga</strong> compared the dynamic to Star Trek replicators, arguing that iterative refinement through AI tools is itself a form of learning.</p>
+<p><strong>Where it stands:</strong> Skill atrophy is real and measurable, but it is not inevitable. The evidence suggests that active, questioning engagement with AI preserves learning, while passive delegation degrades it. Organizations need deliberate policies to protect junior skill development.</p>
+<p>(<a href="../sources/2026-01-30-ai-assistance-coding-skills/">Source</a>, <a href="../sources/2026-01-26-karpathy-claude-coding-notes/">Karpathy Notes</a>)</p>
+<h2 id="are-ai-assistants-getting-worse-over-time">Are AI Assistants Getting Worse Over Time?</h2>
+<p>Many developers report that AI coding tools feel less reliable than they used to. The evidence for actual model regression is weak &mdash; an IEEE Spectrum article making this claim was criticized for using a single three-line test case as evidence. But the perception is widespread enough to warrant explanation.</p>
+<p>The most credible theories:</p>
+<ul>
+<li><strong>Better instructability looks like regression.</strong> Newer models follow instructions more precisely, which produces worse results when prompts are underspecified. The model improved; the prompt did not.</li>
+<li><strong>Dynamic model routing.</strong> Providers may serve lighter-weight models during high-demand periods, creating quality variation users attribute to the model itself.</li>
+<li><strong>Training data contamination.</strong> As AI-generated code proliferates, future models may train on lower-quality data, creating a subtle decline in output quality.</li>
+<li><strong>Recency bias in user memory.</strong> Developers calibrate expectations to their best experiences and perceive average results as deterioration.</li>
+</ul>
+<p>HN user <strong>renegade-otter</strong> framed the real problem: results are not repeatable, which is more concerning than consistent decline. <strong>Kuinox</strong> speculated about providers dynamically serving smaller models before new releases. <strong>theptip</strong> argued the issue is not model quality but insufficient scaffolding &mdash; tests, specifications, and harness engineering that make agent interactions reliable.</p>
+<p><strong>Where it stands:</strong> There is no strong evidence that models are getting objectively worse. But consistency remains a legitimate concern, and practitioners should build workflows that tolerate quality variation rather than assuming every interaction will match peak performance. Version pinning, when available, may help.</p>
+<p>(<a href="../sources/2026-01-08-ai-coding-getting-worse/">Source</a>)</p>
+<h2 id="will-the-ai-bubble-burst">Will the AI Bubble Burst?</h2>
+<p>The financial sustainability of the AI industry is a serious open question. OpenAI&rsquo;s capital requirements are staggering. Data center financing is tightening. Infrastructure milestones are slipping. And the market sentiment has begun shifting from uncritical enthusiasm to active skepticism.</p>
+<p>The prevailing view in the HN discussion around OpenAI&rsquo;s cash burn was that AI is analogous to railroads: a genuinely transformative technology that will nonetheless produce massive investor losses during its bubble phase. <strong>avalys</strong> argued that every company investing similar resources produces roughly the same results, suggesting no technological moat exists. <strong>cmiles8</strong> described AI as the worst possible business setup: a commodity requiring huge capital with zero brand loyalty.</p>
+<p>The bubble analysis from Ed Zitron identified three pressure points: OpenAI&rsquo;s cash constraints (with circular financing arrangements), tightening data center lending conditions, and cascading infrastructure delays. Market sentiment has begun to shift, with AI announcements no longer reliably boosting stock prices.</p>
+<p>The implications for practitioners are concrete. If current AI pricing is subsidized by venture capital, costs will eventually rise &mdash; possibly significantly. If major providers face financial distress, service continuity becomes a risk. The practical response is to build workflows with low switching costs: use open protocols, maintain tool-agnostic practices, and avoid deep provider lock-in.</p>
+<p><strong>Where it stands:</strong> A correction of some kind is widely expected. The question is magnitude and timing. The technology itself will persist regardless &mdash; but the specific tools, pricing, and providers available to practitioners may change substantially.</p>
+<p>(<a href="../sources/2025-12-30-openai-cash-burn/">Sources</a>, <a href="../sources/2026-01-19-ai-bubble-bursts-2026/">Bubble Analysis</a>)</p>
+<h2 id="how-will-vibe-coding-affect-open-source">How Will Vibe Coding Affect Open Source?</h2>
+<p>Vibe coding &mdash; generating code through AI prompts rather than writing it manually &mdash; threatens the ecosystem that AI models themselves depend on. The concern has three dimensions.</p>
+<p>First, <strong>community bypass.</strong> When developers ask an LLM for code instead of visiting project documentation, filing issues, or contributing patches, the organic engagement that sustains open-source projects is diverted. As <strong>arjie</strong> noted on HN, there is no longer pressure to contribute upstream when you can generate a custom solution.</p>
+<p>Second, <strong>training data bias.</strong> LLMs recommend libraries based on their prevalence in training data, creating a winner-take-all dynamic that marginalizes newer alternatives. The ecosystem risks ossifying around established tools.</p>
+<p>Third, <strong>maintainer burden.</strong> AI-generated pull requests &mdash; some legitimate, some padding &mdash; add new work for already-stretched maintainers, while the organic contributions and bug reports they relied on decline.</p>
+<p>The counterarguments are substantive. <strong>observationist</strong> argued that open source is adapting, not dying, and communities will develop new curation hierarchies. <strong>Flavius</strong> defended open source as an ideology about freedom, arguing the mechanism of code creation is irrelevant to the principle. <strong>charcircuit</strong> criticized the concern as outdated, noting modern AI agents search for current libraries rather than relying solely on training data.</p>
+<p><strong>Where it stands:</strong> The impact on open source is real but still unfolding. Small utility libraries face the most pressure, as their functionality can now be generated on demand. Large, complex projects (Linux, PostgreSQL, React) remain essential. The community has not yet found sustainable models for maintaining the long tail of open-source projects in an AI-assisted world.</p>
+<p>(<a href="../sources/2026-02-03-vibe-coding-killing-oss/">Source</a>)</p>
+<h2 id="is-agent-oriented-development-a-permanent-shift">Is Agent-Oriented Development a Permanent Shift?</h2>
+<p>The deepest question is whether the move toward agent-assisted coding represents a lasting change in how software is built, or whether it is a productivity fad that will stabilize into a more modest role.</p>
+<p>Arguments for permanence: Each model generation makes more tasks delegable. The <a href="../guides/adoption-stages/">Six Stages of AI Adoption</a> framework describes a ratchet effect where investments in harness engineering compound over time. Developers who reach Stage 5 or 6 report that going back to fully manual workflows feels like abandoning a power tool.</p>
+<p>Arguments for modesty: The METR study showed a 19% productivity reduction when experienced developers used AI on familiar codebases. <strong>strogonoff</strong> on HN questioned whether AI truly saves time given review overhead. The reliability concerns documented in <a href="../landscape/costs-and-tradeoffs/">Costs and Tradeoffs</a> create workflow fragility that purely manual coding does not have.</p>
+<p>The most likely outcome is neither extreme. Agent-assisted development is probably permanent for the tasks it handles well &mdash; greenfield features, test generation, boilerplate, code in well-documented domains. But the boundary between what to delegate and what to do manually will continue to shift with each model generation, and the skill of knowing where that boundary lies will remain the core practitioner competency.</p>
+<p>This is why the <a href="../start-here/core-loop/">Core Loop</a> emphasizes the &ldquo;verify&rdquo; and &ldquo;harness&rdquo; phases as heavily as the &ldquo;delegate&rdquo; phase. The technology for delegation will keep improving. The judgment about when and how to delegate is the human skill that compounds.</p>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        
+        <a href="../landscape/costs-and-tradeoffs.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Costs and Tradeoffs</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#is-ai-making-coding-skills-atrophy">Is AI Making Coding Skills Atrophy?</a></li>
+    <li><a href="#are-ai-assistants-getting-worse-over-time">Are AI Assistants Getting Worse Over Time?</a></li>
+    <li><a href="#will-the-ai-bubble-burst">Will the AI Bubble Burst?</a></li>
+    <li><a href="#how-will-vibe-coding-affect-open-source">How Will Vibe Coding Affect Open Source?</a></li>
+    <li><a href="#is-agent-oriented-development-a-permanent-shift">Is Agent-Oriented Development a Permanent Shift?</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

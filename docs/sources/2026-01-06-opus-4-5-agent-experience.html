@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Opus 4.5 is not the normal AI agent experience | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Opus 4.5 is not the normal AI agent experience">
+  <meta property="og:description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-sources"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../sources/index.html">Sources</a></li>
+      
+    
+    <li aria-current="page">Opus 4.5 is not the normal AI agent experience</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Opus 4.5 is not the normal AI agent experience</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-01-06">
+    January 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">3 min read</span>
+
+  
+  <span class="tier-badge tier-badge--2">Tier 2</span>
+  
+
+  <div class="meta-links">
+    
+    <a href="https://burkeholland.github.io/posts/opus-4-5-change-everything/" class="meta-link" target="_blank" rel="noopener">Source &#8599;</a>
+    
+    
+    
+    <a href="https://news.ycombinator.com/item?id=46515696" class="meta-link" target="_blank" rel="noopener">HN &#8599;</a>
+    
+    
+  </div>
+
+  
+  <span class="meta-stat">879 points</span>
+  
+  
+  
+  <span class="meta-stat">131 comments</span>
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/opus.html" class="tag-pill">opus</a>
+  
+  
+  
+  
+  <a href="../tags/claude-code.html" class="tag-pill">claude-code</a>
+  
+  
+  
+  
+  <a href="../tags/agent-workflows.html" class="tag-pill">agent-workflows</a>
+  
+  
+  
+  
+  <a href="../tags/vibe-coding.html" class="tag-pill">vibe-coding</a>
+  
+  
+  
+  
+  <a href="../tags/ai-capabilities.html" class="tag-pill">ai-capabilities</a>
+  
+  
+  
+  
+  <a href="../tags/developer-experience.html" class="tag-pill">developer-experience</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <h2 id="summary">Summary</h2>
+<p>Burke Holland wrote an enthusiastic account of his experience using Claude&rsquo;s Opus 4.5 model, arguing it represents a fundamental shift in AI agent capabilities that goes beyond anything he had previously experienced. His central claim is that Opus 4.5 delivers on promises that earlier AI coding agents could not fulfill, particularly around autonomous problem-solving and first-attempt success rates.</p>
+<p>Holland completed four substantial projects in rapid succession: an image conversion utility, a video editor, a social media automation app, and a route optimization tool. He highlighted the model&rsquo;s ability to handle full-stack development spanning frontend, backend, authentication, database integration, and cloud infrastructure &ndash; areas that had traditionally been weak points for AI agents.</p>
+<p>Key capabilities he observed included autonomous self-correction and debugging without human intervention, the ability to learn new tools like Firebase CLI without explicit instruction, and sophisticated framework comprehension. The model would read error logs, identify issues, and iterate on fixes independently.</p>
+<p>Holland proposed a provocative &ldquo;LLM-first&rdquo; coding philosophy that optimizes for machine maintainability rather than human readability, prioritizing linear control flow, explicit code, and regenerability over traditional software design aesthetics. However, he acknowledged security as a primary concern, estimating only about 80% confidence in robust implementations.</p>
+<p>The HN discussion was extensive and polarized, with many experienced developers pushing back on the replacement narrative while acknowledging genuine productivity gains for greenfield projects and personal tools.</p>
+<h2 id="key-insights">Key Insights</h2>
+<ul>
+<li><strong>First-attempt success is the differentiator</strong>: Unlike prior agents that required extensive back-and-forth, Opus 4.5 often solved problems correctly on the first try</li>
+<li><strong>Full-stack autonomy</strong>: The model handled end-to-end development including auth, databases, and cloud infra &ndash; historically the weakest areas for AI agents</li>
+<li><strong>LLM-first coding philosophy</strong>: Holland proposed optimizing code for machine maintainability rather than human readability, a controversial but thought-provoking stance</li>
+</ul>
+<h2 id="notable-quotes">Notable Quotes</h2>
+<blockquote>
+<p>&ldquo;Opus 4.5 feels like the model that we were promised&rdquo; — Burke Holland</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;It&rsquo;s still not as smart as a good human programmer&rdquo; — mcv</p>
+</blockquote>
+<h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
+<p>The discussion generated 879 points and 131 comments. Key themes:</p>
+<p><strong>Enthusiastic adoption</strong></p>
+<ul>
+<li><strong>s-macke</strong>: Praised Opus 4.5&rsquo;s ability to act independently, make decisions, collaborate, and actually execute plans, noting every clearly defined coding problem was solved</li>
+<li><strong>simonw</strong>: Reported throwing absurdly difficult challenges at the model (JS interpreter in Python, WebAssembly runtime) and being consistently surprised by results</li>
+<li><strong>jedberg</strong>: Described a decade-old app idea that Claude built exactly as described on the first attempt, then iterated improvements conversationally</li>
+</ul>
+<p><strong>Skepticism and pushback</strong></p>
+<ul>
+<li><strong>multisport</strong>: Argued mid-level engineers don&rsquo;t work on isolated greenfield projects and the hard part of engineering is building things the right way for teams to extend</li>
+<li><strong>tannedNerd</strong>: Pointed out none of the demos address production quality concerns like edge case testing, security audits, or maintainability</li>
+<li><strong>honeycrispy</strong>: Found that while Opus works for targeted tasks, its architecture decisions were baffling and required rewriting half the code</li>
+<li><strong>mcv</strong>: Despite heavy use, concluded the model frequently got stuck, went down wrong paths, and repeated corrected mistakes</li>
+</ul>
+<p><strong>Philosophical debate</strong></p>
+<ul>
+<li><strong>poisonborz</strong>: Argued the discussion misses what developers are actually hired for &ndash; responsibility, not just code output</li>
+<li><strong>tripledry</strong>: Expressed concern that if programming becomes prompt engineering, the joy of building would be lost</li>
+<li><strong>maciejzj</strong>: Raised societal implications of commoditizing technology knowledge through subscription access</li>
+</ul>
+<p><strong>Author&rsquo;s response</strong></p>
+<ul>
+<li><strong>hollandburke</strong>: Acknowledged both sides of the debate, clarifying he doesn&rsquo;t consider himself an exceptional developer and that his experience is the only objective evidence he has</li>
+</ul>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../sources/2025-12-22-claude-code-lsp-support.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Claude Code gets native LSP support</span>
+        </a>
+        
+        
+        <a href="../sources/2026-01-24-claude-code-swarms.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Claude Code&#39;s New Hidden Feature: Swarms</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#key-insights">Key Insights</a></li>
+    <li><a href="#notable-quotes">Notable Quotes</a></li>
+    <li><a href="#hn-discussion-highlights">HN Discussion Highlights</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

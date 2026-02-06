@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Agentic AI Handbook: Production-Ready Patterns | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="The Agentic AI Handbook: Production-Ready Patterns">
+  <meta property="og:description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-sources"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../sources/index.html">Sources</a></li>
+      
+    
+    <li aria-current="page">The Agentic AI Handbook: Production-Ready Patterns</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">The Agentic AI Handbook: Production-Ready Patterns</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-01-21">
+    January 21, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">3 min read</span>
+
+  
+  <span class="tier-badge tier-badge--1">Tier 1</span>
+  
+
+  <div class="meta-links">
+    
+    <a href="https://www.nibzard.com/agentic-handbook" class="meta-link" target="_blank" rel="noopener">Source &#8599;</a>
+    
+    
+    
+    <a href="https://news.ycombinator.com/item?id=46701969" class="meta-link" target="_blank" rel="noopener">HN &#8599;</a>
+    
+    
+  </div>
+
+  
+  <span class="meta-stat">210 points</span>
+  
+  
+  
+  <span class="meta-stat">20 comments</span>
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/agent-workflows.html" class="tag-pill">agent-workflows</a>
+  
+  
+  
+  
+  <a href="../tags/agentic-patterns.html" class="tag-pill">agentic-patterns</a>
+  
+  
+  
+  
+  <a href="../tags/production-engineering.html" class="tag-pill">production-engineering</a>
+  
+  
+  
+  
+  <a href="../tags/multi-agent.html" class="tag-pill">multi-agent</a>
+  
+  
+  
+  
+  <a href="../tags/security.html" class="tag-pill">security</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <h2 id="summary">Summary</h2>
+<p>The Agentic AI Handbook provides a comprehensive taxonomy of production-ready patterns for building agentic AI systems. Its core definition frames an agent as an LLM wrapped in a loop that can observe state, call tools, record results, and decide when it is done. The handbook organizes patterns into eight categories covering orchestration and control, tool use, context and memory, feedback loops, UX and collaboration, reliability and evaluation, learning and adaptation, and security and safety.</p>
+<p>Four foundational patterns anchor the framework. Plan-Then-Execute splits work into a planning phase, controlled execution, and replan gates with human review and policy controls. Inversion of Control provides clear goals and constraints while letting agents choose their own execution paths. The Reflection Loop anchors iterations to objective signals like tests, lints, or validation rather than subjective self-assessment. Action Trace Monitoring tracks observable behaviors such as tool calls, diffs, and test output with explicit kill switches for safety.</p>
+<p>The handbook emphasizes practical production realities: adopt diff-first workflows, keep tasks small and bounded, create persistent project rules documents (covering test commands, constraints, and style guidelines), and avoid what it calls the &ldquo;Ralph Wiggum drift trap&rdquo; through tight scope and explicit checks. On security, it recommends removing at least one element from the &ldquo;lethal trifecta&rdquo; of private data access, untrusted input exposure, and external exfiltration capability. Multi-agent systems should be reserved for cleanly decomposable work with deterministic merging.</p>
+<p>The overarching message is that agents multiply both output and mistakes. The bottleneck remains human judgment, and success requires deterministic checks, architectural oversight, and small PR sizes to prevent what the handbook terms &ldquo;slop gravity.&rdquo;</p>
+<h2 id="key-insights">Key Insights</h2>
+<ul>
+<li><strong>Plan-Then-Execute prevents mid-execution drift</strong>: Splitting work into planning, execution, and replan gates with human review improves reliability</li>
+<li><strong>Reflection loops need objective anchors</strong>: Self-assessment is unreliable; anchor iterations to tests, lints, and validation</li>
+<li><strong>The lethal trifecta for security</strong>: Remove at least one of private data access, untrusted input exposure, or external exfiltration capability</li>
+<li><strong>Small PRs prevent slop gravity</strong>: Agents produce volume; keeping changes small and reviewable prevents accumulated low-quality code</li>
+<li><strong>Diff-first workflow</strong>: Focusing on diffs rather than complete file outputs keeps changes auditable and manageable</li>
+<li><strong>Multi-agent systems require clean decomposition</strong>: Only use multiple agents when work decomposes cleanly with deterministic merging</li>
+</ul>
+<h2 id="notable-quotes">Notable Quotes</h2>
+<blockquote>
+<p>&ldquo;An LLM wrapped in a loop that can observe state, call tools, and decide when it&rsquo;s done.&rdquo; — Nibzard</p>
+</blockquote>
+<h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
+<p>The discussion generated 210 points and 20 comments. Key themes:</p>
+<p><strong>Skepticism about AI-generated content</strong></p>
+<ul>
+<li><strong>Bukhmanizer</strong>: Would rather just read the prompt that generated the article</li>
+<li><strong>zuInnp</strong>: Found the website layout hard to read and suspected the article was AI-written</li>
+<li><strong>mellosouls</strong>: Noted the author appears to be an &ldquo;AI Growth Innovator&rdquo; rather than a production engineer</li>
+</ul>
+<p><strong>Practical pattern validation</strong></p>
+<ul>
+<li><strong>MrOrelliOReilly</strong>: Found value in the consolidation and vocabulary standardization, noting developers are converging on similar patterns independently</li>
+<li><strong>comboy</strong>: Observed a meta-pattern — when you notice a working pattern like planning or TODO management, it gets integrated into the agent&rsquo;s own behavior, making your abstraction on top redundant</li>
+<li><strong>N_Lens</strong>: Felt the cognitive cost of agentic coding is much higher than a skilled human, with too much bootstrapping to keep agents on the rails</li>
+</ul>
+<p><strong>Concerns about agent scaling</strong></p>
+<ul>
+<li><strong>embedding-shape</strong>: Disagreed that time is the real bottleneck — the true bottleneck is drowning under your own slop as agents produce fast but lower-quality output that degrades as projects grow</li>
+<li><strong>kstenerud</strong>: Counter-argued with a personal report of 100x productivity using the latest Claude, completing multiple complex projects in a single week</li>
+</ul>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../sources/2025-12-18-two-kinds-vibe-coding.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Two Kinds of Vibe Coding</span>
+        </a>
+        
+        
+        <a href="../sources/2025-12-22-claude-code-lsp-support.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Claude Code gets native LSP support</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#key-insights">Key Insights</a></li>
+    <li><a href="#notable-quotes">Notable Quotes</a></li>
+    <li><a href="#hn-discussion-highlights">HN Discussion Highlights</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

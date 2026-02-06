@@ -3,29 +3,61 @@
 
 <div class="page-container">
   {{/* Start Here */}}
-  {{ with site.GetPage "/guides/getting-started" }}
+  {{ with site.GetPage "/start-here" }}
   <section class="home-section">
     <div class="start-here-card">
       <a href="{{ .RelPermalink }}" class="start-here-link">
         <span class="start-here-badge">Start Here</span>
         <h2>{{ .Title }}</h2>
         <p>{{ .Description }}</p>
-        <span class="start-here-cta">Read the guide →</span>
+        <span class="start-here-cta">Read the guide &rarr;</span>
       </a>
     </div>
   </section>
   {{ end }}
 
-  {{/* Core Patterns */}}
-  {{ $patterns := (site.GetPage "/patterns").RegularPages }}
-  {{ if $patterns }}
+  {{/* Core Skills */}}
+  {{ $skills := (site.GetPage "/skills").RegularPages }}
+  {{ if $skills }}
   <section class="home-section">
     <div class="home-section-header">
-      <h2 class="home-section-title">Core Patterns</h2>
-      <a href="{{ with site.GetPage "/patterns" }}{{ .RelPermalink }}{{ end }}" class="section-link">View all →</a>
+      <h2 class="home-section-title">Core Skills</h2>
+      <a href="{{ with site.GetPage "/skills" }}{{ .RelPermalink }}{{ end }}" class="section-link">View all &rarr;</a>
     </div>
     <div class="card-grid">
-      {{ range $patterns }}
+      {{ range $skills.ByWeight }}
+        {{ partial "card.html" . }}
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* Tools */}}
+  {{ $tools := (site.GetPage "/tools").RegularPages }}
+  {{ if $tools }}
+  <section class="home-section">
+    <div class="home-section-header">
+      <h2 class="home-section-title">Tool Landscape</h2>
+      <a href="{{ with site.GetPage "/tools" }}{{ .RelPermalink }}{{ end }}" class="section-link">View all &rarr;</a>
+    </div>
+    <div class="card-grid">
+      {{ range $tools.ByWeight }}
+        {{ partial "card.html" . }}
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* Workflows */}}
+  {{ $workflows := (site.GetPage "/workflows").RegularPages }}
+  {{ if $workflows }}
+  <section class="home-section">
+    <div class="home-section-header">
+      <h2 class="home-section-title">Workflows</h2>
+      <a href="{{ with site.GetPage "/workflows" }}{{ .RelPermalink }}{{ end }}" class="section-link">View all &rarr;</a>
+    </div>
+    <div class="card-grid">
+      {{ range $workflows.ByWeight }}
         {{ partial "card.html" . }}
       {{ end }}
     </div>
@@ -50,32 +82,32 @@
   </section>
   {{ end }}
 
-  {{/* Deep Dives */}}
-  {{ $deepdives := (site.GetPage "/deep-dives").RegularPages }}
-  {{ if $deepdives }}
+  {{/* Landscape */}}
+  {{ $landscape := (site.GetPage "/landscape").RegularPages }}
+  {{ if $landscape }}
   <section class="home-section">
     <div class="home-section-header">
-      <h2 class="home-section-title">Deep Dives</h2>
-      <a href="{{ with site.GetPage "/deep-dives" }}{{ .RelPermalink }}{{ end }}" class="section-link">View all →</a>
+      <h2 class="home-section-title">Landscape</h2>
+      <a href="{{ with site.GetPage "/landscape" }}{{ .RelPermalink }}{{ end }}" class="section-link">View all &rarr;</a>
     </div>
     <div class="card-grid">
-      {{ range $deepdives }}
+      {{ range $landscape.ByWeight }}
         {{ partial "card.html" . }}
       {{ end }}
     </div>
   </section>
   {{ end }}
 
-  {{/* Quick References */}}
-  {{ $refs := (site.GetPage "/references").RegularPages }}
-  {{ if $refs }}
+  {{/* Evidence */}}
+  {{ $evidence := (site.GetPage "/evidence").RegularPages }}
+  {{ if $evidence }}
   <section class="home-section">
     <div class="home-section-header">
-      <h2 class="home-section-title">Quick References</h2>
-      <a href="{{ with site.GetPage "/references" }}{{ .RelPermalink }}{{ end }}" class="section-link">View all →</a>
+      <h2 class="home-section-title">Evidence &amp; Case Studies</h2>
+      <a href="{{ with site.GetPage "/evidence" }}{{ .RelPermalink }}{{ end }}" class="section-link">View all &rarr;</a>
     </div>
     <div class="card-grid">
-      {{ range $refs }}
+      {{ range $evidence.ByWeight }}
         {{ partial "card.html" . }}
       {{ end }}
     </div>

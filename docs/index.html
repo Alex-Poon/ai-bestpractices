@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-	<meta name="generator" content="Hugo 0.155.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta name="generator" content="Hugo 0.155.2">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI Best Practices Knowledge Base</title>
-  <meta name="description" content="What the best practitioners know about AI-assisted software development.">
-  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta name="color-scheme" content="dark light">
 
   
   <meta property="og:title" content="AI Best Practices Knowledge Base">
-  <meta property="og:description" content="What the best practitioners know about AI-assisted software development.">
+  <meta property="og:description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
   <meta property="og:type" content="website">
 
   
@@ -26,7 +26,7 @@
 <body class="section-home is-home"><header class="site-header">
   <nav class="nav-container">
     <a class="nav-logo" href="./index.html">
-      <svg class="nav-logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
         <circle cx="12" cy="8" r="2" fill="currentColor"/>
         <circle cx="7" cy="15" r="2" fill="currentColor"/>
@@ -38,52 +38,74 @@
       <span>AI Best Practices</span>
     </a>
     <div class="nav-links">
-      <a class="nav-link" data-section="guides" href="./guides/index.html">Guides</a>
-      <a class="nav-link" data-section="patterns" href="./patterns/index.html">Patterns</a>
-      <a class="nav-link" data-section="deep-dives" href="./deep-dives/index.html">Deep Dives</a>
-      <a class="nav-link" data-section="references" href="./references/index.html">References</a>
-      <a class="nav-link" data-section="tags" href="./tags/index.html">Tags</a>
+      <a class="nav-link" data-section="start-here" href="./start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="./skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="./tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="./workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="./landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="./evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="./sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="./tags/">Tags</a>
     </div>
     <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
       <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
-        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
         </svg>
-        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
         </svg>
       </button>
       <button class="nav-toggle" aria-label="Toggle menu" type="button">
         <span></span>
-        <span></span>
-        <span></span>
       </button>
     </div>
   </nav>
 </header>
-<main>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
 <section class="hero">
   <div class="hero-container">
     <p class="hero-eyebrow">Knowledge Base</p>
     <h1 class="hero-title">AI Best Practices</h1>
-    <p class="hero-description">What the best practitioners know about AI-assisted software development.</p>
+    <p class="hero-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
     <div class="hero-stats">
       <div class="hero-stat">
-        <span class="hero-stat-number">5</span>
+        <span class="hero-stat-number">32</span>
+        <span class="hero-stat-label">Sources</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-number">17</span>
         <span class="hero-stat-label">Articles</span>
       </div>
       <div class="hero-stat">
-        <span class="hero-stat-number">3</span>
-        <span class="hero-stat-label">Patterns</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-number">33</span>
+        <span class="hero-stat-number">137</span>
         <span class="hero-stat-label">Topics</span>
       </div>
     </div>
     <div class="hero-actions">
-      <a href="./guides/getting-started.html" class="btn btn-primary">Start Here</a>
-      <a href="./patterns/index.html" class="btn btn-secondary">View Patterns</a>
+      <a href="./start-here/index.html" class="btn btn-primary">Start Here</a>
+      <a href="./skills/index.html" class="btn btn-secondary">Core Skills</a>
     </div>
   </div>
 </section>
@@ -94,11 +116,11 @@
   
   <section class="home-section">
     <div class="start-here-card">
-      <a href="./guides/getting-started.html" class="start-here-link">
+      <a href="./start-here/index.html" class="start-here-link">
         <span class="start-here-badge">Start Here</span>
-        <h2>Start Here: AI-Assisted Development</h2>
-        <p>The essential introduction to working effectively with AI coding agents.</p>
-        <span class="start-here-cta">Read the guide →</span>
+        <h2>Start Here</h2>
+        <p>Your roadmap to effective AI-assisted development. Learn the core loop, pick your tools, and level up.</p>
+        <span class="start-here-cta">Read the guide &rarr;</span>
       </a>
     </div>
   </section>
@@ -109,32 +131,32 @@
   
   <section class="home-section">
     <div class="home-section-header">
-      <h2 class="home-section-title">Core Patterns</h2>
-      <a href="./patterns/index.html" class="section-link">View all →</a>
+      <h2 class="home-section-title">Core Skills</h2>
+      <a href="./skills/index.html" class="section-link">View all &rarr;</a>
     </div>
     <div class="card-grid">
       
-        <article class="card card--patterns">
-  <a href="./patterns/task-scoping.html" class="card-link">
+        <article class="card card--skills">
+  <a href="./skills/task-scoping.html" class="card-link">
     <div class="card-badge">
-      <svg class="section-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+      <svg class="section-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
 </svg>
-      <span>Patterns</span>
+      <span>Skills</span>
     </div>
-    <h3 class="card-title">Pattern: Task Scoping for AI Agents</h3>
+    <h3 class="card-title">Task Scoping for AI Agents</h3>
     <p class="card-excerpt">
       
-        Find the sweet spot where tasks are small enough to verify but large enough to be worth delegating.
+        How to decompose work into tasks AI can actually complete well.
       
     </p>
     <div class="card-meta">
-      <time>Feb 5, 2026</time>
-      <span class="card-reading-time">9 min read</span>
+      <time>Feb 6, 2026</time>
+      <span class="card-reading-time">6 min read</span>
     </div>
     
     <div class="card-tags">
-      <span class="tag-pill">pattern</span><span class="tag-pill">task-scoping</span><span class="tag-pill">core-skill</span>
+      <span class="tag-pill">task-scoping</span><span class="tag-pill">core-skill</span><span class="tag-pill">agent-workflows</span>
       
     </div>
     
@@ -142,27 +164,27 @@
 </article>
 
       
-        <article class="card card--patterns">
-  <a href="./patterns/harness-engineering.html" class="card-link">
+        <article class="card card--skills">
+  <a href="./skills/harness-engineering.html" class="card-link">
     <div class="card-badge">
-      <svg class="section-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+      <svg class="section-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
 </svg>
-      <span>Patterns</span>
+      <span>Skills</span>
     </div>
-    <h3 class="card-title">Pattern: Harness Engineering</h3>
+    <h3 class="card-title">Harness Engineering</h3>
     <p class="card-excerpt">
       
-        Build persistent infrastructure that constrains and guides agents across sessions.
+        Configure your AI tools for maximum effectiveness with AGENTS.md, custom instructions, and project context.
       
     </p>
     <div class="card-meta">
-      <time>Feb 5, 2026</time>
-      <span class="card-reading-time">9 min read</span>
+      <time>Feb 6, 2026</time>
+      <span class="card-reading-time">6 min read</span>
     </div>
     
     <div class="card-tags">
-      <span class="tag-pill">pattern</span><span class="tag-pill">harness-engineering</span><span class="tag-pill">tooling</span>
+      <span class="tag-pill">harness-engineering</span><span class="tag-pill">core-skill</span><span class="tag-pill">agents-md</span>
       <span class="tag-pill tag-pill--more">+1</span>
     </div>
     
@@ -170,28 +192,336 @@
 </article>
 
       
-        <article class="card card--patterns">
-  <a href="./patterns/parallel-agent-coordination.html" class="card-link">
+        <article class="card card--skills">
+  <a href="./skills/verification.html" class="card-link">
     <div class="card-badge">
-      <svg class="section-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+      <svg class="section-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
 </svg>
-      <span>Patterns</span>
+      <span>Skills</span>
     </div>
-    <h3 class="card-title">Pattern: Parallel Agent Coordination</h3>
+    <h3 class="card-title">Verification: Reading AI-Generated Code</h3>
     <p class="card-excerpt">
       
-        Use git-based decentralized coordination to enable parallel agent work without conflict.
+        The most critical skill -- how to effectively review and validate AI output.
       
     </p>
     <div class="card-meta">
-      <time>Feb 5, 2026</time>
+      <time>Feb 6, 2026</time>
+      <span class="card-reading-time">7 min read</span>
+    </div>
+    
+    <div class="card-tags">
+      <span class="tag-pill">verification</span><span class="tag-pill">core-skill</span><span class="tag-pill">code-review</span>
+      <span class="tag-pill tag-pill--more">+1</span>
+    </div>
+    
+  </a>
+</article>
+
+      
+        <article class="card card--skills">
+  <a href="./skills/model-selection.html" class="card-link">
+    <div class="card-badge">
+      <svg class="section-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+</svg>
+      <span>Skills</span>
+    </div>
+    <h3 class="card-title">Model Selection</h3>
+    <p class="card-excerpt">
+      
+        Choosing the right model for the right task -- balancing capability, cost, and speed.
+      
+    </p>
+    <div class="card-meta">
+      <time>Feb 6, 2026</time>
+      <span class="card-reading-time">7 min read</span>
+    </div>
+    
+    <div class="card-tags">
+      <span class="tag-pill">model-selection</span><span class="tag-pill">core-skill</span><span class="tag-pill">cost-optimization</span>
+      
+    </div>
+    
+  </a>
+</article>
+
+      
+    </div>
+  </section>
+  
+
+  
+  
+  
+  <section class="home-section">
+    <div class="home-section-header">
+      <h2 class="home-section-title">Tool Landscape</h2>
+      <a href="./tools/index.html" class="section-link">View all &rarr;</a>
+    </div>
+    <div class="card-grid">
+      
+        <article class="card card--tools">
+  <a href="./tools/claude-code.html" class="card-link">
+    <div class="card-badge">
+      <svg class="section-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+</svg>
+      <span>Tools</span>
+    </div>
+    <h3 class="card-title">Claude Code Deep Dive</h3>
+    <p class="card-excerpt">
+      
+        Swarms, LSP support, AGENTS.md, benchmarks — everything practitioners need to know.
+      
+    </p>
+    <div class="card-meta">
+      <time>Feb 6, 2026</time>
       <span class="card-reading-time">6 min read</span>
     </div>
     
     <div class="card-tags">
-      <span class="tag-pill">pattern</span><span class="tag-pill">parallel-agents</span><span class="tag-pill">coordination</span>
-      <span class="tag-pill tag-pill--more">+2</span>
+      <span class="tag-pill">claude-code</span><span class="tag-pill">agent-workflows</span><span class="tag-pill">swarms</span>
+      <span class="tag-pill tag-pill--more">+1</span>
+    </div>
+    
+  </a>
+</article>
+
+      
+        <article class="card card--tools">
+  <a href="./tools/cursor.html" class="card-link">
+    <div class="card-badge">
+      <svg class="section-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+</svg>
+      <span>Tools</span>
+    </div>
+    <h3 class="card-title">Cursor</h3>
+    <p class="card-excerpt">
+      
+        What practitioners say about the AI-native IDE.
+      
+    </p>
+    <div class="card-meta">
+      <time>Feb 6, 2026</time>
+      <span class="card-reading-time">4 min read</span>
+    </div>
+    
+    <div class="card-tags">
+      <span class="tag-pill">cursor</span><span class="tag-pill">ide-tools</span><span class="tag-pill">tool-comparison</span>
+      
+    </div>
+    
+  </a>
+</article>
+
+      
+        <article class="card card--tools">
+  <a href="./tools/amp.html" class="card-link">
+    <div class="card-badge">
+      <svg class="section-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+</svg>
+      <span>Tools</span>
+    </div>
+    <h3 class="card-title">Amp Code</h3>
+    <p class="card-excerpt">
+      
+        Sourcegraph&#39;s multi-model coding agent — architecture and practitioner reception.
+      
+    </p>
+    <div class="card-meta">
+      <time>Feb 6, 2026</time>
+      <span class="card-reading-time">4 min read</span>
+    </div>
+    
+    <div class="card-tags">
+      <span class="tag-pill">amp-code</span><span class="tag-pill">multi-model</span><span class="tag-pill">agent-architecture</span>
+      <span class="tag-pill tag-pill--more">+1</span>
+    </div>
+    
+  </a>
+</article>
+
+      
+        <article class="card card--tools">
+  <a href="./tools/copilot.html" class="card-link">
+    <div class="card-badge">
+      <svg class="section-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+</svg>
+      <span>Tools</span>
+    </div>
+    <h3 class="card-title">GitHub Copilot</h3>
+    <p class="card-excerpt">
+      
+        Where inline completion fits in the age of agentic coding.
+      
+    </p>
+    <div class="card-meta">
+      <time>Feb 6, 2026</time>
+      <span class="card-reading-time">3 min read</span>
+    </div>
+    
+    <div class="card-tags">
+      <span class="tag-pill">copilot</span><span class="tag-pill">tool-comparison</span>
+      
+    </div>
+    
+  </a>
+</article>
+
+      
+        <article class="card card--tools">
+  <a href="./tools/mcp-ecosystem.html" class="card-link">
+    <div class="card-badge">
+      <svg class="section-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+</svg>
+      <span>Tools</span>
+    </div>
+    <h3 class="card-title">The MCP Ecosystem</h3>
+    <p class="card-excerpt">
+      
+        Model Context Protocol is becoming the standard for AI tool interoperability.
+      
+    </p>
+    <div class="card-meta">
+      <time>Feb 6, 2026</time>
+      <span class="card-reading-time">4 min read</span>
+    </div>
+    
+    <div class="card-tags">
+      <span class="tag-pill">mcp</span><span class="tag-pill">tooling</span><span class="tag-pill">interoperability</span>
+      
+    </div>
+    
+  </a>
+</article>
+
+      
+    </div>
+  </section>
+  
+
+  
+  
+  
+  <section class="home-section">
+    <div class="home-section-header">
+      <h2 class="home-section-title">Workflows</h2>
+      <a href="./workflows/index.html" class="section-link">View all &rarr;</a>
+    </div>
+    <div class="card-grid">
+      
+        <article class="card card--workflows">
+  <a href="./workflows/daily-practice.html" class="card-link">
+    <div class="card-badge">
+      <svg class="section-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+</svg>
+      <span>Workflows</span>
+    </div>
+    <h3 class="card-title">Daily Practice</h3>
+    <p class="card-excerpt">
+      
+        A practical daily checklist for AI-assisted development.
+      
+    </p>
+    <div class="card-meta">
+      <time>Feb 6, 2026</time>
+      <span class="card-reading-time">6 min read</span>
+    </div>
+    
+    <div class="card-tags">
+      <span class="tag-pill">workflow</span><span class="tag-pill">checklist</span><span class="tag-pill">daily-practice</span>
+      <span class="tag-pill tag-pill--more">+1</span>
+    </div>
+    
+  </a>
+</article>
+
+      
+        <article class="card card--workflows">
+  <a href="./workflows/parallel-agents.html" class="card-link">
+    <div class="card-badge">
+      <svg class="section-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+</svg>
+      <span>Workflows</span>
+    </div>
+    <h3 class="card-title">Parallel Agent Coordination</h3>
+    <p class="card-excerpt">
+      
+        Patterns for orchestrating multiple AI agents on a single project.
+      
+    </p>
+    <div class="card-meta">
+      <time>Feb 6, 2026</time>
+      <span class="card-reading-time">6 min read</span>
+    </div>
+    
+    <div class="card-tags">
+      <span class="tag-pill">parallel-agents</span><span class="tag-pill">coordination</span><span class="tag-pill">agent-workflows</span>
+      <span class="tag-pill tag-pill--more">+1</span>
+    </div>
+    
+  </a>
+</article>
+
+      
+        <article class="card card--workflows">
+  <a href="./workflows/agents-md-guide.html" class="card-link">
+    <div class="card-badge">
+      <svg class="section-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+</svg>
+      <span>Workflows</span>
+    </div>
+    <h3 class="card-title">AGENTS.md Guide</h3>
+    <p class="card-excerpt">
+      
+        How to write effective AGENTS.md and CLAUDE.md files — the evidence-backed approach to AI harness configuration.
+      
+    </p>
+    <div class="card-meta">
+      <time>Feb 6, 2026</time>
+      <span class="card-reading-time">6 min read</span>
+    </div>
+    
+    <div class="card-tags">
+      <span class="tag-pill">agents-md</span><span class="tag-pill">harness-engineering</span><span class="tag-pill">claude-code</span>
+      <span class="tag-pill tag-pill--more">+1</span>
+    </div>
+    
+  </a>
+</article>
+
+      
+        <article class="card card--workflows">
+  <a href="./workflows/vibe-coding-spectrum.html" class="card-link">
+    <div class="card-badge">
+      <svg class="section-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+</svg>
+      <span>Workflows</span>
+    </div>
+    <h3 class="card-title">The Vibe Coding Spectrum</h3>
+    <p class="card-excerpt">
+      
+        From rapid prototyping to production engineering — understanding when to be rigorous.
+      
+    </p>
+    <div class="card-meta">
+      <time>Feb 6, 2026</time>
+      <span class="card-reading-time">7 min read</span>
+    </div>
+    
+    <div class="card-tags">
+      <span class="tag-pill">vibe-coding</span><span class="tag-pill">workflow</span><span class="tag-pill">code-quality</span>
+      <span class="tag-pill tag-pill--more">+1</span>
     </div>
     
   </a>
@@ -212,8 +542,8 @@
       <a href="./synthesis/state-of-practice-feb-2026.html" class="featured-card-link">
         <span class="featured-badge">Synthesis</span>
         <h3>The State of Agentic Coding Practice (Feb 2026)</h3>
-        <p>Where serious practitioners have landed on AI-assisted development as of February 2026.</p>
-        <span class="featured-meta">11 min read</span>
+        <p>Where serious practitioners have landed on AI-assisted development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+        <span class="featured-meta">6 min read</span>
       </a>
       
     </div>
@@ -225,88 +555,116 @@
   
   <section class="home-section">
     <div class="home-section-header">
-      <h2 class="home-section-title">Deep Dives</h2>
-      <a href="./deep-dives/index.html" class="section-link">View all →</a>
+      <h2 class="home-section-title">Landscape</h2>
+      <a href="./landscape/index.html" class="section-link">View all &rarr;</a>
     </div>
     <div class="card-grid">
       
-        <article class="card card--deep-dives">
-  <a href="./deep-dives/parallel-compiler-lessons.html" class="card-link">
+        <article class="card card--landscape">
+  <a href="./landscape/model-releases-2026.html" class="card-link">
     <div class="card-badge">
-      <svg class="section-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      <svg class="section-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
 </svg>
-      <span>Deep-Dives</span>
+      <span>Landscape</span>
     </div>
-    <h3 class="card-title">What 100 Parallel AI Agents Taught Us About Harness Engineering</h3>
+    <h3 class="card-title">Model Releases in 2026</h3>
     <p class="card-excerpt">
       
-        Lessons from building a 100,000-line C compiler with 16 parallel Claude instances.
+        Claude 4.6, Gemini 3, DeepSeek, Llama 4, Mistral 3 — the rapidly evolving model landscape.
       
     </p>
     <div class="card-meta">
-      <time>Feb 5, 2026</time>
+      <time>Feb 6, 2026</time>
+      <span class="card-reading-time">5 min read</span>
+    </div>
+    
+    <div class="card-tags">
+      <span class="tag-pill">model-releases</span><span class="tag-pill">claude-code</span><span class="tag-pill">gemini</span>
+      <span class="tag-pill tag-pill--more">+3</span>
+    </div>
+    
+  </a>
+</article>
+
+      
+        <article class="card card--landscape">
+  <a href="./landscape/adoption-curve.html" class="card-link">
+    <div class="card-badge">
+      <svg class="section-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+</svg>
+      <span>Landscape</span>
+    </div>
+    <h3 class="card-title">The Adoption Curve</h3>
+    <p class="card-excerpt">
+      
+        Where the industry stands on AI-assisted development adoption.
+      
+    </p>
+    <div class="card-meta">
+      <time>Feb 6, 2026</time>
+      <span class="card-reading-time">5 min read</span>
+    </div>
+    
+    <div class="card-tags">
+      <span class="tag-pill">adoption-strategy</span><span class="tag-pill">industry-trends</span>
+      
+    </div>
+    
+  </a>
+</article>
+
+      
+        <article class="card card--landscape">
+  <a href="./landscape/costs-and-tradeoffs.html" class="card-link">
+    <div class="card-badge">
+      <svg class="section-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+</svg>
+      <span>Landscape</span>
+    </div>
+    <h3 class="card-title">Costs and Tradeoffs</h3>
+    <p class="card-excerpt">
+      
+        The real economics of AI coding — costs, reliability, and what practitioners report spending.
+      
+    </p>
+    <div class="card-meta">
+      <time>Feb 6, 2026</time>
+      <span class="card-reading-time">5 min read</span>
+    </div>
+    
+    <div class="card-tags">
+      <span class="tag-pill">cost-optimization</span><span class="tag-pill">reliability</span><span class="tag-pill">ai-economics</span>
+      
+    </div>
+    
+  </a>
+</article>
+
+      
+        <article class="card card--landscape">
+  <a href="./landscape/open-questions.html" class="card-link">
+    <div class="card-badge">
+      <svg class="section-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+</svg>
+      <span>Landscape</span>
+    </div>
+    <h3 class="card-title">Open Questions</h3>
+    <p class="card-excerpt">
+      
+        The debates still raging in the AI coding community.
+      
+    </p>
+    <div class="card-meta">
+      <time>Feb 6, 2026</time>
       <span class="card-reading-time">7 min read</span>
     </div>
     
     <div class="card-tags">
-      <span class="tag-pill">parallel-agents</span><span class="tag-pill">harness-engineering</span><span class="tag-pill">test-design</span>
-      <span class="tag-pill tag-pill--more">+2</span>
-    </div>
-    
-  </a>
-</article>
-
-      
-        <article class="card card--deep-dives">
-  <a href="./deep-dives/practitioner-consensus.html" class="card-link">
-    <div class="card-badge">
-      <svg class="section-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-</svg>
-      <span>Deep-Dives</span>
-    </div>
-    <h3 class="card-title">What Practitioners Actually Think About AI Coding</h3>
-    <p class="card-excerpt">
-      
-        A consensus report from experienced developers on what works, what fails, and what remains unresolved.
-      
-    </p>
-    <div class="card-meta">
-      <time>Feb 5, 2026</time>
-      <span class="card-reading-time">9 min read</span>
-    </div>
-    
-    <div class="card-tags">
-      <span class="tag-pill">community-discussion</span><span class="tag-pill">adoption-strategy</span><span class="tag-pill">productivity-debate</span>
-      <span class="tag-pill tag-pill--more">+2</span>
-    </div>
-    
-  </a>
-</article>
-
-      
-        <article class="card card--deep-dives">
-  <a href="./deep-dives/multi-model-agents.html" class="card-link">
-    <div class="card-badge">
-      <svg class="section-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-</svg>
-      <span>Deep-Dives</span>
-    </div>
-    <h3 class="card-title">The Multi-Model Agent Landscape</h3>
-    <p class="card-excerpt">
-      
-        Why the future of AI coding tools is multi-model, and what practitioners should know about it.
-      
-    </p>
-    <div class="card-meta">
-      <time>Feb 5, 2026</time>
-      <span class="card-reading-time">6 min read</span>
-    </div>
-    
-    <div class="card-tags">
-      <span class="tag-pill">multi-model</span><span class="tag-pill">agent-architecture</span><span class="tag-pill">tool-review</span>
+      <span class="tag-pill">debate</span><span class="tag-pill">open-questions</span><span class="tag-pill">ai-skepticism</span>
       <span class="tag-pill tag-pill--more">+1</span>
     </div>
     
@@ -323,32 +681,60 @@
   
   <section class="home-section">
     <div class="home-section-header">
-      <h2 class="home-section-title">Quick References</h2>
-      <a href="./references/index.html" class="section-link">View all →</a>
+      <h2 class="home-section-title">Evidence &amp; Case Studies</h2>
+      <a href="./evidence/index.html" class="section-link">View all &rarr;</a>
     </div>
     <div class="card-grid">
       
-        <article class="card card--references">
-  <a href="./references/daily-workflow-checklist.html" class="card-link">
+        <article class="card card--evidence">
+  <a href="./evidence/carlini-compiler.html" class="card-link">
     <div class="card-badge">
-      <svg class="section-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+      <svg class="section-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
 </svg>
-      <span>References</span>
+      <span>Evidence</span>
     </div>
-    <h3 class="card-title">Daily Agent-Assisted Development Checklist</h3>
+    <h3 class="card-title">Case Study: Building a C Compiler with AI Agents</h3>
     <p class="card-excerpt">
       
-        A practical daily, end-of-day, and weekly checklist for developers using AI coding agents.
+        Carlini&#39;s experiment with parallel Claude agents on a real compiler project.
       
     </p>
     <div class="card-meta">
-      <time>Feb 5, 2026</time>
+      <time>Feb 6, 2026</time>
       <span class="card-reading-time">5 min read</span>
     </div>
     
     <div class="card-tags">
-      <span class="tag-pill">checklist</span><span class="tag-pill">workflow</span><span class="tag-pill">practical</span>
+      <span class="tag-pill">case-study</span><span class="tag-pill">parallel-agents</span><span class="tag-pill">autonomous-coding</span>
+      <span class="tag-pill tag-pill--more">+1</span>
+    </div>
+    
+  </a>
+</article>
+
+      
+        <article class="card card--evidence">
+  <a href="./evidence/hashimoto-journey.html" class="card-link">
+    <div class="card-badge">
+      <svg class="section-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+</svg>
+      <span>Evidence</span>
+    </div>
+    <h3 class="card-title">Case Study: Hashimoto&#39;s AI Adoption Journey</h3>
+    <p class="card-excerpt">
+      
+        How the HashiCorp founder evolved from skeptic to power user.
+      
+    </p>
+    <div class="card-meta">
+      <time>Feb 6, 2026</time>
+      <span class="card-reading-time">6 min read</span>
+    </div>
+    
+    <div class="card-tags">
+      <span class="tag-pill">case-study</span><span class="tag-pill">adoption-strategy</span><span class="tag-pill">harness-engineering</span>
       
     </div>
     
@@ -356,55 +742,27 @@
 </article>
 
       
-        <article class="card card--references">
-  <a href="./references/tool-landscape.html" class="card-link">
+        <article class="card card--evidence">
+  <a href="./evidence/practitioner-voices.html" class="card-link">
     <div class="card-badge">
-      <svg class="section-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+      <svg class="section-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
 </svg>
-      <span>References</span>
+      <span>Evidence</span>
     </div>
-    <h3 class="card-title">AI Coding Tools: A Practitioner&#39;s Comparison</h3>
+    <h3 class="card-title">Practitioner Voices</h3>
     <p class="card-excerpt">
       
-        A decision framework for choosing between Claude Code, Cursor, Amp, Copilot, and other AI coding tools.
+        What developers actually say — curated insights from Hacker News discussions.
       
     </p>
     <div class="card-meta">
-      <time>Feb 5, 2026</time>
-      <span class="card-reading-time">5 min read</span>
-    </div>
-    
-    <div class="card-tags">
-      <span class="tag-pill">tool-comparison</span><span class="tag-pill">claude-code</span><span class="tag-pill">cursor</span>
-      <span class="tag-pill tag-pill--more">+2</span>
-    </div>
-    
-  </a>
-</article>
-
-      
-        <article class="card card--references">
-  <a href="./references/agents-md-guide.html" class="card-link">
-    <div class="card-badge">
-      <svg class="section-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-</svg>
-      <span>References</span>
-    </div>
-    <h3 class="card-title">The AGENTS.md / CLAUDE.md Guide</h3>
-    <p class="card-excerpt">
-      
-        A practical template and maintenance guide for the files that give AI agents persistent memory.
-      
-    </p>
-    <div class="card-meta">
-      <time>Feb 5, 2026</time>
+      <time>Feb 6, 2026</time>
       <span class="card-reading-time">4 min read</span>
     </div>
     
     <div class="card-tags">
-      <span class="tag-pill">harness-engineering</span><span class="tag-pill">agents-md</span><span class="tag-pill">practical-guide</span>
+      <span class="tag-pill">community-discussion</span><span class="tag-pill">practitioner-insights</span>
       
     </div>
     
@@ -421,43 +779,248 @@
     <h2 class="home-section-title">Browse by Topic</h2>
     <div class="tag-cloud">
       
-        <a href="./tags/harness-engineering.html" class="tag-cloud-item">
-          Harness-Engineering
-          <span class="tag-count">4</span>
-        </a>
-      
         <a href="./tags/agent-workflows.html" class="tag-cloud-item">
           Agent-Workflows
-          <span class="tag-count">3</span>
-        </a>
-      
-        <a href="./tags/pattern.html" class="tag-cloud-item">
-          Pattern
-          <span class="tag-count">3</span>
-        </a>
-      
-        <a href="./tags/task-scoping.html" class="tag-cloud-item">
-          Task-Scoping
-          <span class="tag-count">3</span>
-        </a>
-      
-        <a href="./tags/adoption-strategy.html" class="tag-cloud-item">
-          Adoption-Strategy
-          <span class="tag-count">2</span>
-        </a>
-      
-        <a href="./tags/agents-md.html" class="tag-cloud-item">
-          Agents-Md
-          <span class="tag-count">2</span>
-        </a>
-      
-        <a href="./tags/amp-code.html" class="tag-cloud-item">
-          Amp-Code
-          <span class="tag-count">2</span>
+          <span class="tag-count">15</span>
         </a>
       
         <a href="./tags/claude-code.html" class="tag-cloud-item">
           Claude-Code
+          <span class="tag-count">14</span>
+        </a>
+      
+        <a href="./tags/harness-engineering.html" class="tag-cloud-item">
+          Harness-Engineering
+          <span class="tag-count">7</span>
+        </a>
+      
+        <a href="./tags/vibe-coding.html" class="tag-cloud-item">
+          Vibe-Coding
+          <span class="tag-count">6</span>
+        </a>
+      
+        <a href="./tags/model-selection.html" class="tag-cloud-item">
+          Model-Selection
+          <span class="tag-count">5</span>
+        </a>
+      
+        <a href="./tags/code-review.html" class="tag-cloud-item">
+          Code-Review
+          <span class="tag-count">4</span>
+        </a>
+      
+        <a href="./tags/core-skill.html" class="tag-cloud-item">
+          Core-Skill
+          <span class="tag-count">4</span>
+        </a>
+      
+        <a href="./tags/developer-experience.html" class="tag-cloud-item">
+          Developer-Experience
+          <span class="tag-count">4</span>
+        </a>
+      
+        <a href="./tags/productivity.html" class="tag-cloud-item">
+          Productivity
+          <span class="tag-count">4</span>
+        </a>
+      
+        <a href="./tags/prompt-engineering.html" class="tag-cloud-item">
+          Prompt-Engineering
+          <span class="tag-count">4</span>
+        </a>
+      
+        <a href="./tags/testing.html" class="tag-cloud-item">
+          Testing
+          <span class="tag-count">4</span>
+        </a>
+      
+        <a href="./tags/adoption-strategy.html" class="tag-cloud-item">
+          Adoption-Strategy
+          <span class="tag-count">3</span>
+        </a>
+      
+        <a href="./tags/agents-md.html" class="tag-cloud-item">
+          Agents-Md
+          <span class="tag-count">3</span>
+        </a>
+      
+        <a href="./tags/anthropic.html" class="tag-cloud-item">
+          Anthropic
+          <span class="tag-count">3</span>
+        </a>
+      
+        <a href="./tags/benchmarks.html" class="tag-cloud-item">
+          Benchmarks
+          <span class="tag-count">3</span>
+        </a>
+      
+        <a href="./tags/code-quality.html" class="tag-cloud-item">
+          Code-Quality
+          <span class="tag-count">3</span>
+        </a>
+      
+        <a href="./tags/cost-optimization.html" class="tag-cloud-item">
+          Cost-Optimization
+          <span class="tag-count">3</span>
+        </a>
+      
+        <a href="./tags/cursor.html" class="tag-cloud-item">
+          Cursor
+          <span class="tag-count">3</span>
+        </a>
+      
+        <a href="./tags/gemini.html" class="tag-cloud-item">
+          Gemini
+          <span class="tag-count">3</span>
+        </a>
+      
+        <a href="./tags/ide-tools.html" class="tag-cloud-item">
+          Ide-Tools
+          <span class="tag-count">3</span>
+        </a>
+      
+        <a href="./tags/model-release.html" class="tag-cloud-item">
+          Model-Release
+          <span class="tag-count">3</span>
+        </a>
+      
+        <a href="./tags/multi-agent.html" class="tag-cloud-item">
+          Multi-Agent
+          <span class="tag-count">3</span>
+        </a>
+      
+        <a href="./tags/reliability.html" class="tag-cloud-item">
+          Reliability
+          <span class="tag-count">3</span>
+        </a>
+      
+        <a href="./tags/skill-atrophy.html" class="tag-cloud-item">
+          Skill-Atrophy
+          <span class="tag-count">3</span>
+        </a>
+      
+        <a href="./tags/swarms.html" class="tag-cloud-item">
+          Swarms
+          <span class="tag-count">3</span>
+        </a>
+      
+        <a href="./tags/tool-comparison.html" class="tag-cloud-item">
+          Tool-Comparison
+          <span class="tag-count">3</span>
+        </a>
+      
+        <a href="./tags/workflow.html" class="tag-cloud-item">
+          Workflow
+          <span class="tag-count">3</span>
+        </a>
+      
+        <a href="./tags/agent-architecture.html" class="tag-cloud-item">
+          Agent-Architecture
+          <span class="tag-count">2</span>
+        </a>
+      
+        <a href="./tags/ai-bubble.html" class="tag-cloud-item">
+          Ai-Bubble
+          <span class="tag-count">2</span>
+        </a>
+      
+        <a href="./tags/ai-coding-tools.html" class="tag-cloud-item">
+          Ai-Coding-Tools
+          <span class="tag-count">2</span>
+        </a>
+      
+        <a href="./tags/ai-coding-workflow.html" class="tag-cloud-item">
+          Ai-Coding-Workflow
+          <span class="tag-count">2</span>
+        </a>
+      
+        <a href="./tags/best-practices.html" class="tag-cloud-item">
+          Best-Practices
+          <span class="tag-count">2</span>
+        </a>
+      
+        <a href="./tags/case-study.html" class="tag-cloud-item">
+          Case-Study
+          <span class="tag-count">2</span>
+        </a>
+      
+        <a href="./tags/china-ai.html" class="tag-cloud-item">
+          China-Ai
+          <span class="tag-count">2</span>
+        </a>
+      
+        <a href="./tags/claude.html" class="tag-cloud-item">
+          Claude
+          <span class="tag-count">2</span>
+        </a>
+      
+        <a href="./tags/deepseek.html" class="tag-cloud-item">
+          Deepseek
+          <span class="tag-count">2</span>
+        </a>
+      
+        <a href="./tags/developer-tools.html" class="tag-cloud-item">
+          Developer-Tools
+          <span class="tag-count">2</span>
+        </a>
+      
+        <a href="./tags/economics.html" class="tag-cloud-item">
+          Economics
+          <span class="tag-count">2</span>
+        </a>
+      
+        <a href="./tags/evaluation.html" class="tag-cloud-item">
+          Evaluation
+          <span class="tag-count">2</span>
+        </a>
+      
+        <a href="./tags/getting-started.html" class="tag-cloud-item">
+          Getting-Started
+          <span class="tag-count">2</span>
+        </a>
+      
+        <a href="./tags/google.html" class="tag-cloud-item">
+          Google
+          <span class="tag-count">2</span>
+        </a>
+      
+        <a href="./tags/ide.html" class="tag-cloud-item">
+          Ide
+          <span class="tag-count">2</span>
+        </a>
+      
+        <a href="./tags/llama.html" class="tag-cloud-item">
+          Llama
+          <span class="tag-count">2</span>
+        </a>
+      
+        <a href="./tags/mistral.html" class="tag-cloud-item">
+          Mistral
+          <span class="tag-count">2</span>
+        </a>
+      
+        <a href="./tags/model-degradation.html" class="tag-cloud-item">
+          Model-Degradation
+          <span class="tag-count">2</span>
+        </a>
+      
+        <a href="./tags/model-releases.html" class="tag-cloud-item">
+          Model-Releases
+          <span class="tag-count">2</span>
+        </a>
+      
+        <a href="./tags/multimodal.html" class="tag-cloud-item">
+          Multimodal
+          <span class="tag-count">2</span>
+        </a>
+      
+        <a href="./tags/openai.html" class="tag-cloud-item">
+          Openai
+          <span class="tag-count">2</span>
+        </a>
+      
+        <a href="./tags/opus.html" class="tag-cloud-item">
+          Opus
           <span class="tag-count">2</span>
         </a>
       
@@ -466,8 +1029,83 @@
           <span class="tag-count">2</span>
         </a>
       
-        <a href="./tags/agent-architecture.html" class="tag-cloud-item">
-          Agent-Architecture
+        <a href="./tags/production-engineering.html" class="tag-cloud-item">
+          Production-Engineering
+          <span class="tag-count">2</span>
+        </a>
+      
+        <a href="./tags/skepticism.html" class="tag-cloud-item">
+          Skepticism
+          <span class="tag-count">2</span>
+        </a>
+      
+        <a href="./tags/agent-teams.html" class="tag-cloud-item">
+          Agent-Teams
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/agentic-frameworks.html" class="tag-cloud-item">
+          Agentic-Frameworks
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/agentic-patterns.html" class="tag-cloud-item">
+          Agentic-Patterns
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/agentic-vision.html" class="tag-cloud-item">
+          Agentic-Vision
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/agents.html" class="tag-cloud-item">
+          Agents
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/agi.html" class="tag-cloud-item">
+          Agi
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/ai-capabilities.html" class="tag-cloud-item">
+          Ai-Capabilities
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/ai-economics.html" class="tag-cloud-item">
+          Ai-Economics
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/ai-impact.html" class="tag-cloud-item">
+          Ai-Impact
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/ai-landscape.html" class="tag-cloud-item">
+          Ai-Landscape
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/ai-skepticism.html" class="tag-cloud-item">
+          Ai-Skepticism
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/ai-strategy.html" class="tag-cloud-item">
+          Ai-Strategy
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/amp-code.html" class="tag-cloud-item">
+          Amp-Code
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/apple.html" class="tag-cloud-item">
+          Apple
           <span class="tag-count">1</span>
         </a>
       
@@ -476,8 +1114,8 @@
           <span class="tag-count">1</span>
         </a>
       
-        <a href="./tags/best-practices.html" class="tag-cloud-item">
-          Best-Practices
+        <a href="./tags/business-models.html" class="tag-cloud-item">
+          Business-Models
           <span class="tag-count">1</span>
         </a>
       
@@ -486,8 +1124,33 @@
           <span class="tag-count">1</span>
         </a>
       
+        <a href="./tags/code-intelligence.html" class="tag-cloud-item">
+          Code-Intelligence
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/coding-agents.html" class="tag-cloud-item">
+          Coding-Agents
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/coding-tools.html" class="tag-cloud-item">
+          Coding-Tools
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/community.html" class="tag-cloud-item">
+          Community
+          <span class="tag-count">1</span>
+        </a>
+      
         <a href="./tags/community-discussion.html" class="tag-cloud-item">
           Community-Discussion
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/context-management.html" class="tag-cloud-item">
+          Context-Management
           <span class="tag-count">1</span>
         </a>
       
@@ -506,28 +1169,118 @@
           <span class="tag-count">1</span>
         </a>
       
-        <a href="./tags/core-skill.html" class="tag-cloud-item">
-          Core-Skill
+        <a href="./tags/daily-practice.html" class="tag-cloud-item">
+          Daily-Practice
           <span class="tag-count">1</span>
         </a>
       
-        <a href="./tags/craft-vs-ai.html" class="tag-cloud-item">
-          Craft-vs-Ai
+        <a href="./tags/data-centers.html" class="tag-cloud-item">
+          Data-Centers
           <span class="tag-count">1</span>
         </a>
       
-        <a href="./tags/cursor.html" class="tag-cloud-item">
-          Cursor
+        <a href="./tags/debate.html" class="tag-cloud-item">
+          Debate
           <span class="tag-count">1</span>
         </a>
       
-        <a href="./tags/getting-started.html" class="tag-cloud-item">
-          Getting-Started
+        <a href="./tags/delegation.html" class="tag-cloud-item">
+          Delegation
           <span class="tag-count">1</span>
         </a>
       
-        <a href="./tags/git-sync.html" class="tag-cloud-item">
-          Git-Sync
+        <a href="./tags/demystification.html" class="tag-cloud-item">
+          Demystification
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/developer-workflows.html" class="tag-cloud-item">
+          Developer-Workflows
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/devops.html" class="tag-cloud-item">
+          Devops
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/evals.html" class="tag-cloud-item">
+          Evals
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/future-of-coding.html" class="tag-cloud-item">
+          Future-of-Coding
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/industry-analysis.html" class="tag-cloud-item">
+          Industry-Analysis
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/industry-partnerships.html" class="tag-cloud-item">
+          Industry-Partnerships
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/industry-trends.html" class="tag-cloud-item">
+          Industry-Trends
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/infrastructure.html" class="tag-cloud-item">
+          Infrastructure
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/infrastructure-as-code.html" class="tag-cloud-item">
+          Infrastructure-as-Code
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/interoperability.html" class="tag-cloud-item">
+          Interoperability
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/junior-developers.html" class="tag-cloud-item">
+          Junior-Developers
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/long-context.html" class="tag-cloud-item">
+          Long-Context
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/lsp.html" class="tag-cloud-item">
+          Lsp
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/mcp.html" class="tag-cloud-item">
+          Mcp
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/memory-systems.html" class="tag-cloud-item">
+          Memory-Systems
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/meta.html" class="tag-cloud-item">
+          Meta
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/meta-cognition.html" class="tag-cloud-item">
+          Meta-Cognition
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/model-architecture.html" class="tag-cloud-item">
+          Model-Architecture
           <span class="tag-count">1</span>
         </a>
       
@@ -536,18 +1289,113 @@
           <span class="tag-count">1</span>
         </a>
       
-        <a href="./tags/practical.html" class="tag-cloud-item">
-          Practical
+        <a href="./tags/next-js.html" class="tag-cloud-item">
+          Next-Js
           <span class="tag-count">1</span>
         </a>
       
-        <a href="./tags/practical-guide.html" class="tag-cloud-item">
-          Practical-Guide
+        <a href="./tags/obsidian.html" class="tag-cloud-item">
+          Obsidian
           <span class="tag-count">1</span>
         </a>
       
-        <a href="./tags/productivity-debate.html" class="tag-cloud-item">
-          Productivity-Debate
+        <a href="./tags/open-questions.html" class="tag-cloud-item">
+          Open-Questions
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/open-source.html" class="tag-cloud-item">
+          Open-Source
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/open-source-ai.html" class="tag-cloud-item">
+          Open-Source-Ai
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/open-source-models.html" class="tag-cloud-item">
+          Open-Source-Models
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/plugins.html" class="tag-cloud-item">
+          Plugins
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/podcast.html" class="tag-cloud-item">
+          Podcast
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/practitioner-insights.html" class="tag-cloud-item">
+          Practitioner-Insights
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/pricing.html" class="tag-cloud-item">
+          Pricing
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/research.html" class="tag-cloud-item">
+          Research
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/research-papers.html" class="tag-cloud-item">
+          Research-Papers
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/scaling-laws.html" class="tag-cloud-item">
+          Scaling-Laws
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/sdlc.html" class="tag-cloud-item">
+          Sdlc
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/security.html" class="tag-cloud-item">
+          Security
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/service-quality.html" class="tag-cloud-item">
+          Service-Quality
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/siri.html" class="tag-cloud-item">
+          Siri
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/skill-development.html" class="tag-cloud-item">
+          Skill-Development
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/skills.html" class="tag-cloud-item">
+          Skills
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/spatial-computing.html" class="tag-cloud-item">
+          Spatial-Computing
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/sustainability.html" class="tag-cloud-item">
+          Sustainability
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/swe-bench.html" class="tag-cloud-item">
+          Swe-Bench
           <span class="tag-count">1</span>
         </a>
       
@@ -556,8 +1404,13 @@
           <span class="tag-count">1</span>
         </a>
       
-        <a href="./tags/task-locking.html" class="tag-cloud-item">
-          Task-Locking
+        <a href="./tags/task-scoping.html" class="tag-cloud-item">
+          Task-Scoping
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/terraform.html" class="tag-cloud-item">
+          Terraform
           <span class="tag-count">1</span>
         </a>
       
@@ -566,13 +1419,18 @@
           <span class="tag-count">1</span>
         </a>
       
-        <a href="./tags/tool-comparison.html" class="tag-cloud-item">
-          Tool-Comparison
+        <a href="./tags/tool-calling.html" class="tag-cloud-item">
+          Tool-Calling
           <span class="tag-count">1</span>
         </a>
       
-        <a href="./tags/tool-review.html" class="tag-cloud-item">
-          Tool-Review
+        <a href="./tags/tool-routing.html" class="tag-cloud-item">
+          Tool-Routing
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/tool-selection.html" class="tag-cloud-item">
+          Tool-Selection
           <span class="tag-count">1</span>
         </a>
       
@@ -581,8 +1439,28 @@
           <span class="tag-count">1</span>
         </a>
       
-        <a href="./tags/workflow.html" class="tag-cloud-item">
-          Workflow
+        <a href="./tags/training-efficiency.html" class="tag-cloud-item">
+          Training-Efficiency
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/venture-capital.html" class="tag-cloud-item">
+          Venture-Capital
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/vercel.html" class="tag-cloud-item">
+          Vercel
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/verification.html" class="tag-cloud-item">
+          Verification
+          <span class="tag-count">1</span>
+        </a>
+      
+        <a href="./tags/workflow-template.html" class="tag-cloud-item">
+          Workflow-Template
           <span class="tag-count">1</span>
         </a>
       
@@ -594,28 +1472,30 @@
   <div class="footer-container">
     <div class="footer-brand">
       <span class="footer-logo">AI Best Practices</span>
-      <p class="footer-description">What the best practitioners know about AI-assisted software development.</p>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
     </div>
     <div class="footer-nav">
       <div class="footer-section">
-        <h3>Content</h3>
+        <h3>Learn</h3>
         <ul>
-          <li><a href="./guides/index.html">Guides</a></li>
-          <li><a href="./deep-dives/index.html">Deep Dives</a></li>
-          <li><a href="./tags/index.html">Topics</a></li>
+          <li><a href="./start-here/index.html">Start Here</a></li>
+          <li><a href="./skills/index.html">Skills</a></li>
+          <li><a href="./workflows/index.html">Workflows</a></li>
         </ul>
       </div>
       <div class="footer-section">
-        <h3>Resources</h3>
+        <h3>Explore</h3>
         <ul>
-          <li><a href="./patterns/index.html">Patterns</a></li>
-          <li><a href="./references/index.html">References</a></li>
-          <li><a href="./synthesis/index.html">Synthesis</a></li>
+          <li><a href="./tools/index.html">Tools</a></li>
+          <li><a href="./landscape/index.html">Landscape</a></li>
+          <li><a href="./evidence/index.html">Evidence</a></li>
+          <li><a href="./sources/index.html">Sources</a></li>
+          <li><a href="./tags/">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from practitioner experience.</p>
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
     </div>
   </div>
 </footer>

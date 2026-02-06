@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Model Selection | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="Choosing the right model for the right task -- balancing capability, cost, and speed.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Model Selection">
+  <meta property="og:description" content="Choosing the right model for the right task -- balancing capability, cost, and speed.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-skills"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../skills/index.html">Core Skills</a></li>
+      
+    
+    <li aria-current="page">Model Selection</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Model Selection</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">7 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/model-selection.html" class="tag-pill">model-selection</a>
+  
+  
+  
+  
+  <a href="../tags/core-skill.html" class="tag-pill">core-skill</a>
+  
+  
+  
+  
+  <a href="../tags/cost-optimization.html" class="tag-pill">cost-optimization</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <p>Model selection is the skill of matching the right model to the right task. The gap between a well-chosen and poorly-chosen model often matters more than the quality of the prompt itself. As one practitioner put it, model choice now outweighs prompt engineering as the primary lever for coding quality.</p>
+<h2 id="model-tiers">Model Tiers</h2>
+<p>Models fall into rough capability tiers, each suited to different kinds of work.</p>
+<p><strong>Frontier reasoning models</strong> (Claude Opus 4.5/4.6, GPT-5) &ndash; The most capable models available. Best for complex architectural reasoning, multi-file refactoring, unfamiliar codebases, and tasks requiring sustained coherence across long outputs. These models are expensive and slower, but they get things right on the first attempt more often, which reduces total cost when the alternative is multiple retry cycles with cheaper models.</p>
+<p><strong>Fast mid-tier models</strong> (Claude Sonnet 4.5, GPT-4.1) &ndash; The workhorse tier for daily development. Good enough for most implementation tasks, significantly cheaper and faster than frontier models. The right choice when you have clear specifications and the task does not require deep reasoning about novel problems.</p>
+<p><strong>Lightweight models</strong> (Claude Haiku 4.5, GPT-4.1 mini) &ndash; Best for high-volume, low-complexity tasks: generating boilerplate, writing documentation, simple refactors, code formatting, and quick Q&amp;A. The per-request cost is low enough to use liberally without budget concerns.</p>
+<p><strong>Specialized coding models</strong> (DeepSeek, Code Llama, open-source fine-tunes) &ndash; Models optimized specifically for code generation, sometimes matching mid-tier general models on coding tasks at a fraction of the cost. Useful when you need high throughput on well-defined coding tasks and do not need general reasoning.</p>
+<h2 id="when-to-use-which-tier">When to Use Which Tier</h2>
+<p>The decision factors are task complexity, error tolerance, and iteration cost.</p>
+<p><strong>Use frontier models when:</strong></p>
+<ul>
+<li>The task involves architectural decisions or multi-component coordination</li>
+<li>You are working in an unfamiliar codebase or domain</li>
+<li>Errors are expensive to detect or fix (security-critical paths, data migrations)</li>
+<li>The task has failed with a cheaper model and you need the capability uplift</li>
+<li>You need the agent to autonomously debug and self-correct</li>
+</ul>
+<p><strong>Use mid-tier models when:</strong></p>
+<ul>
+<li>You have clear specifications and defined success criteria</li>
+<li>The task is implementation within a structure you have already defined</li>
+<li>You can verify output quickly through tests</li>
+<li>You are doing iterative development with frequent human checkpoints</li>
+</ul>
+<p><strong>Use lightweight models when:</strong></p>
+<ul>
+<li>Generating boilerplate or repetitive code transformations</li>
+<li>Writing or updating documentation</li>
+<li>Simple refactors (renaming, reformatting, mechanical transformations)</li>
+<li>Quick factual lookups or syntax questions</li>
+<li>Drafting commit messages, PR descriptions, or code comments</li>
+</ul>
+<h2 id="cost-quality-tradeoffs">Cost-Quality Tradeoffs</h2>
+<p>The economics of model selection are not intuitive. Cheaper per-request does not always mean cheaper per-task.</p>
+<p>One developer <a href="../sources/2025-11-13-ai-coding-agent-costs/">documented spending $638 over six weeks</a> on AI coding, with 85% of the budget going to Claude despite trying seven alternative models. The reason: cheaper models required more iterations and produced more rework. The total cost of a task is (per-request cost) x (number of attempts) + (developer time reviewing failed attempts). A frontier model that succeeds on the first try can be cheaper than a budget model that requires three attempts plus an hour of debugging.</p>
+<p>Key cost-management strategies from the community:</p>
+<ul>
+<li><strong>Caching matters enormously.</strong> The same developer reported an 88.8% cache hit rate that significantly controlled costs. Understanding your tool&rsquo;s caching behavior and optimizing for it (consistent prompts, stable context) can cut spend dramatically.</li>
+<li><strong>Flat-rate plans change the calculus.</strong> Services like Claude Code Max ($100-200/month flat) remove per-request anxiety and let you use frontier models liberally. If your usage is high enough, flat-rate plans are almost always more economical.</li>
+<li><strong>Start cheap, escalate on failure.</strong> Use a mid-tier model by default. If it fails or produces inadequate output, escalate to a frontier model. This captures the cost savings of cheaper models on easy tasks while using expensive models only where needed.</li>
+</ul>
+<h2 id="multi-model-approaches">Multi-Model Approaches</h2>
+<p>Several tools and workflows now support using different models for different stages of the same task.</p>
+<p>The pattern is straightforward: use a frontier model for planning and architectural decisions, then use a cheaper model for implementation of the resulting plan. This matches the <a href="../skills/task-scoping/">task scoping</a> principle that architectural reasoning (trunk/branch work) demands the highest capability, while leaf-level implementation can often be handled by less capable models.</p>
+<p><a href="../sources/2026-01-04-llm-coding-workflow-2026/">Addy Osmani&rsquo;s workflow</a> describes multi-model pragmatism: using different models for different tasks and switching when one gets stuck, rather than maintaining loyalty to a single provider.</p>
+<p>Some practitioners use multiple models as a verification mechanism &ndash; generating code with one model and reviewing it with another. Disagreements between models flag areas that deserve closer human attention.</p>
+<h2 id="model-degradation-and-consistency">Model Degradation and Consistency</h2>
+<p>A recurring concern in the community is that model quality fluctuates unpredictably. The <a href="../sources/2026-01-29-claude-code-benchmarks/">Claude Code benchmarks tracker</a> documented measurable performance swings: a daily pass rate of 48% against a historical baseline of 58%, with statistically significant degradation at both 7-day and 30-day windows. The Claude Code team confirmed at least one harness bug contributed to the observed decline.</p>
+<p>The <a href="../sources/2026-01-08-ai-coding-getting-worse/">IEEE Spectrum analysis</a> explored whether AI coding tools are genuinely degrading. The HN discussion identified several possible explanations: changing user expectations, improved instructability that breaks old prompts, dynamic model routing during high demand, and training data feedback loops where poor code acceptance degrades future model quality.</p>
+<p>Practical implications for model selection:</p>
+<ul>
+<li><strong>Do not assume newer is always better.</strong> Test new model versions against your specific workload before switching.</li>
+<li><strong>Pin to specific versions when possible.</strong> Several practitioners advocated for version pinning similar to software dependency management.</li>
+<li><strong>Maintain a fallback.</strong> If your primary model degrades, have a tested alternative ready. Multi-provider capability is insurance against quality fluctuations.</li>
+<li><strong>Track your own metrics.</strong> Community benchmarks are useful but your specific codebase and task profile may behave differently. Notice when your rework rate increases and investigate whether the model is the cause.</li>
+</ul>
+<h2 id="the-diminishing-returns-of-prompt-engineering">The Diminishing Returns of Prompt Engineering</h2>
+<p>As models improve, the marginal return on prompt engineering diminishes. A strong model with a simple prompt increasingly outperforms a weak model with an elaborate prompt. The <a href="../sources/2026-01-18-model-matters-more-than-prompts/">model-matters-more-than-prompts analysis</a> argues that the optimization priority should be: choose the best available model first, then optimize your prompting and workflow around its specific capabilities.</p>
+<p>This does not mean prompting is irrelevant. But it means that switching from a mid-tier model to a frontier model often produces a larger quality improvement than spending an hour refining a prompt for the mid-tier model. <a href="../skills/harness-engineering/">Harness engineering</a> &ndash; persistent project context via AGENTS.md files &ndash; captures the value of good prompting in a durable form, while one-off prompt optimization is ephemeral.</p>
+<h2 id="anti-patterns">Anti-Patterns</h2>
+<h3 id="one-model-for-everything">One Model for Everything</h3>
+<p>Using the same frontier model for every task regardless of complexity. This maximizes cost without maximizing quality, since simple tasks do not benefit from frontier reasoning. A lightweight model generating boilerplate is not just cheaper &ndash; it is also faster, reducing your iteration cycle.</p>
+<h3 id="chasing-benchmarks">Chasing Benchmarks</h3>
+<p>Selecting models based on synthetic benchmark scores rather than performance on your actual tasks. Benchmarks measure specific capabilities that may not correlate with your workload. A model that tops SWE-Bench may underperform on your particular framework, language, or problem domain.</p>
+<h3 id="ignoring-total-cost-of-ownership">Ignoring Total Cost of Ownership</h3>
+<p>Comparing models only on per-request pricing without accounting for success rate, rework time, and developer review overhead. The cheapest model per token is rarely the cheapest model per completed task.</p>
+<h3 id="loyalty-to-a-single-provider">Loyalty to a Single Provider</h3>
+<p>Refusing to switch models or providers out of familiarity or sunk-cost reasoning. The model landscape changes rapidly. The best model for your workload six months ago may not be the best model today. Maintain the ability to switch.</p>
+<h2 id="sources">Sources</h2>
+<ul>
+<li><a href="../sources/2025-11-13-ai-coding-agent-costs/">AI coding agent costs ($638 study)</a> &ndash; Detailed cost breakdown showing 85% of budget on Claude despite trying 7 alternatives</li>
+<li><a href="../sources/2026-01-18-model-matters-more-than-prompts/">Model matters more than prompts</a> &ndash; Argument that model capability now dominates prompt quality</li>
+<li><a href="../sources/2026-01-29-claude-code-benchmarks/">Claude Code benchmarks</a> &ndash; Systematic tracking of model performance fluctuations</li>
+<li><a href="../sources/2026-01-08-ai-coding-getting-worse/">AI coding getting worse?</a> &ndash; Exploration of perceived degradation and its multiple possible causes</li>
+<li><a href="../sources/2026-01-06-opus-4-5-agent-experience/">Opus 4.5 agent experience</a> &ndash; Evidence that frontier models deliver qualitatively different results</li>
+<li><a href="../sources/2026-01-04-llm-coding-workflow-2026/">Addy Osmani&rsquo;s workflow</a> &ndash; Multi-model pragmatism in practice</li>
+<li><a href="../sources/2026-01-01-deepseek-bigger-models-less/">DeepSeek analysis</a> &ndash; Open-source model landscape and cost alternatives</li>
+</ul>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        
+        <a href="../skills/verification.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Verification: Reading AI-Generated Code</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#model-tiers">Model Tiers</a></li>
+    <li><a href="#when-to-use-which-tier">When to Use Which Tier</a></li>
+    <li><a href="#cost-quality-tradeoffs">Cost-Quality Tradeoffs</a></li>
+    <li><a href="#multi-model-approaches">Multi-Model Approaches</a></li>
+    <li><a href="#model-degradation-and-consistency">Model Degradation and Consistency</a></li>
+    <li><a href="#the-diminishing-returns-of-prompt-engineering">The Diminishing Returns of Prompt Engineering</a></li>
+    <li><a href="#anti-patterns">Anti-Patterns</a>
+      <ul>
+        <li><a href="#one-model-for-everything">One Model for Everything</a></li>
+        <li><a href="#chasing-benchmarks">Chasing Benchmarks</a></li>
+        <li><a href="#ignoring-total-cost-of-ownership">Ignoring Total Cost of Ownership</a></li>
+        <li><a href="#loyalty-to-a-single-provider">Loyalty to a Single Provider</a></li>
+      </ul>
+    </li>
+    <li><a href="#sources">Sources</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

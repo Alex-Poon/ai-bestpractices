@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Start Here on AI Best Practices Knowledge Base</title>
+    <link>/start-here/index.html</link>
+    <description>Recent content in Start Here on AI Best Practices Knowledge Base</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/start-here/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Core Loop: Plan, Delegate, Verify, Harness</title>
+      <link>/start-here/core-loop.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/start-here/core-loop.html</guid>
+      <description>&lt;p&gt;Effective AI-assisted development is not about typing prompts and hoping for the best. It follows a repeating four-phase loop: &lt;strong&gt;Plan, Delegate, Verify, Harness.&lt;/strong&gt; Every technique on this site maps back to one of these phases. If you internalize this loop and practice each phase deliberately, you will get better results from AI agents than the vast majority of developers who use them casually.&lt;/p&gt;&#xA;&lt;p&gt;The loop is simple to describe but takes real practice to execute well. Each phase has its own skills, its own failure modes, and its own payoff curve.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Adoption Curve: Where Are You?</title>
+      <link>/start-here/adoption-stages.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/start-here/adoption-stages.html</guid>
+      <description>&lt;p&gt;Developers who successfully adopt AI coding agents tend to follow the same progression. Not because someone prescribed it, but because each stage builds the calibration and infrastructure the next stage requires. Skipping stages leads to frustration, wasted money, and the conclusion that agents do not work &amp;mdash; when the real problem was missing foundations.&lt;/p&gt;&#xA;&lt;p&gt;This framework synthesizes Mitchell Hashimoto&amp;rsquo;s adoption journey with findings from practitioner experience, Anthropic&amp;rsquo;s research on skill formation, and community cost data. Most developers who abandon AI-assisted development stall between Stages 1 and 2. Most who succeed credit the investments they made in Stages 2 and 5.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

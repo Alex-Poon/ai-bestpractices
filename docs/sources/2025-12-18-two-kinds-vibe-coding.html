@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Two Kinds of Vibe Coding | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Two Kinds of Vibe Coding">
+  <meta property="og:description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-sources"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../sources/index.html">Sources</a></li>
+      
+    
+    <li aria-current="page">Two Kinds of Vibe Coding</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Two Kinds of Vibe Coding</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2025-12-18">
+    December 18, 2025
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">3 min read</span>
+
+  
+  <span class="tier-badge tier-badge--1">Tier 1</span>
+  
+
+  <div class="meta-links">
+    
+    <a href="https://davidbau.com/archives/2025/12/16/vibe_coding.html" class="meta-link" target="_blank" rel="noopener">Source &#8599;</a>
+    
+    
+    
+    <a href="https://news.ycombinator.com/item?id=46318852" class="meta-link" target="_blank" rel="noopener">HN &#8599;</a>
+    
+    
+  </div>
+
+  
+  <span class="meta-stat">137 points</span>
+  
+  
+  
+  <span class="meta-stat">26 comments</span>
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/vibe-coding.html" class="tag-pill">vibe-coding</a>
+  
+  
+  
+  
+  <a href="../tags/testing.html" class="tag-pill">testing</a>
+  
+  
+  
+  
+  <a href="../tags/ai-coding-workflow.html" class="tag-pill">ai-coding-workflow</a>
+  
+  
+  
+  
+  <a href="../tags/code-review.html" class="tag-pill">code-review</a>
+  
+  
+  
+  
+  <a href="../tags/meta-cognition.html" class="tag-pill">meta-cognition</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <h2 id="summary">Summary</h2>
+<p>David Bau distinguishes between two fundamentally different approaches to what has broadly been called &ldquo;vibe coding.&rdquo; The first type involves delegating small tasks to an LLM while the human programmer remains fully informed and in control, reviewing each piece of work and making all key decisions. The second type involves surrendering cognitive control to an AI agent, allowing it to build towers of complexity that go beyond what the developer has time to understand in detail.</p>
+<p>Bau observes that students typically start with Type 1, pasting algorithm snippets while editing each function. The transition to Type 2 happens when one stops looking at all the code in detail, trusting the agent to write extensively and make autonomous decisions. This distinction matters because the two types require fundamentally different supporting infrastructure.</p>
+<p>The article establishes two essential rules for making the second type work. First, automate tests — without automated testing, the human becomes a manual tester, repeatedly reviewing and rejecting solutions. Automated tests allow agents to validate their own work across longer development cycles. Second, test the tests — agents can produce solutions that technically pass tests without actually doing what is intended. Meta-level testing through code coverage analysis, fuzz testing, and benchmarking frameworks reveals gaps and prevents false success metrics.</p>
+<p>The deeper insight is that effective vibe coding at scale requires building &ldquo;meta-cognitive infrastructure&rdquo; — systems that maintain human comprehension and control over increasingly complex agent-built codebases. Without this infrastructure, the human either becomes a bottleneck (Type 1 at scale) or loses control entirely (Type 2 without safeguards).</p>
+<h2 id="key-insights">Key Insights</h2>
+<ul>
+<li><strong>Two distinct modes of AI-assisted coding</strong>: Delegated-with-oversight versus surrendered-cognitive-control represent fundamentally different workflows requiring different infrastructure</li>
+<li><strong>Automated testing is non-negotiable for Type 2</strong>: Without it, the human becomes the manual tester and bottleneck</li>
+<li><strong>Tests must themselves be tested</strong>: Agents can produce solutions that pass tests without doing what is actually intended — meta-testing catches this</li>
+<li><strong>Meta-cognitive infrastructure</strong>: Effective scaling requires systems (coverage analysis, fuzz testing, benchmarks) that maintain human comprehension over agent-built complexity</li>
+<li><strong>The transition point matters</strong>: Moving from Type 1 to Type 2 without proper infrastructure is where projects fail</li>
+</ul>
+<h2 id="notable-quotes">Notable Quotes</h2>
+<blockquote>
+<p>&ldquo;Ceding cognitive control to an AI&rdquo; — David Bau</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;Keeping yourself as the human &lsquo;real programmer&rsquo; fully informed and in control&rdquo; — David Bau</p>
+</blockquote>
+<h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
+<p>The discussion generated 137 points and 26 comments. Key themes:</p>
+<p><strong>Definitional debate over &ldquo;vibe coding&rdquo;</strong></p>
+<ul>
+<li><strong>wrs</strong>: Argued there is only one kind of vibe coding — letting the LLM write code without looking at it — and that the first type described is simply AI-assisted coding</li>
+<li><strong>ofconsequence</strong>: Pointed out that Karpathy coined the term with a clear definition that people misuse: prompting an LLM and running the output without reading it</li>
+<li><strong>charcircuit</strong>: Agreed that staying &ldquo;fully informed and in control&rdquo; is not vibe coding, just regular AI-assisted development</li>
+</ul>
+<p><strong>Skepticism about vibe coding productivity</strong></p>
+<ul>
+<li><strong>WhyOhWhyQ</strong>: Reported that the initial exhilaration of vibe coding turned into exhausting QA testing of a bad engineer&rsquo;s work, ending with a product that did not really work</li>
+<li><strong>Dr_Birdbrain</strong>: Questioned what has actually been gained — the work is not easier, not faster, and the reliability benefits from testing are unclear</li>
+<li><strong>gaigalas</strong>: Characterized vibe-coded output as &ldquo;limping faster than you can walk&rdquo; — faster with each model release but still fundamentally unstable</li>
+</ul>
+<p><strong>Practical approaches and boundaries</strong></p>
+<ul>
+<li><strong>keyle</strong>: Found vibe coding acceptable for small digestible tasks like shell functions or image converters, but not for multi-day projects you intend to maintain</li>
+<li><strong>pessimizer</strong>: Currently only uses the first type, constantly making the agent refactor and simplify, but sees potential in Type 2 with proper infrastructure</li>
+<li><strong>rrix2</strong>: Asks the model for tutorials and implementation plans but demands it not write code itself, finding review of AI code as difficult as reviewing human code</li>
+</ul>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../sources/2026-02-02-vibe-coding-killing-open-source.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">How Vibe Coding Is Killing Open Source</span>
+        </a>
+        
+        
+        <a href="../sources/2026-01-21-agentic-ai-handbook.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">The Agentic AI Handbook: Production-Ready Patterns</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#key-insights">Key Insights</a></li>
+    <li><a href="#notable-quotes">Notable Quotes</a></li>
+    <li><a href="#hn-discussion-highlights">HN Discussion Highlights</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

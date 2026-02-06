@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Adoption Curve | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="Where the industry stands on AI-assisted development adoption.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="The Adoption Curve">
+  <meta property="og:description" content="Where the industry stands on AI-assisted development adoption.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-landscape"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../landscape/index.html">Landscape</a></li>
+      
+    
+    <li aria-current="page">The Adoption Curve</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">The Adoption Curve</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">5 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/adoption-strategy.html" class="tag-pill">adoption-strategy</a>
+  
+  
+  
+  
+  <a href="../tags/industry-trends.html" class="tag-pill">industry-trends</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <p>AI-assisted development in early 2026 is past the novelty phase but far from universal. The community is split, the data is mixed, and where a given developer lands depends as much on their workflow and identity as on the technology itself.</p>
+<h2 id="the-six-stages-framework">The Six Stages Framework</h2>
+<p>The <a href="../guides/adoption-stages/">Six Stages of AI Adoption</a> framework, synthesized from Mitchell Hashimoto&rsquo;s influential account and extensive practitioner discussion, describes a progression from chatbot usage through always-running agents. It remains the best map of the adoption journey because each stage builds on the calibration and infrastructure of the previous one.</p>
+<p>Most developers who abandon AI tools get stuck between Stages 1 and 2 &mdash; using chatbots rather than agents, or delegating without first calibrating on what the agent handles well. Most who succeed credit investments in Stage 2 (reproducing their own work to build intuition) and Stage 5 (engineering the harness). See the <a href="../deep-dives/practitioner-consensus/">Practitioner Consensus</a> for the community data behind these observations.</p>
+<p>The framework&rsquo;s central insight is that AI adoption is primarily about engineering maturity applied to a new tool, not about learning AI-specific techniques. Developers who already practice decomposition, specification, and verification have a structural advantage &mdash; not because they know AI better, but because they already do what agents require.</p>
+<h2 id="community-sentiment-polarized-but-trending-positive">Community Sentiment: Polarized but Trending Positive</h2>
+<p>The HN discussions captured in this knowledge base reveal a community that is deeply divided but trending toward cautious adoption. The data points:</p>
+<p><strong>Enthusiastic adopters</strong> report transformative productivity gains, particularly for greenfield projects and personal tools. Burke Holland described completing four substantial full-stack projects in rapid succession with Opus 4.5. <strong>jedberg</strong> on HN described a decade-old app idea built exactly as specified on the first attempt. <strong>simonw</strong> reported consistent surprise at the results of absurdly difficult challenges.</p>
+<p><strong>Experienced skeptics</strong> push back on the replacement narrative while acknowledging real gains. <strong>mcv</strong> concluded that despite heavy use, the model still frequently gets stuck. <strong>honeycrispy</strong> found architecture decisions that required rewriting half the code. <strong>multisport</strong> argued the demos address isolated greenfield work, not the team-scale engineering that constitutes most professional development.</p>
+<p><strong>Measured practitioners</strong> occupy the middle ground. The <a href="../deep-dives/practitioner-consensus/">Practitioner Consensus</a> synthesis found convergence on several points: agents work best for well-scoped tasks with clear verification, the quality of the harness determines the quality of the output, and experienced developers get more value than novices because they already have the judgment AI adoption requires.</p>
+<p>(<a href="../sources/2026-01-06-opus-4-5-agent-experience/">Sources</a>, <a href="../deep-dives/practitioner-consensus/">Practitioner Consensus</a>)</p>
+<h2 id="the-builder-vs-crafter-split">The Builder vs. Crafter Split</h2>
+<p>Andrej Karpathy identified what may be the most useful lens for understanding adoption patterns: the split between engineers who primarily enjoy building products and those who primarily enjoy the craft of programming.</p>
+<p>Builder-oriented engineers tend to embrace AI tools enthusiastically. They see code as a means to an end and welcome anything that accelerates the path from idea to working product. <strong>atonse</strong> on HN identified with this group explicitly, noting they have always coded for outcomes rather than craft.</p>
+<p>Craft-oriented engineers feel their identity threatened by AI tools. For them, the act of writing code is the point, not just the artifact it produces. <strong>tripledry</strong> expressed concern that if programming becomes prompt engineering, the joy of building would be lost.</p>
+<p>This split is not about skill level. Both groups contain excellent engineers. But it predicts adoption behavior more reliably than technical sophistication, years of experience, or even measured productivity gains. Organizations rolling out AI tools should expect fundamentally different reactions from these two groups and plan accordingly.</p>
+<p>(<a href="../sources/2026-01-26-karpathy-claude-coding-notes/">Source</a>)</p>
+<h2 id="enterprise-adoption-patterns">Enterprise Adoption Patterns</h2>
+<p>Large organizations face a distinct set of adoption challenges that individual developers do not:</p>
+<p><strong>Security and compliance.</strong> Enterprise adoption requires clearing legal, security, and compliance hurdles before any productivity discussion begins. Apple&rsquo;s decision to run Gemini under its Private Cloud Compute infrastructure illustrates the level of architectural consideration required. Even trillion-dollar companies need guarantees about data handling before integrating AI models into core workflows.</p>
+<p><strong>Cost predictability.</strong> Individual developers can tolerate variable costs. Enterprises need budgets. The tension between flat-rate plans (with rate limits) and pay-as-you-go pricing (with unpredictable bills) is an active friction point. The <a href="../landscape/costs-and-tradeoffs/">Costs and Tradeoffs</a> section covers this in detail.</p>
+<p><strong>Skill development concerns.</strong> Anthropic&rsquo;s own research found a 17% learning penalty when junior developers used AI assistance, with debugging skills most affected. Organizations that care about developing their junior talent face a genuine dilemma: the promise of productivity versus the risk of skill atrophy. See <a href="../landscape/open-questions/">Open Questions</a> for the ongoing debate.</p>
+<p><strong>Uneven adoption across teams.</strong> Some teams within an organization will reach Stage 5 or 6 while others remain at Stage 1. This creates coordination challenges, as the teams using agents extensively may produce code with different characteristics than teams coding manually.</p>
+<h2 id="where-we-are">Where We Are</h2>
+<p>If forced to place the industry on a single point of the adoption curve, the best characterization is: <strong>early mainstream, with a long tail of holdouts</strong>. The enthusiasts have moved well beyond experimentation into daily use. A growing middle group is actively integrating agents into their workflows. But a substantial minority remains skeptical or has tried and abandoned AI tools, often because they hit the Stage 1-to-2 gap without building the calibration needed to see reliable results.</p>
+<p>The pace of model improvement continues to push the curve forward. Each generation of models makes more tasks delegable, which expands the population of developers for whom agents provide clear value. But adoption is ultimately gated by the human investments &mdash; calibration, harness engineering, workflow redesign &mdash; that no model improvement can shortcut.</p>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../landscape/costs-and-tradeoffs.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Costs and Tradeoffs</span>
+        </a>
+        
+        
+        <a href="../landscape/model-releases-2026.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Model Releases in 2026</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-six-stages-framework">The Six Stages Framework</a></li>
+    <li><a href="#community-sentiment-polarized-but-trending-positive">Community Sentiment: Polarized but Trending Positive</a></li>
+    <li><a href="#the-builder-vs-crafter-split">The Builder vs. Crafter Split</a></li>
+    <li><a href="#enterprise-adoption-patterns">Enterprise Adoption Patterns</a></li>
+    <li><a href="#where-we-are">Where We Are</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

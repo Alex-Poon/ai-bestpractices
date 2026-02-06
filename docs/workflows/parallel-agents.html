@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parallel Agent Coordination | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="Patterns for orchestrating multiple AI agents on a single project.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Parallel Agent Coordination">
+  <meta property="og:description" content="Patterns for orchestrating multiple AI agents on a single project.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-workflows"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../workflows/index.html">Workflows</a></li>
+      
+    
+    <li aria-current="page">Parallel Agent Coordination</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Parallel Agent Coordination</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">6 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/parallel-agents.html" class="tag-pill">parallel-agents</a>
+  
+  
+  
+  
+  <a href="../tags/coordination.html" class="tag-pill">coordination</a>
+  
+  
+  
+  
+  <a href="../tags/agent-workflows.html" class="tag-pill">agent-workflows</a>
+  
+  
+  
+  
+  <a href="../tags/swarms.html" class="tag-pill">swarms</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <p>A single agent is often too slow for large projects. Running multiple agents in parallel is the obvious solution, but naive parallelism introduces failure modes that can waste more time and money than sequential work. This page covers when parallel agents help, when they hurt, and the coordination infrastructure that makes the difference.</p>
+<p>The strongest empirical evidence comes from Nicholas Carlini&rsquo;s compiler project, where 16 parallel Claude instances produced 100,000 lines of working Rust compiler code over two weeks. The full case study is covered in <a href="../deep-dives/parallel-compiler-lessons/">What 100 Parallel Agents Taught Us</a>. This page focuses on the reusable coordination patterns.</p>
+<h2 id="when-parallelism-helps">When Parallelism Helps</h2>
+<p>Parallel agents provide near-linear speedup when the work decomposes into many independent subtasks.</p>
+<p><strong>Many failing test cases.</strong> Each agent picks a different failing test. The tasks are naturally independent &ndash; fixing one test rarely affects another. This was the primary mode of the Carlini compiler project, and the reason 16 agents could achieve roughly 16x throughput on test-fixing phases.</p>
+<p><strong>Orthogonal features.</strong> Different agents work on non-overlapping features or modules. A frontend agent and a backend agent working on different endpoints rarely produce conflicting changes.</p>
+<p><strong>Specialist roles.</strong> Agents with different responsibilities &ndash; core development, code quality review, performance optimization, documentation &ndash; work on orthogonal concerns. Their changes are unlikely to conflict because they address different dimensions of the same codebase.</p>
+<p>The ideal case: N independent tasks, N agents, near-Nx throughput.</p>
+<h2 id="when-parallelism-fails">When Parallelism Fails</h2>
+<p>Parallelism provides zero advantage on monolithic tasks, and can actively make things worse.</p>
+<p><strong>Single bottleneck bugs.</strong> When a large program fails due to one root cause, all agents independently discover the same bug, produce the same fix, and overwrite each other. N agents produce 1x throughput at Nx cost.</p>
+<p><strong>Highly coupled code.</strong> When every change touches the same files, merge conflicts dominate. Agents spend more time resolving conflicts than making progress.</p>
+<p><strong>Sequential dependencies.</strong> When task B requires the output of task A, only one agent can make progress at a time regardless of how many are available.</p>
+<p>The failure case: 1 monolithic task, N agents, 1x throughput, Nx cost. Before adding agents, verify that independent subtasks actually exist.</p>
+<h2 id="coordination-strategies">Coordination Strategies</h2>
+<h3 id="planexecute-centralized">Plan/Execute (Centralized)</h3>
+<p>A lead agent (or human) creates the plan and task list. Worker agents each claim and execute individual tasks. The lead reviews completed work and assigns new tasks.</p>
+<p>This works well when: the task decomposition is clear upfront, tasks have natural boundaries, and you want centralized quality control. It struggles when: the decomposition is wrong and needs revision mid-project, or when tasks turn out to be more interdependent than expected.</p>
+<h3 id="fan-outfan-in-decentralized">Fan-Out/Fan-In (Decentralized)</h3>
+<p>All agents operate independently, selecting their own tasks from a shared work queue. No single agent coordinates. Git serves as the shared state layer. Agents synchronize by pulling and pushing to the repository frequently.</p>
+<p>This is the pattern Carlini used at scale. It works well when: tasks are numerous and naturally independent, the verification infrastructure (CI/CD, test suites) is robust enough to catch conflicts automatically, and you can tolerate some duplicate work as the cost of eliminating coordination overhead.</p>
+<h3 id="role-specialization">Role Specialization</h3>
+<p>Rather than running N identical generalist agents, deploy specialists with orthogonal responsibilities:</p>
+<ul>
+<li><strong>Core developers</strong> (multiple): Fix failing tests, implement features, extend functionality</li>
+<li><strong>Deduplicator</strong> (one): Scans for duplicate code and consolidates it</li>
+<li><strong>Performance optimizer</strong> (one): Profiles bottlenecks and targets them</li>
+<li><strong>Code quality critic</strong> (one): Reviews for correctness patterns and style consistency</li>
+<li><strong>Documentation maintainer</strong> (one): Keeps README files and progress logs current</li>
+</ul>
+<p>Specialists work on different dimensions of the codebase. Their changes are orthogonal by design, which reduces merge conflicts without explicit coordination.</p>
+<h2 id="required-infrastructure">Required Infrastructure</h2>
+<p>Parallel agents without coordination infrastructure produce parallel chaos. The following components are not optional.</p>
+<h3 id="isolated-execution-environments">Isolated Execution Environments</h3>
+<p>Each agent needs its own workspace &ndash; a separate Docker container, worktree, or branch. Isolation prevents agents from interfering with each other&rsquo;s intermediate state. The only shared surface should be git (or equivalent version control).</p>
+<h3 id="task-claiming-and-lock-files">Task Claiming and Lock Files</h3>
+<p>Agents need a mechanism to prevent duplicate work. In the Carlini project, agents wrote lock files to a <code>current_tasks/</code> directory in the repository. Before starting a task, each agent checked for existing claims and skipped already-claimed work.</p>
+<p>Without locking, agents independently select the &ldquo;most obvious&rdquo; task and produce redundant work. The overhead of a locking system is minimal compared to the waste of duplicate effort.</p>
+<h3 id="git-synchronization-loop">Git Synchronization Loop</h3>
+<p>Each agent follows a tight synchronization cycle:</p>
+<ol>
+<li>Pull the latest changes from upstream</li>
+<li>Merge upstream changes into the local branch</li>
+<li>Do the work</li>
+<li>Push completed work</li>
+<li>Release the lock file</li>
+</ol>
+<p>Frequent synchronization keeps agents&rsquo; local views of the codebase current and reduces the window for conflicting changes.</p>
+<h3 id="cicd-enforcement">CI/CD Enforcement</h3>
+<p>A hard rule: new commits cannot break existing passing tests. This prevents the failure mode where one agent&rsquo;s fix breaks another agent&rsquo;s previously-working code. The CI gate is non-negotiable &ndash; if your change breaks something, it does not merge. This constraint is what maintains coherence across independently-produced changes.</p>
+<h3 id="fresh-sessions-with-repository-based-memory">Fresh Sessions with Repository-Based Memory</h3>
+<p>Each iteration should start a fresh agent session with no conversation memory. Context comes entirely from the repository: code, tests, build output, README files, progress logs, lock files, and git history. This eliminates context window limits as a constraint on project duration &ndash; the project can run for weeks because no single session needs to hold the full history.</p>
+<p>The pattern looks like:</p>
+<pre tabindex="0"><code>while true; do
+  agent --prompt &#34;$(cat AGENT_PROMPT.md)&#34;
+done
+</code></pre><p>The prompt references repository state, not prior conversation.</p>
+<h2 id="converting-monolithic-tasks-to-parallel-work">Converting Monolithic Tasks to Parallel Work</h2>
+<p>When a task appears monolithic, look for ways to manufacture task boundaries. The Carlini project used oracle-based testing: a known-good compiler (GCC) served as a reference implementation. By splitting compilation units between the project compiler and the oracle, the team could binary-search to identify which specific unit caused a failure. Each failing unit became a scoped, independent task suitable for a single agent.</p>
+<p>This technique generalizes to any domain where a reference implementation exists. The key insight is that parallelism requires task boundaries, and task boundaries can often be manufactured even when they are not obvious.</p>
+<h2 id="anti-patterns">Anti-Patterns</h2>
+<p><strong>N agents on a single-threaded problem.</strong> Running multiple agents on a task with no natural decomposition. Verify that independent subtasks exist before adding agents.</p>
+<p><strong>Sharing conversation context between agents.</strong> Passing conversation history between agents creates coupling, synchronization problems, and context pressure. Use the repository as the shared state layer. Context comes from code and documentation, not from other agents&rsquo; conversations.</p>
+<p><strong>Full test suites every iteration.</strong> Agents have no internal sense of time-cost tradeoff and will spend hours running tests instead of making progress. Provide a fast option that runs a random sample. Reserve full test suites for pre-commit validation.</p>
+<p><strong>No verification infrastructure.</strong> Parallel agents without CI/CD enforcement will produce parallel streams of confidently wrong code. The verification infrastructure is what converts raw compute into usable output.</p>
+<h2 id="scale-evidence">Scale Evidence</h2>
+<p>The Carlini compiler project provides the strongest empirical validation:</p>
+<ul>
+<li>16 parallel Claude instances coordinated via git</li>
+<li>Approximately 2,000 sessions over two weeks</li>
+<li>100,000 lines of working Rust compiler code</li>
+<li>Total cost approximately $20,000</li>
+<li>The compiler successfully compiled the Linux kernel, QEMU, FFmpeg, and Doom</li>
+</ul>
+<p>The coordination infrastructure &ndash; Docker isolation, git synchronization, task locking, oracle-based testing, CI/CD enforcement &ndash; was the critical enabler. The same model was available to everyone. The harness is what made the difference.</p>
+<h2 id="sources">Sources</h2>
+<ul>
+<li><a href="../deep-dives/parallel-compiler-lessons/">What 100 Parallel Agents Taught Us</a> &ndash; Full case study of the Carlini compiler project</li>
+<li><a href="../patterns/parallel-agent-coordination/">Parallel Agent Coordination Pattern</a> &ndash; The reusable pattern card</li>
+<li><a href="../patterns/task-scoping/">Task Scoping</a> &ndash; How scoping interacts with parallelism</li>
+</ul>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../workflows/agents-md-guide.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">AGENTS.md Guide</span>
+        </a>
+        
+        
+        <a href="../workflows/daily-practice.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Daily Practice</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#when-parallelism-helps">When Parallelism Helps</a></li>
+    <li><a href="#when-parallelism-fails">When Parallelism Fails</a></li>
+    <li><a href="#coordination-strategies">Coordination Strategies</a>
+      <ul>
+        <li><a href="#planexecute-centralized">Plan/Execute (Centralized)</a></li>
+        <li><a href="#fan-outfan-in-decentralized">Fan-Out/Fan-In (Decentralized)</a></li>
+        <li><a href="#role-specialization">Role Specialization</a></li>
+      </ul>
+    </li>
+    <li><a href="#required-infrastructure">Required Infrastructure</a>
+      <ul>
+        <li><a href="#isolated-execution-environments">Isolated Execution Environments</a></li>
+        <li><a href="#task-claiming-and-lock-files">Task Claiming and Lock Files</a></li>
+        <li><a href="#git-synchronization-loop">Git Synchronization Loop</a></li>
+        <li><a href="#cicd-enforcement">CI/CD Enforcement</a></li>
+        <li><a href="#fresh-sessions-with-repository-based-memory">Fresh Sessions with Repository-Based Memory</a></li>
+      </ul>
+    </li>
+    <li><a href="#converting-monolithic-tasks-to-parallel-work">Converting Monolithic Tasks to Parallel Work</a></li>
+    <li><a href="#anti-patterns">Anti-Patterns</a></li>
+    <li><a href="#scale-evidence">Scale Evidence</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

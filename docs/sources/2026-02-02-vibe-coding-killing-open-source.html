@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How Vibe Coding Is Killing Open Source | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="How Vibe Coding Is Killing Open Source">
+  <meta property="og:description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-sources"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../sources/index.html">Sources</a></li>
+      
+    
+    <li aria-current="page">How Vibe Coding Is Killing Open Source</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">How Vibe Coding Is Killing Open Source</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-02">
+    February 2, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">3 min read</span>
+
+  
+  <span class="tier-badge tier-badge--1">Tier 1</span>
+  
+
+  <div class="meta-links">
+    
+    <a href="https://hackaday.com/2026/02/02/how-vibe-coding-is-killing-open-source/" class="meta-link" target="_blank" rel="noopener">Source &#8599;</a>
+    
+    
+    
+    <a href="https://news.ycombinator.com/item?id=46876455" class="meta-link" target="_blank" rel="noopener">HN &#8599;</a>
+    
+    
+  </div>
+
+  
+  <span class="meta-stat">81 points</span>
+  
+  
+  
+  <span class="meta-stat">62 comments</span>
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/vibe-coding.html" class="tag-pill">vibe-coding</a>
+  
+  
+  
+  
+  <a href="../tags/open-source.html" class="tag-pill">open-source</a>
+  
+  
+  
+  
+  <a href="../tags/community.html" class="tag-pill">community</a>
+  
+  
+  
+  
+  <a href="../tags/ai-impact.html" class="tag-pill">ai-impact</a>
+  
+  
+  
+  
+  <a href="../tags/developer-experience.html" class="tag-pill">developer-experience</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <h2 id="summary">Summary</h2>
+<p>This Hackaday article reports on research examining how vibe coding — using LLM chatbots to generate code — creates systemic problems for open source projects. The core argument is that AI-mediated coding disrupts the traditional feedback loops between developers and open source communities in several damaging ways.</p>
+<p>First, developer engagement shifts away from open source communities entirely. Instead of visiting project websites, consulting documentation, or participating in forums, users interact exclusively with chatbots, eliminating opportunities for sponsorships, bug reports, and community building. Second, LLMs introduce library selection bias by favoring dependencies most prevalent in their training data rather than promoting merit-based adoption, concentrating usage around already-popular projects while marginalizing smaller initiatives. Third, a quality control crisis emerges because LLMs will not interact with library developers, submit usable bug reports, or be aware of potential issues.</p>
+<p>The article cites research showing vibe coding reduces experienced developer productivity by 19% and increases bugs by 41%, challenging the narrative that AI universally improves development speed. It draws parallels to Stack Overflow&rsquo;s declining usage as a concrete example of community knowledge-sharing being displaced by isolated AI interactions.</p>
+<p>As potential solutions, the researchers suggest AI companies could compensate open source projects when their code is used in training or generation, though the article compares this unfavorably to Spotify&rsquo;s revenue model where the vast majority of creators earn negligible income. The broader concern is that starving community platforms of fresh human-written content may degrade the quality of future LLM training data, creating a vicious cycle.</p>
+<h2 id="key-insights">Key Insights</h2>
+<ul>
+<li><strong>Community feedback loops disrupted</strong>: AI-mediated coding eliminates the developer-to-maintainer interactions that sustain open source projects</li>
+<li><strong>Training data bias creates selection bias</strong>: LLMs favor libraries prevalent in training data rather than the best available options</li>
+<li><strong>Productivity claims challenged</strong>: Research shows 19% productivity decrease and 41% more bugs for experienced developers using vibe coding</li>
+<li><strong>Quality control void</strong>: LLMs cannot submit bug reports or participate in issue discussions, creating a feedback vacuum</li>
+<li><strong>Potential vicious cycle</strong>: Less community content leads to worse training data leads to worse AI output</li>
+<li><strong>Compensation models are insufficient</strong>: Following the Spotify model would leave most open source maintainers with negligible income</li>
+</ul>
+<h2 id="notable-quotes">Notable Quotes</h2>
+<blockquote>
+<p>&ldquo;The LLM will not interact with the developers of a library or tool&rdquo; — Hackaday (paraphrased from cited research)</p>
+</blockquote>
+<h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
+<p>The discussion generated 81 points and 62 comments. Key themes:</p>
+<p><strong>Pushback on the thesis</strong></p>
+<ul>
+<li><strong>Flavius</strong>: Argued open source is an ideology about free sharing of knowledge, not a specific way of typing syntax — you cannot kill an idea regardless of how the code is produced</li>
+<li><strong>waynesonfire</strong>: Found the article a stretch, questioning the logical connection between ChatGPT replacing Google/SO and vibe coding killing open source</li>
+<li><strong>charcircuit</strong>: Called out the article&rsquo;s claim about training data bias, noting that Claude actually searches for current libraries rather than relying solely on training data</li>
+<li><strong>ivan_gammel</strong>: Doubted vibe coding kills open source — the &ldquo;too big to fail&rdquo; software will be maintained regardless, with only the contribution model changing</li>
+</ul>
+<p><strong>Agreement and practical concerns</strong></p>
+<ul>
+<li><strong>arjie</strong>: Listed concrete harms: no upstream contribution pressure, no need to use libraries at all, verbose resume-padding PRs, and false issues from unsophisticated LLM users</li>
+<li><strong>dom96</strong>: Raised the reluctance to open source code specifically because it would end up in LLM training data</li>
+<li><strong>jph</strong>: Reported an uptick in AI-forgery attacks on their open source projects with forged user photos and fake social networking pages alongside legitimate contributions</li>
+</ul>
+<p><strong>Broader philosophical perspectives</strong></p>
+<ul>
+<li><strong>observationist</strong>: Argued barriers to entry decreased, more people will participate, and quality will depend on curation rather than gatekeeping</li>
+<li><strong>pelasaco</strong>: Predicted GitHub and GitLab may stop offering free services if the flood of low-quality vibe-coded projects continues</li>
+<li><strong>RcouF1uZ4gsC</strong>: Reflected that open source was the largest transfer of knowledge from craftspeople to business people, and AI further tilts that balance</li>
+</ul>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../sources/2026-01-04-llm-coding-workflow-2026.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">My LLM Coding Workflow Going into 2026</span>
+        </a>
+        
+        
+        <a href="../sources/2025-12-18-two-kinds-vibe-coding.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Two Kinds of Vibe Coding</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#key-insights">Key Insights</a></li>
+    <li><a href="#notable-quotes">Notable Quotes</a></li>
+    <li><a href="#hn-discussion-highlights">HN Discussion Highlights</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

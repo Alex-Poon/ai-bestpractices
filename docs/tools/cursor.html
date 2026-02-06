@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cursor | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="What practitioners say about the AI-native IDE.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Cursor">
+  <meta property="og:description" content="What practitioners say about the AI-native IDE.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-tools"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../tools/index.html">Tool Landscape</a></li>
+      
+    
+    <li aria-current="page">Cursor</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Cursor</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">4 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/cursor.html" class="tag-pill">cursor</a>
+  
+  
+  
+  
+  <a href="../tags/ide-tools.html" class="tag-pill">ide-tools</a>
+  
+  
+  
+  
+  <a href="../tags/tool-comparison.html" class="tag-pill">tool-comparison</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <p>Cursor is a VS Code fork with AI capabilities built directly into the editor. It offers both autocomplete (Tab) and agentic (Composer/Agent) modes as first-class features, multi-model support with user-selectable models, and pricing starting at $20/month with usage-based tiers for heavier workloads. It has the largest adoption among AI coding tools in the IDE-first category.</p>
+<h2 id="what-cursor-does-well">What Cursor Does Well</h2>
+<p><strong>Low friction entry point.</strong> Because Cursor is a VS Code fork, developers who already use VS Code can switch with minimal disruption. Extensions, keybindings, and settings transfer directly. This removes the adoption barrier that CLI-first tools face with developers unfamiliar with terminal workflows.</p>
+<p><strong>Hybrid autocomplete and agentic modes.</strong> Cursor is one of the few tools where both inline completion and autonomous task execution are treated as primary features. Tab completion handles quick, in-flow suggestions while Composer/Agent mode handles multi-file changes. Practitioners can switch between modes depending on the task without leaving the editor.</p>
+<p><strong>Model flexibility.</strong> Users can select from multiple model providers (Anthropic, OpenAI, Google) and switch models mid-conversation. This gives practitioners manual control over the multi-model routing that tools like Amp automate. If a particular model struggles with a task, switching to another is straightforward.</p>
+<p><strong>Integrated context.</strong> Because Cursor runs inside the editor, it has native access to the open file, project structure, terminal output, and language server data. There is no context gap between what the developer sees and what the AI sees &ndash; a structural advantage over CLI tools that must build this context separately.</p>
+<h2 id="what-practitioners-report-as-weaknesses">What Practitioners Report as Weaknesses</h2>
+<p><strong>IDE lock-in.</strong> Cursor only works as a VS Code fork. Developers who prefer JetBrains, Neovim, Emacs, or other editors cannot use it without switching their entire development environment. This is the most frequently cited limitation in community discussions.</p>
+<p><strong>Agentic mode maturity.</strong> While Cursor&rsquo;s Composer/Agent features are improving, practitioner reports suggest the agentic capabilities are less mature than dedicated agent-first tools like Claude Code or Amp. The IDE integration is excellent for autocomplete; the autonomous task execution has more room to grow.</p>
+<p><strong>Cost scaling.</strong> The $20/month base plan includes usage limits. Heavy agentic usage pushes costs higher through usage-based pricing. Practitioners who rely heavily on agent mode report that costs can approach or exceed the flat-rate subscriptions offered by competitors.</p>
+<p><strong>Extension of VS Code limitations.</strong> As a fork, Cursor inherits VS Code&rsquo;s architecture. This means it benefits from the VS Code ecosystem but also carries its constraints. Some practitioners report that the AI features can make the editor feel heavier, particularly on large projects.</p>
+<h2 id="cursor-vs-claude-code-ide-vs-cli">Cursor vs Claude Code: IDE vs CLI</h2>
+<p>The most common comparison in community discussions is between Cursor and Claude Code, representing two philosophies of AI-assisted development:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Dimension</th>
+          <th>Cursor</th>
+          <th>Claude Code</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Interface</td>
+          <td>IDE (VS Code fork)</td>
+          <td>CLI (terminal)</td>
+      </tr>
+      <tr>
+          <td>Autocomplete</td>
+          <td>First-class (Tab)</td>
+          <td>Not available</td>
+      </tr>
+      <tr>
+          <td>Agentic mode</td>
+          <td>Composer/Agent</td>
+          <td>Primary workflow</td>
+      </tr>
+      <tr>
+          <td>Model strategy</td>
+          <td>Multi-model, user-selected</td>
+          <td>Single-model (Anthropic)</td>
+      </tr>
+      <tr>
+          <td>Extensibility</td>
+          <td>VS Code extensions</td>
+          <td>CLAUDE.md, hooks, MCP, sub-agents</td>
+      </tr>
+      <tr>
+          <td>LSP access</td>
+          <td>Native (via VS Code)</td>
+          <td>Plugin-based (added Dec 2025)</td>
+      </tr>
+  </tbody>
+</table>
+<p>The choice often comes down to work style. Developers who think in terms of IDE interactions &ndash; navigating files, running debuggers, viewing diffs visually &ndash; tend to prefer Cursor. Developers who think in terms of task delegation &ndash; describe what needs to happen, let the agent figure out how &ndash; tend to prefer Claude Code.</p>
+<p>Many practitioners use both. Cursor for in-flow editing and quick completions; Claude Code for complex multi-file refactors and tasks that benefit from autonomous execution. The tools are not mutually exclusive.</p>
+<h2 id="where-cursor-fits">Where Cursor Fits</h2>
+<p>Cursor is the strongest choice for developers who want AI assistance tightly integrated into a familiar VS Code environment, value both autocomplete and agentic modes, and prefer visual feedback over terminal workflows. It is less well-suited for developers committed to other editors, those who want maximum extensibility through project files and hooks, or those who primarily need autonomous task execution.</p>
+<p>For the broader decision framework, see the <a href="../references/tool-landscape.html">Practitioner&rsquo;s Tool Comparison</a>.</p>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../tools/amp.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Amp Code</span>
+        </a>
+        
+        
+        <a href="../tools/claude-code.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Claude Code Deep Dive</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-cursor-does-well">What Cursor Does Well</a></li>
+    <li><a href="#what-practitioners-report-as-weaknesses">What Practitioners Report as Weaknesses</a></li>
+    <li><a href="#cursor-vs-claude-code-ide-vs-cli">Cursor vs Claude Code: IDE vs CLI</a></li>
+    <li><a href="#where-cursor-fits">Where Cursor Fits</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

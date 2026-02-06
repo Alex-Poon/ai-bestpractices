@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task Scoping for AI Agents | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="How to decompose work into tasks AI can actually complete well.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Task Scoping for AI Agents">
+  <meta property="og:description" content="How to decompose work into tasks AI can actually complete well.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-skills"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../skills/index.html">Core Skills</a></li>
+      
+    
+    <li aria-current="page">Task Scoping for AI Agents</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Task Scoping for AI Agents</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">6 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/task-scoping.html" class="tag-pill">task-scoping</a>
+  
+  
+  
+  
+  <a href="../tags/core-skill.html" class="tag-pill">core-skill</a>
+  
+  
+  
+  
+  <a href="../tags/agent-workflows.html" class="tag-pill">agent-workflows</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <p>Task scoping is the single most important skill in AI-assisted development. It determines whether the time you spend prompting, waiting, and reviewing produces usable output or wasted effort. Every practitioner who has moved past the initial novelty phase identifies decomposition as the core discipline.</p>
+<h2 id="the-size-sweet-spot">The Size Sweet Spot</h2>
+<p>There is a narrow band where AI delegation works well. Too small, and the overhead of context-switching to an agent exceeds the time you would spend just doing the work. Too large, and the agent produces confidently wrong output that takes longer to fix than to rewrite.</p>
+<p>The sweet spot is defined by one constraint: <strong>verification time</strong>. If you cannot confirm the agent&rsquo;s output is correct within roughly two minutes &ndash; through tests, visual inspection, or a quick manual review &ndash; the task is too broad. If the task would take you less time to do manually than to describe to the agent, it is too narrow.</p>
+<p>A well-scoped task has four properties:</p>
+<ol>
+<li><strong>Clear success criteria.</strong> You can describe what &ldquo;done&rdquo; looks like before the agent starts.</li>
+<li><strong>No architectural decisions required.</strong> The agent implements within a structure you have already defined.</li>
+<li><strong>Bounded blast radius.</strong> If the output is wrong, discarding it costs little.</li>
+<li><strong>Verifiable output.</strong> You can check correctness through tests or short review.</li>
+</ol>
+<h2 id="the-tree-metaphor">The Tree Metaphor</h2>
+<p>The clearest framework for thinking about human-agent task division comes from the HN discussion on <a href="../sources/2026-01-04-llm-coding-workflow-2026/">Mitchell Hashimoto&rsquo;s adoption journey</a>. A commenter (allenu) described the division as a tree:</p>
+<p>The <strong>human owns the trunk and main branches</strong> &ndash; overall architecture, system design, module boundaries, key interfaces, and data models. The <strong>agent owns the leaves</strong> &ndash; individual function implementations, boilerplate, test cases, repetitive transformations, and documentation.</p>
+<p>The interface between human and agent work happens at the branch level. You define the branch (module structure, interface contract), and the agent fills in the leaves (implementation details). The agent never needs to understand the full tree. This maps directly to how effective delegation works between senior and junior engineers, with one critical difference: the agent does not learn across sessions unless you build a <a href="../skills/harness-engineering/">harness</a>.</p>
+<h2 id="practical-decomposition-techniques">Practical Decomposition Techniques</h2>
+<h3 id="separate-planning-from-execution">Separate Planning from Execution</h3>
+<p>Use the agent in conversation mode to explore the problem space, discuss approaches, and iterate on a plan. Then switch to execution mode for implementation. The planning phase is where you make trunk and branch decisions. The execution phase is where the agent fills in leaves.</p>
+<p>This separation prevents the failure mode where the agent starts implementing before the approach is settled and builds momentum toward a wrong solution. <a href="../sources/2026-01-04-llm-coding-workflow-2026/">Addy Osmani&rsquo;s workflow</a> describes this as completing a specification phase before any code is written.</p>
+<h3 id="write-the-spec-delegate-the-implementation">Write the Spec, Delegate the Implementation</h3>
+<p>Write a precise description of what you want: function signature, expected behavior, edge cases, error handling. Give this spec to the agent as a self-contained task. This forces you to think through the design (a human activity) while offloading the mechanical typing.</p>
+<h3 id="batch-related-leaf-tasks">Batch Related Leaf Tasks</h3>
+<p>If you have five similar transformations to make across different files &ndash; updating an API call pattern, adding error handling to a set of functions &ndash; batch them into one agent task with clear examples. Agents handle repetitive work well when given a pattern to follow.</p>
+<h3 id="use-the-explain-back-test">Use the &ldquo;Explain Back&rdquo; Test</h3>
+<p>Before delegating, ask yourself: if you explained this task to a competent developer who has never seen this codebase, could they complete it with only the information you are providing? If not, either narrow the scope or provide more context. The agent knows even less than that hypothetical developer.</p>
+<h2 id="anti-patterns">Anti-Patterns</h2>
+<h3 id="draw-the-owl">&ldquo;Draw the Owl&rdquo;</h3>
+<p>Giving the agent an entire feature as a single task: &ldquo;Implement the user authentication system.&rdquo; The agent will produce something plausible that misses half your actual requirements and makes architectural decisions you would never have made. By the time you realize this, you have invested significant review time in code you will discard.</p>
+<p><strong>Fix:</strong> Break the feature into leaf-level tasks. Define the authentication flow yourself. Have the agent implement individual components (the token validation function, the middleware, the database migration) one at a time.</p>
+<h3 id="micro-management">Micro-Management</h3>
+<p>The opposite extreme: &ldquo;Write a for loop that iterates over this array and filters items where status equals active.&rdquo; You could type this faster than you can prompt it.</p>
+<p><strong>Fix:</strong> Batch related micro-tasks into a meaningful unit. Instead of one for loop, delegate the entire data transformation function, including edge cases and error handling.</p>
+<h3 id="vague-goals">Vague Goals</h3>
+<p>&ldquo;Make this code better&rdquo; or &ldquo;Optimize the performance.&rdquo; The agent has no way to know what &ldquo;better&rdquo; means in your context. It will make changes that look like improvements in isolation but may violate constraints it does not know about.</p>
+<p><strong>Fix:</strong> Be specific. &ldquo;Extract the validation logic from this 200-line function into separate functions, one per validation rule, maintaining the same execution order.&rdquo; Now the agent has a concrete target.</p>
+<h3 id="architecture-by-accumulation">Architecture by Accumulation</h3>
+<p>Letting the agent make a series of small structural decisions that add up to an architecture nobody designed. Each individual decision seems reasonable. The aggregate result is incoherent.</p>
+<p><strong>Fix:</strong> Make all structural decisions yourself before involving the agent. If a task requires deciding where code should live, what patterns to use, or how components should communicate, that is a trunk/branch task, not a leaf task.</p>
+<h2 id="scoping-at-scale-lessons-from-16-parallel-agents">Scoping at Scale: Lessons from 16 Parallel Agents</h2>
+<p>Nicholas Carlini&rsquo;s project building a C compiler with 16 parallel Claude instances provides empirical evidence for how scoping interacts with parallelism. The core lesson: <strong>parallelism requires task structure.</strong> When hundreds of independent failing tests existed, each agent could pick a different one &ndash; the tasks were naturally decomposed. But when a single monolithic failure appeared (compiling the Linux kernel), all 16 agents independently discovered the same bug and overwrote each other&rsquo;s fixes.</p>
+<p>The solution was <strong>oracle-based testing</strong>: using a known-good compiler (GCC) to binary-search for the specific compilation unit causing the failure, converting one opaque problem into many scoped, independent tasks. This technique of manufacturing task boundaries where none naturally exist is generalizable to any domain with a reference implementation.</p>
+<p>The project also demonstrated <strong>role specialization as a scoping strategy</strong> &ndash; rather than N identical generalist agents, deploying specialists (core developers, a deduplicator, a performance optimizer, a code quality critic, a documentation maintainer) whose work products are orthogonal by design. See <a href="../patterns/parallel-agent-coordination/">Parallel Agent Coordination</a> for the full pattern.</p>
+<h2 id="key-indicators-you-have-scoped-well">Key Indicators You Have Scoped Well</h2>
+<ul>
+<li>Verification is fast &ndash; under two minutes.</li>
+<li>The agent did not need to ask clarifying questions.</li>
+<li>No architectural decisions were embedded in the output.</li>
+<li>You knew what &ldquo;done&rdquo; looked like before the agent started.</li>
+<li>If the output is wrong, you can discard it cheaply.</li>
+</ul>
+<h2 id="sources">Sources</h2>
+<ul>
+<li><a href="../sources/2026-01-04-llm-coding-workflow-2026/">Mitchell Hashimoto&rsquo;s AI adoption journey</a> &ndash; Describes the transition from chatbot usage to scoped task delegation as the key skill inflection point</li>
+<li><a href="../sources/2026-01-04-llm-coding-workflow-2026/">Addy Osmani&rsquo;s LLM coding workflow</a> &ndash; Practical specification-first workflow</li>
+<li><a href="../sources/2026-01-24-claude-code-swarms/">Building a C compiler with Claude</a> &ndash; Empirical evidence on scoping and parallelism from Carlini&rsquo;s 16-agent project</li>
+<li><a href="../sources/2026-01-22-ai-coding-toolkit/">AI Coding Toolkit</a> &ndash; Phase-gated Specify/Plan/Execute workflow</li>
+<li><strong>allenu</strong> (HN) &ndash; Tree metaphor for human-agent task division</li>
+<li><strong>sho_hn</strong> (HN) &ndash; Decomposition skill matters more than prompting skill</li>
+<li><strong>apercu</strong> (HN) &ndash; Inability to articulate success criteria signals a task is not ready for delegation</li>
+</ul>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../skills/harness-engineering.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Harness Engineering</span>
+        </a>
+        
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-size-sweet-spot">The Size Sweet Spot</a></li>
+    <li><a href="#the-tree-metaphor">The Tree Metaphor</a></li>
+    <li><a href="#practical-decomposition-techniques">Practical Decomposition Techniques</a>
+      <ul>
+        <li><a href="#separate-planning-from-execution">Separate Planning from Execution</a></li>
+        <li><a href="#write-the-spec-delegate-the-implementation">Write the Spec, Delegate the Implementation</a></li>
+        <li><a href="#batch-related-leaf-tasks">Batch Related Leaf Tasks</a></li>
+        <li><a href="#use-the-explain-back-test">Use the &ldquo;Explain Back&rdquo; Test</a></li>
+      </ul>
+    </li>
+    <li><a href="#anti-patterns">Anti-Patterns</a>
+      <ul>
+        <li><a href="#draw-the-owl">&ldquo;Draw the Owl&rdquo;</a></li>
+        <li><a href="#micro-management">Micro-Management</a></li>
+        <li><a href="#vague-goals">Vague Goals</a></li>
+        <li><a href="#architecture-by-accumulation">Architecture by Accumulation</a></li>
+      </ul>
+    </li>
+    <li><a href="#scoping-at-scale-lessons-from-16-parallel-agents">Scoping at Scale: Lessons from 16 Parallel Agents</a></li>
+    <li><a href="#key-indicators-you-have-scoped-well">Key Indicators You Have Scoped Well</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

@@ -2,241 +2,969 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1313/tags/index.html</link>
+    <link>/tags/index.html</link>
     <description>Recent content in Tags on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Adoption-Strategy</title>
-      <link>//localhost:1313/tags/adoption-strategy.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/adoption-strategy.html</guid>
+      <link>/tags/adoption-strategy.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/adoption-strategy.html</guid>
       <description></description>
     </item>
     <item>
       <title>Agent-Architecture</title>
-      <link>//localhost:1313/tags/agent-architecture.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/agent-architecture.html</guid>
+      <link>/tags/agent-architecture.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/agent-architecture.html</guid>
       <description></description>
     </item>
     <item>
       <title>Agent-Workflows</title>
-      <link>//localhost:1313/tags/agent-workflows.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/agent-workflows.html</guid>
+      <link>/tags/agent-workflows.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/agent-workflows.html</guid>
       <description></description>
     </item>
     <item>
       <title>Agents-Md</title>
-      <link>//localhost:1313/tags/agents-md.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/agents-md.html</guid>
+      <link>/tags/agents-md.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/agents-md.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ai-Economics</title>
+      <link>/tags/ai-economics.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/ai-economics.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ai-Skepticism</title>
+      <link>/tags/ai-skepticism.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/ai-skepticism.html</guid>
       <description></description>
     </item>
     <item>
       <title>Amp-Code</title>
-      <link>//localhost:1313/tags/amp-code.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/amp-code.html</guid>
+      <link>/tags/amp-code.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/amp-code.html</guid>
       <description></description>
     </item>
     <item>
       <title>Autonomous-Coding</title>
-      <link>//localhost:1313/tags/autonomous-coding.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/autonomous-coding.html</guid>
+      <link>/tags/autonomous-coding.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/autonomous-coding.html</guid>
       <description></description>
     </item>
     <item>
       <title>Best-Practices</title>
-      <link>//localhost:1313/tags/best-practices.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/best-practices.html</guid>
+      <link>/tags/best-practices.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/best-practices.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Case-Study</title>
+      <link>/tags/case-study.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/case-study.html</guid>
       <description></description>
     </item>
     <item>
       <title>Checklist</title>
-      <link>//localhost:1313/tags/checklist.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/checklist.html</guid>
+      <link>/tags/checklist.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/checklist.html</guid>
       <description></description>
     </item>
     <item>
       <title>Claude-Code</title>
-      <link>//localhost:1313/tags/claude-code.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/claude-code.html</guid>
+      <link>/tags/claude-code.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/claude-code.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Code-Quality</title>
+      <link>/tags/code-quality.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/code-quality.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Code-Review</title>
+      <link>/tags/code-review.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/code-review.html</guid>
       <description></description>
     </item>
     <item>
       <title>Community-Discussion</title>
-      <link>//localhost:1313/tags/community-discussion.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/community-discussion.html</guid>
+      <link>/tags/community-discussion.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/community-discussion.html</guid>
       <description></description>
     </item>
     <item>
       <title>Coordination</title>
-      <link>//localhost:1313/tags/coordination.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/coordination.html</guid>
+      <link>/tags/coordination.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/coordination.html</guid>
       <description></description>
     </item>
     <item>
       <title>Copilot</title>
-      <link>//localhost:1313/tags/copilot.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/copilot.html</guid>
+      <link>/tags/copilot.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/copilot.html</guid>
       <description></description>
     </item>
     <item>
       <title>Core-Concepts</title>
-      <link>//localhost:1313/tags/core-concepts.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/core-concepts.html</guid>
+      <link>/tags/core-concepts.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/core-concepts.html</guid>
       <description></description>
     </item>
     <item>
       <title>Core-Skill</title>
-      <link>//localhost:1313/tags/core-skill.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/core-skill.html</guid>
+      <link>/tags/core-skill.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/core-skill.html</guid>
       <description></description>
     </item>
     <item>
-      <title>Craft-vs-Ai</title>
-      <link>//localhost:1313/tags/craft-vs-ai.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/craft-vs-ai.html</guid>
+      <title>Cost-Optimization</title>
+      <link>/tags/cost-optimization.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/cost-optimization.html</guid>
       <description></description>
     </item>
     <item>
       <title>Cursor</title>
-      <link>//localhost:1313/tags/cursor.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/cursor.html</guid>
+      <link>/tags/cursor.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/cursor.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Daily-Practice</title>
+      <link>/tags/daily-practice.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/daily-practice.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Debate</title>
+      <link>/tags/debate.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/debate.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Deepseek</title>
+      <link>/tags/deepseek.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/deepseek.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gemini</title>
+      <link>/tags/gemini.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/gemini.html</guid>
       <description></description>
     </item>
     <item>
       <title>Getting-Started</title>
-      <link>//localhost:1313/tags/getting-started.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/getting-started.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Git-Sync</title>
-      <link>//localhost:1313/tags/git-sync.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/git-sync.html</guid>
+      <link>/tags/getting-started.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/getting-started.html</guid>
       <description></description>
     </item>
     <item>
       <title>Harness-Engineering</title>
-      <link>//localhost:1313/tags/harness-engineering.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/harness-engineering.html</guid>
+      <link>/tags/harness-engineering.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/harness-engineering.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ide-Tools</title>
+      <link>/tags/ide-tools.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/ide-tools.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Industry-Trends</title>
+      <link>/tags/industry-trends.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/industry-trends.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Interoperability</title>
+      <link>/tags/interoperability.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/interoperability.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Llama</title>
+      <link>/tags/llama.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/llama.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mcp</title>
+      <link>/tags/mcp.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/mcp.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mistral</title>
+      <link>/tags/mistral.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/mistral.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Model-Releases</title>
+      <link>/tags/model-releases.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/model-releases.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Model-Selection</title>
+      <link>/tags/model-selection.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/model-selection.html</guid>
       <description></description>
     </item>
     <item>
       <title>Multi-Model</title>
-      <link>//localhost:1313/tags/multi-model.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/multi-model.html</guid>
+      <link>/tags/multi-model.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/multi-model.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Open-Questions</title>
+      <link>/tags/open-questions.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/open-questions.html</guid>
       <description></description>
     </item>
     <item>
       <title>Parallel-Agents</title>
-      <link>//localhost:1313/tags/parallel-agents.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/parallel-agents.html</guid>
+      <link>/tags/parallel-agents.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/parallel-agents.html</guid>
       <description></description>
     </item>
     <item>
-      <title>Pattern</title>
-      <link>//localhost:1313/tags/pattern.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/pattern.html</guid>
+      <title>Practitioner-Insights</title>
+      <link>/tags/practitioner-insights.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/practitioner-insights.html</guid>
       <description></description>
     </item>
     <item>
-      <title>Practical</title>
-      <link>//localhost:1313/tags/practical.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/practical.html</guid>
+      <title>Productivity</title>
+      <link>/tags/productivity.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/productivity.html</guid>
       <description></description>
     </item>
     <item>
-      <title>Practical-Guide</title>
-      <link>//localhost:1313/tags/practical-guide.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/practical-guide.html</guid>
+      <title>Reliability</title>
+      <link>/tags/reliability.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/reliability.html</guid>
       <description></description>
     </item>
     <item>
-      <title>Productivity-Debate</title>
-      <link>//localhost:1313/tags/productivity-debate.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/productivity-debate.html</guid>
+      <title>Skill-Atrophy</title>
+      <link>/tags/skill-atrophy.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/skill-atrophy.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Swarms</title>
+      <link>/tags/swarms.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/swarms.html</guid>
       <description></description>
     </item>
     <item>
       <title>Synthesis</title>
-      <link>//localhost:1313/tags/synthesis.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/synthesis.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Task-Locking</title>
-      <link>//localhost:1313/tags/task-locking.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/task-locking.html</guid>
+      <link>/tags/synthesis.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/synthesis.html</guid>
       <description></description>
     </item>
     <item>
       <title>Task-Scoping</title>
-      <link>//localhost:1313/tags/task-scoping.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/task-scoping.html</guid>
+      <link>/tags/task-scoping.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/task-scoping.html</guid>
       <description></description>
     </item>
     <item>
       <title>Test-Design</title>
-      <link>//localhost:1313/tags/test-design.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/test-design.html</guid>
+      <link>/tags/test-design.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/test-design.html</guid>
       <description></description>
     </item>
     <item>
       <title>Tool-Comparison</title>
-      <link>//localhost:1313/tags/tool-comparison.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/tool-comparison.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tool-Review</title>
-      <link>//localhost:1313/tags/tool-review.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/tool-review.html</guid>
+      <link>/tags/tool-comparison.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/tool-comparison.html</guid>
       <description></description>
     </item>
     <item>
       <title>Tooling</title>
-      <link>//localhost:1313/tags/tooling.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/tooling.html</guid>
+      <link>/tags/tooling.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/tooling.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Verification</title>
+      <link>/tags/verification.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/verification.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vibe-Coding</title>
+      <link>/tags/vibe-coding.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/vibe-coding.html</guid>
       <description></description>
     </item>
     <item>
       <title>Workflow</title>
-      <link>//localhost:1313/tags/workflow.html</link>
+      <link>/tags/workflow.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/workflow.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agent-Teams</title>
+      <link>/tags/agent-teams.html</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/workflow.html</guid>
+      <guid>/tags/agent-teams.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Anthropic</title>
+      <link>/tags/anthropic.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/anthropic.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Benchmarks</title>
+      <link>/tags/benchmarks.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/benchmarks.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Claude</title>
+      <link>/tags/claude.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/claude.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Industry-Analysis</title>
+      <link>/tags/industry-analysis.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/industry-analysis.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Long-Context</title>
+      <link>/tags/long-context.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/long-context.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Meta</title>
+      <link>/tags/meta.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/meta.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Model-Release</title>
+      <link>/tags/model-release.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/model-release.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Open-Source-Ai</title>
+      <link>/tags/open-source-ai.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/open-source-ai.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Opus</title>
+      <link>/tags/opus.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/opus.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Developer-Experience</title>
+      <link>/tags/developer-experience.html</link>
+      <pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/developer-experience.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Service-Quality</title>
+      <link>/tags/service-quality.html</link>
+      <pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/service-quality.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agentic-Vision</title>
+      <link>/tags/agentic-vision.html</link>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/agentic-vision.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Context-Management</title>
+      <link>/tags/context-management.html</link>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/context-management.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Developer-Tools</title>
+      <link>/tags/developer-tools.html</link>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/developer-tools.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Google</title>
+      <link>/tags/google.html</link>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/google.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Multimodal</title>
+      <link>/tags/multimodal.html</link>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/multimodal.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Obsidian</title>
+      <link>/tags/obsidian.html</link>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/obsidian.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spatial-Computing</title>
+      <link>/tags/spatial-computing.html</link>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/spatial-computing.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ai-Impact</title>
+      <link>/tags/ai-impact.html</link>
+      <pubDate>Mon, 02 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/ai-impact.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Community</title>
+      <link>/tags/community.html</link>
+      <pubDate>Mon, 02 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/community.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Open-Source</title>
+      <link>/tags/open-source.html</link>
+      <pubDate>Mon, 02 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/open-source.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agents</title>
+      <link>/tags/agents.html</link>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/agents.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agi</title>
+      <link>/tags/agi.html</link>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/agi.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ai-Landscape</title>
+      <link>/tags/ai-landscape.html</link>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/ai-landscape.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>China-Ai</title>
+      <link>/tags/china-ai.html</link>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/china-ai.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Coding-Tools</title>
+      <link>/tags/coding-tools.html</link>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/coding-tools.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Podcast</title>
+      <link>/tags/podcast.html</link>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/podcast.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scaling-Laws</title>
+      <link>/tags/scaling-laws.html</link>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/scaling-laws.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Junior-Developers</title>
+      <link>/tags/junior-developers.html</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/junior-developers.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Research</title>
+      <link>/tags/research.html</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/research.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Skill-Development</title>
+      <link>/tags/skill-development.html</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/skill-development.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Evals</title>
+      <link>/tags/evals.html</link>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/evals.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Evaluation</title>
+      <link>/tags/evaluation.html</link>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/evaluation.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Model-Degradation</title>
+      <link>/tags/model-degradation.html</link>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/model-degradation.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Next-Js</title>
+      <link>/tags/next-js.html</link>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/next-js.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Prompt-Engineering</title>
+      <link>/tags/prompt-engineering.html</link>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/prompt-engineering.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Swe-Bench</title>
+      <link>/tags/swe-bench.html</link>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/swe-bench.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vercel</title>
+      <link>/tags/vercel.html</link>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/vercel.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Delegation</title>
+      <link>/tags/delegation.html</link>
+      <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/delegation.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tool-Routing</title>
+      <link>/tags/tool-routing.html</link>
+      <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/tool-routing.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Multi-Agent</title>
+      <link>/tags/multi-agent.html</link>
+      <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/multi-agent.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sdlc</title>
+      <link>/tags/sdlc.html</link>
+      <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/sdlc.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Testing</title>
+      <link>/tags/testing.html</link>
+      <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/testing.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Workflow-Template</title>
+      <link>/tags/workflow-template.html</link>
+      <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/workflow-template.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agentic-Patterns</title>
+      <link>/tags/agentic-patterns.html</link>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/agentic-patterns.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Production-Engineering</title>
+      <link>/tags/production-engineering.html</link>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/production-engineering.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>/tags/security.html</link>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/security.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ai-Bubble</title>
+      <link>/tags/ai-bubble.html</link>
+      <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/ai-bubble.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data-Centers</title>
+      <link>/tags/data-centers.html</link>
+      <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/data-centers.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Devops</title>
+      <link>/tags/devops.html</link>
+      <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/devops.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Economics</title>
+      <link>/tags/economics.html</link>
+      <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/economics.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Infrastructure</title>
+      <link>/tags/infrastructure.html</link>
+      <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/infrastructure.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Infrastructure-as-Code</title>
+      <link>/tags/infrastructure-as-code.html</link>
+      <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/infrastructure-as-code.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Openai</title>
+      <link>/tags/openai.html</link>
+      <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/openai.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Skepticism</title>
+      <link>/tags/skepticism.html</link>
+      <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/skepticism.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Skills</title>
+      <link>/tags/skills.html</link>
+      <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/skills.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Terraform</title>
+      <link>/tags/terraform.html</link>
+      <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/terraform.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ai-Strategy</title>
+      <link>/tags/ai-strategy.html</link>
+      <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/ai-strategy.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Apple</title>
+      <link>/tags/apple.html</link>
+      <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/apple.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Industry-Partnerships</title>
+      <link>/tags/industry-partnerships.html</link>
+      <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/industry-partnerships.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Siri</title>
+      <link>/tags/siri.html</link>
+      <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/siri.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ai-Coding-Tools</title>
+      <link>/tags/ai-coding-tools.html</link>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/ai-coding-tools.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Coding-Agents</title>
+      <link>/tags/coding-agents.html</link>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/coding-agents.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Demystification</title>
+      <link>/tags/demystification.html</link>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/demystification.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tool-Calling</title>
+      <link>/tags/tool-calling.html</link>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/tool-calling.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agentic-Frameworks</title>
+      <link>/tags/agentic-frameworks.html</link>
+      <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/agentic-frameworks.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ai-Capabilities</title>
+      <link>/tags/ai-capabilities.html</link>
+      <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/ai-capabilities.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Memory-Systems</title>
+      <link>/tags/memory-systems.html</link>
+      <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/memory-systems.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ai-Coding-Workflow</title>
+      <link>/tags/ai-coding-workflow.html</link>
+      <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/ai-coding-workflow.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tool-Selection</title>
+      <link>/tags/tool-selection.html</link>
+      <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/tool-selection.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Model-Architecture</title>
+      <link>/tags/model-architecture.html</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/model-architecture.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Research-Papers</title>
+      <link>/tags/research-papers.html</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/research-papers.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Training-Efficiency</title>
+      <link>/tags/training-efficiency.html</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/training-efficiency.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Business-Models</title>
+      <link>/tags/business-models.html</link>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/business-models.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sustainability</title>
+      <link>/tags/sustainability.html</link>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/sustainability.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Venture-Capital</title>
+      <link>/tags/venture-capital.html</link>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/venture-capital.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Code-Intelligence</title>
+      <link>/tags/code-intelligence.html</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/code-intelligence.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ide</title>
+      <link>/tags/ide.html</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/ide.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lsp</title>
+      <link>/tags/lsp.html</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/lsp.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Plugins</title>
+      <link>/tags/plugins.html</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/plugins.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Meta-Cognition</title>
+      <link>/tags/meta-cognition.html</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/meta-cognition.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Developer-Workflows</title>
+      <link>/tags/developer-workflows.html</link>
+      <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/developer-workflows.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Future-of-Coding</title>
+      <link>/tags/future-of-coding.html</link>
+      <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/future-of-coding.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Open-Source-Models</title>
+      <link>/tags/open-source-models.html</link>
+      <pubDate>Tue, 02 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/open-source-models.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pricing</title>
+      <link>/tags/pricing.html</link>
+      <pubDate>Thu, 13 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>/tags/pricing.html</guid>
       <description></description>
     </item>
   </channel>

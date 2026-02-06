@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verification: Reading AI-Generated Code | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="The most critical skill -- how to effectively review and validate AI output.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Verification: Reading AI-Generated Code">
+  <meta property="og:description" content="The most critical skill -- how to effectively review and validate AI output.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-skills"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../skills/index.html">Core Skills</a></li>
+      
+    
+    <li aria-current="page">Verification: Reading AI-Generated Code</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Verification: Reading AI-Generated Code</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">7 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/verification.html" class="tag-pill">verification</a>
+  
+  
+  
+  
+  <a href="../tags/core-skill.html" class="tag-pill">core-skill</a>
+  
+  
+  
+  
+  <a href="../tags/code-review.html" class="tag-pill">code-review</a>
+  
+  
+  
+  
+  <a href="../tags/skill-atrophy.html" class="tag-pill">skill-atrophy</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <p>As AI takes over more code generation, the developer&rsquo;s primary contribution shifts from writing to reading. Verification &ndash; the ability to evaluate whether AI-generated code is correct, secure, and aligned with intent &ndash; becomes the skill that separates productive AI usage from expensive mistakes.</p>
+<h2 id="why-verification-matters-more-than-generation">Why Verification Matters More Than Generation</h2>
+<p>The economics of AI-assisted development are asymmetric. Generating code is now cheap and fast. Deploying broken code is still expensive and slow to fix. The bottleneck has moved from production to quality control.</p>
+<p>This is not a temporary state while models improve. Even as models get better at generating correct code, the consequences of undetected errors in production remain severe. A human who cannot evaluate AI output is a human who ships bugs at the speed of AI generation.</p>
+<p>Anthropic&rsquo;s own research quantified the risk. A <a href="../sources/2026-01-30-ai-assistance-coding-skills/">randomized controlled study</a> found that junior developers using AI assistance scored 17% lower on comprehension tests, with the largest gap appearing on debugging questions. The AI-assisted group finished tasks slightly faster, but the speed advantage was not statistically significant. The implication: AI can make you feel faster while making you less capable of catching mistakes.</p>
+<h2 id="the-karpathy-insight-reading-persists-when-writing-atrophies">The Karpathy Insight: Reading Persists When Writing Atrophies</h2>
+<p>Andrej Karpathy&rsquo;s <a href="../sources/2026-01-26-karpathy-claude-coding-notes/">widely discussed observations</a> on AI-assisted coding identified a critical asymmetry in skill atrophy. After extensive AI usage, he found it harder to recall syntax and implementation details &ndash; writing fluency degraded. But code review ability remained intact. He drew a parallel to how reading comprehension persists even when spelling ability degrades.</p>
+<p>This asymmetry is the foundation of the verification skill. As long as you can read code effectively, you can verify AI output even if you could no longer write that code from scratch. The developer role evolves from author to editor &ndash; but the editor must be a genuinely skilled reader, not a rubber stamp.</p>
+<p>HN commenter <strong>oxag3n</strong> pushed back on this framing, warning that review skills will also erode eventually if developers stop working in domains they never learned firsthand. The implication: verification skill requires active maintenance through periodic hands-on coding, not just passive review.</p>
+<h2 id="what-ai-gets-wrong">What AI Gets Wrong</h2>
+<p>Understanding common failure modes makes verification more efficient. You learn where to focus attention instead of reviewing every line with equal scrutiny.</p>
+<p><strong>Plausible but incorrect logic.</strong> AI-generated code often looks correct on first reading because it follows familiar patterns. The errors tend to be in edge cases, off-by-one conditions, and subtle misunderstandings of business requirements rather than obvious syntax mistakes.</p>
+<p><strong>Security vulnerabilities.</strong> Models frequently produce code with injection risks, missing input validation, or overly permissive access controls. <a href="../sources/2026-01-06-opus-4-5-agent-experience/">Burke Holland&rsquo;s Opus 4.5 evaluation</a> estimated only about 80% confidence in robust security implementations even from frontier models.</p>
+<p><strong>Architectural drift.</strong> Over multiple agent interactions, small decisions accumulate into an architecture nobody designed. Each individual change seems reasonable; the aggregate result is incoherent. This is the hardest failure mode to catch because it only becomes visible at a scale larger than any individual diff.</p>
+<p><strong>Tests that pass without testing.</strong> <a href="../sources/2025-12-18-two-kinds-vibe-coding/">David Bau&rsquo;s analysis of vibe coding</a> identified a critical failure mode: agents can produce solutions that technically pass tests without actually doing what is intended. Tests themselves must be tested &ndash; through code coverage analysis, fuzz testing, and benchmarking.</p>
+<p><strong>Overconfident error handling.</strong> Agents tend to add error handling that catches exceptions broadly rather than specifically, masking real failures behind generic error messages. This makes debugging harder, not easier.</p>
+<h2 id="diff-review-as-the-core-workflow">Diff Review as the Core Workflow</h2>
+<p>The most effective verification workflow centers on diff review rather than reading complete files. This is how experienced developers have always reviewed code from other humans, and it transfers directly to AI output.</p>
+<p>Karpathy emphasized that despite the power of CLI agents, visual code review through IDE diffs remains essential for quality control. The diff shows you exactly what changed, focusing attention on the delta rather than the entire codebase.</p>
+<p>Practical diff review habits:</p>
+<ul>
+<li><strong>Review every diff before committing.</strong> <a href="../sources/2026-01-04-llm-coding-workflow-2026/">Addy Osmani&rsquo;s workflow</a> codifies this as a rule: never commit code you cannot explain.</li>
+<li><strong>Read the diff, not the conversation.</strong> The agent&rsquo;s explanation of what it did may not match what it actually did. Trust the code, not the commentary.</li>
+<li><strong>Check for what is missing.</strong> The hardest verification task is noticing what the agent failed to include &ndash; error handling it skipped, edge cases it did not consider, tests it did not write. Absence is harder to spot than presence.</li>
+<li><strong>Look for patterns, not just individual lines.</strong> Architectural drift shows up as inconsistent patterns across files, not as errors in any single file.</li>
+</ul>
+<h2 id="the-trust-calibration-problem">The Trust Calibration Problem</h2>
+<p>Verification effort should be proportional to risk, but calibrating trust is difficult. The failure modes are:</p>
+<p><strong>Over-trust (rubber-stamping).</strong> Approving AI output after only superficial review because the first few interactions produced good results. This is the most dangerous failure mode because it scales: as AI generates more code faster, the temptation to skim grows proportionally.</p>
+<p><strong>Under-trust (rewriting everything).</strong> Reviewing so thoroughly that you could have written the code faster yourself. This defeats the purpose of AI assistance. As HN commenter <strong>strogonoff</strong> noted, if you are spending all your time reviewing, you have not saved any time.</p>
+<p>The right calibration depends on blast radius. For a utility function with tests, a quick scan may suffice. For authentication logic, security-critical paths, or public-facing API changes, line-by-line review is appropriate. Match verification intensity to the cost of an undetected error.</p>
+<h2 id="maintaining-verification-skill">Maintaining Verification Skill</h2>
+<p>The Anthropic study found that developers who actively engaged with AI &ndash; asking follow-up questions, requesting explanations, posing conceptual queries &ndash; retained significantly better understanding than those who simply delegated work wholesale. The manner of interaction matters more than whether AI is used at all.</p>
+<p>Practical strategies for maintaining verification capability:</p>
+<ul>
+<li><strong>Periodically write code manually.</strong> Not for every task, but often enough to keep your mental model of the codebase current. Think of it as exercise &ndash; you do not need to run every day to stay fit, but you do need to run regularly.</li>
+<li><strong>Ask the agent to explain its choices.</strong> This forces engagement with the reasoning, not just the output, and sometimes reveals misunderstandings.</li>
+<li><strong>Write tests before delegating implementation.</strong> Test-writing requires understanding the problem deeply enough to specify expected behavior. This preserves the understanding that pure delegation erodes.</li>
+<li><strong>Rotate between AI-assisted and manual work.</strong> Some tasks are better as manual practice. Choose the ones that maintain your skills in areas where AI commonly fails (debugging, security, architecture).</li>
+</ul>
+<h2 id="anti-patterns">Anti-Patterns</h2>
+<h3 id="blind-acceptance">Blind Acceptance</h3>
+<p>Committing AI-generated code without review because &ldquo;it compiled and the tests passed.&rdquo; Tests can pass without testing the right things. Compilation does not mean correctness. HN commenter <strong>WhyOhWhyQ</strong> described this failure mode vividly: initial exhilaration turning into exhausting QA testing of unreliable output.</p>
+<h3 id="rubber-stamping-diffs">Rubber-Stamping Diffs</h3>
+<p>Clicking &ldquo;approve&rdquo; on every diff after a cursory glance. This is the organizational version of blind acceptance and is particularly dangerous in team settings where AI-generated PRs can overwhelm reviewers.</p>
+<h3 id="reviewing-without-context">Reviewing Without Context</h3>
+<p>Evaluating code changes without understanding the broader system they operate in. AI-generated code may be locally correct but globally wrong &ndash; violating invariants, duplicating existing functionality, or introducing subtle incompatibilities with other modules.</p>
+<h3 id="assuming-models-improve-monotonically">Assuming Models Improve Monotonically</h3>
+<p>Trusting that newer model versions are always better. The <a href="../sources/2026-01-29-claude-code-benchmarks/">Claude Code benchmarks tracker</a> documented statistically significant performance fluctuations, and many practitioners report inconsistent quality across sessions. Verification intensity should not decrease just because a newer model was released.</p>
+<h2 id="sources">Sources</h2>
+<ul>
+<li><a href="../sources/2026-01-26-karpathy-claude-coding-notes/">Karpathy&rsquo;s Claude coding notes</a> &ndash; Skill atrophy observations and the reading-persists-when-writing-degrades insight</li>
+<li><a href="../sources/2026-01-30-ai-assistance-coding-skills/">AI assistance and coding skills (Anthropic study)</a> &ndash; 17% learning penalty, debugging skills most affected, engagement style matters</li>
+<li><a href="../sources/2026-01-08-ai-coding-getting-worse/">AI coding getting worse? (IEEE Spectrum)</a> &ndash; Perception vs reality of model degradation, consistency as the real problem</li>
+<li><a href="../sources/2026-01-29-claude-code-benchmarks/">Claude Code benchmarks</a> &ndash; Systematic tracking of performance fluctuations</li>
+<li><a href="../sources/2025-12-18-two-kinds-vibe-coding/">Two kinds of vibe coding</a> &ndash; Tests that pass without testing, meta-cognitive infrastructure for verification</li>
+<li><a href="../sources/2026-01-04-llm-coding-workflow-2026/">Addy Osmani&rsquo;s workflow</a> &ndash; &ldquo;Never commit code you cannot explain&rdquo;</li>
+<li><a href="../sources/2026-01-06-opus-4-5-agent-experience/">Opus 4.5 agent experience</a> &ndash; Security confidence gaps even in frontier models</li>
+</ul>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../skills/model-selection.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Model Selection</span>
+        </a>
+        
+        
+        <a href="../skills/harness-engineering.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Harness Engineering</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#why-verification-matters-more-than-generation">Why Verification Matters More Than Generation</a></li>
+    <li><a href="#the-karpathy-insight-reading-persists-when-writing-atrophies">The Karpathy Insight: Reading Persists When Writing Atrophies</a></li>
+    <li><a href="#what-ai-gets-wrong">What AI Gets Wrong</a></li>
+    <li><a href="#diff-review-as-the-core-workflow">Diff Review as the Core Workflow</a></li>
+    <li><a href="#the-trust-calibration-problem">The Trust Calibration Problem</a></li>
+    <li><a href="#maintaining-verification-skill">Maintaining Verification Skill</a></li>
+    <li><a href="#anti-patterns">Anti-Patterns</a>
+      <ul>
+        <li><a href="#blind-acceptance">Blind Acceptance</a></li>
+        <li><a href="#rubber-stamping-diffs">Rubber-Stamping Diffs</a></li>
+        <li><a href="#reviewing-without-context">Reviewing Without Context</a></li>
+        <li><a href="#assuming-models-improve-monotonically">Assuming Models Improve Monotonically</a></li>
+      </ul>
+    </li>
+    <li><a href="#sources">Sources</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AGENTS.md Outperforms Skills in Our Agent Evals | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="AGENTS.md Outperforms Skills in Our Agent Evals">
+  <meta property="og:description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-sources"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../sources/index.html">Sources</a></li>
+      
+    
+    <li aria-current="page">AGENTS.md Outperforms Skills in Our Agent Evals</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">AGENTS.md Outperforms Skills in Our Agent Evals</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-01-29">
+    January 29, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">3 min read</span>
+
+  
+  <span class="tier-badge tier-badge--1">Tier 1</span>
+  
+
+  <div class="meta-links">
+    
+    <a href="https://vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals" class="meta-link" target="_blank" rel="noopener">Source &#8599;</a>
+    
+    
+    
+    <a href="https://news.ycombinator.com/item?id=46809708" class="meta-link" target="_blank" rel="noopener">HN &#8599;</a>
+    
+    
+  </div>
+
+  
+  <span class="meta-stat">520 points</span>
+  
+  
+  
+  <span class="meta-stat">70 comments</span>
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/agents-md.html" class="tag-pill">agents-md</a>
+  
+  
+  
+  
+  <a href="../tags/harness-engineering.html" class="tag-pill">harness-engineering</a>
+  
+  
+  
+  
+  <a href="../tags/prompt-engineering.html" class="tag-pill">prompt-engineering</a>
+  
+  
+  
+  
+  <a href="../tags/evals.html" class="tag-pill">evals</a>
+  
+  
+  
+  
+  <a href="../tags/vercel.html" class="tag-pill">vercel</a>
+  
+  
+  
+  
+  <a href="../tags/next-js.html" class="tag-pill">next-js</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <h2 id="summary">Summary</h2>
+<p>Vercel&rsquo;s engineering team published an evaluation comparing two approaches to providing AI coding agents with documentation: AGENTS.md files (passive context embedded in the system prompt) versus skills (active retrieval tools the agent can invoke on demand). The evaluation targeted Next.js 16 APIs that were absent from model training data, including new patterns like <code>'use cache'</code>, <code>connection()</code>, <code>forbidden()</code>, and async <code>cookies()</code>.</p>
+<p>The results were striking. A compressed 8KB documentation index embedded in AGENTS.md achieved a 100% pass rate on the evaluation tasks, while skills maxed out at 79% even with explicit instructions telling the agent to use them. Without explicit instructions, skills performed no better than the 53% baseline. The root cause was that in 56% of eval cases, the skill was never invoked at all — the agent simply failed to recognize when it needed documentation help.</p>
+<p>The key finding is that passive context (always-available documentation) eliminates the decision point that trips up active retrieval. There is no sequencing issue, no need for the agent to decide whether to look something up. The documentation is simply present in every turn. Vercel also found that aggressive compression of documentation into an index format worked as well as providing full content, and that small wording changes in instructions produced dramatic behavioral shifts — revealing the fragility of active retrieval approaches.</p>
+<p>The team recommends generating an AGENTS.md documentation index using their codemod tool (<code>npx @next/codemod@canary agents-md</code>) and building evals targeting APIs outside training data to measure the real impact of documentation strategies.</p>
+<h2 id="key-insights">Key Insights</h2>
+<ul>
+<li><strong>Passive context beats active retrieval</strong>: Always-available documentation in AGENTS.md achieved 100% versus 79% max for skills-based retrieval</li>
+<li><strong>Agents fail to invoke skills</strong>: In 56% of eval cases, the skill was never invoked — agents do not reliably recognize when they need help</li>
+<li><strong>Instruction fragility</strong>: Small wording changes in skill instructions produced dramatic behavioral shifts, making active retrieval unreliable</li>
+<li><strong>Compression works</strong>: An 8KB compressed documentation index performed as well as full documentation content</li>
+<li><strong>Eval methodology matters</strong>: Testing against APIs outside training data reveals actual documentation impact versus memorized knowledge</li>
+</ul>
+<h2 id="notable-quotes">Notable Quotes</h2>
+<blockquote>
+<p>&ldquo;In 56% of eval cases, the skill was never invoked.&rdquo; — Vercel blog</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;Don&rsquo;t wait for skill improvements; results matter now.&rdquo; — Vercel blog</p>
+</blockquote>
+<h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
+<p>The discussion generated 520 points and 70 comments. Key themes:</p>
+<p><strong>Debate over whether this is genuinely new</strong></p>
+<ul>
+<li><strong>thorum</strong>: Argued that AGENTS.md is actually a simplified instance of the same concept as skills — telling the AI where to find instructions is itself a skill, just better designed</li>
+<li><strong>jgbuddy</strong>: Pointed out that directly including context in a system prompt will obviously put it in context 100% of the time, questioning the novelty of the finding</li>
+<li><strong>EnPissant</strong>: Found the distinction confusing since skills also provide short descriptions up front, wondering what specifically makes the AGENTS.md approach different</li>
+</ul>
+<p><strong>Practical improvements and extensions</strong></p>
+<ul>
+<li><strong>chr15m</strong>: Suggested going further than AGENTS.md by creating a .context folder with symlinked relevant documentation from dependencies</li>
+<li><strong>verdverm</strong>: Shared experience that mirrors these findings — using AGENTS.md as a table of contents and putting compressed docs everywhere works best</li>
+<li><strong>meatcar</strong>: Proposed distributing documentation alongside libraries as a dev dependency, version-locked and accessible locally</li>
+</ul>
+<p><strong>Concerns about methodology and fragility</strong></p>
+<ul>
+<li><strong>motoboi</strong>: Argued models are text generators forced to produce tool-triggering text, so skill invocation failure reflects the mismatch between generation and tool use</li>
+<li><strong>jryan49</strong>: Questioned whether tests were run once or multiple times, noting LLM inconsistency makes single-run evaluations unreliable</li>
+<li><strong>rao-v</strong>: Predicted that smaller, cheaper models optimized for routing queries to the right context will soon make this debate moot</li>
+</ul>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../sources/2026-01-24-claude-code-swarms.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Claude Code&#39;s New Hidden Feature: Swarms</span>
+        </a>
+        
+        
+        <a href="../sources/2026-01-30-ai-assistance-coding-skills.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">How AI assistance impacts the formation of coding skills</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#key-insights">Key Insights</a></li>
+    <li><a href="#notable-quotes">Notable Quotes</a></li>
+    <li><a href="#hn-discussion-highlights">HN Discussion Highlights</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

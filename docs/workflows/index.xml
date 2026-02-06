@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Workflows on AI Best Practices Knowledge Base</title>
+    <link>/workflows/index.html</link>
+    <description>Recent content in Workflows on AI Best Practices Knowledge Base</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/workflows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Daily Practice</title>
+      <link>/workflows/daily-practice.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/workflows/daily-practice.html</guid>
+      <description>&lt;p&gt;Using AI coding tools effectively is not about writing better prompts on any given day. It is about building habits that compound over weeks and months. This page distills the daily routines that experienced practitioners follow, drawn from &lt;a href=&#34;../sources/2026-01-26-karpathy-claude-coding-notes/&#34;&gt;Karpathy&amp;rsquo;s coding notes&lt;/a&gt;, &lt;a href=&#34;../sources/2026-01-04-llm-coding-workflow-2026/&#34;&gt;Addy Osmani&amp;rsquo;s LLM workflow&lt;/a&gt;, and patterns observed across the broader practitioner community.&lt;/p&gt;&#xA;&lt;h2 id=&#34;morning-setup&#34;&gt;Morning Setup&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Review your harness files.&lt;/strong&gt; Open your AGENTS.md or CLAUDE.md and scan for anything outdated. If you corrected the agent yesterday but did not document it, add the entry now. Remove rules that no longer apply. A stale harness teaches the agent outdated habits. See the &lt;a href=&#34;../workflows/agents-md-guide/&#34;&gt;AGENTS.md Guide&lt;/a&gt; for maintenance discipline.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Parallel Agent Coordination</title>
+      <link>/workflows/parallel-agents.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/workflows/parallel-agents.html</guid>
+      <description>&lt;p&gt;A single agent is often too slow for large projects. Running multiple agents in parallel is the obvious solution, but naive parallelism introduces failure modes that can waste more time and money than sequential work. This page covers when parallel agents help, when they hurt, and the coordination infrastructure that makes the difference.&lt;/p&gt;&#xA;&lt;p&gt;The strongest empirical evidence comes from Nicholas Carlini&amp;rsquo;s compiler project, where 16 parallel Claude instances produced 100,000 lines of working Rust compiler code over two weeks. The full case study is covered in &lt;a href=&#34;../deep-dives/parallel-compiler-lessons/&#34;&gt;What 100 Parallel Agents Taught Us&lt;/a&gt;. This page focuses on the reusable coordination patterns.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AGENTS.md Guide</title>
+      <link>/workflows/agents-md-guide.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/workflows/agents-md-guide.html</guid>
+      <description>&lt;p&gt;AGENTS.md and CLAUDE.md are project-root files that AI coding agents read at the start of every session. They give agents persistent, project-specific context that would otherwise be lost between conversations. Different tools use different filenames &amp;ndash; Claude Code reads CLAUDE.md, Amp reads AGENTS.md, and most tools now support both &amp;ndash; but the purpose is identical: tell the agent how to work in this codebase.&lt;/p&gt;&#xA;&lt;p&gt;This guide covers what to put in these files, how to maintain them, and the evaluation evidence showing why this approach works.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Vibe Coding Spectrum</title>
+      <link>/workflows/vibe-coding-spectrum.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/workflows/vibe-coding-spectrum.html</guid>
+      <description>&lt;p&gt;&amp;ldquo;Vibe coding&amp;rdquo; entered the vocabulary in early 2025, but practitioners quickly discovered that the term covered fundamentally different activities. David Bau&amp;rsquo;s influential article identified two distinct types, and the community debate that followed revealed a full spectrum of approaches between them. Understanding where you are on this spectrum &amp;ndash; and where you should be &amp;ndash; is one of the most consequential workflow decisions in AI-assisted development.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-two-types&#34;&gt;The Two Types&lt;/h2&gt;&#xA;&lt;p&gt;David Bau drew a line between two modes that both get called &amp;ldquo;vibe coding&amp;rdquo; but require entirely different infrastructure and mindset.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

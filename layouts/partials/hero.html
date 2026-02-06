@@ -5,12 +5,12 @@
     <p class="hero-description">{{ .Site.Params.description }}</p>
     <div class="hero-stats">
       <div class="hero-stat">
-        <span class="hero-stat-number">{{ add (len (where site.RegularPages "Section" "guides")) (len (where site.RegularPages "Section" "deep-dives")) }}</span>
-        <span class="hero-stat-label">Articles</span>
+        <span class="hero-stat-number">{{ len (where site.RegularPages "Section" "sources") }}</span>
+        <span class="hero-stat-label">Sources</span>
       </div>
       <div class="hero-stat">
-        <span class="hero-stat-number">{{ len (where site.RegularPages "Section" "patterns") }}</span>
-        <span class="hero-stat-label">Patterns</span>
+        <span class="hero-stat-number">{{ add (add (len (where site.RegularPages "Section" "skills")) (len (where site.RegularPages "Section" "workflows"))) (add (len (where site.RegularPages "Section" "tools")) (len (where site.RegularPages "Section" "landscape"))) }}</span>
+        <span class="hero-stat-label">Articles</span>
       </div>
       <div class="hero-stat">
         <span class="hero-stat-number">{{ len site.Taxonomies.tags }}</span>
@@ -18,8 +18,8 @@
       </div>
     </div>
     <div class="hero-actions">
-      <a href="{{ with site.GetPage "/guides/getting-started" }}{{ .RelPermalink }}{{ end }}" class="btn btn-primary">Start Here</a>
-      <a href="{{ with site.GetPage "/patterns" }}{{ .RelPermalink }}{{ end }}" class="btn btn-secondary">View Patterns</a>
+      {{ with site.GetPage "/start-here" }}<a href="{{ .RelPermalink }}" class="btn btn-primary">Start Here</a>{{ end }}
+      {{ with site.GetPage "/skills" }}<a href="{{ .RelPermalink }}" class="btn btn-secondary">Core Skills</a>{{ end }}
     </div>
   </div>
 </section>

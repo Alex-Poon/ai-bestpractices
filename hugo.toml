@@ -9,7 +9,7 @@ publishDir = "docs"
   tag = "tags"
 
 [params]
-  description = "What the best practitioners know about AI-assisted software development."
+  description = "What the best practitioners know about AI-assisted software development — synthesized from 35+ HN discussions and practitioner articles."
   author = "AI Best Practices Knowledge Base"
 
 [markup]
@@ -20,3 +20,11 @@ publishDir = "docs"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[outputFormats.JSON]
+  mediaType = "application/json"
+  baseName = "search-index"
+  isPlainText = true

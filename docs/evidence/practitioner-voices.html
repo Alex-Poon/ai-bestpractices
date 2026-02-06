@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Practitioner Voices | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="What developers actually say — curated insights from Hacker News discussions.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Practitioner Voices">
+  <meta property="og:description" content="What developers actually say — curated insights from Hacker News discussions.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-evidence"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../evidence/index.html">Evidence &amp; Case Studies</a></li>
+      
+    
+    <li aria-current="page">Practitioner Voices</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Practitioner Voices</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">4 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/community-discussion.html" class="tag-pill">community-discussion</a>
+  
+  
+  
+  
+  <a href="../tags/practitioner-insights.html" class="tag-pill">practitioner-insights</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <p>The best evidence for how AI coding tools actually perform comes not from marketing materials or press releases but from practitioners reporting concrete experiences. The following quotes and observations are drawn from Hacker News discussions that collectively represent thousands of upvotes and hundreds of comments from working developers.</p>
+<p>Each entry is attributed to its original author and linked to the source discussion. Longer sentiments have been paraphrased to capture the core insight.</p>
+<hr>
+<h2 id="on-productivity-gains">On productivity gains</h2>
+<p><strong>markb139</strong> built a disassembler, assembler, and partial emulator for Intel 8096 firmware in two weeks using Claude &ndash; work that would have taken months manually.
+<a href="../sources/2026-01-26-karpathy-claude-coding-notes.html">Source</a></p>
+<p><strong>jedberg</strong> connected Karpathy&rsquo;s tenacity observation to research showing grit correlates more with success than intelligence, suggesting AI may outperform humans simply by never quitting.
+<a href="../sources/2026-01-26-karpathy-claude-coding-notes.html">Source</a></p>
+<p><strong>EastLondonCoder</strong> shipped four real projects using agent-assisted tight feedback loops, including a ticketing system with real users and a git-like tool for media projects.
+<a href="../deep-dives/practitioner-consensus.html">Source</a></p>
+<p><strong>joshmlewis</strong> described building an enterprise agentic loop processing over a billion tokens monthly, noting that small production details compound complexity enormously.
+<a href="../sources/2026-01-08-claude-code-200-lines.html">Source</a></p>
+<hr>
+<h2 id="on-skill-atrophy-concerns">On skill atrophy concerns</h2>
+<p><strong>daxfohl</strong> described experiencing not just atrophy but complacency &ndash; AI constantly pulls code toward its preferred patterns, leading to projects that drift from the developer&rsquo;s vision.
+<a href="../sources/2026-01-26-karpathy-claude-coding-notes.html">Source</a></p>
+<p><strong>postalcoder</strong> observed that older models left developers doing 30% of tough work themselves, but current models are too capable, removing the productive struggle that builds intuition.
+<a href="../sources/2026-01-30-ai-assistance-coding-skills.html">Source</a></p>
+<p><strong>gergo_b</strong> found that returning to AI-written code after a week or two is much harder to understand compared to code you wrote yourself.
+<a href="../sources/2026-01-30-ai-assistance-coding-skills.html">Source</a></p>
+<p><strong>FitchApps</strong> raised the scenario of agents being unavailable during a midnight production incident, arguing developers risk becoming gatekeepers unable to debug their own systems.
+<a href="../sources/2026-01-30-ai-assistance-coding-skills.html">Source</a></p>
+<p><strong>Ronsenshi</strong> compared coding skill retention to language learning &ndash; skills degrade without active use regardless of past proficiency.
+<a href="../sources/2026-01-30-ai-assistance-coding-skills.html">Source</a></p>
+<hr>
+<h2 id="on-tool-comparisons-and-architecture">On tool comparisons and architecture</h2>
+<p><strong>tptacek</strong> observed that the realistic questions about competing with Claude Code boil down to things any proficient developer could build, while the real competitive moat is in the model itself.
+<a href="../sources/2026-01-08-claude-code-200-lines.html">Source</a></p>
+<p><strong>miki123211</strong> argued that a coding agent needs only 50 lines and one tool &ndash; bash &ndash; since bash can do everything else.
+<a href="../sources/2026-01-08-claude-code-200-lines.html">Source</a></p>
+<p><strong>verdverm</strong> shared that using AGENTS.md as a table of contents with compressed documentation throughout the project worked best in practice.
+<a href="../sources/2026-01-29-agents-md-outperforms-skills.html">Source</a></p>
+<p><strong>jwilliams</strong> noted Sonnet will modify every file in a codebase chasing a type error, while Opus is better at avoiding rabbit holes.
+<a href="../sources/2026-01-26-karpathy-claude-coding-notes.html">Source</a></p>
+<p><strong>mirzap</strong> compared the 200-line agent loop to saying a database is just a B-tree &ndash; technically true but operationally incomplete.
+<a href="../sources/2026-01-08-claude-code-200-lines.html">Source</a></p>
+<hr>
+<h2 id="on-cost-and-reliability">On cost and reliability</h2>
+<p><strong>renegade-otter</strong> warned that AI results are not repeatable and that current pricing is subsidized and unsustainable.
+<a href="../sources/2026-01-08-ai-coding-getting-worse.html">Source</a></p>
+<p><strong>JoshuaDavid</strong> reported spending around $190 per month on AI coding tools.
+<a href="../deep-dives/practitioner-consensus.html">Source</a></p>
+<p><strong>latchkey</strong> described a multi-tool stack implying $175-325 in monthly AI expenses.
+<a href="../deep-dives/practitioner-consensus.html">Source</a></p>
+<p><strong>Kuinox</strong> speculated that providers may dynamically serve smaller models during usage spikes, explaining perceived quality inconsistency.
+<a href="../sources/2026-01-08-ai-coding-getting-worse.html">Source</a></p>
+<p><strong>kristopolous</strong> reported abandoning AI coding tools entirely after being burned too many times, now using them only as an interactive search tool.
+<a href="../sources/2026-01-08-ai-coding-getting-worse.html">Source</a></p>
+<p><strong>siliconc0w</strong> noted that non-significant speed gains in the Anthropic study align with other findings that AI creates the perception of working faster without matching reality.
+<a href="../sources/2026-01-30-ai-assistance-coding-skills.html">Source</a></p>
+<hr>
+<h2 id="on-the-future">On the future</h2>
+<p><strong>CashWasabi</strong> raised concern about what happens when AI degrades the information sources it was trained on &ndash; if Stack Overflow and open-source quality decline, models may cannibalize themselves.
+<a href="../sources/2026-01-08-ai-coding-getting-worse.html">Source</a></p>
+<p><strong>tux1968</strong> argued that if AI tools require expert skill to use effectively, their broad applicability is fundamentally limited &ndash; making them specialized instruments, not universal multipliers.
+<a href="../deep-dives/practitioner-consensus.html">Source</a></p>
+<p><strong>nyrikki</strong> explained how training feedback loops are flawed &ndash; experienced users accept suggestions then heavily edit them, which looks like approval in the training data.
+<a href="../sources/2026-01-08-ai-coding-getting-worse.html">Source</a></p>
+<p><strong>atonse</strong> identified as a builder who codes for outcomes rather than craft, predicting this distinction will define how different developers react to AI tools long-term.
+<a href="../sources/2026-01-26-karpathy-claude-coding-notes.html">Source</a></p>
+<p><strong>underdeserver</strong> noted that the capabilities agents require &ndash; file access, code execution, HTTP requests &ndash; are what security researchers call a prompt injection risk trifecta.
+<a href="../deep-dives/practitioner-consensus.html">Source</a></p>
+<p><strong>strogonoff</strong> questioned whether AI truly saves time given review overhead, arguing that after sufficient experience, coding is overwhelmingly architecture work anyway.
+<a href="../sources/2026-01-26-karpathy-claude-coding-notes.html">Source</a></p>
+<hr>
+<h2 id="reading-the-evidence">Reading the evidence</h2>
+<p>These voices represent a community that is neither uniformly enthusiastic nor uniformly skeptical. The emerging picture is one of genuine utility bounded by real limitations, meaningful productivity gains for some workflows alongside skill development concerns, and a cost structure that most adoption narratives conveniently omit.</p>
+<p>For the synthesized analysis behind these voices, see <a href="../deep-dives/practitioner-consensus.html">What Practitioners Actually Think About AI Coding</a>. For the controlled study on skill development, see the <a href="../sources/2026-01-30-ai-assistance-coding-skills.html">Anthropic research coverage</a>.</p>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        
+        <a href="../evidence/hashimoto-journey.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Case Study: Hashimoto&#39;s AI Adoption Journey</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#on-productivity-gains">On productivity gains</a></li>
+    <li><a href="#on-skill-atrophy-concerns">On skill atrophy concerns</a></li>
+    <li><a href="#on-tool-comparisons-and-architecture">On tool comparisons and architecture</a></li>
+    <li><a href="#on-cost-and-reliability">On cost and reliability</a></li>
+    <li><a href="#on-the-future">On the future</a></li>
+    <li><a href="#reading-the-evidence">Reading the evidence</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

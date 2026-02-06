@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily Practice | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="A practical daily checklist for AI-assisted development.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Daily Practice">
+  <meta property="og:description" content="A practical daily checklist for AI-assisted development.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-workflows"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../workflows/index.html">Workflows</a></li>
+      
+    
+    <li aria-current="page">Daily Practice</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Daily Practice</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">6 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/workflow.html" class="tag-pill">workflow</a>
+  
+  
+  
+  
+  <a href="../tags/checklist.html" class="tag-pill">checklist</a>
+  
+  
+  
+  
+  <a href="../tags/daily-practice.html" class="tag-pill">daily-practice</a>
+  
+  
+  
+  
+  <a href="../tags/productivity.html" class="tag-pill">productivity</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <p>Using AI coding tools effectively is not about writing better prompts on any given day. It is about building habits that compound over weeks and months. This page distills the daily routines that experienced practitioners follow, drawn from <a href="../sources/2026-01-26-karpathy-claude-coding-notes/">Karpathy&rsquo;s coding notes</a>, <a href="../sources/2026-01-04-llm-coding-workflow-2026/">Addy Osmani&rsquo;s LLM workflow</a>, and patterns observed across the broader practitioner community.</p>
+<h2 id="morning-setup">Morning Setup</h2>
+<p><strong>Review your harness files.</strong> Open your AGENTS.md or CLAUDE.md and scan for anything outdated. If you corrected the agent yesterday but did not document it, add the entry now. Remove rules that no longer apply. A stale harness teaches the agent outdated habits. See the <a href="../workflows/agents-md-guide/">AGENTS.md Guide</a> for maintenance discipline.</p>
+<p><strong>Identify 2-3 tasks for delegation.</strong> Good delegation targets have clear scope and verifiable output. If you cannot describe what &ldquo;done&rdquo; looks like in two sentences, the task is not ready. Osmani&rsquo;s workflow emphasizes planning before coding &ndash; spending even fifteen minutes on specification prevents wasted cycles downstream.</p>
+<p><strong>Check overnight results.</strong> If you launched research or exploration agents at end of day, review the output now while context is fresh. Overnight tasks should be informational &ndash; investigation, documentation review, issue triage &ndash; not code destined for production without human review.</p>
+<h2 id="during-work">During Work</h2>
+<h3 id="plan-first-delegate-implementation">Plan First, Delegate Implementation</h3>
+<p>The design is your job. The typing is the agent&rsquo;s job. Karpathy observed that AI-assisted coding creates a natural split between architects and implementers &ndash; even when the same person fills both roles. Write the spec or plan yourself. Let the agent handle implementation within the constraints you define. If you find the agent making structural decisions, stop and reclaim the planning step.</p>
+<p>Osmani describes this as iterative chunking: break work into small pieces, process one feature at a time, and maintain context between steps. Monolithic requests produce impressive-looking output that is subtly wrong in ways you discover too late.</p>
+<h3 id="the-two-minute-verification-rule">The Two-Minute Verification Rule</h3>
+<p>After each delegated task, ask: can I verify this output in under two minutes? If not, the task was scoped too broadly. Break it down further before proceeding. This threshold exists because beyond two minutes, most developers start skimming rather than reading &ndash; and skimmed review is how drift accumulates undetected.</p>
+<p>Review diffs incrementally. Do not let multiple agent changes accumulate without verification. Each change should be reviewed and confirmed before you move to the next task. See <a href="../skills/verification/">Verification</a> for techniques that make review efficient.</p>
+<h3 id="document-mistakes-immediately">Document Mistakes Immediately</h3>
+<p>When the agent makes a mistake, add an entry to your AGENTS.md before moving on. This takes thirty seconds and prevents hours of future re-correction. The best entries follow the pattern: &ldquo;When doing X, always Y, because Z.&rdquo; The &ldquo;because&rdquo; clause helps the agent generalize rather than memorize.</p>
+<p>If you find yourself explaining the same constraint for the third time across sessions, it belongs in the harness file. You are burning time on repetition instead of building persistent infrastructure.</p>
+<h3 id="control-your-attention">Control Your Attention</h3>
+<p>Karpathy noted that agent tenacity &ndash; the ability to work through problems without tiring &ndash; is a genuine advantage. But it becomes a disadvantage if the agent&rsquo;s output stream controls your attention. Disable notifications. Check results on your schedule, not the agent&rsquo;s. The agent works for you, not the other way around.</p>
+<p>If you are context-switching every time the agent produces output, you are losing more productivity to interruption than you are gaining from delegation.</p>
+<h2 id="when-to-use-ai-vs-code-manually">When to Use AI vs. Code Manually</h2>
+<p>Not every task benefits from delegation. The decision depends on task characteristics, not on whether AI could technically do it.</p>
+<p><strong>Delegate when:</strong></p>
+<ul>
+<li>The task is well-defined with clear acceptance criteria</li>
+<li>The output is mechanically verifiable (tests pass, linter is clean, output matches spec)</li>
+<li>The task involves boilerplate, repetition, or straightforward implementation of a known pattern</li>
+<li>You need to explore multiple approaches quickly</li>
+</ul>
+<p><strong>Code manually when:</strong></p>
+<ul>
+<li>The task requires architectural judgment or design decisions</li>
+<li>You are learning a new domain and need to build understanding</li>
+<li>The task involves subtle constraints the agent is unlikely to infer</li>
+<li>The verification cost would exceed the implementation cost</li>
+<li>The code touches security-critical paths where subtle errors have outsized consequences</li>
+</ul>
+<p>Karpathy raised an important nuance: skill atrophy is real. Code writing fluency degrades with heavy AI use, even as review abilities persist. Some practitioners deliberately code certain tasks manually to maintain their skills, treating it as investment in their own capabilities rather than lost productivity.</p>
+<h2 id="end-of-day">End of Day</h2>
+<p><strong>Launch overnight tasks.</strong> Good candidates are informational: investigating a bug, summarizing documentation, exploring library options, triaging open issues. These should produce research output you review tomorrow, not code that gets merged unreviewed.</p>
+<p><strong>Queue tomorrow&rsquo;s delegation targets.</strong> Identify tasks that are clearly well-scoped and likely to succeed. Having these ready means tomorrow starts productively instead of with a scoping exercise.</p>
+<p><strong>Update your harness file.</strong> End-of-day is the second-best time to document patterns and mistakes (immediately is best, but a daily sweep catches what you missed during the day).</p>
+<h2 id="weekly-review">Weekly Review</h2>
+<p><strong>Refine your AGENTS.md.</strong> Remove outdated entries. Consolidate entries that address the same issue. The harness should be concise and scannable, not a sprawling document. If it exceeds roughly 200 lines, consider splitting it into directory-level files.</p>
+<p><strong>Assess your delegation frontier.</strong> What types of tasks consistently succeed? Which consistently fail? Build a model of the agent&rsquo;s reliability boundary. Expand delegation into areas of consistent success. Pull back from areas of consistent failure.</p>
+<p><strong>Build tools for repeated failures.</strong> If you have seen the same agent failure three or more times, documentation alone may not fix it. A purpose-built tool (filtered test runner, output formatter, context assembler) may be warranted. See <a href="../patterns/harness-engineering/">Harness Engineering</a> for design principles.</p>
+<p><strong>Check costs.</strong> Are you getting value proportional to spend? If you are on a usage-based plan, review the past week&rsquo;s spending. Osmani&rsquo;s workflow emphasizes multi-model pragmatism &ndash; sometimes switching to a cheaper model for routine tasks delivers better cost-efficiency than using the most capable model for everything.</p>
+<h2 id="signs-of-healthy-practice">Signs of Healthy Practice</h2>
+<ul>
+<li>You spend more time reading and verifying than writing prompts. The bottleneck has shifted from generation to verification.</li>
+<li>Your AGENTS.md grows steadily &ndash; not explosively (too many mistakes) and not stagnating (not documenting).</li>
+<li>Agent mistakes are new mistakes, not repeated ones. The harness is working.</li>
+<li>You have a backlog of tasks ready for delegation. You are not scrambling to find work for the agent.</li>
+<li>You control your attention. The agent does not interrupt you.</li>
+</ul>
+<h2 id="signs-of-unhealthy-practice">Signs of Unhealthy Practice</h2>
+<ul>
+<li>You hand the agent giant tasks with vague goals. The output looks impressive but is subtly wrong.</li>
+<li>You re-explain the same constraints every session. The harness file is not being maintained.</li>
+<li>You approve diffs without reading them. Accumulated drift compounds into serious problems.</li>
+<li>The agent drives your attention. Your workflow is reactive instead of deliberate.</li>
+<li>You do not know your monthly AI spend.</li>
+</ul>
+<h2 id="sources">Sources</h2>
+<ul>
+<li><a href="../sources/2026-01-26-karpathy-claude-coding-notes/">Karpathy&rsquo;s Claude Coding Notes</a> &ndash; Observations on skill atrophy, agent tenacity, and the builder/coder split</li>
+<li><a href="../sources/2026-01-04-llm-coding-workflow-2026/">My LLM Coding Workflow Going into 2026</a> &ndash; Osmani&rsquo;s structured approach to planning, chunking, and multi-model usage</li>
+<li><a href="../references/daily-workflow-checklist/">Daily Workflow Checklist</a> &ndash; The condensed checklist version of this guide</li>
+</ul>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../workflows/parallel-agents.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Parallel Agent Coordination</span>
+        </a>
+        
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#morning-setup">Morning Setup</a></li>
+    <li><a href="#during-work">During Work</a>
+      <ul>
+        <li><a href="#plan-first-delegate-implementation">Plan First, Delegate Implementation</a></li>
+        <li><a href="#the-two-minute-verification-rule">The Two-Minute Verification Rule</a></li>
+        <li><a href="#document-mistakes-immediately">Document Mistakes Immediately</a></li>
+        <li><a href="#control-your-attention">Control Your Attention</a></li>
+      </ul>
+    </li>
+    <li><a href="#when-to-use-ai-vs-code-manually">When to Use AI vs. Code Manually</a></li>
+    <li><a href="#end-of-day">End of Day</a></li>
+    <li><a href="#weekly-review">Weekly Review</a></li>
+    <li><a href="#signs-of-healthy-practice">Signs of Healthy Practice</a></li>
+    <li><a href="#signs-of-unhealthy-practice">Signs of Unhealthy Practice</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

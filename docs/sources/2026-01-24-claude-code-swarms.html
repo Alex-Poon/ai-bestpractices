@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claude Code&#39;s New Hidden Feature: Swarms | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Claude Code&#39;s New Hidden Feature: Swarms">
+  <meta property="og:description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-sources"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../sources/index.html">Sources</a></li>
+      
+    
+    <li aria-current="page">Claude Code&#39;s New Hidden Feature: Swarms</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Claude Code&#39;s New Hidden Feature: Swarms</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-01-24">
+    January 24, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">3 min read</span>
+
+  
+  <span class="tier-badge tier-badge--1">Tier 1</span>
+  
+
+  <div class="meta-links">
+    
+    <a href="https://twitter.com/NicerInPerson/status/2014989679796347375" class="meta-link" target="_blank" rel="noopener">Source &#8599;</a>
+    
+    
+    
+    <a href="https://news.ycombinator.com/item?id=46743908" class="meta-link" target="_blank" rel="noopener">HN &#8599;</a>
+    
+    
+  </div>
+
+  
+  <span class="meta-stat">521 points</span>
+  
+  
+  
+  <span class="meta-stat">47 comments</span>
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/claude-code.html" class="tag-pill">claude-code</a>
+  
+  
+  
+  
+  <a href="../tags/multi-agent.html" class="tag-pill">multi-agent</a>
+  
+  
+  
+  
+  <a href="../tags/swarms.html" class="tag-pill">swarms</a>
+  
+  
+  
+  
+  <a href="../tags/agent-workflows.html" class="tag-pill">agent-workflows</a>
+  
+  
+  
+  
+  <a href="../tags/harness-engineering.html" class="tag-pill">harness-engineering</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <h2 id="summary">Summary</h2>
+<p>A tweet by @NicerInPerson revealed that Claude Code contains hidden multi-agent orchestration capabilities, colloquially referred to as &ldquo;swarms.&rdquo; The discovery, corroborated by a GitHub repository (claude-sneakpeek by mikekelly), showed that Anthropic had built native sub-agent coordination features including a TeammateTool, delegate mode for spawning background agents, and a team coordination system with messaging and task ownership. Rather than relying on third-party orchestration frameworks, these capabilities are built directly into Claude Code but gated behind feature flags not yet available in general release.</p>
+<p>The swarm architecture positions Claude Code not as a single agent but as a potential &ldquo;team lead&rdquo; that can plan work, delegate tasks to specialized sub-agents, and synthesize results. Each sub-agent operates with its own context window, enabling parallel execution of independent tasks. The sneakpeek repository provides an installation method to access these features through an isolated instance that does not interfere with a user&rsquo;s primary Claude Code installation.</p>
+<p>This revelation sparked significant discussion about whether multi-agent coordination represents a genuine productivity improvement or simply a mechanism for increased token consumption. The discovery also highlighted the growing trend of AI tool providers building orchestration layers directly into their products rather than leaving it to external frameworks.</p>
+<h2 id="key-insights">Key Insights</h2>
+<ul>
+<li><strong>Native multi-agent orchestration</strong>: Claude Code has built-in TeammateTool, delegate mode, and team coordination with messaging and task ownership — no external frameworks needed</li>
+<li><strong>Team lead architecture</strong>: The swarm model positions the primary agent as a coordinator that plans, delegates, and synthesizes rather than writing code directly</li>
+<li><strong>Feature-flagged release strategy</strong>: Anthropic is developing these capabilities internally before public release, suggesting careful testing of multi-agent reliability</li>
+<li><strong>Context isolation</strong>: Each sub-agent gets its own context window, preventing degradation that comes from overloading a single agent&rsquo;s memory</li>
+</ul>
+<h2 id="notable-quotes">Notable Quotes</h2>
+<blockquote>
+<p>&ldquo;You&rsquo;re not talking to an AI coder anymore. You&rsquo;re talking to a team lead.&rdquo; — @NicerInPerson</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;Native multi-agent orchestration with TeammateTool&rdquo; — claude-sneakpeek docs</p>
+</blockquote>
+<h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
+<p>The discussion generated 521 points and 47 comments. Key themes:</p>
+<p><strong>Skepticism about multi-agent value</strong></p>
+<ul>
+<li><strong>czhu12</strong>: Expressed concern that swarms generate copious code that becomes harder to review, undermining quality assurance</li>
+<li><strong>replwoacause</strong>: Preferred working with a single agent through its CLI where progress can be followed and understood, seeing little upside to swarms</li>
+<li><strong>daxfohl</strong>: Wanted better quality code rather than more code, and more proactive human feedback before agents go off the rails</li>
+</ul>
+<p><strong>Practical experiences with sub-agents</strong></p>
+<ul>
+<li><strong>mafriese</strong>: Reported getting the best code quality by running a full &ldquo;project team&rdquo; of sub-agents managed by a single Opus instance, though at roughly 10x the cost</li>
+<li><strong>joshribakoff</strong>: Argued this is simply built-in sub-agents and that you do not need massive external orchestration frameworks — just tell Claude to work in parallel</li>
+</ul>
+<p><strong>Concerns about token economics</strong></p>
+<ul>
+<li><strong>nehalem</strong>: Suggested swarms answer the question of how to sell more tokens per customer while maintaining results</li>
+<li><strong>lysace</strong>: Already burning through enough tokens with one worker and producing more code than can be maintained</li>
+<li><strong>joshuaisaact</strong>: Characterized the swarm paradigm as function scoping and memory management cosplaying as an org chart</li>
+</ul>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../sources/2026-01-06-opus-4-5-agent-experience.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Opus 4.5 is not the normal AI agent experience</span>
+        </a>
+        
+        
+        <a href="../sources/2026-01-29-agents-md-outperforms-skills.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">AGENTS.md Outperforms Skills in Our Agent Evals</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

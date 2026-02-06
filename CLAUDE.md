@@ -10,27 +10,25 @@ This repository consolidates articles, insights, and practical advice on using A
 
 ## Structure
 
-The repo has two layers: **source** (full-fidelity captures) and **analysis** (practical takeaways).
+The repo has three layers: **sources** (full-fidelity captures), **synthesis** (practical takeaways), and **theme-driven content** (skills, tools, workflows, etc).
 
-### Source Layer (`content/articles/`)
-Full-fidelity captures of articles and discussions, organized by type:
-- `content/articles/tools/` — Product reviews and tool comparisons (Amp, Claude Code, Cursor, etc.)
-- `content/articles/workflows/` — Development workflows and integration patterns
-- `content/articles/discussions/` — HN and community discussions with attributed quotes
-- `content/articles/prompting/` — Prompt engineering and interaction patterns
-- `content/articles/coding/` — AI-assisted coding practices
-- `content/articles/pitfalls/` — Common mistakes and antipatterns
-- `content/articles/evaluation/` — Testing, benchmarking, and evaluating AI outputs
+### Source Layer (`content/sources/`)
+Full-fidelity captures of 32+ HN articles and discussions. Each file contains:
+- Article summary (in original words, respecting copyright)
+- Key insights extracted
+- Notable short quotes (under 15 words)
+- HN discussion highlights with username attribution
 
-### Analysis Layer (`content/analysis/`)
-Synthesized insights and practical takeaways:
-- `content/analysis/synthesis/` — Cross-source synthesis documents
-- `content/analysis/patterns/` — Reusable pattern cards (problem → solution → anti-patterns → sources)
-- `content/analysis/checklists/` — Practical daily/weekly checklists
+### Theme-Driven Content
+- `content/start-here/` — Getting started guide and core loop framework
+- `content/skills/` — The 4 core skills: task-scoping, harness-engineering, verification, model-selection
+- `content/tools/` — Tool landscape: Claude Code, Cursor, Amp, Copilot, MCP ecosystem
+- `content/workflows/` — How people actually work: daily practice, parallel agents, AGENTS.md, vibe coding spectrum
+- `content/landscape/` — State of AI in 2026: model releases, adoption, costs, open questions
+- `content/evidence/` — Case studies and curated practitioner voices
 
-### Metadata
-- `sources.md` — Master list of all source URLs with dates and HN discussion links
-- `content/summaries/` — One-pager distillations of key articles
+### Synthesis Layer (`content/synthesis/`)
+- `state-of-practice-feb-2026.md` — Mega-synthesis connecting all sources
 
 ### Static Site (`docs/`)
 Hugo-generated static site. Rebuilt by running `hugo` at the project root.
@@ -39,22 +37,21 @@ Hugo-generated static site. Rebuilt by running `hugo` at the project root.
 
 - When adding an article, always record the source URL and date in `sources.md`
 - Article files should be named: `YYYY-MM-DD-short-slug.md`
-- Each article file should have a YAML-style header with: title, source URL, HN link (if any), date, and tags
+- Each article file should have YAML frontmatter with: title, source_url, hn_url, date, hn_points, hn_comment_count, tags, tier
 - Tags use lowercase kebab-case (e.g., `prompt-engineering`, `code-review`, `agent-workflows`)
-- Pattern cards follow the format: Problem → Solution → Mental Model → Anti-patterns → Key Indicators → Techniques → Sources
 - HN discussion captures should preserve attribution (username) for all quotes
+- Keep direct quotes under 15 words to respect copyright
+- Site uses dark mode by default with light mode toggle
 
 ## Adding Content
 
 To add a new article, provide the URL (and optionally the HN discussion link). Claude will:
 1. Fetch and read the article
-2. Create a full-fidelity source capture in the appropriate `content/articles/` subdirectory
-3. Create or update relevant `content/analysis/` files (synthesis, patterns, checklists)
+2. Create a source capture in `content/sources/`
+3. Update relevant theme-driven content pages
 4. Add the source to `sources.md`
 5. Run `hugo` to rebuild the static site into `docs/`
 6. Commit the changes (markdown + docs/)
-
-When using subagent teams, parallelize: one agent per source file, one agent for analysis layer.
 
 ## Key Topics of Interest
 
@@ -68,3 +65,11 @@ When using subagent teams, parallelize: one agent per source file, one agent for
 - Team adoption strategies
 - Harness engineering (AGENTS.md, custom tooling)
 - Task scoping for agent delegation
+
+## Technical Stack
+
+- **Hugo** static site generator with custom layouts
+- **Inter** font via Google Fonts
+- **Client-side search** via search-index.json (no external dependencies)
+- **Dark mode by default** with localStorage preference
+- **Section-colored design** — each section has its own accent color

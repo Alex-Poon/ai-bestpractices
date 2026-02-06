@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Meta-Cognition on AI Best Practices Knowledge Base</title>
+    <link>/tags/meta-cognition.html</link>
+    <description>Recent content in Meta-Cognition on AI Best Practices Knowledge Base</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/meta-cognition/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Two Kinds of Vibe Coding</title>
+      <link>/sources/2025-12-18-two-kinds-vibe-coding.html</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>/sources/2025-12-18-two-kinds-vibe-coding.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;David Bau distinguishes between two fundamentally different approaches to what has broadly been called &amp;ldquo;vibe coding.&amp;rdquo; The first type involves delegating small tasks to an LLM while the human programmer remains fully informed and in control, reviewing each piece of work and making all key decisions. The second type involves surrendering cognitive control to an AI agent, allowing it to build towers of complexity that go beyond what the developer has time to understand in detail.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claude Code Deep Dive | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="Swarms, LSP support, AGENTS.md, benchmarks — everything practitioners need to know.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Claude Code Deep Dive">
+  <meta property="og:description" content="Swarms, LSP support, AGENTS.md, benchmarks — everything practitioners need to know.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-tools"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
+      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
+      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../tools/index.html">Tool Landscape</a></li>
+      
+    
+    <li aria-current="page">Claude Code Deep Dive</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Claude Code Deep Dive</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">6 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/claude-code.html" class="tag-pill">claude-code</a>
+  
+  
+  
+  
+  <a href="../tags/agent-workflows.html" class="tag-pill">agent-workflows</a>
+  
+  
+  
+  
+  <a href="../tags/swarms.html" class="tag-pill">swarms</a>
+  
+  
+  
+  
+  <a href="../tags/harness-engineering.html" class="tag-pill">harness-engineering</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <p>Claude Code is Anthropic&rsquo;s CLI-first coding agent. It runs in the terminal, takes natural language task descriptions, and executes autonomously &ndash; reading files, running commands, editing code, and iterating on failures. It is single-model (Anthropic&rsquo;s Claude family), available through Claude Max subscriptions at $100-200/month, and focused entirely on agentic workflows with no autocomplete mode.</p>
+<p>What sets Claude Code apart from other agents is its extensibility. It supports CLAUDE.md project files, custom sub-agents, hooks for CI/CD integration, and MCP servers for structured tool access. This page covers the major features and developments that matter to practitioners.</p>
+<h2 id="swarms-multi-agent-orchestration">Swarms: Multi-Agent Orchestration</h2>
+<p>In January 2026, the community discovered that Claude Code contains built-in multi-agent orchestration capabilities. The architecture positions the primary agent as a team lead that can plan work, delegate tasks to specialized sub-agents, and synthesize results. Each sub-agent operates with its own context window, enabling parallel execution of independent tasks.</p>
+<p>The feature includes a TeammateTool, delegate mode for spawning background agents, and a team coordination system with messaging and task ownership. As of the Opus 4.6 release, agent teams became an official research preview in Claude Code 2.1.32, requiring an experimental flag to enable.</p>
+<p>Practitioner reception has been mixed. Some report strong results &ndash; one user described running a full project team of sub-agents managed by a single Opus instance, achieving the best code quality though at roughly 10x the cost. Others express skepticism. Common concerns include the volume of generated code becoming harder to review, and the economics of running multiple LLM agents simultaneously.</p>
+<p>The core tension is whether multi-agent coordination genuinely improves output quality or primarily increases token consumption. One HN commenter characterized the approach as &ldquo;function scoping and memory management cosplaying as an org chart.&rdquo; Another argued the architecture is simply built-in sub-agents and that massive external orchestration frameworks were never needed.</p>
+<p>For more detail on the swarm discovery and community reaction, see the <a href="../sources/2026-01-24-claude-code-swarms.html">source capture</a>.</p>
+<h2 id="agentsmd-and-claudemd">AGENTS.md and CLAUDE.md</h2>
+<p>Claude Code reads CLAUDE.md files from the project root at the start of every session, giving the agent persistent, project-specific context. This approach &ndash; embedding documentation directly in the system prompt &ndash; has proven highly effective.</p>
+<p>Vercel&rsquo;s evaluation found that passive context in AGENTS.md files achieved a 100% pass rate on tasks involving APIs outside the model&rsquo;s training data, compared to a maximum of 79% for active retrieval approaches (skills). The reason: in over half of test cases, the agent simply failed to invoke its retrieval tools when it should have. Passive context eliminates this decision point entirely.</p>
+<p>The practical implication is clear: invest in your CLAUDE.md file. Document build commands, architecture constraints, coding conventions, and known pitfalls. Start sparse and add entries as you encounter real issues. The file compounds in value over time &ndash; each documented correction prevents the same mistake from recurring in future sessions.</p>
+<p>For a practical template and maintenance guide, see the <a href="../references/agents-md-guide.html">AGENTS.md / CLAUDE.md Guide</a>. For Vercel&rsquo;s evaluation details, see the <a href="../sources/2026-01-29-agents-md-outperforms-skills.html">source capture</a>.</p>
+<h2 id="native-lsp-support">Native LSP Support</h2>
+<p>In December 2025, Claude Code added native Language Server Protocol (LSP) support, giving the CLI-based agent access to the same code intelligence that powers IDE features: type definitions, references, diagnostics, and navigation.</p>
+<p>This is significant because a recurring criticism of CLI-first agents was that IDE-based tools like Cursor get language intelligence for free. LSP support narrows that gap. The feature works through a plugin system accessible via the <code>/plugin</code> command, with a Discover tab for searching and installing LSP integrations.</p>
+<p>The initial rollout had limitations. The TypeScript LSP lacked diagnostics for real-time errors and warnings, still requiring separate linter or compiler runs. A subsequent version introduced a regression that broke LSP functionality entirely. The community directory at claude-plugins.dev tracks available plugins and their status.</p>
+<p>The broader significance is philosophical. As one commenter observed, LLMs waste tokens doing work that deterministic tools handle better. LSP provides precise, structured information about code &ndash; the kind of analysis where deterministic tools outperform probabilistic reasoning. Combining both yields better results than either alone.</p>
+<p>For the full discussion on the CLI vs IDE debate, see the <a href="../sources/2025-12-22-claude-code-lsp-support.html">source capture</a>.</p>
+<h2 id="benchmark-tracking-and-reliability">Benchmark Tracking and Reliability</h2>
+<p>Community trust in AI coding tools depends on consistent performance. MarginLab launched a daily benchmark tracker for Claude Code that runs 50 SWE-Bench-Pro evaluations per day and aggregates results over 7-day and 30-day windows.</p>
+<p>The tracker provides the first systematic data on what many users had reported anecdotally: performance fluctuations. At the time of its launch, the tracker showed statistically significant degradation at both the 7-day and 30-day timeframes compared to the historical baseline. A member of the Claude Code team responded publicly, confirming a harness bug that was introduced and then rolled back, providing a concrete explanation for some of the observed degradation.</p>
+<p>This illustrates an important distinction: not all performance changes come from the model. Tool-level harness changes, server load, and A/B testing of checkpoints can all affect results. Independent tracking helps separate these factors and holds vendors accountable.</p>
+<p>The discussion around benchmarks was one of the most emotionally charged in the dataset, reflecting deep community concern about the reliability of tools they depend on daily. Several commenters noted that as AI tool costs rise and competition intensifies, vendors face pressure to quietly reduce service quality &ndash; making independent monitoring increasingly important.</p>
+<p>For the full benchmark data and methodology critique, see the <a href="../sources/2026-01-29-claude-code-benchmarks.html">source capture</a>.</p>
+<h2 id="opus-46-capabilities">Opus 4.6 Capabilities</h2>
+<p>Claude Code runs on Anthropic&rsquo;s model family, and the release of Opus 4.6 in February 2026 brought notable improvements. The model features a 1 million token context window in beta &ndash; the first for an Opus-class model &ndash; along with top scores on Terminal-Bench 2.0 for agentic coding and strong performance on complex reasoning benchmarks.</p>
+<p>The extended context window is particularly relevant for coding agents. It enables working with entire codebases in a single context, reducing the need for the agent to search and re-read files. One tester validated the capability by searching across all Harry Potter books for spells within a single context window.</p>
+<p>The release coincided with Claude Code 2.1.32, which introduced automatic memory recording and recall during work sessions, and the agent teams research preview discussed above. Rate limits remain a practical constraint &ndash; several practitioners reported that limits on the Pro and Max plans reduce the model&rsquo;s usefulness despite strong output quality.</p>
+<p>For the full release analysis and community reaction, see the <a href="../sources/2026-02-05-claude-opus-4-6.html">source capture</a>.</p>
+<h2 id="practical-tips">Practical Tips</h2>
+<p>Based on practitioner reports across the sources analyzed:</p>
+<ol>
+<li>
+<p><strong>Invest in CLAUDE.md early.</strong> The single highest-leverage action for Claude Code users. Document build commands, architecture rules, and known mistakes. Review and prune weekly.</p>
+</li>
+<li>
+<p><strong>Use extended thinking for planning, standard mode for implementation.</strong> This is manual multi-model routing within a single tool and can improve both quality and cost efficiency.</p>
+</li>
+<li>
+<p><strong>Run <code>claude update</code> regularly.</strong> Harness bugs are real and get fixed quickly. Staying on the latest version avoids known regressions.</p>
+</li>
+<li>
+<p><strong>Start with single-agent workflows.</strong> Swarms are powerful but expensive and harder to review. Master single-agent task decomposition before adding multi-agent complexity.</p>
+</li>
+<li>
+<p><strong>Set up LSP plugins for your primary language.</strong> The combination of deterministic code intelligence and probabilistic reasoning produces better results than either alone. Check claude-plugins.dev for available integrations.</p>
+</li>
+<li>
+<p><strong>Monitor your own quality metrics.</strong> Do not rely solely on vendor claims. Track success rates on your actual tasks over time, even if informally.</p>
+</li>
+</ol>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../tools/cursor.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Cursor</span>
+        </a>
+        
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#swarms-multi-agent-orchestration">Swarms: Multi-Agent Orchestration</a></li>
+    <li><a href="#agentsmd-and-claudemd">AGENTS.md and CLAUDE.md</a></li>
+    <li><a href="#native-lsp-support">Native LSP Support</a></li>
+    <li><a href="#benchmark-tracking-and-reliability">Benchmark Tracking and Reliability</a></li>
+    <li><a href="#opus-46-capabilities">Opus 4.6 Capabilities</a></li>
+    <li><a href="#practical-tips">Practical Tips</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../start-here/index.html">Start Here</a></li>
+          <li><a href="../skills/index.html">Skills</a></li>
+          <li><a href="../workflows/index.html">Workflows</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+          <li><a href="../tags/">Tags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Infrastructure-as-Code on AI Best Practices Knowledge Base</title>
+    <link>/tags/infrastructure-as-code.html</link>
+    <description>Recent content in Infrastructure-as-Code on AI Best Practices Knowledge Base</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 19 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/infrastructure-as-code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude Skill for Terraform/OpenTofu</title>
+      <link>/sources/2026-01-19-terraform-skill-claude.html</link>
+      <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-01-19-terraform-skill-claude.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Anton Babenko, a well-known contributor in the Terraform ecosystem and maintainer of many popular terraform-aws-modules, released a Claude Code skill focused on Terraform and OpenTofu best practices. The skill aggregates trusted sources including terraform-best-practices.com and community-tested patterns from over 100 production modules.&lt;/p&gt;&#xA;&lt;p&gt;The skill provides comprehensive guidance across several domains: a testing decision matrix for choosing between native tests and Terratest, module development standards for naming conventions and directory structure, CI/CD workflows for GitHub Actions and GitLab CI with Atlantis integration, and security and compliance patterns including policy-as-code and secrets management.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

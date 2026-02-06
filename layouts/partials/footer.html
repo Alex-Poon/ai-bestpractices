@@ -6,24 +6,26 @@
     </div>
     <div class="footer-nav">
       <div class="footer-section">
-        <h3>Content</h3>
+        <h3>Learn</h3>
         <ul>
-          <li><a href="{{ with site.GetPage "/guides" }}{{ .RelPermalink }}{{ end }}">Guides</a></li>
-          <li><a href="{{ with site.GetPage "/deep-dives" }}{{ .RelPermalink }}{{ end }}">Deep Dives</a></li>
-          <li><a href="{{ with site.GetPage "/tags" }}{{ .RelPermalink }}{{ end }}">Topics</a></li>
+          {{ with site.GetPage "/start-here" }}<li><a href="{{ .RelPermalink }}">Start Here</a></li>{{ end }}
+          {{ with site.GetPage "/skills" }}<li><a href="{{ .RelPermalink }}">Skills</a></li>{{ end }}
+          {{ with site.GetPage "/workflows" }}<li><a href="{{ .RelPermalink }}">Workflows</a></li>{{ end }}
         </ul>
       </div>
       <div class="footer-section">
-        <h3>Resources</h3>
+        <h3>Explore</h3>
         <ul>
-          <li><a href="{{ with site.GetPage "/patterns" }}{{ .RelPermalink }}{{ end }}">Patterns</a></li>
-          <li><a href="{{ with site.GetPage "/references" }}{{ .RelPermalink }}{{ end }}">References</a></li>
-          <li><a href="{{ with site.GetPage "/synthesis" }}{{ .RelPermalink }}{{ end }}">Synthesis</a></li>
+          {{ with site.GetPage "/tools" }}<li><a href="{{ .RelPermalink }}">Tools</a></li>{{ end }}
+          {{ with site.GetPage "/landscape" }}<li><a href="{{ .RelPermalink }}">Landscape</a></li>{{ end }}
+          {{ with site.GetPage "/evidence" }}<li><a href="{{ .RelPermalink }}">Evidence</a></li>{{ end }}
+          {{ with site.GetPage "/sources" }}<li><a href="{{ .RelPermalink }}">Sources</a></li>{{ end }}
+          <li><a href="{{ "tags/" | relURL }}">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from practitioner experience.</p>
+      <p>Built with Hugo. Content sourced from {{ len (where site.RegularPages "Section" "sources") }} HN articles and practitioner experience. {{ len site.RegularPages }} pages across {{ len site.Taxonomies.tags }} topics.</p>
     </div>
   </div>
 </footer>

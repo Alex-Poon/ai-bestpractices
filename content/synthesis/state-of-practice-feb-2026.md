@@ -1,17 +1,12 @@
 ---
 title: "The State of Agentic Coding Practice (Feb 2026)"
-description: "Where serious practitioners have landed on AI-assisted development as of February 2026."
-date: 2026-02-05
+description: "Where serious practitioners have landed on AI-assisted development — synthesized from 35+ HN discussions and practitioner articles."
+date: 2026-02-06
 tags: [synthesis, best-practices, agent-workflows]
-sources:
-  - https://mitchellh.com/writing/my-ai-adoption-journey
-  - https://news.ycombinator.com/item?id=46903558
-  - https://www.anthropic.com/engineering/building-c-compiler
-  - https://ampcode.com
 weight: 1
 ---
 
-A synthesis of where serious practitioners have landed on AI-assisted development, drawn from Mitchell Hashimoto's adoption journey, its Hacker News discussion (147+ points), and the emerging multi-model agent landscape (Amp Code and similar tools).
+A synthesis of where serious practitioners have landed on AI-assisted development, drawn from 35+ articles and Hacker News discussions spanning late 2025 through early 2026.
 
 ---
 
@@ -19,29 +14,27 @@ A synthesis of where serious practitioners have landed on AI-assisted developmen
 
 Most serious practitioners have converged on a remarkably similar workflow loop:
 
-**Plan in chat -> Execute narrow diffs via agent -> Verify fast -> Tighten harness**
+**Plan in chat → Execute narrow diffs via agent → Verify fast → Tighten harness**
 
-The variation between practitioners is in degree, not in kind. Whether someone uses Claude Code, Cursor, Amp, or Copilot, the operational rhythm looks the same. The key shift that experienced users describe is that the bottleneck has moved from *writing* code to *reading and verifying* code. This is a fundamental change in the nature of programming work. You spend less time with your hands on the keyboard producing code and more time reviewing, testing, and understanding what the agent produced.
+The variation between practitioners is in degree, not in kind. Whether someone uses Claude Code, Cursor, Amp, or Copilot, the operational rhythm looks the same. The key shift that experienced users describe is that the bottleneck has moved from *writing* code to *reading and verifying* code. This is a fundamental change in the nature of programming work.
 
-[Hashimoto describes arriving at this loop](/guides/adoption-stages.html) after passing through six stages of adoption. HN commenters who have reached proficiency describe essentially the same workflow, even if they use different tools and vocabulary. The convergence is striking because it was not coordinated. People arrived here independently by iterating on what works.
+[Hashimoto describes arriving at this loop](/evidence/hashimoto-journey.html) after passing through six stages of adoption. [Karpathy's notes](/sources/2026-01-26-karpathy-claude-coding-notes.html) confirm the pattern — he describes reading skills persisting even as writing fluency declines. HN commenters who have reached proficiency describe essentially the same workflow, even if they use different tools.
+
+See [The Core Loop](/start-here/core-loop.html) for the full framework.
 
 ---
 
 ## 2. The Scoping Problem Is THE Problem
 
-If there is one point of universal agreement across the source material, it is this: **[task scoping](/patterns/task-scoping.html) is the dominant skill in agent-assisted development.**
+If there is one point of universal agreement, it is this: **[task scoping](/skills/task-scoping.html) is the dominant skill in agent-assisted development.**
 
 The failure mode is not that agents are stupid. It is that humans give them tasks that are either too narrow to matter or too broad to succeed. The sweet spot is a task that is:
 
-- Small enough that you can verify the output quickly (under two minutes is a common threshold)
+- Small enough that you can verify the output quickly
 - Large enough that delegating it saves meaningful time
 - Concrete enough that the agent does not need to make architectural decisions
 
-**[allenu's tree metaphor](/patterns/task-scoping.html)** is the clearest mental model to emerge from the discussion: the human owns the trunk (overall architecture) and the main branches (module design, key interfaces). The agent does the leaves (individual implementations, boilerplate, test cases, repetitive transformations). The human never delegates trunk decisions. The agent never needs to understand the whole tree.
-
-mjr00 reinforces this from the opposite direction: agents fail when given "draw the rest of the owl" tasks where the entire feature is one prompt. sho_hn notes that the skill is in decomposition itself, not in prompting. apercu points out that if you cannot articulate what success looks like for a task, you are not ready to delegate it.
-
-The scoping skill is hard to teach because it requires understanding both the problem domain (to know what is architecturally significant) and the agent's capabilities (to know what it can reliably execute). This is why experienced developers extract more value: they have the domain knowledge to scope well.
+The tree metaphor remains the clearest mental model: the human owns the trunk (architecture) and main branches (module design). The agent does the leaves (implementations, boilerplate, tests). The human never delegates trunk decisions.
 
 ---
 
@@ -49,153 +42,102 @@ The scoping skill is hard to teach because it requires understanding both the pr
 
 The characteristic failure of agentic coding is not the obvious error. It is **drift**: the agent stays locally plausible while slowly diverging from real constraints.
 
-Each individual change looks reasonable in isolation. The code compiles. The tests pass (if there are tests). But the agent has been making small decisions that accumulate into a design that violates unstated requirements, ignores performance constraints, or diverges from the architectural intent.
+Each individual change looks reasonable in isolation. The code compiles. The tests pass. But the agent has been making small decisions that accumulate into a design that violates unstated requirements or diverges from architectural intent.
 
-This is worse than obvious errors for a specific reason: **it builds false confidence.** You review the diff, it looks fine, you approve it, and you move on. The divergence only becomes visible at runtime, or during integration, or when someone else reads the code. By then, the damage is compounded across multiple approved changes.
+The solution is structural:
 
-The solution is structural, not attentional:
+- **Small diffs:** Each change should be small enough to reason about completely
+- **Fast [verification](/skills/verification.html):** Run tests, check behavior immediately after each change
+- **Explicit constraints:** Anything the agent should not do needs to be written down
 
-- **Small diffs:** Each change should be small enough to reason about completely.
-- **Fast verification:** Run the relevant tests, check the behavior, confirm the output immediately after each change. Do not batch.
-- **Explicit constraints:** Anything the agent should not do needs to be written down, not assumed.
-
-The drift problem is why "just let it run overnight on a big task" is almost always a mistake for production code. The longer the agent runs without verification checkpoints, the further it can drift before you notice.
+The drift problem is why letting an agent run autonomously overnight on production code is almost always a mistake.
 
 ---
 
-## 4. [Harness Engineering](/patterns/harness-engineering.html) Is a Real Discipline
+## 4. Harness Engineering Is a Real Discipline
 
-The most underappreciated insight from the practitioner community is that **the infrastructure around the agent matters more than the prompts you give it.**
+The most underappreciated insight: **the infrastructure around the agent matters more than the prompts you give it.**
 
-This infrastructure takes two forms:
+[AGENTS.md files outperform prompt-based skills in evals](/sources/2026-01-29-agents-md-outperforms-skills.html) — this is now backed by empirical evidence. The practice of "continuously tightening the harness" means each agent mistake gets documented and never recurs.
+
+Two forms of harness infrastructure:
 
 ### Documentation Files (AGENTS.md / CLAUDE.md)
-
-These are persistent files that the agent reads at the start of every session. They contain:
-
-- Project conventions and architectural decisions
-- Known mistakes and their corrections ("never use library X for Y because Z")
-- Formatting and style requirements
-- Testing procedures and requirements
-- Constraints that are hard to infer from code alone
-
-EastLondonCoder describes the practice as "continuously tightening the harness." Each time the agent makes a mistake, you document the correction. That mistake never recurs. Over weeks and months, the harness becomes increasingly precise, and the agent's output quality improves without the agent itself getting smarter.
+Persistent files containing project conventions, known mistakes, style requirements, and testing procedures. See the [full guide](/workflows/agents-md-guide.html).
 
 ### Purpose-Built Tools
+Screenshot tools, filtered test runners, output formatters, and linting scripts designed for LLM consumption. [Carlini's compiler project](/evidence/carlini-compiler.html) demonstrates this at scale.
 
-Some practitioners go further and build tools designed specifically for LLM consumption:
-
-- Screenshot tools that produce structured output an agent can parse
-- Filtered test runners that surface only relevant failures
-- Output formatters that present information in ways agents process reliably
-- Linting scripts that catch common agent mistakes before human review
-
-### Why This Compounds
-
-Each documented mistake prevents recurrence across all future sessions. Each custom tool reduces a class of errors permanently. The investment in [harness engineering](/patterns/harness-engineering.html) pays increasing dividends over time, while prompt engineering hits diminishing returns quickly.
-
-[Hashimoto identifies this as Stage 5](/guides/adoption-stages.html) of his adoption journey: the point where you stop thinking about individual prompts and start building infrastructure.
+Each documented mistake prevents recurrence across all future sessions. The investment in [harness engineering](/skills/harness-engineering.html) pays increasing dividends over time, while prompt engineering hits diminishing returns quickly.
 
 ---
 
 ## 5. The Tool Landscape Rewards Multi-Model Thinking
 
-[Amp Code's architecture](/deep-dives/multi-model-agents.html) makes explicit what sophisticated users of other tools have learned implicitly: **different models are better at different sub-tasks.**
+[Amp Code's architecture](/tools/amp.html) makes explicit what sophisticated users have learned: **different models are better at different sub-tasks.** A routing table that sends planning to one model, implementation to another, and quick edits to a third reflects genuine differences in capabilities.
 
-A routing table that sends planning tasks to one model, implementation to another, and quick edits to a third is not just an optimization. It reflects a genuine difference in model capabilities. Deep reasoning models (like o3) handle complex architectural decisions better. Fast models (like Gemini 2.5 Flash) handle routine transformations efficiently. Mid-tier models handle the bulk of implementation work.
+[Claude Code's swarms feature](/sources/2026-01-24-claude-code-swarms.html) takes a different approach — native multi-agent orchestration where the primary agent coordinates specialized sub-agents. [Claude Opus 4.6](/sources/2026-02-05-claude-opus-4-6.html) represents a major capability jump that affects all downstream workflows.
 
-Even users who work with a single tool benefit from understanding this principle. Most tools now offer mode switching (e.g., Claude's "deep think" vs. standard mode). Knowing when to invoke deeper reasoning versus when to use fast mode is a skill that directly affects output quality and cost.
+The practical implication: **slower is often better for complex problems.** A two-minute deep reasoning call that produces correct architecture saves hours compared to a fast response that produces subtly wrong architecture.
 
-The practical implication: **slower is often better for complex problems.** The instinct to use the fastest available mode for everything is a false economy. A two-minute deep reasoning call that produces correct architecture saves hours compared to a five-second response that produces plausible but subtly wrong architecture.
+See the full [Tool Landscape](/tools/) section and [Model Selection guide](/skills/model-selection.html).
 
 ---
 
 ## 6. Cost Is Real and Under-Discussed
 
-The range of spending reported across the discussion is wide:
+The range of spending reported across discussions:
 
 - **Low end:** $20/month (single Copilot or basic Claude subscription)
 - **Mid range:** $100-200/month (Claude Pro/Max, multiple tools)
-- **High end:** $500-1000+/month (heavy API usage, Amp-style pay-per-token, multiple subscriptions)
+- **High end:** $500-1000+/month (heavy API usage, pay-per-token models)
 
-The pricing models create real tradeoffs:
+[One practitioner spent $638 in 6 weeks](/sources/2025-11-13-ai-coding-agent-costs.html) — a data point that sparked significant discussion. The value curve is not linear: going from $0 to $20/month is a large jump in productivity, while going from $200 to $1000/month may have diminishing returns unless your work involves specific high-value tasks.
 
-- **Flat rate** (Claude Max at $100-200/month): Predictable costs. Encourages experimentation because marginal cost is zero. Risk of hitting rate limits on heavy usage days.
-- **Pay-as-you-go** (Amp, direct API): Costs scale with usage. Rewards efficient prompting. Can produce bill shock on intensive days.
-
-Almost nobody in the discussion shares concrete cost/value calculations. This is a gap in the community's understanding. Without tracking what you spend and what value you get, you cannot make rational decisions about tool selection or usage patterns.
-
-One practical observation: the value curve is not linear. Going from $0 to $20/month (basic autocomplete) is a large jump in productivity. Going from $20 to $200/month (full agentic workflow) is another large jump but requires significant skill investment to realize. Going from $200 to $1000/month may have diminishing returns unless your work involves very specific high-value tasks.
+See [Costs and Tradeoffs](/landscape/costs-and-tradeoffs.html) for the full analysis.
 
 ---
 
 ## 7. This Is Just Good Engineering, Made Mandatory
 
-Multiple practitioners in the HN discussion make a version of this observation: the practices that make agent-assisted development work well are the same practices that always made software development work well.
+The practices that make agent-assisted development work well are the same practices that always made software development work well: scoped tasks, incremental changes, documented conventions, fast feedback loops, separation of design from implementation.
 
-- Scoped, well-defined tasks with clear success criteria
-- Incremental changes with verification at each step
-- Documented conventions and constraints
-- Fast feedback loops
-- Separation of design decisions from implementation details
+The difference is that agents **punish sloppy practices more visibly and more quickly than human collaborators do.** A human teammate given a vague task will ask clarifying questions. An agent given a vague task will produce confident, plausible, subtly wrong output.
 
-The difference is that agents **punish sloppy practices more visibly and more quickly than human collaborators do.** A human teammate given a vague task will ask clarifying questions or make reasonable assumptions based on shared context. An agent given a vague task will produce confident, plausible, subtly wrong output.
-
-This means that AI adoption functions as a forcing function for engineering discipline. Teams that already practice rigorous scoping, clear specifications, and fast verification cycles adopt agents smoothly. Teams that rely on informal communication and implicit knowledge struggle.
-
-The implication is optimistic: investing in agent-assisted development skills is not a bet on a specific tool or model. It is an investment in engineering fundamentals that will pay off regardless of how the tool landscape evolves.
+AI adoption functions as a forcing function for engineering discipline. Teams that already practice rigor adopt agents smoothly. Teams that rely on informal communication struggle.
 
 ---
 
 ## 8. The Adoption Curve Is Real
 
-[Hashimoto describes six stages of AI adoption](/guides/adoption-stages.html), from skepticism through to agent-native development. The HN discussion confirms a key feature of this curve: **there is a valley of inefficiency that must be pushed through.**
+[Hashimoto describes six stages](/evidence/hashimoto-journey.html) from skepticism through to agent-native development. The community confirms a key feature: **there is a valley of inefficiency that must be pushed through.**
 
-Early adoption is frustrating. The agent does not understand your codebase. Your prompts are vague. You spend more time fixing agent output than you would have spent writing the code yourself. This is normal and temporary, but many people quit here and conclude that AI coding tools are overhyped.
+Early adoption is frustrating. The agent does not understand your codebase. Your prompts are vague. Many people quit here and conclude that AI coding tools are overhyped. But the skill is embodied — you develop intuition through practice, not theory.
 
-polyrand captures it directly: "The only way to get good is actually trying to do it." Reading about techniques is not sufficient. The skill is embodied: you develop intuition for scoping, verification, and [harness engineering](/patterns/harness-engineering.html) through practice, not through theory.
-
-The adoption curve also has a social dimension. Practitioners who work alongside others who are further along the curve adopt faster. Seeing someone effectively delegate a task to an agent teaches scoping intuition more efficiently than any written guide.
+The [vibe coding spectrum](/workflows/vibe-coding-spectrum.html) represents one dimension of this curve: from rapid prototyping to rigorous engineering, with different approaches appropriate for different contexts.
 
 ---
 
-## 10. Parallel Agents at Scale: Evidence from the [Carlini Compiler Project](/deep-dives/parallel-compiler-lessons.html)
+## 9. Parallel Agents at Scale
 
-Nicholas Carlini (Anthropic Safeguards researcher) stress-tested autonomous LLM capabilities by running 16 parallel Claude instances to build a 100,000-line Rust-based C compiler from scratch. Key findings that reinforce and extend the existing patterns:
+[Carlini's compiler project](/evidence/carlini-compiler.html) stress-tested autonomous LLM capabilities by running 16 parallel Claude instances. Key findings:
 
-- **[Harness engineering](/patterns/harness-engineering.html) scales:** At 2,000 sessions and $20K spend, the test harness was the single most important investment. Carlini's rule: "the task verifier must be nearly perfect, otherwise Claude will solve the wrong problem." This validates harness engineering as the highest-leverage practice identified in the synthesis.
-
-- **Anthropomorphic test design is a new sub-discipline:** Tests must be designed for the LLM's cognition — limited verbosity, pre-computed aggregates, grep-friendly error formatting, random fast-path sampling. Claude will "happily spend hours running tests instead of making progress" without these constraints.
-
-- **Parallelism has sharp limits:** When tasks decompose cleanly (many failing tests), 16 agents provide near-linear speedup. When the task is monolithic (kernel compilation), all agents converge on the same bottleneck and overwrite each other. The [scoping problem](/patterns/task-scoping.html) from the earlier analysis directly determines whether parallelism helps.
-
-- **Agent specialization works:** Rather than N identical agents, deploying role-specialized agents (core dev, deduplicator, optimizer, quality critic, docs maintainer) enables parallel progress on orthogonal concerns.
-
-- **Git as coordination protocol:** No orchestration agent needed. Agents coordinate through git (task lock files, merge workflows, fresh sessions reading git history). Conversation memory is deliberately discarded each iteration — persistence lives in the repo.
-
-- **Model capability is a moving target:** Opus 4.0 could "barely produce a functional compiler." Opus 4.5 passed test suites but couldn't compile real projects. Opus 4.6 crossed the threshold for kernel compilation. Each generation opens new frontiers.
-
-- **The verification concern persists:** Even at 99% test pass rate, Carlini (with penetration testing background) warns: "The thought of programmers deploying software they've never personally verified is a real concern." Passing tests provides false confidence.
+- **Harness engineering scales:** At 2,000 sessions and $20K spend, the test harness was the single most important investment
+- **Parallelism has sharp limits:** When tasks decompose cleanly, near-linear speedup. When monolithic, all agents converge on the same bottleneck
+- **Agent specialization works:** Role-specialized agents (core dev, optimizer, quality critic) enable parallel progress on orthogonal concerns
+- **Git as coordination protocol:** No orchestration agent needed — agents coordinate through the repo
+- **Model capability is a moving target:** Each generation opens new frontiers
 
 ---
 
-## 9. Open Questions
+## 10. Open Questions
 
-Several significant questions remain unresolved across these sources:
+Several significant questions remain unresolved. See [Open Questions](/landscape/open-questions.html) for the full discussion.
 
-### Junior Developer Skill Formation
-If agents handle leaf-level implementation, how do junior developers build the foundational skills needed to eventually own trunk-level decisions? Is there a "driver's ed" problem where you need to do the thing manually before you can supervise it? No consensus exists.
+- **Junior developer skill formation:** If agents handle implementation, how do juniors build foundational skills? The [coding skills impact study](/sources/2026-01-30-ai-assistance-coding-skills.html) raises important concerns.
+- **Are assistants getting worse?** The [degradation concern](/sources/2026-01-08-ai-coding-getting-worse.html) and [benchmark tracking](/sources/2026-01-29-claude-code-benchmarks.html) suggest this needs monitoring.
+- **Expert-only value extraction:** Is effective agent-assisted development inherently an expert activity?
+- **Reliability at scale:** [57 incidents in 3 months](/sources/2026-02-04-claude-57-incidents.html) highlights the reliability question for production workflows.
+- **Sustainability:** [OpenAI's cash burn](/sources/2025-12-30-openai-cash-burn.html) and the [bubble question](/sources/2026-01-19-ai-bubble-bursts-2026.html) remain open.
 
-### Expert-Only Value Extraction
-Is effective agent-assisted development inherently an expert activity? The scoping skill requires deep domain knowledge. The verification skill requires the ability to read code critically. If only experienced developers can extract value, what does this mean for the profession?
-
-### The METR Study and Productivity Measurement
-A METR study showed 19% productivity *reduction* from AI tool usage among experienced open-source developers. This result is contested on methodological grounds (task scope, measurement period, tool familiarity), but it raises legitimate questions about when and where agent-assisted development actually helps versus hurts.
-
-### The "No Moat" Problem for Tool Makers
-If the core skill is scoping and verification (human skills), and the core infrastructure is harness files (portable text), then switching between agent tools is relatively easy. This means tool makers may struggle to build durable competitive advantages. The tool landscape could remain volatile for an extended period.
-
-### Appropriate Trust Calibration
-How do you calibrate trust in agent output appropriately? Too little trust and you verify everything manually, negating the time savings. Too much trust and you approve drifted code. The optimal trust level likely varies by task type, codebase familiarity, and agent capability, but no good frameworks exist for reasoning about this.
-
-For the patterns referenced throughout this synthesis, see [Task Scoping](/patterns/task-scoping.html), [Harness Engineering](/patterns/harness-engineering.html), and [Parallel Agent Coordination](/patterns/parallel-agent-coordination.html). For the detailed evidence, see the [Deep Dives](/deep-dives/index.html) section.
+For the underlying evidence, see [Evidence & Case Studies](/evidence/). For the raw source material, see [Sources](/sources/).
