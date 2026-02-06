@@ -49,11 +49,13 @@
   <section class="home-section">
     <div class="home-section-header">
       <h2 class="home-section-title">Practices</h2>
-      <a href="{{ with site.GetPage "/practices" }}{{ .RelPermalink }}{{ end }}" class="section-link">View all &rarr;</a>
     </div>
-    <div class="card-grid">
-      {{ range first 4 ($practices.ByWeight) }}
+    <div class="card-grid{{ if gt (len $practices) 3 }} card-grid--browse{{ end }}">
+      {{ range first 3 ($practices.ByWeight) }}
         {{ partial "card.html" . }}
+      {{ end }}
+      {{ if gt (len $practices) 3 }}
+        {{ partial "browse-card.html" (dict "section" (site.GetPage "/practices") "total" (len $practices) "shown" 3 "color" "var(--color-practices)") }}
       {{ end }}
     </div>
   </section>
@@ -65,11 +67,13 @@
   <section class="home-section">
     <div class="home-section-header">
       <h2 class="home-section-title">Tool Landscape</h2>
-      <a href="{{ with site.GetPage "/tools" }}{{ .RelPermalink }}{{ end }}" class="section-link">View all &rarr;</a>
     </div>
-    <div class="card-grid">
-      {{ range $tools.ByWeight }}
+    <div class="card-grid{{ if gt (len $tools) 3 }} card-grid--browse{{ end }}">
+      {{ range first 3 ($tools.ByWeight) }}
         {{ partial "card.html" . }}
+      {{ end }}
+      {{ if gt (len $tools) 3 }}
+        {{ partial "browse-card.html" (dict "section" (site.GetPage "/tools") "total" (len $tools) "shown" 3 "color" "var(--color-tools)") }}
       {{ end }}
     </div>
   </section>
@@ -81,11 +85,13 @@
   <section class="home-section">
     <div class="home-section-header">
       <h2 class="home-section-title">Evidence &amp; Case Studies</h2>
-      <a href="{{ with site.GetPage "/evidence" }}{{ .RelPermalink }}{{ end }}" class="section-link">View all &rarr;</a>
     </div>
-    <div class="card-grid">
+    <div class="card-grid{{ if gt (len $evidence) 3 }} card-grid--browse{{ end }}">
       {{ range first 3 ($evidence.ByWeight) }}
         {{ partial "card.html" . }}
+      {{ end }}
+      {{ if gt (len $evidence) 3 }}
+        {{ partial "browse-card.html" (dict "section" (site.GetPage "/evidence") "total" (len $evidence) "shown" 3 "color" "var(--color-evidence)") }}
       {{ end }}
     </div>
   </section>
@@ -97,11 +103,13 @@
   <section class="home-section">
     <div class="home-section-header">
       <h2 class="home-section-title">Landscape</h2>
-      <a href="{{ with site.GetPage "/landscape" }}{{ .RelPermalink }}{{ end }}" class="section-link">View all &rarr;</a>
     </div>
-    <div class="card-grid">
-      {{ range $landscape.ByWeight }}
+    <div class="card-grid{{ if gt (len $landscape) 3 }} card-grid--browse{{ end }}">
+      {{ range first 3 ($landscape.ByWeight) }}
         {{ partial "card.html" . }}
+      {{ end }}
+      {{ if gt (len $landscape) 3 }}
+        {{ partial "browse-card.html" (dict "section" (site.GetPage "/landscape") "total" (len $landscape) "shown" 3 "color" "var(--color-landscape)") }}
       {{ end }}
     </div>
   </section>
@@ -113,11 +121,13 @@
   <section class="home-section">
     <div class="home-section-header">
       <h2 class="home-section-title">Latest Sources</h2>
-      <a href="{{ with site.GetPage "/sources" }}{{ .RelPermalink }}{{ end }}" class="section-link">View all &rarr;</a>
     </div>
-    <div class="card-grid">
-      {{ range first 4 ($sources.ByDate.Reverse) }}
+    <div class="card-grid{{ if gt (len $sources) 3 }} card-grid--browse{{ end }}">
+      {{ range first 3 ($sources.ByDate.Reverse) }}
         {{ partial "card.html" . }}
+      {{ end }}
+      {{ if gt (len $sources) 3 }}
+        {{ partial "browse-card.html" (dict "section" (site.GetPage "/sources") "total" (len $sources) "shown" 3 "color" "var(--color-sources)") }}
       {{ end }}
     </div>
   </section>

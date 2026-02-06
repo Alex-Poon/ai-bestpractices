@@ -455,6 +455,18 @@ li > ul, li > ol { margin-top: var(--space-1); margin-bottom: 0; }
 .card--sources     { border-left: 3px solid var(--color-sources); }
 .card--synthesis   { border-left: 3px solid var(--color-synthesis); }
 
+.card-grid.card-grid--browse { grid-template-columns: repeat(3, 1fr) minmax(120px, 0.6fr); }
+.card--browse { border: 1px dashed var(--color-border); background: transparent; }
+.card--browse:hover { background: var(--color-surface); }
+.browse-card-link {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; min-height: 160px; gap: var(--space-2);
+}
+.browse-card-count { font-size: var(--text-2xl); font-weight: var(--font-bold); color: var(--browse-color, var(--color-text-secondary)); }
+.browse-card-label { font-size: var(--text-sm); color: var(--color-text-tertiary); }
+.browse-card-cta { font-size: var(--text-sm); font-weight: var(--font-semibold); color: var(--browse-color, var(--color-accent)); margin-top: var(--space-2); }
+.card--browse:hover .browse-card-cta { text-decoration: underline; }
+
 .card-link {
   display: block;
   padding: var(--space-4) var(--space-5);

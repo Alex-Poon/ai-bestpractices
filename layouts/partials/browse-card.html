@@ -1,0 +1,7 @@
+<article class="card card--browse">
+  <a href="{{ .section.RelPermalink }}" class="card-link browse-card-link" style="--browse-color: {{ .color }};">
+    <span class="browse-card-count">+{{ sub .total .shown }}</span>
+    <span class="browse-card-label">more {{ .section.Title | lower }}</span>
+    <span class="browse-card-cta">View all {{ .total }} &rarr;</span>
+  </a>
+</article>
