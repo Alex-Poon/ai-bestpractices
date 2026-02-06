@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Getting-Started on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/tags/getting-started.html</link>
+    <link>/tags/getting-started.html</link>
     <description>Recent content in Getting-Started on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/tags/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/getting-started/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting Started</title>
-      <link>//localhost:1314/guide/getting-started.html</link>
+      <link>/guide/getting-started.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/guide/getting-started.html</guid>
+      <guid>/guide/getting-started.html</guid>
       <description>&lt;p&gt;You have read about the &lt;a href=&#34;core-loop.html&#34;&gt;core loop&lt;/a&gt;. Now it is time to put it into practice. This page covers the concrete steps for your first week with AI coding tools &amp;ndash; which tool to pick, what to try first, which mistakes to avoid, and what &amp;ldquo;working&amp;rdquo; actually looks like.&lt;/p&gt;&#xA;&lt;p&gt;The goal is not mastery. The goal is calibration: developing an accurate sense of what AI agents handle well and where they fall apart. That calibration is the foundation everything else builds on, and there is no shortcut to it except doing real work.&lt;/p&gt;</description>
     </item>
   </channel>

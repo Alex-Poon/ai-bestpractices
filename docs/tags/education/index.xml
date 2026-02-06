@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Education on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/tags/education.html</link>
+    <link>/tags/education.html</link>
     <description>Recent content in Education on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/tags/education/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/education/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Does AI Prevent Junior Developer Skill Formation?</title>
-      <link>//localhost:1314/debates/junior-skills.html</link>
+      <link>/debates/junior-skills.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/debates/junior-skills.html</guid>
+      <guid>/debates/junior-skills.html</guid>
       <description>&lt;h2 id=&#34;the-question&#34;&gt;The Question&lt;/h2&gt;&#xA;&lt;p&gt;In early 2026, Anthropic published a study on AI-assisted coding that confirmed what many practitioners already suspected: developers using AI tools showed impaired conceptual understanding and weaker debugging skills compared to those who struggled through problems manually. The study landed in a community already anxious about what AI means for the next generation of programmers.&lt;/p&gt;&#xA;&lt;p&gt;The implications are profound. If AI tools prevent junior developers from forming the deep skills that senior developers rely on, the industry faces a compounding problem. Today&amp;rsquo;s juniors become tomorrow&amp;rsquo;s seniors. If they never develop the judgment to direct and verify AI output, who reviews the code? Who diagnoses production failures? Who makes architectural decisions that AI can&amp;rsquo;t yet make well?&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI&#39;s Impact on Coding Skills: What the Research Shows</title>
-      <link>//localhost:1314/evidence/coding-skills-impact.html</link>
+      <link>/evidence/coding-skills-impact.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/evidence/coding-skills-impact.html</guid>
+      <guid>/evidence/coding-skills-impact.html</guid>
       <description>&lt;p&gt;In early 2026, Anthropic published a study examining how AI coding assistance affects developer skill development. The study became one of the most intensely debated pieces of AI research in the developer community, generating over 346 comments on Hacker News. The reaction was notable not for the usual pro/anti-AI polarization but for the depth of personal reflection it provoked &amp;ndash; developers grappling honestly with what they had already noticed happening to their own abilities.&lt;/p&gt;</description>
     </item>
   </channel>

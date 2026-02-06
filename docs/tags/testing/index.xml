@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Testing on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/tags/testing.html</link>
+    <link>/tags/testing.html</link>
     <description>Recent content in Testing on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/testing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Verification</title>
-      <link>//localhost:1314/practices/verification.html</link>
+      <link>/practices/verification.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/practices/verification.html</guid>
+      <guid>/practices/verification.html</guid>
       <description>&lt;p&gt;Verification is the skill that makes every other AI-assisted development practice work. Task scoping, harness engineering, and model selection all ultimately exist to make verification easier and faster. If you cannot verify the output, nothing else matters.&lt;/p&gt;&#xA;&lt;p&gt;The shift is fundamental: as AI takes over code generation, the developer&amp;rsquo;s primary contribution moves from writing to reading, reviewing, and validating. You are no longer the author. You are the editor &amp;ndash; and the editor must be a genuinely skilled reader, not a rubber stamp.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Two Kinds of Vibe Coding</title>
-      <link>//localhost:1314/sources/2025-12-18-two-kinds-vibe-coding.html</link>
+      <link>/sources/2025-12-18-two-kinds-vibe-coding.html</link>
       <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2025-12-18-two-kinds-vibe-coding.html</guid>
+      <guid>/sources/2025-12-18-two-kinds-vibe-coding.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;David Bau distinguishes between two fundamentally different approaches to what has broadly been called &amp;ldquo;vibe coding.&amp;rdquo; The first type involves delegating small tasks to an LLM while the human programmer remains fully informed and in control, reviewing each piece of work and making all key decisions. The second type involves surrendering cognitive control to an AI agent, allowing it to build towers of complexity that go beyond what the developer has time to understand in detail.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Kiro</title>
-      <link>//localhost:1314/tools/kiro.html</link>
+      <link>/tools/kiro.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tools/kiro.html</guid>
+      <guid>/tools/kiro.html</guid>
       <description>&lt;p&gt;Kiro is AWS&amp;rsquo;s entry into the AI coding tool space. It went generally available in November 2025 and takes a fundamentally different approach from other AI IDEs: spec-driven development. Instead of starting with code and having AI assist along the way, Kiro starts with requirements described in natural language and produces user stories, technical design documents, coding task lists, and then code &amp;ndash; along with documentation and tests.&lt;/p&gt;&#xA;&lt;p&gt;This positions Kiro as the anti-vibe-coding tool. Where most AI coding assistants optimize for speed and developer flow, Kiro optimizes for rigor and traceability. Requirements link to specs, specs link to code, code links to tests. The entire chain is auditable, which appeals to organizations that need to demonstrate compliance or maintain strict engineering standards.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My LLM Coding Workflow Going into 2026</title>
-      <link>//localhost:1314/sources/2026-01-04-llm-coding-workflow-2026.html</link>
+      <link>/sources/2026-01-04-llm-coding-workflow-2026.html</link>
       <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-04-llm-coding-workflow-2026.html</guid>
+      <guid>/sources/2026-01-04-llm-coding-workflow-2026.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Addy Osmani, a well-known figure in the web development community, shares his comprehensive approach to AI-augmented software engineering. The central philosophy treats LLMs as powerful pair programmers that require clear direction, context, and human oversight rather than autonomous replacements for developers.&lt;/p&gt;&#xA;&lt;p&gt;The workflow is structured around several core practices. First, planning comes before coding — create detailed specifications, use AI to iteratively flesh out requirements and edge cases, and generate project plans that break work into bite-sized tasks. Osmani describes this as completing a &amp;ldquo;waterfall in 15 minutes&amp;rdquo; to prevent wasted development cycles. Second, iterative chunking — break projects into small manageable pieces rather than requesting monolithic outputs, processing one feature at a time while maintaining context of previous work. Third, context provision — feed the AI all relevant code, documentation, and constraints using tools like gitingest or repo2txt to bundle repository information, and provide style guides through CLAUDE.md files.&lt;/p&gt;</description>
     </item>
     <item>
       <title>LLM coding workflow going into 2026</title>
-      <link>//localhost:1314/sources/2026-01-10-llm-coding-workflow-2026.html</link>
+      <link>/sources/2026-01-10-llm-coding-workflow-2026.html</link>
       <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-10-llm-coding-workflow-2026.html</guid>
+      <guid>/sources/2026-01-10-llm-coding-workflow-2026.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Addy Osmani, a well-known Google engineering leader, shared his comprehensive approach to integrating LLMs into daily coding workflows. The article frames LLMs not as autonomous coders but as powerful pair programmers requiring clear direction, context, and consistent oversight.&lt;/p&gt;&#xA;&lt;p&gt;The workflow begins with collaborative planning, where the developer works with an AI to develop detailed specifications and project plans before writing code. Osmani describes this as achieving a traditional waterfall planning cycle compressed into roughly 15 minutes. Implementation then proceeds in small, iterative chunks sized to fit within context windows and remain comprehensible for human review.&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI Coding Toolkit: Low-overhead workflow for reliable AI coding</title>
-      <link>//localhost:1314/sources/2026-01-22-ai-coding-toolkit.html</link>
+      <link>/sources/2026-01-22-ai-coding-toolkit.html</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-22-ai-coding-toolkit.html</guid>
+      <guid>/sources/2026-01-22-ai-coding-toolkit.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;The AI Coding Toolkit is an open-source Git repository template designed to provide a structured yet lightweight workflow for semi-autonomous AI coding. The creator developed it after finding that existing AI coding workflows were either too complex (involving dozens of agents running in parallel) or too opinionated for the fast-moving AI coding landscape.&lt;/p&gt;&#xA;&lt;p&gt;The toolkit operates through three sequential phases: Specify (a guided Q&amp;amp;A that captures requirements into product and technical specifications), Plan (automated generation of testable tasks with acceptance criteria), and Execute (AI agents complete tasks with built-in verification at each checkpoint). This structure enforces SDLC best practices while keeping the mental overhead low.&lt;/p&gt;</description>
     </item>
   </channel>

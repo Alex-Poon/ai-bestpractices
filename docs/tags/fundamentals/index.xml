@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fundamentals on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/tags/fundamentals.html</link>
+    <link>/tags/fundamentals.html</link>
     <description>Recent content in Fundamentals on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/tags/fundamentals/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/fundamentals/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Task Scoping</title>
-      <link>//localhost:1314/practices/task-scoping.html</link>
+      <link>/practices/task-scoping.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/practices/task-scoping.html</guid>
+      <guid>/practices/task-scoping.html</guid>
       <description>&lt;p&gt;Task scoping is the dominant skill in AI-assisted development. It determines whether your interaction with an agent produces usable output in minutes or wasted effort measured in hours. Every practitioner who has moved past the honeymoon phase identifies decomposition &amp;ndash; not prompting, not model selection &amp;ndash; as the discipline that matters most.&lt;/p&gt;&#xA;&lt;p&gt;The core insight is deceptively simple: AI agents execute well-bounded tasks reliably and open-ended tasks poorly. Your job is to turn open-ended work into a series of bounded tasks. This is fundamentally the same skill as delegating to a junior developer, with one critical difference: the agent never learns from the previous session.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Core Loop</title>
-      <link>//localhost:1314/guide/core-loop.html</link>
+      <link>/guide/core-loop.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/guide/core-loop.html</guid>
+      <guid>/guide/core-loop.html</guid>
       <description>&lt;p&gt;Every effective AI coding workflow, regardless of which tool or model you use, converges on the same four-phase loop: &lt;strong&gt;Plan, Execute, Verify, Harness.&lt;/strong&gt; The tools change. The models improve. But the loop persists, because it addresses the fundamental constraints of working with systems that are brilliant and forgetful in equal measure.&lt;/p&gt;&#xA;&lt;p&gt;This page describes each phase, why it matters, and what goes wrong when you skip it. If you read nothing else on this site, read this.&lt;/p&gt;</description>
     </item>
   </channel>

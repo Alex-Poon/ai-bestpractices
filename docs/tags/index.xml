@@ -2,1389 +2,1396 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/tags/index.html</link>
+    <link>/tags/index.html</link>
     <description>Recent content in Tags on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Adoption</title>
-      <link>//localhost:1314/tags/adoption.html</link>
+      <link>/tags/adoption.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/adoption.html</guid>
+      <guid>/tags/adoption.html</guid>
       <description></description>
     </item>
     <item>
       <title>Adoption-Strategy</title>
-      <link>//localhost:1314/tags/adoption-strategy.html</link>
+      <link>/tags/adoption-strategy.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/adoption-strategy.html</guid>
+      <guid>/tags/adoption-strategy.html</guid>
       <description></description>
     </item>
     <item>
       <title>Agent</title>
-      <link>//localhost:1314/tags/agent.html</link>
+      <link>/tags/agent.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/agent.html</guid>
+      <guid>/tags/agent.html</guid>
       <description></description>
     </item>
     <item>
       <title>Agent-Architecture</title>
-      <link>//localhost:1314/tags/agent-architecture.html</link>
+      <link>/tags/agent-architecture.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/agent-architecture.html</guid>
+      <guid>/tags/agent-architecture.html</guid>
       <description></description>
     </item>
     <item>
       <title>Agent-Workflows</title>
-      <link>//localhost:1314/tags/agent-workflows.html</link>
+      <link>/tags/agent-workflows.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/agent-workflows.html</guid>
+      <guid>/tags/agent-workflows.html</guid>
       <description></description>
     </item>
     <item>
       <title>Agents-Md</title>
-      <link>//localhost:1314/tags/agents-md.html</link>
+      <link>/tags/agents-md.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/agents-md.html</guid>
+      <guid>/tags/agents-md.html</guid>
       <description></description>
     </item>
     <item>
       <title>Ai-Economics</title>
-      <link>//localhost:1314/tags/ai-economics.html</link>
+      <link>/tags/ai-economics.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/ai-economics.html</guid>
+      <guid>/tags/ai-economics.html</guid>
       <description></description>
     </item>
     <item>
       <title>Ai-Skepticism</title>
-      <link>//localhost:1314/tags/ai-skepticism.html</link>
+      <link>/tags/ai-skepticism.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/ai-skepticism.html</guid>
+      <guid>/tags/ai-skepticism.html</guid>
       <description></description>
     </item>
     <item>
       <title>Aider</title>
-      <link>//localhost:1314/tags/aider.html</link>
+      <link>/tags/aider.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/aider.html</guid>
+      <guid>/tags/aider.html</guid>
       <description></description>
     </item>
     <item>
       <title>Amp-Code</title>
-      <link>//localhost:1314/tags/amp-code.html</link>
+      <link>/tags/amp-code.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/amp-code.html</guid>
+      <guid>/tags/amp-code.html</guid>
       <description></description>
     </item>
     <item>
       <title>Autonomous-Coding</title>
-      <link>//localhost:1314/tags/autonomous-coding.html</link>
+      <link>/tags/autonomous-coding.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/autonomous-coding.html</guid>
+      <guid>/tags/autonomous-coding.html</guid>
       <description></description>
     </item>
     <item>
       <title>Autonomy</title>
-      <link>//localhost:1314/tags/autonomy.html</link>
+      <link>/tags/autonomy.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/autonomy.html</guid>
+      <guid>/tags/autonomy.html</guid>
       <description></description>
     </item>
     <item>
       <title>Aws</title>
-      <link>//localhost:1314/tags/aws.html</link>
+      <link>/tags/aws.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/aws.html</guid>
+      <guid>/tags/aws.html</guid>
       <description></description>
     </item>
     <item>
       <title>Beginner</title>
-      <link>//localhost:1314/tags/beginner.html</link>
+      <link>/tags/beginner.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/beginner.html</guid>
+      <guid>/tags/beginner.html</guid>
       <description></description>
     </item>
     <item>
       <title>Benchmarks</title>
-      <link>//localhost:1314/tags/benchmarks.html</link>
+      <link>/tags/benchmarks.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/benchmarks.html</guid>
+      <guid>/tags/benchmarks.html</guid>
       <description></description>
     </item>
     <item>
       <title>Brain-Atrophy</title>
-      <link>//localhost:1314/tags/brain-atrophy.html</link>
+      <link>/tags/brain-atrophy.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/brain-atrophy.html</guid>
+      <guid>/tags/brain-atrophy.html</guid>
       <description></description>
     </item>
     <item>
       <title>Builders</title>
-      <link>//localhost:1314/tags/builders.html</link>
+      <link>/tags/builders.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/builders.html</guid>
+      <guid>/tags/builders.html</guid>
       <description></description>
     </item>
     <item>
       <title>Career</title>
-      <link>//localhost:1314/tags/career.html</link>
+      <link>/tags/career.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/career.html</guid>
+      <guid>/tags/career.html</guid>
       <description></description>
     </item>
     <item>
       <title>Cascade</title>
-      <link>//localhost:1314/tags/cascade.html</link>
+      <link>/tags/cascade.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/cascade.html</guid>
+      <guid>/tags/cascade.html</guid>
       <description></description>
     </item>
     <item>
       <title>Case-Study</title>
-      <link>//localhost:1314/tags/case-study.html</link>
+      <link>/tags/case-study.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/case-study.html</guid>
+      <guid>/tags/case-study.html</guid>
       <description></description>
     </item>
     <item>
       <title>Changed-Minds</title>
-      <link>//localhost:1314/tags/changed-minds.html</link>
+      <link>/tags/changed-minds.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/changed-minds.html</guid>
+      <guid>/tags/changed-minds.html</guid>
       <description></description>
     </item>
     <item>
       <title>Claude-Code</title>
-      <link>//localhost:1314/tags/claude-code.html</link>
+      <link>/tags/claude-code.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/claude-code.html</guid>
+      <guid>/tags/claude-code.html</guid>
       <description></description>
     </item>
     <item>
       <title>Cli</title>
-      <link>//localhost:1314/tags/cli.html</link>
+      <link>/tags/cli.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/cli.html</guid>
+      <guid>/tags/cli.html</guid>
       <description></description>
     </item>
     <item>
       <title>Cline</title>
-      <link>//localhost:1314/tags/cline.html</link>
+      <link>/tags/cline.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/cline.html</guid>
+      <guid>/tags/cline.html</guid>
       <description></description>
     </item>
     <item>
       <title>Code-Review</title>
-      <link>//localhost:1314/tags/code-review.html</link>
+      <link>/tags/code-review.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/code-review.html</guid>
+      <guid>/tags/code-review.html</guid>
       <description></description>
     </item>
     <item>
       <title>Codeium</title>
-      <link>//localhost:1314/tags/codeium.html</link>
+      <link>/tags/codeium.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/codeium.html</guid>
+      <guid>/tags/codeium.html</guid>
       <description></description>
     </item>
     <item>
       <title>Codex</title>
-      <link>//localhost:1314/tags/codex.html</link>
+      <link>/tags/codex.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/codex.html</guid>
+      <guid>/tags/codex.html</guid>
       <description></description>
     </item>
     <item>
       <title>Cognitive-Dependency</title>
-      <link>//localhost:1314/tags/cognitive-dependency.html</link>
+      <link>/tags/cognitive-dependency.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/cognitive-dependency.html</guid>
+      <guid>/tags/cognitive-dependency.html</guid>
       <description></description>
     </item>
     <item>
       <title>Community</title>
-      <link>//localhost:1314/tags/community.html</link>
+      <link>/tags/community.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/community.html</guid>
+      <guid>/tags/community.html</guid>
       <description></description>
     </item>
     <item>
       <title>Community-Discussion</title>
-      <link>//localhost:1314/tags/community-discussion.html</link>
+      <link>/tags/community-discussion.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/community-discussion.html</guid>
+      <guid>/tags/community-discussion.html</guid>
       <description></description>
     </item>
     <item>
       <title>Comparison</title>
-      <link>//localhost:1314/tags/comparison.html</link>
+      <link>/tags/comparison.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/comparison.html</guid>
+      <guid>/tags/comparison.html</guid>
       <description></description>
     </item>
     <item>
       <title>Context-Engineering</title>
-      <link>//localhost:1314/tags/context-engineering.html</link>
+      <link>/tags/context-engineering.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/context-engineering.html</guid>
+      <guid>/tags/context-engineering.html</guid>
       <description></description>
     </item>
     <item>
       <title>Context-Management</title>
-      <link>//localhost:1314/tags/context-management.html</link>
+      <link>/tags/context-management.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/context-management.html</guid>
+      <guid>/tags/context-management.html</guid>
       <description></description>
     </item>
     <item>
       <title>Context-Window</title>
-      <link>//localhost:1314/tags/context-window.html</link>
+      <link>/tags/context-window.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/context-window.html</guid>
+      <guid>/tags/context-window.html</guid>
       <description></description>
     </item>
     <item>
       <title>Contributions</title>
-      <link>//localhost:1314/tags/contributions.html</link>
+      <link>/tags/contributions.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/contributions.html</guid>
+      <guid>/tags/contributions.html</guid>
       <description></description>
     </item>
     <item>
       <title>Converts</title>
-      <link>//localhost:1314/tags/converts.html</link>
+      <link>/tags/converts.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/converts.html</guid>
+      <guid>/tags/converts.html</guid>
       <description></description>
     </item>
     <item>
       <title>Copilot</title>
-      <link>//localhost:1314/tags/copilot.html</link>
+      <link>/tags/copilot.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/copilot.html</guid>
+      <guid>/tags/copilot.html</guid>
       <description></description>
     </item>
     <item>
       <title>Core-Loop</title>
-      <link>//localhost:1314/tags/core-loop.html</link>
+      <link>/tags/core-loop.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/core-loop.html</guid>
+      <guid>/tags/core-loop.html</guid>
       <description></description>
     </item>
     <item>
       <title>Cost-Optimization</title>
-      <link>//localhost:1314/tags/cost-optimization.html</link>
+      <link>/tags/cost-optimization.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/cost-optimization.html</guid>
+      <guid>/tags/cost-optimization.html</guid>
       <description></description>
     </item>
     <item>
       <title>Costs</title>
-      <link>//localhost:1314/tags/costs.html</link>
+      <link>/tags/costs.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/costs.html</guid>
+      <guid>/tags/costs.html</guid>
       <description></description>
     </item>
     <item>
       <title>Criticism</title>
-      <link>//localhost:1314/tags/criticism.html</link>
+      <link>/tags/criticism.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/criticism.html</guid>
+      <guid>/tags/criticism.html</guid>
       <description></description>
     </item>
     <item>
       <title>Cursor</title>
-      <link>//localhost:1314/tags/cursor.html</link>
+      <link>/tags/cursor.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/cursor.html</guid>
+      <guid>/tags/cursor.html</guid>
       <description></description>
     </item>
     <item>
       <title>Data</title>
-      <link>//localhost:1314/tags/data.html</link>
+      <link>/tags/data.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/data.html</guid>
+      <guid>/tags/data.html</guid>
       <description></description>
     </item>
     <item>
       <title>Debate</title>
-      <link>//localhost:1314/tags/debate.html</link>
+      <link>/tags/debate.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/debate.html</guid>
+      <guid>/tags/debate.html</guid>
       <description></description>
     </item>
     <item>
       <title>Decision-Making</title>
-      <link>//localhost:1314/tags/decision-making.html</link>
+      <link>/tags/decision-making.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/decision-making.html</guid>
+      <guid>/tags/decision-making.html</guid>
       <description></description>
     </item>
     <item>
       <title>Deepseek</title>
-      <link>//localhost:1314/tags/deepseek.html</link>
+      <link>/tags/deepseek.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/deepseek.html</guid>
+      <guid>/tags/deepseek.html</guid>
       <description></description>
     </item>
     <item>
       <title>Degradation</title>
-      <link>//localhost:1314/tags/degradation.html</link>
+      <link>/tags/degradation.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/degradation.html</guid>
+      <guid>/tags/degradation.html</guid>
       <description></description>
     </item>
     <item>
       <title>Delegation</title>
-      <link>//localhost:1314/tags/delegation.html</link>
+      <link>/tags/delegation.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/delegation.html</guid>
+      <guid>/tags/delegation.html</guid>
       <description></description>
     </item>
     <item>
       <title>Developer-Experience</title>
-      <link>//localhost:1314/tags/developer-experience.html</link>
+      <link>/tags/developer-experience.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/developer-experience.html</guid>
+      <guid>/tags/developer-experience.html</guid>
       <description></description>
     </item>
     <item>
       <title>Developer-Role</title>
-      <link>//localhost:1314/tags/developer-role.html</link>
+      <link>/tags/developer-role.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/developer-role.html</guid>
+      <guid>/tags/developer-role.html</guid>
       <description></description>
     </item>
     <item>
       <title>Drift</title>
-      <link>//localhost:1314/tags/drift.html</link>
+      <link>/tags/drift.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/drift.html</guid>
+      <guid>/tags/drift.html</guid>
       <description></description>
     </item>
     <item>
       <title>Economics</title>
-      <link>//localhost:1314/tags/economics.html</link>
+      <link>/tags/economics.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/economics.html</guid>
+      <guid>/tags/economics.html</guid>
       <description></description>
     </item>
     <item>
       <title>Education</title>
-      <link>//localhost:1314/tags/education.html</link>
+      <link>/tags/education.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/education.html</guid>
+      <guid>/tags/education.html</guid>
       <description></description>
     </item>
     <item>
       <title>Engineering-Identity</title>
-      <link>//localhost:1314/tags/engineering-identity.html</link>
+      <link>/tags/engineering-identity.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/engineering-identity.html</guid>
+      <guid>/tags/engineering-identity.html</guid>
       <description></description>
     </item>
     <item>
       <title>Enterprise</title>
-      <link>//localhost:1314/tags/enterprise.html</link>
+      <link>/tags/enterprise.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/enterprise.html</guid>
+      <guid>/tags/enterprise.html</guid>
       <description></description>
     </item>
     <item>
       <title>Expert-Techniques</title>
-      <link>//localhost:1314/tags/expert-techniques.html</link>
+      <link>/tags/expert-techniques.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/expert-techniques.html</guid>
+      <guid>/tags/expert-techniques.html</guid>
       <description></description>
     </item>
     <item>
       <title>Expertise</title>
-      <link>//localhost:1314/tags/expertise.html</link>
+      <link>/tags/expertise.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/expertise.html</guid>
+      <guid>/tags/expertise.html</guid>
       <description></description>
     </item>
     <item>
       <title>Failure-Modes</title>
-      <link>//localhost:1314/tags/failure-modes.html</link>
+      <link>/tags/failure-modes.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/failure-modes.html</guid>
+      <guid>/tags/failure-modes.html</guid>
       <description></description>
     </item>
     <item>
       <title>Fundamentals</title>
-      <link>//localhost:1314/tags/fundamentals.html</link>
+      <link>/tags/fundamentals.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/fundamentals.html</guid>
+      <guid>/tags/fundamentals.html</guid>
       <description></description>
     </item>
     <item>
       <title>Gemini</title>
-      <link>//localhost:1314/tags/gemini.html</link>
+      <link>/tags/gemini.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/gemini.html</guid>
+      <guid>/tags/gemini.html</guid>
       <description></description>
     </item>
     <item>
       <title>Getting-Started</title>
-      <link>//localhost:1314/tags/getting-started.html</link>
+      <link>/tags/getting-started.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/getting-started.html</guid>
+      <guid>/tags/getting-started.html</guid>
       <description></description>
     </item>
     <item>
       <title>Git</title>
-      <link>//localhost:1314/tags/git.html</link>
+      <link>/tags/git.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/git.html</guid>
+      <guid>/tags/git.html</guid>
       <description></description>
     </item>
     <item>
       <title>Google</title>
-      <link>//localhost:1314/tags/google.html</link>
+      <link>/tags/google.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/google.html</guid>
+      <guid>/tags/google.html</guid>
       <description></description>
     </item>
     <item>
       <title>Harness-Engineering</title>
-      <link>//localhost:1314/tags/harness-engineering.html</link>
+      <link>/tags/harness-engineering.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/harness-engineering.html</guid>
+      <guid>/tags/harness-engineering.html</guid>
       <description></description>
     </item>
     <item>
       <title>Honest-Assessment</title>
-      <link>//localhost:1314/tags/honest-assessment.html</link>
+      <link>/tags/honest-assessment.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/honest-assessment.html</guid>
+      <guid>/tags/honest-assessment.html</guid>
       <description></description>
     </item>
     <item>
       <title>Human-in-the-Loop</title>
-      <link>//localhost:1314/tags/human-in-the-loop.html</link>
+      <link>/tags/human-in-the-loop.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/human-in-the-loop.html</guid>
+      <guid>/tags/human-in-the-loop.html</guid>
       <description></description>
     </item>
     <item>
       <title>Ide</title>
-      <link>//localhost:1314/tags/ide.html</link>
+      <link>/tags/ide.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/ide.html</guid>
+      <guid>/tags/ide.html</guid>
       <description></description>
     </item>
     <item>
       <title>Ide-Tools</title>
-      <link>//localhost:1314/tags/ide-tools.html</link>
+      <link>/tags/ide-tools.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/ide-tools.html</guid>
+      <guid>/tags/ide-tools.html</guid>
       <description></description>
     </item>
     <item>
       <title>Industry-Trends</title>
-      <link>//localhost:1314/tags/industry-trends.html</link>
+      <link>/tags/industry-trends.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/industry-trends.html</guid>
+      <guid>/tags/industry-trends.html</guid>
       <description></description>
     </item>
     <item>
       <title>Infrastructure</title>
-      <link>//localhost:1314/tags/infrastructure.html</link>
+      <link>/tags/infrastructure.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/infrastructure.html</guid>
+      <guid>/tags/infrastructure.html</guid>
       <description></description>
     </item>
     <item>
       <title>Instructions</title>
-      <link>//localhost:1314/tags/instructions.html</link>
+      <link>/tags/instructions.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/instructions.html</guid>
+      <guid>/tags/instructions.html</guid>
       <description></description>
     </item>
     <item>
       <title>Interoperability</title>
-      <link>//localhost:1314/tags/interoperability.html</link>
+      <link>/tags/interoperability.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/interoperability.html</guid>
+      <guid>/tags/interoperability.html</guid>
       <description></description>
     </item>
     <item>
       <title>Junior-Developers</title>
-      <link>//localhost:1314/tags/junior-developers.html</link>
+      <link>/tags/junior-developers.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/junior-developers.html</guid>
+      <guid>/tags/junior-developers.html</guid>
       <description></description>
     </item>
     <item>
       <title>Karpathy</title>
-      <link>//localhost:1314/tags/karpathy.html</link>
+      <link>/tags/karpathy.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/karpathy.html</guid>
+      <guid>/tags/karpathy.html</guid>
       <description></description>
     </item>
     <item>
       <title>Kiro</title>
-      <link>//localhost:1314/tags/kiro.html</link>
+      <link>/tags/kiro.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/kiro.html</guid>
+      <guid>/tags/kiro.html</guid>
       <description></description>
     </item>
     <item>
       <title>Learning</title>
-      <link>//localhost:1314/tags/learning.html</link>
+      <link>/tags/learning.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/learning.html</guid>
+      <guid>/tags/learning.html</guid>
       <description></description>
     </item>
     <item>
       <title>Learning-Curve</title>
-      <link>//localhost:1314/tags/learning-curve.html</link>
+      <link>/tags/learning-curve.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/learning-curve.html</guid>
+      <guid>/tags/learning-curve.html</guid>
       <description></description>
     </item>
     <item>
       <title>Limitations</title>
-      <link>//localhost:1314/tags/limitations.html</link>
+      <link>/tags/limitations.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/limitations.html</guid>
+      <guid>/tags/limitations.html</guid>
       <description></description>
     </item>
     <item>
       <title>Llama</title>
-      <link>//localhost:1314/tags/llama.html</link>
+      <link>/tags/llama.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/llama.html</guid>
+      <guid>/tags/llama.html</guid>
       <description></description>
     </item>
     <item>
       <title>Management-Analogy</title>
-      <link>//localhost:1314/tags/management-analogy.html</link>
+      <link>/tags/management-analogy.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/management-analogy.html</guid>
+      <guid>/tags/management-analogy.html</guid>
       <description></description>
     </item>
     <item>
       <title>Mcp</title>
-      <link>//localhost:1314/tags/mcp.html</link>
+      <link>/tags/mcp.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/mcp.html</guid>
+      <guid>/tags/mcp.html</guid>
       <description></description>
     </item>
     <item>
       <title>Memory</title>
-      <link>//localhost:1314/tags/memory.html</link>
+      <link>/tags/memory.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/memory.html</guid>
+      <guid>/tags/memory.html</guid>
       <description></description>
     </item>
     <item>
       <title>Mistral</title>
-      <link>//localhost:1314/tags/mistral.html</link>
+      <link>/tags/mistral.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/mistral.html</guid>
+      <guid>/tags/mistral.html</guid>
       <description></description>
     </item>
     <item>
       <title>Model-Agnostic</title>
-      <link>//localhost:1314/tags/model-agnostic.html</link>
+      <link>/tags/model-agnostic.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/model-agnostic.html</guid>
+      <guid>/tags/model-agnostic.html</guid>
       <description></description>
     </item>
     <item>
       <title>Model-Quality</title>
-      <link>//localhost:1314/tags/model-quality.html</link>
+      <link>/tags/model-quality.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/model-quality.html</guid>
+      <guid>/tags/model-quality.html</guid>
       <description></description>
     </item>
     <item>
       <title>Model-Releases</title>
-      <link>//localhost:1314/tags/model-releases.html</link>
+      <link>/tags/model-releases.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/model-releases.html</guid>
+      <guid>/tags/model-releases.html</guid>
       <description></description>
     </item>
     <item>
       <title>Model-Routing</title>
-      <link>//localhost:1314/tags/model-routing.html</link>
+      <link>/tags/model-routing.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/model-routing.html</guid>
+      <guid>/tags/model-routing.html</guid>
       <description></description>
     </item>
     <item>
       <title>Model-Selection</title>
-      <link>//localhost:1314/tags/model-selection.html</link>
+      <link>/tags/model-selection.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/model-selection.html</guid>
+      <guid>/tags/model-selection.html</guid>
       <description></description>
     </item>
     <item>
       <title>Models</title>
-      <link>//localhost:1314/tags/models.html</link>
+      <link>/tags/models.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/models.html</guid>
+      <guid>/tags/models.html</guid>
       <description></description>
     </item>
     <item>
       <title>Multi-Agent</title>
-      <link>//localhost:1314/tags/multi-agent.html</link>
+      <link>/tags/multi-agent.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/multi-agent.html</guid>
+      <guid>/tags/multi-agent.html</guid>
       <description></description>
     </item>
     <item>
       <title>Multi-Model</title>
-      <link>//localhost:1314/tags/multi-model.html</link>
+      <link>/tags/multi-model.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/multi-model.html</guid>
+      <guid>/tags/multi-model.html</guid>
       <description></description>
     </item>
     <item>
       <title>Open-Questions</title>
-      <link>//localhost:1314/tags/open-questions.html</link>
+      <link>/tags/open-questions.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/open-questions.html</guid>
+      <guid>/tags/open-questions.html</guid>
       <description></description>
     </item>
     <item>
       <title>Open-Source</title>
-      <link>//localhost:1314/tags/open-source.html</link>
+      <link>/tags/open-source.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/open-source.html</guid>
+      <guid>/tags/open-source.html</guid>
       <description></description>
     </item>
     <item>
       <title>Openai</title>
-      <link>//localhost:1314/tags/openai.html</link>
+      <link>/tags/openai.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/openai.html</guid>
+      <guid>/tags/openai.html</guid>
       <description></description>
     </item>
     <item>
       <title>Orchestration</title>
-      <link>//localhost:1314/tags/orchestration.html</link>
+      <link>/tags/orchestration.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/orchestration.html</guid>
+      <guid>/tags/orchestration.html</guid>
       <description></description>
     </item>
     <item>
       <title>Parallel</title>
-      <link>//localhost:1314/tags/parallel.html</link>
+      <link>/tags/parallel.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/parallel.html</guid>
+      <guid>/tags/parallel.html</guid>
       <description></description>
     </item>
     <item>
       <title>Parallel-Agents</title>
-      <link>//localhost:1314/tags/parallel-agents.html</link>
+      <link>/tags/parallel-agents.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/parallel-agents.html</guid>
+      <guid>/tags/parallel-agents.html</guid>
       <description></description>
     </item>
     <item>
       <title>Power-Users</title>
-      <link>//localhost:1314/tags/power-users.html</link>
+      <link>/tags/power-users.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/power-users.html</guid>
+      <guid>/tags/power-users.html</guid>
       <description></description>
     </item>
     <item>
       <title>Practitioner-Insights</title>
-      <link>//localhost:1314/tags/practitioner-insights.html</link>
+      <link>/tags/practitioner-insights.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/practitioner-insights.html</guid>
+      <guid>/tags/practitioner-insights.html</guid>
       <description></description>
     </item>
     <item>
       <title>Pricing</title>
-      <link>//localhost:1314/tags/pricing.html</link>
+      <link>/tags/pricing.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/pricing.html</guid>
+      <guid>/tags/pricing.html</guid>
       <description></description>
     </item>
     <item>
       <title>Programming-Languages</title>
-      <link>//localhost:1314/tags/programming-languages.html</link>
+      <link>/tags/programming-languages.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/programming-languages.html</guid>
+      <guid>/tags/programming-languages.html</guid>
       <description></description>
     </item>
     <item>
       <title>Prompts</title>
-      <link>//localhost:1314/tags/prompts.html</link>
+      <link>/tags/prompts.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/prompts.html</guid>
+      <guid>/tags/prompts.html</guid>
       <description></description>
     </item>
     <item>
       <title>Quality</title>
-      <link>//localhost:1314/tags/quality.html</link>
+      <link>/tags/quality.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/quality.html</guid>
+      <guid>/tags/quality.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reasoning</title>
+      <link>/tags/reasoning.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/reasoning.html</guid>
       <description></description>
     </item>
     <item>
       <title>Reliability</title>
-      <link>//localhost:1314/tags/reliability.html</link>
+      <link>/tags/reliability.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/reliability.html</guid>
+      <guid>/tags/reliability.html</guid>
       <description></description>
     </item>
     <item>
       <title>Research</title>
-      <link>//localhost:1314/tags/research.html</link>
+      <link>/tags/research.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/research.html</guid>
+      <guid>/tags/research.html</guid>
       <description></description>
     </item>
     <item>
       <title>Setup</title>
-      <link>//localhost:1314/tags/setup.html</link>
+      <link>/tags/setup.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/setup.html</guid>
+      <guid>/tags/setup.html</guid>
       <description></description>
     </item>
     <item>
       <title>Skeptics</title>
-      <link>//localhost:1314/tags/skeptics.html</link>
+      <link>/tags/skeptics.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/skeptics.html</guid>
+      <guid>/tags/skeptics.html</guid>
       <description></description>
     </item>
     <item>
       <title>Skill-Atrophy</title>
-      <link>//localhost:1314/tags/skill-atrophy.html</link>
+      <link>/tags/skill-atrophy.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/skill-atrophy.html</guid>
+      <guid>/tags/skill-atrophy.html</guid>
       <description></description>
     </item>
     <item>
       <title>Skill-Development</title>
-      <link>//localhost:1314/tags/skill-development.html</link>
+      <link>/tags/skill-development.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/skill-development.html</guid>
+      <guid>/tags/skill-development.html</guid>
       <description></description>
     </item>
     <item>
       <title>Skill-Formation</title>
-      <link>//localhost:1314/tags/skill-formation.html</link>
+      <link>/tags/skill-formation.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/skill-formation.html</guid>
+      <guid>/tags/skill-formation.html</guid>
       <description></description>
     </item>
     <item>
       <title>Skills</title>
-      <link>//localhost:1314/tags/skills.html</link>
+      <link>/tags/skills.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/skills.html</guid>
+      <guid>/tags/skills.html</guid>
       <description></description>
     </item>
     <item>
       <title>Spec-Driven</title>
-      <link>//localhost:1314/tags/spec-driven.html</link>
+      <link>/tags/spec-driven.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/spec-driven.html</guid>
+      <guid>/tags/spec-driven.html</guid>
       <description></description>
     </item>
     <item>
       <title>Sustainability</title>
-      <link>//localhost:1314/tags/sustainability.html</link>
+      <link>/tags/sustainability.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/sustainability.html</guid>
+      <guid>/tags/sustainability.html</guid>
       <description></description>
     </item>
     <item>
       <title>Swarms</title>
-      <link>//localhost:1314/tags/swarms.html</link>
+      <link>/tags/swarms.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/swarms.html</guid>
+      <guid>/tags/swarms.html</guid>
       <description></description>
     </item>
     <item>
       <title>Task-Scoping</title>
-      <link>//localhost:1314/tags/task-scoping.html</link>
+      <link>/tags/task-scoping.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/task-scoping.html</guid>
+      <guid>/tags/task-scoping.html</guid>
       <description></description>
     </item>
     <item>
       <title>Terminal</title>
-      <link>//localhost:1314/tags/terminal.html</link>
+      <link>/tags/terminal.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/terminal.html</guid>
+      <guid>/tags/terminal.html</guid>
       <description></description>
     </item>
     <item>
       <title>Test-Design</title>
-      <link>//localhost:1314/tags/test-design.html</link>
+      <link>/tags/test-design.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/test-design.html</guid>
+      <guid>/tags/test-design.html</guid>
       <description></description>
     </item>
     <item>
       <title>Testing</title>
-      <link>//localhost:1314/tags/testing.html</link>
+      <link>/tags/testing.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/testing.html</guid>
+      <guid>/tags/testing.html</guid>
       <description></description>
     </item>
     <item>
       <title>Tool-Comparison</title>
-      <link>//localhost:1314/tags/tool-comparison.html</link>
+      <link>/tags/tool-comparison.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/tool-comparison.html</guid>
+      <guid>/tags/tool-comparison.html</guid>
       <description></description>
     </item>
     <item>
       <title>Tooling</title>
-      <link>//localhost:1314/tags/tooling.html</link>
+      <link>/tags/tooling.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/tooling.html</guid>
+      <guid>/tags/tooling.html</guid>
       <description></description>
     </item>
     <item>
       <title>Toolmakers</title>
-      <link>//localhost:1314/tags/toolmakers.html</link>
+      <link>/tags/toolmakers.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/toolmakers.html</guid>
+      <guid>/tags/toolmakers.html</guid>
       <description></description>
     </item>
     <item>
       <title>Tools</title>
-      <link>//localhost:1314/tags/tools.html</link>
+      <link>/tags/tools.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/tools.html</guid>
+      <guid>/tags/tools.html</guid>
       <description></description>
     </item>
     <item>
       <title>Verification</title>
-      <link>//localhost:1314/tags/verification.html</link>
+      <link>/tags/verification.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/verification.html</guid>
+      <guid>/tags/verification.html</guid>
       <description></description>
     </item>
     <item>
       <title>Vibe-Coding</title>
-      <link>//localhost:1314/tags/vibe-coding.html</link>
+      <link>/tags/vibe-coding.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/vibe-coding.html</guid>
+      <guid>/tags/vibe-coding.html</guid>
       <description></description>
     </item>
     <item>
       <title>Vs-Code</title>
-      <link>//localhost:1314/tags/vs-code.html</link>
+      <link>/tags/vs-code.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/vs-code.html</guid>
+      <guid>/tags/vs-code.html</guid>
       <description></description>
     </item>
     <item>
       <title>Windsurf</title>
-      <link>//localhost:1314/tags/windsurf.html</link>
+      <link>/tags/windsurf.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/windsurf.html</guid>
+      <guid>/tags/windsurf.html</guid>
       <description></description>
     </item>
     <item>
       <title>Workflow</title>
-      <link>//localhost:1314/tags/workflow.html</link>
+      <link>/tags/workflow.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/workflow.html</guid>
+      <guid>/tags/workflow.html</guid>
       <description></description>
     </item>
     <item>
       <title>Working-Memory</title>
-      <link>//localhost:1314/tags/working-memory.html</link>
+      <link>/tags/working-memory.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/working-memory.html</guid>
+      <guid>/tags/working-memory.html</guid>
       <description></description>
     </item>
     <item>
       <title>Agent-Teams</title>
-      <link>//localhost:1314/tags/agent-teams.html</link>
+      <link>/tags/agent-teams.html</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/agent-teams.html</guid>
+      <guid>/tags/agent-teams.html</guid>
       <description></description>
     </item>
     <item>
       <title>Anthropic</title>
-      <link>//localhost:1314/tags/anthropic.html</link>
+      <link>/tags/anthropic.html</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/anthropic.html</guid>
+      <guid>/tags/anthropic.html</guid>
       <description></description>
     </item>
     <item>
       <title>Claude</title>
-      <link>//localhost:1314/tags/claude.html</link>
+      <link>/tags/claude.html</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/claude.html</guid>
+      <guid>/tags/claude.html</guid>
       <description></description>
     </item>
     <item>
       <title>Industry-Analysis</title>
-      <link>//localhost:1314/tags/industry-analysis.html</link>
+      <link>/tags/industry-analysis.html</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/industry-analysis.html</guid>
+      <guid>/tags/industry-analysis.html</guid>
       <description></description>
     </item>
     <item>
       <title>Long-Context</title>
-      <link>//localhost:1314/tags/long-context.html</link>
+      <link>/tags/long-context.html</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/long-context.html</guid>
+      <guid>/tags/long-context.html</guid>
       <description></description>
     </item>
     <item>
       <title>Meta</title>
-      <link>//localhost:1314/tags/meta.html</link>
+      <link>/tags/meta.html</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/meta.html</guid>
+      <guid>/tags/meta.html</guid>
       <description></description>
     </item>
     <item>
       <title>Model-Release</title>
-      <link>//localhost:1314/tags/model-release.html</link>
+      <link>/tags/model-release.html</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/model-release.html</guid>
+      <guid>/tags/model-release.html</guid>
       <description></description>
     </item>
     <item>
       <title>Open-Source-Ai</title>
-      <link>//localhost:1314/tags/open-source-ai.html</link>
+      <link>/tags/open-source-ai.html</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/open-source-ai.html</guid>
+      <guid>/tags/open-source-ai.html</guid>
       <description></description>
     </item>
     <item>
       <title>Opus</title>
-      <link>//localhost:1314/tags/opus.html</link>
+      <link>/tags/opus.html</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/opus.html</guid>
+      <guid>/tags/opus.html</guid>
       <description></description>
     </item>
     <item>
       <title>Service-Quality</title>
-      <link>//localhost:1314/tags/service-quality.html</link>
+      <link>/tags/service-quality.html</link>
       <pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/service-quality.html</guid>
+      <guid>/tags/service-quality.html</guid>
       <description></description>
     </item>
     <item>
       <title>Agentic-Vision</title>
-      <link>//localhost:1314/tags/agentic-vision.html</link>
+      <link>/tags/agentic-vision.html</link>
       <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/agentic-vision.html</guid>
+      <guid>/tags/agentic-vision.html</guid>
       <description></description>
     </item>
     <item>
       <title>Developer-Tools</title>
-      <link>//localhost:1314/tags/developer-tools.html</link>
+      <link>/tags/developer-tools.html</link>
       <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/developer-tools.html</guid>
+      <guid>/tags/developer-tools.html</guid>
       <description></description>
     </item>
     <item>
       <title>Multimodal</title>
-      <link>//localhost:1314/tags/multimodal.html</link>
+      <link>/tags/multimodal.html</link>
       <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/multimodal.html</guid>
+      <guid>/tags/multimodal.html</guid>
       <description></description>
     </item>
     <item>
       <title>Obsidian</title>
-      <link>//localhost:1314/tags/obsidian.html</link>
+      <link>/tags/obsidian.html</link>
       <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/obsidian.html</guid>
+      <guid>/tags/obsidian.html</guid>
       <description></description>
     </item>
     <item>
       <title>Spatial-Computing</title>
-      <link>//localhost:1314/tags/spatial-computing.html</link>
+      <link>/tags/spatial-computing.html</link>
       <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/spatial-computing.html</guid>
+      <guid>/tags/spatial-computing.html</guid>
       <description></description>
     </item>
     <item>
       <title>Ai-Impact</title>
-      <link>//localhost:1314/tags/ai-impact.html</link>
+      <link>/tags/ai-impact.html</link>
       <pubDate>Mon, 02 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/ai-impact.html</guid>
+      <guid>/tags/ai-impact.html</guid>
       <description></description>
     </item>
     <item>
       <title>Agents</title>
-      <link>//localhost:1314/tags/agents.html</link>
+      <link>/tags/agents.html</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/agents.html</guid>
+      <guid>/tags/agents.html</guid>
       <description></description>
     </item>
     <item>
       <title>Agi</title>
-      <link>//localhost:1314/tags/agi.html</link>
+      <link>/tags/agi.html</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/agi.html</guid>
+      <guid>/tags/agi.html</guid>
       <description></description>
     </item>
     <item>
       <title>Ai-Landscape</title>
-      <link>//localhost:1314/tags/ai-landscape.html</link>
+      <link>/tags/ai-landscape.html</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/ai-landscape.html</guid>
+      <guid>/tags/ai-landscape.html</guid>
       <description></description>
     </item>
     <item>
       <title>China-Ai</title>
-      <link>//localhost:1314/tags/china-ai.html</link>
+      <link>/tags/china-ai.html</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/china-ai.html</guid>
+      <guid>/tags/china-ai.html</guid>
       <description></description>
     </item>
     <item>
       <title>Coding-Tools</title>
-      <link>//localhost:1314/tags/coding-tools.html</link>
+      <link>/tags/coding-tools.html</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/coding-tools.html</guid>
+      <guid>/tags/coding-tools.html</guid>
       <description></description>
     </item>
     <item>
       <title>Podcast</title>
-      <link>//localhost:1314/tags/podcast.html</link>
+      <link>/tags/podcast.html</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/podcast.html</guid>
+      <guid>/tags/podcast.html</guid>
       <description></description>
     </item>
     <item>
       <title>Scaling-Laws</title>
-      <link>//localhost:1314/tags/scaling-laws.html</link>
+      <link>/tags/scaling-laws.html</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/scaling-laws.html</guid>
+      <guid>/tags/scaling-laws.html</guid>
       <description></description>
     </item>
     <item>
       <title>Code-Quality</title>
-      <link>//localhost:1314/tags/code-quality.html</link>
+      <link>/tags/code-quality.html</link>
       <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/code-quality.html</guid>
+      <guid>/tags/code-quality.html</guid>
       <description></description>
     </item>
     <item>
       <title>Productivity</title>
-      <link>//localhost:1314/tags/productivity.html</link>
+      <link>/tags/productivity.html</link>
       <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/productivity.html</guid>
+      <guid>/tags/productivity.html</guid>
       <description></description>
     </item>
     <item>
       <title>Evals</title>
-      <link>//localhost:1314/tags/evals.html</link>
+      <link>/tags/evals.html</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/evals.html</guid>
+      <guid>/tags/evals.html</guid>
       <description></description>
     </item>
     <item>
       <title>Evaluation</title>
-      <link>//localhost:1314/tags/evaluation.html</link>
+      <link>/tags/evaluation.html</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/evaluation.html</guid>
+      <guid>/tags/evaluation.html</guid>
       <description></description>
     </item>
     <item>
       <title>Model-Degradation</title>
-      <link>//localhost:1314/tags/model-degradation.html</link>
+      <link>/tags/model-degradation.html</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/model-degradation.html</guid>
+      <guid>/tags/model-degradation.html</guid>
       <description></description>
     </item>
     <item>
       <title>Next-Js</title>
-      <link>//localhost:1314/tags/next-js.html</link>
+      <link>/tags/next-js.html</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/next-js.html</guid>
+      <guid>/tags/next-js.html</guid>
       <description></description>
     </item>
     <item>
       <title>Prompt-Engineering</title>
-      <link>//localhost:1314/tags/prompt-engineering.html</link>
+      <link>/tags/prompt-engineering.html</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/prompt-engineering.html</guid>
+      <guid>/tags/prompt-engineering.html</guid>
       <description></description>
     </item>
     <item>
       <title>Swe-Bench</title>
-      <link>//localhost:1314/tags/swe-bench.html</link>
+      <link>/tags/swe-bench.html</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/swe-bench.html</guid>
+      <guid>/tags/swe-bench.html</guid>
       <description></description>
     </item>
     <item>
       <title>Vercel</title>
-      <link>//localhost:1314/tags/vercel.html</link>
+      <link>/tags/vercel.html</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/vercel.html</guid>
+      <guid>/tags/vercel.html</guid>
       <description></description>
     </item>
     <item>
       <title>Tool-Routing</title>
-      <link>//localhost:1314/tags/tool-routing.html</link>
+      <link>/tags/tool-routing.html</link>
       <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/tool-routing.html</guid>
+      <guid>/tags/tool-routing.html</guid>
       <description></description>
     </item>
     <item>
       <title>Sdlc</title>
-      <link>//localhost:1314/tags/sdlc.html</link>
+      <link>/tags/sdlc.html</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/sdlc.html</guid>
+      <guid>/tags/sdlc.html</guid>
       <description></description>
     </item>
     <item>
       <title>Workflow-Template</title>
-      <link>//localhost:1314/tags/workflow-template.html</link>
+      <link>/tags/workflow-template.html</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/workflow-template.html</guid>
+      <guid>/tags/workflow-template.html</guid>
       <description></description>
     </item>
     <item>
       <title>Agentic-Patterns</title>
-      <link>//localhost:1314/tags/agentic-patterns.html</link>
+      <link>/tags/agentic-patterns.html</link>
       <pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/agentic-patterns.html</guid>
+      <guid>/tags/agentic-patterns.html</guid>
       <description></description>
     </item>
     <item>
       <title>Production-Engineering</title>
-      <link>//localhost:1314/tags/production-engineering.html</link>
+      <link>/tags/production-engineering.html</link>
       <pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/production-engineering.html</guid>
+      <guid>/tags/production-engineering.html</guid>
       <description></description>
     </item>
     <item>
       <title>Security</title>
-      <link>//localhost:1314/tags/security.html</link>
+      <link>/tags/security.html</link>
       <pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/security.html</guid>
+      <guid>/tags/security.html</guid>
       <description></description>
     </item>
     <item>
       <title>Ai-Bubble</title>
-      <link>//localhost:1314/tags/ai-bubble.html</link>
+      <link>/tags/ai-bubble.html</link>
       <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/ai-bubble.html</guid>
+      <guid>/tags/ai-bubble.html</guid>
       <description></description>
     </item>
     <item>
       <title>Data-Centers</title>
-      <link>//localhost:1314/tags/data-centers.html</link>
+      <link>/tags/data-centers.html</link>
       <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/data-centers.html</guid>
+      <guid>/tags/data-centers.html</guid>
       <description></description>
     </item>
     <item>
       <title>Devops</title>
-      <link>//localhost:1314/tags/devops.html</link>
+      <link>/tags/devops.html</link>
       <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/devops.html</guid>
+      <guid>/tags/devops.html</guid>
       <description></description>
     </item>
     <item>
       <title>Infrastructure-as-Code</title>
-      <link>//localhost:1314/tags/infrastructure-as-code.html</link>
+      <link>/tags/infrastructure-as-code.html</link>
       <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/infrastructure-as-code.html</guid>
+      <guid>/tags/infrastructure-as-code.html</guid>
       <description></description>
     </item>
     <item>
       <title>Skepticism</title>
-      <link>//localhost:1314/tags/skepticism.html</link>
+      <link>/tags/skepticism.html</link>
       <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/skepticism.html</guid>
+      <guid>/tags/skepticism.html</guid>
       <description></description>
     </item>
     <item>
       <title>Terraform</title>
-      <link>//localhost:1314/tags/terraform.html</link>
+      <link>/tags/terraform.html</link>
       <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/terraform.html</guid>
+      <guid>/tags/terraform.html</guid>
       <description></description>
     </item>
     <item>
       <title>Ai-Strategy</title>
-      <link>//localhost:1314/tags/ai-strategy.html</link>
+      <link>/tags/ai-strategy.html</link>
       <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/ai-strategy.html</guid>
+      <guid>/tags/ai-strategy.html</guid>
       <description></description>
     </item>
     <item>
       <title>Apple</title>
-      <link>//localhost:1314/tags/apple.html</link>
+      <link>/tags/apple.html</link>
       <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/apple.html</guid>
+      <guid>/tags/apple.html</guid>
       <description></description>
     </item>
     <item>
       <title>Industry-Partnerships</title>
-      <link>//localhost:1314/tags/industry-partnerships.html</link>
+      <link>/tags/industry-partnerships.html</link>
       <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/industry-partnerships.html</guid>
+      <guid>/tags/industry-partnerships.html</guid>
       <description></description>
     </item>
     <item>
       <title>Siri</title>
-      <link>//localhost:1314/tags/siri.html</link>
+      <link>/tags/siri.html</link>
       <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/siri.html</guid>
+      <guid>/tags/siri.html</guid>
       <description></description>
     </item>
     <item>
       <title>Ai-Coding-Tools</title>
-      <link>//localhost:1314/tags/ai-coding-tools.html</link>
+      <link>/tags/ai-coding-tools.html</link>
       <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/ai-coding-tools.html</guid>
+      <guid>/tags/ai-coding-tools.html</guid>
       <description></description>
     </item>
     <item>
       <title>Coding-Agents</title>
-      <link>//localhost:1314/tags/coding-agents.html</link>
+      <link>/tags/coding-agents.html</link>
       <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/coding-agents.html</guid>
+      <guid>/tags/coding-agents.html</guid>
       <description></description>
     </item>
     <item>
       <title>Demystification</title>
-      <link>//localhost:1314/tags/demystification.html</link>
+      <link>/tags/demystification.html</link>
       <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/demystification.html</guid>
+      <guid>/tags/demystification.html</guid>
       <description></description>
     </item>
     <item>
       <title>Tool-Calling</title>
-      <link>//localhost:1314/tags/tool-calling.html</link>
+      <link>/tags/tool-calling.html</link>
       <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/tool-calling.html</guid>
+      <guid>/tags/tool-calling.html</guid>
       <description></description>
     </item>
     <item>
       <title>Agentic-Frameworks</title>
-      <link>//localhost:1314/tags/agentic-frameworks.html</link>
+      <link>/tags/agentic-frameworks.html</link>
       <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/agentic-frameworks.html</guid>
+      <guid>/tags/agentic-frameworks.html</guid>
       <description></description>
     </item>
     <item>
       <title>Ai-Capabilities</title>
-      <link>//localhost:1314/tags/ai-capabilities.html</link>
+      <link>/tags/ai-capabilities.html</link>
       <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/ai-capabilities.html</guid>
+      <guid>/tags/ai-capabilities.html</guid>
       <description></description>
     </item>
     <item>
       <title>Memory-Systems</title>
-      <link>//localhost:1314/tags/memory-systems.html</link>
+      <link>/tags/memory-systems.html</link>
       <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/memory-systems.html</guid>
+      <guid>/tags/memory-systems.html</guid>
       <description></description>
     </item>
     <item>
       <title>Ai-Coding-Workflow</title>
-      <link>//localhost:1314/tags/ai-coding-workflow.html</link>
+      <link>/tags/ai-coding-workflow.html</link>
       <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/ai-coding-workflow.html</guid>
+      <guid>/tags/ai-coding-workflow.html</guid>
       <description></description>
     </item>
     <item>
       <title>Tool-Selection</title>
-      <link>//localhost:1314/tags/tool-selection.html</link>
+      <link>/tags/tool-selection.html</link>
       <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/tool-selection.html</guid>
+      <guid>/tags/tool-selection.html</guid>
       <description></description>
     </item>
     <item>
       <title>Model-Architecture</title>
-      <link>//localhost:1314/tags/model-architecture.html</link>
+      <link>/tags/model-architecture.html</link>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/model-architecture.html</guid>
+      <guid>/tags/model-architecture.html</guid>
       <description></description>
     </item>
     <item>
       <title>Research-Papers</title>
-      <link>//localhost:1314/tags/research-papers.html</link>
+      <link>/tags/research-papers.html</link>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/research-papers.html</guid>
+      <guid>/tags/research-papers.html</guid>
       <description></description>
     </item>
     <item>
       <title>Training-Efficiency</title>
-      <link>//localhost:1314/tags/training-efficiency.html</link>
+      <link>/tags/training-efficiency.html</link>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/training-efficiency.html</guid>
+      <guid>/tags/training-efficiency.html</guid>
       <description></description>
     </item>
     <item>
       <title>Business-Models</title>
-      <link>//localhost:1314/tags/business-models.html</link>
+      <link>/tags/business-models.html</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/business-models.html</guid>
+      <guid>/tags/business-models.html</guid>
       <description></description>
     </item>
     <item>
       <title>Venture-Capital</title>
-      <link>//localhost:1314/tags/venture-capital.html</link>
+      <link>/tags/venture-capital.html</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/venture-capital.html</guid>
+      <guid>/tags/venture-capital.html</guid>
       <description></description>
     </item>
     <item>
       <title>Code-Intelligence</title>
-      <link>//localhost:1314/tags/code-intelligence.html</link>
+      <link>/tags/code-intelligence.html</link>
       <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/code-intelligence.html</guid>
+      <guid>/tags/code-intelligence.html</guid>
       <description></description>
     </item>
     <item>
       <title>Lsp</title>
-      <link>//localhost:1314/tags/lsp.html</link>
+      <link>/tags/lsp.html</link>
       <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/lsp.html</guid>
+      <guid>/tags/lsp.html</guid>
       <description></description>
     </item>
     <item>
       <title>Plugins</title>
-      <link>//localhost:1314/tags/plugins.html</link>
+      <link>/tags/plugins.html</link>
       <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/plugins.html</guid>
+      <guid>/tags/plugins.html</guid>
       <description></description>
     </item>
     <item>
       <title>Meta-Cognition</title>
-      <link>//localhost:1314/tags/meta-cognition.html</link>
+      <link>/tags/meta-cognition.html</link>
       <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/meta-cognition.html</guid>
+      <guid>/tags/meta-cognition.html</guid>
       <description></description>
     </item>
     <item>
       <title>Developer-Workflows</title>
-      <link>//localhost:1314/tags/developer-workflows.html</link>
+      <link>/tags/developer-workflows.html</link>
       <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/developer-workflows.html</guid>
+      <guid>/tags/developer-workflows.html</guid>
       <description></description>
     </item>
     <item>
       <title>Future-of-Coding</title>
-      <link>//localhost:1314/tags/future-of-coding.html</link>
+      <link>/tags/future-of-coding.html</link>
       <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/future-of-coding.html</guid>
+      <guid>/tags/future-of-coding.html</guid>
       <description></description>
     </item>
     <item>
       <title>Open-Source-Models</title>
-      <link>//localhost:1314/tags/open-source-models.html</link>
+      <link>/tags/open-source-models.html</link>
       <pubDate>Tue, 02 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tags/open-source-models.html</guid>
+      <guid>/tags/open-source-models.html</guid>
       <description></description>
     </item>
   </channel>

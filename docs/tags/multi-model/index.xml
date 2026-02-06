@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Multi-Model on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/tags/multi-model.html</link>
+    <link>/tags/multi-model.html</link>
     <description>Recent content in Multi-Model on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/tags/multi-model/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/multi-model/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Amp Code</title>
-      <link>//localhost:1314/tools/amp.html</link>
+      <link>/tools/amp.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tools/amp.html</guid>
+      <guid>/tools/amp.html</guid>
       <description>&lt;p&gt;Amp Code is a coding agent built by the team behind Sourcegraph&amp;rsquo;s code intelligence platform. Available as a CLI, VS Code extension, and JetBrains plugin, it is the most explicit implementation of multi-model routing in a production coding tool. Rather than letting users pick a single model, Amp routes tasks automatically based on type &amp;ndash; sending planning, implementation, review, and search to whichever model is best suited for each.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-multi-model-architecture&#34;&gt;The Multi-Model Architecture&lt;/h2&gt;&#xA;&lt;p&gt;Amp&amp;rsquo;s core design principle is that no single model is best at everything. Different cognitive tasks &amp;ndash; planning, code generation, search, review &amp;ndash; have different performance profiles across models. Amp makes this explicit by maintaining named agent roles across three providers (Anthropic, OpenAI, Google):&lt;/p&gt;</description>
     </item>
     <item>
       <title>Model Selection</title>
-      <link>//localhost:1314/practices/model-selection.html</link>
+      <link>/practices/model-selection.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/practices/model-selection.html</guid>
+      <guid>/practices/model-selection.html</guid>
       <description>&lt;p&gt;Model selection is the skill of matching the right model to the right task. The gap between a well-chosen and poorly-chosen model often matters more than the quality of the prompt itself. As models proliferate and differentiate, this is no longer a set-and-forget decision &amp;ndash; it is an ongoing practice of matching capability to need.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-model-selection-is&#34;&gt;What Model Selection Is&lt;/h2&gt;&#xA;&lt;p&gt;Model selection means choosing which AI model (or combination of models) to use for a specific task, based on the task&amp;rsquo;s complexity, error tolerance, speed requirements, and cost constraints. It also means knowing when to switch models mid-task, when to use multiple models for cross-validation, and when to escalate from a cheap model to an expensive one.&lt;/p&gt;</description>
     </item>
   </channel>

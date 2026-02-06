@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Future-of-Coding on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/tags/future-of-coding.html</link>
+    <link>/tags/future-of-coding.html</link>
     <description>Recent content in Future-of-Coding on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 10 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/tags/future-of-coding/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/future-of-coding/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2026: The Year the IDE Died (Steve Yegge and Gene Kim)</title>
-      <link>//localhost:1314/sources/2025-12-10-year-ide-died.html</link>
+      <link>/sources/2025-12-10-year-ide-died.html</link>
       <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2025-12-10-year-ide-died.html</guid>
+      <guid>/sources/2025-12-10-year-ide-died.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This HN submission links to a YouTube talk by Steve Yegge and Gene Kim exploring how AI coding tools might replace the traditional IDE as the primary programming environment. The submitter (mikebiglan) frames the discussion around several key questions: how far IDEs will change, whether developers will still read and reason about code directly, and what the shift means for both senior developers and students entering the field.&lt;/p&gt;&#xA;&lt;p&gt;The talk argues that what we think of as the IDE today will not remain the primary programming tool of the future. The vision includes modularity and swarms of agents working in parallel, with context windows as a key architectural constraint. The speakers suggest that the transition is already underway, with AI-first and workflow-first environments replacing file-and-buffer-first approaches.&lt;/p&gt;</description>
     </item>
   </channel>

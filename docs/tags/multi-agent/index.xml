@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Multi-Agent on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/tags/multi-agent.html</link>
+    <link>/tags/multi-agent.html</link>
     <description>Recent content in Multi-Agent on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/tags/multi-agent/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/multi-agent/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Claude Code&#39;s New Hidden Feature: Swarms</title>
-      <link>//localhost:1314/sources/2026-01-24-claude-code-swarms.html</link>
+      <link>/sources/2026-01-24-claude-code-swarms.html</link>
       <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-24-claude-code-swarms.html</guid>
+      <guid>/sources/2026-01-24-claude-code-swarms.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;A tweet by @NicerInPerson revealed that Claude Code contains hidden multi-agent orchestration capabilities, colloquially referred to as &amp;ldquo;swarms.&amp;rdquo; The discovery, corroborated by a GitHub repository (claude-sneakpeek by mikekelly), showed that Anthropic had built native sub-agent coordination features including a TeammateTool, delegate mode for spawning background agents, and a team coordination system with messaging and task ownership. Rather than relying on third-party orchestration frameworks, these capabilities are built directly into Claude Code but gated behind feature flags not yet available in general release.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Agentic AI Handbook: Production-Ready Patterns</title>
-      <link>//localhost:1314/sources/2026-01-21-agentic-ai-handbook.html</link>
+      <link>/sources/2026-01-21-agentic-ai-handbook.html</link>
       <pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-21-agentic-ai-handbook.html</guid>
+      <guid>/sources/2026-01-21-agentic-ai-handbook.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;The Agentic AI Handbook provides a comprehensive taxonomy of production-ready patterns for building agentic AI systems. Its core definition frames an agent as an LLM wrapped in a loop that can observe state, call tools, record results, and decide when it is done. The handbook organizes patterns into eight categories covering orchestration and control, tool use, context and memory, feedback loops, UX and collaboration, reliability and evaluation, learning and adaptation, and security and safety.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Multi-Agent Patterns</title>
-      <link>//localhost:1314/practices/multi-agent.html</link>
+      <link>/practices/multi-agent.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/practices/multi-agent.html</guid>
+      <guid>/practices/multi-agent.html</guid>
       <description>&lt;p&gt;Multi-agent patterns involve running multiple AI agents simultaneously on related tasks. They represent the highest-throughput mode of AI-assisted development &amp;ndash; and the most complex. When they work, months of work happen in minutes. When they fail, you get merge conflicts, duplicated effort, and code that no single agent (or human) fully understands.&lt;/p&gt;&#xA;&lt;p&gt;The practice is still emerging. There is no consensus on when multi-agent is worth the overhead versus well-scoped single-agent work. But practitioners are converging on principles that separate productive multi-agent usage from expensive chaos.&lt;/p&gt;</description>
     </item>
     <item>
       <title>OpenAI Codex</title>
-      <link>//localhost:1314/tools/codex.html</link>
+      <link>/tools/codex.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tools/codex.html</guid>
+      <guid>/tools/codex.html</guid>
       <description>&lt;p&gt;OpenAI Codex has evolved from a single cloud-sandboxed coding agent into a multi-surface ecosystem: a Desktop App for parallel agent orchestration, a CLI for terminal-first workflows, and an IDE extension for in-editor use. The February 2026 launch of the Codex Desktop App and GPT-5.3-Codex model represents a significant expansion of what Codex can do, moving it from a submit-and-review tool to a full multi-agent development environment.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-codex-ecosystem-february-2026&#34;&gt;The Codex Ecosystem (February 2026)&lt;/h2&gt;&#xA;&lt;p&gt;Codex now spans three surfaces, each targeting different workflows:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Agentic Frameworks in 2026: Less Hype, More Autonomy</title>
-      <link>//localhost:1314/sources/2026-01-06-agentic-frameworks-2026.html</link>
+      <link>/sources/2026-01-06-agentic-frameworks-2026.html</link>
       <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-06-agentic-frameworks-2026.html</guid>
+      <guid>/sources/2026-01-06-agentic-frameworks-2026.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This HN text post by raghavchamadiya provides a practitioner-level comparison of agentic frameworks in 2026, focusing on lived behavior rather than benchmarks. The author has built, broken, and rebuilt agents across several stacks and shares observations on how the ecosystem has matured.&lt;/p&gt;&#xA;&lt;p&gt;The core thesis is that the key differentiator for frameworks has shifted from how they wrap prompting and tool calls (the 2024 approach) to how they model time, memory, and failure. Agents that cannot reason over long horizons or learn from their own mistakes collapse under real workloads regardless of how clever the prompt engineering looks in demos.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Skill-Development on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/tags/skill-development.html</link>
+    <link>/tags/skill-development.html</link>
     <description>Recent content in Skill-Development on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/tags/skill-development/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/skill-development/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Adoption Curve</title>
-      <link>//localhost:1314/guide/adoption-curve.html</link>
+      <link>/guide/adoption-curve.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/guide/adoption-curve.html</guid>
+      <guid>/guide/adoption-curve.html</guid>
       <description>&lt;p&gt;If you have been using AI coding tools for more than a few weeks, you have probably noticed something: the initial excitement fades. Tasks that seemed magical at first start revealing cracks. The agent makes the same category of mistake for the third time. You spend twenty minutes fixing something that should have taken five. You wonder if you were wrong about the whole thing.&lt;/p&gt;&#xA;&lt;p&gt;You are not wrong. You are on the adoption curve, and almost everyone passes through this valley. Understanding the shape of the curve does not make the valley disappear, but it does help you avoid quitting at the point of maximum frustration &amp;ndash; which is exactly when you are closest to the breakthrough.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How AI assistance impacts the formation of coding skills</title>
-      <link>//localhost:1314/sources/2026-01-30-ai-assistance-coding-skills.html</link>
+      <link>/sources/2026-01-30-ai-assistance-coding-skills.html</link>
       <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-30-ai-assistance-coding-skills.html</guid>
+      <guid>/sources/2026-01-30-ai-assistance-coding-skills.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Anthropic published a randomized controlled study examining how AI assistance affects skill acquisition among junior software engineers. The research involved 52 participants divided into AI-assisted and control groups, tasked with learning and using Trio (a Python asynchronous programming library). After completing coding tasks, participants took a comprehension quiz covering debugging, code reading, code writing, and conceptual understanding.&lt;/p&gt;&#xA;&lt;p&gt;The results revealed a significant trade-off between speed and learning. The AI-assisted group scored 17% lower on the comprehension quiz, a gap the researchers characterized as equivalent to nearly two letter grades, with a large effect size (Cohen&amp;rsquo;s d of 0.738, p=0.01). The largest performance gap appeared on debugging questions, suggesting that AI assistance particularly impairs the development of error identification skills. Meanwhile, AI users finished tasks roughly two minutes faster on average, though this speed advantage was not statistically significant.&lt;/p&gt;</description>
     </item>
   </channel>

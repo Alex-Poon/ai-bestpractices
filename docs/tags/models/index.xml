@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Models on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/tags/models.html</link>
+    <link>/tags/models.html</link>
     <description>Recent content in Models on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/tags/models/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/models/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Model Deep Dive</title>
-      <link>//localhost:1314/tools/models.html</link>
+      <link>/tools/models.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tools/models.html</guid>
-      <description>&lt;p&gt;The &lt;a href=&#34;../../practices/model-selection.html&#34;&gt;model selection&lt;/a&gt; practice page covers the principles: start cheap, escalate on failure, use multiple models, ignore benchmarks in favor of your own workload. This page is the complement &amp;ndash; a deep look at specific models, how they compare in real-world usage, and what they actually cost when practitioners put them to work.&lt;/p&gt;&#xA;&lt;p&gt;The data here comes from two sources: Amp Code&amp;rsquo;s published model evaluation data (including their distinctive &amp;ldquo;off-the-rails&amp;rdquo; metric), and practitioner reports from over 6,000 Hacker News comments across 20+ discussion threads.&lt;/p&gt;</description>
+      <guid>/tools/models.html</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;../../practices/model-selection.html&#34;&gt;model selection&lt;/a&gt; practice page covers the principles: start cheap, escalate on failure, use multiple models, ignore benchmarks in favor of your own workload. This page is the complement &amp;ndash; a granular look at every model variant, what it costs, how it performs in real-world usage, and exactly how to configure reasoning levels across providers and tools.&lt;/p&gt;&#xA;&lt;p&gt;The data here comes from three sources: Amp Code&amp;rsquo;s published model evaluation data (including their distinctive &amp;ldquo;off-the-rails&amp;rdquo; metric), official provider documentation, and 605 model variant mentions extracted from over 6,000 Hacker News comments across 20+ discussion threads.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

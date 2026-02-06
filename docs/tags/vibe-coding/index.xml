@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vibe-Coding on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/tags/vibe-coding.html</link>
+    <link>/tags/vibe-coding.html</link>
     <description>Recent content in Vibe-Coding on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/tags/vibe-coding/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/vibe-coding/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Vibe Coding Question</title>
-      <link>//localhost:1314/debates/vibe-coding.html</link>
+      <link>/debates/vibe-coding.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/debates/vibe-coding.html</guid>
+      <guid>/debates/vibe-coding.html</guid>
       <description>&lt;h2 id=&#34;the-question&#34;&gt;The Question&lt;/h2&gt;&#xA;&lt;p&gt;Andrej Karpathy coined the term &amp;ldquo;vibe coding&amp;rdquo; to describe a mode of AI-assisted development where you fully cede implementation to the model, accepting code you don&amp;rsquo;t fully understand as long as it works. The term quickly became a lightning rod &amp;ndash; embraced by some as the future of software development, rejected by others as professional malpractice.&lt;/p&gt;&#xA;&lt;p&gt;But the community has moved beyond a simple for-or-against debate. Practitioners now describe a spectrum from full delegation to tight step-by-step control, with most experienced developers settling somewhere in between. The real question isn&amp;rsquo;t whether vibe coding is good or bad &amp;ndash; it&amp;rsquo;s where on this spectrum responsible development should land, and whether the answer changes depending on context.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A few random notes from Claude coding quite a bit last week</title>
-      <link>//localhost:1314/sources/2026-01-26-karpathy-claude-coding-notes.html</link>
+      <link>/sources/2026-01-26-karpathy-claude-coding-notes.html</link>
       <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-26-karpathy-claude-coding-notes.html</guid>
+      <guid>/sources/2026-01-26-karpathy-claude-coding-notes.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Andrej Karpathy shared a widely discussed thread of observations from extensive Claude Code usage. His notes touched on several key themes that resonated deeply with the developer community, generating nearly 100 HN comments and over 900 upvotes.&lt;/p&gt;&#xA;&lt;p&gt;One of Karpathy&amp;rsquo;s central observations was around the tension between AI-assisted productivity and personal skill development. He noted that he was already experiencing atrophy in his ability to write code manually, finding it harder to recall syntax and implementation details. However, he argued this might be acceptable since code review skills remain intact even as writing fluency declines, drawing a parallel to how reading comprehension persists even when spelling ability degrades.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Opus 4.5 is not the normal AI agent experience</title>
-      <link>//localhost:1314/sources/2026-01-06-opus-4-5-agent-experience.html</link>
+      <link>/sources/2026-01-06-opus-4-5-agent-experience.html</link>
       <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-06-opus-4-5-agent-experience.html</guid>
+      <guid>/sources/2026-01-06-opus-4-5-agent-experience.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Burke Holland wrote an enthusiastic account of his experience using Claude&amp;rsquo;s Opus 4.5 model, arguing it represents a fundamental shift in AI agent capabilities that goes beyond anything he had previously experienced. His central claim is that Opus 4.5 delivers on promises that earlier AI coding agents could not fulfill, particularly around autonomous problem-solving and first-attempt success rates.&lt;/p&gt;&#xA;&lt;p&gt;Holland completed four substantial projects in rapid succession: an image conversion utility, a video editor, a social media automation app, and a route optimization tool. He highlighted the model&amp;rsquo;s ability to handle full-stack development spanning frontend, backend, authentication, database integration, and cloud infrastructure &amp;ndash; areas that had traditionally been weak points for AI agents.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Two Kinds of Vibe Coding</title>
-      <link>//localhost:1314/sources/2025-12-18-two-kinds-vibe-coding.html</link>
+      <link>/sources/2025-12-18-two-kinds-vibe-coding.html</link>
       <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2025-12-18-two-kinds-vibe-coding.html</guid>
+      <guid>/sources/2025-12-18-two-kinds-vibe-coding.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;David Bau distinguishes between two fundamentally different approaches to what has broadly been called &amp;ldquo;vibe coding.&amp;rdquo; The first type involves delegating small tasks to an LLM while the human programmer remains fully informed and in control, reviewing each piece of work and making all key decisions. The second type involves surrendering cognitive control to an AI agent, allowing it to build towers of complexity that go beyond what the developer has time to understand in detail.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How Vibe Coding Is Killing Open Source</title>
-      <link>//localhost:1314/sources/2026-02-02-vibe-coding-killing-open-source.html</link>
+      <link>/sources/2026-02-02-vibe-coding-killing-open-source.html</link>
       <pubDate>Mon, 02 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-02-02-vibe-coding-killing-open-source.html</guid>
+      <guid>/sources/2026-02-02-vibe-coding-killing-open-source.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This Hackaday article reports on research examining how vibe coding — using LLM chatbots to generate code — creates systemic problems for open source projects. The core argument is that AI-mediated coding disrupts the traditional feedback loops between developers and open source communities in several damaging ways.&lt;/p&gt;&#xA;&lt;p&gt;First, developer engagement shifts away from open source communities entirely. Instead of visiting project websites, consulting documentation, or participating in forums, users interact exclusively with chatbots, eliminating opportunities for sponsorships, bug reports, and community building. Second, LLMs introduce library selection bias by favoring dependencies most prevalent in their training data rather than promoting merit-based adoption, concentrating usage around already-popular projects while marginalizing smaller initiatives. Third, a quality control crisis emerges because LLMs will not interact with library developers, submit usable bug reports, or be aware of potential issues.&lt;/p&gt;</description>
     </item>
     <item>
       <title>2026: The Year the IDE Died (Steve Yegge and Gene Kim)</title>
-      <link>//localhost:1314/sources/2025-12-10-year-ide-died.html</link>
+      <link>/sources/2025-12-10-year-ide-died.html</link>
       <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2025-12-10-year-ide-died.html</guid>
+      <guid>/sources/2025-12-10-year-ide-died.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This HN submission links to a YouTube talk by Steve Yegge and Gene Kim exploring how AI coding tools might replace the traditional IDE as the primary programming environment. The submitter (mikebiglan) frames the discussion around several key questions: how far IDEs will change, whether developers will still read and reason about code directly, and what the shift means for both senior developers and students entering the field.&lt;/p&gt;&#xA;&lt;p&gt;The talk argues that what we think of as the IDE today will not remain the primary programming tool of the future. The vision includes modularity and swarms of agents working in parallel, with context windows as a key architectural constraint. The speakers suggest that the transition is already underway, with AI-first and workflow-first environments replacing file-and-buffer-first approaches.&lt;/p&gt;</description>
     </item>
   </channel>

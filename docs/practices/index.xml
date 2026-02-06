@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Practices on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/practices/index.html</link>
+    <link>/practices/index.html</link>
     <description>Recent content in Practices on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/practices/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/practices/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Task Scoping</title>
-      <link>//localhost:1314/practices/task-scoping.html</link>
+      <link>/practices/task-scoping.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/practices/task-scoping.html</guid>
+      <guid>/practices/task-scoping.html</guid>
       <description>&lt;p&gt;Task scoping is the dominant skill in AI-assisted development. It determines whether your interaction with an agent produces usable output in minutes or wasted effort measured in hours. Every practitioner who has moved past the honeymoon phase identifies decomposition &amp;ndash; not prompting, not model selection &amp;ndash; as the discipline that matters most.&lt;/p&gt;&#xA;&lt;p&gt;The core insight is deceptively simple: AI agents execute well-bounded tasks reliably and open-ended tasks poorly. Your job is to turn open-ended work into a series of bounded tasks. This is fundamentally the same skill as delegating to a junior developer, with one critical difference: the agent never learns from the previous session.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Harness Engineering</title>
-      <link>//localhost:1314/practices/harness-engineering.html</link>
+      <link>/practices/harness-engineering.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/practices/harness-engineering.html</guid>
+      <guid>/practices/harness-engineering.html</guid>
       <description>&lt;p&gt;Harness engineering is the practice of building persistent infrastructure that constrains and guides AI agents across sessions. It is the highest-leverage investment in AI-assisted development because it compounds: every mistake you document is a mistake that never recurs, every custom tool you build saves time in every future session, and every test harness you configure raises the floor on output quality.&lt;/p&gt;&#xA;&lt;p&gt;The harness is the answer to the fundamental limitation of current AI agents: they are stateless. Each session starts fresh with no memory of corrections, preferences, or past failures. The harness is the only mechanism that carries knowledge forward.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Verification</title>
-      <link>//localhost:1314/practices/verification.html</link>
+      <link>/practices/verification.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/practices/verification.html</guid>
+      <guid>/practices/verification.html</guid>
       <description>&lt;p&gt;Verification is the skill that makes every other AI-assisted development practice work. Task scoping, harness engineering, and model selection all ultimately exist to make verification easier and faster. If you cannot verify the output, nothing else matters.&lt;/p&gt;&#xA;&lt;p&gt;The shift is fundamental: as AI takes over code generation, the developer&amp;rsquo;s primary contribution moves from writing to reading, reviewing, and validating. You are no longer the author. You are the editor &amp;ndash; and the editor must be a genuinely skilled reader, not a rubber stamp.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Model Selection</title>
-      <link>//localhost:1314/practices/model-selection.html</link>
+      <link>/practices/model-selection.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/practices/model-selection.html</guid>
+      <guid>/practices/model-selection.html</guid>
       <description>&lt;p&gt;Model selection is the skill of matching the right model to the right task. The gap between a well-chosen and poorly-chosen model often matters more than the quality of the prompt itself. As models proliferate and differentiate, this is no longer a set-and-forget decision &amp;ndash; it is an ongoing practice of matching capability to need.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-model-selection-is&#34;&gt;What Model Selection Is&lt;/h2&gt;&#xA;&lt;p&gt;Model selection means choosing which AI model (or combination of models) to use for a specific task, based on the task&amp;rsquo;s complexity, error tolerance, speed requirements, and cost constraints. It also means knowing when to switch models mid-task, when to use multiple models for cross-validation, and when to escalate from a cheap model to an expensive one.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Prompt Craft</title>
-      <link>//localhost:1314/practices/prompt-craft.html</link>
+      <link>/practices/prompt-craft.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/practices/prompt-craft.html</guid>
+      <guid>/practices/prompt-craft.html</guid>
       <description>&lt;p&gt;Prompt craft is the skill of communicating effectively with AI coding agents. It is not the most important skill in AI-assisted development &amp;ndash; &lt;a href=&#34;../task-scoping.html&#34;&gt;task scoping&lt;/a&gt; and &lt;a href=&#34;../verification.html&#34;&gt;verification&lt;/a&gt; matter more &amp;ndash; but it is the interface through which every other skill is expressed. A well-scoped task still needs to be communicated clearly. A well-built harness still needs to be written in language the agent processes reliably.&lt;/p&gt;&#xA;&lt;p&gt;The key insight practitioners have converged on: prompt craft is less about clever techniques and more about providing the right context. The model&amp;rsquo;s behavior is dominated by what you put in front of it, not by how cleverly you phrase the request.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Context Management</title>
-      <link>//localhost:1314/practices/context-management.html</link>
+      <link>/practices/context-management.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/practices/context-management.html</guid>
+      <guid>/practices/context-management.html</guid>
       <description>&lt;p&gt;Context management is the practice of working within and around the finite context window that constrains every AI agent interaction. It is the most technical of the core practices and the one that separates power users from frustrated ones. Most practical failures in agentic coding &amp;ndash; going in circles, forgetting instructions, losing coherence over long sessions &amp;ndash; trace back to context management problems.&lt;/p&gt;&#xA;&lt;p&gt;The context window is not just a size limit. It is the agent&amp;rsquo;s entire working memory. Everything the agent knows about your project, your conversation, its instructions, and its tools must fit within this window. As it fills, quality degrades &amp;ndash; not gradually, but in ways that are hard to predict and hard to recover from.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Multi-Agent Patterns</title>
-      <link>//localhost:1314/practices/multi-agent.html</link>
+      <link>/practices/multi-agent.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/practices/multi-agent.html</guid>
+      <guid>/practices/multi-agent.html</guid>
       <description>&lt;p&gt;Multi-agent patterns involve running multiple AI agents simultaneously on related tasks. They represent the highest-throughput mode of AI-assisted development &amp;ndash; and the most complex. When they work, months of work happen in minutes. When they fail, you get merge conflicts, duplicated effort, and code that no single agent (or human) fully understands.&lt;/p&gt;&#xA;&lt;p&gt;The practice is still emerging. There is no consensus on when multi-agent is worth the overhead versus well-scoped single-agent work. But practitioners are converging on principles that separate productive multi-agent usage from expensive chaos.&lt;/p&gt;</description>
     </item>
   </channel>

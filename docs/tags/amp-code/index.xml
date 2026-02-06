@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Amp-Code on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/tags/amp-code.html</link>
+    <link>/tags/amp-code.html</link>
     <description>Recent content in Amp-Code on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/tags/amp-code/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/amp-code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Amp Code</title>
-      <link>//localhost:1314/tools/amp.html</link>
+      <link>/tools/amp.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tools/amp.html</guid>
+      <guid>/tools/amp.html</guid>
       <description>&lt;p&gt;Amp Code is a coding agent built by the team behind Sourcegraph&amp;rsquo;s code intelligence platform. Available as a CLI, VS Code extension, and JetBrains plugin, it is the most explicit implementation of multi-model routing in a production coding tool. Rather than letting users pick a single model, Amp routes tasks automatically based on type &amp;ndash; sending planning, implementation, review, and search to whichever model is best suited for each.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-multi-model-architecture&#34;&gt;The Multi-Model Architecture&lt;/h2&gt;&#xA;&lt;p&gt;Amp&amp;rsquo;s core design principle is that no single model is best at everything. Different cognitive tasks &amp;ndash; planning, code generation, search, review &amp;ndash; have different performance profiles across models. Amp makes this explicit by maintaining named agent roles across three providers (Anthropic, OpenAI, Google):&lt;/p&gt;</description>
     </item>
   </channel>

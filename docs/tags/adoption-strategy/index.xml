@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Adoption-Strategy on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/tags/adoption-strategy.html</link>
+    <link>/tags/adoption-strategy.html</link>
     <description>Recent content in Adoption-Strategy on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/tags/adoption-strategy/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/adoption-strategy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Case Study: Hashimoto&#39;s AI Adoption Journey</title>
-      <link>//localhost:1314/evidence/hashimoto-journey.html</link>
+      <link>/evidence/hashimoto-journey.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/evidence/hashimoto-journey.html</guid>
+      <guid>/evidence/hashimoto-journey.html</guid>
       <description>&lt;p&gt;Mitchell Hashimoto &amp;ndash; co-founder of HashiCorp, creator of Vagrant, Terraform, and Consul &amp;ndash; published a detailed account of his personal journey adopting AI coding tools. The article resonated far beyond the usual AI discourse because Hashimoto is not a hype-prone commentator. He is a practitioner with decades of experience shipping infrastructure software used by millions of developers. When he says something works, the community pays attention.&lt;/p&gt;&#xA;&lt;p&gt;His account became a focal point for one of the most grounded Hacker News discussions on AI-assisted development, drawing dozens of experienced practitioners into a conversation about what actually works, what fails, and what remains genuinely uncertain.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Adoption Curve</title>
-      <link>//localhost:1314/landscape/adoption-curve.html</link>
+      <link>/landscape/adoption-curve.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/landscape/adoption-curve.html</guid>
+      <guid>/landscape/adoption-curve.html</guid>
       <description>&lt;p&gt;AI-assisted development in early 2026 is past the novelty phase but far from universal. The community is split, the data is mixed, and where a given developer lands depends as much on their workflow and identity as on the technology itself.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-six-stages-framework&#34;&gt;The Six Stages Framework&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;a href=&#34;../../guide/adoption-curve.html&#34;&gt;AI Adoption Curve&lt;/a&gt; framework, synthesized from Mitchell Hashimoto&amp;rsquo;s influential account and extensive practitioner discussion, describes a progression from chatbot usage through always-running agents. It remains the best map of the adoption journey because each stage builds on the calibration and infrastructure of the previous one.&lt;/p&gt;</description>
     </item>
   </channel>

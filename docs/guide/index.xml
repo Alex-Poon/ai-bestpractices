@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The Guide on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/guide/index.html</link>
+    <link>/guide/index.html</link>
     <description>Recent content in The Guide on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/guide/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/guide/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Core Loop</title>
-      <link>//localhost:1314/guide/core-loop.html</link>
+      <link>/guide/core-loop.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/guide/core-loop.html</guid>
+      <guid>/guide/core-loop.html</guid>
       <description>&lt;p&gt;Every effective AI coding workflow, regardless of which tool or model you use, converges on the same four-phase loop: &lt;strong&gt;Plan, Execute, Verify, Harness.&lt;/strong&gt; The tools change. The models improve. But the loop persists, because it addresses the fundamental constraints of working with systems that are brilliant and forgetful in equal measure.&lt;/p&gt;&#xA;&lt;p&gt;This page describes each phase, why it matters, and what goes wrong when you skip it. If you read nothing else on this site, read this.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Getting Started</title>
-      <link>//localhost:1314/guide/getting-started.html</link>
+      <link>/guide/getting-started.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/guide/getting-started.html</guid>
+      <guid>/guide/getting-started.html</guid>
       <description>&lt;p&gt;You have read about the &lt;a href=&#34;core-loop.html&#34;&gt;core loop&lt;/a&gt;. Now it is time to put it into practice. This page covers the concrete steps for your first week with AI coding tools &amp;ndash; which tool to pick, what to try first, which mistakes to avoid, and what &amp;ldquo;working&amp;rdquo; actually looks like.&lt;/p&gt;&#xA;&lt;p&gt;The goal is not mastery. The goal is calibration: developing an accurate sense of what AI agents handle well and where they fall apart. That calibration is the foundation everything else builds on, and there is no shortcut to it except doing real work.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Adoption Curve</title>
-      <link>//localhost:1314/guide/adoption-curve.html</link>
+      <link>/guide/adoption-curve.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/guide/adoption-curve.html</guid>
+      <guid>/guide/adoption-curve.html</guid>
       <description>&lt;p&gt;If you have been using AI coding tools for more than a few weeks, you have probably noticed something: the initial excitement fades. Tasks that seemed magical at first start revealing cracks. The agent makes the same category of mistake for the third time. You spend twenty minutes fixing something that should have taken five. You wonder if you were wrong about the whole thing.&lt;/p&gt;&#xA;&lt;p&gt;You are not wrong. You are on the adoption curve, and almost everyone passes through this valley. Understanding the shape of the curve does not make the valley disappear, but it does help you avoid quitting at the point of maximum frustration &amp;ndash; which is exactly when you are closest to the breakthrough.&lt;/p&gt;</description>
     </item>
     <item>
       <title>When It Fails</title>
-      <link>//localhost:1314/guide/when-it-fails.html</link>
+      <link>/guide/when-it-fails.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/guide/when-it-fails.html</guid>
+      <guid>/guide/when-it-fails.html</guid>
       <description>&lt;p&gt;AI coding tools fail in characteristic ways. Not randomly &amp;ndash; in patterns that are recognizable, largely predictable, and often preventable if you know what to watch for. This page catalogs the major failure modes from practitioner experience. Some are technical limitations of current models. Some are emergent behaviors of how agents interact with codebases. Some are human failures amplified by the tools.&lt;/p&gt;&#xA;&lt;p&gt;Understanding these failure modes is not pessimism. It is the practical knowledge that separates effective users from people who either over-trust or under-trust the tools. Every failure mode here has a corresponding mitigation, and most become manageable once you recognize them.&lt;/p&gt;</description>
     </item>
   </channel>

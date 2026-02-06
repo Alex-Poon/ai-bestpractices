@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Agentic-Vision on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/tags/agentic-vision.html</link>
+    <link>/tags/agentic-vision.html</link>
     <description>Recent content in Agentic-Vision on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 03 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/tags/agentic-vision/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/agentic-vision/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introducing Agentic Vision in Gemini 3 Flash</title>
-      <link>//localhost:1314/sources/2026-02-03-gemini-3-agentic-vision.html</link>
+      <link>/sources/2026-02-03-gemini-3-agentic-vision.html</link>
       <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-02-03-gemini-3-agentic-vision.html</guid>
+      <guid>/sources/2026-02-03-gemini-3-agentic-vision.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Google introduced Agentic Vision as a new capability in Gemini 3 Flash, transforming image understanding from a static analysis task into a dynamic, action-oriented agentic process. Rather than simply analyzing images in isolation, Agentic Vision enables the model to interact with visual content across multiple steps, potentially examining images iteratively and taking actions based on what it observes.&lt;/p&gt;&#xA;&lt;p&gt;The feature represents a broader trend in AI development where multimodal capabilities are being enhanced with agentic behaviors. Instead of one-shot image analysis where a user submits a photo and receives a description, Agentic Vision allows the model to autonomously decide what to examine more closely, what questions to ask, and what actions to take based on visual inputs. This is particularly relevant for developer tools and automation workflows where visual understanding needs to be combined with decision-making.&lt;/p&gt;</description>
     </item>
   </channel>

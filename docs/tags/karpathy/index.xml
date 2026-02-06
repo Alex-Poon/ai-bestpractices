@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Karpathy on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/tags/karpathy.html</link>
+    <link>/tags/karpathy.html</link>
     <description>Recent content in Karpathy on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/tags/karpathy/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/karpathy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Karpathy&#39;s AI Coding Notes: A Deep Reading</title>
-      <link>//localhost:1314/evidence/karpathy-notes.html</link>
+      <link>/evidence/karpathy-notes.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/evidence/karpathy-notes.html</guid>
+      <guid>/evidence/karpathy-notes.html</guid>
       <description>&lt;p&gt;In late January 2026, Andrej Karpathy &amp;ndash; former director of AI at Tesla, founding member of OpenAI, and one of the most respected voices in machine learning &amp;ndash; shared a thread of observations from a week of intensive Claude Code usage. The post received 911 upvotes on Hacker News and generated over 800 comments, making it one of the most substantive community discussions on AI-assisted development in the corpus.&lt;/p&gt;&#xA;&lt;p&gt;What made this discussion exceptional was not Karpathy&amp;rsquo;s observations alone, but the quality of the community response. His notes served as a catalyst for practitioners across the experience spectrum to articulate positions they had been forming through months of daily AI tool usage. The result is a uniquely rich snapshot of how the developer community was processing the AI-assisted coding transition in early 2026.&lt;/p&gt;</description>
     </item>
   </channel>

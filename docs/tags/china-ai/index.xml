@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>China-Ai on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/tags/china-ai.html</link>
+    <link>/tags/china-ai.html</link>
     <description>Recent content in China-Ai on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/tags/china-ai/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/china-ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DeepSeek kicks off 2026 with paper signalling push to train bigger models for less</title>
-      <link>//localhost:1314/sources/2026-01-01-deepseek-bigger-models-less.html</link>
+      <link>/sources/2026-01-01-deepseek-bigger-models-less.html</link>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-01-deepseek-bigger-models-less.html</guid>
+      <guid>/sources/2026-01-01-deepseek-bigger-models-less.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;DeepSeek published a technical paper at the start of 2026 introducing Manifold-Constrained Hyper-Connections (mHC), a novel approach to training AI models more cost-effectively. The paper was co-authored by founder Liang Wenfeng and represents the Chinese AI startup&amp;rsquo;s ongoing effort to compete with better-funded American competitors through efficiency innovations.&lt;/p&gt;&#xA;&lt;p&gt;The mHC technique builds upon ByteDance&amp;rsquo;s earlier hyper-connections concept but adds critical efficiency improvements. The core idea constrains the hyper-connection network using a specific manifold structure to ensure both compute and cost efficiency, addressing memory cost limitations in previous architectures. The researchers demonstrated that mHC enables stable large-scale training with superior scalability compared to conventional hyper-connections, and achieves these gains with negligible computational overhead.&lt;/p&gt;</description>
     </item>
     <item>
       <title>State of AI in 2026: LLMs, Coding, Scaling Laws, China, Agents, GPUs, AGI</title>
-      <link>//localhost:1314/sources/2026-02-01-state-of-ai-2026.html</link>
+      <link>/sources/2026-02-01-state-of-ai-2026.html</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-02-01-state-of-ai-2026.html</guid>
+      <guid>/sources/2026-02-01-state-of-ai-2026.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This is Lex Fridman Podcast episode #490, a comprehensive discussion on the state of AI in early 2026. The guests are Nathan Lambert, post-training lead at the Allen Institute for AI (AI2) and author of The RLHF Book, and Sebastian Raschka, author of &amp;ldquo;Build a Large Language Model From Scratch&amp;rdquo; and &amp;ldquo;Build a Reasoning Model From Scratch.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;The episode covers a wide sweep of topics across the AI landscape. On the model comparison front, the guests discuss the relative strengths of ChatGPT, Claude, Gemini, and Grok, along with which AI tools work best for coding applications. A significant portion examines the open-source vs. closed-source debate, tracing how transformer-based language models have evolved since 2019 and whether the scaling laws that drove earlier progress still hold.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ai-Capabilities on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/tags/ai-capabilities.html</link>
+    <link>/tags/ai-capabilities.html</link>
     <description>Recent content in Ai-Capabilities on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 06 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/tags/ai-capabilities/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/ai-capabilities/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Opus 4.5 is not the normal AI agent experience</title>
-      <link>//localhost:1314/sources/2026-01-06-opus-4-5-agent-experience.html</link>
+      <link>/sources/2026-01-06-opus-4-5-agent-experience.html</link>
       <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-06-opus-4-5-agent-experience.html</guid>
+      <guid>/sources/2026-01-06-opus-4-5-agent-experience.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Burke Holland wrote an enthusiastic account of his experience using Claude&amp;rsquo;s Opus 4.5 model, arguing it represents a fundamental shift in AI agent capabilities that goes beyond anything he had previously experienced. His central claim is that Opus 4.5 delivers on promises that earlier AI coding agents could not fulfill, particularly around autonomous problem-solving and first-attempt success rates.&lt;/p&gt;&#xA;&lt;p&gt;Holland completed four substantial projects in rapid succession: an image conversion utility, a video editor, a social media automation app, and a route optimization tool. He highlighted the model&amp;rsquo;s ability to handle full-stack development spanning frontend, backend, authentication, database integration, and cloud infrastructure &amp;ndash; areas that had traditionally been weak points for AI agents.&lt;/p&gt;</description>
     </item>
   </channel>

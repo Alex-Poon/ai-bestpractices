@@ -2,234 +2,234 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sources on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/sources/index.html</link>
+    <link>/sources/index.html</link>
     <description>Recent content in Sources on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/sources/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/sources/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Claude Opus 4.6</title>
-      <link>//localhost:1314/sources/2026-02-05-claude-opus-4-6.html</link>
+      <link>/sources/2026-02-05-claude-opus-4-6.html</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-02-05-claude-opus-4-6.html</guid>
+      <guid>/sources/2026-02-05-claude-opus-4-6.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Anthropic announced Claude Opus 4.6, their most advanced model to date, featuring a landmark 1 million token context window in beta &amp;ndash; the first for an Opus-class model. The release emphasizes substantial improvements in agentic coding, long-context work, and sustained multi-step workflows.&lt;/p&gt;&#xA;&lt;p&gt;On benchmarks, Opus 4.6 achieved the top score on Terminal-Bench 2.0 for agentic coding and led on Humanity&amp;rsquo;s Last Exam for complex reasoning. On GDPval-AA, which measures economically valuable work tasks, it outperformed the industry&amp;rsquo;s next-best model by a significant margin. Long-context retrieval accuracy hit 76% on needle-in-haystack tests compared to much lower scores from competitors.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Claude Code daily benchmarks for degradation tracking</title>
-      <link>//localhost:1314/sources/2026-01-29-claude-code-benchmarks.html</link>
+      <link>/sources/2026-01-29-claude-code-benchmarks.html</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-29-claude-code-benchmarks.html</guid>
+      <guid>/sources/2026-01-29-claude-code-benchmarks.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;MarginLab launched a daily benchmark tracker for Claude Code performance, measuring the CLI tool against a curated subset of SWE-Bench-Pro tasks using the Opus 4.5 model. The tracker was created in response to widespread community concerns about silent model degradation, where users noticed performance fluctuations but had no systematic way to measure or verify them.&lt;/p&gt;&#xA;&lt;p&gt;The methodology involves running 50 daily evaluations against SWE-Bench-Pro tasks without custom harnesses, then aggregating results over 7-day and 30-day windows for statistical reliability. Statistical significance is determined using Bernoulli modeling with 95% confidence intervals. At the time of the HN discussion, the tracker showed a daily pass rate of 48%, a 7-day aggregate of 53%, and a 30-day aggregate of 53%, compared against a historical baseline of 58%.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A few random notes from Claude coding quite a bit last week</title>
-      <link>//localhost:1314/sources/2026-01-26-karpathy-claude-coding-notes.html</link>
+      <link>/sources/2026-01-26-karpathy-claude-coding-notes.html</link>
       <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-26-karpathy-claude-coding-notes.html</guid>
+      <guid>/sources/2026-01-26-karpathy-claude-coding-notes.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Andrej Karpathy shared a widely discussed thread of observations from extensive Claude Code usage. His notes touched on several key themes that resonated deeply with the developer community, generating nearly 100 HN comments and over 900 upvotes.&lt;/p&gt;&#xA;&lt;p&gt;One of Karpathy&amp;rsquo;s central observations was around the tension between AI-assisted productivity and personal skill development. He noted that he was already experiencing atrophy in his ability to write code manually, finding it harder to recall syntax and implementation details. However, he argued this might be acceptable since code review skills remain intact even as writing fluency declines, drawing a parallel to how reading comprehension persists even when spelling ability degrades.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Apple picks Gemini to power Siri</title>
-      <link>//localhost:1314/sources/2026-01-12-apple-picks-gemini-siri.html</link>
+      <link>/sources/2026-01-12-apple-picks-gemini-siri.html</link>
       <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-12-apple-picks-gemini-siri.html</guid>
+      <guid>/sources/2026-01-12-apple-picks-gemini-siri.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Apple announced a partnership with Google to use Gemini as the foundational AI technology powering Siri, marking one of the most significant strategic moves in the AI industry. The deal, reportedly valued near $1 billion, represents Apple&amp;rsquo;s acknowledgment that building competitive frontier AI models in-house is not where their advantage lies.&lt;/p&gt;&#xA;&lt;p&gt;Apple&amp;rsquo;s decision was driven by several practical realities. Despite having world-class edge inference silicon through their Neural Engine, Apple has effectively zero presence in training datacenters &amp;ndash; lacking the TPU pods or GPU clusters needed to train frontier models from scratch. Google, by contrast, has deep pockets, enterprise infrastructure experience, and diversified revenue streams that make them a stable long-term partner.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Code Claude Code in 200 Lines of Code</title>
-      <link>//localhost:1314/sources/2026-01-08-claude-code-200-lines.html</link>
+      <link>/sources/2026-01-08-claude-code-200-lines.html</link>
       <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-08-claude-code-200-lines.html</guid>
+      <guid>/sources/2026-01-08-claude-code-200-lines.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Mihail Eric&amp;rsquo;s article, provocatively titled &amp;ldquo;The Emperor Has No Clothes,&amp;rdquo; argues that AI coding assistants are not magical — they follow a simple architectural loop. The user sends a request, the LLM decides which tools to call, your code executes those tools locally, and the results flow back to the LLM for context. The critical mental model is that the LLM never actually touches your filesystem; it asks for things to happen, and your code makes them happen.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How AI assistance impacts the formation of coding skills</title>
-      <link>//localhost:1314/sources/2026-01-30-ai-assistance-coding-skills.html</link>
+      <link>/sources/2026-01-30-ai-assistance-coding-skills.html</link>
       <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-30-ai-assistance-coding-skills.html</guid>
+      <guid>/sources/2026-01-30-ai-assistance-coding-skills.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Anthropic published a randomized controlled study examining how AI assistance affects skill acquisition among junior software engineers. The research involved 52 participants divided into AI-assisted and control groups, tasked with learning and using Trio (a Python asynchronous programming library). After completing coding tasks, participants took a comprehension quiz covering debugging, code reading, code writing, and conceptual understanding.&lt;/p&gt;&#xA;&lt;p&gt;The results revealed a significant trade-off between speed and learning. The AI-assisted group scored 17% lower on the comprehension quiz, a gap the researchers characterized as equivalent to nearly two letter grades, with a large effect size (Cohen&amp;rsquo;s d of 0.738, p=0.01). The largest performance gap appeared on debugging questions, suggesting that AI assistance particularly impairs the development of error identification skills. Meanwhile, AI users finished tasks roughly two minutes faster on average, though this speed advantage was not statistically significant.&lt;/p&gt;</description>
     </item>
     <item>
       <title>AGENTS.md Outperforms Skills in Our Agent Evals</title>
-      <link>//localhost:1314/sources/2026-01-29-agents-md-outperforms-skills.html</link>
+      <link>/sources/2026-01-29-agents-md-outperforms-skills.html</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-29-agents-md-outperforms-skills.html</guid>
+      <guid>/sources/2026-01-29-agents-md-outperforms-skills.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Vercel&amp;rsquo;s engineering team published an evaluation comparing two approaches to providing AI coding agents with documentation: AGENTS.md files (passive context embedded in the system prompt) versus skills (active retrieval tools the agent can invoke on demand). The evaluation targeted Next.js 16 APIs that were absent from model training data, including new patterns like &lt;code&gt;&#39;use cache&#39;&lt;/code&gt;, &lt;code&gt;connection()&lt;/code&gt;, &lt;code&gt;forbidden()&lt;/code&gt;, and async &lt;code&gt;cookies()&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The results were striking. A compressed 8KB documentation index embedded in AGENTS.md achieved a 100% pass rate on the evaluation tasks, while skills maxed out at 79% even with explicit instructions telling the agent to use them. Without explicit instructions, skills performed no better than the 53% baseline. The root cause was that in 56% of eval cases, the skill was never invoked at all — the agent simply failed to recognize when it needed documentation help.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Claude Code&#39;s New Hidden Feature: Swarms</title>
-      <link>//localhost:1314/sources/2026-01-24-claude-code-swarms.html</link>
+      <link>/sources/2026-01-24-claude-code-swarms.html</link>
       <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-24-claude-code-swarms.html</guid>
+      <guid>/sources/2026-01-24-claude-code-swarms.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;A tweet by @NicerInPerson revealed that Claude Code contains hidden multi-agent orchestration capabilities, colloquially referred to as &amp;ldquo;swarms.&amp;rdquo; The discovery, corroborated by a GitHub repository (claude-sneakpeek by mikekelly), showed that Anthropic had built native sub-agent coordination features including a TeammateTool, delegate mode for spawning background agents, and a team coordination system with messaging and task ownership. Rather than relying on third-party orchestration frameworks, these capabilities are built directly into Claude Code but gated behind feature flags not yet available in general release.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Opus 4.5 is not the normal AI agent experience</title>
-      <link>//localhost:1314/sources/2026-01-06-opus-4-5-agent-experience.html</link>
+      <link>/sources/2026-01-06-opus-4-5-agent-experience.html</link>
       <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-06-opus-4-5-agent-experience.html</guid>
+      <guid>/sources/2026-01-06-opus-4-5-agent-experience.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Burke Holland wrote an enthusiastic account of his experience using Claude&amp;rsquo;s Opus 4.5 model, arguing it represents a fundamental shift in AI agent capabilities that goes beyond anything he had previously experienced. His central claim is that Opus 4.5 delivers on promises that earlier AI coding agents could not fulfill, particularly around autonomous problem-solving and first-attempt success rates.&lt;/p&gt;&#xA;&lt;p&gt;Holland completed four substantial projects in rapid succession: an image conversion utility, a video editor, a social media automation app, and a route optimization tool. He highlighted the model&amp;rsquo;s ability to handle full-stack development spanning frontend, backend, authentication, database integration, and cloud infrastructure &amp;ndash; areas that had traditionally been weak points for AI agents.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Claude Code gets native LSP support</title>
-      <link>//localhost:1314/sources/2025-12-22-claude-code-lsp-support.html</link>
+      <link>/sources/2025-12-22-claude-code-lsp-support.html</link>
       <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2025-12-22-claude-code-lsp-support.html</guid>
+      <guid>/sources/2025-12-22-claude-code-lsp-support.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Anthropic added native Language Server Protocol (LSP) support to Claude Code, enabling the CLI-based agent to integrate with language servers for improved code understanding, navigation, and analysis. The feature was announced through Claude Code&amp;rsquo;s changelog and surfaced via a plugin system where users can discover and install LSP integrations.&lt;/p&gt;&#xA;&lt;p&gt;LSP support represents a significant step in making CLI-based AI coding agents competitive with IDE-based tools like Cursor. Language servers provide structured information about code: type definitions, references, diagnostics, and refactoring capabilities. By connecting Claude Code to these servers, the agent gains access to the same code intelligence that powers IDE features, without requiring a full IDE environment.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Agentic AI Handbook: Production-Ready Patterns</title>
-      <link>//localhost:1314/sources/2026-01-21-agentic-ai-handbook.html</link>
+      <link>/sources/2026-01-21-agentic-ai-handbook.html</link>
       <pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-21-agentic-ai-handbook.html</guid>
+      <guid>/sources/2026-01-21-agentic-ai-handbook.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;The Agentic AI Handbook provides a comprehensive taxonomy of production-ready patterns for building agentic AI systems. Its core definition frames an agent as an LLM wrapped in a loop that can observe state, call tools, record results, and decide when it is done. The handbook organizes patterns into eight categories covering orchestration and control, tool use, context and memory, feedback loops, UX and collaboration, reliability and evaluation, learning and adaptation, and security and safety.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Two Kinds of Vibe Coding</title>
-      <link>//localhost:1314/sources/2025-12-18-two-kinds-vibe-coding.html</link>
+      <link>/sources/2025-12-18-two-kinds-vibe-coding.html</link>
       <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2025-12-18-two-kinds-vibe-coding.html</guid>
+      <guid>/sources/2025-12-18-two-kinds-vibe-coding.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;David Bau distinguishes between two fundamentally different approaches to what has broadly been called &amp;ldquo;vibe coding.&amp;rdquo; The first type involves delegating small tasks to an LLM while the human programmer remains fully informed and in control, reviewing each piece of work and making all key decisions. The second type involves surrendering cognitive control to an AI agent, allowing it to build towers of complexity that go beyond what the developer has time to understand in detail.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How Vibe Coding Is Killing Open Source</title>
-      <link>//localhost:1314/sources/2026-02-02-vibe-coding-killing-open-source.html</link>
+      <link>/sources/2026-02-02-vibe-coding-killing-open-source.html</link>
       <pubDate>Mon, 02 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-02-02-vibe-coding-killing-open-source.html</guid>
+      <guid>/sources/2026-02-02-vibe-coding-killing-open-source.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This Hackaday article reports on research examining how vibe coding — using LLM chatbots to generate code — creates systemic problems for open source projects. The core argument is that AI-mediated coding disrupts the traditional feedback loops between developers and open source communities in several damaging ways.&lt;/p&gt;&#xA;&lt;p&gt;First, developer engagement shifts away from open source communities entirely. Instead of visiting project websites, consulting documentation, or participating in forums, users interact exclusively with chatbots, eliminating opportunities for sponsorships, bug reports, and community building. Second, LLMs introduce library selection bias by favoring dependencies most prevalent in their training data rather than promoting merit-based adoption, concentrating usage around already-popular projects while marginalizing smaller initiatives. Third, a quality control crisis emerges because LLMs will not interact with library developers, submit usable bug reports, or be aware of potential issues.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My LLM Coding Workflow Going into 2026</title>
-      <link>//localhost:1314/sources/2026-01-04-llm-coding-workflow-2026.html</link>
+      <link>/sources/2026-01-04-llm-coding-workflow-2026.html</link>
       <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-04-llm-coding-workflow-2026.html</guid>
+      <guid>/sources/2026-01-04-llm-coding-workflow-2026.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Addy Osmani, a well-known figure in the web development community, shares his comprehensive approach to AI-augmented software engineering. The central philosophy treats LLMs as powerful pair programmers that require clear direction, context, and human oversight rather than autonomous replacements for developers.&lt;/p&gt;&#xA;&lt;p&gt;The workflow is structured around several core practices. First, planning comes before coding — create detailed specifications, use AI to iteratively flesh out requirements and edge cases, and generate project plans that break work into bite-sized tasks. Osmani describes this as completing a &amp;ldquo;waterfall in 15 minutes&amp;rdquo; to prevent wasted development cycles. Second, iterative chunking — break projects into small manageable pieces rather than requesting monolithic outputs, processing one feature at a time while maintaining context of previous work. Third, context provision — feed the AI all relevant code, documentation, and constraints using tools like gitingest or repo2txt to bundle repository information, and provide style guides through CLAUDE.md files.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tell HN: Claude Has Had 57 Incidents in the Past 3 Months</title>
-      <link>//localhost:1314/sources/2026-02-04-claude-57-incidents-3-months.html</link>
+      <link>/sources/2026-02-04-claude-57-incidents-3-months.html</link>
       <pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-02-04-claude-57-incidents-3-months.html</guid>
+      <guid>/sources/2026-02-04-claude-57-incidents-3-months.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This HN text post by shikkra documents reliability concerns with Anthropic&amp;rsquo;s Claude service, providing a detailed incident count from the official status page (status.claude.com). The author, a $100/month Max plan subscriber, was prompted to investigate after encountering a retry issue where Claude attempted to generate a response 10 times with Opus 4.5 and extended thinking enabled before silently switching to a different model without indication or confirmation.&lt;/p&gt;&#xA;&lt;p&gt;The incident data paints a concerning picture of service reliability. February 2026 had 10 incidents in just 4 days. January 2026 had 26 incidents. December 2025 had 21 incidents. At least 16 of these directly affected Claude Opus 4.5: 3 incidents in December (21-23), 9 in January (across 7-28), and 4 in February (1-4). Ten additional incidents affected the claude.ai platform itself.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Coding with LLMs in 2026: The Model Matters More Than the Prompts</title>
-      <link>//localhost:1314/sources/2026-01-18-model-matters-more-than-prompts.html</link>
+      <link>/sources/2026-01-18-model-matters-more-than-prompts.html</link>
       <pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-18-model-matters-more-than-prompts.html</guid>
+      <guid>/sources/2026-01-18-model-matters-more-than-prompts.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This post by @slow_developer on X (formerly Twitter) argues that the shift from 2025 to 2026 in AI-assisted coding has been defined by a fundamental rebalancing: model choice now outweighs prompt engineering as the primary lever for coding quality. Where 2025 workflows focused heavily on crafting precise prompts and structuring interactions carefully, the advancements in frontier models have made the underlying model capability the dominant factor in output quality.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Agentic Frameworks in 2026: Less Hype, More Autonomy</title>
-      <link>//localhost:1314/sources/2026-01-06-agentic-frameworks-2026.html</link>
+      <link>/sources/2026-01-06-agentic-frameworks-2026.html</link>
       <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-06-agentic-frameworks-2026.html</guid>
+      <guid>/sources/2026-01-06-agentic-frameworks-2026.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This HN text post by raghavchamadiya provides a practitioner-level comparison of agentic frameworks in 2026, focusing on lived behavior rather than benchmarks. The author has built, broken, and rebuilt agents across several stacks and shares observations on how the ecosystem has matured.&lt;/p&gt;&#xA;&lt;p&gt;The core thesis is that the key differentiator for frameworks has shifted from how they wrap prompting and tool calls (the 2024 approach) to how they model time, memory, and failure. Agents that cannot reason over long horizons or learn from their own mistakes collapse under real workloads regardless of how clever the prompt engineering looks in demos.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mistral 3 family of models released</title>
-      <link>//localhost:1314/sources/2025-12-02-mistral-3-models.html</link>
+      <link>/sources/2025-12-02-mistral-3-models.html</link>
       <pubDate>Tue, 02 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2025-12-02-mistral-3-models.html</guid>
+      <guid>/sources/2025-12-02-mistral-3-models.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Mistral AI released the Mistral 3 family, a new generation of open-source multimodal models under the Apache 2.0 license. The lineup includes three dense models at 3B, 8B, and 14B parameters (the Ministral variants), plus Mistral Large 3, a sparse mixture-of-experts model with 41B active parameters drawn from a 675B total pool.&lt;/p&gt;&#xA;&lt;p&gt;All models feature native multimodal and multilingual capabilities, handling both text and images across more than 40 languages. The smaller Ministral variants target cost-efficiency, with the 14B reasoning variant achieving strong accuracy on math benchmarks. Mistral Large 3 ranks highly among open-source non-reasoning models on the LMArena leaderboard and demonstrates parity with leading instruction-tuned open-weight models for general tasks. A notable efficiency claim is that the Ministral family produces far fewer tokens than competitors while achieving comparable performance, significantly reducing computational costs.&lt;/p&gt;</description>
     </item>
     <item>
       <title>OpenAI&#39;s cash burn will be one of the big bubble questions of 2026</title>
-      <link>//localhost:1314/sources/2025-12-30-openai-cash-burn.html</link>
+      <link>/sources/2025-12-30-openai-cash-burn.html</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2025-12-30-openai-cash-burn.html</guid>
+      <guid>/sources/2025-12-30-openai-cash-burn.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This Economist article examines the financial sustainability questions surrounding OpenAI and the broader AI industry heading into 2026. The piece focuses on OpenAI&amp;rsquo;s extraordinary capital requirements and whether the company&amp;rsquo;s spending trajectory can be justified by eventual revenue generation. The article could not be directly accessed due to the Economist&amp;rsquo;s paywall, but the extensive HN discussion provides substantial insight into the arguments.&lt;/p&gt;&#xA;&lt;p&gt;The core question is whether AI companies &amp;ndash; particularly OpenAI &amp;ndash; can convert their massive capital expenditures into sustainable businesses. OpenAI&amp;rsquo;s fundraising trajectory and infrastructure spending plans have reached a scale that invites comparisons to historical technology bubbles. The company&amp;rsquo;s capital needs are staggering, and the question of whether AI adoption will translate into proportional revenue in the near term remains genuinely open.&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI coding assistants are getting worse?</title>
-      <link>//localhost:1314/sources/2026-01-08-ai-coding-getting-worse.html</link>
+      <link>/sources/2026-01-08-ai-coding-getting-worse.html</link>
       <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-08-ai-coding-getting-worse.html</guid>
+      <guid>/sources/2026-01-08-ai-coding-getting-worse.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This IEEE Spectrum article by Jamie Twiss presents the provocative claim that AI coding assistants are experiencing degradation rather than improvement. The central narrative comes from power users who report that these tools have hit a plateau, with some even declining in capability. The article identifies what it calls &amp;ldquo;silent failures&amp;rdquo; &amp;ndash; situations where AI coding tools appear functional on the surface but are actually underperforming in subtle, hard-to-detect ways.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ask HN: 10 months since the Llama-4 release: what happened to Meta AI?</title>
-      <link>//localhost:1314/sources/2026-02-05-ask-hn-llama-4-meta.html</link>
+      <link>/sources/2026-02-05-ask-hn-llama-4-meta.html</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-02-05-ask-hn-llama-4-meta.html</guid>
+      <guid>/sources/2026-02-05-ask-hn-llama-4-meta.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;An Ask HN post raised questions about the state of Meta&amp;rsquo;s AI efforts roughly 10 months after the Llama 4 release, which was widely considered a disappointment. The original poster noted that Meta&amp;rsquo;s API remained waitlist-only even after that long period, suggesting significant organizational or strategic problems.&lt;/p&gt;&#xA;&lt;p&gt;The discussion paints a picture of a company that, despite enormous resources, has struggled to maintain momentum in the open-source AI space. Multiple commenters pointed to internal dysfunction and leadership issues as likely explanations rather than technical limitations. The consensus was that Meta has the financial and engineering resources to compete but may be hampered by organizational challenges at the executive level.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How the AI Bubble Bursts in 2026</title>
-      <link>//localhost:1314/sources/2026-01-19-ai-bubble-bursts-2026.html</link>
+      <link>/sources/2026-01-19-ai-bubble-bursts-2026.html</link>
       <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-19-ai-bubble-bursts-2026.html</guid>
+      <guid>/sources/2026-01-19-ai-bubble-bursts-2026.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This article from the &amp;ldquo;Where&amp;rsquo;s Your Ed At&amp;rdquo; newsletter by Ed Zitron presents a detailed case for how the AI bubble might collapse in 2026. The analysis focuses on three interconnected pressure points: OpenAI&amp;rsquo;s cash crisis, data center financing difficulties, and delayed infrastructure rollouts.&lt;/p&gt;&#xA;&lt;p&gt;On the financial side, the article argues that OpenAI lacks sufficient capital to fund its massive infrastructure ambitions. It cites examples like Disney&amp;rsquo;s licensing deal being paid entirely in stock warrants rather than cash, and Amazon investing $10 billion into OpenAI so that OpenAI can pay AWS back &amp;ndash; a circular arrangement that highlights the company&amp;rsquo;s capital constraints.&lt;/p&gt;</description>
     </item>
     <item>
       <title>DeepSeek kicks off 2026 with paper signalling push to train bigger models for less</title>
-      <link>//localhost:1314/sources/2026-01-01-deepseek-bigger-models-less.html</link>
+      <link>/sources/2026-01-01-deepseek-bigger-models-less.html</link>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-01-deepseek-bigger-models-less.html</guid>
+      <guid>/sources/2026-01-01-deepseek-bigger-models-less.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;DeepSeek published a technical paper at the start of 2026 introducing Manifold-Constrained Hyper-Connections (mHC), a novel approach to training AI models more cost-effectively. The paper was co-authored by founder Liang Wenfeng and represents the Chinese AI startup&amp;rsquo;s ongoing effort to compete with better-funded American competitors through efficiency innovations.&lt;/p&gt;&#xA;&lt;p&gt;The mHC technique builds upon ByteDance&amp;rsquo;s earlier hyper-connections concept but adds critical efficiency improvements. The core idea constrains the hyper-connection network using a specific manifold structure to ensure both compute and cost efficiency, addressing memory cost limitations in previous architectures. The researchers demonstrated that mHC enables stable large-scale training with superior scalability compared to conventional hyper-connections, and achieves these gains with negligible computational overhead.&lt;/p&gt;</description>
     </item>
     <item>
       <title>2026: The Year the IDE Died (Steve Yegge and Gene Kim)</title>
-      <link>//localhost:1314/sources/2025-12-10-year-ide-died.html</link>
+      <link>/sources/2025-12-10-year-ide-died.html</link>
       <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2025-12-10-year-ide-died.html</guid>
+      <guid>/sources/2025-12-10-year-ide-died.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This HN submission links to a YouTube talk by Steve Yegge and Gene Kim exploring how AI coding tools might replace the traditional IDE as the primary programming environment. The submitter (mikebiglan) frames the discussion around several key questions: how far IDEs will change, whether developers will still read and reason about code directly, and what the shift means for both senior developers and students entering the field.&lt;/p&gt;&#xA;&lt;p&gt;The talk argues that what we think of as the IDE today will not remain the primary programming tool of the future. The vision includes modularity and swarms of agents working in parallel, with context windows as a key architectural constraint. The speakers suggest that the transition is already underway, with AI-first and workflow-first environments replacing file-and-buffer-first approaches.&lt;/p&gt;</description>
     </item>
     <item>
       <title>State of AI in 2026: LLMs, Coding, Scaling Laws, China, Agents, GPUs, AGI</title>
-      <link>//localhost:1314/sources/2026-02-01-state-of-ai-2026.html</link>
+      <link>/sources/2026-02-01-state-of-ai-2026.html</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-02-01-state-of-ai-2026.html</guid>
+      <guid>/sources/2026-02-01-state-of-ai-2026.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This is Lex Fridman Podcast episode #490, a comprehensive discussion on the state of AI in early 2026. The guests are Nathan Lambert, post-training lead at the Allen Institute for AI (AI2) and author of The RLHF Book, and Sebastian Raschka, author of &amp;ldquo;Build a Large Language Model From Scratch&amp;rdquo; and &amp;ldquo;Build a Reasoning Model From Scratch.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;The episode covers a wide sweep of topics across the AI landscape. On the model comparison front, the guests discuss the relative strengths of ChatGPT, Claude, Gemini, and Grok, along with which AI tools work best for coding applications. A significant portion examines the open-source vs. closed-source debate, tracing how transformer-based language models have evolved since 2019 and whether the scaling laws that drove earlier progress still hold.&lt;/p&gt;</description>
     </item>
     <item>
       <title>LLM coding workflow going into 2026</title>
-      <link>//localhost:1314/sources/2026-01-10-llm-coding-workflow-2026.html</link>
+      <link>/sources/2026-01-10-llm-coding-workflow-2026.html</link>
       <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-10-llm-coding-workflow-2026.html</guid>
+      <guid>/sources/2026-01-10-llm-coding-workflow-2026.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Addy Osmani, a well-known Google engineering leader, shared his comprehensive approach to integrating LLMs into daily coding workflows. The article frames LLMs not as autonomous coders but as powerful pair programmers requiring clear direction, context, and consistent oversight.&lt;/p&gt;&#xA;&lt;p&gt;The workflow begins with collaborative planning, where the developer works with an AI to develop detailed specifications and project plans before writing code. Osmani describes this as achieving a traditional waterfall planning cycle compressed into roughly 15 minutes. Implementation then proceeds in small, iterative chunks sized to fit within context windows and remain comprehensible for human review.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Obsidian meets Claude Code: A Markdown graph for agents and context</title>
-      <link>//localhost:1314/sources/2026-02-03-obsidian-claude-code.html</link>
+      <link>/sources/2026-02-03-obsidian-claude-code.html</link>
       <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-02-03-obsidian-claude-code.html</guid>
+      <guid>/sources/2026-02-03-obsidian-claude-code.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Voicetree is an Electron-based desktop application that reimagines the development environment as a spatial graph where markdown notes and AI agent sessions coexist as interconnected nodes. The project merges Obsidian&amp;rsquo;s graph-view visualization paradigm with Claude Code&amp;rsquo;s agentic capabilities, addressing the growing challenge of managing multiple AI agent sessions and their outputs.&lt;/p&gt;&#xA;&lt;p&gt;The core innovation is a shared memory graph between the user and their agents. Rather than agents operating in isolated conversation histories, each agent node receives task content plus contextual information from nearby nodes in the graph. This spatial proximity model provides more targeted context retrieval than dumping entire conversation histories, which the creator claims avoids a documented performance degradation from context overload.&lt;/p&gt;</description>
     </item>
     <item>
       <title>I spent $638 on AI coding agents in 6 weeks</title>
-      <link>//localhost:1314/sources/2025-11-13-ai-coding-agent-costs.html</link>
+      <link>/sources/2025-11-13-ai-coding-agent-costs.html</link>
       <pubDate>Thu, 13 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2025-11-13-ai-coding-agent-costs.html</guid>
+      <guid>/sources/2025-11-13-ai-coding-agent-costs.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;A founder and CTO building an AI-first CRM product shared a detailed breakdown of their AI coding costs, revealing surprisingly high expenses from using Cursor with Claude models. Over a six-week period spanning October and November 2025, the author accumulated $638 in on-demand charges, with October alone costing $348.56 and hitting Cursor&amp;rsquo;s $400 limit.&lt;/p&gt;&#xA;&lt;p&gt;The cost analysis revealed that Claude 4.5 Sonnet Thinking requests ranged from $0.02 to $0.06 depending on context size, which seemed modest per-request but compounded rapidly at 200+ daily requests. The author experimented with 7 different models (GPT-5, Gemini 2.5 Pro, Cheetah, and others) but found Claude consumed 85% of the budget because it consistently produced the best results.&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI Coding Toolkit: Low-overhead workflow for reliable AI coding</title>
-      <link>//localhost:1314/sources/2026-01-22-ai-coding-toolkit.html</link>
+      <link>/sources/2026-01-22-ai-coding-toolkit.html</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-22-ai-coding-toolkit.html</guid>
+      <guid>/sources/2026-01-22-ai-coding-toolkit.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;The AI Coding Toolkit is an open-source Git repository template designed to provide a structured yet lightweight workflow for semi-autonomous AI coding. The creator developed it after finding that existing AI coding workflows were either too complex (involving dozens of agents running in parallel) or too opinionated for the fast-moving AI coding landscape.&lt;/p&gt;&#xA;&lt;p&gt;The toolkit operates through three sequential phases: Specify (a guided Q&amp;amp;A that captures requirements into product and technical specifications), Plan (automated generation of testable tasks with acceptance criteria), and Execute (AI agents complete tasks with built-in verification at each checkpoint). This structure enforces SDLC best practices while keeping the mental overhead low.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Introducing Agentic Vision in Gemini 3 Flash</title>
-      <link>//localhost:1314/sources/2026-02-03-gemini-3-agentic-vision.html</link>
+      <link>/sources/2026-02-03-gemini-3-agentic-vision.html</link>
       <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-02-03-gemini-3-agentic-vision.html</guid>
+      <guid>/sources/2026-02-03-gemini-3-agentic-vision.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Google introduced Agentic Vision as a new capability in Gemini 3 Flash, transforming image understanding from a static analysis task into a dynamic, action-oriented agentic process. Rather than simply analyzing images in isolation, Agentic Vision enables the model to interact with visual content across multiple steps, potentially examining images iteratively and taking actions based on what it observes.&lt;/p&gt;&#xA;&lt;p&gt;The feature represents a broader trend in AI development where multimodal capabilities are being enhanced with agentic behaviors. Instead of one-shot image analysis where a user submits a photo and receives a description, Agentic Vision allows the model to autonomously decide what to examine more closely, what questions to ask, and what actions to take based on visual inputs. This is particularly relevant for developer tools and automation workflows where visual understanding needs to be combined with decision-making.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Klaus – a Claude Code native delegating agentic harness</title>
-      <link>//localhost:1314/sources/2026-01-25-klaus-agentic-harness.html</link>
+      <link>/sources/2026-01-25-klaus-agentic-harness.html</link>
       <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-25-klaus-agentic-harness.html</guid>
+      <guid>/sources/2026-01-25-klaus-agentic-harness.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Klaus Baudelaire is an open-source agentic harness built entirely on top of Claude Code&amp;rsquo;s native features, designed to automate task delegation and agent routing without external APIs or services. The system addresses the overhead of manually deciding which agent configuration to use for a given prompt by implementing a keyword-based scoring algorithm that evaluates prompt complexity and routes tasks to the appropriate execution tier.&lt;/p&gt;&#xA;&lt;p&gt;The core mechanism works through a single &lt;code&gt;UserPromptSubmit&lt;/code&gt; hook. When a user submits a prompt, Klaus analyzes it by assigning scores based on keyword complexity (terms like &amp;ldquo;system architecture&amp;rdquo; or &amp;ldquo;oauth&amp;rdquo; increase scores, while &amp;ldquo;fix typo&amp;rdquo; decreases them) and prompt length. The resulting score maps to one of four tiers: DIRECT (score 0-2, no agents needed for simple edits), LIGHT (3-4, single agent for basic features), MEDIUM (5-6, four agents for multi-file changes), and FULL (7+ for complex architecture requiring six agents).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Claude Skill for Terraform/OpenTofu</title>
-      <link>//localhost:1314/sources/2026-01-19-terraform-skill-claude.html</link>
+      <link>/sources/2026-01-19-terraform-skill-claude.html</link>
       <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-19-terraform-skill-claude.html</guid>
+      <guid>/sources/2026-01-19-terraform-skill-claude.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Anton Babenko, a well-known contributor in the Terraform ecosystem and maintainer of many popular terraform-aws-modules, released a Claude Code skill focused on Terraform and OpenTofu best practices. The skill aggregates trusted sources including terraform-best-practices.com and community-tested patterns from over 100 production modules.&lt;/p&gt;&#xA;&lt;p&gt;The skill provides comprehensive guidance across several domains: a testing decision matrix for choosing between native tests and Terratest, module development standards for naming conventions and directory structure, CI/CD workflows for GitHub Actions and GitLab CI with Atlantis integration, and security and compliance patterns including policy-as-code and secrets management.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Expert-Techniques on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/tags/expert-techniques.html</link>
+    <link>/tags/expert-techniques.html</link>
     <description>Recent content in Expert-Techniques on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/tags/expert-techniques/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/expert-techniques/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Power Users</title>
-      <link>//localhost:1314/voices/power-users.html</link>
+      <link>/voices/power-users.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/voices/power-users.html</guid>
+      <guid>/voices/power-users.html</guid>
       <description>&lt;p&gt;These are developers who use AI coding tools daily, have developed sophisticated workflows, and share their techniques with concrete detail. They are not cheerleaders &amp;ndash; most have strong opinions about what works and what does not.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;the-context-engineer&#34;&gt;The context engineer&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;energy123&lt;/strong&gt; maintains a single markdown file of roughly 15,000 tokens containing his project&amp;rsquo;s entire world model &amp;ndash; use cases, principles, requirements, guardrails, and ambiguity resolutions. This file gets injected into every prompt. Over time, repeated inferences cause the codebase to converge toward the intended design rather than drifting into defaults. He notes this level of investment only pays off for long-lived, important projects.&lt;/p&gt;</description>
     </item>
   </channel>

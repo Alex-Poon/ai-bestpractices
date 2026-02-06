@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Workflow-Template on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/tags/workflow-template.html</link>
+    <link>/tags/workflow-template.html</link>
     <description>Recent content in Workflow-Template on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 22 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/tags/workflow-template/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/workflow-template/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI Coding Toolkit: Low-overhead workflow for reliable AI coding</title>
-      <link>//localhost:1314/sources/2026-01-22-ai-coding-toolkit.html</link>
+      <link>/sources/2026-01-22-ai-coding-toolkit.html</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/sources/2026-01-22-ai-coding-toolkit.html</guid>
+      <guid>/sources/2026-01-22-ai-coding-toolkit.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;The AI Coding Toolkit is an open-source Git repository template designed to provide a structured yet lightweight workflow for semi-autonomous AI coding. The creator developed it after finding that existing AI coding workflows were either too complex (involving dozens of agents running in parallel) or too opinionated for the fast-moving AI coding landscape.&lt;/p&gt;&#xA;&lt;p&gt;The toolkit operates through three sequential phases: Specify (a guided Q&amp;amp;A that captures requirements into product and technical specifications), Plan (automated generation of testable tasks with acceptance criteria), and Execute (AI agents complete tasks with built-in verification at each checkpoint). This structure enforces SDLC best practices while keeping the mental overhead low.&lt;/p&gt;</description>
     </item>
   </channel>

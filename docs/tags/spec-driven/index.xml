@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Spec-Driven on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/tags/spec-driven.html</link>
+    <link>/tags/spec-driven.html</link>
     <description>Recent content in Spec-Driven on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/tags/spec-driven/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/spec-driven/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kiro</title>
-      <link>//localhost:1314/tools/kiro.html</link>
+      <link>/tools/kiro.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/tools/kiro.html</guid>
+      <guid>/tools/kiro.html</guid>
       <description>&lt;p&gt;Kiro is AWS&amp;rsquo;s entry into the AI coding tool space. It went generally available in November 2025 and takes a fundamentally different approach from other AI IDEs: spec-driven development. Instead of starting with code and having AI assist along the way, Kiro starts with requirements described in natural language and produces user stories, technical design documents, coding task lists, and then code &amp;ndash; along with documentation and tests.&lt;/p&gt;&#xA;&lt;p&gt;This positions Kiro as the anti-vibe-coding tool. Where most AI coding assistants optimize for speed and developer flow, Kiro optimizes for rigor and traceability. Requirements link to specs, specs link to code, code links to tests. The entire chain is auditable, which appeals to organizations that need to demonstrate compliance or maintain strict engineering standards.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Context-Window on AI Best Practices Knowledge Base</title>
-    <link>//localhost:1314/tags/context-window.html</link>
+    <link>/tags/context-window.html</link>
     <description>Recent content in Context-Window on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1314/tags/context-window/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/context-window/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Context Management</title>
-      <link>//localhost:1314/practices/context-management.html</link>
+      <link>/practices/context-management.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1314/practices/context-management.html</guid>
+      <guid>/practices/context-management.html</guid>
       <description>&lt;p&gt;Context management is the practice of working within and around the finite context window that constrains every AI agent interaction. It is the most technical of the core practices and the one that separates power users from frustrated ones. Most practical failures in agentic coding &amp;ndash; going in circles, forgetting instructions, losing coherence over long sessions &amp;ndash; trace back to context management problems.&lt;/p&gt;&#xA;&lt;p&gt;The context window is not just a size limit. It is the agent&amp;rsquo;s entire working memory. Everything the agent knows about your project, your conversation, its instructions, and its tools must fit within this window. As it fills, quality degrades &amp;ndash; not gradually, but in ways that are hard to predict and hard to recover from.&lt;/p&gt;</description>
     </item>
   </channel>
