@@ -3,12 +3,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Two Kinds of Vibe Coding | AI Best Practices Knowledge Base</title>
-  <meta name="description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta name="description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
   <meta name="color-scheme" content="dark light">
 
   
   <meta property="og:title" content="Two Kinds of Vibe Coding">
-  <meta property="og:description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta property="og:description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
   <meta property="og:type" content="article">
 
   
@@ -37,14 +37,13 @@
       <span>AI Best Practices</span>
     </a>
     <div class="nav-links">
-      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
-      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
       <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
-      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
-      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
       <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
       <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
-      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
     </div>
     <div class="nav-actions">
       <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
@@ -114,7 +113,7 @@
 
   
 
-  <span class="meta-reading-time">3 min read</span>
+  <span class="meta-reading-time">16 min read</span>
 
   
   <span class="tier-badge tier-badge--1">Tier 1</span>
@@ -196,25 +195,357 @@
 <p>&ldquo;Keeping yourself as the human &lsquo;real programmer&rsquo; fully informed and in control&rdquo; — David Bau</p>
 </blockquote>
 <h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
-<p>The discussion generated 137 points and 26 comments. Key themes:</p>
-<p><strong>Definitional debate over &ldquo;vibe coding&rdquo;</strong></p>
-<ul>
-<li><strong>wrs</strong>: Argued there is only one kind of vibe coding — letting the LLM write code without looking at it — and that the first type described is simply AI-assisted coding</li>
-<li><strong>ofconsequence</strong>: Pointed out that Karpathy coined the term with a clear definition that people misuse: prompting an LLM and running the output without reading it</li>
-<li><strong>charcircuit</strong>: Agreed that staying &ldquo;fully informed and in control&rdquo; is not vibe coding, just regular AI-assisted development</li>
-</ul>
-<p><strong>Skepticism about vibe coding productivity</strong></p>
-<ul>
-<li><strong>WhyOhWhyQ</strong>: Reported that the initial exhilaration of vibe coding turned into exhausting QA testing of a bad engineer&rsquo;s work, ending with a product that did not really work</li>
-<li><strong>Dr_Birdbrain</strong>: Questioned what has actually been gained — the work is not easier, not faster, and the reliability benefits from testing are unclear</li>
-<li><strong>gaigalas</strong>: Characterized vibe-coded output as &ldquo;limping faster than you can walk&rdquo; — faster with each model release but still fundamentally unstable</li>
-</ul>
-<p><strong>Practical approaches and boundaries</strong></p>
-<ul>
-<li><strong>keyle</strong>: Found vibe coding acceptable for small digestible tasks like shell functions or image converters, but not for multi-day projects you intend to maintain</li>
-<li><strong>pessimizer</strong>: Currently only uses the first type, constantly making the agent refactor and simplify, but sees potential in Type 2 with proper infrastructure</li>
-<li><strong>rrix2</strong>: Asks the model for tutorials and implementation plans but demands it not write code itself, finding review of AI code as difficult as reviewing human code</li>
-</ul>
+<p><em>94 comments total</em></p>
+<p><strong>WhyOhWhyQ</strong>: &ldquo;the last couple weeks&rdquo; When I ran this experiment it was pretty exhilarating for a while. Eventually it turned into QA testing the work of a bad engineer and became exhausting. Since I had sunken &hellip;</p>
+<blockquote>
+<p><strong>danabramov</strong>: I believe the author explicitly suggests strategies to deal with this problem, which is the entire second half of the post. There’s a big difference between when you act as a human tester in the mi&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>WhyOhWhyQ</strong>: I&rsquo;m just extremely skeptical about that because I had many ideas like that and it still ended up being miserable. Maybe with Opus 4.5 things would go better though. I did choose an extremely ambiti&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>stantonius</strong>: This is so relatable it&rsquo;s painful: many many hours of work, overly ambitious project, now feeling discouraged (but hopefully not willing to give up). It&rsquo;s some small consolation to me to know other&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>irrationalfab</strong>: +1&hellip; like with a large enough engineering team, this is ultimately a guardrails problem, which in my experience with agentic coding it’s very solvable, at least in certain domains.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>majormajor</strong>: Like with large engineering teams I have little faith people will suddenly get the discipline to do the tedious, annoying, difficult work of building good enough guardrails now. We don&rsquo;t even build&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>newspaper1</strong>: I&rsquo;ve had the opposite results. I used to &ldquo;vibe code&rdquo; in languages that I knew, so that I could review the code and, I assumed, contribute myself. I got good enough results that I started using AI t&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>WhyOhWhyQ</strong>: I&rsquo;ve got 20 years of experience, but w/e. What have you made?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>newspaper1</strong>: I don&rsquo;t want to dox myself since I&rsquo;m doing it outside my regular job for the most part, but frameworks, apps (on those frameworks), low level systems stuff, linux-y things, some P2P, lots of ai too&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>stantonius</strong>: This happened to me too in an experimental project where I was testing how far the model could go on its own. Despite making progress, I can&rsquo;t bare to look at the thing now. I don&rsquo;t even know what &hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>parpfish</strong>: I’ll chime in to say that this happened to me as well. My project would start good, but eventually end up in a state where nothing could be fixed and the agent would burn tokens going in circles to&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>FrinkleFrankle</strong>: That&rsquo;s kind of what learning to code is like, though. I assume you&rsquo;re using an llm because you don&rsquo;t know enough to do it entirely on your own. At least that&rsquo;s where I&rsquo;m at and I&rsquo;ve had similar exp&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>danabramov</strong>: Curious if you have thoughts on the second half of the post? That’s exactly what the author is suggesting a strategy for.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>davidbau</strong>: &ldquo;I reward-hacked myself&rdquo; is a great way to put it!! AI is too aware of human behavior, and it is teaching us that willpower and config files are not enough. When the agent keeps producing output th&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>vhill</strong>: &gt; not only did the thing it made not end up being shippable The difference between then and now is that often with the latest models, it is shippable without bugs within a couple of LLM reviews. I’&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>WhyOhWhyQ</strong>: Who are you arguing against? When did I say it wouldn&rsquo;t? I&rsquo;m glad you like it. No need to fight me?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>imiric</strong>: &gt; I think the &ldquo;second way&rdquo; is good for demos now. It&rsquo;s also good for quickly creating legitimate looking scam and SEO spam sites. When they stop working, throw them away, and create a dozen more. M&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>keyle</strong>: Advertising campaigns as well, which, arguably, fits your categories.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>yen223</strong>: This argument can be used to shut down anything that makes coding faster or easier. It&rsquo;s not a convincing argument to me.</p>
+</blockquote>
+</blockquote>
+<p><strong>arkensaw</strong>: &gt; As AI edges humans out of the business of thinking, I think we need to be wary of losing something essential about being human If AI edges humans out of the business of thinking, then we&rsquo;re all i&hellip;</p>
+<blockquote>
+<p><strong>adlpz</strong>: Agreed, conceptually. BUT. For 99% of tasks I&rsquo;m totally certain there&rsquo;s people out there that are orders of magnitude better at them than me. If the AI can regurgitate their thinking, my output is &hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>latexr</strong>: &gt; For 99% of tasks I&rsquo;m totally certain there&rsquo;s people out there that are orders of magnitude better at them than me. And LLMs slurped some of those together with the output of thousands of people w&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>acoard</strong>: &gt; And LLMs slurped some of those together with the output of thousands of people who’d do the task worse, and you have no way of forcing it to be the good one every time. That&rsquo;s solvable though, wh&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>adlpz</strong>: &gt; And LLMs slurped some of those together with the output of thousands of people who’d do the task worse Theoretically fixable, then. &gt; But it can’t. Not definitively and consistently Again, it can&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>y0eswddl</strong>: Only if you&rsquo;re less intelligent than the average. The problem with LLMs is that they will always fall to the average/mean/median of information. And if the average person is orders of magnitude bet&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>adlpz</strong>: Your comment is nonsensical. Have you ever used any LLM? Ask the LLM to&hellip; I don&rsquo;t know, to explain to you the chemistry of aluminium oxides. Do you really think the average human will even get rem&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>woopwoop</strong>: Do you think that the average person can get a gold on the IMO?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>djaouen</strong>: &gt; Humans may not need to think to just&hellip; do stuff. God forbid we should ever have to think lol</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>gedy</strong>: It is concerning how some people really don&rsquo;t want to think about some things, and just &ldquo;do&rdquo;.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>alchemism</strong>: Very Zen of you to say</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>toobulkeh</strong>: Imagine if everyone got the opportunity to work on SOTA. What a world we would be. Unfortunately that’s not where we’re headed.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>adlpz</strong>: We&rsquo;ve never been there. With AI and robotics there may be the slim chance we get closer to that. But we won&rsquo;t. Not because AI, but because humans, of course.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>xtiansimon</strong>: &gt; “…regurgitates previous human thinking.” I was thinking about this after watching YouTube short verticals for about 2 hours last night: ~2min clips from different TV series, movies, SNL skits, mu&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>metadope</strong>: &gt; a foundation I made for myself Creative thinking requires an intent to be creative. Yes, it may be a delusion to imagine oneself as creative, one&rsquo;s thoughts to be original, but you have to begin &hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>arkensaw</strong>: &gt; Isn’t it all regurgitated thinking all the way down? there it is</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>palmotea</strong>: &gt; If AI edges humans out of the business of thinking, then we&rsquo;re all in deep shit Also because we live under capitalism, and you need something people need you to do to be allowed to live. For a ce&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>spicyusername</strong>: If AI edges humans out of the business of thinking This will never happen because the business of thinking is enjoyable and the humans whose thinking matters most will continue to be intrinsically &hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>palmotea</strong>: &gt; This will never happen because the business of thinking is enjoyable and the humans whose thinking matters most will continue to be intrinsically motivated to do it. What world do you live in, wh&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>immibis</strong>: Humans draw, but humans have been edged out of the business of drawing long ago.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>jagoff</strong>: &gt;With no humans thinking, no advances in code will be possible. What? Coding is like the one thing that RL can do without any further human input because there is a testable provable ground truth; &hellip;</p>
+</blockquote>
+<p><strong>zkmon</strong>: I became a big fan of David Bau about 10 years back, when I came across his conformal mapping page. My understanding of complex numbers changed forever. There is an amusing parallel with his views &hellip;</p>
+<p><strong>keyle</strong>: I find it&rsquo;s ok to vibe code something digestible like a ZSH function to do X or Y. An image converter, or something along those lines. Anything that involves multiple days of work, or that you plan&hellip;</p>
+<blockquote>
+<p><strong>newspaper1</strong>: I get a huge emotional reward by conjuring up something that I dreamed of but wouldn&rsquo;t have had time to build otherwise. The best description I can give is back in the day when you would beat a vid&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>deegles</strong>: not to be antagonistic but are we paid to learn stuff or to build stuff? I think it&rsquo;s the latter. if we have to learn something it&rsquo;s only so that we can build something in the end.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>zeta0134</strong>: I am absolutely paid by the hour to learn stuff. The things I&rsquo;m learning are mostly messy business domain bits: how does our internal API work, who wrote it, what were the constraints, which custom&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>davidbau</strong>: Agreed. The question, for me: Is it possible to vibe code (the second way, without looking at 90% of the code) and still learn the important things? I think the keys to the castle will come from fi&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>orjfi2hsbfith</strong>: &gt; But the value prop of the company isn&rsquo;t the software, it&rsquo;s the ability to solve business problems. Clearly it&rsquo;s critical to the job, but to take your point to its limits: imagine the business has&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>keyle</strong>: That&rsquo;s just Stockholm syndrome. Your mind went straight to the job being soulless and coping with it.</p>
+</blockquote>
+</blockquote>
+<p><strong>Dr_Birdbrain</strong>: I’m unclear what has been gained here. - Is the work easier to do? I feel like the work is harder. - Is the work faster? It sounds like it’s not faster. - Is the resulting code more reliable? This &hellip;</p>
+<blockquote>
+<p><strong>peacebeard</strong>: I have a feeling that the real work of writing a complex application is in fully understanding the domain logic in all its gory details and creating a complete description of your domain logic in c&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>joshribakoff</strong>: Its not mutually exclusive. We write test precisely because expressing a complex application is hard without them. But to your point, we should not wave away applications that cannot be understood &hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>stephendause</strong>: &gt; - Is the work faster? It sounds like it’s not faster. The author didn&rsquo;t discuss the speed of the work very much. It is certainly true that LLMs can write code faster than humans, and sometimes th&hellip;</p>
+</blockquote>
+<p><strong>rrix2</strong>: I&rsquo;ve been asking for little tutorials or implementation plans for things, and demanding that the model not write any code itself. Following the advice of Geoffrey Litt.[1] I find reviewing code wri&hellip;</p>
+<blockquote>
+<p><strong>3vidence</strong>: This is a really great idea going to try this out. I similarly just cannot mentally stand reviewing vibe coding PRs all day, but this sounds genuinely useful.</p>
+</blockquote>
+<p><strong>busfahrer</strong>: As someone new to this topic, I&rsquo;d find it interesting to see the actual chat/cli log of a successful LLM-created project like this one, especially when it comes to the meta-layers of tests and test&hellip;</p>
+<p><strong>ofconsequence</strong>: &gt; I dislike the term &ldquo;vibe coding&rdquo;. It means nothing and it&rsquo;s vague. It has a clear and specific definition. People just misuse and abuse the term. Karpathy coined it to describe when you put a pro&hellip;</p>
+<p><strong>charcircuit</strong>: &gt;keeping yourself as the human &ldquo;real programmer&rdquo; fully informed and in control. That&rsquo;s not vibe coding. That is just AI assisted coding.</p>
+<p><strong>pessimizer</strong>: I&rsquo;m only doing the first kind right now - I&rsquo;m not really letting the thing loose ever, even when I&rsquo;m not great at the language it&rsquo;s writing in. I&rsquo;m constantly making it refactor and simplify things&hellip;</p>
+<p><strong>wrs</strong>: Aaargh, I hate it when useful terms get diffused to meaninglessness. No, there’s one kind of vibe coding. The definition of vibe coding is letting the LLM write the code and not looking at it. That&hellip;</p>
+<blockquote>
+<p><strong>doctoboggan</strong>: I agree with you that there is one original definition, but I feel like we&rsquo;ve lost this one and the current accepted definition of vibe coding is any code is majority or exclusively produced by an &hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>platevoltage</strong>: I have no idea why an experienced developer who uses LLM&rsquo;s to make them more productive would want to degrade their workflow by calling it &ldquo;vibe coding&rdquo;.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ares623</strong>: It’s a chance to become the next Uncle Bob in a new era of software</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>christophilus</strong>: Yeah. I agree the distinction is important, but it’s already been lost. Maybe, we need a new phrase to describe “a product you absolutely cannot trust because I blindly followed a non-deterministic&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>pessimizer</strong>: &gt; Aaargh, I hate it when useful terms get diffused to meaninglessness. I think that when you say this, you have an obligation to explain how the term &ldquo;vibe coding&rdquo; is useful, and is only useful by &hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>wrs</strong>: People definitely are doing that. Anyone who is not a programmer and asks the LLM to write a program is doing exactly that. The LLM will do that itself behind the scenes nowadays (yesterday Claude &hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>brikym</strong>: It needs a short concise name. Vibe-cod-ing is catchy. Ell-Ell-Em-Cod-ing isn&rsquo;t.</p>
+</blockquote>
+<blockquote>
+<p><strong>francisofascii</strong>: At this point I think it is no longer a binary yes/no but rather a nebulous percentage. For example, this codebase was 90% vibe coded, leaving 10% that was edited manually or reviewed.</p>
+</blockquote>
+<blockquote>
+<p><strong>dbtc</strong>: In that case, &ldquo;blind&rdquo; would be more accurate.</p>
+</blockquote>
+<blockquote>
+<p><strong>hackable_sand</strong>: I&rsquo;m ngl, when I first heard &ldquo;vibe coding&rdquo; I immediately imagined programming from memory.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>parpfish</strong>: My mind went… elsewhere. Specifically, the gutter. <a href="https://en.wikipedia.org/wiki/Teledildonics">https://en.wikipedia.org/wiki/Teledildonics</a></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bitwize</strong>: Unsurprisingly, the Rust community has you covered there also: <a href="https://github.com/buttplugio/buttplug">https://github.com/buttplugio/buttplug</a> <a href="https://github.com/Gankra/cargo-mommy">https://github.com/Gankra/cargo-mommy</a> (has integration with the former)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>hackable_sand</strong>: Ooooh very interesting</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>exe34</strong>: you&rsquo;re still allowed to alternate between letting it do and consolidating, no?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>acedTrex</strong>: no, vibe coding is explicitly NOT looking at the output.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>MisterTea</strong>: From my understanding, the vibe part means you go along with the vibe of the LLM meaning you don&rsquo;t question the design choices the LLM makes and you just go with the output it hands you.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>exe34</strong>: okay so I&rsquo;m not vibe coding, I&rsquo;m just writing shittier code than before.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>gaigalas</strong>: There&rsquo;s something wrong with this vibe coded stuff, any kind of it. <em>It limps faster than you can walk</em>, in simple terms. At each model release, it limps faster, but still can&rsquo;t walk. That is not a&hellip;</p>
+<p><strong>dash2</strong>: I tried the new vibe-coded Mandelbrot viewer and it didn&rsquo;t seem to work well on Safari. I could only get it to zoom in once, and most of the keys didn&rsquo;t work. Maybe the author hasn&rsquo;t done enough ma&hellip;</p>
+<blockquote>
+<p><strong>davidbau</strong>: Right. Just saw this thread. Yesterday asked claude+codex to add a fallback to WebGL support (another 5000 LoC!). So now it works a bit better on Linux, Safari, though the WebGL impl is not as smoo&hellip;</p>
+</blockquote>
+<p><strong>cornhole</strong>: it took me a bit to figure out my aversion to ai usage in programming, but it comes down to the fact that i like building the thing instead of telling the computer to do it in detailed ways. if i w&hellip;</p>
+<p><strong>satisfice</strong>: This article is premised on a shallow notion of testing. Because of this, the author lacks a conceptual toolkit to discuss product risk. He speaks of the most important part of the testing process &hellip;</p>
+<blockquote>
+<p><strong>davidbau</strong>: Fair. Let me be more precise. The distinction is between two ways of deploying human thinking. In the first, you are the test oracle: think about every test, repeat every five minutes, or every 30&hellip;.</p>
+</blockquote>
+<p><strong>jackfranklyn</strong>: The &ldquo;going in circles&rdquo; problem several people mention seems like the key thing to watch for. In my experience it tends to happen when the codebase outgrows what the model can hold in context effect&hellip;</p>
+<blockquote>
+<p><strong>darkstar_16</strong>: I do the same. Directed tasks with smaller context and start a new &ldquo;chat&rdquo; when it&rsquo;s done what I want.</p>
+</blockquote>
+<p><strong>predkambrij</strong>: Things about those approaches did and will change more when LLMs are getting better. I got some unbelievable good results back in March, then I was tasking LLMs too hard problems and got bunch of f&hellip;</p>
+<p><strong>agumonkey</strong>: I asked absurd question to chatgpt 4o when it came out, by mixing haskell and lisp books terminology (say design an isomorphic contravariant base class so that every class fills ). The result was s&hellip;</p>
+<p><strong>alyxya</strong>: I don’t think the two kinds of vibe coding are entirely separate. There’s a spectrum of how much context you care to understand yourself, and it’s feasible to ask a lot of questions to gain more un&hellip;</p>
+<p><strong>TYPE_FASTER</strong>: &gt; It is when you use a coding agent to build towers of complexity that go beyond what you have time to understand in any detail. I think the quality of the product depends on the person (or people)&hellip;</p>
+<p><strong>anthk</strong>: LLM&rsquo;s forget the context fast. Better if you learn programming the hard way. With books, either physical or PDF/EPUB&rsquo;s.</p>
+<p><strong>geldedus</strong>: Neither is vibe coding. Both are AI-assisted programming, a different species. Classical mislabelling.</p>
+<p><strong>latexr</strong>: &gt; The second type of vibe coding is what I am interested in. It is when you use a coding agent to build towers of complexity that go beyond what you have time to understand in any detail. I am inte&hellip;</p>
+<p><strong>epgui</strong>: Am I the only one who, rather than being impressed, is recoiling in horror?</p>
+<p><strong>bloppe</strong>: Someone should start an anthology of posts claiming &ldquo;I vibe-coded this toy project. Software Engineering is dead.&rdquo;</p>
+<blockquote>
+<p><strong>ubertaco</strong>: I bet we could vibe-post a bunch of them, even! Blogging is dead!</p>
+</blockquote>
 
       </div>
 
@@ -259,30 +590,29 @@
   <div class="footer-container">
     <div class="footer-brand">
       <span class="footer-logo">AI Best Practices</span>
-      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
     </div>
     <div class="footer-nav">
       <div class="footer-section">
         <h3>Learn</h3>
         <ul>
-          <li><a href="../start-here/index.html">Start Here</a></li>
-          <li><a href="../skills/index.html">Skills</a></li>
-          <li><a href="../workflows/index.html">Workflows</a></li>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Explore</h3>
         <ul>
           <li><a href="../tools/index.html">Tools</a></li>
-          <li><a href="../landscape/index.html">Landscape</a></li>
           <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
           <li><a href="../sources/index.html">Sources</a></li>
-          <li><a href="../tags/">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
     </div>
   </div>
 </footer>

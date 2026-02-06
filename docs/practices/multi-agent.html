@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multi-Agent Patterns | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="Running parallel agents, swarms, and team-based workflows — when it works and when it doesn&#39;t.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Multi-Agent Patterns">
+  <meta property="og:description" content="Running parallel agents, swarms, and team-based workflows — when it works and when it doesn&#39;t.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-practices"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../practices/index.html">Practices</a></li>
+      
+    
+    <li aria-current="page">Multi-Agent Patterns</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Multi-Agent Patterns</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">10 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/multi-agent.html" class="tag-pill">multi-agent</a>
+  
+  
+  
+  
+  <a href="../tags/parallel.html" class="tag-pill">parallel</a>
+  
+  
+  
+  
+  <a href="../tags/swarms.html" class="tag-pill">swarms</a>
+  
+  
+  
+  
+  <a href="../tags/orchestration.html" class="tag-pill">orchestration</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <p>Multi-agent patterns involve running multiple AI agents simultaneously on related tasks. They represent the highest-throughput mode of AI-assisted development &ndash; and the most complex. When they work, months of work happen in minutes. When they fail, you get merge conflicts, duplicated effort, and code that no single agent (or human) fully understands.</p>
+<p>The practice is still emerging. There is no consensus on when multi-agent is worth the overhead versus well-scoped single-agent work. But practitioners are converging on principles that separate productive multi-agent usage from expensive chaos.</p>
+<h2 id="what-multi-agent-patterns-are">What Multi-Agent Patterns Are</h2>
+<p>Multi-agent patterns are any workflow where two or more AI agents work concurrently on related tasks within the same project. This ranges from simple parallelism (two independent agents working on unrelated features) to complex orchestration (a lead agent delegating subtasks to specialist agents and integrating their outputs).</p>
+<p>The key distinction from single-agent work is coordination. With one agent, coordination is trivial &ndash; you talk to the agent, the agent acts. With multiple agents, you need mechanisms for task allocation, conflict avoidance, result integration, and quality verification.</p>
+<p><strong>joshuaisaact</strong> provided the most precise framing: agents are &ldquo;stateless functions with a limited heap.&rdquo; Roles are scope constraints. Context window is local memory. A shared state file is global state. Swarm patterns are just function scoping dressed up as organizational charts. The value comes from giving each function a clean context, not from the organizational metaphor.</p>
+<h2 id="why-multi-agent-matters">Why Multi-Agent Matters</h2>
+<h3 id="clean-context-windows-produce-better-output">Clean context windows produce better output</h3>
+<p>The primary benefit is not parallelism for its own sake but context freshness. A subagent spawned for a specific task starts with a clean context containing only the information it needs. It reasons better than a parent agent whose context is polluted with thousands of tokens of previous work.</p>
+<p><strong>AffableSpatula</strong> confirmed this: subagents with fresh context burn fewer tokens and reason better than continuing in a degraded monolithic session. <strong>baby</strong> always delegates self-contained tasks to subagents for this reason, maintaining a dependency graph so they do not step on each other.</p>
+<h3 id="some-work-is-embarrassingly-parallel">Some work is embarrassingly parallel</h3>
+<p>When you have many independent, well-scoped tasks &ndash; writing tests for different modules, implementing similar endpoints, generating documentation for different components &ndash; parallel execution delivers massive speedups without complex coordination.</p>
+<p><strong>esperent</strong> split test-writing into 26 subagents that completed months of drudge work in 20 minutes. The key was clear non-overlapping boundaries. Verification still took days, but the generation phase compressed dramatically.</p>
+<h3 id="role-specialization-improves-output-quality">Role specialization improves output quality</h3>
+<p>Rather than running N identical generalist agents, deploying specialists whose work products are orthogonal by design reduces coordination overhead and improves quality in each domain.</p>
+<p>Nicholas Carlini&rsquo;s 16-agent compiler project demonstrated this with role specialization: core developers, a deduplicator, a performance optimizer, a code quality critic, and a documentation maintainer. Each agent had a constrained scope that naturally avoided conflicts with other agents&rsquo; work.</p>
+<h2 id="how-to-use-multi-agent-patterns-effectively">How to Use Multi-Agent Patterns Effectively</h2>
+<h3 id="pattern-1-independent-parallel-tasks">Pattern 1: Independent Parallel Tasks</h3>
+<p>The simplest and most reliable pattern. Multiple agents work on completely independent tasks with no shared state and no need for coordination.</p>
+<p><strong>When it works:</strong> You have N tasks that do not touch the same files and do not depend on each other&rsquo;s output. Examples: writing tests for different modules, implementing independent features, generating documentation for separate components.</p>
+<p><strong>How to do it:</strong></p>
+<ol>
+<li>Scope each task independently (see <a href="../task-scoping.html">task scoping</a>).</li>
+<li>Assign each task to a separate agent session.</li>
+<li>Let agents work independently.</li>
+<li>Review and merge results sequentially.</li>
+</ol>
+<p><strong>kaydub</strong> described this workflow: rip through new features with one agent, then have another come through to clean up, look for code smells, and review. Catch remaining problems at the PR stage.</p>
+<h3 id="pattern-2-lead-plus-subagents">Pattern 2: Lead-Plus-Subagents</h3>
+<p>A lead agent maintains the overall plan and delegates specific subtasks to subagents. The lead agent integrates results and handles coordination.</p>
+<p><strong>When it works:</strong> You have a complex task that can be decomposed into independent subtasks, but the subtasks need to be sequenced or their results need to be integrated intelligently.</p>
+<p><strong>How to do it:</strong></p>
+<ol>
+<li>The lead agent reads the task specification and creates a decomposition.</li>
+<li>The lead spawns subagents for each independent subtask.</li>
+<li>Subagents work with fresh context containing only their task-relevant information.</li>
+<li>The lead integrates results, resolving any conflicts.</li>
+</ol>
+<p><strong>AffableSpatula</strong> uses this pattern with Claude Code&rsquo;s delegation mode. The lead agent maintains the dependency graph, spawns subagents for self-contained tasks, and integrates their outputs. System-reminder breadcrumbs help the lead track subagent progress.</p>
+<h3 id="pattern-3-domain-specialized-teams">Pattern 3: Domain-Specialized Teams</h3>
+<p>Multiple agents with different roles and expertise areas work concurrently, each responsible for a specific domain.</p>
+<p><strong>When it works:</strong> The project has clear domain boundaries (frontend, backend, infrastructure, testing) and the domains can work independently for significant stretches.</p>
+<p><strong>How to do it:</strong></p>
+<ol>
+<li>Define clear domain boundaries.</li>
+<li>Assign one agent per domain.</li>
+<li>Each agent has domain-specific context (relevant files, conventions, tools).</li>
+<li>Coordination happens through shared state files or sequential integration points.</li>
+</ol>
+<p><strong>neom</strong> maintains separate chat sessions for devops, frontend, architecture, and security. Each writes to a shared log file that other sessions pick up through system reminder processes. <strong>ryanjshaw</strong> treats agents as threads with one agent managing writing state, using the actor model with mailboxes for orchestration.</p>
+<h3 id="pattern-4-generator-reviewer-pipeline">Pattern 4: Generator-Reviewer Pipeline</h3>
+<p>One agent generates code while a second agent reviews it. The review agent catches errors the generator introduced, providing an additional quality filter before human review.</p>
+<p><strong>When it works:</strong> For any task where the cost of an undetected error is high and human review bandwidth is limited.</p>
+<p><strong>How to do it:</strong></p>
+<ol>
+<li>Generator agent implements the task.</li>
+<li>Reviewer agent examines the output with fresh context.</li>
+<li>Feed review findings back to the generator (or to a human for resolution).</li>
+</ol>
+<p><strong>dkubb</strong> runs two Claude Code sessions in parallel: one for implementation, another for auditing. The audit session reviews code, identifies patterns, and writes custom lints. <strong>linsomniac</strong> uses a &ldquo;codex-review&rdquo; skill that reviews the last commit, using one agent to check another.</p>
+<p><strong>megalomanu</strong> configured an auto-review workflow where Claude Code creates PRs, requests reviewers, and posts auto-review comments.</p>
+<h3 id="pattern-5-oracle-based-decomposition">Pattern 5: Oracle-Based Decomposition</h3>
+<p>When a monolithic failure cannot be easily decomposed into independent tasks, use a reference implementation (the &ldquo;oracle&rdquo;) to mechanically decompose the problem.</p>
+<p><strong>When it works:</strong> You have a known-good implementation to compare against and a failing implementation that fails opaquely.</p>
+<p><strong>How to do it:</strong></p>
+<ol>
+<li>Use the oracle to binary-search for the specific failure point.</li>
+<li>Each identified failure becomes an independent, well-scoped task.</li>
+<li>Assign independent tasks to separate agents.</li>
+</ol>
+<p>Nicholas Carlini&rsquo;s compiler project demonstrated this: when a single monolithic failure appeared (compiling the Linux kernel), all 16 agents independently discovered the same bug. The solution was using GCC as an oracle to binary-search for the specific compilation unit causing the failure, converting one opaque problem into many scoped tasks.</p>
+<h2 id="the-coordination-tax">The Coordination Tax</h2>
+<p>Multi-agent patterns come with overhead that single-agent work avoids. The coordination tax must be lower than the parallelism benefit, or multi-agent is net negative.</p>
+<h3 id="merge-conflicts">Merge conflicts</h3>
+<p><strong>nulone</strong> identified merge cost as the killer of multi-agent approaches. When agents modify the same files, resolving conflicts is expensive and error-prone. The solution: design task boundaries around file ownership, not logical decomposition.</p>
+<h3 id="the-review-bottleneck">The review bottleneck</h3>
+<p><strong>czhu12</strong> noted that when Claude generates copious code across many agents, it becomes much harder to review than small snippets one at a time. <strong>zmmmmm</strong> formalized this: &ldquo;We can only produce code as fast as responsibility-takers can execute due diligence.&rdquo; Human review capacity is the hard ceiling on multi-agent throughput.</p>
+<h3 id="orchestration-overhead">Orchestration overhead</h3>
+<p><strong>storystarling</strong> warned that orchestration overhead in frameworks like LangGraph often costs more tokens than the clean-context savings provide. Simple orchestration (a lead agent with subagents) outperforms complex frameworks for most use cases.</p>
+<p><strong>MrOrelliOReilly</strong> observed that most orchestration concepts are just workarounds for bad model behavior &ndash; the model provider is best positioned to fix this natively.</p>
+<h3 id="diminishing-returns-at-scale">Diminishing returns at scale</h3>
+<p><strong>joshuaisaact</strong> cited research showing multi-agent benefits diminish as LLM capabilities improve. As models get better at handling larger contexts and more complex tasks, simpler single-agent abstractions may outperform complex multi-agent setups. Today&rsquo;s multi-agent solution may be tomorrow&rsquo;s over-engineering.</p>
+<h2 id="when-not-to-use-multi-agent">When NOT to Use Multi-Agent</h2>
+<p><strong>asimeqi</strong> asked the pointed question: &ldquo;Can barely keep up with one instance of Claude Code &ndash; what are people programming that needs 10 agents?&rdquo;</p>
+<p>Multi-agent is not appropriate when:</p>
+<ul>
+<li><strong>Tasks have high interdependence.</strong> If agents need to coordinate on every change, the overhead exceeds the benefit.</li>
+<li><strong>The codebase is small.</strong> For projects that fit comfortably in a single context window, fresh subagents provide no advantage.</li>
+<li><strong>You cannot verify the output.</strong> More code generated faster is worse than useless if you cannot review it. <strong>serial_dev</strong> noted that in professional settings with coding standards and real users, one agent at a time is plenty.</li>
+<li><strong>The orchestration is more complex than the task.</strong> If setting up the multi-agent workflow takes longer than doing the work with one agent, you are over-engineering.</li>
+<li><strong>You lack clear task boundaries.</strong> Without clear non-overlapping boundaries, agents will step on each other. <strong>nulone</strong> found that merge costs kill the approach without file ownership boundaries.</li>
+</ul>
+<h2 id="anti-patterns">Anti-Patterns</h2>
+<h3 id="swarm-everything">Swarm Everything</h3>
+<p>Spawning many agents for every task regardless of whether the task benefits from parallelism. More agents do not mean better results. They mean more coordination overhead, more merge conflicts, and more code to review.</p>
+<p><strong>Fix:</strong> Start with one well-scoped agent. Only parallelize when you have clearly independent subtasks that would benefit from fresh context.</p>
+<h3 id="no-file-ownership">No File Ownership</h3>
+<p>Letting multiple agents modify the same files concurrently. This guarantees merge conflicts and inconsistent code.</p>
+<p><strong>Fix:</strong> Design task boundaries around file ownership. Each agent owns specific files or directories. If a task requires cross-cutting changes, assign it to a single agent or sequence the work.</p>
+<h3 id="trusting-agent-self-coordination">Trusting Agent Self-Coordination</h3>
+<p>Assuming agents will coordinate with each other without explicit mechanisms. They will not. Each agent operates in its own context with no awareness of other agents&rsquo; work.</p>
+<p><strong>Fix:</strong> Use explicit coordination mechanisms: shared state files, dependency graphs, file ownership rules, or a lead agent that manages task allocation.</p>
+<h3 id="generating-without-reviewing">Generating Without Reviewing</h3>
+<p>Using multi-agent to generate code faster without proportionally increasing review capacity. More code faster is only valuable if it is correct code faster.</p>
+<p><strong>Fix:</strong> Pair generation agents with review agents. Budget review time proportional to generation throughput. <strong>squirrellous</strong> suggested demanding near-100% test coverage as the agent&rsquo;s proof of correctness to reduce human review burden.</p>
+<h3 id="over-orchestration">Over-Orchestration</h3>
+<p>Building complex orchestration frameworks when simple patterns would suffice. <strong>nonethewiser</strong> tried a project management framework that felt organized but ultimately the agent does whatever it does. Went back to raw prompting with plan mode as the only guardrail.</p>
+<p><strong>comboy</strong> identified a meta-failure: once you find a pattern that works (like planning or TODO management), it gets internalized into the model&rsquo;s behavior, and your external abstraction on top becomes defective because agents get confused about planning the planning.</p>
+<p><strong>Fix:</strong> Use the simplest coordination mechanism that works. Often that is a lead agent with a TODO file and fresh subagents for self-contained tasks.</p>
+<h2 id="the-verification-challenge">The Verification Challenge</h2>
+<p>Multi-agent output requires more verification effort, not less. Each agent produces code that is coherent within its own context but may conflict with other agents&rsquo; output. Integration testing, consistency checks, and human review must scale with the number of agents.</p>
+<p><strong>esperent</strong> is honest about this: 26 subagents completed months of test-writing in 20 minutes, but verification took days. This is the characteristic ratio: fast generation, slow verification.</p>
+<p><strong>chasing</strong> put it directly: &ldquo;It is not just my job to generate code but to know and vouch for it.&rdquo; Multi-agent makes generation cheap but does not change the cost of taking responsibility for the output.</p>
+<h2 id="evidence">Evidence</h2>
+<p><strong>esperent</strong> (HN, thread 46749612): Split test-writing into 26 subagents. Months of drudge work done in 20 minutes. Verification took days. Clear non-overlapping boundaries were the key.</p>
+<p><strong>joshuaisaact</strong> (HN, thread 46752037): Agents are stateless functions with a limited heap. Swarm patterns are function scoping dressed up as org charts. Research shows multi-agent benefits diminish as models improve.</p>
+<p><strong>AffableSpatula</strong> (HN, thread 46744478): Subagents with fresh context burn fewer tokens and reason better than a monolithic context.</p>
+<p><strong>nulone</strong> (HN, thread 46744901): Merge cost kills multi-agent approaches. File ownership boundaries and test-before-merge are essential.</p>
+<p><strong>serial_dev</strong> (HN, thread 46746274): In professional settings with coding standards and real users, one agent at a time is plenty. Output quality is never good enough to run unchecked.</p>
+<p><strong>zmmmmm</strong> (HN, thread 46748947): We can only produce code as fast as responsibility-takers can execute due diligence. Review caps output at human review rates.</p>
+<p><strong>asimeqi</strong> (HN, thread 46761700): Can barely keep up with one instance of Claude Code. Asks what people are programming that needs 10 agents.</p>
+<p><strong>baby</strong> (HN, thread 46752104): Always delegates self-contained tasks to subagents. Coordination via dependency graph. Better results because of clean context windows.</p>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        
+        <a href="../practices/context-management.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Context Management</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-multi-agent-patterns-are">What Multi-Agent Patterns Are</a></li>
+    <li><a href="#why-multi-agent-matters">Why Multi-Agent Matters</a>
+      <ul>
+        <li><a href="#clean-context-windows-produce-better-output">Clean context windows produce better output</a></li>
+        <li><a href="#some-work-is-embarrassingly-parallel">Some work is embarrassingly parallel</a></li>
+        <li><a href="#role-specialization-improves-output-quality">Role specialization improves output quality</a></li>
+      </ul>
+    </li>
+    <li><a href="#how-to-use-multi-agent-patterns-effectively">How to Use Multi-Agent Patterns Effectively</a>
+      <ul>
+        <li><a href="#pattern-1-independent-parallel-tasks">Pattern 1: Independent Parallel Tasks</a></li>
+        <li><a href="#pattern-2-lead-plus-subagents">Pattern 2: Lead-Plus-Subagents</a></li>
+        <li><a href="#pattern-3-domain-specialized-teams">Pattern 3: Domain-Specialized Teams</a></li>
+        <li><a href="#pattern-4-generator-reviewer-pipeline">Pattern 4: Generator-Reviewer Pipeline</a></li>
+        <li><a href="#pattern-5-oracle-based-decomposition">Pattern 5: Oracle-Based Decomposition</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-coordination-tax">The Coordination Tax</a>
+      <ul>
+        <li><a href="#merge-conflicts">Merge conflicts</a></li>
+        <li><a href="#the-review-bottleneck">The review bottleneck</a></li>
+        <li><a href="#orchestration-overhead">Orchestration overhead</a></li>
+        <li><a href="#diminishing-returns-at-scale">Diminishing returns at scale</a></li>
+      </ul>
+    </li>
+    <li><a href="#when-not-to-use-multi-agent">When NOT to Use Multi-Agent</a></li>
+    <li><a href="#anti-patterns">Anti-Patterns</a>
+      <ul>
+        <li><a href="#swarm-everything">Swarm Everything</a></li>
+        <li><a href="#no-file-ownership">No File Ownership</a></li>
+        <li><a href="#trusting-agent-self-coordination">Trusting Agent Self-Coordination</a></li>
+        <li><a href="#generating-without-reviewing">Generating Without Reviewing</a></li>
+        <li><a href="#over-orchestration">Over-Orchestration</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-verification-challenge">The Verification Challenge</a></li>
+    <li><a href="#evidence">Evidence</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

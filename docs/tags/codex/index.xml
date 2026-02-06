@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Codex on AI Best Practices Knowledge Base</title>
+    <link>/tags/codex.html</link>
+    <description>Recent content in Codex on AI Best Practices Knowledge Base</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/codex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Codex</title>
+      <link>/tools/codex.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tools/codex.html</guid>
+      <description>&lt;p&gt;OpenAI Codex is a cloud-sandboxed coding agent that takes a fundamentally different approach from CLI-first tools like Claude Code. Rather than operating interactively in your terminal, Codex runs tasks in isolated cloud environments &amp;ndash; you provide specifications, it executes in a sandbox, and returns results. This &amp;ldquo;outsourcing&amp;rdquo; model prioritizes safety and deep reasoning over real-time collaboration.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-codex-works&#34;&gt;How Codex Works&lt;/h2&gt;&#xA;&lt;p&gt;Codex operates on a submit-and-review model:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;You provide a task&lt;/strong&gt; &amp;ndash; a bug to fix, a feature to implement, code to analyze&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Codex spins up a sandboxed environment&lt;/strong&gt; with your code&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;The agent works autonomously&lt;/strong&gt; &amp;ndash; reading files, writing code, running tests &amp;ndash; without access to your local machine&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;You receive results&lt;/strong&gt; to review, approve, or iterate on&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;This is architecturally distinct from Claude Code and Gemini CLI, which operate directly in your terminal with access to your filesystem, environment variables, and local toolchain. Codex&amp;rsquo;s sandbox provides isolation at the cost of local context.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -33,15 +33,20 @@ A follow-up comment from the author included detailed Cursor usage statistics ge
 
 ## HN Discussion Highlights
 
-The discussion generated 1 point and 5 comments, reflecting the niche audience for cost analysis posts.
+*8 comments total*
 
-**Detailed usage analytics**
-- **nthypes** (OP): Shared Cursor-generated statistics showing $928.45 over 70 days, average $13.86/day, with peak activity at 1-2 PM and Saturdays being the busiest day. The 88.8% cache hit rate was highlighted as a major cost saver.
+**nthypes** (OP): Shared detailed Cursor-generated usage stats: $928.45 over 70 days, average $0.06/request, projected monthly cost ~$416. Median time between requests was just 13 seconds (burst activity). Cache hit rate of 88.8% saved significant costs...
 
-**Value assessment and alternatives**
-- **Rochus**: Asked about concrete ROI, reporting mixed results with Claude where re-work consumed most time savings, but finding GPT-5 produced code that compiled and ran correctly more often, all covered by a Perplexity subscription
-- **mnky9800n**: Recommended switching to Claude Code Max at $125/month flat rate, noting they run multiple agents doing research as a scientist without cost surprises
-- **Woods369**: Pointed out that pricing is still stabilizing, noting Warp terminal's new lower-cost plans and an industry acknowledgment that current pricing doesn't scale sustainably
+**Rochus**: Asked about concrete ROI. Reported mixed results with Claude Sonnet and Opus where re-work consumed most time savings. Found GPT-5 via Perplexity produced code that usually compiles and runs correctly up front...
 
-**The investment framing**
-- **6510**: Suggested that AI coding costs are an ongoing investment in skill development, noting that proficiency with these tools will determine future competitive advantage
+> **nthypes**: Replied that the value-to-token ratio feels off. Many of those 340M tokens feel wasteful — the LLM uses 50k tokens exploring dead ends before finding a solution expressible in 5k tokens. The productivity gain is real but feels like paying 10x more than fair...
+
+**Woods369**: Agreed with the closing questions. Noted pricing fluctuation as companies find the sweet spot. Mentioned Warp terminal's new plan with lower cost per request, citing their acknowledgment that plans didn't scale sustainably at full usage...
+
+**mnky9800n**: Recommended Claude Code Max ($125/month flat) — runs multiple agents on clusters doing research as a scientist with no cost surprises. Suggested the $638/6 weeks is a budget question for the founder to decide...
+
+> **nthypes**: Noted even Claude Code Max's $200/month plan has weekly rate limits (240-480 hours Sonnet 4, 24-40 hours Opus 4/week). Main concern: if AI coding becomes a $5-6k/year baseline expense per developer, it changes unit economics for early-stage companies...
+
+>> **mnky9800n**: Argued that when testing ideas you can't also be thinking about efficiency. The LLM explores different solutions to arrive at ones that work — those tokens on bad solutions were useful. Many software licenses cost multiples of $5-6k/year and are still worth it...
+
+**6510**: Suggested it's important to consider training costs — proficiency requires practice, and from now on everything you do will be this expensive.

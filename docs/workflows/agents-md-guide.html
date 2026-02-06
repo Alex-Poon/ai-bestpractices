@@ -37,14 +37,13 @@
       <span>AI Best Practices</span>
     </a>
     <div class="nav-links">
-      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
-      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
       <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
-      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
-      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
       <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
       <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
-      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
     </div>
     <div class="nav-actions">
       <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
@@ -166,7 +165,7 @@
 <p>Vercel&rsquo;s engineering team ran a formal evaluation comparing two approaches to providing agents with documentation: AGENTS.md files (passive context in the system prompt) versus skills (active retrieval tools the agent invokes on demand). The results were decisive.</p>
 <p>A compressed 8KB documentation index embedded in AGENTS.md achieved a 100% pass rate on evaluation tasks targeting Next.js 16 APIs absent from model training data. Skills-based retrieval maxed out at 79% &ndash; and that required explicit instructions telling the agent to use the skill. Without those instructions, skills performed no better than the 53% baseline. The root cause: in over half of eval cases, the agent simply never invoked the skill. It failed to recognize when it needed documentation help.</p>
 <p>The takeaway is structural. Passive context eliminates the decision point that trips up active retrieval. There is no sequencing issue, no need for the agent to decide whether to look something up. The documentation is present in every turn. Small wording changes in skill instructions produced dramatic behavioral shifts, revealing the fragility of the retrieval approach. Passive context sidesteps this fragility entirely.</p>
-<p>For the full evaluation details, see <a href="../sources/2026-01-29-agents-md-outperforms-skills/">AGENTS.md Outperforms Skills</a>.</p>
+<p>For the full evaluation details, see <a href="../sources/2026-01-29-agents-md-outperforms-skills.html">AGENTS.md Outperforms Skills</a>.</p>
 <h2 id="what-to-include">What to Include</h2>
 <h3 id="build-and-test-commands">Build and Test Commands</h3>
 <p>The most immediately useful entries. Every agent session should know how to build the project and run its tests without asking.</p>
@@ -263,10 +262,10 @@
 </span></span></code></pre></div><p>Adapt the sections to your project. Start with what you know and let the file grow from real usage.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><a href="../sources/2026-01-29-agents-md-outperforms-skills/">AGENTS.md Outperforms Skills in Our Agent Evals</a> &ndash; Vercel&rsquo;s evaluation showing 100% pass rate for passive context versus 79% for active retrieval</li>
-<li><a href="../patterns/harness-engineering/">Harness Engineering Pattern</a> &ndash; The conceptual foundations and compounding dynamics</li>
-<li><a href="../references/agents-md-guide/">AGENTS.md / CLAUDE.md Reference</a> &ndash; The condensed template version</li>
-<li><a href="../sources/2026-01-26-karpathy-claude-coding-notes/">Karpathy&rsquo;s Claude Coding Notes</a> &ndash; Observations on persistent configuration in practice</li>
+<li><a href="../sources/2026-01-29-agents-md-outperforms-skills.html">AGENTS.md Outperforms Skills in Our Agent Evals</a> &ndash; Vercel&rsquo;s evaluation showing 100% pass rate for passive context versus 79% for active retrieval</li>
+<li><a href="../skills/harness-engineering.html">Harness Engineering Pattern</a> &ndash; The conceptual foundations and compounding dynamics</li>
+<li><a href="../workflows/agents-md-guide.html">AGENTS.md / CLAUDE.md Reference</a> &ndash; The condensed template version</li>
+<li><a href="../sources/2026-01-26-karpathy-claude-coding-notes.html">Karpathy&rsquo;s Claude Coding Notes</a> &ndash; Observations on persistent configuration in practice</li>
 </ul>
 
       </div>
@@ -332,30 +331,29 @@
   <div class="footer-container">
     <div class="footer-brand">
       <span class="footer-logo">AI Best Practices</span>
-      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
     </div>
     <div class="footer-nav">
       <div class="footer-section">
         <h3>Learn</h3>
         <ul>
-          <li><a href="../start-here/index.html">Start Here</a></li>
-          <li><a href="../skills/index.html">Skills</a></li>
-          <li><a href="../workflows/index.html">Workflows</a></li>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Explore</h3>
         <ul>
           <li><a href="../tools/index.html">Tools</a></li>
-          <li><a href="../landscape/index.html">Landscape</a></li>
           <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
           <li><a href="../sources/index.html">Sources</a></li>
-          <li><a href="../tags/">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 84 pages across 187 topics.</p>
     </div>
   </div>
 </footer>

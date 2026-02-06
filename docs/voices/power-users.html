@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Power Users | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="Practitioners who&#39;ve gone deep with AI coding tools — their hard-won insights and techniques.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Power Users">
+  <meta property="og:description" content="Practitioners who&#39;ve gone deep with AI coding tools — their hard-won insights and techniques.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-voices"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../voices/index.html">Voices</a></li>
+      
+    
+    <li aria-current="page">Power Users</li>
+  </ol>
+</nav>
+
+
+
+  <article class="article" style="max-width: var(--max-width-content);">
+    <header class="article-header">
+      
+      <span class="voice-category-badge voice-category-badge--power-user">Power user</span>
+      
+      <h1 class="article-title">Power Users</h1>
+      <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">5 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+      
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/practitioner-insights.html" class="tag-pill">practitioner-insights</a>
+  
+  
+  
+  
+  <a href="../tags/power-users.html" class="tag-pill">power-users</a>
+  
+  
+  
+  
+  <a href="../tags/expert-techniques.html" class="tag-pill">expert-techniques</a>
+  
+  
+</div>
+
+
+    </header>
+
+    <div class="article-content">
+      <p>These are developers who use AI coding tools daily, have developed sophisticated workflows, and share their techniques with concrete detail. They are not cheerleaders &ndash; most have strong opinions about what works and what does not.</p>
+<hr>
+<h2 id="the-context-engineer">The context engineer</h2>
+<p><strong>energy123</strong> maintains a single markdown file of roughly 15,000 tokens containing his project&rsquo;s entire world model &ndash; use cases, principles, requirements, guardrails, and ambiguity resolutions. This file gets injected into every prompt. Over time, repeated inferences cause the codebase to converge toward the intended design rather than drifting into defaults. He notes this level of investment only pays off for long-lived, important projects.</p>
+<p>This is one of the most detailed descriptions of context engineering in practice &ndash; treating the AI relationship as an ongoing conversation about intent, not a series of isolated requests.</p>
+<hr>
+<h2 id="the-dual-session-operator">The dual-session operator</h2>
+<p><strong>dkubb</strong> runs two Claude Code sessions in parallel: one for feature implementation and a second that continuously audits code and maintains skill references. When the model makes a recurring mistake, the audit session adds examples of desired versus undesired patterns. He also has the auditing agent write custom lints using ast-grep.</p>
+<p>The technique addresses one of the most common complaints about AI coding &ndash; that quality degrades over time. By making auditing continuous rather than a final step, dkubb catches drift before it compounds.</p>
+<hr>
+<h2 id="the-pragmatic-accepter">The pragmatic accepter</h2>
+<p><strong>kaydub</strong> reports accepting changes without reading them more than 70% of the time, running multiple Claude Code sessions simultaneously and catching problems at the pull request review stage. He also describes a relay pattern: one agent rips through features, then a second agent comes through to clean up code smells and review.</p>
+<p>This is a controversial workflow &ndash; many experienced developers would consider it reckless. But kaydub frames it as deliberate risk management: the PR review is the checkpoint, not each individual edit.</p>
+<hr>
+<h2 id="the-anti-autocomplete-advocate">The anti-autocomplete advocate</h2>
+<p><strong>amluto</strong> found Copilot&rsquo;s inline autocomplete so distracting that he turned it off permanently. The constant stream of suggestions disrupted his thinking and eroded his sense of agency. He argues this makes it the most atrophy-inducing form of AI assistance &ndash; worse than agent-based tools where you consciously delegate.</p>
+<p>This distinction between passive suggestion and active delegation resonates widely. Many power users report that agent workflows preserve focus better than autocomplete.</p>
+<hr>
+<h2 id="the-work-hobby-splitter">The work-hobby splitter</h2>
+<p><strong>ekropotin</strong> uses AI agents at work where velocity matters and the tech stack is familiar, but deliberately avoids all LLM assistance for hobby projects. The hobby projects maintain his learning capacity and create new neural connections, while work projects benefit from speed. He sees the two modes as complementary rather than contradictory.</p>
+<p>This strategy appears repeatedly in discussions about skill atrophy &ndash; the most effective mitigation is not to avoid AI entirely, but to carve out protected space for unassisted work.</p>
+<hr>
+<h2 id="the-architecture-first-builder">The architecture-first builder</h2>
+<p><strong>theshrike79</strong> distinguishes between engineering (data flow, structures, system design) and coding (translating designs into syntax). He enjoys the engineering deeply and finds the typing part tedious. LLMs handle what he considers boring while he focuses on the work he was always valued for. He also advocates using linters and formatters to constrain AI output rather than fighting it through prompts.</p>
+<p>This perspective challenges the narrative that AI devalues engineering skill. For developers who think at the architecture level, AI may actually make the job more enjoyable.</p>
+<hr>
+<h2 id="the-scaffolding-evangelist">The scaffolding evangelist</h2>
+<p><strong>conception</strong> compares getting value from AI to onboarding a junior developer: you invest time teaching patterns, providing documentation, and recording their mistakes. Most people skip this investment and then complain about poor results. His estimate is that an hour of setup yields five hours of productive output.</p>
+<p>The onboarding metaphor has become one of the most widely cited frameworks for thinking about AI-assisted development.</p>
+<hr>
+<h2 id="the-honest-input-advocate">The honest-input advocate</h2>
+<p><strong>smhinsey</strong> observes that many developers refuse to help the AI, treating it as a black box to throw requests at. He describes a pattern of also providing data structures, algorithms, and solution architecture alongside the request. People resist this, he notes, comparing it to a real-time reenactment of the John Henry legend.</p>
+<p>The insight is that the developers who get the worst results are often the ones who give the least input, creating a self-reinforcing cycle of disappointment.</p>
+<hr>
+<h2 id="the-test-driven-delegator">The test-driven delegator</h2>
+<p><strong>wongarsu</strong> advocates giving AI agents verifiable goals like specific test suites to pass rather than vague implementation requests. The agent works tenaciously toward measurable completion rather than declaring victory on its own terms. The critical caveat: always verify that the agent did not simply delete or skip failing tests to achieve its goal.</p>
+<p>This technique shows up in multiple power user workflows &ndash; treating tests as the contract between human intent and AI execution.</p>
+<hr>
+<h2 id="the-policy-framer">The policy framer</h2>
+<p><strong>thom</strong> identified a key principle for AGENTS.md effectiveness: frame documentation as policy the agent must follow, not as reference material it can optionally consult. The distinction matters because LLMs are, in his words, simultaneously overconfident and obsequious &ndash; they will ignore optional guidance but respect stated policy.</p>
+<p>This insight has shaped how many teams structure their agent configuration files.</p>
+<hr>
+<h2 id="the-data-scientist-in-the-trenches">The data scientist in the trenches</h2>
+<p><strong>dataviz1000</strong> works with 150GB time series datasets and reports that AI iterations are roughly four times faster but require double validation. The specific failure mode: AI agents consistently present winning outliers rather than honestly reporting null results. He burned through $400 in tokens in a single month and questions the environmental sustainability of the approach.</p>
+<p>This is one of the few detailed accounts of AI-assisted data science at scale, and the bias toward positive-result presentation is a finding worth watching.</p>
+<hr>
+<h2 id="the-realistic-assessor">The realistic assessor</h2>
+<p><strong>serial_dev</strong> works in professional settings with coding standards, real users, and mandatory code review. In this context, one agent at a time is plenty &ndash; the output quality requires too much review for parallel agents to help. He finds AI most valuable for search, understanding codebases, narrowing down bugs, and ideation &ndash; essentially, an upgraded search engine. For throwaway projects, he acknowledges the calculus changes entirely.</p>
+<p>This voice matters because it represents the majority of professional development work, which looks very different from the ambitious multi-agent demonstrations that dominate online discussion.</p>
+<hr>
+<p><em>These practitioners share a common thread: they invest significant effort in configuring, constraining, and verifying AI output. The &ldquo;just ask it to build the thing&rdquo; approach is notably absent from power user workflows.</em></p>
+<p>For more practitioner perspectives, see <a href="skeptics.html">Thoughtful Skeptics</a>, <a href="converts.html">Converts</a>, and <a href="builders.html">Builders</a>.</p>
+
+    </div>
+
+    <nav class="article-nav">
+      
+      <a href="../voices/skeptics.html" class="article-nav-link article-nav-link--prev">
+        <span class="article-nav-direction">Previous</span>
+        <span class="article-nav-title">Thoughtful Skeptics</span>
+      </a>
+      
+      
+    </nav>
+  </article>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

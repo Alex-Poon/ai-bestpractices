@@ -6,7 +6,7 @@
     <description>Recent content in Code-Quality on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/code-quality/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How AI assistance impacts the formation of coding skills</title>
@@ -14,13 +14,6 @@
       <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
       <guid>/sources/2026-01-30-ai-assistance-coding-skills.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Anthropic published a randomized controlled study examining how AI assistance affects skill acquisition among junior software engineers. The research involved 52 participants divided into AI-assisted and control groups, tasked with learning and using Trio (a Python asynchronous programming library). After completing coding tasks, participants took a comprehension quiz covering debugging, code reading, code writing, and conceptual understanding.&lt;/p&gt;&#xA;&lt;p&gt;The results revealed a significant trade-off between speed and learning. The AI-assisted group scored 17% lower on the comprehension quiz, a gap the researchers characterized as equivalent to nearly two letter grades, with a large effect size (Cohen&amp;rsquo;s d of 0.738, p=0.01). The largest performance gap appeared on debugging questions, suggesting that AI assistance particularly impairs the development of error identification skills. Meanwhile, AI users finished tasks roughly two minutes faster on average, though this speed advantage was not statistically significant.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>The Vibe Coding Spectrum</title>
-      <link>/workflows/vibe-coding-spectrum.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/workflows/vibe-coding-spectrum.html</guid>
-      <description>&lt;p&gt;&amp;ldquo;Vibe coding&amp;rdquo; entered the vocabulary in early 2025, but practitioners quickly discovered that the term covered fundamentally different activities. David Bau&amp;rsquo;s influential article identified two distinct types, and the community debate that followed revealed a full spectrum of approaches between them. Understanding where you are on this spectrum &amp;ndash; and where you should be &amp;ndash; is one of the most consequential workflow decisions in AI-assisted development.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-two-types&#34;&gt;The Two Types&lt;/h2&gt;&#xA;&lt;p&gt;David Bau drew a line between two modes that both get called &amp;ldquo;vibe coding&amp;rdquo; but require entirely different infrastructure and mindset.&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI Coding Toolkit: Low-overhead workflow for reliable AI coding</title>

@@ -9,7 +9,7 @@ publishDir = "docs"
   tag = "tags"
 
 [params]
-  description = "What the best practitioners know about AI-assisted software development — synthesized from 35+ HN discussions and practitioner articles."
+  description = "What actually works in AI-assisted development — synthesized from 6,000+ practitioner comments across 20 major HN discussions."
   author = "AI Best Practices Knowledge Base"
 
 [markup]

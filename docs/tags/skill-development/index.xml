@@ -6,8 +6,15 @@
     <description>Recent content in Skill-Development on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/skill-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Adoption Curve</title>
+      <link>/guide/adoption-curve.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/guide/adoption-curve.html</guid>
+      <description>&lt;p&gt;If you have been using AI coding tools for more than a few weeks, you have probably noticed something: the initial excitement fades. Tasks that seemed magical at first start revealing cracks. The agent makes the same category of mistake for the third time. You spend twenty minutes fixing something that should have taken five. You wonder if you were wrong about the whole thing.&lt;/p&gt;&#xA;&lt;p&gt;You are not wrong. You are on the adoption curve, and almost everyone passes through this valley. Understanding the shape of the curve does not make the valley disappear, but it does help you avoid quitting at the point of maximum frustration &amp;ndash; which is exactly when you are closest to the breakthrough.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>How AI assistance impacts the formation of coding skills</title>
       <link>/sources/2026-01-30-ai-assistance-coding-skills.html</link>

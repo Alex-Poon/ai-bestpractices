@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prompts on AI Best Practices Knowledge Base</title>
+    <link>/tags/prompts.html</link>
+    <description>Recent content in Prompts on AI Best Practices Knowledge Base</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/prompts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Prompt Craft</title>
+      <link>/practices/prompt-craft.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/practices/prompt-craft.html</guid>
+      <description>&lt;p&gt;Prompt craft is the skill of communicating effectively with AI coding agents. It is not the most important skill in AI-assisted development &amp;ndash; &lt;a href=&#34;../task-scoping.html&#34;&gt;task scoping&lt;/a&gt; and &lt;a href=&#34;../verification.html&#34;&gt;verification&lt;/a&gt; matter more &amp;ndash; but it is the interface through which every other skill is expressed. A well-scoped task still needs to be communicated clearly. A well-built harness still needs to be written in language the agent processes reliably.&lt;/p&gt;&#xA;&lt;p&gt;The key insight practitioners have converged on: prompt craft is less about clever techniques and more about providing the right context. The model&amp;rsquo;s behavior is dominated by what you put in front of it, not by how cleverly you phrase the request.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

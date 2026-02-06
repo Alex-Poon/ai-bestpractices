@@ -22,5 +22,12 @@
       <guid>/evidence/hashimoto-journey.html</guid>
       <description>&lt;p&gt;Mitchell Hashimoto &amp;ndash; co-founder of HashiCorp, creator of Vagrant, Terraform, and Consul &amp;ndash; published a detailed account of his personal journey adopting AI coding tools. The article resonated far beyond the usual AI discourse because Hashimoto is not a hype-prone commentator. He is a practitioner with decades of experience shipping infrastructure software used by millions of developers. When he says something works, the community pays attention.&lt;/p&gt;&#xA;&lt;p&gt;His account became a focal point for one of the most grounded Hacker News discussions on AI-assisted development, drawing dozens of experienced practitioners into a conversation about what actually works, what fails, and what remains genuinely uncertain.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Karpathy&#39;s AI Coding Notes: A Deep Reading</title>
+      <link>/evidence/karpathy-notes.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/evidence/karpathy-notes.html</guid>
+      <description>&lt;p&gt;In late January 2026, Andrej Karpathy &amp;ndash; former director of AI at Tesla, founding member of OpenAI, and one of the most respected voices in machine learning &amp;ndash; shared a thread of observations from a week of intensive Claude Code usage. The post received 911 upvotes on Hacker News and generated over 800 comments, making it one of the most substantive community discussions on AI-assisted development in the corpus.&lt;/p&gt;&#xA;&lt;p&gt;What made this discussion exceptional was not Karpathy&amp;rsquo;s observations alone, but the quality of the community response. His notes served as a catalyst for practitioners across the experience spectrum to articulate positions they had been forming through months of daily AI tool usage. The result is a uniquely rich snapshot of how the developer community was processing the AI-assisted coding transition in early 2026.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

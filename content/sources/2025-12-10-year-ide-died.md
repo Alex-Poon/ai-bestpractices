@@ -35,14 +35,26 @@ The discussion also raised the importance of static typing and guaranteed-safe r
 
 ## HN Discussion Highlights
 
-The discussion generated 7 points and 4 comments. Key themes:
+*11 comments total*
 
-**Static Typing as Enabler**
-- **raw_anon_1111**: Argued that AI coding will only improve significantly with statically typed languages and tools that can do guaranteed-safe refactoring, envisioning a combination of C#, ReSharper-style tools, and AI that can do deterministic type checks.
+**raw_anon_1111**: Argued AI coding will only improve with static typing, guaranteed-safe refactoring tools, and immediate feedback on breaking changes. Envisioned a combination of C#, ReSharper-style tools, and AI doing deterministic type checks along with running unit tests...
 
-**Talk Reception**
-- **lkbm**: Found Yegge's talks always fun and insightful but noted this particular one was light on concrete content.
-- **Sevii**: Expressed enthusiasm for Claude Code making IDEs less necessary, preferring a terminal-and-light-editor workflow.
+**lkbm**: Found Yegge's talks always fun and insightful, but noted this particular one was enjoyable with not much content to his portion.
 
-**Nuanced Future View**
-- **mikebiglan**: Provided a detailed five-point framework arguing that (1) the IDE will evolve into a new category, (2) professionals will still read code, (3) senior devs risk dismissing the new modality, (4) students must still learn fundamentals, and (5) humans should stay in control of the development process.
+> **mikebiglan**: Agreed, adding that Gene Kim's insights were also valuable and that we're now in a time of insights about how all this plays out.
+
+**Sevii**: Expressed enthusiasm for Claude Code making IDEs less necessary. Wants to be in the terminal and a light text editor like Sublime Text.
+
+> **mikebiglan**: Suggested checking out DevSwarm for the best of both worlds, noting the next update would take it to the next level.
+
+**mikebiglan**: Provided a detailed five-point framework: (1) the IDE will evolve into a new AI-first, workflow-first category, not die; (2) professionals will still read and reason about code for production systems; (3) senior devs risk dismissing the new modality...
+
+> **skydhash**: Noted an assumption that IDEs mean Visual Studio or IDEA. No comparison is ever made to Smalltalk, REPL development like Slime, or programmable editors like VIM and Emacs which leverage the Unix environment...
+
+>> **Sevii**: Countered that most people in the industry have never used Smalltalk, VIM, Emacs, or heard of Slime — that's where the hidden assumption comes from.
+
+>> **mikebiglan**: Shared years of emacs (and dired) experience. Asked whether these could be leveraged for AI development, noting Claude Code has brought terminals back into the limelight.
+
+>>> **skydhash**: Argued LLMs are text-focused technology and tools like Unix Shell, Emacs, and Vi provide the key capability of defining custom commands on the fly. Described a vision of `~/ai/bulletify` scripts invoked via Vi...
+
+>>> **gregben**: Described living in Emacs with shell buffers, using gptel to interact with Anthropic/Google/OpenAI LLMs. Running an Emacs daemon for days/weeks takes things to another level. Moved from mutt to mu4e for email, switched from Vim to Emacs for org-mode...

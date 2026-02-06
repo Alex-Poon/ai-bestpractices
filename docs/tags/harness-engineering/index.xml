@@ -24,17 +24,10 @@
     </item>
     <item>
       <title>Harness Engineering</title>
-      <link>/skills/harness-engineering.html</link>
+      <link>/practices/harness-engineering.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/skills/harness-engineering.html</guid>
-      <description>&lt;p&gt;Harness engineering is the practice of building persistent infrastructure that constrains and guides AI agents across sessions. It is the highest-leverage investment in AI-assisted development because it compounds: every mistake you document is a mistake that never recurs.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-the-harness-matters-more-than-the-prompt&#34;&gt;Why the Harness Matters More Than the Prompt&lt;/h2&gt;&#xA;&lt;p&gt;A well-harnessed mediocre prompt outperforms a perfect prompt with no harness. This is counterintuitive because prompt engineering gets most of the public attention. But practitioners who have been using agents for months consistently report that their investment in configuration files and custom tools delivers more value than any improvement in prompting technique.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AGENTS.md Guide</title>
-      <link>/workflows/agents-md-guide.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/workflows/agents-md-guide.html</guid>
-      <description>&lt;p&gt;AGENTS.md and CLAUDE.md are project-root files that AI coding agents read at the start of every session. They give agents persistent, project-specific context that would otherwise be lost between conversations. Different tools use different filenames &amp;ndash; Claude Code reads CLAUDE.md, Amp reads AGENTS.md, and most tools now support both &amp;ndash; but the purpose is identical: tell the agent how to work in this codebase.&lt;/p&gt;&#xA;&lt;p&gt;This guide covers what to put in these files, how to maintain them, and the evaluation evidence showing why this approach works.&lt;/p&gt;</description>
+      <guid>/practices/harness-engineering.html</guid>
+      <description>&lt;p&gt;Harness engineering is the practice of building persistent infrastructure that constrains and guides AI agents across sessions. It is the highest-leverage investment in AI-assisted development because it compounds: every mistake you document is a mistake that never recurs, every custom tool you build saves time in every future session, and every test harness you configure raises the floor on output quality.&lt;/p&gt;&#xA;&lt;p&gt;The harness is the answer to the fundamental limitation of current AI agents: they are stateless. Each session starts fresh with no memory of corrections, preferences, or past failures. The harness is the only mechanism that carries knowledge forward.&lt;/p&gt;</description>
     </item>
     <item>
       <title>AGENTS.md Outperforms Skills in Our Agent Evals</title>

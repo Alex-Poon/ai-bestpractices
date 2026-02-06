@@ -16,18 +16,18 @@
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Andrej Karpathy shared a widely discussed thread of observations from extensive Claude Code usage. His notes touched on several key themes that resonated deeply with the developer community, generating nearly 100 HN comments and over 900 upvotes.&lt;/p&gt;&#xA;&lt;p&gt;One of Karpathy&amp;rsquo;s central observations was around the tension between AI-assisted productivity and personal skill development. He noted that he was already experiencing atrophy in his ability to write code manually, finding it harder to recall syntax and implementation details. However, he argued this might be acceptable since code review skills remain intact even as writing fluency declines, drawing a parallel to how reading comprehension persists even when spelling ability degrades.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Verification: Reading AI-Generated Code</title>
-      <link>/skills/verification.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/skills/verification.html</guid>
-      <description>&lt;p&gt;As AI takes over more code generation, the developer&amp;rsquo;s primary contribution shifts from writing to reading. Verification &amp;ndash; the ability to evaluate whether AI-generated code is correct, secure, and aligned with intent &amp;ndash; becomes the skill that separates productive AI usage from expensive mistakes.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-verification-matters-more-than-generation&#34;&gt;Why Verification Matters More Than Generation&lt;/h2&gt;&#xA;&lt;p&gt;The economics of AI-assisted development are asymmetric. Generating code is now cheap and fast. Deploying broken code is still expensive and slow to fix. The bottleneck has moved from production to quality control.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Open Questions</title>
       <link>/landscape/open-questions.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/landscape/open-questions.html</guid>
       <description>&lt;p&gt;Not everything about AI-assisted development is settled. Several major questions remain genuinely open, with credible evidence and strong opinions on multiple sides. This page captures the debates as they stand in early 2026.&lt;/p&gt;&#xA;&lt;h2 id=&#34;is-ai-making-coding-skills-atrophy&#34;&gt;Is AI Making Coding Skills Atrophy?&lt;/h2&gt;&#xA;&lt;p&gt;Anthropic&amp;rsquo;s own randomized controlled study provides the most rigorous data point. Junior developers using AI assistance scored 17% lower on comprehension quizzes &amp;mdash; a gap the researchers characterized as equivalent to nearly two letter grades, with the largest deficit appearing in debugging skills. The speed gains (roughly two minutes faster) were not statistically significant.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cognitive Dependency: Are Developers Losing Their Edge?</title>
+      <link>/debates/brain-atrophy.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/debates/brain-atrophy.html</guid>
+      <description>&lt;h2 id=&#34;the-question&#34;&gt;The Question&lt;/h2&gt;&#xA;&lt;p&gt;Andrej Karpathy, one of the most prominent voices in AI, admitted that he can barely write C++ anymore after years of relying on AI assistants. For many developers, this confession crystallized a fear they had been quietly carrying: that the tools making them faster are simultaneously making them less capable.&lt;/p&gt;&#xA;&lt;p&gt;The atrophy question cuts deeper than the related debate about whether juniors can develop skills with AI assistance. This is about experienced developers &amp;ndash; people who already had hard-won expertise &amp;ndash; watching those abilities fade. It is the difference between never learning to navigate without GPS and being a former navigator who can no longer read a map. The loss feels more personal and more concrete.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

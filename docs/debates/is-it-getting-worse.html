@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Is AI-Assisted Coding Getting Worse? | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="Practitioners disagree on whether models are degrading — or whether users are simply hitting real limits.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Is AI-Assisted Coding Getting Worse?">
+  <meta property="og:description" content="Practitioners disagree on whether models are degrading — or whether users are simply hitting real limits.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-debates"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../debates/index.html">Debates</a></li>
+      
+    
+    <li aria-current="page">Is AI-Assisted Coding Getting Worse?</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="debate-header">
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/model-quality.html" class="tag-pill">model-quality</a>
+  
+  
+  
+  
+  <a href="../tags/degradation.html" class="tag-pill">degradation</a>
+  
+  
+  
+  
+  <a href="../tags/reliability.html" class="tag-pill">reliability</a>
+  
+  
+  
+  
+  <a href="../tags/benchmarks.html" class="tag-pill">benchmarks</a>
+  
+  
+</div>
+
+
+        <h1 class="debate-question">Is AI-Assisted Coding Getting Worse?</h1>
+        
+        <p class="debate-framing">Practitioners disagree on whether models are degrading — or whether users are simply hitting real limits.</p>
+        
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">8 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+      </header>
+
+      <div class="article-content">
+        <h2 id="the-question">The Question</h2>
+<p>Few topics generate more heat in developer communities than the question of whether AI coding tools are getting worse over time. The complaint surfaces constantly: tasks that worked last month now require more prompting, models seem to lose coherence during US business hours, and context windows that once felt adequate now collapse under normal workloads.</p>
+<p>The stakes are real. Developers are paying $125-400+ per month for AI coding tools and building workflows around model capabilities they believe were promised. When those capabilities seem to fluctuate &ndash; or quietly degrade &ndash; trust erodes. And in a market where providers compete fiercely for developer loyalty, the perception of degradation can be as damaging as actual degradation.</p>
+<p>What makes this debate so difficult to resolve is the fundamental opacity of LLM-as-a-service. Users cannot inspect what model is actually being served, whether A/B tests are running, or how load management affects inference quality. This information asymmetry transforms a technical question into one of trust &ndash; and the community is deeply split on whether providers deserve that trust.</p>
+<h2 id="side-a-yes-quality-is-declining">Side A: Yes, Quality Is Declining</h2>
+<h3 id="the-practitioner-evidence">The Practitioner Evidence</h3>
+<p>The case for degradation rests primarily on practitioner experience &ndash; and the volume of complaints is hard to dismiss. Developers who use these tools daily, with consistent prompts and workflows, report unmistakable quality declines.</p>
+<blockquote>
+<p>&ldquo;Tasks that it could accomplish quickly a month ago now require more detailed prompting.&rdquo; &ndash; davidee</p>
+</blockquote>
+<p>This isn&rsquo;t a vague feeling. Users describe specific, reproducible regressions: workflows that stop working, models that spiral into incoherent multi-file edits, and sessions where the model appears to give up after hitting certain token thresholds. One developer described watching the model override commits without thinking, losing days of work in the process.</p>
+<p>Daily users who maintain stored prompts &ndash; essentially creating controlled conditions &ndash; report noticing degradation across months. As one put it, the quality decline feels like cost optimizations rather than any technical change.</p>
+<h3 id="the-time-of-day-pattern">The Time-of-Day Pattern</h3>
+<p>One of the most persistent observations is that model quality varies by time of day. Multiple developers report a clear pattern: performance degrades during US business hours (roughly 1 PM to 9 PM Eastern) and recovers at night and on weekends.</p>
+<blockquote>
+<p>&ldquo;The best time to code with modern LLM stacks is when nobody else is.&rdquo; &ndash; johnsmith1840</p>
+</blockquote>
+<p>This pattern has a plausible mechanism. If providers use load-based routing, quantization, or reduced compute during peak hours, users would experience exactly this kind of degradation. One developer in a non-US timezone noted their consistently positive experience might be explained by never overlapping with peak US traffic.</p>
+<p>After a service outage that drove most users away, one remaining user reported the service running three times faster than usual &ndash; suggesting load-dependent performance is real, even if the mechanism differs from what users assume.</p>
+<h3 id="the-transparency-problem">The Transparency Problem</h3>
+<p>What fuels the degradation narrative most powerfully is the lack of transparency from providers. Users paying premium prices want to know what model they&rsquo;re actually getting, whether A/B tests are running, and what happens under load.</p>
+<blockquote>
+<p>&ldquo;I would 100x prefer being forced to back-off&rdquo; &ndash; dmos62</p>
+</blockquote>
+<p>The sentiment is clear: developers would rather receive honest rate limits or explicit refusals than silent quality reduction. One developer discovered a hard performance cliff at 45,000 tokens with ChatGPT &ndash; the kind of threshold that, without documentation, looks like arbitrary degradation.</p>
+<p>The opacity extends to benchmarking. When third-party trackers attempt to measure model quality over time, the results show oscillation patterns that could indicate A/B testing of checkpoints. Users who see these patterns naturally conclude that something is changing on the provider side.</p>
+<h3 id="the-context-drift-problem">The Context Drift Problem</h3>
+<p>Beyond provider-side changes, there&rsquo;s a genuine technical failure mode: quality degradation within sessions as context accumulates. Multiple practitioners report that after any compaction of the context window, sessions become effectively useless.</p>
+<p>Models forget design goals, revert to default patterns, and mix approaches in ways that produce incoherent code. One developer described repeatedly telling the model to use TanStack Router, only to have it default back to ReactRouter every time context pressure increased.</p>
+<h2 id="side-b-no-users-are-hitting-real-limits">Side B: No, Users Are Hitting Real Limits</h2>
+<h3 id="the-honeymoon-hangover-effect">The Honeymoon-Hangover Effect</h3>
+<p>The counter-argument begins with a well-documented psychological pattern: users&rsquo; perception of tool quality follows a predictable arc from amazement to frustration as expectations calibrate.</p>
+<blockquote>
+<p>&ldquo;People just notice the flaws more the longer they use them.&rdquo; &ndash; eli</p>
+</blockquote>
+<p>This isn&rsquo;t dismissive. The honeymoon-hangover effect is a real phenomenon in technology adoption. Initial encounters with AI coding tools feel magical because expectations are low. Over weeks and months, users develop more sophisticated mental models of what the tool should be capable of, and failures that would have been invisible early on become infuriating.</p>
+<p>Several commenters point out that as developers learn what models can and cannot do, the experience of hitting genuine limitations feels like degradation. One put it directly: is it possible that your expectations are increasing, not that the model is getting worse?</p>
+<h3 id="the-statistical-case-against-degradation">The Statistical Case Against Degradation</h3>
+<p>Salvatore Sanfilippo (antirez), the creator of Redis, brought rigorous thinking to the debate. He argued that the observed oscillation pattern in benchmark trackers is better explained by A/B testing of model checkpoints, Claude Code harness updates, and natural sampling variability than by intentional model degradation.</p>
+<p>His key point: if providers were silently swapping in cheaper models (like routing Opus requests to Sonnet), the performance drop would show a clear step-function pattern, not the gradual oscillation that benchmarks actually show. The percentage differences are too small and too variable for model swapping.</p>
+<p>An Anthropic engineer directly stated that they never do anything to reduce model intelligence during inference. While users are free to disbelieve this, it&rsquo;s worth noting that deliberate degradation would be a severe business risk if discovered.</p>
+<h3 id="the-benchmaxxing-problem">The Benchmaxxing Problem</h3>
+<p>The relationship between benchmarks and real-world performance is more complex than either side acknowledges. Benchmark improvements consistently fail to predict user satisfaction.</p>
+<blockquote>
+<p>&ldquo;On benchmarks GPT 5.2 was roughly equivalent to Opus 4.5 but most people who&rsquo;ve used both would say Opus 4.5 is noticeably better.&rdquo; &ndash; ifwinterco</p>
+</blockquote>
+<p>This disconnect runs both directions. Models can improve on benchmarks while feeling worse to individual users, and models can score lower on benchmarks while handling specific workflows better. One detailed analysis explained how benchmark numbers can be technically true yet not reflect customer experience, through subtle mechanisms like load balancing and operational drift.</p>
+<p>The skeptics also point out that the IEEE Spectrum article that catalyzed much of the &ldquo;getting worse&rdquo; narrative was an opinion piece based on anecdotal evidence &ndash; but they fairly note that articles praising AI are equally unsubstantiated.</p>
+<h3 id="the-scaffolding-argument">The Scaffolding Argument</h3>
+<p>A significant camp argues that perceived degradation is actually a scaffolding problem. As projects grow more complex and users attempt more ambitious tasks, the harness engineering required to get good results increases &ndash; and most users haven&rsquo;t kept up.</p>
+<blockquote>
+<p>&ldquo;They are not getting worse&hellip; you haven&rsquo;t figured out the scaffolding.&rdquo; &ndash; theptip</p>
+</blockquote>
+<p>This argument holds that success with AI coding tools depends on providing proper context, maintaining documentation, and learning to communicate effectively with models. Developers who invest in 15,000-token world model files, AGENTS.md configurations, and structured workflows report consistently good results. Those who type prompts and hope for magic report degradation.</p>
+<p>The &ldquo;you&rsquo;re holding it wrong&rdquo; framing is deeply controversial. Critics find it offensive &ndash; the amount of specialized knowledge required to get useful output seems unreasonable for tools marketed as productivity boosters. Defenders argue that prompt quality is the primary interface with these tools, and expecting good results from poor prompts is like expecting good code from vague specifications.</p>
+<h2 id="where-it-stands">Where It Stands</h2>
+<p>The evidence suggests multiple overlapping phenomena that both sides partially capture:</p>
+<p><strong>Load-dependent performance variation is likely real.</strong> Too many independent observations of time-of-day patterns exist to dismiss entirely, even if the mechanism isn&rsquo;t the model swapping that users fear. Whether it&rsquo;s reduced compute allocation, longer queue times, or infrastructure effects, something changes under peak load.</p>
+<p><strong>Context-related degradation within sessions is definitely real.</strong> This is a fundamental limitation of transformer architectures with finite context windows, not provider malfeasance. The quality of long sessions degrades as context fills and compaction artifacts accumulate.</p>
+<p><strong>Expectations are also definitely rising.</strong> Developers who have used these tools for months have calibrated expectations far above what they brought to their first session. This genuinely creates the perception of degradation where none exists.</p>
+<p><strong>Benchmark methodology remains deeply flawed.</strong> Third-party trackers cannot control for harness changes, system prompt updates, or the dozens of confounding variables that affect measured performance. Without proper statistical rigor &ndash; confidence intervals, controlled variables, sufficient sample sizes &ndash; the data doesn&rsquo;t support strong conclusions in either direction.</p>
+<p>The most productive framing may come from a production engineering perspective: in practice, degradation cause doesn&rsquo;t matter. What matters is building canary systems that test execution paths and route to what&rsquo;s actually working, treating model quality as a variable to be monitored rather than a constant to be trusted.</p>
+<h2 id="whats-still-unknown">What&rsquo;s Still Unknown</h2>
+<ul>
+<li><strong>Do providers actually reduce inference quality under load?</strong> No independent verification exists, and provider denials are unfalsifiable without transparency.</li>
+<li><strong>How much of the perceived degradation comes from harness/system prompt updates vs. model changes?</strong> Claude Code ships frequent updates that could change agent behavior without any model-level change.</li>
+<li><strong>Will third-party QoS monitoring become standard?</strong> As AI costs grow and subsidies end, organizations may demand the same service-level verification they expect from cloud providers.</li>
+<li><strong>Is there a ceiling on context management techniques?</strong> Even the most sophisticated scaffolding approaches eventually hit context window limits. Whether future models solve this or users must adapt is an open question.</li>
+<li><strong>Does the honeymoon-hangover effect eventually stabilize?</strong> If so, experienced users should reach a steady state of realistic expectations. Whether current complaints represent that stabilization or genuine regression remains unclear.</li>
+</ul>
+
+      </div>
+
+      
+      
+      <div class="debate-related">
+        <h3>Related Debates</h3>
+        <div class="debate-related-grid">
+          
+            
+            <a href="../debates/cost-sustainability.html" class="debate-related-link">Is the AI Coding Tool Economy Sustainable?</a>
+            
+          
+            
+            <a href="../debates/brain-atrophy.html" class="debate-related-link">Cognitive Dependency: Are Developers Losing Their Edge?</a>
+            
+          
+        </div>
+      </div>
+      
+
+      <nav class="article-nav">
+        
+        <a href="../debates/vibe-coding.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">The Vibe Coding Question</span>
+        </a>
+        
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-question">The Question</a></li>
+    <li><a href="#side-a-yes-quality-is-declining">Side A: Yes, Quality Is Declining</a>
+      <ul>
+        <li><a href="#the-practitioner-evidence">The Practitioner Evidence</a></li>
+        <li><a href="#the-time-of-day-pattern">The Time-of-Day Pattern</a></li>
+        <li><a href="#the-transparency-problem">The Transparency Problem</a></li>
+        <li><a href="#the-context-drift-problem">The Context Drift Problem</a></li>
+      </ul>
+    </li>
+    <li><a href="#side-b-no-users-are-hitting-real-limits">Side B: No, Users Are Hitting Real Limits</a>
+      <ul>
+        <li><a href="#the-honeymoon-hangover-effect">The Honeymoon-Hangover Effect</a></li>
+        <li><a href="#the-statistical-case-against-degradation">The Statistical Case Against Degradation</a></li>
+        <li><a href="#the-benchmaxxing-problem">The Benchmaxxing Problem</a></li>
+        <li><a href="#the-scaffolding-argument">The Scaffolding Argument</a></li>
+      </ul>
+    </li>
+    <li><a href="#where-it-stands">Where It Stands</a></li>
+    <li><a href="#whats-still-unknown">What&rsquo;s Still Unknown</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

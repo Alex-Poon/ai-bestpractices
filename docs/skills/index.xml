@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Core Skills on AI Best Practices Knowledge Base</title>
-    <link>/skills/index.html</link>
+    <link>//localhost:1314/skills/index.html</link>
     <description>Recent content in Core Skills on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/skills/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/skills/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Task Scoping for AI Agents</title>
-      <link>/skills/task-scoping.html</link>
+      <link>//localhost:1314/skills/task-scoping.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/skills/task-scoping.html</guid>
+      <guid>//localhost:1314/skills/task-scoping.html</guid>
       <description>&lt;p&gt;Task scoping is the single most important skill in AI-assisted development. It determines whether the time you spend prompting, waiting, and reviewing produces usable output or wasted effort. Every practitioner who has moved past the initial novelty phase identifies decomposition as the core discipline.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-size-sweet-spot&#34;&gt;The Size Sweet Spot&lt;/h2&gt;&#xA;&lt;p&gt;There is a narrow band where AI delegation works well. Too small, and the overhead of context-switching to an agent exceeds the time you would spend just doing the work. Too large, and the agent produces confidently wrong output that takes longer to fix than to rewrite.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Harness Engineering</title>
-      <link>/skills/harness-engineering.html</link>
+      <link>//localhost:1314/skills/harness-engineering.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/skills/harness-engineering.html</guid>
+      <guid>//localhost:1314/skills/harness-engineering.html</guid>
       <description>&lt;p&gt;Harness engineering is the practice of building persistent infrastructure that constrains and guides AI agents across sessions. It is the highest-leverage investment in AI-assisted development because it compounds: every mistake you document is a mistake that never recurs.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-the-harness-matters-more-than-the-prompt&#34;&gt;Why the Harness Matters More Than the Prompt&lt;/h2&gt;&#xA;&lt;p&gt;A well-harnessed mediocre prompt outperforms a perfect prompt with no harness. This is counterintuitive because prompt engineering gets most of the public attention. But practitioners who have been using agents for months consistently report that their investment in configuration files and custom tools delivers more value than any improvement in prompting technique.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Verification: Reading AI-Generated Code</title>
-      <link>/skills/verification.html</link>
+      <link>//localhost:1314/skills/verification.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/skills/verification.html</guid>
+      <guid>//localhost:1314/skills/verification.html</guid>
       <description>&lt;p&gt;As AI takes over more code generation, the developer&amp;rsquo;s primary contribution shifts from writing to reading. Verification &amp;ndash; the ability to evaluate whether AI-generated code is correct, secure, and aligned with intent &amp;ndash; becomes the skill that separates productive AI usage from expensive mistakes.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-verification-matters-more-than-generation&#34;&gt;Why Verification Matters More Than Generation&lt;/h2&gt;&#xA;&lt;p&gt;The economics of AI-assisted development are asymmetric. Generating code is now cheap and fast. Deploying broken code is still expensive and slow to fix. The bottleneck has moved from production to quality control.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Model Selection</title>
-      <link>/skills/model-selection.html</link>
+      <link>//localhost:1314/skills/model-selection.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/skills/model-selection.html</guid>
+      <guid>//localhost:1314/skills/model-selection.html</guid>
       <description>&lt;p&gt;Model selection is the skill of matching the right model to the right task. The gap between a well-chosen and poorly-chosen model often matters more than the quality of the prompt itself. As one practitioner put it, model choice now outweighs prompt engineering as the primary lever for coding quality.&lt;/p&gt;&#xA;&lt;h2 id=&#34;model-tiers&#34;&gt;Model Tiers&lt;/h2&gt;&#xA;&lt;p&gt;Models fall into rough capability tiers, each suited to different kinds of work.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Frontier reasoning models&lt;/strong&gt; (Claude Opus 4.5/4.6, GPT-5) &amp;ndash; The most capable models available. Best for complex architectural reasoning, multi-file refactoring, unfamiliar codebases, and tasks requiring sustained coherence across long outputs. These models are expensive and slower, but they get things right on the first attempt more often, which reduces total cost when the alternative is multiple retry cycles with cheaper models.&lt;/p&gt;</description>
     </item>
   </channel>

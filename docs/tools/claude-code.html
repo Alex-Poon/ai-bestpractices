@@ -37,14 +37,13 @@
       <span>AI Best Practices</span>
     </a>
     <div class="nav-links">
-      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
-      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
       <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
-      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
-      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
       <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
       <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
-      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
     </div>
     <div class="nav-actions">
       <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
@@ -172,7 +171,7 @@
 <p>Claude Code reads CLAUDE.md files from the project root at the start of every session, giving the agent persistent, project-specific context. This approach &ndash; embedding documentation directly in the system prompt &ndash; has proven highly effective.</p>
 <p>Vercel&rsquo;s evaluation found that passive context in AGENTS.md files achieved a 100% pass rate on tasks involving APIs outside the model&rsquo;s training data, compared to a maximum of 79% for active retrieval approaches (skills). The reason: in over half of test cases, the agent simply failed to invoke its retrieval tools when it should have. Passive context eliminates this decision point entirely.</p>
 <p>The practical implication is clear: invest in your CLAUDE.md file. Document build commands, architecture constraints, coding conventions, and known pitfalls. Start sparse and add entries as you encounter real issues. The file compounds in value over time &ndash; each documented correction prevents the same mistake from recurring in future sessions.</p>
-<p>For a practical template and maintenance guide, see the <a href="../references/agents-md-guide.html">AGENTS.md / CLAUDE.md Guide</a>. For Vercel&rsquo;s evaluation details, see the <a href="../sources/2026-01-29-agents-md-outperforms-skills.html">source capture</a>.</p>
+<p>For a practical template and maintenance guide, see the <a href="../practices/harness-engineering.html">Harness Engineering</a>. For Vercel&rsquo;s evaluation details, see the <a href="../sources/2026-01-29-agents-md-outperforms-skills.html">source capture</a>.</p>
 <h2 id="native-lsp-support">Native LSP Support</h2>
 <p>In December 2025, Claude Code added native Language Server Protocol (LSP) support, giving the CLI-based agent access to the same code intelligence that powers IDE features: type definitions, references, diagnostics, and navigation.</p>
 <p>This is significant because a recurring criticism of CLI-first agents was that IDE-based tools like Cursor get language intelligence for free. LSP support narrows that gap. The feature works through a plugin system accessible via the <code>/plugin</code> command, with a Discover tab for searching and installing LSP integrations.</p>
@@ -219,9 +218,9 @@
 
       <nav class="article-nav">
         
-        <a href="../tools/cursor.html" class="article-nav-link article-nav-link--prev">
+        <a href="../tools/compare.html" class="article-nav-link article-nav-link--prev">
           <span class="article-nav-direction">Previous</span>
-          <span class="article-nav-title">Cursor</span>
+          <span class="article-nav-title">Tool Comparison Matrix</span>
         </a>
         
         
@@ -253,30 +252,29 @@
   <div class="footer-container">
     <div class="footer-brand">
       <span class="footer-logo">AI Best Practices</span>
-      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
     </div>
     <div class="footer-nav">
       <div class="footer-section">
         <h3>Learn</h3>
         <ul>
-          <li><a href="../start-here/index.html">Start Here</a></li>
-          <li><a href="../skills/index.html">Skills</a></li>
-          <li><a href="../workflows/index.html">Workflows</a></li>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Explore</h3>
         <ul>
           <li><a href="../tools/index.html">Tools</a></li>
-          <li><a href="../landscape/index.html">Landscape</a></li>
           <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
           <li><a href="../sources/index.html">Sources</a></li>
-          <li><a href="../tags/">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
     </div>
   </div>
 </footer>

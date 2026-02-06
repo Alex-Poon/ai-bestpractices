@@ -6,8 +6,15 @@
     <description>Recent content in Skills on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/skills/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI&#39;s Impact on Coding Skills: What the Research Shows</title>
+      <link>/evidence/coding-skills-impact.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/evidence/coding-skills-impact.html</guid>
+      <description>&lt;p&gt;In early 2026, Anthropic published a study examining how AI coding assistance affects developer skill development. The study became one of the most intensely debated pieces of AI research in the developer community, generating over 346 comments on Hacker News. The reaction was notable not for the usual pro/anti-AI polarization but for the depth of personal reflection it provoked &amp;ndash; developers grappling honestly with what they had already noticed happening to their own abilities.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Claude Skill for Terraform/OpenTofu</title>
       <link>/sources/2026-01-19-terraform-skill-claude.html</link>

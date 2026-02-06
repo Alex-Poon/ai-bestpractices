@@ -3,12 +3,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Claude Code daily benchmarks for degradation tracking | AI Best Practices Knowledge Base</title>
-  <meta name="description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta name="description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
   <meta name="color-scheme" content="dark light">
 
   
   <meta property="og:title" content="Claude Code daily benchmarks for degradation tracking">
-  <meta property="og:description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta property="og:description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
   <meta property="og:type" content="article">
 
   
@@ -37,14 +37,13 @@
       <span>AI Best Practices</span>
     </a>
     <div class="nav-links">
-      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
-      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
       <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
-      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
-      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
       <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
       <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
-      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
     </div>
     <div class="nav-actions">
       <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
@@ -114,7 +113,7 @@
 
   
 
-  <span class="meta-reading-time">4 min read</span>
+  <span class="meta-reading-time">30 min read</span>
 
   
   <span class="tier-badge tier-badge--1">Tier 1</span>
@@ -197,36 +196,856 @@
 <p>&ldquo;detect statistically significant degradations&rdquo; — MarginLab tracker description</p>
 </blockquote>
 <h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
-<p>The discussion generated 759 points and 63 comments. This was one of the most emotionally charged threads, reflecting deep community concern about AI service reliability.</p>
-<p><strong>Official response</strong></p>
-<ul>
-<li><strong>trq_</strong> (Claude Code team): Confirmed a harness issue was introduced on January 26 and rolled back on January 28, advising users to run <code>claude update</code> for the latest version</li>
-</ul>
-<p><strong>Methodology critiques</strong></p>
-<ul>
-<li><strong>ofirpress</strong> (SWE-bench co-author): Recommended running 300 tasks with 5-10 tests per day rather than 50 daily tasks, noting significant variance from factors like server load</li>
-<li><strong>crazygringo</strong>: Challenged the statistical methodology, pointing out that confidence intervals need to be computed for the difference itself rather than just testing whether new values fall outside the old interval</li>
-<li><strong>goldenarm</strong>: Called the 14% significance threshold meaningless and recommended using the monthly scale as the default</li>
-<li><strong>account266928</strong>: Warned that the confidence intervals appear to include the baseline value, meaning the test may simply lack statistical power</li>
-<li><strong>drc500free</strong>: Questioned what makes the chosen baseline appropriate for statistical tests</li>
-</ul>
-<p><strong>Alternative explanations for degradation</strong></p>
-<ul>
-<li><strong>antirez</strong>: Argued the data doesn&rsquo;t show model swapping, noting oscillating patterns are better explained by A/B testing of checkpoints, Claude Code tool updates, and natural sampling variability</li>
-<li><strong>dajonker</strong>: Speculated that vendors may gradually quantize models over time to reduce costs, making new releases feel like bigger improvements</li>
-<li><strong>parquor</strong>: Asked whether daily account usage affects performance, referencing a separate finding about Claude getting less capable throughout the day</li>
-</ul>
-<p><strong>User frustration and trust</strong></p>
-<ul>
-<li><strong>silverlight</strong>: Described a moment after an outage when reduced load made Claude roughly 3x faster and dramatically more productive, offering a glimpse of what unconstrained performance could look like</li>
-<li><strong>dmos62</strong>: Criticized the lack of transparency around performance consistency, noting that ChatGPT silently degrades intelligence above 45k input tokens</li>
-<li><strong>jampa</strong>: Reported using the API and observing Claude giving up by doing absurdly wrong things like deleting entire features when asked for a one-line fix, noting this worsens after a daily token threshold</li>
-<li><strong>Dowwie</strong>: Humorously suggested measuring user hostility via curse word detection as a proxy for agent quality</li>
-</ul>
-<p><strong>Broader implications</strong></p>
-<ul>
-<li><strong>mrandish</strong>: Argued that benchmark tracking will be crucial as vendor costs skyrocket and the pressure to quietly dial back performance becomes overwhelming, especially for organizations with hundreds of developers</li>
-</ul>
+<p><em>229 comments total</em></p>
+<p><strong>trq_</strong>: Hi everyone, Thariq from the Claude Code team here. Thanks for reporting this. We fixed a Claude Code harness issue that was introduced on 1/26. This was rolled back on 1/28 as soon as we found it&hellip;.</p>
+<blockquote>
+<p><strong>samlinnfer</strong>: Is there compensation for the tokens because Claude wasted all of them?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mathrawka</strong>: You are funny. Anthropic refuses to issue refunds, even when they break things. I had an API token set via an env var on my shell, and claude code changed to read that env var. I had a $10 limit set&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>TOMDM</strong>: Anthropic just reduced the price of the team plan and refunded us on the prior invoice. YMMV</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>gizmodo59</strong>: Codex seems to give compensation tokens whenever this happens! Hope Claude gives too.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>TZubiri</strong>: It is possible that degradation is an unconscious emergent phenomenon that arises from financial incentives, rather than a purposeful degradation to reduce costs.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mvandermeulen</strong>: You’re lucky they have even admitted a problem instead of remaining silent and quietly fixing it. Do not expect ethical behaviour from this company.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>port11</strong>: Why not, can you expand? Asking because I’m considering Claude due to the sandbox feature.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jonplackett</strong>: So quiet…</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>isaacdl</strong>: Anywhere we can read more about what a &ldquo;harness issue&rdquo; means? What was the impact of it?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>xnorswap</strong>: One thing that could be a strong degradation especially for benchmarks is they switched the default &ldquo;Exit Plan&rdquo; mode from:     &ldquo;Proceed&rdquo; to    &ldquo;Clear Context and Proceed&rdquo; It&rsquo;s rare you&rsquo;d want to do&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>samusiam</strong>: I disagree that this was the issue, or that it&rsquo;s &ldquo;rare that you&rsquo;d want to do that unless you&rsquo;re near the context window&rdquo;. Clearing context after writing a plan, before starting implementation of said&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>plexicle</strong>: &ldquo;It&rsquo;s rare you&rsquo;d want to do that unless you&rsquo;re actually near the context window after planning.&rdquo; Highly disagree. It&rsquo;s rare you WOULDN&rsquo;T want to do this. This was a good change, and a lot of us were&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>rubslopes</strong>: Not disagreeing with you, but FYI you can roll back to the conversation before the &lsquo;clear context and proceed&rsquo; with &lsquo;claude &ndash;resume&rsquo;.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>airstrike</strong>: Pretty sure they mean the issue is on the agentic loop and related tool calling, not on the model itself In other words, it was the Claude Code <em>app</em> that was busted</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>jonaustin</strong>: How about how Claude 2.1.x is &ldquo;literally unusable&rdquo; because it frequently completely hangs (requires kill -9) and uses 100% cpu? <a href="https://github.com/anthropics/claude-code/issues/18532">https://github.com/anthropics/claude-code/issues/18532</a></p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>caspar</strong>: Likely a separate issue, but I also have massive slowdowns whenever the agent manages to read a particularly long line from a grep or similar (as in, multiple seconds before characters I type&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>someguyiguess</strong>: What OS? Does this happen randomly, after long sessions, after context compression? Do you have any plugins / mcp servers running? I used to have this same issue almost every session that lasted&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jonaustin</strong>: MacOS; no mcp; clear context; reliably reproducible when asking claude review a pr with a big VCR cassette.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>nikanj</strong>: Windows with no plugins and my Claude is exactly like this</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>cma</strong>: For the models themselves, less so for the scaffolding, considering things like the long running TPU bug that happened, are there not internal quality measures looking at samples of real outputs?&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>carterschonwald</strong>: lol i was trying to help someone get claude to help analyze a stufent research get analysis on bio persistence get their notes analyzed the presence of the word / acronym stx with biological subtext&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>varunsrinivas</strong>: Thanks for the clarification. When you say “harness issue,” does that mean the problem was in the Claude Code wrapper / execution environment rather than the underlying model itself? Curious whether&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>vmg12</strong>: It happened before 1/26. I noticed when it started modifying plans significantly with &ldquo;improvements&rdquo;.</p>
+</blockquote>
+<blockquote>
+<p><strong>sixhobbits</strong>: Can you confirm if that caused the same issues I saw here <a href="https://dwyer.co.za/static/the-worst-bug-ive-seen-in-claude-">https://dwyer.co.za/static/the-worst-bug-ive-seen-in-claude-</a>&hellip; Because that&rsquo;s the worst thing I&rsquo;ve ever seen from an agent and I think you&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>Ekaros</strong>: Why wasn&rsquo;t this change review by infallible AI? How come an AI company that now must be using more advanced AI than anyone else would allow this happen?</p>
+</blockquote>
+<blockquote>
+<p><strong>hu3</strong>: Hi. Do you guys have internal degradation tests?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>stbtrax</strong>: I assume so to make sure that they&rsquo;re rendering at 60FPS</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>conception</strong>: You joke but having CC open in the terminal hits 10% on my gpu to render the spinning thinking animation for some reason. Switch out of the terminal tab and gpu drops back to zero.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>reissbaker</strong>: Surely you mean 6fps</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>trq_</strong>: Yes, we do but harnesses are hard to eval, people use them across a huge variety of tasks and sometimes different behaviors tradeoff against each other. We have added some evals to catch this one in&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>amelius</strong>: Can&rsquo;t you keep the model the same, until the user chooses to use a different model?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>hu3</strong>: Thank you. Fair enough</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bushbaba</strong>: I’d wager probably not. It’s not like reliability is what will get them marketshare. And the fast pace of industry makes such foundational tech hard to fund</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>macinjosh</strong>: [flagged]</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jusgu</strong>: the issue is unrelated to the foundational model but rather the prompts and tool calling that encapsulate the model</p>
+</blockquote>
+</blockquote>
+<p><strong>ofirpress</strong>: [SWE-bench co-author here] It seems like they run this test on a subset of 50 tasks, and that they only run the test once per day. So a lot of the movement in accuracy could be attributed to that.  I&hellip;</p>
+<blockquote>
+<p><strong>Davidzheng</strong>: but degradation from servers being overloaded would be the type of degradation this SHOULD measure no? Unless it&rsquo;s only intended for measuring their quietly distilling models (which they claim not to&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>botacode</strong>: Load just makes LLMs behave less deterministically and likely degrade. See: <a href="https://thinkingmachines.ai/blog/defeating-nondeterminism-in">https://thinkingmachines.ai/blog/defeating-nondeterminism-in</a>&hellip; They don&rsquo;t have to be malicious operators in this case. It&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bgirard</strong>: &gt; malicious It doesn&rsquo;t have to be malicious. If my workflow is to send a prompt once and hopefully accept the result, then degradation matters a lot. If degradation is causing me to silently get&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>strongpigeon</strong>: The question I have now after reading this paper (which was really insightful) is do the models really get worse under load, or do they just have a higher variance? It seems like the latter is what&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>altcognito</strong>: Explain this though. The code is deterministic, even if it relies on pseudo random number generation. It doesn&rsquo;t just happen, someone has to make a conscious decision to force a different code path&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>stefan_</strong>: The primary (non malicious, non stupid) explanation given here is batching. But I think you would find looking at large-scale inference the batch sizes being ran on any given rig are fairly static -&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>make3</strong>: It&rsquo;s very clearly a cost tradeoff that they control and that should be measured.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>samusiam</strong>: I&rsquo;d argue that it depends how that degradation manifests whether you want to include it or not. Consider two scenarios: (1) degradation leads to the model being routed behind the scenes to a&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>megabless123</strong>: noob question: why would increased demand result in decreased intelligence?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>exitb</strong>: An operator at load capacity can either refuse requests, or move the knobs (quantization, thinking time) so requests process faster. Both of those things make customers unhappy, but only one is&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>awestroke</strong>: I&rsquo;ve seen some issues with garbage tokens (seemed to come from a completely different session, mentioned code I&rsquo;ve never seen before, repeated lines over and over) during high load, suspect anthropic&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>vidarh</strong>: It would happen if they quietly decide to serve up more aggressively distilled / quantised / smaller models when under load.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Wheaties466</strong>: from what I understand this can come from the batching of requests.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>cmrdporcupine</strong>: I&rsquo;ve personally witnessed large variability in behaviour even within a given session &ndash; which makes sense as there&rsquo;s nothing stopping Anthropic from shuttling your context/session around load&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>epolanski</strong>: I&rsquo;ve defended opus in the last weeks but the degradation is tangible. It feels like it degraded by a generation tbh.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>mohsen1</strong>: Hope you don&rsquo;t mind the unrelated question: How do you pay for those SWE-bench runs? I am trying to run a benchmark but it is too expensive to run enough runs to get a fair comparison&hellip;.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ofirpress</strong>: Benchmarks can get costly to run- you can reach out to frontier model creators to try and get them to give you free credits, but usually they&rsquo;ll only agree to that once your benchmark is pretty&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Dolores12</strong>: so basically they know requests using your API key should be treated with care?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>epolanski</strong>: The last thing a proper benchmark should do is reveal it&rsquo;s own API key.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mohsen1</strong>: yes I reached out to them but as you say it&rsquo;s a chicken-and-egg problem. Thanks!</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>nikcub</strong>: &gt; I would run on 300 tasks and I&rsquo;d run the test suite 5 or 10 times per day and average that score. assume this is because of model costs. anthropic could either throw some credits their way (would&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>simsla</strong>: Probably, but with a small sample size like that, they should probably be taking the uncertainty into account, because I wouldn&rsquo;t be surprised if a lot of this variation falls within expected noise&hellip;.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>phist_mcgee</strong>: Then you&rsquo;d get people claiming that the benchmarks were &lsquo;paid for&rsquo; by anthropic</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>nikcub</strong>: one thing you learn from being on the internet is that you&rsquo;re never going to satisfy everybody</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>seunosewa</strong>: The degradation may be more significant within the day than at the same time every day.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>GoatInGrey</strong>: Sure, but it&rsquo;s still useful insight to see how it performs over time. Of course, cynically, Anthropic could game the benchmark by routing this benchmark&rsquo;s specific prompts to an unadulterated&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>rootnod3</strong>: Sorry what? &ldquo;You can&rsquo;t measure my Cloud Service&rsquo;s performance correctly if my servers are overloaded&rdquo;? &ldquo;Oh, you just measured me at bad times each day. On only 50 different queries.&rdquo; So, what does&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>johnsmith1840</strong>: This has been happening for years. Tgere&rsquo;s a great paper from microsoft on Deepspeed AI inference. Basically the paper showed methods for how to handle heavy traffic load by changing model&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>kuboble</strong>: I wonder if my great experience with claude are partly due to the fact that my working hours don&rsquo;t overlap with the US west coast</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>swyx</strong>: chill out, ofir does not work for anthropic. he&rsquo;s just saying there&rsquo;s inherent variability in LLMs and you need to at least 30x the samples that OP is doing in order to make any form of statistically&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>bhk</strong>: According to Anthropic:  &ldquo;We never reduce model quality due to demand, time of day, or server load.&rdquo; <a href="https://www.anthropic.com/engineering/a-postmortem-of-three-">https://www.anthropic.com/engineering/a-postmortem-of-three-</a>&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>embedding-shape</strong>: They&rsquo;ve had issues before with things like &ldquo;TPU top-k error - Claude sometimes dropped the best next token&rdquo; (<a href="https://www.anthropic.com/engineering/a-postmortem-of-three-">https://www.anthropic.com/engineering/a-postmortem-of-three-</a>&hellip;) so what&rsquo;s going on might&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mgraczyk</strong>: That issue did not have any time of day dependence</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>epolanski</strong>: Stilll relevant over time.</p>
+</blockquote>
+<blockquote>
+<p><strong>chrisjj</strong>: &gt; Lots of variance in the score can come from random stuff like even Anthropic&rsquo;s servers being overloaded. Are you suggesting result accuracy varies with server load?</p>
+</blockquote>
+<blockquote>
+<p><strong>dana321</strong>: &ldquo;Lots of variance in the score can come from random stuff like even Anthropic&rsquo;s servers being overloaded&rdquo; Aha, so the models do degrade under load.</p>
+</blockquote>
+<blockquote>
+<p><strong>cedws</strong>: Agreed, this benchmark would be much more useful ran multiple times a day. That could reveal degredation in line with load patterns.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bredren</strong>: For CC, I suspect it also need to be testing and labeling separate runs against subscription, public API and Bedrock-served models? It’s a terrific idea to provide this. ~Isitdownorisitjustme for&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>swyx</strong>: i recall another project here on HN maybe 4-6 months ago that would run tests 4x a day or something. not sure how to find them again</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>sjtgraham</strong>: Why should users care about Anthropic&rsquo;s servers being overloaded?</p>
+</blockquote>
+<p><strong>antirez</strong>: Why I do not believe this shows Anthropic serves folks a worse model: 1. The percentage drop is too low and oscillating, it goes up and down. 2. The baseline of Sonnet 4.5 (the obvious choice for&hellip;</p>
+<blockquote>
+<p><strong>levkk</strong>: I believe the science, but I&rsquo;ve been using it daily and it&rsquo;s been getting worse, noticeably.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>warkdarrior</strong>: Is it possible that your expectations are increasing, not that the model is getting worse?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>GoatInGrey</strong>: Possible, though you eventually run into types of issues that you recall the model just not having before. Like accessing a database or not following the SOP you have it read each time it performs X&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>F7F7F7</strong>: I’ve had Opus struggle on trivial things that Sonnet 3.5 handled with ease. It’s not so much that the implementations are bad because the code is bad (the code is bad).  It’s that it gets extremely&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>davidee</strong>: I have to concur. And to the question about understanding what its good and bad at; no, tasks that it could accomplish quickly and easily just a month ago, now require more detailed prompting and&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>conception</strong>: I assume, after any compacting of the context window that the session is more or less useless at that point I’ve never had consistent results after compacting.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>F7F7F7</strong>: Multiple concurrences a choir or a mob? 1pm EST time it’s all down hill until around 8 or 9pm EST time. Late nights and weekends is smooth sailing.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bushbaba</strong>: I’m finding Gemini and chatGPT web terminal to out perform Claude code. The context becomes too much for the LLM, and tries to make up for it by doing more file read ops.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>samusiam</strong>: Sounds like you might want to refactor the code if the individual files are too big and it can&rsquo;t find what it&rsquo;s looking for?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>emp17344</strong>: Any chance you’re just learning more about what the model is and is not useful for?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jerf</strong>: I dunno about everyone else but when I learn more about what a model is and is not useful for, my subjective experience improves, not degrades.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>data-ottawa</strong>: There are some days where it acts staggeringly bad, beyond baselines. But it’s impossible to actually determine if it’s model variance, polluted context (if I scold it, is it now closer in latent&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>acuozzo</strong>: No because switching to the API with the same prompt immediately fixes it. There&rsquo;s little incentive to throttle the API. It&rsquo;s $/token.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>TIPSIO</strong>: I too suspect the A/B testing is the prime suspect: context window limits, system prompts, MAYBE some other questionable things that should be disclosed. Either way, if true, given the cost I wish I&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>F7F7F7</strong>: Whenever I see new behaviors and suspect I’m being tested on I’ll typically see a feedback form at some point in that session.  Well, that and dropping four letter words. I know it’s more random&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>samusiam</strong>: If that&rsquo;s the case, then as a benchmark operator you&rsquo;d want to run the benchmark through multiple different accounts on different machines to average over A/B test noise.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>make3</strong>: It would be very easy for them to switch the various (compute) cost vs performance knobs down depending on load to maintain a certain latency; you would see oscillations like this, especially if the&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>littlestymaar</strong>: &gt; 1. The percentage drop is too low and oscillating, it goes up and down. How do you define “too low”, they make sure to communicate about the statistical significance of their measurements, what&rsquo;s&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>eterm</strong>: 4. The graph starts January 8. Why January 8? Was that an outlier high point? IIRC, Opus 4.5 was released late november.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>F7F7F7</strong>: Right after the Holiday double token promotion users felt (perceived) a huge regression in capabilities.   I bet that triggered the idea.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>pertymcpert</strong>: People were away for the holidays. What do you want them to do?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>littlestymaar</strong>: Or maybe, juste maybe, that&rsquo;s when they started testing…</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>eterm</strong>: Wayback machine has nothing for this site before today, and article is &ldquo;last updated Jan 29&rdquo;. A benchmark like this ought to start fresh from when it is published. I don&rsquo;t entirely doubt the&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>crazygringo</strong>: &gt; We model tests as Bernoulli random variables and compute 95% confidence intervals around daily, weekly, and monthly pass rates. Statistically significant differences in any of those time horizons&hellip;</p>
+<p><strong>Dowwie</strong>: Simply search user prompts for curse words and then measure hostility sentiment.  User hostility rises as agents fail to meet expectations.</p>
+<blockquote>
+<p><strong>preuceian</strong>: Maybe im overlooking something obvious but how do you &lsquo;simply&rsquo; scan the content of Claude users their prompts?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>gordonhart</strong>: GP was making a joke, but Anthropic could implement this if they wanted to. Not a bad metric actually if you can measure it cheaply enough.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>mrbananagrabber</strong>: I uh might be skewing that as I generally just use a lot of curse words with Claude by default</p>
+</blockquote>
+<blockquote>
+<p><strong>Trufa</strong>: I&rsquo;m glad I&rsquo;m not the only one.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>sejje</strong>: One time I cussed Claude out so hard that it actually quit his doom-loop and fixed the thing. It&rsquo;s the only time cussing worked, though.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bn-l</strong>: I don’t know. My gut feeling is it seems to help.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>ctxc</strong>: I feel bad about it but sometimes it&rsquo;s so daft, I can&rsquo;t even xD It&rsquo;s not my fault, they set high standards!</p>
+</blockquote>
+<blockquote>
+<p><strong>smotched</strong>: there are many times where I just do it myself and it thinks it did well.</p>
+</blockquote>
+<blockquote>
+<p><strong>F7F7F7</strong>: There’s a correlation between getting the “How’s Claude Doing This Session?” (Or whatever) and four letter words. It’s not always then, but it often follows it.</p>
+</blockquote>
+<blockquote>
+<p><strong>mhl47</strong>: Or there are global events that stress people out .. or their expectations change over time. Not that simple ;)</p>
+</blockquote>
+<blockquote>
+<p><strong>nateberkopec</strong>: Good thing expectations are perfectly constant!</p>
+</blockquote>
+<blockquote>
+<p><strong>mbm</strong>: This might be strangely effective.</p>
+</blockquote>
+<p><strong>silverlight</strong>: There was a moment about a week ago where Claude went down for about an hour. And right after it came back up it was clear a lot of people had given up and were not using it. It was probably 3x&hellip;</p>
+<blockquote>
+<p><strong>yoavsha1</strong>: I had that exact same feeling during the US holidays where I got to enjoy 2x usage limits and everything just seemed to work well</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>cmrdporcupine</strong>: I had terrible results during the holidays &ndash; it wasn&rsquo;t slow but it was clear they were dealing with the load by quantizing in spots because there were entire chunks of days when the results from it&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>abathologist</strong>: I find that if I have my rabbit&rsquo;s foot and lucky socks on, I win working code ~1.2x more often.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>nlh</strong>: Noticed the exact same thing a few days ago. So much so that I went on twitter and HN to search for “claude speed boost” to see if there was a known new release. Felt like the time I upgraded from a&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>svdr</strong>: I would also regret it if they become that fast; right now I can really take a moment to enjoy the hard work the model is doing for me.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>asimovDev</strong>: <a href="https://xkcd.com/303/">https://xkcd.com/303/</a> the evolution of this xkcd</p>
+</blockquote>
+</blockquote>
+<p><strong>dajonker</strong>: Wouldn&rsquo;t be surprised if they slowly start quantizing their models over time. Makes it easier to scale and reduce operational cost. Also makes a new release have more impact as it will be more&hellip;</p>
+<blockquote>
+<p><strong>kilroy123</strong>: It sure feels like they do this. They claim they don&rsquo;t, but using it every day for 5-10 hours a day. You notice when something changes. This last week it seems way dumber than before.</p>
+</blockquote>
+<blockquote>
+<p><strong>9cb14c1ec0</strong>: I don&rsquo;t think so.  There are other knobs they can tweak to reduce load that affect quality less than quantizing.  Like trimming the conversation length without telling you, reducing reasoning effort,&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mgraczyk</strong>: We never do anything that reduce model intelligence like that</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>siva7</strong>: You said &ldquo;like that&rdquo;, ok but there may be some truth to reduced model intelligence. Also how AWS deployed Anthropic models for Amazons Kiro feel much dumber than those controlled entirely by&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>eli</strong>: I would be surprised tbh. Anthropic does not exactly act like they&rsquo;re constrained by infra costs in other areas, and noticeably degrading a product when you&rsquo;re in tight competition with 1 or 2 other&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>kristianp</strong>: Open weights models such as GPT-OSS, Kimi K2.x are trained with 4 bit layers.  So it wouldn&rsquo;t come as a surprise if the closed models do similar things. If I compare Kimi K2.5 and Opus 4.5 on&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>YetAnotherNick</strong>: Benchmarks like ARG AGI are super price correlated and cheap to run. I think it&rsquo;s very easy to prove that the models are degrading.</p>
+</blockquote>
+<blockquote>
+<p><strong>rustyhancock</strong>: Oooff yes I think that is exactly the kind of shenanigans they might pull. Ultimately I can understand if a new model is coming in without as much optimization then it&rsquo;ll add pressure to the older&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>Roark66</strong>: I haven&rsquo;t noticed much difference in Claude, but I swear gemini 3 pro preview was better in the first week or two and later started feeling like they quantized it down to hell.</p>
+</blockquote>
+<p><strong>dmos62</strong>: Lack of transparency as regards &ldquo;thinking power&rdquo;-consistency is a big gripe of mine with LLM providers. It&rsquo;s even worse with ChatGPT and the like. E.g. I had to learn the hard way that at &gt;45k input&hellip;</p>
+<blockquote>
+<p><strong>judahmeek</strong>: Sounds like you ran into the Maximum Effective Context Window: <a href="https://arxiv.org/abs/2509.21361?context=cs.AI">https://arxiv.org/abs/2509.21361?context=cs.AI</a></p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>dmos62</strong>: Interesting article. Not sure it&rsquo;s the same phenomenon. What I experienced was like a day and night difference when you go from 44.5k to 45.5k. Didn&rsquo;t notice any fluctuation to suggest that it&rsquo;s no a&hellip;</p>
+</blockquote>
+</blockquote>
+<p><strong>jampa</strong>: I am using API mode, and it&rsquo;s clear that there are times when the Claude model just gives up. And it is very noticeable because the model just does the most dumb things possible. &ldquo;You have a bug in&hellip;</p>
+<blockquote>
+<p><strong>arcanemachiner</strong>: Robbing Peter to pay Paul. They are probably resource-constrained, and have determined that it&rsquo;s better to supply a worse answer to more people than to supply a good answer to some while refusing&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>chrisjj</strong>: &gt; Especially knowing that most people probably don&rsquo;t need the best answer 100% of the time. More: probably don&rsquo;t know if they&rsquo;ve got a good answer 100% of the time. It is interesting to note that&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bn-l</strong>: Right. You can launder quantization that way by muddying the waters of discourse about the model.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>DanielHall</strong>: I encountered the same situation too; Claude has &lsquo;become lazy&rsquo;.</p>
+</blockquote>
+<p><strong>qwesr123</strong>: FYI the MarginLab Claude Code degradation tracker is showing a statistically significant ~4% drop in SWE-Bench-Pro accuracy over the past month</p>
+<p><strong>goldenarm</strong>: I really like the idea, but a &ldquo;±14.0% significance threshold&rdquo; is meaningless here. The larger monthly scale should be the default, or you should get more samples.</p>
+<blockquote>
+<p><strong>zacmps</strong>: Could you elaborate what you think the problems are? I guess they should be using some form of multiple comparison correction?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>goldenarm</strong>: The daily scale is not statistically significant and is meaningless. You should lower the confidence interval by either increasing the scale or the evaluations.</p>
+</blockquote>
+</blockquote>
+<p><strong>account266928</strong>: Please try to make this statistically rigorous. There&rsquo;s lots of advice in this thread (intraday variation, etc) but if Im reading this right it looks like the CI includes the baseline value yet you&hellip;</p>
+<p><strong>mrandish</strong>: Benchmark tracking of cloud AI performance is going to be crucial going forward. Vendors are selling a service that by its nature is very difficult for customers to gauge day to day. How will I know&hellip;</p>
+<p><strong>drc500free</strong>: What makes the level they chose a “baseline,” against which it would be appropriate to do statistical tests?</p>
+<p><strong>parquor</strong>: Does this use a claude subscription or key, and has the account been used for anything else that day? On HN a few days ago there was a post suggesting that Claude gets dumber throughout the day:&hellip;</p>
+<p><strong>steveBK123</strong>: New to me, but I am starting to infer that for those &ldquo;in the know&rdquo; it is common knowledge on HN that LLMs are purposely degraded over time to manage capacity/cost or fudge benchmarks&hellip; How do you&hellip;</p>
+<p><strong>kittikitti</strong>: This is why I run my own models. All the inference providers do sneaky things behind the scenes. They will limit the output tokens, turn off attention layers, lower reasoning, or just use a&hellip;</p>
+<p><strong>IshKebab</strong>: &gt; We model tests as Bernoulli random variables and compute 95% confidence intervals around daily, weekly, and monthly pass rates. Statistically significant differences in any of those time horizons&hellip;</p>
+<p><strong>devonkelley</strong>: Running agents in production, I&rsquo;ve stopped trying to figure out why things degrade. The answer changes weekly. Model drift, provider load, API changes, tool failures - it doesn&rsquo;t matter. What matters&hellip;</p>
+<blockquote>
+<p><strong>sd9</strong>: LLM generated comments are so obvious, please just talk from your personal experience. Nobody cares about this imagined experience.</p>
+</blockquote>
+<p><strong>_zachs</strong>: This is super important - even if it&rsquo;s not currently the best measure of degradation yet. Anecdotally, Opus 4.5 has gotten so bad for me it&rsquo;s almost adding time to my workflow instead saving it. It&rsquo;d&hellip;</p>
+<p><strong>pojzon</strong>: Im using Claude daily. Mostly delegating boring stuff I can do myself but its a waste of my time now. I store my prompts, so I know I often run the same task multiple times over weeks span. After&hellip;</p>
+<p><strong>sandeepkd</strong>: Totally tangential to article, was browsing through the website UI - <a href="https://marginlab.ai/explorers/swe-bench-pro/">https://marginlab.ai/explorers/swe-bench-pro/</a> , the page gives impression that the  language, category boxes are selectable&hellip;.</p>
+<p><strong>stared</strong>: Does it benchmark the underlying code (Opus 4.5) or Claude Code harness? If the second, I would love to see CC versions involved. I would be curious to see on how it fares against a constant harness&hellip;.</p>
+<blockquote>
+<p><strong>Jcampuzano2</strong>: Claude Code. They mention they are using claude codes CLI in the benchmark, and claude code changes constantly. I wouldn&rsquo;t be surprised if the thing this is actually testing is benchmarking just&hellip;</p>
+</blockquote>
+<p><strong>mannanj</strong>: I wonder when I experience noticeably degraded model quality, ie opus, is it because my usage falls in the highest buckets and I’m being shadow limited or served worse versions of opus or is it&hellip;</p>
+<p><strong>PlatoIsADisease</strong>: Pretty sure someone at Google, OpenAI, and Anthropic met up at a park, leaving their phones in their car, and had a conversation that January 2026, they were all going to silently degrade their&hellip;</p>
+<p><strong>macinjosh</strong>: The degradation does not need to be in the inference it can be in how often inference is used. It is closed source but the algorithms that decide what Claude code does when, could behave differently&hellip;</p>
+<p><strong>cleifer</strong>: How much influence have you all found prompting to have on output quality? Generally I&rsquo;ve been approaching by just describing my problem and assuming that I&rsquo;ll get the machine&rsquo;s optimal output, but&hellip;</p>
+<p><strong>threethirtytwo</strong>: Does this even make sense? Clearly anthropic won&rsquo;t release a model unless it passed a benchmark of some sort that proves it&rsquo;s better than the previous model&hellip; or else why would they even release it?&hellip;</p>
+<p><strong>WhitneyLand</strong>: First off, this is a cool project, look forward to some interesting insights. I would suggest adding some clarification to note that longer measure like 30 pass rate is raw data only while the&hellip;</p>
+<p><strong>beardsciences</strong>: Very interesting. I would be curious to understand how granular these updates are being applied to CC + what might be causing things like this. I feel like I can notice a very small degradation but&hellip;</p>
+<blockquote>
+<p><strong>chrisjj</strong>: &gt; more detailed prompts (which I think, perhaps naively, is offsetting this issue). Is exacerbating this issue &hellip; if the load theory is correct.</p>
+</blockquote>
+<p><strong>bn-l</strong>: I hope the author sees this: You have to test inter-day variation. Many have noticed a sudden drop off at certain times.</p>
+<p><strong>aorist</strong>: If the confidence interval width is 2 * 14.0%, how are you detecting a statistically significant difference between 58% and 50%? The 95% CIs on both timeseries pretty much always cover the baseline&hellip;</p>
+<p><strong>persedes</strong>: What would be cool if this somehow could do a comparison by provider. E.g. in the last outages anthropic models running on vertex were apparently less affected than those deployed elsewhere. (Not&hellip;</p>
+<p><strong>motoboi</strong>: I’d love to see, based on the level of non-determinism perfomance on the benchmark how many times you need to run the benchmark for the change to be relevant (or statistically significant if you&hellip;</p>
+<p><strong>wendgeabos</strong>: Codex is doing better.  Why is everyone silent on Codex? <a href="https://marginlab.ai/trackers/codex/">https://marginlab.ai/trackers/codex/</a></p>
+<blockquote>
+<p><strong>CharlesW</strong>: Benchmark wins don&rsquo;t necessarily translate to &ldquo;real world&rdquo; wins vs. Claude Code.</p>
+</blockquote>
+<blockquote>
+<p><strong>bn-l</strong>: Codex writes disgusting shit code.</p>
+</blockquote>
+<p><strong>foerster</strong>: It definitely felt less capable recently, I thought I was imagining it, but it was noticeably more difficult to get it to help on tasks that usually aren&rsquo;t so hard.</p>
+<p><strong>stergd</strong>: I rarely complain about model performance, but Opus 4.5 behaves as Sonnet 4 at best. Need to start testing alternatives asap</p>
+<p><strong>your_friend</strong>: They should add testing from different ips and account countries, that would be fun too see that Americans are getting different models for example</p>
+<p><strong>sciencejerk</strong>: Why is this happening?</p>
+<blockquote>
+<p><strong>observationist</strong>: They&rsquo;re &ldquo;optimizing&rdquo; costs wherever possible - reducing compute allocations, quantizing models, doing whatever they can to reduce the cost per token, but vehemently insisting that no such things are&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>Trufa</strong>: I have absolutely no insight knowledge, but I think it&rsquo;s not a bad assumption to have that, it&rsquo;s costly to run the models, when they release a new model they assume that cost and give per user more&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bn-l</strong>: That is absolutely scummy.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>Uehreka</strong>: There are frequently claims that Anthropic is somehow diluting or dumbing down models in some subtle way. Unfortunately it’s tough to validate these claims without a body of regularly checked evals&hellip;.</p>
+</blockquote>
+<blockquote>
+<p><strong>giwook</strong>: <a href="https://www.anthropic.com/engineering/a-postmortem-of-three-">https://www.anthropic.com/engineering/a-postmortem-of-three-</a>&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>observationist</strong>: &raquo;&gt; We never reduce model quality due to demand, time of day, or server load. The problems our users reported were due to infrastructure bugs alone. Just ignore the continual degradation of service&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>alias_neo</strong>: &gt; We never reduce model quality due to demand, time of day, or server load Forgive me, but as a native English speaker, this sentence says exactly one thing to me; We <em>do</em> reduce model quality, just&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>emp17344</strong>: It’s entirely possible it’s not happening, and this phenomenon of “model degradation” is just user hype meeting reality.</p>
+</blockquote>
+<p><strong>hn_user_9876</strong>: Tracking benchmarks for AI-assisted coding tools is crucial. It helps developers understand the trade-offs and stability of the models they rely on.</p>
+<p><strong>elmean</strong>: I KNEW I WASNT CRAZY</p>
+<p><strong>fragebogen</strong>: Would love to see this idea expanded to ever alleged SoTA model currently in production. Any speculation as to why this degradation occurs?</p>
+<blockquote>
+<p><strong>embedding-shape</strong>: Anecdote, I don&rsquo;t have any proof and it&rsquo;s just a feeling. But around afternoon in GMT+1 compared to the morning/midday, there seems to be a change in the quality of responses, which seems to line up&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jzig</strong>: It’s the afternoon slump. The AI needs a cup of coffee and to doomscroll for half an hour!</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>embedding-shape</strong>: Or a load balancing technique :) Either way, it kicks me off to do other things so maybe it isn&rsquo;t so bad after all.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>jonawesomegreen</strong>: I’ve noticed Claude has been noticeably worse over the last week. For example, it told me I should pass frozen to make my Enum immutable—that’s not a thing. (It is a thing for dataclasses, but not&hellip;</p>
+<p><strong>snissn</strong>: they should run their test against a control baseline such as an open source hosted model to see the overall drift in their test</p>
+<p><strong>Topfi</strong>: I have yet to experience any degradation in coding tasks I use to evaluate Opus 4.5, but I did see a rather strange and reproducible worsening in prompt adherence as part of none coding tasks since&hellip;</p>
+<blockquote>
+<p><strong>dudeinhawaii</strong>: I&rsquo;ve noticed a degradation in Opus 4.5, also with Gemini-3-Pro. For me, it was a sudden rapid decline in adherence to specs in Claude Code. On an internal benchmark we developed, Gemini-3-Pro also&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>acuozzo</strong>: Write your work order with phases (to a file) and, between each phase, give it a non-negotiable directive to re-read the entire work order file. Claude-Code is terrible with context compaction. This&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>epolanski</strong>: I definitely noticed a degradation, it feels regressed by a generation.</p>
+</blockquote>
+<p><strong>ghm2199</strong>: In medicine there is a concept of reporting adverse effects of medication or interventions which are then collectively studied for Public Health [MedWatch][VAERS][EudraVigilance] and in academia.  We&hellip;</p>
+<p><strong>rplnt</strong>: The chart would benefit from having weekends highlighted. Or have another chart averaged by a weekday.</p>
+<p><strong>Rastonbury</strong>: would be interesting to see what scores it&rsquo;s get when it is actually degraded via the status page, it gets degraded pretty often, so there&rsquo;s at least something to compare or to know at what point&hellip;</p>
+<p><strong>sroerick</strong>: My personal conspiracy theory is that they choose who to serve a degraded model to based on social graph analysis and sentiment analysis, maximizing for persuasion while minimizing compute.</p>
+<blockquote>
+<p><strong>arcanemachiner</strong>: Sounds more like a sound business plan than a conspiracy theory.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>copilot_king</strong>: It sounds like fraud to me</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>arcanemachiner</strong>: Does it say anywhere in their terms of service that they guarantee the quality of the model, or promise not to modify it? <a href="https://www.anthropic.com/legal/consumer-terms">https://www.anthropic.com/legal/consumer-terms</a>&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>copilot_king</strong>: IMO this strategy seems inspired by TikTok&rsquo;s approach for retaining new uploaders. TikTok used to give new uploaders a visibility boost (i.e., an inflated number of likes and comments) on their first&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>sroerick</strong>: I would actually assume a little more sophistication. For each user, a measure of &ldquo;Are they convinced that AI is great&rdquo;. Then, you weaponize your compute to have the maximum social impact. If&hellip;</p>
+</blockquote>
+</blockquote>
+<p><strong>carterschonwald</strong>: ive seen degraded reasoning levels that feel like they they might be blur from excess quantization. cause thats what you get from the grid changes</p>
+<p><strong>sreekanth850</strong>: Tried Kimi 2.5 and far ahead of claude for coding.</p>
+<p><strong>esafak</strong>: Finally someone did it! We need this for all models.</p>
+<p><strong>sd9</strong>: I’m sure there is not enough data here for this to be statistically significant (it seems to oscillate too much and not show real trends or step changes) - BUT If this measure were hardened up a&hellip;</p>
+<p><strong>ed_mercer</strong>: I would pay 300 for a non-degrading Max plan.</p>
+<p><strong>fernvenue</strong>: That will be great if there&rsquo;s RSS support.</p>
+<p><strong>taf2</strong>: any chance we can get something like this for codex cli that&rsquo;d be cool too compare</p>
+<p><strong>biddit</strong>: Call it what you will. But the experience is like you have a reliable coworker, but he randomly decides to take bong hits. &ldquo;No no yeah bro no I&rsquo;m good like really the work&rsquo;s done and all yeah sorry I&hellip;</p>
+<p><strong>turnsout</strong>: This is probably entirely down to subtle changes to CC prompts/tools. I&rsquo;ve been using CC more or less 8 hrs/day for the past 2 weeks, and if anything it feels like CC is getting better and better at&hellip;</p>
+<blockquote>
+<p><strong>FfejL</strong>: Honest, good-faith question. Is CC getting better, or are you getting better at using it? And how do you know the difference? I&rsquo;m an occasional user, and I can definitely see improvements in my&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>rob</strong>: I agree with you, it&rsquo;s personally hard to tell. For me I&rsquo;ve noticed it getting nothing but better over the past couple months, but I&rsquo;ve been working on my workflows and tooling. For example, I used&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>turnsout</strong>: Good-faith answer: I can&rsquo;t be certain. But I&rsquo;ve been using CC since its release, and Cursor before that (and actually going all the way back to GPT3 to do codegen in the Playground). After getting&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>BoorishBears</strong>: I run an LLM based product in a completely different space (consumer) and I think this is kind of an impossible unsolvable part of developing products that rely on LLMs. No matter what, powers users&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>billylo</strong>: That&rsquo;s why benchmarks are useful. We all suffer from the shortcomings of human perception.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>gpm</strong>: Benchmarks shortcomings are no worse&hellip; they inevitably measure something that is only close to the thing you actually care about, not the thing you actually care about. It&rsquo;s entirely plausible that&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>billylo</strong>: I wonder how best we can measure the usefulness of models going forward. Thumbs up or down? (could be useful for trends) Usage growth from the same user over time? (as an approximation) Tone of user&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>turnsout</strong>: Benchmarks measure what they measure. But your subjective experience also matters.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>fragebogen</strong>: I was going to ask, are all other variables accounted for? Are we really comparing apples to apples here? Still worth doing obviously, as it serves a good e2e evaluations, just for curiosity&rsquo;s sake.</p>
+</blockquote>
+<blockquote>
+<p><strong>arcanemachiner</strong>: The easiest way would be to quantize the model, and serve different quants based on the current demand. Higher volumes == worse quant == more customers served per GPU</p>
+</blockquote>
+<blockquote>
+<p><strong>gpm</strong>: I upvoted, but &gt; Edit: Before you downvote, can you explain how the model could degrade WITHOUT changes to the prompts? The article actually links to this fine postmortem by anthropic that&hellip;</p>
+</blockquote>
+<p><strong>willturman</strong>: Could this be (partially?) explained by Model Collapse [1], i.e. iteratively training on data that includes an ever increasing amount of AI slop? [1]&hellip;</p>
+<p><strong>copilot_king</strong>: This strategy seems inspired by TikTok&rsquo;s approach for retaining new uploaders. TikTok used to give new uploaders a visibility boost (i.e., an inflated number of likes and comments) on their first&hellip;</p>
+<blockquote>
+<p><strong>chrisjj</strong>: Yes, but the difference is TikTok didn&rsquo;t sell a particular service version. Anthropic did sell a particular model version.</p>
+</blockquote>
 
       </div>
 
@@ -271,30 +1090,29 @@
   <div class="footer-container">
     <div class="footer-brand">
       <span class="footer-logo">AI Best Practices</span>
-      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
     </div>
     <div class="footer-nav">
       <div class="footer-section">
         <h3>Learn</h3>
         <ul>
-          <li><a href="../start-here/index.html">Start Here</a></li>
-          <li><a href="../skills/index.html">Skills</a></li>
-          <li><a href="../workflows/index.html">Workflows</a></li>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Explore</h3>
         <ul>
           <li><a href="../tools/index.html">Tools</a></li>
-          <li><a href="../landscape/index.html">Landscape</a></li>
           <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
           <li><a href="../sources/index.html">Sources</a></li>
-          <li><a href="../tags/">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
     </div>
   </div>
 </footer>

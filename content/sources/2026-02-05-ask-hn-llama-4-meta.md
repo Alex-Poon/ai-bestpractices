@@ -32,15 +32,22 @@ The thread reflects broader concerns about the sustainability of the open-source
 
 ## HN Discussion Highlights
 
-The discussion generated 25 points and 7 comments. Key themes:
+*9 comments total*
 
-**Leadership and organizational issues**
-- **hasperdi**: Claimed Zuckerberg restructured the entire department and suggested nothing significant or open would come from Meta AI anymore
-- **BoredPositron**: Argued that when Zuckerberg takes personal interest in a project, it tends to derail, comparing to previous obsessions
-- **dhruv3006**: Simply attributed it to poor leadership despite abundant resources
-- **verdverm**: Cited rumors that highly-compensated AI hires are underperforming because they know firing them would reflect badly on leadership
+**joriJordan**: Pointed to Meta's recently released updated segmentation models (SAM 3D Objects, SAM3) as far more valuable to the ecosystem than more AI-as-a-service offerings.
 
-**Strategic observations**
-- **joriJordan**: Pointed to Meta's updated segmentation models (SAM 3D Objects, SAM3) as examples of valuable ongoing research work, arguing these are more valuable to the ecosystem than AI-as-a-service
-- **casey2**: Questioned Zuckerberg's open platform strategy when users outside the US predominantly use DeepSeek
-- **fuzzfactor**: Sardonically noted Meta already has an ad platform, implying their AI efforts may be misdirected
+**egorfine**: Wondered why Meta hasn't renamed themselves to "AI" or "Llama" since the Metaverse is no longer a hot thing.
+
+**hasperdi**: Claimed Zuckerberg got mad and restructured the whole department. Predicted nothing open or significant would come from Meta AI anymore.
+
+**dhruv3006**: Attributed it to poor leadership — so much funding and still they couldn't do better.
+
+**BoredPositron**: Argued that history suggests when Zuck takes a personal interest in a project, it tends to derail. Meta's AI initiative may be headed for the same fate as previous obsessions.
+
+**villgax**: Quipped "fell off the Llama."
+
+**fuzzfactor**: Sardonically asked "Doesn't Facebook already have an ad platform?"
+
+**verdverm**: Cited rumors that highly-paid hires are not delivering because they know leadership will look bad if they're fired. Suggested internal dysfunction is the most likely reason, since they have the resources to maintain release pace.
+
+**casey2**: Called it strange that Zuckerberg is still pushing the open platform narrative when everyone outside the US uses DeepSeek.

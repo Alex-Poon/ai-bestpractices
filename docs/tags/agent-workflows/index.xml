@@ -16,34 +16,6 @@
       <description>&lt;p&gt;Claude Code is Anthropic&amp;rsquo;s CLI-first coding agent. It runs in the terminal, takes natural language task descriptions, and executes autonomously &amp;ndash; reading files, running commands, editing code, and iterating on failures. It is single-model (Anthropic&amp;rsquo;s Claude family), available through Claude Max subscriptions at $100-200/month, and focused entirely on agentic workflows with no autocomplete mode.&lt;/p&gt;&#xA;&lt;p&gt;What sets Claude Code apart from other agents is its extensibility. It supports CLAUDE.md project files, custom sub-agents, hooks for CI/CD integration, and MCP servers for structured tool access. This page covers the major features and developments that matter to practitioners.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Task Scoping for AI Agents</title>
-      <link>/skills/task-scoping.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/skills/task-scoping.html</guid>
-      <description>&lt;p&gt;Task scoping is the single most important skill in AI-assisted development. It determines whether the time you spend prompting, waiting, and reviewing produces usable output or wasted effort. Every practitioner who has moved past the initial novelty phase identifies decomposition as the core discipline.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-size-sweet-spot&#34;&gt;The Size Sweet Spot&lt;/h2&gt;&#xA;&lt;p&gt;There is a narrow band where AI delegation works well. Too small, and the overhead of context-switching to an agent exceeds the time you would spend just doing the work. Too large, and the agent produces confidently wrong output that takes longer to fix than to rewrite.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>The Core Loop: Plan, Delegate, Verify, Harness</title>
-      <link>/start-here/core-loop.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/start-here/core-loop.html</guid>
-      <description>&lt;p&gt;Effective AI-assisted development is not about typing prompts and hoping for the best. It follows a repeating four-phase loop: &lt;strong&gt;Plan, Delegate, Verify, Harness.&lt;/strong&gt; Every technique on this site maps back to one of these phases. If you internalize this loop and practice each phase deliberately, you will get better results from AI agents than the vast majority of developers who use them casually.&lt;/p&gt;&#xA;&lt;p&gt;The loop is simple to describe but takes real practice to execute well. Each phase has its own skills, its own failure modes, and its own payoff curve.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>The State of Agentic Coding Practice (Feb 2026)</title>
-      <link>/synthesis/state-of-practice-feb-2026.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/synthesis/state-of-practice-feb-2026.html</guid>
-      <description>&lt;p&gt;A synthesis of where serious practitioners have landed on AI-assisted development, drawn from 35+ articles and Hacker News discussions spanning late 2025 through early 2026.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-where-practitioners-actually-are&#34;&gt;1. Where Practitioners Actually Are&lt;/h2&gt;&#xA;&lt;p&gt;Most serious practitioners have converged on a remarkably similar workflow loop:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Plan in chat → Execute narrow diffs via agent → Verify fast → Tighten harness&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;The variation between practitioners is in degree, not in kind. Whether someone uses Claude Code, Cursor, Amp, or Copilot, the operational rhythm looks the same. The key shift that experienced users describe is that the bottleneck has moved from &lt;em&gt;writing&lt;/em&gt; code to &lt;em&gt;reading and verifying&lt;/em&gt; code. This is a fundamental change in the nature of programming work.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Parallel Agent Coordination</title>
-      <link>/workflows/parallel-agents.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/workflows/parallel-agents.html</guid>
-      <description>&lt;p&gt;A single agent is often too slow for large projects. Running multiple agents in parallel is the obvious solution, but naive parallelism introduces failure modes that can waste more time and money than sequential work. This page covers when parallel agents help, when they hurt, and the coordination infrastructure that makes the difference.&lt;/p&gt;&#xA;&lt;p&gt;The strongest empirical evidence comes from Nicholas Carlini&amp;rsquo;s compiler project, where 16 parallel Claude instances produced 100,000 lines of working Rust compiler code over two weeks. The full case study is covered in &lt;a href=&#34;../../deep-dives/parallel-compiler-lessons/&#34;&gt;What 100 Parallel Agents Taught Us&lt;/a&gt;. This page focuses on the reusable coordination patterns.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>A few random notes from Claude coding quite a bit last week</title>
       <link>/sources/2026-01-26-karpathy-claude-coding-notes.html</link>
       <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>

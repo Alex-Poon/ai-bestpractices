@@ -1,0 +1,4 @@
+<div class="debate-side debate-side--{{ .Get "side" }}">
+  <div class="debate-side-label">{{ if eq (.Get "side") "a" }}Side A{{ else }}Side B{{ end }}</div>
+  {{ .Inner | markdownify }}
+</div>

@@ -35,10 +35,8 @@ The tooling landscape covered includes Claude Code, GitHub Copilot Agent, Jules 
 
 ## HN Discussion Highlights
 
-The discussion generated 7 points and 2 comments.
+*2 comments total*
 
-**Complementary workflows**
-- **dchuk**: Shared their experience using Agent OS with Claude Code's $100 plan, describing a workflow of ideating with Claude and ChatGPT, bootstrapping through Agent OS, then looping through specs, tasks, and implementation. They are building a Mac SwiftUI app in a language they've never used before with good test coverage, comparing the approach favorably to the popular Ralph Wiggum agent concept.
+**dchuk**: Shared experience using Agent OS with Claude Code's $100 plan. Workflow: ideate with Claude and ChatGPT to get a PRD, bootstrap core artifacts through Agent OS, then loop through shaping specs, breaking into tasks, implementing, and manual testing...
 
-**Implementation challenges**
-- **sciences44**: Asked probing questions about how to ensure Claude completes everything in a spec and finds optimal paths, noting that LLMs often skip edge cases with too much autonomy. Raised the balance between human specification and agent autonomy as the key challenge for 2026.
+**sciences44**: Asked probing questions about how to ensure Claude completes everything in a spec and finds optimal paths. Working on multi-step AI pipelines (3D mesh generation) where LLMs skip edge cases with too much autonomy. Asked about the balance between human specification and agent autonomy...

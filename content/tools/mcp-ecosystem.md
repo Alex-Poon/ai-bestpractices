@@ -62,4 +62,4 @@ Claude Code supports MCP servers natively, with OAuth support added in the Decem
 
 4. **Build your own for internal tools.** The MCP specification is straightforward enough that building a server for an internal API or tool is a reasonable investment. This gives agents access to your team's specific infrastructure without waiting for third-party support.
 
-For how MCP fits into the broader tool landscape, see the [Practitioner's Tool Comparison](/references/tool-landscape.html).
+For how MCP fits into the broader tool landscape, see the [Practitioner's Tool Comparison](/tools/).

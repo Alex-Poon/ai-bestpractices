@@ -3,12 +3,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>A few random notes from Claude coding quite a bit last week | AI Best Practices Knowledge Base</title>
-  <meta name="description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta name="description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
   <meta name="color-scheme" content="dark light">
 
   
   <meta property="og:title" content="A few random notes from Claude coding quite a bit last week">
-  <meta property="og:description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta property="og:description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
   <meta property="og:type" content="article">
 
   
@@ -37,14 +37,13 @@
       <span>AI Best Practices</span>
     </a>
     <div class="nav-links">
-      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
-      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
       <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
-      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
-      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
       <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
       <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
-      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
     </div>
     <div class="nav-actions">
       <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
@@ -114,7 +113,7 @@
 
   
 
-  <span class="meta-reading-time">4 min read</span>
+  <span class="meta-reading-time">83 min read</span>
 
   
   <span class="tier-badge tier-badge--1">Tier 1</span>
@@ -202,34 +201,2404 @@
 <p>&ldquo;slopacolypse across all of github, substack, arxiv&rdquo; — Karpathy (via HN comments)</p>
 </blockquote>
 <h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
-<p>The discussion generated 911 points and 98 comments, making it one of the most engaged threads in this collection. Key themes:</p>
-<p><strong>Brain atrophy and complacency</strong></p>
-<ul>
-<li><strong>daxfohl</strong>: Described experiencing not just atrophy but complacency, noting that AI constantly pulls code back toward its preferred patterns. After initial productivity excitement, this led to disillusionment as projects drift from the developer&rsquo;s vision. Compared the experience to doom scrolling.</li>
-<li><strong>oxag3n</strong>: Warned that review skills will also erode eventually, challenging you to review AI code in domains you never learned firsthand like SIMD or FPGA programming</li>
-</ul>
-<p><strong>Builder vs coder identity</strong></p>
-<ul>
-<li><strong>atonse</strong>: Identified as a builder who has always coded for outcomes rather than craft, noting this distinction explains the different reactions to AI tools across the community</li>
-<li><strong>strogonoff</strong>: Pushed back, arguing that after sufficient experience, coding is 99% architecture, and questioned whether AI truly saves time given the review overhead</li>
-</ul>
-<p><strong>Agent tenacity and its limits</strong></p>
-<ul>
-<li><strong>jedberg</strong>: Connected Karpathy&rsquo;s tenacity observation to research showing grit correlates more with success than intelligence, suggesting AI may outperform humans simply by never giving up</li>
-<li><strong>netcraft</strong>: Offered a counterpoint that agents do give up sometimes, citing cases where Sonnet skipped failing tests or asked to work on something else</li>
-<li><strong>jwilliams</strong>: Noted Sonnet in particular will modify every file in a codebase chasing a type error, while Opus is better at avoiding rabbit holes</li>
-</ul>
-<p><strong>Skepticism and environmental concerns</strong></p>
-<ul>
-<li><strong>einrealist</strong>: Raised concerns about GPU energy consumption, data privacy, and vendor dependency behind the impressive tenacity</li>
-<li><strong>philipwhiuk</strong>: Pointed out the unsaid costs of token burning and questioned whether brute-force persistence is actually desirable</li>
-<li><strong>forrestthewoods</strong>: Called for banning AI experience discussions that don&rsquo;t include concrete artifacts, noting a year of hype with little measurable quality or output improvement</li>
-</ul>
-<p><strong>Practical IDE usage</strong></p>
-<ul>
-<li><strong>jimbokun</strong>: Described a productive workflow using Copilot in VS Code with context diffs, supporting Karpathy&rsquo;s view that IDEs remain necessary</li>
-<li><strong>markb139</strong>: Shared a success story of using Claude for reverse engineering Intel 8096 firmware, building a disassembler, assembler, and partial emulator in two weeks</li>
-</ul>
+<p><em>575 comments total</em></p>
+<p><strong>daxfohl</strong>: I worry about the &ldquo;brain atrophy&rdquo; part, as I&rsquo;ve felt this too. And not just atrophy, but even moreso I think it&rsquo;s evolving into &ldquo;complacency&rdquo;. Like there have been multiple times now where I wanted&hellip;</p>
+<blockquote>
+<p><strong>striking</strong>: It&rsquo;s not just brain atrophy, I think. I think part of it is that we&rsquo;re actively making a tradeoff to focus on learning how to use the model rather than learning how to use our own brains and work&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>raducu</strong>: &gt; let myself atrophy, run on a treadmill forever, for something You&rsquo;re lucky to afford the luxury not to atrophy. It&rsquo;s been almost 4 years since my last software job interview and I know the drills&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>aftergibson</strong>: This is a very good point. Years ago working in a LAMP stack, the term LAMP could fully describe your software engineering, database setup and infrastructure. I shudder to think of the acronyms for&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>carimura</strong>: Ya I agree it&rsquo;s totally crazy&hellip;. but, do most app deployments need even half that stuff? I feel like most apps at most companies can just build an app and deploy it using some modern paas-like thing.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>dullcrisp</strong>: That was on NBC.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>daxfohl</strong>: Businesses too. For two years it&rsquo;s been &ldquo;throw everything into AI.&rdquo; But now that shit is getting real, are they really feeling so coy about letting AI run ahead of their engineering team&rsquo;s ability to&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>scorpioxy</strong>: From what I am seeing, no one is feeling coy simply because of the cost savings that management is able to show the higher-ups and shareholders. At that level, there&rsquo;s very little understanding of&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>throwup238</strong>: How long until “the LLM did it it” is just as effective as “AWS is down, not my fault”?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>locknitpicker</strong>: &gt; It&rsquo;s not just brain atrophy, I think. I think part of it is that we&rsquo;re actively making a tradeoff to focus on learning how to use the model rather than learning how to use our own brains and work&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bandrami</strong>: Previous tools have been deterministic and understandable. I write code with emacs and can at any point look at the source and tell you why it did what it did. But I could produce the same program&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>koiueo</strong>: The little experience I have with LLM confidently shows that LLMs are much better at navigating and modifying a well structured code base. And they struggle, sometimes to a point where they can&rsquo;t&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>pards</strong>: &gt; I happen to rent and can&rsquo;t keep This is my fear - what happens if the AI companies can&rsquo;t find a path to profitability and shut down?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>thevillagechief</strong>: Don&rsquo;t threaten us with a good time.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>satvikpendem</strong>: This is why local models are so important. Even if the non-local ones shut down, and even if you can&rsquo;t run local ones on your own hardware, there will still be inference providers willing to serve&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>MillionOClock</strong>: Recently I was thinking about how some (expensive) customer electronics like the Mac Studio can run pretty powerful open source models with a pretty efficient power consumption, that could pretty&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Aurornis</strong>: &gt; the meta-skill of learning to use the LLM depreciates too. Today&rsquo;s LLM is gonna go away someday, the way you have to use it will change. You will be on a forever treadmill, always learning the&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>rubenflamshep</strong>: Interesting, I’ve experienced the opposite in certain contexts. CC is so hastily shipped that new versions often imbalance existing workflows. E.g. people were raving about the new user prompt tools&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>infecto</strong>: I think you have to be aware of how you use any tool but I don’t think this is a forever treadmill. It’s pretty clear to me since early on that the goal is for you the user to not have to craft the&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Draiken</strong>: If it ever gets there, then anyone can use it and there&rsquo;s no &ldquo;skill&rdquo; to be learned at all. Either it will continue to be this very flawed non-deterministic tool that requires a lot of effort to get&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>rurp</strong>: I have deliberately moderated my use of AI in large part for this reason. For a solid two years now I&rsquo;ve been constantly seeing claims of &ldquo;this model/IDE/Agent/approach/etc is the future of writing&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>apercu</strong>: HN is where I keep hearing the “50× more productive” claims the most. I’ve been reading 2024 annual reports and 2025 quarterlies to see whether any of this shows up on the other side of the hype. So&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>prettyblocks</strong>: In my experience all technology has been like this though. We are on the treadmill of learning the new thing with our without LLMs. That&rsquo;s what makes tech work so fun and rewarding (for me anyway).</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Kostic</strong>: I assume you&rsquo;re living in a city. You&rsquo;re already renting out a lot of things to others (security, electricity, water, food, shelter, transportation), what is different with white collar work?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bondarchuk</strong>: &gt;the city gets destroyed vs. &gt;a company goes bankrupt or pivots I can see a few differences.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>striking</strong>: My apartment has been here for years and will be here for many more. I don&rsquo;t love paying rent on it but it certainly does get maintained without my having to do anything. And the rest of the&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>nemothekid</strong>: I think I should write more about but I have been feeling very similar. I&rsquo;ve been recently exploring using claude code/codex recently as the &ldquo;default&rdquo;, so I&rsquo;ve decided to implement a side project. My&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bedrio</strong>: I&rsquo;m worried about that too. If the error is reproducible, the model can eventually figure it out from experience. But a ghost bug that I can&rsquo;t pattern? The model ends up in a &ldquo;you&rsquo;re absolutely&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mattmanser</strong>: Are ghost bugs even real? My first job had the Devs working front-line support years ago. Due to that, I learnt an important lessons in bug fixing. Always be able to re-create the bug first. There&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mh2266</strong>: &gt; I&rsquo;ve been trying to implement a multiplayer game with server authoritative networking in Rust with Bevy. I specifically chose Bevy as the latest version was after Claude&rsquo;s cut off, it had a number&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>nemothekid</strong>: &gt;I had the thought that you ought be able to provide a cargo doc or rust-analyzer equivalent over MCP? This&hellip; must exist? I&rsquo;ve found that there are two issues that arise that I&rsquo;m not sure how to&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>storystarling</strong>: I ran into similar issues with context rot on a larger backend project recently. I ended up writing a tool that parses the AST to strip out function bodies and only feeds the relevant signatures and&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jv22222</strong>: &gt; I don&rsquo;t really understand the code &ldquo;in my bones&rdquo;. Man, I absolutely hate this feeling.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>aswegs8</strong>: &ldquo;For this invention will produce forgetfulness in the minds of those who learn to use it, because they will not practice their memory. Their trust in writing, produced by external characters which&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>beepbooptheory</strong>: If one reads the dialogue, Socrates is not the one &ldquo;saying&rdquo; this, but he is telling a story of what King Thamus said to the Egyptian god Theuth, who is the inventor of writing. He is asking the king&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>dempedempe</strong>: <a href="https://standardebooks.org/ebooks/plato/dialogues/benjamin-j">https://standardebooks.org/ebooks/plato/dialogues/benjamin-j</a>&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mikemarsh</strong>: Presenting this quote without additional commentary is an interesting Rorschach test. Thankfully more and more people are seriously considering the effects of technology on true wisdom and getting of&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>runarberg</strong>: Socrates was right about the effects. Writing did indeed cause us to loose the talent of memorizing. Where he was wrong though (or rather where this quote without context is wrong) is that it turned&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ericmcer</strong>: That is interesting because your mental abilities seem to be correlated with orchestrating a bunch of abstractions you have previously mastered. Are these tools making us stupid because we no longer&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>pinnochio</strong>: Does a student become smarter by hiring a smarter student to write his essays and take his tests for him?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>kelnos</strong>: It&rsquo;s unclear if you&rsquo;ve presented this quote in order to support or criticize the idea that new technologies make us dumber.  (Perhaps that&rsquo;s intentional; if so, bravo). To me, this feels like&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>runarberg</strong>: I don‘t think human memory works like that, at least not in theory. Storage is not the limiting factor of human memory, but rather retention. It takes time and effort to retain new information. In&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>drdeca</strong>: I like this commentary on that passage : <a href="https://detective-pony.tumblr.com/post/96180330151/pages-21-">https://detective-pony.tumblr.com/post/96180330151/pages-21-</a>&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>specialist</strong>: Yup. My personal counterpoint is Norman&rsquo;s thesis in Things That Make Us Smart. I&rsquo;ve long tried, and mostly failed, to consider the tradeoffs, to be ever mindful that technologies are never neutral&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>daxfohl</strong>: And so we learn that over 2000 years before the microphone came to be, Socrates invented the mic drop. In all seriousness though, it&rsquo;s just crazy that anybody is thinking these things at the dawn of&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>sifar</strong>: Well, the wisdom part is true.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>direwolf20</strong>: He was right. It did.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>throw10920</strong>: Writing/reading and AI are so categorically different that the only way you could compare them is if you fundamentally misunderstand how both of them work. And &ldquo;other people in the past predicted&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ppseafield</strong>: The argument Socrates is making is specifically that writing isn&rsquo;t a substitute for thinking, but it will be used as such. People will read things &ldquo;without instruction&rdquo; and claim to understand those&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>wjSgoWPm5bWAhXB</strong>: yes, but people just really like to predict dooms and they also like to be convinced that they live in some special era in human history</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>grogenaut</strong>: I know managers who can read code just fine, they&rsquo;re just not able/willing to code it. Tho the ai helps with that too. I&rsquo;ve had a few managers dabble back into coding esp scripts and whatnot where I&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>andy_ppp</strong>: I read grandparent comment as saying people have been claiming that the sky is falling forever… AI will be both good for learning and development and bad. It’s always up to the individual if it&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>whistle650</strong>: To understand the impact on computer programming per se, I find it useful to imagine that the first computer programs I had encountered were, somehow, expressed in a rudimentary natural language&hellip;.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>krupan</strong>: I&rsquo;ve been thinking along these lines.  LLMs seem to have arrived right when we were all getting addicted to reels/tic tocks/whatever.  For some reason we love to swipe, swipe, swipe, until we get&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>neves</strong>: It&rsquo;s exactly the argument here: <a href="https://www.fast.ai/posts/2026-01-28-dark-flow/">https://www.fast.ai/posts/2026-01-28-dark-flow/</a></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>CharlieDigital</strong>: I ran into a new problem today: &ldquo;reading atrophy&rdquo;. As in if the LLM doesn&rsquo;t know about it, some devs are basically giving up and not even going to RTFM.  I literally had to explain to someone today&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>finaard</strong>: That&rsquo;s not really a new thing now, it just shows differently. 15 years ago I was working in an environment where they had lots of Indians as cheap labour - and the same thing will show up in any&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>globular-toast</strong>: The mere existence of the phrase &ldquo;RTFM&rdquo; shows that this phenomenon was already a thing. LLMs are the worst thing to happen to people who couldn&rsquo;t read before. When HR type people ask what my&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>acessoproibido</strong>: As someone working in technical support for a long time, this has always been the case. You can have as many extremely detailed and easy to parse gudies, references, etc. there will always be a&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>yencabulator</strong>: &gt; Never could figure out why because they aren&rsquo;t stupid or anything. They may be intelligent, but they don&rsquo;t sound wise.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>overfeed</strong>: &gt; Eventually it was easier just to quit fighting it and let it do things the way it wanted. I wouldn&rsquo;t have believed it a few tears ago if you told me the industry would one day, in lockstep, decide&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ithkuil</strong>: Don&rsquo;t worry. This will create the demand for even more powerful models that are able to untangle the mess created by previous models. Once we realize the kind of mess <em>those</em> models created, well,&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bandrami</strong>: &ldquo;That&rsquo;s the brilliant part: when the winter comes the apes freeze to death!&rdquo;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>scorpioxy</strong>: As someone who&rsquo;s been commissioned many times before to work on or salvage &ldquo;rescue projects&rdquo; with huge amounts of tech debt, I welcome that day. Still not there yet though I am starting to feel the&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>sally_glance</strong>: Are you not worried that the sibling comment is right and the solution to this will be &ldquo;more AI&rdquo; in the future? So instead of hiring a team of human experts to cleanup, management might just dump&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>e12e</strong>: &gt; &hellip; few tears ago Brilliant. Even if it was a typo.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>TeMPOraL</strong>: The industry decided that decades ago. We may like to talk about quality and forethought, but when you actually go to work, you quickly discover it doesn&rsquo;t matter. Small companies tell you &ldquo;we gotta&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>oblio</strong>: &gt; the median programmer is a junior with &lt;5 years of experience, and they cannot write quality code to save their life It&rsquo;s worse, look up perpetual intermediates. Most people in any given field&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>naasking</strong>: &gt; I wouldn&rsquo;t have believed it a few tears ago if you told me the industry would one day, in lockstep, decide that shipping more tech-debt is awesome. It&rsquo;s not debt if you never have to pay it back&hellip;.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>daxfohl</strong>: &gt; unstated bet (except where it&rsquo;s been stated, championed, enforced, and ultimated in no unequivocal terms by every executive in the tech industry)</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>overfeed</strong>: I&rsquo;m yet to encounter an AI-bull who admits the LLM tendency towards creating tech debt- outside of footnotes stating it can be fixed by better prompting (with no examples), or solved by whatever tool&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>gritspants</strong>: My disillusionment comes from the feeling I am just cosplaying my job.  There is nothing to distinguish one cosplayer from another.  I am just doordashing software, at this point, and I&rsquo;m not in&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>solumunus</strong>: I don’t get this at all. I’m using LLM’s all day and I’m constantly having to make smart architectural choices that other less experienced devs won’t be making. Are you just prompting and going with&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Otterly99</strong>: Exactly. Once you start using it intelligently, the results can be really satisfying and helpful. People complaining about 1000 lines of codes being generated? Ask it to generate functions one at a&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>rustyhancock</strong>: One challenge is, are those decisions making tangible differences? We won&rsquo;t know until the code being produced especially greenfields hits any kind of maturity 5 years+ atleast?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>FitchApps</strong>: 100% there&hellip;.it&rsquo;s getting to a point where a project manager reports a bug AND also pastes a response from Claude (he ran Claude against our codebase) on how to fix the bug..Like I&rsquo;m just copying&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>phito</strong>: What kind of software are you writing? Are you just a &ldquo;code monkey&rdquo; implementing perfectly described Jira tickets (no offense meant)? I cannot imagine feeling this way with what I&rsquo;m working on,&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>gritspants</strong>: No, I am not a code monkey.  I have an odd role working directly for an exec in a highly regulated industry, managing their tech pursuits/projects.  The work can range from exciting to boring&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>InfinityByTen</strong>: I find the atrophy and zoning out or context switching problematic, because it takes a few seconds/ minutes in &ldquo;thinking&rdquo; and then BAM! I have 500 lines of all sorts of buggy and problematic code to&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>amluto</strong>: I’ve actually found the tool that inspires the most worry about brain atrophy to be Copilot. Vscode is full of flashing suggestions all over. A couple days ago, I wanted to write a very quick&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mlrtime</strong>: Yes! I spent more time trying to figure out how to turn off that garbage copilot suggesting then I did editing this 5 year old python program. I use claude daily, no problems with it. But vscode +&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>nonethewiser</strong>: &gt; Like there have been multiple times now where I wanted the code to look a certain way, but it kept pulling back to the way it wanted to do things. Like if I had stated certain design goals recently&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>freediver</strong>: My experience is the opposite - I haven&rsquo;t used my brain more in a while.. Typing characters was never what developers were valued for anyway. The joy of building is back too.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>swader999</strong>: Same. I feel I need to be way more into the domain and what the user is trying to do than ever before.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mlrtime</strong>: 100% same, I had brain fog before the llms, I got tired of reading new docs over and over again for new languages. I became a manager and lost it all. Now back to IC with 25+ years of experience +&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>Imustaskforhelp</strong>: &gt; I want to say it&rsquo;s very akin to doom scrolling. Doom tabbing? It&rsquo;s like, yeah I could be more creative with just a tad more effort, but the AI is already running and the bar to seeing what the AI&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>SenHeng</strong>: Another thing I’ve experienced is scope creep into the average. Both Claude and ChatGPT keep making recommendations and suggestions that turns the original request into something that resembles other&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>fragmede</strong>: yeah but that&rsquo;s like recommending a webserver for your Internet facing website. If you want to give an example of scope creep, you need a better example than double entry book keeping for an&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>SenHeng</strong>: You’ve just illustrated exactly the problem. You assumed I was building an accounting app. I’ve experienced the same issue with building features for calculating the brightness of a room, or 3D&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>zamalek</strong>: &gt; I worry about the &ldquo;brain atrophy&rdquo; part, as I&rsquo;ve felt this too. And not just atrophy, but even moreso I think it&rsquo;s evolving into &ldquo;complacency&rdquo;. Not trusting the ML&rsquo;s output is step one here, that&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bandrami</strong>: &gt; I do not bore myself with trivialities such as retrieving a customer from the DB in a REST call Genuine question, why isn&rsquo;t your ORM doing that? I see a lot of use cases for LLMs that seem to be&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>zamalek</strong>: An ORM doesn&rsquo;t generate REST endpoints?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>sosomoxie</strong>: I&rsquo;ve gone years without coding and when I come back to it, it&rsquo;s like riding a bike! In each iteration of my coding career, I have become a better developer, even after a large gap. Now I can &ldquo;code&rdquo;&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>runarberg</strong>: Have you ever learnt a foreign language (say Mongolian, or Danish) and then never spoken it, nor even read anything in it for over 10 years? It is not like riding a bike, it doesn’t just come back&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>tayo42</strong>: Anecdotally, i burned out pretty hard and basically didn&rsquo;t open a text editor for half a year (unemployed too). Eventually i got an itch to write code again and it didn&rsquo;t really feel like I was&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>snozolli</strong>: I studied Spanish for years in school, then never really used it.  Ten years later, I started studying Japanese.  Whenever I got stuck, Spanish would come out.  Spanish that I didn&rsquo;t even consciously&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>sosomoxie</strong>: I have not and I&rsquo;m actually really bad at learning human languages, but know a dozen programming languages. You would think they would be similar, but for some reason it&rsquo;s really easy for me to&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Ronsenshi</strong>: You might still have the skillset to write code, but depending on length of the break your knowledge of tools, frameworks, patterns would be fairly outdated. I used to know a person like that - high&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>withinboredom</strong>: I’d push back on this framing a bit. There&rsquo;s a subtle ageism baked into the assumption that someone who stepped away from day-to-day coding has &ldquo;ancient skills&rdquo; worth mocking. Yes, specific&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>sosomoxie</strong>: I code in Vim, use Linux&hellip; all of those tools are pretty constant. New frameworks are easy to pick up. I&rsquo;ve been able to become productive with very little downtime after multi-year breaks several&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>polytely</strong>: I feel like I&rsquo;m still a couple steps behind in skill level as my lead and is trying to gain more experience I do wonder if I am shooting myself in the foot if I rely too much on AI at this stage. The&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>seer</strong>: Honestly, this seems very much like the jump from being an individual contributor to being an engineering manager. The time it happened for me was rather abrupt, with no training in between, and the&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Ronsenshi</strong>: The only issue is that as an engineering manager you reasonably expect that the team learns new things, improve their skills, in general grow as engineers. With AI and its context handling you&rsquo;re&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mlrtime</strong>: As a manager I would encourage them to use the LLM tools. I would also encourage unit tests, e2e testing, testing coverages, CI pipelines automating the testing, automatic pr reviewing etc&hellip; It&rsquo;s&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>dysoco</strong>: Being optimistic (or pessimistic heh), if things keep the trend then the models will evolve as well and will probably be quite better in one year than they are now.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>dkubb</strong>: You could probably combat this somewhat with a skill that references to examples of the code you don&rsquo;t want and the code you do. And then each time you tell it to correct the code you ask it to put&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>epolanski</strong>: &gt; Like if I had stated certain design goals recently it would adhere to them, but after a few iterations it would forget again and go back to its original approach, or mix the two, or whatever&hellip;.</p>
+</blockquote>
+<blockquote>
+<p><strong>ekropotin</strong>: The solution for brain atrophy I personally arrived is to use coding agents at work, where, let’s be honest, velocity is a top priority and code purity doesn’t matter that much. Since we use stack I&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>alansaber</strong>: &ldquo;I wanted the code to look a certain way, but it kept pulling back to the way it wanted to do things.&rdquo; I would argue this is ok for front-end. For back-end? very, very bad- if you can&rsquo;t get a usable&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>phrotoma</strong>: &ldquo;rip it out&rdquo; is a phrase I&rsquo;ve been saying more often to the robots.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>kitd</strong>: I think this is where tools like OpenSpec [1] may help. The deterioration in quality is because the context is degrading, often due to incomplete or amibiguous requests from the coder. With a more&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>chickensong</strong>: &gt; AI keeps pushing it in a direction I didn&rsquo;t want The AI definitely has preferences and attention issues, but there are ways to overcome them. Defining code styles in a design doc, and setting up&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>abm53</strong>: My advice: keep it on a tight leash. In the happy case where I have a good idea of the changes necessary, I will ask it to do small things, step by step, and examine what it does and commit. In the&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>mupuff1234</strong>: He didn&rsquo;t say &ldquo;brain atrophy&rdquo;, he was talking about coding abilities.</p>
+</blockquote>
+<blockquote>
+<p><strong>nathias</strong>: it&rsquo;s not about brain atrophy, it&rsquo;s skill atrophy</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>direwolf20</strong>: is that not the sam thing?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>SpaceL10n</strong>: LLMs are yet another layer between us and the end result. I remain wary of this distance and am super grateful I learned coding the hard way.</p>
+</blockquote>
+<blockquote>
+<p><strong>keeganpoppen</strong>: yeah, because the thing is: at the end of the day: laying things out the way LLMs can understand is becoming more important than doing them the “right” way— a more insidious form of the same&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>stuaxo</strong>: LLMs have some terrible patterns, don&rsquo;t know what do ?  Just chuck a class named Service in. Have to really look out for the crap.</p>
+</blockquote>
+<p><strong>atonse</strong>: &gt; LLM coding will split up engineers based on those who primarily liked coding and those who primarily liked building. I’ve always said I’m a builder even though I’ve also enjoyed programming (but&hellip;</p>
+<blockquote>
+<p><strong>ryandrake</strong>: I noticed the same thing, but wasn&rsquo;t able to put it into words before reading that. Been experimenting with LLM-based coding just so I can understand it and talk intelligently about it (instead of&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>viccis</strong>: Same. This kind of coding feels like it got rid of the building aspect of programming that always felt nice, and it replaced it entirely with business logic concerns, product requirements, code&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>taytus</strong>: Because you are not coding, you are building. I&rsquo;ve been coding since I was 7 years old, now I&rsquo;m building.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>zigman1</strong>: Maybe I don&rsquo;t entirely get it, but what is stopping you to just continue coding?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>nunez</strong>: Same same. Writing the actual code is always a huge motivator behind my side projects. Yes, producing the outcome is important, but the journey taken to get there is a lot of fun for me. I used&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>polishdude20</strong>: What I have enjoyed about programming is being able to get the computer to do exactly what I want. The possibilities are bounded by only what I can conceive in my mind. I feel like with AI that can&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>testaccount28</strong>: &gt; get the computer to do exactly what I want. &gt; with AI that can happen faster. well, not exactly that.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>chrisjj</strong>: Have you an example of getting a coding chatbot to do exactly what you want?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>smhinsey</strong>: This gets at the heart of the quality of results issues a lot of people are talking about elsewhere here. Right now, if you treat them as a system where you can tell it what you want and it will do&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>thepasch</strong>: &gt; I got into it for the thrill of defining a problem in terms of data structures and instructions a computer could understand, entering those instructions into the computer, and then watching&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>chrisjj</strong>: &gt; Claude Code works best the more granular your instructions get. So best feed it machine code?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>atonse</strong>: Funny you say that. Because I have never enjoyed management as much as being hands on and directly solving problems. So maybe our common ground is that we are direct problem solvers. :-)</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Ronsenshi</strong>: For some reason this makes me think of a jigsaw puzzle. People usually complete these puzzles because they enjoy the process where on the end you get a picture that you can frame if you want to. Some&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>addisonj</strong>: IMO, this isn&rsquo;t entirely a &ldquo;new world&rdquo; either, it is just a new domain where the conversation amplifies the opinions even more (weird how that is happening in a lot of places) What I mean by that:&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>dpflan</strong>: “”” Much of my career has been spent in teams at companies with products that are undergoing the transition from &ldquo;hip app built by scrappy team&rdquo; to &ldquo;profitable, reliable software&rdquo; and it is painful&hellip;.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>coffeeaddict1</strong>: But how can you be a responsible builder if you don&rsquo;t have trust in the LLMs doing the &ldquo;right thing&rdquo;? Suppose you&rsquo;re the head of a software team where you&rsquo;ve picked up the best candidates for a given&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>handoflixue</strong>: Trust but verify: I test all of the code I produce via LLMs, usually doing fairly tight cycles. I also review the unit test coverage manually, so that I have a decent sense that it really is testing&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>inerte</strong>: You don&rsquo;t simply put a body in a seat and get software. There are entire systems enabling this trust: college, resume, samples, referral, interviews, tests and CI, monitoring, mentoring, and&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>coffeeaddict1</strong>: &gt; And accountability can still exist? Is the engineer that created or reviewed a Pull Request using Claude Code less accountable then one that used PICO? The point is that in the human scenario, you&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>chrisjj</strong>: Of course he is - because he invested so much less.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>mkozlows</strong>: I think he&rsquo;s really getting at something there. I&rsquo;ve been thinking about this a lot (in the context of trying to understand the persistent-on-HN skepticism about LLMs), and the framing I came up&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jamauro</strong>: I like this framing. Nice typography btw, a pleasure to read.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>concats</strong>: I remember leaving university going into my first engineering job, thinking &ldquo;Where is all the engineering? All the problem solving and building complex system? All the math and science? Have I been&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>senderista</strong>: Maybe there&rsquo;s an intermediate category: people who like designing software? I personally find system design more engaging than coding (even though I enjoy coding as well). That&rsquo;s different from just&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>monkaiju</strong>: So far I haven&rsquo;t seen it actually be effective at &ldquo;building&rdquo; in a work context with any complexity, and this despite some on our team desperately trying to make that the case.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>FeepingCreature</strong>: I have! You have to be realistic about the projects. The more irreducible local context it needs, the less useful it will be. Great for greenfield code, oneshots, write once read once run for months.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>barrell</strong>: Agreed. I don’t care for engineering or coding, and would gladly give it up the moment I can. I’m also running a one man business where every hour counts (and where I’m responsible for maintaining&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Applejinx</strong>: Would you accept &lsquo;people who like to make art, and people who like to commission somebody to make art and give them lots of notes in the process&rsquo;?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>verdverm</strong>: I think the division is more likely tied to writing. You have to fundamentally change how you do your job, from one of writing a formal language for a compiler to one of writing natural language for&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>lelanthran</strong>: &gt; &gt; LLM coding will split up engineers based on those who primarily liked coding and those who primarily liked building. &gt; I’ve always said I’m a builder even though I’ve also enjoyed programming&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>theshrike79</strong>: I prefer engineering too, I tried management and I hated it. It&rsquo;s just the level of engineering we&rsquo;re split on. I like the type of engineering where I figure out the flow of data, maybe the data&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>dimas_codes</strong>: I feel like this is the core issue that will actually stall LLM coding tools short of actually replacing coding work at large. &lsquo;Coders&rsquo; make &lsquo;builders&rsquo; keep the source code good enough so that&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>theshrike79</strong>: &ldquo;Coders&rdquo; can code tools that programmatically define quality. We have like 80% of those already. Then force the builders to use those tools to constrain their output.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>chrisjj</strong>: &gt; &gt; LLM coding will split up engineers based on those who primarily liked coding and those who primarily liked building. This is much less significant than the fact LLMs split engineers on those who&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>chickensong</strong>: That split has always existed. LLMs can be used on either side of the divide.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>chrisjj</strong>: We see a ton of &ldquo;AI let me code a program X faster than ever before.&rdquo; We see almost no &ldquo;AI let me code a program X better than ever before.&rdquo;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>giancarlostoro</strong>: Yeah, I think this is a bit of insight I had not realized / been able to word correctly yet. There&rsquo;s developers who can let Claud go at it, and be fearless about it like me (though I mostly do it for&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>codyb</strong>: I think there&rsquo;s a place for both. We have services deployed globally serving millions of customers where rigor is really important. And we have internal users who&rsquo;re building browser extensions with&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>globular-toast</strong>: I like building, but I don&rsquo;t fool myself into thinking it can be done by taking shortcuts. You could build something that looks like a house for half the cost but it won&rsquo;t be structurally sound&hellip;.</p>
+</blockquote>
+<blockquote>
+<p><strong>jimbokun</strong>: The new LLM centered workflow is really just a management job now. Managers and project managers are valuable roles and have important skill sets.  But there&rsquo;s really very little connection with the&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>simianwords</strong>: i don&rsquo;t disagree. at some point LLM&rsquo;s might become good enough that we wouldn&rsquo;t need exact technical expertise.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>slaymaker1907</strong>: I enjoy both and have ended up  using AI a lot differently than vibe coders. I rarely use it for generating implementations, but I use it extensively for helping me understand docs/apis and more&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>bjackman</strong>: There&rsquo;s more to it than just coding Vs building though. For a long time in my career now I&rsquo;ve been in a situation where I&rsquo;d be able to build more if I was willing to abstract myself and become a&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>nfgrep</strong>: I’ve heard something similar: “there are people who enjoy the process, and people who enjoy the outcome”. I think this saying comes moreso from artistic circles. I’ve always considered myself a&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>asimovDev</strong>: To me this is similar to car enthusiasms. Some people absolutely love to build their project car, it&rsquo;s a major part of the hobby for them. Others just love the experience of driving, so they buy&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>stevenhuang</strong>: Alternatively, others just want to get to their destination.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>netcraft</strong>: agree completely. I used to be (and still would love to be) a process person, enjoying hand writing bulletproof artisanal code. Switching to startups many years ago gave me a whole new perspective,&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>greenie_beans</strong>: makes sense if you are a data scientist where people need to be boxed into tidy little categories. but some people probably fall into both categories.</p>
+</blockquote>
+<blockquote>
+<p><strong>Imustaskforhelp</strong>: &gt; I enjoy both and have ended up using AI a lot differently than vibe coders. I rarely use it for generating implementations, but I use it extensively for helping me understand docs/apis and more&hellip;</p>
+</blockquote>
+<p><strong>markb139</strong>: I retired from paid sw dev work in 2020 when COVID arrived.  I’ve worked on my small projects since with all development by hand. I’d followed the rise of AI, but not used it.  Late last year I&hellip;</p>
+<blockquote>
+<p><strong>gyomu</strong>: &gt; Vendors of small utilities could be in trouble This is a mix of the “in the future, everyone will have a 3D printer at home and just 3D print random parts they need” and “anyone can trivially build&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>CamperBob2</strong>: I don&rsquo;t know.  It&rsquo;s one thing to tell Joe or Jane User to &ldquo;Get an FTP account, mount it locally with curlftpfs, and then use SVN or CVS on the mounted filesystem.&rdquo;  But if Joe or Jane can just&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>whiplash451</strong>: Except when that new Dropbox fails Joe or Jane on that Saturday evening, their only recourse is to ask the AI for help, and the AI starts spinning “oh yeah, mmm, I think I found where the problem is&hellip;.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>markb139</strong>: Im definitely going to build some small tools when I need them. One tool I use occasionally, but not so often I want to subscribe is Insomnia.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>TeMPOraL</strong>: &gt; Vendors of small utilities could be in trouble. For example I needed to cut out some pages from a pdf. I could have found a tool online(I’m sure there are several), write one myself. However,&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Antibabelic</strong>: Whatever happened to just typing &ldquo;apt install qrencode&rdquo;? It&rsquo;s definitely &ldquo;fast, reliable, free of surveillance economy bullshit, and doesn&rsquo;t employ URL shorteners&rdquo;.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>senko</strong>: You need to know &ldquo;qrencode&rdquo; exists under that exact name. Claude already knows about it and how to use it.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>direwolf20</strong>: Users can&rsquo;t use command–line tools. They just can&rsquo;t. It has to be user–friendly or it doesn&rsquo;t exist.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>TeMPOraL</strong>: 1) This was for my wife. She is not proficient in Linux or CLI in general, and (like ~all white collar workers these days) works almost exclusively in browser tools (exception being pre-O365 versions&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>simonw</strong>: A &ldquo;static, single-page client-side tool&rdquo; is so much better than &ldquo;Step 1: install Linux&hellip;&rdquo;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>jedberg</strong>: &gt; You realize that stamina is a core bottleneck to work There has been a lot of research that shows that grit is far more correlated to success than intelligence.  This is an interesting way to show&hellip;</p>
+<blockquote>
+<p><strong>djeastm</strong>: &gt;They never get tired, they never get demoralized, they just keep going and trying things where a person would have given up long ago to fight another day. &ldquo;Listen, and understand! That Terminator is&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>Loeffelmann</strong>: If you ever work with LLMs you know that they quite frequently give up. Sometimes it&rsquo;s a     // TODO: implement logic or a &ldquo;this feature would require extensive logic and changes to the existing&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>wongarsu</strong>: If I tell it to implement something it will sometimes declare their work done before it&rsquo;s done. But if I give Claude Code a verifiable goal like making the unit tests pass it will work tirelessly&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>koiueo</strong>: &gt; but the tenacity everyone is talking about is there I always double-check if it doesn&rsquo;t simply exclude the failing test. The last time I had this, I discovered it later in the process. When I&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>theshrike79</strong>: Tools in a loop people, tools in a loop. If you don&rsquo;t give the agent the tools to deterministically test what it did, you&rsquo;re just vibe coding in its worst form.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jpnc</strong>: tenacity == while loop</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jedberg</strong>: &gt; If you ever work with LLMs you know that they quite frequently give up. If you try to single shot something perhaps.  But with multiple shots, or an agent swarm where one agent tells another to try&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>alansaber</strong>: Yeah exactly this is a scope problem, actual input/output size is always limited&gt; I am 100% sure CC etc are using multiple LLM calls for each response, even though from the response streaming it&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mlrtime</strong>: Nope, not for me, unless I tell it to. Context matters, for an LLM just like a person. When I wrote code I&rsquo;d add TODOs because we cannot context switch to another problem we see every time. But you&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>energy123</strong>: Using LLMs to clean those up is part of the workflow that you&rsquo;re responsible for (&hellip; for now). If you&rsquo;re hoping to get ideal results in a single inference, forget it.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>ryanjshaw</strong>: I realized a long time ago that I’m better at computer stuff not because I’m smarter but because I will sit there all day and night to figure something out while others will give up. I always thought&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mlrtime</strong>: Same, I barely made it through Engineering school, but would stay up all night figuring out everything a computer could do (before the internet). I did it because I enjoyed it, and still do. I just&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Schlagbohrer</strong>: Me three. I was not as smart as many of my peers in uni but I freakin LOVE the subject matter and I also love studying and feeling that progress of learning, which led me to put in the huge number of&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>michalsustr</strong>: The tenacity aspect makes me worried about the paper clip AI misalignment scenario more than before.</p>
+</blockquote>
+<blockquote>
+<p><strong>AnimalMuppet</strong>: But even tenacity is not enough.  You also need an internal timer.  &ldquo;Wait a minute, this is taking too long, it shouldn&rsquo;t be this hard.  Is my overall approach completely wrong?&rdquo; I&rsquo;m not sure AIs&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>dust42</strong>: &gt; AIs have endless grit (or at least as endless as your budget). That is the only thing he doesn&rsquo;t address: the money it costs to run the AI. If you let the agents loose, they easily burn north of&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>gregjor</strong>: LLMs do not have grit or tenacity. Tenacity doesn&rsquo;t desribe a machine that doesn&rsquo;t need sleep or experience tiredness, or stress. Grit doesn&rsquo;t describe a chatbot that will tirelessly spew out answers&hellip;</p>
+</blockquote>
+<p><strong>0xbadcafebee</strong>: &gt; What happens to the &ldquo;10X engineer&rdquo; - the ratio of productivity between the mean and the max engineer? It&rsquo;s quite possible that this grows a lot. I was thinking about this the other day as relates&hellip;</p>
+<blockquote>
+<p><strong>virgilp</strong>: This is an interesting thing that I&rsquo;m contemplating. I also do believe that (perhaps with very few exceptions) there are no &ldquo;10x engineers&rdquo; by themselves, but engineers that thrive 10x more in a&hellip;</p>
+</blockquote>
+<p><strong>jimbokun</strong>: I&rsquo;m pretty happy with Copilot in VS Code.  Type what change I want Claude to make in the Copilot panel, and then use the VS Code in context diffs to accept or reject the proposed changes.  While&hellip;</p>
+<blockquote>
+<p><strong>everfrustrated</strong>: I&rsquo;ve found copilot chat is able to do everything I need. I tried the Claude plugin for vscode and it was a noticeably worse experience for me. Mind you copilot has only supported agent mode&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>thunfischtoast</strong>: I find Claude Code in VS Code is sometimes horribly inefficient. I tell it to replace some print-statements with proper logging in the one file I have open and it first starts burning tokens to&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>vmbm</strong>: I have been assigning issues to copilot in Github. It will then create a pull request and work on and report back on the issue in the PR. I will pull the code and make small changes locally using&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>simonw</strong>: Are you letting it run your tests and run little snippets of code to try them out (like &ldquo;python -c &lsquo;import module; print(module.something())&rsquo;&rdquo;) or are you just using it to propose diffs for you to&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>maxdo</strong>: Coplilot is not on par with cc or cursor even</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jimbokun</strong>: I use it to access Claude.  So what&rsquo;s the difference?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>nsingh2</strong>: This stuff is a little messy and opaque, but the performance of the same model in different harnesses depends a lot on how context is managed. The last time I tried Copilot, it performed markedly&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>walthamstow</strong>: Different harnesses and agentic environments produce different results from the same model. Claude Code and Cursor are the best IME and Copilot is by far the worst.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>WA</strong>: Why not? You can select Opus 4.5, Gemini 3 Pro, and others.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>spaceman_2020</strong>: Claude Code is a CLI tool which means it can do complete projects in a single command. Also has fantastic tools for scaffolding and harnessing the code. You can define everything from your coding&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>theshrike79</strong>: The model is the engine, the framework is the rest of the car. With Copilot Microsoft has basically put the meanest leanest triple-turbo&rsquo;d V8 engine in a rickety 80&rsquo;s soviet car. You can kinda drive&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>maxdo</strong>: it&rsquo;s not a model limit anymore, it&rsquo;s tools , skills, background agents, etc.  It&rsquo;s an entire agentic environment.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>netcraft</strong>: &gt; Tenacity. It&rsquo;s so interesting to watch an agent relentlessly work at something. They never get tired, they never get demoralized, they just keep going and trying things where a person would have&hellip;</p>
+<blockquote>
+<p><strong>lucianbr</strong>: The glorified autocomplete. Why would the LLM &ldquo;work on something else then get back on this&rdquo;, is it&rsquo;s subconscious going to solve the problem during that time? But because people say it, it says it&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>havefunbesafe</strong>: Ive found that clearing the context and getting back to it later actually DOES work. When you restart, your personal context is cleared and you might be better at describing the problem you are&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Davidzheng</strong>: not impossible right? the new context can provide some needed hints, etc&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>Schlagbohrer</strong>: Reminiscent of a time just a year or two ago where the LLMs would get downright frustrated and sassy</p>
+</blockquote>
+<blockquote>
+<p><strong>manbash</strong>: Oh, definitely. Also, they end up getting stuck in a loop, adding and removing the same code endlessly. And then someone comes and &ldquo;improves&rdquo; their agent with additional &ldquo;do not repeat yourself&rdquo;&hellip;</p>
+</blockquote>
+<p><strong>strogonoff</strong>: LLM coding splits up engineers based on those who primarily like building and those who primarily like code reviews and quality assessment. I definitely don’t love the latter (especially when&hellip;</p>
+<blockquote>
+<p><strong>cmrdporcupine</strong>: &ldquo;those who primarily like code reviews and quality assessment&rdquo; &ndash; I don&rsquo;t love those. In fact I find it tedious and love it when I can work on my own without them. Except after 25 years of working I&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>OkayPhysicist</strong>: See, I don&rsquo;t take it that extreme: LLMs make fantastic, never-before seen quality autocompletes. I hacked together a Neovim plugin that prompts an LLM to &ldquo;finish this function&rdquo; on command, and it&rsquo;s a&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>gverrilla</strong>: Depends on the scope of the project. If it&rsquo;s small, and you direct it correctly, it can one-shot yes. Or 2-3-shot.</p>
+</blockquote>
+</blockquote>
+<p><strong>forrestthewoods</strong>: HN should ban any discussion on “things I learned playing with AI” that don’t include direct artifacts of the thing built. We’re about a year deep into “AI is changing everything” and I don’t see 10x&hellip;</p>
+<p><strong>jwilliams</strong>: &gt; It&rsquo;s so interesting to watch an agent relentlessly work at something. They never get tired, they never get demoralized, they just keep going and trying things where a person would have given up&hellip;</p>
+<blockquote>
+<p><strong>gregjor</strong>: I don&rsquo;t understand why anyone finds it interesting that a machine, or chatbot, never tires or gets demoralized. You have to anthromorphize the LLM before you can even think of those possibilities. A&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>akoboldfrying</strong>: You&rsquo;re a machine. You&rsquo;re literally a wet, analog device converting some forms of energy into other forms just like any other machine as you work, rest, type out HN comments, etc. There is nothing&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>suddenlybananas</strong>: If humans are machines, they are still a subset of machines and they (among other animals) are the only ones who can be demotivated and so it is still a mistake to assume an entirely different kind&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>spopejoy</strong>: Humans and all other organisms are &ldquo;literally&rdquo; not machines or devices by the simple fact that those terms refer to works made for a purpose. Even as an analogy &ldquo;wet machine&rdquo; fails again and again to&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>gregjor</strong>: Wrong level of abstraction. And not the definition of machine. I might feel awe or amazement at what human-made machines can do &ndash; the reason I got into programming. But I don&rsquo;t attribute human&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>kshri24</strong>: Agree with Karpathy&rsquo;s take. Finally a down to Earth analysis from a respected source in the AI space. I guess I&rsquo;ll be using slopocalypse a lot more now :) &gt; I am bracing for 2026 as the year of the&hellip;</p>
+<blockquote>
+<p><strong>ActorNightly</strong>: The respect is unwarranted. He ran Teslas ML division, but still doesnt know what a simple kalman filter is (in the sense where he claimed that lidar would be hard to integrate with cameras).</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>akoboldfrying</strong>: The Kalman filter examples I&rsquo;ve seen always involve estimating a very simple quantity, like the location of a single 3D point, from noisy sensors. It&rsquo;s clear how multiple estimates can be combined&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ActorNightly</strong>: <a href="https://www.bzarg.com/p/how-a-kalman-filter-works-in-picture">https://www.bzarg.com/p/how-a-kalman-filter-works-in-picture</a>&hellip; Kalman filters basic concept is essentially this. 1. make prediction on the next state change of some measurable n dimentional&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>einrealist</strong>: &gt; It&rsquo;s so interesting to watch an agent relentlessly work at something. They never get tired, they never get demoralized, they just keep going and trying things where a person would have given up&hellip;</p>
+<blockquote>
+<p><strong>cyode</strong>: This quote stuck out to me as well, for a slightly different reason. The “tenacity” referenced here has been, in my opinion, the key ingredient in the secret sauce of a successful career in tech, at&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>noosphr</strong>: There is an old saying back home: an idiot never tires, only sweats. Claude isn&rsquo;t tenacious. It is an idiot that never stops digging because it lacks the meta cognition to ask &lsquo;hey, is there a better&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Havoc</strong>: &gt; it lacks the meta cognition to ask &lsquo;hey, is there a better way to do this?&rsquo;. Recently had an AI tell me this code (that it wrote) is a mess and suggested wiping it and starting from scratch with a&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>samusiam</strong>: I mean, not always. I&rsquo;ve seen Claude step back and reconsider things after hitting a dead end, and go down a different path. There are also workflows, loops that can increase the likelihood of this&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>BeetleB</strong>: This is a major concern for junior programmers. For many senior ones, after 20 (or even 10) years of tenacious work, they realize that such work will always be there, and they long ago stopped&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>codyb</strong>: I feel like if you&rsquo;re really spending a ton of time on off by one errors after twenty years in the field you haven&rsquo;t actually grown much and have probably just spent a ton of time in a single space&hellip;.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>rishabhaiover</strong>: That&rsquo;s just sad. Right when I found love in what I do, my work has no value anymore.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>test6554</strong>: Imagine a senior dev who just approves PRs, approves production releases, and prioritizes bug reports and feature requests. LLM watches for errors ceaslessly, reports an issue. Senior dev reviews the&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>techgnosis</strong>: Why are we pretending like the need for tenacity will go away? Certain problems are easier now. We can tackle larger problems now that also require tenacity.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>samusiam</strong>: Even right at this very moment where we have a high-tenacity AI, I&rsquo;d argue that working with the AI &ndash; that is to say, doing AI coding itself and dealing with the novel challenges that brings&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mykowebhn</strong>: Fittingly, George Hinton toiled away for years in relative obscurity before finally being recognized for his work. I was always quite impressed by his &ldquo;tenacity&rdquo;. So although I don&rsquo;t think he should&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>direwolf20</strong>: &hellip; The person who embezzled from the SDC in 2018? <a href="https://eu.jsonline.com/story/news/investigations/2024/04/19">https://eu.jsonline.com/story/news/investigations/2024/04/19</a>&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>daxfohl</strong>: I still find in these instances there&rsquo;s at least a 50% chance it has taken a shortcut somewhere: created a new, bigger bug in something that just happened not to have a unit test covering it, or&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>gtowey</strong>: The value extortion plan writes itself. How long before someone pitches the idea that the models explicitly almost keep solving your problem to get you to keep spending? Would you even know?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>password4321</strong>: First time I&rsquo;ve seen this idea, I have a tingling feeling it might become reality sooner rather than later.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>sailfast</strong>: That’s far-fetched. It’s in the interest of the model builders to solve your problem as efficiently as possible token-wise. High value to user + lower compute costs = better pricing power and better&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>fragmede</strong>: The free market proposition is that competition (especially with Chinese labs and grok) means that Anthropic is welcome to do that. They&rsquo;re even welcome to illegally collude with OpenAi such that&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Fnoord</strong>: I was thinking more of deliberate backdoor in code. RCE is an obvious example, but another one could be bias. &ldquo;I&rsquo;m sorry ma&rsquo;am, computer says you are ineligable for a bank account.&rdquo; These ideas&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>chanux</strong>: Is this from a page of dating apps playbook?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>wvenable</strong>: &gt; These can be subtle because you&rsquo;re not looking for them After any agent run, I&rsquo;m always looking the git comparison between the new version and the previous one.  This helps catch things that you&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>teaearlgraycold</strong>: And after manually coding I often have an LLM review the diff. 90% of the problems it finds can be discounted, but it’s still a net positive.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>einrealist</strong>: And there is this paradox where it becomes harder to detect the problems as the models &lsquo;improve&rsquo;.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>charcircuit</strong>: You are using it wrong, or are using a weak model if your failure rate is over 50%. My experience is nothing like this. It very consistently works for me. Maybe there is a &lt;5% chance it takes the&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>testaccount28</strong>: you are using it on easy questions. some of us are not.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>fooker</strong>: &gt; It might become cheaper or it might not If it does not, this is going to be first technology in the history of mankind that has not become cheaper. (But anyway, it already costs half compared to&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ctoth</strong>: &gt; But anyway, it already costs half compared to last year You could not have bought Claude Opus 4.5 at any price one year ago I&rsquo;m quite certain. The things that were available cost half of what they&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>teaearlgraycold</strong>: As a user of LLMs since GPT-3 there was noticeable stagnation in LLM utility after the release of GPT-4. But it seems the RLHF, tool calling, and UI have all come together in the last 12 months. I&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bsder</strong>: &gt; The &ldquo;hitting a wall&rdquo; / &ldquo;plateau&rdquo; people will continue to be loud and wrong. Just as they have been since 2018[0]. Everybody who bet against Moore&rsquo;s Law was wrong &hellip; until they weren&rsquo;t. And AI is&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>simianwords</strong>: interesting post. i wonder if these people go back and introspect on how incorrect they have been? do they feel the need to address it?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>peaseagee</strong>: That&rsquo;s not true. Many technologies get more expensive over time, as labor gets more expensive or as certain skills fall by the wayside, not everything is mass market. Have you tried getting a&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>willio58</strong>: Repairing grandfather clocks isn&rsquo;t more expensive now because it&rsquo;s gotten any harder; it&rsquo;s because the popularity of grandfather clocks is basically nonexistent compared to anything else to tell time.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>simianwords</strong>: &ldquo;repairing a unique clock&rdquo; getting costlier doesn&rsquo;t mean technology hasn&rsquo;t gotten cheaper. check out whether clocks have gotten cheaper in general. the answer is that it has. there is no economy of&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>esafak</strong>: Instead of advancing tenuous examples you could suggest a realistic mechanism by which costs could rise, such as a Chinese advance on Taiwan, effecting TSMC, etc.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>groby_b</strong>: No. You don&rsquo;t get to make &ldquo;technology gets more expensive over time&rdquo; statements for deprecated technologies. Getting a bespoke flintstone axe is also pretty expensive, and has also absolutely no&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>emtel</strong>: Time-keeping is vastly cheaper. People don&rsquo;t want grandfather clocks. They want to tell time. And they can, more accurately, more easily, and much cheaper than their ancestors.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>epidemiology</strong>: Or riding in an uber?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>InsideOutSanta</strong>: Sure, running an LLM is cheaper, but the way we use LLMs now requires way more tokens than last year.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>fooker</strong>: 10x more tokens today cost less than than half of X tokens from ~mid 2024.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>simianwords</strong>: ok but the capabilities are also rising. what point are you trying to make?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>root_axis</strong>: Not true. Bitcoin has continued to rise in cost since its introduction (as in the aggregate cost incurred to run the network). LLMs will face their own challenges with respect to reducing costs,&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>twoodfin</strong>: For Bitcoin that’s by design!</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>namcheapisdumb</strong>: &gt; bitcoin so close! that is a commodity</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>fulafel</strong>: I don&rsquo;t think computation is going to become more expensive, but there are techs that have become so: Nuclear power plants. Mobile phones. Oil extraction. (Oil rampdown is a survival imperative due&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>krupan</strong>: There are plenty of technologies that have not become cheaper, or at least not cheap enough, to go big and change the world.  You probably haven&rsquo;t heard of them because obviously they didn&rsquo;t succeed.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>asadotzler</strong>: cheaper doesnt mean cheap enough to be viable after the bills come due</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>runarberg</strong>: Supersonic jet engines, rockets to the moon, nuclear power plants, etc. etc. all have become more expensive. Superconductors were discovered in 1911, and we have been making them for as long as we&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ak_111</strong>: Concorde?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>YetAnotherNick</strong>: With optimizations and new hardware, power is almost a negligible cost. You can get 5.5M tokens/s/MW[1] for kimi k2(=20M/KWH=181M tokens/$) which is 400x cheaper than current pricing. It&rsquo;s just&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>storystarling</strong>: Electricity is negligible but the dominant cost is the hardware depreciation itself. Also inference is typically memory bandwidth bound so you are limited by how fast you can move weights rather than&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>YetAnotherNick</strong>: Yes, because the margin is like 80% for Nvidia, and 80% again for the manufacturers like Samsung and TSMC. Once the fixed cost like R and D is amortized the same node technology and hardware capacity&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>redox99</strong>: &gt; And you most likely do not pay the actual costs. This is one of the weakest anti AI postures. &ldquo;It&rsquo;s a bubble and when free VC money stops you&rsquo;ll be left with nothing&rdquo;. Like it&rsquo;s some kind of&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>bob1029</strong>: Humans run hot too. Once you factor in the supply chain that keeps us alive, things become surprisingly equivalent. Eating burgers and driving cars around costs a lot more than whatever # of watts&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bbor</strong>: I mean, “equivalent” is an understatement! There’s a reason Claude Code costs less than hiring a full time software engineer…</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>direwolf20</strong>: (it&rsquo;s VC money burn)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>crazygringo</strong>: &gt; Somewhere, there are GPUs/NPUs running hot. Running at their designed temperature. &gt; You send all the necessary data, including information that you would never otherwise share. I&rsquo;ve never sent the&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>hahahahhaah</strong>: It is also amazing seeing Linux kernel work, scheduling threads, proving interrupts and API calls all without breaking a sweat or injuring its ACL.</p>
+</blockquote>
+<blockquote>
+<p><strong>mikeocool</strong>: To me this tenacity is often like watching someone trying to get a screw into board using a hammer. There’s often a better faster way to do it, and while it might get to the short term goal&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>chasebank</strong>: I don’t understand this pov. Unfortunately, id pay 10k mo for my cc sub. I wish I could invest in anthropic, they’re going to be the most profitable company on earth</p>
+</blockquote>
+<blockquote>
+<p><strong>moooo99</strong>: My agent struggled for 45 minutes because it tried to do <code>go run</code> on a _test.go file, which the compiler repeatedly exited after posting an error message that files named like this cannot be executed&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>squidbeak</strong>: &gt; you most likely do not pay the actual costs. It might become cheaper or it might not Why would this be the first technology that doesn&rsquo;t become cheaper at scale over time?</p>
+</blockquote>
+<blockquote>
+<p><strong>karlgkk</strong>: &gt; And you most likely do not pay the actual costs Oh my lord you absolutely do not. The costs to oai per token inference ALONE are at least 7x. AT LEAST and from what I’ve heard, much higher.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>tgrowazay</strong>: We can observe how much generic inference providers like deepinfra or together-ai charge for large SOTA models. Since they are not subsidized and they don’t charge 7x of OpenAI, that means OAI also&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>karlgkk</strong>: Actually, that doesn’t mean anything. OAI is running boundary pushing large models. I don’t think those “second tier” applications can even get the GPUs with the HBM required at any reasonable scale&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>utopiah</strong>: AI genius discover brute forcing&hellip; what a time to be alive. /s Like&hellip; bro that&rsquo;s THE foundation of CS. That&rsquo;s the principle of The bomb in Turing&rsquo;s time. One can still marvel at it but it&rsquo;s been&hellip;</p>
+</blockquote>
+<p><strong>bob1029</strong>: I would agree that OAIs GPT-5 family of models is a phase change over GPT-4. In the ChatGPT product this is not immediately obvious and many people would strongly argue their preference for 4&hellip;.</p>
+<blockquote>
+<p><strong>alansaber</strong>: Pretty sure there wasn&rsquo;t extensive training on tooling beforehand. I mean, god, during GPT-3 even getting a reliable json output was a battle and there were dedicated packages for json inference.</p>
+</blockquote>
+<blockquote>
+<p><strong>theshrike79</strong>: Now imagine local models with 95%+ reliable tool calling, you can do insane things when that&rsquo;s the reality.</p>
+</blockquote>
+<p><strong>oxag3n</strong>: &gt; Atrophy. I&rsquo;ve already noticed that I am slowly starting to atrophy my ability to write code manually&hellip; &gt; Largely due to all the little mostly syntactic details involved in programming, you can&hellip;</p>
+<blockquote>
+<p><strong>sleazebreeze</strong>: People would struggle to review code in a completely unfamiliar domain or part of the stack even before LLMs.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>piskov</strong>: That’s why you need to write code to learn it. No-one has ever learned skill just by reading/observing</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>sponaugle</strong>: &ldquo;No-one has ever learned skill just by reading/observing&rdquo; - Except of course all of those people in Cosmology who, you know, observe.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>AstroBen</strong>: How would you find yourself in that situation before AI?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>chrisjj</strong>: No, because they wouldn&rsquo;t be so foolish as to try it.</p>
+</blockquote>
+</blockquote>
+<p><strong>philipwhiuk</strong>: &gt; It&rsquo;s so interesting to watch an agent relentlessly work at something. They never get tired, they never get demoralized, they just keep going and trying things where a person would have given up&hellip;</p>
+<p><strong>vinhnx</strong>: Boris Cherny (Claude Code creator) replies to Andrej Karpathy <a href="https://xcancel.com/bcherny/status/2015979257038831967">https://xcancel.com/bcherny/status/2015979257038831967</a></p>
+<p><strong>porise</strong>: I wish the people who wrote this let us know what king of codebases they are working on. They seem mostly useless in a sufficiently large codebase especially when they are messy and interactions&hellip;</p>
+<blockquote>
+<p><strong>CameronBanga</strong>: This is an antidotal example, but I released this last week after 3 months of work on it as a &ldquo;nights and weekdends&rdquo; project: <a href="https://apps.apple.com/us/app/skyscraper-for-bluesky/id67541">https://apps.apple.com/us/app/skyscraper-for-bluesky/id67541</a>&hellip; I&rsquo;ve been&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bee_rider</strong>: I don’t know if “antidotal example” is a pun or a typo but I quite like it.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>CameronBanga</strong>: Lol typing on my phone during lunch and meant anecdotal. But let&rsquo;s leave it anyways. :)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>oasisbob</strong>: That is fun. Not sure if it&rsquo;s an American pronunciation thing, but I had to stare at that long and hard to see the problem and even after seeing it couldn&rsquo;t think of how you could possibly  spell the&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>TaupeRanger</strong>: Claude and Codex are CLI tools you use to give the LLM context about the project on your local machine or dev environment. The fact that you&rsquo;re using the name &ldquo;ChatGPT&rdquo; instead of Codex leads me to&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>danielvaughn</strong>: It&rsquo;s important to understand that he&rsquo;s talking about a specific set of models that were release around november/december, and that we&rsquo;ve hit a kind of inflection point in model capabilities&hellip;.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>suddenlybananas</strong>: People have said this about every single model release.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>danielvaughn</strong>: I had the same reaction. So when people were talking about this model back in December, I brushed it off. It wasn&rsquo;t until a couple weeks ago that I decided to try it out, and I immediately saw the&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>CSMastermind</strong>: Are you using Codex? I&rsquo;m not sure how big your repos are but I&rsquo;ve been effective working with repos that have thousands of files and tens of thousands of lines of code. If you&rsquo;re just prototyping it&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>madhadron</strong>: &gt; tens of thousands of lines of code Perhaps this is part of it? Tens of thousands of lines of code seems like a very small repo to me.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>keerthiko</strong>: Almost always, notes like these are going to be about greenfield projects. Trying to incorporate it in existing codebases (esp when the end user is a support interaction or more away) is still folly,&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>reubenmorais</strong>: I&rsquo;m using it on a large set of existing codebases full of extremely ugly legacy code, weird build systems, tons of business logic and shipping directly to prod at neckbreaking growth over the last&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jjfoooo4</strong>: That was true for me, but is no longer. It&rsquo;s been especially helpful in explaining and understanding arcane bits of legacy code behavior my users ask about. I trigger Claude to examine the code and&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>chrisjj</strong>: &gt; I trigger Claude to examine the code and figure out how the feature works, then tell it to update the documentation accordingly. And how do you verify its output isn&rsquo;t total fabrication?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>1123581321</strong>: These models do well changing brownfield applications that have tests because the constraints on a successful implementation are tight. Their solutions can be automatically augmented by research and&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mh2266</strong>: I don&rsquo;t exactly disagree with this but I have seen models simply deleting the tests, or updating the tests to pass and declaring the failures were &ldquo;unrelated to my changes&rdquo;, so it helpfully fixed them</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>gwd</strong>: For me, in just the golang server instance and the core functional package, <code>cloc</code> reports over 40k lines of code, not counting other supporting packages.  I spent the last week having Claude rip out&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>ph4te</strong>: I don&rsquo;t know how big sufficiently large codebase is, but we have a 1mil loc Java application, that is ~10years old, and runs POS systems, and Claude Code has no issues with it. We have done full&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>fy20</strong>: At my dayjob my team uses it on our main dashboard, which is a pretty large CRUD application. The frontend (Vue) is a horrible mess, as it was originally built by people who know just enough to be&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>yasoob</strong>: Another personal example. I spent around a month last year in January on this application: <a href="https://apps.apple.com/us/app/salam-prayer-qibla-quran/id674">https://apps.apple.com/us/app/salam-prayer-qibla-quran/id674</a>&hellip; I had never used Swift before that and was&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>BeetleB</strong>: &gt; They seem mostly useless in a sufficiently large codebase especially when they are messy and interactions aren&rsquo;t always obvious. What type of documents do you have explaining the codebase and its&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>smusamashah</strong>: The code base I work on at $dayjob$ is legacy, has few files with 20k lines each and a few more with around 10k lines each. It&rsquo;s hard to find things and connect dots in the code base. Dont think LLMs&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jumploops</strong>: I’ve found that LLMs seem to work better on LLM-generated codebases. Commercial codebases, especially private internal ones, are often messy. It seems this is mostly due to the iterative nature of&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mh2266</strong>: are LLM codebases not messy? Claude by default, unless I tell it not to, will write stuff like:     // we need something to be true     somethingPasses = something()     if (!somethingPasses) {&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>olig15</strong>: Surely because LLM generated code is part of the training data for the model, so code/patterns it can work with is closer to its training data.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>tunesmith</strong>: If you have a ChatGPT account, there&rsquo;s nothing stopping you from installing codex cli and using your chatgpt account with it. I haven&rsquo;t coded with ChatGPT for weeks. Maybe a month ago I got utility&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>Okkef</strong>: Try Claude code. It’s different. After you tried it, come back.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Imustaskforhelp</strong>: I think its not Claude code per se itself but rather the (Opus 4.5 model?) or something in an agentic workflow. I tried a website which offered the Opus model in their agentic workflow &amp; I felt&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>epolanski</strong>: 1. Write good documentation, architecture, how things work, code styling, etc. 2. Put your important dependencies source code in the same directory. E.g. put a <code>_vendor</code> directory in the project, in&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>datsci_est_2015</strong>: Also I never see anyone talking about code reviews, which is one of the primary ways that software engineering departments manage liability. We fired someone recently because they couldn’t explain&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>bluGill</strong>: I&rsquo;ve been trying Claude on my large code base today. When I give it the requirements I&rsquo;d give an engineer and so &ldquo;do it&rdquo; it just writes garbage that doesn&rsquo;t make sense and doesn&rsquo;t seem to even meet&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>simonw</strong>: Have you tried showing it a copy of your coding standards? I also find pointing it to an existing folder full of code that conforms to certain standards can work really well.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bflesch</strong>: Yeah let&rsquo;s share all your IP for the vague promise that it will somehow work ;)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bluGill</strong>: At least some of them that it violated it has seen.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>rob</strong>: I&rsquo;ve been playing around with the &ldquo;Superpowers&rdquo; [0] plugin in Claude Code on a new small project and really like it. Simple enough to understand quickly by reading the GitHub repo and seems to&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>gverrilla</strong>: it&rsquo;s all about the context. observe what files it opened, etc. good luck</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>jwr</strong>: I successfully use Claude Code in a large complex codebase. It&rsquo;s Clojure, perhaps that helps (Clojure is very concise, expressive and hence token-dense).</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>culi</strong>: Perhaps it&rsquo;s harder to &ldquo;do Closure wrong&rdquo; than it is to do JavaScript or Python or whatever other extremely flexible multi-paradigm high-level language</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>wcedmisten</strong>: Having spent 3 years of my career working with Clojure, I think it actually gives you even more rope to shoot yourself with than Python/JS. E.g. macros exist in Clojure but not Python/JS, and I&rsquo;ve&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>languid-photic</strong>: They build Claude Code fully with Claude Code.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Macha</strong>: Which is equal parts praise and damnation. Claude Code does do a lot of nice things that people just kind of don&rsquo;t bother for time cost / reward when writing TUIs that they&rsquo;ve probably only done&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>simianwords</strong>: i haven&rsquo;t used Claude Code but come on.. it is a production level quality application used seriously by millions.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>vindex10</strong>: Ah, now I understand why @autocomplete suddenly got broken between versions and still not fixed )</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>redox99</strong>: What do you even mean by &ldquo;ChatGPT&rdquo;? Copy pasting code into chatgpt.com? AI assisted coding has never been like that, which would be atrocious. The typical workflow was using Cursor with some model of&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>maxdo</strong>: chatGPT is not made to write code. Get out of stone age :)</p>
+</blockquote>
+<blockquote>
+<p><strong>spaceman_2020</strong>: I&rsquo;m afraid that we&rsquo;re entering a time when the performance difference between the really cutting edge and even the three-month-old tools is vast If you&rsquo;re using plain vanilla chatgpt, you&rsquo;re&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>shj2105</strong>: Why is plain Claude code outdated? I thought that’s what most people are using right now that are AI forward. Is it Ralph loops now that’s the new thing?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>spaceman_2020</strong>: Plain Claude Code doesn’t have enough scaffolding to handle large projects At a base level, people are “upgrading” their Claude Code with custom skills and subagents - all text files saved in&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>gloosx</strong>: So what is he even coding there all the time? Does anybody have any info on what he is actually working on besides all the vibe-coding tweets? There seems to be zero output from they guy for the past&hellip;</p>
+<blockquote>
+<p><strong>ayewo</strong>: &gt; There seems to be zero output from they guy for the past 2 years (except tweets) Well, he made Nanochat public recently and has been improving it regularly [1]. This doesn&rsquo;t preclude that he might&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>gloosx</strong>: So, it&rsquo;s generative pre-trained transformers again?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>beng-nl</strong>: He&rsquo;s building Eureka Labs[1], an AI-first education company (can&rsquo;t wait to use it). He&rsquo;s both a strong researcher[2] and an unusually gifted technical communicator. His recent videos[3] are excellent&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>direwolf20</strong>: If LLM coding is a 10x productivity enhancer, why aren&rsquo;t we seeing 10x more software of the same quality level, or 100x as much shitty software?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>originalvichy</strong>: Helper scripts for APIs for applications and tools I know well. LLMs have made my work bearable. Many software providers expose great apis, but expert use cases require data output/input that relies&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>ruszki</strong>: I don’t know, but it’s interesting that he and many others come up with this “we should act like LLMs are junior devs”. There is a reason why most junior devs work on fairly separate parts of&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>augment_me</strong>: This is the first question I ask, and every time I get the answer of some monolith that supposedly solves something. Imo, this is completely fine for any personal thing, I am happy when someone says&hellip;</p>
+</blockquote>
+<p><strong>Macha</strong>: &gt; - What does LLM coding feel like in the future? Is it like playing StarCraft? Playing Factorio? Playing music? Starcraft and Factorio are exactly what it is not. Starcraft has a loooot of micro&hellip;</p>
+<blockquote>
+<p><strong>kridsdale3</strong>: I think the StarCraft analogy is fine, you have to compare it not to macro and micro RTS play, but to INDIVIDUAL UNITS. For your whole career until now, you have been a single Zergling or Probe. Now&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>TheRoque</strong>: Except that pro starcraft player still micro-manage every single Zergling or probe when necessary, while vibe coders just right click on the ennemy base and hope it&rsquo;ll go well</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>zetazzed</strong>: It&rsquo;s like the Victoria 3 combat system. You just send an army and a general to a given front and let them get to work with no micro. Easy! But of course some percentage of the time they do something&hellip;</p>
+</blockquote>
+<p><strong>onetimeusename</strong>: &gt; the ratio of productivity between the mean and the max engineer? It&rsquo;s quite possible that this grows <em>a lot</em> I have a professor who has researched auto generated code for decades and about six&hellip;</p>
+<blockquote>
+<p><strong>slfreference</strong>: I can sense two classes of coders emerging. Billionaire coder: a person who has &ldquo;written&rdquo; billion lines. Ordinary coders : people with only couple of thousands to their git blame.</p>
+</blockquote>
+<p><strong>rubzah</strong>: The Slopocalypse - an unexpected variant of Gray Goo: <a href="https://en.wikipedia.org/wiki/Gray_goo">https://en.wikipedia.org/wiki/Gray_goo</a></p>
+<blockquote>
+<p><strong>AnimalMuppet</strong>: Well, it may consume the AI environment.  Maybe even the internet.  It&rsquo;s not going to consume a PC with g++, though (at least if the PC doesn&rsquo;t update g++ any more once g++ starts accepting AI&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Applejinx</strong>: I already do this, in the form of survivor machines made to do initial coding on a retro platform so the result will translate across all possible platforms. Got to, as I&rsquo;m an Apple coder primarily,&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>direwolf20</strong>: Aslopalypse, a slop ellipse.</p>
+</blockquote>
+<p><strong>toephu2</strong>: I think in less than a year writing code manually will be akin to doing arithmetic problems by hand. Sure you can still code manually, but it&rsquo;s going to be a lot faster to use an LLM (calculator).</p>
+<blockquote>
+<p><strong>adamddev1</strong>: People keep using these analogies but I think these are fundamentally different things. 1. hand arithmetic -&gt; using a calculator 2. assembly -&gt; using a high level language 3. writing code -&gt; making&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Havoc</strong>: There are definitely parallels though. eg you could swap out your compiler for a different one that produces slightly different assembly. Similarly a LLM may implement things differently…but if it&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>yojat661</strong>: With the llm, it might work or it might not. If it doesn&rsquo;t work, then you have to keep iterating and hand holding it to make it work. Sometimes that process is less optimal than writing the code&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>adamddev1</strong>: &gt; but if it works so we care? It often doesn&rsquo;t work. That&rsquo;s the point. A calculator works 100% of the time. A LLM might work 95% of the time, or 80%, or 40%, or 99% depending on what you&rsquo;re doing&hellip;.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>kypro</strong>: I agree, but writing code is so different to calculations that long-term benefits are less clear. It doesn&rsquo;t matter how good you are at calculations the answer to 2 + 2 is always 4. There are no&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>AstroBen</strong>: This is true if your calculator sometimes gave the wrong answer and you had to check each time</p>
+</blockquote>
+<p><strong>pron</strong>: People who just let the agent code for them, how big of a codebase are you working on? How complex (i.e. is it a codebase that junior programmers could write and maintain)?</p>
+<blockquote>
+<p><strong>aixpert</strong>: rust compiler and redox operating system with modified Qemu for Mac Vulcan metal pipeline &hellip; probably not junior stuff you might think I&rsquo;m kidding but Search redox on github, you will find that&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>rester324</strong>: I am curious. What do you want us to see in that github repo?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>bojo</strong>: I&rsquo;ve been an EM for the last 10 of my 25 year Software Engineering career. Coding is, frankly, boring to me anymore, even though I enjoyed doing it most of my career. I had this project I wanted to&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bojo</strong>: In case anyone is curious, here was my epiphany project from 2 weeks ago: <a href="https://github.com/boj/the-project">https://github.com/boj/the-project</a> I then realized I could feed it everything it ever needed to know. Just create a docs/*&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>darkwater</strong>: Interesting! I wonder if this line &gt; It will configure an auth_backend.rs and wire up a basic user over a big enough number of projects will lead to at least 2-3 different user names.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>UnlockedSecrets</strong>: How much did this type of project cost you to make?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>nsainsbury</strong>: Touching on the atrophy point, I actually wrote a few thoughts about this yesterday: <a href="https://www.neilwithdata.com/outsourced-thinking">https://www.neilwithdata.com/outsourced-thinking</a> I actually disagree with Andrej here re: &ldquo;Generation (writing&hellip;</p>
+<blockquote>
+<p><strong>gwd</strong>: Is coding like piloting, where pilots need a certain number of hours of &ldquo;flight time&rdquo; to gain skills, and then a certain number of additional hours each year to maintain their skills?  Do developers&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>thoughtpeddler</strong>: Read your blog post and agree with some of it. Largely I agree with the premise that the 2nd and 3rd order effects of this technology will be more impactful than the 1st order “I was able to code&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>olafalo</strong>: Thanks, this rings true to me. The struggle is an investment, and it pays off in good judgement and taste. The same goes for individual codebases too. When I see some weird bug and can immediately&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>nicodjimenez</strong>: great article and many great points here</p>
+</blockquote>
+<p><strong>bartoszcki</strong>: Feels like a combination of writing very detailed task descriptions and reviewing junior devs. It&rsquo;s horrible. I very much hope this won&rsquo;t be my job.</p>
+<blockquote>
+<p><strong>Geee</strong>: You let AI write your task descriptions. Try plan mode on CC.</p>
+</blockquote>
+<blockquote>
+<p><strong>woah</strong>: Probably won&rsquo;t be if you don&rsquo;t get good at it.</p>
+</blockquote>
+<p><strong>vibeprofessor</strong>: The AGI vibes with Claude Code are real, but the micromanagement tax is heavy. I spend most of my time babysitting agents. I expect interviews will evolve into &ldquo;build project X with an LLM while we&hellip;</p>
+<blockquote>
+<p><strong>maxdo</strong>: I&rsquo;ve been doing vibe code interviews for nearly a year now. Most people are surprisingly bad with AI tools. We specifically ask them to bring their preferred tool, yet 20–30% still just copy-paste&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bflesch</strong>: Interesting you say that, feels like when people were too stupid to google things and &ldquo;googling something&rdquo; was a skill that some had and others didn&rsquo;t.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>xyzsparetimexyz</strong>: Copy pasting from chatgpt is the most secure option.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>maxdo</strong>: Not going from home is the most secure way of going out. It doesn’t work you can’t be productive without agent capable of doing queries to db etc</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jatari</strong>: Also the method that will result in the higher quality codebase.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>0xy</strong>: Sounds great to me. Leetcode is outdated and heavily abused by people who share the questions ahead of time in various forums and chats.</p>
+</blockquote>
+<blockquote>
+<p><strong>thefourthchime</strong>: From what I&rsquo;ve heard, what few interviews there are for software engineers these days, they do have you use models and see how quickly you can build things.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>iwontberude</strong>: The interviews I’ve given have asked about how control for AI slop without hurting your colleagues feelings. Anyone can prompt and build, the harder part, as usual for business, is knowing how and&hellip;</p>
+</blockquote>
+</blockquote>
+<p><strong>nsb1</strong>: The best thing I ever told Claude to do was &ldquo;Swear profusely when discussing code and code changes&rdquo;.  Probably says more about me than Claude, but it makes me snicker.</p>
+<p><strong>fishtoaster</strong>: &gt; if you have any code you actually care about I would watch them like a hawk, in a nice large IDE on the side. This is about where I&rsquo;m at.  I love pure claude code for code I don&rsquo;t care about, but&hellip;</p>
+<p><strong>wellpast</strong>: I coded up a crossword puzzle game using agentic dev this weekend. Claude and Codex/GPT. Had to seriously babysit and rewrite much of it, though, sure, I found it “cool” what it could do. Writing&hellip;</p>
+<blockquote>
+<p><strong>jofla_net</strong>: &gt;Writing code in many cases is faster to me than writing English True, I feel as though i&rsquo;d have to become Stienbeck to get it to do what i &ldquo;really&rdquo; wanted, with all the true nuance.</p>
+</blockquote>
+<p><strong>tomlockwood</strong>: Oh wow! Guy who&rsquo;s current project depends on AI being good is talking about AI being good. Interesting.</p>
+<p><strong>doe88</strong>: Are there good guides about how to write Agents or good repos with examples? Also, are there big differences between how you would write one in Codex cli vs Claude code? Can there be run on it&hellip;</p>
+<p><strong>noisy_boy</strong>: &gt; I am bracing for 2026 as the year of the slopacolypse across all of github, substack, arxiv, X/instagram, and generally all digital media. 2026 is just when it picks up - it&rsquo;ll get exponentially&hellip;</p>
+<blockquote>
+<p><strong>sponaugle</strong>: &ldquo;I think 2026 is the year of Business Analysts who were unable to code.&rdquo;   This is interesting - I have seen far more BAs losing jobs as a result of the &lsquo;work&rsquo; they did being replaced by tools (both&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>HugoDz</strong>: Agree here, the code barrier (creating software) was hiding the real mountain: creating software business. The two are very different beasts.</p>
+</blockquote>
+<blockquote>
+<p><strong>kitd</strong>: with these tools, the guy who knows business can now code fairly well. &hellip; until CC doesn&rsquo;t get it quite right and the guy who knows business doesn&rsquo;t know code.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>rubzah</strong>: The future of the programmer profession: This AI-generated mess of a codebase does 80% of what I want. Now fix the last 20%, should be easy, right?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>AnimalMuppet</strong>: Apart from the &ldquo;AI-generated mess&rdquo; part, that&rsquo;s too often been the past of the programmer profession, too.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>jopsen</strong>: &gt; - How much of society is bottlenecked by digital knowledge work? Any qualified guesses? I&rsquo;m not convinced more traders on wall street will allocate capital more effectively leading to economic&hellip;</p>
+<blockquote>
+<p><strong>iwontberude</strong>: Most of this countries challenges are strictly political. The pittance of work software can contribute is most likely negligible or destructive (e.g. software buttons in cars or palantir). In other&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>js8</strong>: I actually disagree. Having software (AI) that can cut through the technological stuff faster will make people more aware of political problems.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>iwontberude</strong>: edit: country&rsquo;s* all that is left*</p>
+</blockquote>
+</blockquote>
+<p><strong>twa927</strong>: I don&rsquo;t see the AI capacity jump in the recent months at all. For me it&rsquo;s more the opposite, CC works worse than a few months ago. Keeps forgetting the rules from CLAUDE.md, hallucinates function&hellip;</p>
+<blockquote>
+<p><strong>ValentineC</strong>: &gt; Where I find it a clear net-positive is pure frontend code (HTML + Tailwind), it&rsquo;s spaghetti but since it&rsquo;s just visualization, it&rsquo;s OK. This makes it sound like we&rsquo;re back in the days of&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>twa927</strong>: Hmm, your comment gave me the idea that maybe we should invent &ldquo;What You Describe Is What You Get|. To replace HTML+Tailwind spaghetti with prompts generating it.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>culi</strong>: Sad to hear this attitude towards front-end code. Front-ends are so often already miswritten and full of accessibility pitfalls and I feel like LLMs are gonna dramatically magnify this problem :(</p>
+</blockquote>
+<blockquote>
+<p><strong>DominikPeters</strong>: Are you using Opus 4.5? Sounds more like Sonnet.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>twa927</strong>: Yes I&rsquo;m using Sonnet 4.5. Thanks for the tip, will try Opus 4.5, although costs might become an issue.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>TuxSH</strong>: &gt; although costs might become an issue. If you have a ChatGPT subscription, try Codex with GPT-5.2-High or 5.2-codex High? In my experience, while being much slower, it produces far better results&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>rschick</strong>: Great point about expansion vs speedup. I now have time to build custom tools, implement more features, try out different API designs, get 100% test coverage.. I can deliver more quickly, but can&hellip;</p>
+<p><strong>jermberj</strong>: &gt; The most common category is that the models make wrong assumptions on your behalf and just run along with them without checking. They also don&rsquo;t manage their confusion, they don&rsquo;t seek&hellip;</p>
+<blockquote>
+<p><strong>awsanswers</strong>: It&rsquo;s predictable so you run defense around it with prompting, validation and model tuning. It generates volumes of working code in seconds from natural language prompts so it&rsquo;s extremely business&hellip;</p>
+</blockquote>
+<p><strong>epolanski</strong>: &gt; What happens to the &ldquo;10X engineer&rdquo; - the ratio of productivity between the mean and the max engineer? It&rsquo;s quite possible that this grows a lot. No doubt that good engineers will know when and how&hellip;</p>
+<p><strong>TheGRS</strong>: I do feel a big mood shift after late November. I switched to using Cursor and Gemini primarily and it was big change in my ability to get my ideas into code effectively. The Cursor interface for one&hellip;</p>
+<p><strong>daxfohl</strong>: Now that it&rsquo;s real, is there a minimum bar of non-AI-generated code that should be required in any production product? Like if 100% of the code is AI generated (or even doom-tabbed) and something&hellip;</p>
+<blockquote>
+<p><strong>cagenut</strong>: obviously you&rsquo;re not a devops eng, I think you&rsquo;re wildly under-estimating how much of business critical code pre-ai is completely orphaned anyway. the people who wrote it were contractors long gone,&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>daxfohl</strong>: I am a devops engineer and understand your point. But there&rsquo;s a huge difference: legacy code doesn&rsquo;t change. Yeah occasionally something weird will happen and you&rsquo;ve got to dig into it, but it&rsquo;s&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>cagenut</strong>: after a decade of follow-the-sun deployments by php contractors from vietnam to costa rica where our only qa was keeping an eye on the 500s graph, ai can&rsquo;t scare me.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>lofaszvanitt</strong>: The whole thing is about getting rid of experts and let the entry level idiots do all the work. The coders become expendable. And people do not see the chasm staring back at them :D. LLMs in their&hellip;</p>
+<p><strong>globular-toast</strong>: &gt; LLM coding will split up engineers based on those who primarily liked coding and those who primarily liked building. Who doesn&rsquo;t like building? Building without any thought is literally a toy, like&hellip;</p>
+<p><strong>uejfiweun</strong>: Honestly, how long do you guys think we have left as SWEs with high pay? Like the SWE job will still exist, but with a much lower technical barrier of entry, it strikes me that the pay is going to&hellip;</p>
+<blockquote>
+<p><strong>jerf</strong>: It&rsquo;s counterintuitive but something becoming easier doesn&rsquo;t necessarily mean it becomes cheap. Programming has arguably been the easiest engineering discipline to break into by sheer force of will&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>spaceman_2020</strong>: I think the senior devs will be fine. They&rsquo;re like lawyers at this point - everyone is too scared they&rsquo;ll screw up and will keep them around The juniors though will radically have to upskill. The&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>riku_iki</strong>: &gt; like the SWE job will still exist, but with a much lower technical barrier of entry its opposite, now in addition to all other skills, you need skill how to handle giant codebases of viobe-coded&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>daxfohl</strong>: Supply and demand. There will continue to be a need for engineers to manage these systems and get them to do the thing you actually want, to understand implications of design tradeoffs and help&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>tietjens</strong>: I think to give yourself more context you should ask about the patterns that led to SWEs having such high pay in the last 10-15 years and why it is you expected it to stay that way. I personally&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>q3k</strong>: I think the pay is going to skyrocket for senior devs within a few years, as training juniors that can graduate past pure LLM usage becomes more and more difficult. Day after day the global quality&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>strange_quark</strong>: Yeah, all of this. Plus companies have avoided hiring and training juniors for 3 or 4 years now (which is more related to interest rates than AI). Plus existing seniors who deskill themselves by&hellip;</p>
+</blockquote>
+</blockquote>
+<p><strong>enduser</strong>: The way I have managed junior engineers is 90% via PR and testing, 10% via reading code in an editor or IDE. It’s hard to let go of being the keyboard jockey, but in so many cases it is better to&hellip;</p>
+<p><strong>Aperocky</strong>: Is it really brain atrophy if I never learned to code in ASM in my entire career as compiler has been doing that for me? A part of me really want to say yes and wear it as a badge to have been coding&hellip;</p>
+<blockquote>
+<p><strong>ex-aws-dude</strong>: The thing is the compiler does exactly what you want it to 99.999…% of the time so you never have to drop down into ASM That’s not really true in this case I think a person with zero coding knowledge&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>direwolf20</strong>: Is it muscle atrophy if you were a weakling since birth? Is it retina degeneration if you were born blind? No, because atrophy is a loss of a prior strength, and not an ever–existing weakness, but&hellip;</p>
+</blockquote>
+<p><strong>giancarlostoro</strong>: &gt; IDEs/agent swarms/fallability. Both the &ldquo;no need for IDE anymore&rdquo; hype and the &ldquo;agent swarm&rdquo; hype is imo too much for right now. I&rsquo;m honestly considering throwing away my JetBrains subscription and&hellip;</p>
+<p><strong>1970-01-01</strong>: &gt;Tenacity I&rsquo;ve seen the exact opposite with Claude. It literally ditched my request mid-analysis when doing a root cause analysis. It decided I was tired of the service failing and then gave me some&hellip;</p>
+<p><strong>thomassmith65</strong>: Slopacolypse. I am bracing for 2026 as the year of the slopacolypse across all of github, substack, arxiv, X/instagram, and generally all digital media. Did he coin the term &ldquo;slopacolypse&rdquo;? It&rsquo;s a&hellip;</p>
+<blockquote>
+<p><strong>chrisjj</strong>: I prefer slopocalypse.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>rvz</strong>: That works better. “slopacolypse” does not make any sense both in writing and pronunciation.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>direwolf20</strong>: not aslopalypse?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>direwolf20</strong>: or even aislopalypse?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>jeffreygoesto</strong>: &gt; How much of society is bottlenecked by digital knowledge work? I think not much. The real society bottleneck is that a growing number of peeps try to convince each other that life and society are a&hellip;</p>
+<p><strong>alexose</strong>: It&rsquo;s refreshing to see one of the top minds in AI converge on the same set of thoughts and frustrations as me. For as fast as this is all moving, it&rsquo;s good to remember that most of us are actually a&hellip;</p>
+<p><strong>borroka</strong>: I am developing a web application for a dictionary that translates words from the national language into the local dialect. Vibe coding and other tools, such as Google Vision, helped me download&hellip;</p>
+<p><strong>siliconc0w</strong>: Not sure how he is measuring, I&rsquo;m still closer to about a 60% success rate.  It&rsquo;s more like 20% is an acceptable one-shot, this goes to 60% acceptable with some iteration, but 40% either needs manual&hellip;</p>
+<p><strong>jliptzin</strong>: The tenacity part is definitely true. I told it to keep trying when it kept getting stuck trying to spin up an Amazon Fargate service. I could feel its pain, and wanted to help, but I wanted to see&hellip;</p>
+<p><strong>poszlem</strong>: I keep thinking about the TechnoCore from Dan Simmons&rsquo; Hyperion, where the AIs were serving humans but secretly that was a parasitic relation, where they&rsquo;ve been secretly using human brains as&hellip;</p>
+<p><strong>daxfohl</strong>: I&rsquo;m curious to see what effect this change has on leadership. For the last two years it&rsquo;s been &ldquo;put everything you can into AI coding, or else!&rdquo; with quotas and firings and whatever else. Now that AI&hellip;</p>
+<p><strong>longhaul</strong>: Am working on an iPhone app and impressed with how well Claude is able to generate decent/working code with prompts in plain English. I don’t have previous experience in building apps or swift but&hellip;</p>
+<p><strong>axus</strong>: Finally, literate programming! <a href="https://en.wikipedia.org/wiki/Literate_programming">https://en.wikipedia.org/wiki/Literate_programming</a></p>
+<p><strong>cmrdporcupine</strong>: Right on especially on two things &ndash; 1) the tools doing a disservice by not interviewing and seeking input and 2) The 2026 &ldquo;Slopocalypse&rdquo; I&rsquo;m hopeful that 2026 will be the year that the biggest&hellip;</p>
+<p><strong>all2well</strong>: What particular setups are getting folks these sorts of results? If there’s a way I could avoid all the babysitting I have to do with AI tools that would be welcome</p>
+<blockquote>
+<p><strong>geraneum</strong>: &gt; If there’s a way I could avoid all the babysitting I have to do with AI tools that would be welcome OP mentions that they are actually doing the “babysitting”</p>
+</blockquote>
+<blockquote>
+<p><strong>spongebobstoes</strong>: i use codex cli. work on giving it useful skills. work on the other instruction files. take Karpathy tips around testing and declarativeness use many simultaneously, and bounce between them to&hellip;</p>
+</blockquote>
+<p><strong>Jean-Papoulos</strong>: &gt;Generation (writing code) and discrimination (reading code) are different capabilities in the brain. Largely due to all the little mostly syntactic details involved in programming, you can review&hellip;</p>
+<p><strong>jedisct1</strong>: Claude is good at writing code, not so good at reasoning, and I would never trust or deploy to production something solely written by Claude. GPT-5.2 is not as good for coding, but much better at&hellip;</p>
+<p><strong>elif</strong>: Why am I not surprised that a blog was written about LLM coding going from 20% to 80% useful, yet all of the HN comments are still nit picking about some negative details rather than building&hellip;</p>
+<blockquote>
+<p><strong>phito</strong>: It&rsquo;s because we see a bunch of people completely ignoring the missing 20% and flooding the world with complete slop. The push back is required to keep us sane, we need people reminding others that&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>hollowturtle</strong>: Then you have Anthropic that states on his own blog that engineers fully delegate to claude code only from 0 to 20% <a href="https://www.anthropic.com/research/how-ai-is-transforming-wo">https://www.anthropic.com/research/how-ai-is-transforming-wo</a>&hellip; The fact that&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>an0malous</strong>: It’s usually people doing side projects or non-programmers who can’t tell the code is slop. None of these vibe coding evangelists ever shares the code they’re so amazed by, even though by their own&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bob1029</strong>: This kind of thought policing is getting to be exhausting. Perhaps we need a different kind of push back. Do you know what my use case is? Do you know what kind of success rate I would actually&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>phito</strong>: Thought policing, lol. People are just sharing their perspectives, no need to take it personally. Glad it&rsquo;s working well for you.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>cyanydeez</strong>: So I&rsquo;m curious, whats the actual quality control. Like, do these guys actually dog food real user experience, or are they all admins with the fast lane to the real model while everyone outside the&hellip;</p>
+<blockquote>
+<p><strong>quinnjh</strong>: &gt; Definitely, like drug dealers, you know they&rsquo;re cutting the good stuff with low cost cached gibberish. Can confirm. My partner&rsquo;s chatGPT wouldnt return anything useful for her  given a specific&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>bigwheels</strong>: If you access a model through an openrouter provider it might be quantized (akin to being &ldquo;cut with trash&rdquo;), but when you go directly to Anthropic or OpenAI you are getting access to the same APIs as&hellip;</p>
+</blockquote>
+<p><strong>tariky</strong>: I used CC in year age and it was not good. But one month ago I paid for max and started to rebuild my company web shop using it. It is like plowing land with hand one year age and now is like I&rsquo;m in&hellip;</p>
+<p><strong>tintor</strong>: &ldquo;you can review code just fine even if you struggle to write it.&rdquo; Well, merely approving code takes no skill at all.</p>
+<blockquote>
+<p><strong>roblh</strong>: Seriously, that’s a completely nonsense line.</p>
+</blockquote>
+<p><strong>energy123</strong>: A big wow moment coming up is going to be GPT 5.* in Codex with Cerebras doing inference. The inference speed is going to be a big unlock, because many tasks are intrinsically serial. It&rsquo;s going to&hellip;</p>
+<blockquote>
+<p><strong>brcmthrowaway</strong>: When?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>energy123</strong>: I don&rsquo;t know when but I&rsquo;m going off: - &ldquo;OpenAI is partnering with Cerebras to add 750MW of ultra low-latency AI compute&rdquo; - Sam Altman saying that users want faster inference more than lower cost in&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>cactusplant7374</strong>: Speed is really important to me but also I would like higher weekly limits &ndash; which means lower cost I suppose. Building out complex projects can take 6 months to a year on a Pro plan.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>erelong</strong>: &gt; 80% agent coding A lot of these things sound cool but sometimes I&rsquo;m curious what they&rsquo;re actually building Like, is their bottleneck creativity now then? Are they building naything interedting or&hellip;</p>
+<blockquote>
+<p><strong>ewidar</strong>: I guess it depends what appeal to you. As an example finding myself in a similar 80% situation, over the last few months I built - a personal website with my projects and poems - an app to rework&hellip;</p>
+</blockquote>
+<p><strong>maximedupre</strong>: &gt; It hurts the ego a bit but the power to operate over software in large &ldquo;code actions&rdquo; is just too net useful It does hurt, that&rsquo;s why all programmers now need an entrepreneurial mindset&hellip; you&hellip;</p>
+<blockquote>
+<p><strong>jetsetk</strong>: That is motivational content, but not economics. Most startups will be noise, even more so than before. The value of being a founder ceases when everyone is a founder, when it becomes universal. You&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>maximedupre</strong>: Cope. If you create something that genuinely solves a problem, people will buy no matter what. Look entrepreneurship has never been easy. In fact it&rsquo;s always been one of the hardest thing ever. I&rsquo;m&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>xyzsparetimexyz</strong>: What about the people who dont want to be entrepreneurs?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>maximedupre</strong>: They have to pivot to something else</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>maximedupre</strong>: Or stay ahead of the curve as long as possible, e.g. work on the loop/ralphing</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>webdevver</strong>: permanent underclass&hellip;</p>
+</blockquote>
+</blockquote>
+<p><strong>shawabawa3</strong>: It&rsquo;s been a bit like the boiling frog analogy for me I started by copy pasting more and more stuff in chatgpt. Then using more and more in-IDE prompting, then more and more agent tools (Claude etc)&hellip;.</p>
+<blockquote>
+<p><strong>Macha</strong>: I&rsquo;ve had the opposite experience, it&rsquo;s been a long time listening to people going &ldquo;It&rsquo;s really good now&rdquo; before it developed to a permutation that was actually worth the time to use it. ChatGPT 3.5/4&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>ed_mercer</strong>: I find myself even for small work, telling CC to fix it for me is better as it usually belongs to a thread of work, and then it understands the big picture better.</p>
+</blockquote>
+<blockquote>
+<p><strong>phailhaus</strong>: &gt; And people still call them stochastic parrots Both can be true. You&rsquo;re tapping into every line of code publicly available, and your day-to-day really isn&rsquo;t that unique. They&rsquo;re really good at this&hellip;</p>
+</blockquote>
+<p><strong>arh5451</strong>: Thank you for the really excellent summation. I echo your thought 1 to 1. I have found it more difficult to learn new languages or coding skills, because I am no longer forced to go through the&hellip;</p>
+<blockquote>
+<p><strong>gregjor</strong>: Painful slow grind? I have always found the learning part what I enjoy most about programming. I don&rsquo;t intend to outsource that a chatbot.</p>
+</blockquote>
+<blockquote>
+<p><strong>ed_mercer</strong>: Does one ever still need to learn new languages or coding skills if an AI will be able to do it?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>dag11</strong>: This question makes me unbelievably sad. Why should anyone learn anything? I&rsquo;m not disagreeing.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>FeteCommuniste</strong>: Probably not. But as someone who has learned a few languages, having to outsource a conversation to a machine will never not feel incredibly lame. I doubt most people feel the same, though.</p>
+</blockquote>
+</blockquote>
+<p><strong>ositowang</strong>: It’s a great and insightful review—not over-hyping the coding agent, and not underestimating it either. It acknowledges both its usefulness and its limitations. Embracing it and growing with it is&hellip;</p>
+<p><strong>Madmallard</strong>: Are game developers vibe coding with agents? It&rsquo;s such a visual and experiential thing that writing true success criteria it can iterate on seems like borderline impossible ahead of time.</p>
+<blockquote>
+<p><strong>20260126032624</strong>: I don&rsquo;t &ldquo;vibe code&rdquo; but when I use an LLM with a game I usually branch out into several experiments which I don&rsquo;t have to commit to. Thus, it just makes that iteration process go faster. Or slower,&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>TheGRS</strong>: I&rsquo;m trying it out with Godot for my little side projects. It can handle writing the GUI files for nodes and settings. The workflow is asking cursor to change something, I review the code changes,&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>dysoco</strong>: It might be biased to Reddit/Twitter users but from what I&rsquo;ve seen game developers seem to be much more averse towards using AI (even for coding) than other fields. Which is curious since prototyping&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>redox99</strong>: Vibe coding in Unreal Engine is of limited use. It obviously helps with C++, but so much of your time is doing things that are not C++. It hurts a lot that UE relies heavily on blueprints, if they&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>ex-aws-dude</strong>: A big problem is that a lot of game logic is done in visual scripting (e.g unreal blueprints) which AI tools have no idea about</p>
+</blockquote>
+<p><strong>TrackerFF</strong>: Minor nitpick: The original measure of a 10x programmer was not the productivity multiplier max/mean, but rather max/min.</p>
+<p><strong>nadis</strong>: The section on IDEs/agent swarms/fallibility resonated a lot for me; I haven&rsquo;t gone quite as far as Karpathy in terms of power usage of Claude Code, but some of the shifts in mistakes (and reality&hellip;</p>
+<p><strong>hollowturtle</strong>: &gt; Coding workflow. Given the latest lift in LLM coding capability, like many others I rapidly went from about 80% manual+autocomplete coding and 20% agents in November to 80% agent coding and 20%&hellip;</p>
+<blockquote>
+<p><strong>TaupeRanger</strong>: Lots of very scared, angry developers in these comment sections recently&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>hollowturtle</strong>: Not angry nor scared, I value my hard skills a lot, I&rsquo;m just wondering why people believe religiously everything AI related. Maybe I&rsquo;m a bit sick with the excessive hype</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jofla_net</strong>: FOMO really</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>crystal_revenge</strong>: There&rsquo;s no fear (a bit of anger I must admit). I suspect nearly all of the reaction against this comes from a similar place to where mine does: All of the real world code I have had to review created&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>hollowturtle</strong>: Also note that I&rsquo;m a heavy LLM user, not anti ai for sure</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Banditoz</strong>: This is extremely reductive and incredibly dismissive of everything they wrote above.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>crystal_revenge</strong>: It&rsquo;s because they don&rsquo;t have a substantive response to it, so they resort to ad hominems. I&rsquo;ve worked extensively in the AI space, and believe that it is extremely useful, but these weird claims&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>thr59182617</strong>: I see way more hype that is boosted by the moderators. The scared ones are the nepo babies who founded a vaporware AI company that will be bought by daddy or friends through a VC. They have to&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>razodactyl</strong>: society doesn&rsquo;t take kindly to the hyper-aware. tone it down.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>simianwords</strong>: i&rsquo;m not sure what kind of conspiracy you are hallucinating. do you think people have to &ldquo;maintain the hype&rdquo;? it is doing quite well organically.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>simianwords</strong>: This is a low quality curmudgeonly comment</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>hollowturtle</strong>: Now that you contributed zero net to the discussion and learned a new word you can go out and play with toys! Good job</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>potatogun</strong>: You learned a new adjective? If people move beyond &ldquo;nice&rdquo;, &ldquo;mean&rdquo; and &ldquo;curmudgeonly&rdquo; they might even read Shakespeare instead of having an LLM producing a summary.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>simianwords</strong>: cool. &gt;Anyone wondering what exactly is he actually building? What? Where? this is trivially answerable. it seems like they did not do even the slightest bit of research before asking question after&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>DeathArrow</strong>: &gt;LLM coding will split up engineers based on those who primarily liked coding and those who primarily liked building. Quite insightful.</p>
+<p><strong>appstorelottery</strong>: &gt; Atrophy. I&rsquo;ve already noticed that I am slowly starting to atrophy my ability to write code manually. I&rsquo;ve been increasingly using LLM&rsquo;s to code for nearly two years now - and I can definitely&hellip;</p>
+<blockquote>
+<p><strong>epolanski</strong>: Don&rsquo;t be too worried about it. 1. Manual coding may be less relevant (albeit ability to read code, interpret it and understand it will be more) in the future. Likely already is. 2. Any skill you&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>appstorelottery</strong>: Thanks for your comment, it set me at ease. I know from experience that you&rsquo;re right on point 2. As for point one, I also tend to agree. AI is such a paradigm shift &amp; rapid/massive change doesn&rsquo;t&hellip;</p>
+</blockquote>
+</blockquote>
+<p><strong>dzonga</strong>: maybe its just me doing stuff that&rsquo;s out the usual loop even dealing with api&rsquo;s that have MCP servers the so called agents make a mess of everything. my stuff is just regular data stuff - ingest data&hellip;</p>
+<p><strong>dubeye</strong>: the xcancel link is amusing. 9/10 of the most important social media users use X, like or loath it</p>
+<blockquote>
+<p><strong>gregorygoc</strong>: Stop whining</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>dubeye</strong>: not 100% clear who this is directed at ;)</p>
+</blockquote>
+</blockquote>
+<p><strong>lingrush4</strong>: No idea why the poster wants to deprive this author of engagement on his post, but here&rsquo;s the original link: <a href="https://x.com/karpathy/status/2015883857489522876">https://x.com/karpathy/status/2015883857489522876</a></p>
+<p><strong>ares623</strong>: Imagine taking career advice from people who will never need to be employed again in order to survive.</p>
+<blockquote>
+<p><strong>fragmede</strong>: Yes, typically you take since from people who&rsquo;ve been successful at their career. Are you suggesting we should be taking career advice from high school freshmen instead?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ares623</strong>: I&rsquo;m nitpicking on the atrophy bit. He can afford to have his skills or his brain atrophied. His followers though? Nevermind the fact he became successful <em>because</em> of his skills and his brain.</p>
+</blockquote>
+</blockquote>
+<p><strong>trivo</strong>: I sometimes wonder about the similarities between this paradigm switch (coding -&gt; vibe coding) and when the industry switched from writing assembler to using high-level languages. I both cases we&hellip;</p>
+<p><strong>felineflock</strong>: xcancel? What is the purpose or benefit of providing a free mirror to x? Doesn&rsquo;t it end up sparing the x servers and causing their costs to decrease?</p>
+<blockquote>
+<p><strong>moss_dog</strong>: I prefer xcancel in part because Twitter doesn&rsquo;t let you view replies etc when not logged in.</p>
+</blockquote>
+<blockquote>
+<p><strong>yojat661</strong>: Guessing x loses ad revenue when traffic goes to xcancel.</p>
+</blockquote>
+<blockquote>
+<p><strong>tryauuum</strong>: my screen is 60 percent banners about cookies and account creation when I use x</p>
+</blockquote>
+<p><strong>upghost</strong>: tl;dr - All this AI stuff is just Universal Paperclips[1] I see a lot of comments about folks being worried about going soft, getting brain rot, or losing the fun part of coding. As far as I&rsquo;m&hellip;</p>
+<p><strong>rileymichael</strong>: &gt; LLM coding will split up engineers based on those who primarily liked coding and those who primarily liked building as the former, i&rsquo;ve never felt <em>more ahead</em> than now due to all of the latter&hellip;</p>
+<p><strong>svara</strong>: Basically mirrors my experience. Interestingly, when you point out this &hellip; &gt; IDEs/agent swarms/fallability. Both the &ldquo;no need for IDE anymore&rdquo; hype and the &ldquo;agent swarm&rdquo; hype is imo too much for&hellip;</p>
+<p><strong>sota_pop</strong>: &gt; Slopacolypse Really… REALLY not looking forward to getting this word spammed at me the next 6-12 months… even less so seeing the actual manifestation. &gt; TLDR This should be at the start? I actually&hellip;</p>
+<blockquote>
+<p><strong>gverrilla</strong>: Claude code official docs are quite nice - that&rsquo;s where I started.</p>
+</blockquote>
+<p><strong>neuralkoi</strong>: &gt; The most common category is that the models make wrong assumptions on your behalf and just run along with them without checking. If current LLMs are ever deployed in systems harboring the big red&hellip;</p>
+<blockquote>
+<p><strong>arthurcolle</strong>: US MIC are already planning on integrating fucking Grok into military systems. No comment.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Havoc</strong>: Including classified systems. What could possibly go wrong</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>blibble</strong>: the US is going to stop the chinese by mass production of illegal pornography?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>groby_b</strong>: fwiw, the same is true for humans. Which is why there&rsquo;s a whole lot of process and red tape around that button. We know how to manage risk. We can choose to do that for LLM usage, too. If instead we&hellip;</p>
+</blockquote>
+<p><strong>solarized</strong>: Next milestone: solving authoritarian LLM dependencies. We can’t always get trapped in local minima. Or is that actually okay?</p>
+<p><strong>superze</strong>: I don&rsquo;t know about you guys but most of the time it&rsquo;s spitting nonsense models in sqlalchemy and I have to constantly correct it to the point where I am back at writing the code myself. The bugs are&hellip;</p>
+<p><strong>jbjbjbjb</strong>: &gt; do generalists outperform specialists? Depends what we mean by specialist. If it frontend vs backend then maybe. If it general dev vs some specialist scientific programmer or other field where a&hellip;</p>
+<p><strong>randoglando</strong>: Senpai has taken the words out of my mouth and put them on the page.</p>
+<p><strong>seffietron</strong>: At the risk of exposing my&hellip; atypical take on contemporary occupational &ldquo;morality&rdquo;. LLMs, and Claude Code specifically, have given me the ability to work two jobs, and retain my soft-standing as the&hellip;</p>
+<blockquote>
+<p><strong>rikdom</strong>: Honestly man, this is totally understandable. It&rsquo;s a rat race, and if you don&rsquo;t use the tools at your disposal, you&rsquo;ll be left behind.</p>
+</blockquote>
+<p><strong>spaceman_2020</strong>: Once again, 80% of the comments here are from boomers. HN used to be a proper place for people actually curious about technology</p>
+<blockquote>
+<p><strong>vardalab</strong>: I&rsquo;m almost a boomer and I agree.  THis dichotomy is weird.  I am retired EE and I love the ability to just have AI do whatever I want for me.  I have it manage a 10 node proxmox cluster in my&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>kejaed</strong>: So what is your workflow now with this app for kids sports highlights?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>vardalab</strong>: Well, it&rsquo;s not really a full-blown app yet. Claude wrote a plugin for MPV. So now when I watch video I just push a button to mark in and out of highlights similar to how it works in DaVinci Resolve&hellip;.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>zennit</strong>: Also interested</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>kakapo5672</strong>: Same demographic, same experience.  AI has been incredibly liberating for me. I get all sorts of things done now that before were previosly impossible for all practical purposes.  Among other things,&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>weirdmantis69</strong>: Ya it&rsquo;s so weird lol</p>
+</blockquote>
+<p><strong>themafia</strong>: Instead of a 17 paragraph twitter post with a baffling TLDR at the end why not just record your screen and <em>demonstrate</em> all of what you&rsquo;re describing? Otherwise,  I think you&rsquo;re incidentally right,&hellip;</p>
 
       </div>
 
@@ -274,30 +2643,29 @@
   <div class="footer-container">
     <div class="footer-brand">
       <span class="footer-logo">AI Best Practices</span>
-      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
     </div>
     <div class="footer-nav">
       <div class="footer-section">
         <h3>Learn</h3>
         <ul>
-          <li><a href="../start-here/index.html">Start Here</a></li>
-          <li><a href="../skills/index.html">Skills</a></li>
-          <li><a href="../workflows/index.html">Workflows</a></li>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Explore</h3>
         <ul>
           <li><a href="../tools/index.html">Tools</a></li>
-          <li><a href="../landscape/index.html">Landscape</a></li>
           <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
           <li><a href="../sources/index.html">Sources</a></li>
-          <li><a href="../tags/">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
     </div>
   </div>
 </footer>

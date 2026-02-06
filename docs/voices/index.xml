@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Voices on AI Best Practices Knowledge Base</title>
+    <link>/voices/index.html</link>
+    <description>Recent content in Voices on AI Best Practices Knowledge Base</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/voices/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Power Users</title>
+      <link>/voices/power-users.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/voices/power-users.html</guid>
+      <description>&lt;p&gt;These are developers who use AI coding tools daily, have developed sophisticated workflows, and share their techniques with concrete detail. They are not cheerleaders &amp;ndash; most have strong opinions about what works and what does not.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;the-context-engineer&#34;&gt;The context engineer&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;energy123&lt;/strong&gt; maintains a single markdown file of roughly 15,000 tokens containing his project&amp;rsquo;s entire world model &amp;ndash; use cases, principles, requirements, guardrails, and ambiguity resolutions. This file gets injected into every prompt. Over time, repeated inferences cause the codebase to converge toward the intended design rather than drifting into defaults. He notes this level of investment only pays off for long-lived, important projects.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Thoughtful Skeptics</title>
+      <link>/voices/skeptics.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/voices/skeptics.html</guid>
+      <description>&lt;p&gt;These are not people who dismiss AI coding tools without trying them. They are practitioners who have used the tools extensively and articulate specific, concrete concerns. Their critiques are grounded in real failures, not theoretical objections.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;the-craft-programmer&#34;&gt;The craft programmer&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;ryandrake&lt;/strong&gt; got into programming because he enjoys programming &amp;ndash; the act of defining problems in data structures, the puzzle of finding elegant solutions. If he wanted to tell someone else how to do the work, he would have gone into management. AI tools remove the very thing that attracted him to the field.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Converts</title>
+      <link>/voices/converts.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/voices/converts.html</guid>
+      <description>&lt;p&gt;The most interesting voices in any technology debate are the ones who changed their mind. These practitioners describe a specific before-and-after: a concrete moment or experience that shifted their position. The conversions go both directions &amp;ndash; skeptics who became believers and enthusiasts who developed reservations.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;from-ic-to-manager-reluctantly&#34;&gt;From IC to manager (reluctantly)&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;seer&lt;/strong&gt; describes the shift to AI-assisted coding as eerily similar to the jump from individual contributor to manager. He stopped obsessing over implementation details and learned to give guidance instead of instructions. If the AI chose an iterative loop instead of a functional pattern, he let it go &amp;ndash; the tests still pass. The conversion was not instant; it required the same letting-go that management demands.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Builders</title>
+      <link>/voices/builders.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/voices/builders.html</guid>
+      <description>&lt;p&gt;These are the people building the coding agents, harnesses, and infrastructure that everyone else uses. Their perspective is shaped by implementation reality: what actually works at scale, what breaks in production, and what the architecture looks like from the inside.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;the-moat-analyst&#34;&gt;The moat analyst&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;tptacek&lt;/strong&gt; argues that there is no such thing as a frontier agent. While frontier models require massive resources to train, any proficient developer could build a competitive coding agent. The moat, if it exists, is in the engineering of the harness &amp;ndash; not in model access. This reframes the competitive landscape: agents are democratizable in a way that models are not.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

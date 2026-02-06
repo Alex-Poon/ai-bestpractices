@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Does AI Prevent Junior Developer Skill Formation? | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="The evidence on whether AI coding tools help or harm the development of programming expertise.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Does AI Prevent Junior Developer Skill Formation?">
+  <meta property="og:description" content="The evidence on whether AI coding tools help or harm the development of programming expertise.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-debates"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../debates/index.html">Debates</a></li>
+      
+    
+    <li aria-current="page">Does AI Prevent Junior Developer Skill Formation?</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="debate-header">
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/skill-formation.html" class="tag-pill">skill-formation</a>
+  
+  
+  
+  
+  <a href="../tags/learning.html" class="tag-pill">learning</a>
+  
+  
+  
+  
+  <a href="../tags/junior-developers.html" class="tag-pill">junior-developers</a>
+  
+  
+  
+  
+  <a href="../tags/education.html" class="tag-pill">education</a>
+  
+  
+</div>
+
+
+        <h1 class="debate-question">Does AI Prevent Junior Developer Skill Formation?</h1>
+        
+        <p class="debate-framing">The evidence on whether AI coding tools help or harm the development of programming expertise.</p>
+        
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">11 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+      </header>
+
+      <div class="article-content">
+        <h2 id="the-question">The Question</h2>
+<p>In early 2026, Anthropic published a study on AI-assisted coding that confirmed what many practitioners already suspected: developers using AI tools showed impaired conceptual understanding and weaker debugging skills compared to those who struggled through problems manually. The study landed in a community already anxious about what AI means for the next generation of programmers.</p>
+<p>The implications are profound. If AI tools prevent junior developers from forming the deep skills that senior developers rely on, the industry faces a compounding problem. Today&rsquo;s juniors become tomorrow&rsquo;s seniors. If they never develop the judgment to direct and verify AI output, who reviews the code? Who diagnoses production failures? Who makes architectural decisions that AI can&rsquo;t yet make well?</p>
+<p>But the counter-argument is equally compelling: AI may be the most powerful learning tool ever created, offering personalized tutoring, instant explanations, and the ability to explore ideas at a pace impossible with textbooks alone. The question isn&rsquo;t whether AI affects learning &ndash; it clearly does &ndash; but whether the net effect is positive or negative, and for whom.</p>
+<h2 id="side-a-yes-ai-prevents-deep-learning">Side A: Yes, AI Prevents Deep Learning</h2>
+<h3 id="the-research-evidence">The Research Evidence</h3>
+<p>Anthropic&rsquo;s own study provides the strongest evidence for this side. Using Python&rsquo;s trio library and GPT-4o, the study found that AI assistance impaired conceptual understanding and debugging ability without providing significant efficiency gains. This wasn&rsquo;t a survey of opinions &ndash; it was a controlled experiment measuring actual learning outcomes.</p>
+<p>The study resonated because it validated what practitioners had been observing informally. Additional research from 2024 found that reliance on LLMs correlates with degraded critical problem-solving skills, while using LLMs as a supplementary learning aid showed no negative impact. The distinction is crucial: the tool isn&rsquo;t inherently harmful, but the mode of use &ndash; full reliance versus supplementary assistance &ndash; determines the outcome.</p>
+<blockquote>
+<p>&ldquo;I&rsquo;ve stopped dreaming about tough problems.&rdquo; &ndash; postalcoder</p>
+</blockquote>
+<p>This comment captures an emotional dimension that studies can&rsquo;t measure. With older, weaker AI models, developers still had to do roughly 30% of the thinking themselves, which forced genuine engagement with the problem. As models have improved, they&rsquo;ve eliminated the productive struggle that leads to deep understanding and creative satisfaction. The models are now so capable that they short-circuit the learning process entirely.</p>
+<h3 id="the-comprehension-gap">The Comprehension Gap</h3>
+<p>Multiple practitioners describe a specific failure mode: AI-written code that they cannot understand after even a short time away from it.</p>
+<p>One developer reported that when returning to AI-written code after two weeks, it was incomprehensible &ndash; while self-written code from years ago remained immediately clear. This asymmetry suggests something fundamental about the learning that happens during manual implementation. Writing code creates a mental model; accepting generated code does not.</p>
+<blockquote>
+<p>&ldquo;You can&rsquo;t vibe code an app and get smarter.&rdquo; &ndash; suralind</p>
+</blockquote>
+<p>Another developer described vibe-coding a Toggl Track clone. The app worked perfectly, but if they had to rewrite the PDF generation component themselves, they wouldn&rsquo;t have a clue where to start. The functional output was there; the learning transfer was zero.</p>
+<p>This has cascading consequences. Without deep understanding of their own codebase, developers can&rsquo;t effectively debug issues, extend functionality in ways the AI doesn&rsquo;t anticipate, or make informed architectural decisions. They become dependent on the AI not just for initial implementation but for every subsequent modification.</p>
+<h3 id="the-calculator-trap">The Calculator Trap</h3>
+<p>A recurring analogy compares AI coding to calculators in mathematics &ndash; but skeptics argue the analogy actually supports their case rather than undermining it.</p>
+<p>The standard argument: just as calculators didn&rsquo;t eliminate the need for mathematical understanding, AI won&rsquo;t eliminate the need for programming skills. But critics point out that calculators handle well-defined operations with deterministic outputs. AI code generation is probabilistic, non-deterministic, and produces output that requires judgment to evaluate. The level of understanding needed to verify AI output may be higher, not lower, than what&rsquo;s needed to write code manually.</p>
+<p>One commenter invoked Kernighan&rsquo;s observation that debugging is twice as hard as writing code. If AI writes at maximum cleverness, humans face an impossible debugging load. Adding AI-assisted debugging risks creating additional layers of complexity &ndash; balls of mud built on balls of mud.</p>
+<h3 id="the-organizational-dysfunction">The Organizational Dysfunction</h3>
+<p>Beyond individual skill formation, several practitioners describe how AI adoption creates dysfunctional organizational dynamics for junior developers.</p>
+<blockquote>
+<p>&ldquo;Leadership will care less and less about people.&rdquo; &ndash; boredemployee</p>
+</blockquote>
+<p>Management increasingly pushes an &ldquo;everyone should be able to do everything&rdquo; culture with the unspoken assumption that LLMs bridge skill gaps. Junior developers are expected to touch infrastructure, data pipelines, and frontend code they&rsquo;ve never learned, because the AI is supposed to fill in the knowledge. This creates unsustainable pressure on people who are still building fundamental competence.</p>
+<p>One developer described a workplace where project managers now report bugs with Claude&rsquo;s suggested fix already pasted in. The developer&rsquo;s job has been reduced to copying what Claude said and making sure it compiles. There&rsquo;s no debugging, no problem-solving, no learning &ndash; just a human rubber stamp on AI output.</p>
+<h3 id="the-foreign-language-analogy">The Foreign Language Analogy</h3>
+<p>Perhaps the most intuitive framing comes from comparing AI reliance to language learning.</p>
+<blockquote>
+<p>&ldquo;If you use Google Translate instead of your brain, you won&rsquo;t relearn the language at all.&rdquo; &ndash; runarberg</p>
+</blockquote>
+<p>A junior developer using AI from day one never builds the neural pathways that come from struggling with a problem. Like muscles that atrophy without exercise, programming skills that are never practiced never develop. And unlike a foreign language, where you might survive with translation tools, professional software development requires the deep fluency that only comes from practice.</p>
+<p>Several senior developers explicitly worry about this on behalf of their junior colleagues. One described watching a senior developer use AI effectively because of their strong code quality judgment, while fearing that junior developers relying on the same tools would never develop that judgment in the first place.</p>
+<h2 id="side-b-ai-accelerates-learning-when-used-intentionally">Side B: AI Accelerates Learning When Used Intentionally</h2>
+<h3 id="the-private-tutor-effect">The Private Tutor Effect</h3>
+<p>The strongest argument for AI as a learning accelerator comes from developers who use it not as a code generator but as a tutor.</p>
+<p>One developer used AI to walk through potential issues with a CMake build system they&rsquo;d never encountered before, having the model explain what they got wrong at each step. They reported this was far more effective than stumbling alone through documentation. The AI provided personalized, context-aware explanations at exactly the right level of abstraction &ndash; the kind of tutoring that was previously available only to those lucky enough to have patient mentors.</p>
+<blockquote>
+<p>&ldquo;I have never been learning as much as with AI.&rdquo; &ndash; epolanski</p>
+</blockquote>
+<p>This developer uses AI actively for comprehension-building, not just code generation, and reports accelerated learning. The key distinction is engagement: asking follow-up questions, requesting explanations, and maintaining active participation in the problem-solving process. The AI becomes a Socratic partner rather than an answer key.</p>
+<p>Martin Fowler&rsquo;s &ldquo;learning loop and LLMs&rdquo; framework, referenced by multiple commenters, captures this well: use LLMs as an assistant to understanding, but the goal must always be understanding. Only real struggle builds skill &ndash; but AI can make the struggle more productive, not less.</p>
+<h3 id="the-amplifier-thesis">The Amplifier Thesis</h3>
+<p>A nuanced position holds that AI amplifies existing intent. If a developer wants to learn, AI accelerates learning. If a developer wants to ship without thinking, AI accelerates that too.</p>
+<blockquote>
+<p>&ldquo;AI is an amplifier of human intent.&rdquo; &ndash; james_marks</p>
+</blockquote>
+<p>Quality depends on whether the human wants maintainable code or just wants to ship. &ldquo;Vibe engineering&rdquo; &ndash; applying genuine engineering intent through AI tools &ndash; produces better results than vibe coding because the human&rsquo;s standards constrain the AI&rsquo;s output. The tool doesn&rsquo;t determine the outcome; the user&rsquo;s engagement level does.</p>
+<p>This suggests the problem isn&rsquo;t AI tools themselves but how they&rsquo;re introduced into learning environments. A developer who uses AI to explore three different approaches to a problem, comparing tradeoffs, may learn more in an hour than a developer who spends a day struggling with one approach. The speed of iteration enables broader exploration.</p>
+<h3 id="the-calculator-analogy-revisited">The Calculator Analogy Revisited</h3>
+<p>Those in this camp embrace the calculator comparison rather than rejecting it. You don&rsquo;t need to mentally compute complex arithmetic, but you need to know the answer should be approximately 10 million, not 10 thousand. High-level understanding sufficient to catch errors is what matters.</p>
+<blockquote>
+<p>&ldquo;I know how the code works at a high level&hellip; if the calculator gives me an answer much different, I know something went wrong.&rdquo; &ndash; jbellis</p>
+</blockquote>
+<p>This framing suggests that the right level of understanding is discriminative rather than generative. You don&rsquo;t need to write every line yourself, but you need to recognize when something is wrong. One developer maintained a regex library purely through test suites without fully understanding the implementation &ndash; correctness was grounded in verification, not comprehension.</p>
+<p>If this model holds, then AI doesn&rsquo;t prevent skill formation so much as shift which skills matter. Understanding system architecture, recognizing code smells, writing good tests, and evaluating tradeoffs become more important than knowing specific syntax or implementation patterns.</p>
+<h3 id="experience-compounds-with-ai">Experience Compounds with AI</h3>
+<p>A consistent pattern in practitioner reports: experienced developers benefit far more from AI tools than beginners. This argues that deep skills remain essential &ndash; AI is a multiplier, and multiplying by zero still gives zero.</p>
+<blockquote>
+<p>&ldquo;25+ years of experience + LLM = god mode.&rdquo; &ndash; mlrtime</p>
+</blockquote>
+<p>Developers with strong mental models know exactly what they want and can direct AI to produce it. They recognize when output is wrong, can articulate corrections precisely, and have the judgment to accept imperfect solutions that serve the broader goal. The AI handles the mechanical translation from intent to code; the human provides the intent, the verification, and the taste.</p>
+<p>This suggests a possible optimistic path: junior developers could use AI as a learning aid to reach the threshold of competence faster, then leverage it as a productivity multiplier once they have sufficient judgment. The key is ensuring they actually do the learning rather than skipping it.</p>
+<h3 id="the-gym-discipline">The &ldquo;Gym&rdquo; Discipline</h3>
+<p>Several practitioners propose intentional strategies to use AI productively while preserving skill development.</p>
+<blockquote>
+<p>&ldquo;Use LLMs for mind-numbing refactoring, but do the learning work yourself.&rdquo; &ndash; renegade-otter</p>
+</blockquote>
+<p>One developer maintains a strict work/hobby split: AI agents at work where velocity matters, manual coding for hobby projects where learning matters. This preserves learning, establishes new neural connections, and brings back the joy of discovery. Another uses spaced repetition tools to create flashcards for technical concepts, counteracting the forgetting that comes from AI handling implementation.</p>
+<p>The gym analogy resonates: nobody suggests that having a personal trainer means you don&rsquo;t need to lift the weights yourself. AI is the trainer, not the muscles. Using it effectively requires discipline about when to delegate and when to struggle.</p>
+<h2 id="where-it-stands">Where It Stands</h2>
+<p>The evidence tilts toward concern for junior developers but with important nuances:</p>
+<p><strong>Full reliance on AI impairs skill formation.</strong> This is supported by controlled research and widespread practitioner observation. Developers who accept AI output without engagement don&rsquo;t develop the debugging, architectural, and problem-solving skills that senior work requires.</p>
+<p><strong>Intentional AI-assisted learning can accelerate skill formation.</strong> When used as a tutor, explanation tool, or exploration aid &ndash; with the human actively engaging rather than passively accepting &ndash; AI can be a powerful learning accelerator. The mode of use matters more than the tool itself.</p>
+<p><strong>The distinction between learning aid and crutch is fragile.</strong> In practice, the line between &ldquo;using AI to learn&rdquo; and &ldquo;using AI to skip learning&rdquo; is easy to cross, especially under deadline pressure. Organizations that push AI adoption without intentional learning frameworks risk creating a generation of developers who can prompt but not program.</p>
+<p><strong>Experience remains the primary determinant of AI effectiveness.</strong> Senior developers consistently get better results from AI tools than juniors. This suggests that deep skills remain valuable &ndash; possibly more valuable than before &ndash; even if the specific skills that matter are shifting.</p>
+<p><strong>The organizational incentive problem is real.</strong> Companies face pressure to ship fast, and AI tools offer a tempting shortcut. Without deliberate investment in junior developer growth, the industry may be trading short-term velocity for long-term capability loss.</p>
+<h2 id="whats-still-unknown">What&rsquo;s Still Unknown</h2>
+<ul>
+<li><strong>How long does it take for AI-impaired skill formation to manifest?</strong> Anthropic&rsquo;s study measured short-term effects. Whether developers who use AI heavily for years can still develop deep expertise is unknown.</li>
+<li><strong>Can structured AI-assisted curricula preserve learning outcomes?</strong> Education research on AI in coding is in its infancy. Purpose-built learning environments that use AI strategically might avoid the pitfalls of unrestricted access.</li>
+<li><strong>Does the &ldquo;discriminative competence&rdquo; model hold at scale?</strong> The idea that you only need to recognize bad code, not write good code, is intellectually appealing but untested in production environments with complex failure modes.</li>
+<li><strong>Will the skills that matter shift faster than developers can adapt?</strong> If AI capabilities change every six months, the &ldquo;right&rdquo; level of human skill may be a moving target that nobody can reliably hit.</li>
+<li><strong>What happens to the industry in 5-10 years if current juniors don&rsquo;t develop deep skills?</strong> The compounding effect &ndash; juniors who never become capable seniors, leading to a shrinking pool of qualified reviewers and architects &ndash; is the most concerning scenario, but the timeline is unclear.</li>
+</ul>
+
+      </div>
+
+      
+      
+      <div class="debate-related">
+        <h3>Related Debates</h3>
+        <div class="debate-related-grid">
+          
+            
+            <a href="../debates/brain-atrophy.html" class="debate-related-link">Cognitive Dependency: Are Developers Losing Their Edge?</a>
+            
+          
+            
+            <a href="../debates/vibe-coding.html" class="debate-related-link">The Vibe Coding Question</a>
+            
+          
+        </div>
+      </div>
+      
+
+      <nav class="article-nav">
+        
+        <a href="../debates/engineering-vs-programming.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Engineering vs. Programming: Is This &#39;Real&#39; Development?</span>
+        </a>
+        
+        
+        <a href="../debates/vibe-coding.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">The Vibe Coding Question</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-question">The Question</a></li>
+    <li><a href="#side-a-yes-ai-prevents-deep-learning">Side A: Yes, AI Prevents Deep Learning</a>
+      <ul>
+        <li><a href="#the-research-evidence">The Research Evidence</a></li>
+        <li><a href="#the-comprehension-gap">The Comprehension Gap</a></li>
+        <li><a href="#the-calculator-trap">The Calculator Trap</a></li>
+        <li><a href="#the-organizational-dysfunction">The Organizational Dysfunction</a></li>
+        <li><a href="#the-foreign-language-analogy">The Foreign Language Analogy</a></li>
+      </ul>
+    </li>
+    <li><a href="#side-b-ai-accelerates-learning-when-used-intentionally">Side B: AI Accelerates Learning When Used Intentionally</a>
+      <ul>
+        <li><a href="#the-private-tutor-effect">The Private Tutor Effect</a></li>
+        <li><a href="#the-amplifier-thesis">The Amplifier Thesis</a></li>
+        <li><a href="#the-calculator-analogy-revisited">The Calculator Analogy Revisited</a></li>
+        <li><a href="#experience-compounds-with-ai">Experience Compounds with AI</a></li>
+        <li><a href="#the-gym-discipline">The &ldquo;Gym&rdquo; Discipline</a></li>
+      </ul>
+    </li>
+    <li><a href="#where-it-stands">Where It Stands</a></li>
+    <li><a href="#whats-still-unknown">What&rsquo;s Still Unknown</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

@@ -3,12 +3,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Claude Code gets native LSP support | AI Best Practices Knowledge Base</title>
-  <meta name="description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta name="description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
   <meta name="color-scheme" content="dark light">
 
   
   <meta property="og:title" content="Claude Code gets native LSP support">
-  <meta property="og:description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta property="og:description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
   <meta property="og:type" content="article">
 
   
@@ -37,14 +37,13 @@
       <span>AI Best Practices</span>
     </a>
     <div class="nav-links">
-      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
-      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
       <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
-      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
-      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
       <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
       <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
-      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
     </div>
     <div class="nav-actions">
       <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
@@ -114,7 +113,7 @@
 
   
 
-  <span class="meta-reading-time">3 min read</span>
+  <span class="meta-reading-time">34 min read</span>
 
   
   <span class="tier-badge tier-badge--2">Tier 2</span>
@@ -200,31 +199,1012 @@
 <p>&ldquo;They moved coding AIs from the IDE into a CLI and now are building an IDE around it&rdquo; — paxys</p>
 </blockquote>
 <h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
-<p>The discussion generated 511 points and 59 comments. Key themes:</p>
-<p><strong>CLI vs IDE debate</strong></p>
-<ul>
-<li><strong>anthonypasq</strong>: Questioned why people are bullish on CLI when IDE-based agents like Cursor get LSP features for free</li>
-<li><strong>paxys</strong>: Observed the irony of moving coding AI from IDE to CLI and then rebuilding IDE features in the CLI</li>
-<li><strong>PrimalPower</strong>: Shared their journey from JetBrains to considering CLI tools, noting IDE preferences are deeply personal</li>
-</ul>
-<p><strong>Technical implementation concerns</strong></p>
-<ul>
-<li><strong>spullara</strong>: Wished JetBrains had integrated refactoring tools into AI systems, noting LSP read-only capabilities are useful but mutation functions are needed</li>
-<li><strong>hexsprite</strong>: Pointed out the TypeScript LSP lacks diagnostics for real-time errors, still requiring separate linter runs</li>
-<li><strong>vexna</strong>: Reported LSP was completely broken in version 2.0.76 due to a missing function call in initialization</li>
-<li><strong>brianyu8</strong>: Built a custom skill teaching Codex CLI to use LSP for rename and move operations, showing the composability potential</li>
-</ul>
-<p><strong>Ecosystem and alternatives</strong></p>
-<ul>
-<li><strong>dvtkrlbs</strong>: Noted that OpenCode had LSP support for at least 6 months prior, expressing surprise at the slower pace of closed-source tools</li>
-<li><strong>CharlesW</strong>: Provided practical setup instructions since official documentation was hard to find</li>
-<li><strong>stared</strong>: Shared a community directory of Claude Code plugins at claude-plugins.dev</li>
-</ul>
-<p><strong>Philosophical perspectives</strong></p>
-<ul>
-<li><strong>ed_blackburn</strong>: Argued LLMs waste tokens doing work that deterministic tools handle better, advocating for using the best tool for each job</li>
-<li><strong>zby</strong>: Proposed LSPs should expose their APIs through shell commands, making integration with any LLM trivial</li>
-</ul>
+<p><em>259 comments total</em></p>
+<p><strong>spullara</strong>: I really can&rsquo;t understand why JetBrains hasn&rsquo;t integrated its refactoring tools into the AI system. Really missed the boat on making their platform transformational for AI coding. Imagine how much&hellip;</p>
+<blockquote>
+<p><strong>conradfr</strong>: Jetbrains seems a bit lost these days. Look at that very recent screw up [0]. I thought about moving after 10+ years when they abandoned the commit modal, and jacked up the plan prices, but I barely&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>_virtu</strong>: The commit workflow was what kept me locked in to the ecosystem for so long. LazyGit was so good that it convinced me I didn’t need JetBrains anymore. If you love the workflow with JB for commits&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>KptMarchewa</strong>: I&rsquo;m kinda reading this with disbelief. Are there people whose primary use case for IDE is&hellip; git gui?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>notpushkin</strong>: Or if you prefer a GUI (still separate app, so works anywhere, too): <a href="https://git-cola.github.io/">https://git-cola.github.io/</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>gizzlon</strong>: Just found LazyGit as well. it&rsquo;s amazing! Also like Sublime Merge, if you want a GUI (paid though)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>nikanj</strong>: Fortunately JB broke that addiction for my by first moving the commit dialog behind an option, and then removing it completely. If I have to learn a new workfrow, I might as well learn a new tool</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>tracker1</strong>: I mostly rely on the CLI for my git operations anyway.  It does make it hard to support others who are using the tools (VS/code/jetbrains, etc) though, since I don&rsquo;t really &ldquo;get&rdquo; the workflows in the&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>thiht</strong>: &gt; I barely understand how to commit things in Vscode anyway Yeah that’s on you not even trying. Source control panel, add files or chunks, write message, commit.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mzhaase</strong>: You can put it all on a hotkey.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>sesm</strong>: Did they abandon the commit modal? In 2024 line it&rsquo;s disabled by default (in favor of tool window) but you can enable it back.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jghn</strong>: They have a plugin for the old behavior</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>krzyk</strong>: Doesn&rsquo;t Jetbrains MCP (it is built on n, you need just to enable it) provide tool for refactoring?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>taytus</strong>: I&rsquo;ve been a paying user for years. I don&rsquo;t see the point anymore since claude code.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>giancarlostoro</strong>: I have been leaning towards Zed.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>parpfish</strong>: Jetbrainz needs to give up on Junie and their in house ai and focus on integrating with the established tools. If they don’t, VS code will consume them.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>atombender</strong>: They&rsquo;ve already done that. After the Junie fiasco, they pivoted to &ldquo;AI Assistant&rdquo;, where Junie is just another provider alongside Anthropic and OpenAI. In theory, you have Claude Code inside&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mirzap</strong>: Yeah, it&rsquo;s quite odd that they can&rsquo;t get AI tools to work, especially considering so many OSS tools available that work surprisingly well (cline, opencode, etc.).</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>dvtkrlbs</strong>: They already kinda did. They brough ACP support which allows you to somewhat integrate Claude Code, Gemini CLI or OpenCode they also recently brought BYOK support so you can use an existing provider&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>CuriouslyC</strong>: ACP seems super under the radar. It has some support, but it got merged into A2A, which I don&rsquo;t hear anyone talking about, so it seems like it&rsquo;s going to die on the vine.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>octopoc</strong>: I really enjoy Junie, I find it working better out of the box than Claude code. I do wish they integrated their amazing refactoring tools into it though.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bikelang</strong>: Is there something with the Claude code plugin for JB IDEs you don’t like? Is there something the VSCode Claude Code plugin does better?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>wiseowise</strong>: I can’t speak for Claude, but Gemini is laughably bad. Like, does someone who develop this shit ever tried to use it? Is it all crab hands that only use mouse? It’s a single line change to switch&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>cedws</strong>: If not VSCode then Zed. It feels like Zed is what they wanted Fleet to be.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>reactordev</strong>: When you become complacent and your ego isn’t checked, you think you have the hottest thing. Hubris is hard. They had a pretty big moat that they let vscode eat away at. I don’t think they saw any of&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>dist-epoch</strong>: They are trying now to create an agent-first IDE. I think they are too big to move on this. <a href="https://blog.jetbrains.com/fleet/2025/12/the-future-of-fleet">https://blog.jetbrains.com/fleet/2025/12/the-future-of-fleet</a>&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>reactordev</strong>: &gt;Over time, we learned that having two general-purpose IDE families created confusion and diluted our focus. And not the dozens of others you have? Do you not consider them also separate families?&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>edelhans</strong>: They just announced the end of their fleet editor</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>wiseowise</strong>: So many salty fools who bought into “professional|enterprise  grade ide” cool aid. Glad to see upstarts eating their lunch, they’ve been complacent for far too long.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>stusmall</strong>: I&rsquo;ve been a massive JetBrains fanboy for a bit over a decade.  I finally let my subscription lapse this month.  It isn&rsquo;t so much about AI integrations but overall competitors have caught up.  The&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jayd16</strong>: Where are you getting the concept of ego and hubris from?  I don&rsquo;t really see much personification of JB&rsquo;s public facing identity.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>wiseowise</strong>: They’ve also dropped a huge ball with resisting LSP for Kotlin, thinking that they could lock developers into their ecosystem. Well, now (hopefully) it is too late, karma is a b*tch.</p>
+</blockquote>
+<blockquote>
+<p><strong>eterm</strong>: I completely agree. Likewise I&rsquo;m amazed Microsoft hasn&rsquo;t done it themselves for Roslyn and Copilot. Roslyn analyzers are so incredibly powerful, and it&rsquo;s being ignored. An explainer for others: Not&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>remus</strong>: In a similar vein, I really struggle to understand why copilot is so crap when writing SQL and I&rsquo;m connected to the database. The database has so much context (schema names, column names, constraints&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>csomar</strong>: No one is interested to solve hard problems. The broad industry got lucky with LLMs and everyone is now blindly burning capital at this. If you think they can&rsquo;t be that stupid remember the covid&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>joseda-hg</strong>: I dunno, SQL Server Management Studio regularly drops the ball on autocomplete ever since I&rsquo;ve started using it It was one of the things that brought me to DataGrid in the first place</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>cog-flex</strong>: I hope your current boss appreciates who they have.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>neutronicus</strong>: Same shit, but Microsoft and Visual Studio. Like, the AI can&rsquo;t jump to definition! What are we fucking doing!?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>xnorswap</strong>: Exactly! This is why LSP support should be huge, and I&rsquo;m surprised it&rsquo;s just a line-item in a changelog.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>atmosx</strong>: Is Roslyn available only for .NET?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>eterm</strong>: Yes it&rsquo;s the name of the .NET compiler API. It was code-named to disambiguate it from the old compiler. But Roslyn is almost 15 years old now, so I can&rsquo;t call it new, but it&rsquo;s newer than the really&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>WahyuS002</strong>: It really does feel like the Innovator&rsquo;s Dilemma playing out for JetBrains. They have the best semantic understanding of code (PSI) locked away in their proprietary engine, but they seem too attached&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>kachapopopow</strong>: I am trying my damn hardest to drop jetbrains, the only thing they have a stronglehold over is their amazing rust analyzer in rustrover. And yah I agree that they are dropping the ball on providing&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>cherryteastain</strong>: What does rustrover do that rust-analyzer itself cannot?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bravit</strong>: Hi! I’m from the RustRover team. RustRover is a full-blown IDE, not just a code analysis engine like rust-analyzer. In addition to Rust code analysis, RustRover provides many features, including code&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>kachapopopow</strong>: rust analyzer fails 13 lines into my main.rs file because I use something rust analyzer just doesn&rsquo;t work with that well, also it&rsquo;s much faster</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>ch2026</strong>: They wanted to, but they’re still waiting for the IDE itself to simply load.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>clintonb</strong>: You joke and folks downvote, but this is my biggest issue with WebStorm. I&rsquo;m seriously considering switching for the first time in 16 years. Zed is quite snappy. The Claude Code integration in VS&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Dayshine</strong>: Zed is snappy in the same way that notepad ++ is snappy: If you don&rsquo;t support 10% of language features you can avoid the hard work. Unfortunately this means that non trivial projects have false&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>johnebgd</strong>: I bought the JetBrains AI last year to support them even though it wasn’t good. It never improved. I didn’t renew. Now, I’m questioning if their tooling is something I’ll even renew at all. All of&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>rkomorn</strong>: Being a JetBrains customer lately feels like watching everybody else race by in their cars while your horse is trying to eat the carrot in a grocery store ad on the side of a bus stop I get it,&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>MischaPanch</strong>: Fortunately, Serena has recently been extended to use JetBrains instead of LSP (via a plugin), solving exactly this issue. LSP will never be as good as JetBrains&rsquo; parsers&hellip;.</p>
+</blockquote>
+<blockquote>
+<p><strong>vb-8448</strong>: I think they are completely screwing up the AI integration. After years of JetBrains PyCharm pro I&rsquo;m seriously considering switch to cursor.  Before supermaven being acquired, pycharm+supermaven was&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>cyberax</strong>: JetBrains has AI support. It&rsquo;s a bit janky right now, but it is definitely getting better. They have an MCP server, but it doesn&rsquo;t provide easy access to their code metadata model. Things like &ldquo;jump&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Numerlor</strong>: The polish is what they seem to have trouble with lately. I much prefer their ides to say vscode, but their development has been a mess for a while with half-assed implementations and long standing&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>pqn</strong>: I&rsquo;m biased (work at Cognition) but I think it&rsquo;s worth giving the Windsurf JetBrains plugin a try. We&rsquo;re working harder on polish these days, so happy to hear any feedback.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>spullara</strong>: augmentcode has a great plugin for pycharm (and all jetbrains products) if you don&rsquo;t want to throw the baby out with the bathwater.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>vb-8448</strong>: Actually currently I&rsquo;m using augment, it&rsquo;s good, but still subpar when compared to old supervmaven or cursor. One thing that I&rsquo;m really missing is the automatic cursor move.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>exceptione</strong>: Yes. It is so easy and cheap to refactor in a strongly typed language&ndash;no AI needed. And such a waste of electricity, chips, water and money to let some AI model give it a shot. This   something we&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>dfaiv</strong>: Shameless repost - I&rsquo;m so sad that JetBrains seems to be floundering. VS Code still doesn&rsquo;t match it in little &ldquo;oh my gosh, how did it know I wanted that&rdquo; moments, but the whole JB experience is now&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>raincole</strong>: It&rsquo;s interesting that everyone is saying &ldquo;please don&rsquo;t shove AI down our throat!&rdquo;. But when a company actually takes this approach (JetBrains IDEs treat AI just as a tool at the sidebar), everyone is&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>unfunco</strong>: JetBrains are shoving it down our throats though, I have to uninstall their AI plugin after every IDE update, CoPilot suddenly stopped working? Oh, it&rsquo;s because JetBrains has enabled their AI&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>coder543</strong>: Your logical fallacy is assuming two different groups of people are the same people, which never leads to productive conversation.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>wiseowise</strong>: &gt; It&rsquo;s interesting that everyone is saying &ldquo;please don&rsquo;t shove AI down our throat!&rdquo;. Ever thought that two vocal minorities might not overlap, or even represent opinion of a bigger group?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jayd16</strong>: Yeah, I really appreciate that JB has not made an utter mess of my IDE and has not forced anything on me.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>lowsong</strong>: They&rsquo;ve tried to play it both ways. Not AI enough for the AI fanboys, but want to keep a toe in there for everyone else. They&rsquo;d be better placed rejecting AI entirely, and then when the bubble pops&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>arm7</strong>: One thing you can still do is use Windsurf&rsquo;s agent, Cascade, inside Jetbrains: <a href="https://windsurf.com/plugins/jetbrains">https://windsurf.com/plugins/jetbrains</a></p>
+</blockquote>
+<blockquote>
+<p><strong>dostick</strong>: Jetbrains+refactoring - don’t get your hopes up. In Android Studio refactoring was broken for 5+ years and ticket is one of most voted. And nothing happened.</p>
+</blockquote>
+<blockquote>
+<p><strong>anthonypasq</strong>: there is a jetbrains MCP server that gives Claude Code access to this sort of thing, but I think its still fairly jank and bloats context.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>shermantanktop</strong>: I never got it to work, but in the process of trying it became obvious that it’s an under-resourced feature.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>derfurth</strong>: I had issues in the beginning, now it works fine, Claude is using it all the time to find things in my codebase.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>dionian</strong>: it would hang for me half the time , the last  time i tried it (3-4months ago?). when it worked, it seemed really good. but it hung often. time to try again</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>whatever1</strong>: Jetbrains is unforgivable for missing the remote development train. People have been developing on remote huge machines for decades. It’s just the ones who did either were terminal wizards, or they&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>troupo</strong>: &gt; I really can&rsquo;t understand why JetBrains hasn&rsquo;t integrated its refactoring tools into the AI system. Because their refactoring tools are not a &ldquo;slap on a couple of commands and delegate actual work&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>_virtu</strong>: I’ve been a JetBrains toolbox subscriber for over a decade. I used to run trainings for new hires to get them up to speed on the eco system as our team would provide licenses. I say all of this&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>porker</strong>: &gt; They’ve dropped the ball over the past five years. Part of me thinks it was the war in Ukraine that did them in. I&rsquo;m also a subsciber for over a decade, and came here to say the same thing. I don&rsquo;t&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>insane_dreamer</strong>: can&rsquo;t speak for other languages, but the python LSP in PyCharm is miles ahead of any other lsp out there (and I&rsquo;ve tried them all). I give <code>ty</code> the best chance of catching up to them, but they&rsquo;re&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>rurban</strong>: Just customize emacs. Their refactoring and AI packages are good, and it&rsquo;s faster.</p>
+</blockquote>
+<blockquote>
+<p><strong>0x696C6961</strong>: LSP supports refactoring commands</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>joshribakoff</strong>: But Claude Code does not, which is the point you have missed</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>dist-epoch</strong>: People keep saying how amazing IntelliJ is at refactoring, but then you realize the talk about &ldquo;rename thing&rdquo; and &ldquo;extract function&rdquo;. This is 5% of what refactoring is, the rest is big scale&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Tarean</strong>: Intellij also has structural search and replace, where you can do full subgraph isomorphism search in the code and with patterns like     $x$.foo($args$) Where you add filters like x&rsquo;s type is a&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>spullara</strong>: I think that the commonly used refactoring functions would make a big difference and right now most IDEs are pretty bad at them (especially across all the languages jetbrains supports):   - rename&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>marwamc</strong>: Agentic refactoring was such a chore I ended up building this for my refactoring workflows. <a href="https://gitlab.com/rhobimd-oss/shebe/-/blob/main/docs/guides">https://gitlab.com/rhobimd-oss/shebe/-/blob/main/docs/guides</a>&hellip;&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jtms</strong>: You’re missing the point, it’s about those tools drastically improving context window management. When you want to tackle large refactors, Claude Code will blow tens of thousands of tokens just&hellip;</p>
+</blockquote>
+</blockquote>
+<p><strong>CharlesW</strong>: It&rsquo;s strangely difficult to find official information about this, but here&rsquo;s what I&rsquo;ve learned: • Use <code>/plugin</code> to open Claude Code&rsquo;s plug-in manager • In the Discover tab, enter <code>lsp</code> in the search&hellip;</p>
+<blockquote>
+<p><strong>JamesSwift</strong>: Yeah, I posted here because I was completely blindsided when my claude asked if I wanted to install a go lsp. I didnt even know that was a thing. A little googling led to this changelog from 3 days&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bredren</strong>: I got an unexpected offer to install the LSP plugin for swift-lsp at 6:30pm pst on 12/19pm and again yesterday afternoon the text reads: LSP Plugin Recommendation LSP provides code intelligence like&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ako</strong>: I had a conversation with Claude code 2 weeks ago where it mentioned early support for LSP had been added into Claude code. Have been working on a LSP for a custom language since then.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>tomashubelbauer</strong>: I am on the latest version of Claude Code and nothing comes up when I follow this and search for &ldquo;mcp&rdquo;. Looks like this feature is quite undercooked at the moment. I&rsquo;m hoping for a more&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>anamexis</strong>: Perhaps because you are searching for &ldquo;mcp&rdquo; and not &ldquo;lsp&rdquo;?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>tomashubelbauer</strong>: LOL yeah that would be a solid guess but I just sanity checked and I messed it up only in the comment, in Claude Code when I search for &ldquo;lsp&rdquo; I still get no matches.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>Maxious</strong>: If you want to add custom lsps, they need to be wrapped in a Claude code plugin which is where the little bit of actual documentation can be found <a href="https://code.claude.com/docs/en/plugins-reference">https://code.claude.com/docs/en/plugins-reference</a></p>
+</blockquote>
+<blockquote>
+<p><strong>bicx</strong>: Thanks! I saw typescript-lsp in the plugins list, but I wasn&rsquo;t sure if that was related.</p>
+</blockquote>
+<blockquote>
+<p><strong>xnorswap</strong>: That works, but even after installing the plugin, it doesn&rsquo;t seem to run the language server itself, so it doesn&rsquo;t seem to do anything in the terminal version of claude-code. I&rsquo;d be disappointed if&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>kasey_junk</strong>: Have you figured out what triggers it?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>CharlesW</strong>: No, and it looks like this functionality was released/announced prematurely: <a href="https://github.com/anthropics/claude-code/issues/14803#issue">https://github.com/anthropics/claude-code/issues/14803#issue</a>&hellip; <a href="https://github.com/anthropics/claude-code/issues/13952#issu">https://github.com/anthropics/claude-code/issues/13952#issu</a>&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>JamesSwift</strong>: My permissions prompt isnt quite working right with it either. It pops up but isnt blocking, so claude continues editing and asking for other permissions which replaces this prompt. Then when you&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>monkpit</strong>: Go to /plugins, then marketplaces, then select official and update marketplace. This did it for me.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>harmath</strong>: this!</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>brianyu8</strong>: I am super bullish on claude code / codex cli + LSP and other deterministic codemod and code intelligence tools. I was playing around with codex this weekend and honestly having a great time (my&hellip;</p>
+<blockquote>
+<p><strong>lionkor</strong>: OpenAI engineer fails to rename references because his F2 key has been replaced with the Copilot button? No LSP support is wild.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>shimman</strong>: This is something I notice often when using these tools (if this is what you are referring too). Like they will grep entire code bases to search for a word rather than search by symbol. I suppose&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>nvarsj</strong>: Only if they are not told how to search the codebase efficiently. All you need is an MCP server for code search. There&rsquo;s even LSP backed MCP servers now.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>qiine</strong>: &gt; grep is one of the worse ways to refactor Hum? care to explain this?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>shepherdjerred</strong>: Are you having a positive experience with Codex compared to Claude Code? Codex in my brief experience was&hellip; not good w/ 5.1</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>cube2222</strong>: Just to provide another datapoint - tried codex September / October after seeing the glowing reviews here, and it was, all in all, a huge letdown. It seems to be very efficient context-wise, but at&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>linsomniac</strong>: I was luke-warm about codex when I tried it 2-3 months ago, but just recently tried it again last week, running it against claude code, both of them running against the same todo list to build a&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>fluidcruft</strong>: Similar experience and timeline with codex, but tried it last week and it&rsquo;s gotten much better in the interim. Codex with 5.2 does a good job at catching (numerical) bugs that Opus misses. I&rsquo;ve been&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>allisdust</strong>: Another anecdote/datapoint. Same experience. It seem to mask a lot of bad model issues by not talking much and overthinking stuff. The experience turns sour the more one works with it. And yes +1 for&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>HarHarVeryFunny</strong>: What are some of the use cases for Claude Code + LSP ? What does LSP support let you do, or do better, that Claude Code couldn&rsquo;t do by itself ?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>kohlerm</strong>: I checked the codex source code  a few months ago and the implementation was very basic compared to opencode</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>theshrike79</strong>: It goes like this: Codex is an outsourcing company, you give specs, they give you results. No communication in between. It&rsquo;s very good at larger analysis tasks (code coverage, health etc). Whatever&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>aschobel</strong>: I’m basically only using the Codex CLI now. I switched around the GPT-5 timeframe because it was reliably solving some gnarly OpenTelemetry problems that Claude Code kept getting stuck on. They feel&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong><strong>mharrison</strong></strong>: I&rsquo;ve gone it works wonderful for 5.2. I think chatgpt plus is at the top of the weekly AI rolling wars. Most bang for the buck.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>frays</strong>: Interesting to see that you work at OpenAI but had to build a skill like this yourself. Surprised that you don&rsquo;t have internal tools or skills that could do this already! Shows how much more work&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>voiper1</strong>: My theory is that even if the models are frozen here, we&rsquo;ll still spend a decade building out all the tooling, connections, skills, etc and getting it into each industry. There&rsquo;s so much <em>around</em> the&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>nonethewiser</strong>: Agree completely. It&rsquo;s already been like this for 1-2 years even. Things are finally starting to get baked in but its still early. For example, AI summaries of product reviews, gemini youtube video&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>NitpickLawyer</strong>: &gt; Shows how much more work there is still to be done in this space. This is why I roll my eyes every time I read doomer content that mentions an AI bubble followed by an AI winter. Even if (and&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>agumonkey</strong>: One thing though, if the slowdown is too abrupt, it might forbid openai, anthropic etc to keep financially running datacenters for us to use.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>imiric</strong>: The idea that this technology isn&rsquo;t useful is as ignorant as thinking that there is no &ldquo;AI&rdquo; bubble. Of course there is a bubble. We can see it whenever these companies tell us this tech is going to&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jameslk</strong>: Useful technology can still create a bubble. The internet is useful but the dotcom bubble still occurred. There’s expectations around how much the invested capital will see a return and growing&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>shermantanktop</strong>: Cobbler’s children…</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>rglynn</strong>: I&rsquo;ve had a number of occasions where claude (et al.) have incorrectly carried out a task involving existing code (e.g. create a widget for foo, following bar&rsquo;s example). In these cases the way I&hellip;</p>
+</blockquote>
+<p><strong>dvtkrlbs</strong>: What boggles my mind is. I&rsquo;ve been using OpenCode [1] which had this future for at least 6 months. I sometimes baffled by the slow progress of closed source software. Also highly recommend OpenCode&hellip;</p>
+<blockquote>
+<p><strong>jwr</strong>: I must be doing something wrong, because I can&rsquo;t get OpenCode to actually do anything useful, and not for lack of trying. Claude code gets me great results instantly, opencode (if I can&rsquo;t make it&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>richardgill88</strong>: &gt; Is it the prompt that Anthropic has been polishing in Claude code for so long? I think so. The opencode TUI is very good, but whenever I try it again the results are subjectively worse than Claude&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ako</strong>: There’s a ton of difference provided on top of the LLMs, especially the tools that allow LLMs to engineer their own context, validate generated code, test generate code, research code bases,&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>dvtkrlbs</strong>: I only played with Claude Code briefly but my experience with OpenCode was amazing. My experience it works the best with Claude especially Sonnet models (I use it with Claude Sonnet 4.5 with my&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>rhodysurf</strong>: Claude models in opencode use the Claude code system prompt, are you comparing Claude code to opencode with non anthropic models?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jwr</strong>: Yes.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>linkage</strong>: You can move quite fast when you don&rsquo;t have to spend half a week persuading 7 stakeholders that something is worth doing, then spend a week arguing about sprint capacity and roadmap disruptions.</p>
+</blockquote>
+<blockquote>
+<p><strong>khimaros</strong>: preferring open source and provider agnostic tools, i really want to like OpenCode. i used it exclusively for months, but sadly it has major usability issues which switching to Claude Code solved: -&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>resize2996</strong>: tbf, OpenCode&rsquo;s development cycle seems pretty fast. If someone announced AGI in the morning, I&rsquo;d bet they have it integrated by EOD. I also use OpenCode extensively, but bounce around to test out&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>troyvit</strong>: I just started playing with OpenCode over the weekend after working with aider and aider-ce, and I like a lot of things about it, though I miss some aider features. What other code helpers have you&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>resize2996</strong>: The big players (Gemini, Claude Code, Codex) and then aider and opencode for open source. I keep my setup modular/composable so I can swap pieces and keep it usable by anyone (agent, human, time&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>SamDc73</strong>: I do like OpenCode, but I get small bugs here and there like flickering, freezing and sometimes just crash all together. But their configuration setup is the easiest and best out of all the other CLI&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>mgraczyk</strong>: One answer to questions like this is that Claude Code has orders of magnitude more paying users, so it&rsquo;s more important to get things right and ship carefully</p>
+</blockquote>
+<blockquote>
+<p><strong>kbar13</strong>: i&rsquo;m not sure i agree with the assessment that claude code has been moving slowly&hellip; but it is cool that opencode has had this for a while. will def check it out</p>
+</blockquote>
+<p><strong>ed_blackburn</strong>: I literally said this three days ago: <a href="https://hachyderm.io/@ed_blackburn/115747527216812176">https://hachyderm.io/@ed_blackburn/115747527216812176</a> But in all seriousness, LLMs have their strengths but we’re all wasting tokens and burning the planet&hellip;</p>
+<blockquote>
+<p><strong>grimgrin</strong>: it&rsquo;s likely been on their mind for <em>a while</em> those wanting lsp support in the loop have been using things such as: <a href="https://github.com/oraios/serena">https://github.com/oraios/serena</a></p>
+</blockquote>
+<blockquote>
+<p><strong>dcreater</strong>: I hope in a couple of years the industry would have outgrown this adolescene and we&rsquo;ll all collectively look back at this horribly inefficient and poorly engineered tooling with disdain. We need to&hellip;</p>
+</blockquote>
+<p><strong>anthonypasq</strong>: I find it so weird that people are so bullish on the CLI form factor when they are literally just adding functionality that IDE based agents get for free. Stuff like improved diff tools and LSP&hellip;</p>
+<blockquote>
+<p><strong>zingar</strong>: IDEs have LSP support because they have a plugin that connects to an LSP server. The plugin is a very small piece of code compared to the language server. Creating a new client is not reinventing the&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>blitz_skull</strong>: I have not yet had an IDE-based agent give anything close to the CLI Claude Code experience. So until it manages to do that, I’ll keep being bullish on what works.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>dustypotato</strong>: Google Antigravity is pretty much close to Claude Code imo</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Jgrubb</strong>: Including the Claude Code v2 experience in VSCode. Thank you, whoever added the setting to revert back to the terminal experience.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>anthonypasq</strong>: nothing about that is because its a cli app</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>ramoz</strong>: I just saw a video of non-technical person describing how they use claude code to automate various workflows. They actually tried vscode and then the desktop gui. Yet they preferred the CLI because&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>scottyah</strong>: There are plenty of GUIs for managing kubernetes, from k9s to redhat&rsquo;s Openshift gui, rancher, Lens, etc</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ramoz</strong>: big reach</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>JamesSwift</strong>: Curious if you have a link to that video. Im trying to bridge the gap of claude code to non technical users and am trying to consume all prior art.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ramoz</strong>: This is also what I’ve been doing. I can’t find the exact video but this is another good example: <a href="https://www.tiktok.com/@thinkwithv/video/7580186972208024863">https://www.tiktok.com/@thinkwithv/video/7580186972208024863</a> The comments are usually insightful&hellip;.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>nextaccountic</strong>: What IDE agent gets access to LSP? I use Zed and unless there is some MCP server that provides the same thing as the LSP server, the Zed agent won&rsquo;t have access, even though it&rsquo;s in an IDE that&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>joshuacc</strong>: Cursor, Copilot, Roo Code, Cline, among others.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>nextaccountic</strong>: Hi, I just looked up and two weeks ago someone made this suggestion in Cursor forum <a href="https://forum.cursor.com/t/support-of-lsp-language-server-pr">https://forum.cursor.com/t/support-of-lsp-language-server-pr</a>&hellip; &gt; Feature request for product/service &gt; &gt; Cursor&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>anthonypasq</strong>: cursor</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>bakies</strong>: Well my editor is in the terminal, so is my chatbot. I dont really want to change to an IDE to use a desktop app and a chatbot that both have half-baked UIs trying to complement each other.</p>
+</blockquote>
+<blockquote>
+<p><strong>BeetleB</strong>: For many of us, the plus of the CLI form factor is it doesn&rsquo;t tie us to a particular IDE.</p>
+</blockquote>
+<p><strong>vorticalbox</strong>: My favourite agent crush[0] has lsp support for a while. I’ve not noticed the agent deciding to use it all that much. [0] <a href="https://github.com/charmbracelet/crush">https://github.com/charmbracelet/crush</a></p>
+<blockquote>
+<p><strong>esafak</strong>: Did it make no difference when you mentioned in your AGENT.md which LSP servers are installed?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>tonyhart7</strong>: I guess supporting tool call natively would improve read token efficiency since they can just run the tool directly</p>
+</blockquote>
+</blockquote>
+<p><strong>ramoz</strong>: I haven&rsquo;t come across a case where it has used the LSP yet. Opus 4.5 is fairly consistent in running QA at proper times. Lint checks and all are already incorporated into a standard &amp; native&hellip;</p>
+<p><strong>vexna</strong>: Just a heads up that this is completely broken as of 2.0.76. Dug through their obfuscated JS and it looks like they forgot to re-add a function call in the LSP manager initialize function that&hellip;</p>
+<p><strong>paxys</strong>: So they moved coding AIs from the IDE into a standalone CLI and now are building an IDE around the CLI?</p>
+<p><strong>zby</strong>: LSPs should expose their api through shell commands - then integrating it with any LLM would be trivial. And it would also be very useful for humans.</p>
+<blockquote>
+<p><strong>anamexis</strong>: You could use a CLI frontend for LSP, e.g. <a href="https://github.com/valentjn/lsp-cli">https://github.com/valentjn/lsp-cli</a> But why would that be better than LLMs using the LSP with a dedicated tool rather than a shell command tool?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>wild_egg</strong>: CLIs don&rsquo;t use context space when unused. I find them almost universally preferable just because of that. Models get stupid after the first 80-100k tokens are used so keeping bloated tools out of the&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>anamexis</strong>: Well you need to use context space somehow, to tell Claude that the LSP CLI exists and how to use it.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>hexsprite</strong>: The typescript-lsp (and others?) is missing a critical part of LSPs whcih is the diagnostics for real-time errors and warnings. So you still need to run a linter, tsc, etc. to generate those sadly.</p>
+<p><strong>PrimalPower</strong>: I&rsquo;ve been a JetBrains suscriber for a while, because at the time I saw that I preferred the UI experience over Jetbrains to VSCode. The IDE is well built, they have a better product/user experience&hellip;</p>
+<p><strong>stared</strong>: If you want to explore the ecosystem of Claude Code plugins, see <a href="https://claude-plugins.dev/">https://claude-plugins.dev/</a> With a fair disclaimer, that it is very easy to vibe-code a skill oneself, with both pros (you can create&hellip;</p>
+<p><strong>ttoinou</strong>: Added gift tag pictogram for year-end promotion message What&rsquo;s that? We all want a promotion on Claude Code!</p>
+<p><strong>nextworddev</strong>: It’s breathtaking how fast Anthropic / Claude Code team ships. They are definitely coding in a LLM maximalist way, in a good way.</p>
+<blockquote>
+<p><strong>reilly3000</strong>: I came here just to say that. The commit history on that changelog blew me away.</p>
+</blockquote>
+<p><strong>mmaunder</strong>: Amazing how long this took. Serena has been doing a not bad job of helping solve this issue. But this has been an obvious built in for agents for some time now. <a href="https://github.com/oraios/serena">https://github.com/oraios/serena</a></p>
+<p><strong>mrinterweb</strong>: I was hoping LSP support would be implemented. I know there are existing MCP servers that can do something kind of similar, but I doubt the agent would be smart enough to consistently utilize the LSP&hellip;</p>
+<p><strong>carterschonwald</strong>: Claude code has some hard coded system prompting that materially opposes my working preferences.  I work on things that need full context/ at least 50+ percent usage ish reasoning to do stuff&hellip;</p>
+<p><strong>jonas21</strong>: The cadence of the Claude Code team is pretty impressive. I count 57 releases since 2.0 (which was less than 3 months ago), and most of these had significant new features.</p>
+<p><strong>liampulles</strong>: What I&rsquo;ve wondered about is whether there is a use in having an LLM that operates on AST symbols (or some IR representation) as input and/or output. It would be language specific of course (though&hellip;</p>
+<p><strong>jwr</strong>: I&rsquo;ve been using <a href="https://github.com/isaacphi/mcp-language-server">https://github.com/isaacphi/mcp-language-server</a> to do pretty much the same thing for quite a while now in Claude code. And it works with clojure-lsp unlike the limited set of plugins&hellip;</p>
+<p><strong>desireco42</strong>: OpenCode had this for a while and overall has better and nicer TUI. Having said that, for same models, especially with LSP, some fancy MCPs, mgrep, has been doing really bad job lately for me. Not&hellip;</p>
+<p><strong>arianvanp</strong>: I hate everything about the Claude code plugin system. They saw GitHub Actions supply chain Fiasco and said: great let&rsquo;s add hallucinations on top. It&rsquo;s that bad. It&rsquo;s embarrassingly bad. No lock&hellip;</p>
+<blockquote>
+<p><strong>pnt12</strong>: Yeah uvx gets abused out of its convenience. uv has many useful features like dev dependencies and inline dependencies, that are much more reliable than uvx. One tip for in-line dependencies: set a&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>JamesSwift</strong>: Nix plus flakes (and optionally devenv) is such a great baseline to operate agents in. So much less thinking about dependencies on various runtime platforms, and you get pinning out of the box&hellip;.</p>
+</blockquote>
+<blockquote>
+<p><strong>throw-12-16</strong>: and then it runs out of home directory and slurps up your secrets. its completely asinine to install npm globals these days, especially one that is such a juicy supply chain attack target</p>
+</blockquote>
+<p><strong>CameronBanga</strong>: Maybe I&rsquo;m the only one, but does anyone else have an issue on macOS where Claude Code never updates itself automatically and you always have an error? I guess it&rsquo;s in times when I leave the CLI tool&hellip;</p>
+<blockquote>
+<p><strong>Arubis</strong>: Depends on your installation method. I have CC installed on macOS with <code>bun install</code> and it self-updates. But you could have different results with, oh, npm or yarn or homebrew or nix or probably&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>fahrradflucht</strong>: I have the same issue since for ever (and update by hand because of it). I always assumed it is because it gets confused by me using Volta for node/npm version management and Volta‘s shim masking&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>cube2222</strong>: Yeah, I uninstalled and reinstalled with homebrew, and it’s working well now.</p>
+</blockquote>
+<blockquote>
+<p><strong>fabbbbb</strong>: Always have a lot of sessions running locally and don’t recall this</p>
+</blockquote>
+<blockquote>
+<p><strong>mokkol</strong>: Uninstall it and install it via home brew fixed it for me.</p>
+</blockquote>
+<blockquote>
+<p><strong>pigeonhole123</strong>: I removed the locks directory which fixed it</p>
+</blockquote>
+<p><strong>oofbey</strong>: I should know this, but what&rsquo;s LSP?  Language Server Protocol - I can read.  But what&rsquo;s that?</p>
+<blockquote>
+<p><strong>3836293648</strong>: It&rsquo;s the protocol that VSC made to speak to programs that do code analysis and is the basis of goto definition, autocomplete, refactorings etc. It&rsquo;s used by most smaller editors so they can backpack&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jasonjmcghee</strong>: Also diagnostics (errors, warnings), inlay hints like types and parameters, code lens (tiny embedded buttons), symbols, notifications like “document changed”, and more</p>
+</blockquote>
+</blockquote>
+<p><strong>terminal512</strong>: Just discovered <a href="https://plugins.jetbrains.com/plugin/29174-ide-index-mcp-ser">https://plugins.jetbrains.com/plugin/29174-ide-index-mcp-ser</a>&hellip;. Its MCP, but still better than nothing.</p>
+<p><strong>m_rcin</strong>: How to configure it? I have LSP running in neovim, but Claude Code writes: ● LSP(operation: &ldquo;goToDefinition&rdquo;, symbol: &ldquo;mtz&rdquo;, in: &ldquo;src/mtz.cpp&rdquo;)   ⎿  No LSP server available for file type: .cpp ● No&hellip;</p>
+<p><strong>nurettin</strong>: Interesting. I develop two projects and maintain a few. I haven&rsquo;t opened an IDE within the past two weeks. What do you do with an IDE? Stare as code is written, refactored, tested and debugged&hellip;</p>
+<blockquote>
+<p><strong>swader999</strong>: Same here, I&rsquo;m a bit apprehensive admitting it. Thanks for going first.</p>
+</blockquote>
+<p><strong>odie5533</strong>: Is there a way to automatically run tests every file change, like post tool somehow, so that it returns a concise test run back to the LLM every tool use? That seems like it would be useful.</p>
+<blockquote>
+<p><strong>rane</strong>: You don&rsquo;t want to run tests after every file change, because that will distract Claude from finishing whatever it&rsquo;s doing and add noise to the context window. Of course the tests will be broken if&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>odie5533</strong>: Won&rsquo;t the LSP distract Claude too? I am trying to think of ways to make Claude faster at iterating by reducing tool calls. That always seems to be a bottleneck when it&rsquo;s doing tons of back-and-forth&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>rane</strong>: Depends on Anthropic has implemented it I guess. I haven&rsquo;t had it activate yet despite the prompt to install an LSP.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>spellboots</strong>: Yes, you can do this with hooks: <a href="https://code.claude.com/docs/en/hooks">https://code.claude.com/docs/en/hooks</a></p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>kristianp</strong>: Back when I was using CC, I had a &ldquo;mandatory&rdquo; development workflow that checks if the corresponding test file exists for the changed file, runs tests and runs the test coverage tool for the changed&hellip;</p>
+</blockquote>
+</blockquote>
+<p><strong>trq_</strong>: Hi, work on Claude Code here! Let me know if you have any feedback!</p>
+<blockquote>
+<p><strong>swader999</strong>: How do I get Claude to start using the LSP? I&rsquo;ve got go, kotlin, swift and typescript projects that might benefit.</p>
+</blockquote>
+<blockquote>
+<p><strong>Jgrubb</strong>: That tool search tool y&rsquo;all announced recently - huge upvote for getting that into Claude code.</p>
+</blockquote>
+<p><strong>behnamoh</strong>: No Python LSPs yet!</p>
+<blockquote>
+<p><strong>guessmyname</strong>: 1. <a href="https://docs.astral.sh/ty/">https://docs.astral.sh/ty/</a> 2. <a href="https://github.com/microsoft/pyright">https://github.com/microsoft/pyright</a> 3. <a href="https://github.com/python-lsp/python-lsp-server">https://github.com/python-lsp/python-lsp-server</a> 4. <a href="https://github.com/palantir/python-language-server">https://github.com/palantir/python-language-server</a></p>
+</blockquote>
+<blockquote>
+<p><strong>simlevesque</strong>: There&rsquo;s pyright-lsp. Isn&rsquo;t this a Python LSP ? or is it lacking important features ?</p>
+</blockquote>
+<p><strong>throw-12-16</strong>: still distributed as an npm global that runs out of your home directory. insane way to distribute a core product considering the state of npm.</p>
+<p><strong>colonCapitalDee</strong>: Great news. I was just starting to explore creating a goto-definition skill for CC, glad I don&rsquo;t have to figure that out now :)</p>
+<p><strong>sathish316</strong>: Can you do @ and refer to a method or variable in a file with lsp support? Otherwise, how can lsp context be used in Terminal chat?</p>
+<blockquote>
+<p><strong>teaearlgraycold</strong>: A big use case will be to tell the LLM what the type of an expression is.</p>
+</blockquote>
+<p><strong>kristo</strong>: LLMs should operate on the code&rsquo;s AST when possible, and should be trained on code&rsquo;s AST as well</p>
+<p><strong>dfaiv</strong>: it doesn&rsquo;t seem to mention anything on using the LSP for linting/typechecking? That&rsquo;s what I really want, instead of my unholy combo of post edit hooks and claude.md &ldquo;PLEASE PLEASE PLEASE run type&hellip;</p>
+<p><strong>sixothree</strong>: Serious question, does this mean it will support Roslyn? Or will they &ldquo;bake their own&rdquo; version?</p>
+<p><strong>helsinki</strong>: It has been in the source code for like two months. I&rsquo;ve been using it for a while now.</p>
+<p><strong>octopoc</strong>: Seems like SCIP would be a better fit, although not as widely supported by languages I suppose.</p>
+<blockquote>
+<p><strong>0xdeafbeef</strong>: It takse long to regen on big codebases, but yes</p>
+</blockquote>
+<p><strong>brikym</strong>: As far as I know Claude models in VSCode + GitHub Copilot have had this for months now.</p>
+<p><strong>behnamoh</strong>: I mean, OpenCode has had this feature for a while: <a href="https://opencode.ai/docs/lsp/">https://opencode.ai/docs/lsp/</a></p>
+<blockquote>
+<p><strong>jarjoura</strong>: It&rsquo;s a shame that my company tied itself to claude-code way too fast. It was like a single week last summer of, &ldquo;oh what&rsquo;s everyone&rsquo;s favorite? claude? okay, let&rsquo;s go!&rdquo; OpenCode has been truely&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>gempir</strong>: OpenCode is so underrated. One of my favorite features is that you can run it as a server, and then it has a API and SDKs to manage sessions etc. Great to build a centrally managed agent for your&hellip;</p>
+</blockquote>
+<p><strong>dejw</strong>: How do I integrate it with Helix Editor?</p>
+<p><strong>Lerc</strong>: Does this mean Claude Code can be a consumer of this information or a provider? Maybe whynotboth.gif?</p>
+<p><strong>tdfirth</strong>: No rename symbol? What am I missing? It seems like a no brainer.</p>
+<blockquote>
+<p><strong>fueledbyzaatar</strong>: References + a few extra steps will give you rename symbol. Anthropic is seemingly wanting to experiment with this - so it makes sense to limit the integration points.</p>
+</blockquote>
+<p><strong>endorphine</strong>: Any idea if this is planned for Codex as well?</p>
+<p><strong>Havoc</strong>: What does the terminal integration mentioned do?</p>
+<blockquote>
+<p><strong>sevg</strong>: I believe it’s to do with supporting shift+enter (to do multiline prompts). <a href="https://github.com/anthropics/claude-code/issues/1259#issuec">https://github.com/anthropics/claude-code/issues/1259#issuec</a>&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Havoc</strong>: Oh that’s neat. Thanks for highlighting</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>speed_spread</strong>: Every once in a while it runs &lsquo;sudo rm -rf /&rsquo;.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>catoc</strong>: Every once —</p>
+</blockquote>
+</blockquote>
+<p><strong>jedisct1</strong>: Doesn&rsquo;t seem to work with Zig?</p>
+<p><strong>steven_j24</strong>: i think Kiro CLI added while ago and it does support diagnostics and rename symbol</p>
+<p><strong>synergy20</strong>: dumb question,how to use it? claude is a cli tool,not an editor,why is lsp relevant?</p>
+<p><strong>mparis</strong>: Seems like a great feature but am I the only one that still regularly sees the totally broken scrolling bug in CC? I have churned from CC in favor of codex until the scrolling bug is fixed. There is&hellip;</p>
+<p><strong>esafak</strong>: How to use this new feature?</p>
+<p><strong>jama211</strong>: I’m curious what the benefit of this is over running away, cursor ide with the Claude agent?</p>
+<p><strong>1123581321</strong>: This is an ignorant question, but, what is the benefit of this if you also have your project open in an editor or IDE (presuming they integrate language server?) If you&rsquo;re vibe coding without an&hellip;</p>
+<blockquote>
+<p><strong>BeetleB</strong>: As part of a bigger refactor, you want to rename some variables. With an LSP hook, the LLM can make the change (more) reliably. The LLM wants to see the definition of a function. More reliable than&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>ascorbic</strong>: The same reason you want an LSP in your editor: so you get inline docs and error messages, autocomplete, jump to definition, refactoring actions etc.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>sunaookami</strong>: But what is the benefit for Claude Code? You don&rsquo;t write code in Claude Code so why would I need autocomplete or jump to definition? Does Claude itself use them instead of e.g. grepping? Struggling&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>HarHarVeryFunny</strong>: I&rsquo;d like to know what more of the use cases are too, but one would be for doing renaming operations where the LSP understands the code and will tell the caller exactly what edits to make to which&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>kaibee</strong>: &gt; Does Claude itself use them instead of e.g. grepping? Struggling to understand how it helps. That would be the idea.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ascorbic</strong>: Yes, it&rsquo;s for Claude itself.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>esafak</strong>: Your test suite and linter don&rsquo;t code. They don&rsquo;t help your agent look up definitions of variables, etc.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>1123581321</strong>: Ah, it&rsquo;s about making language documentation available, and making crawling the app  for understanding cheaper/more direct?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>esafak</strong>: It&rsquo;s like making your IDE available to them.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>saagarjha</strong>: Has anyone checked that it actually works before posting it here? lol</p>
+<p><strong>Razengan</strong>: Anthropic/Clause has the absolute worst UX among all the major AI products. Just try copy-pasting text, say a prompt from a notes app or a text file. and they completely ignore all complaints. Why&hellip;</p>
+<blockquote>
+<p><strong>aurbxyajwur</strong>: Hard disagree. They have the best UX in the industry</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Razengan</strong>: These comments sound like paid PR. I literally just gave an example. I keep AI prompts in Notes for using with different chatbots. You can paste them normally into ChatGPT etc but Claude mangles them&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>nineteen999</strong>: What language are you using with it for Godot? I&rsquo;m using C++ with Unreal5 and Claude seems pretty good at it TBH. I don&rsquo;t disagree that it has some rough edges.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>exac</strong>: The only reason I paid my yearly JetBrains subscription this year was to keep my lower price locked-in. I&rsquo;ve been using VS Code all year. I won&rsquo;t renew my JetBrains subscription that I&rsquo;ve had since&hellip;</p>
+<blockquote>
+<p><strong>throwaway314155</strong>: How is that relevant?</p>
+</blockquote>
 
       </div>
 
@@ -269,30 +1249,29 @@
   <div class="footer-container">
     <div class="footer-brand">
       <span class="footer-logo">AI Best Practices</span>
-      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
     </div>
     <div class="footer-nav">
       <div class="footer-section">
         <h3>Learn</h3>
         <ul>
-          <li><a href="../start-here/index.html">Start Here</a></li>
-          <li><a href="../skills/index.html">Skills</a></li>
-          <li><a href="../workflows/index.html">Workflows</a></li>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Explore</h3>
         <ul>
           <li><a href="../tools/index.html">Tools</a></li>
-          <li><a href="../landscape/index.html">Landscape</a></li>
           <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
           <li><a href="../sources/index.html">Sources</a></li>
-          <li><a href="../tags/">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
     </div>
   </div>
 </footer>

@@ -20,13 +20,13 @@ Amp's core design principle is that no single model is best at everything. Diffe
 
 This routing has evolved significantly over time. The main agent model progressed through multiple generations, and the Oracle model moved through several OpenAI versions. This evolution illustrates both the advantage (always upgrade to the best available) and the risk (your system depends on providers you do not control) of multi-model routing.
 
-For a deeper treatment of the multi-model concept, see [The Multi-Model Agent Landscape](/deep-dives/multi-model-agents.html).
+For a deeper treatment of the multi-model concept, see [The Multi-Model Agent Landscape](/tools/amp.html).
 
 ## Key Features Beyond Routing
 
 **Parallel sub-agents.** Amp can spawn multiple independent agents on subtasks simultaneously, similar to Claude Code's swarm feature but available earlier and with multi-model flexibility.
 
-**AGENTS.md support.** Like Claude Code's CLAUDE.md, Amp reads project-level instruction files for persistent context. See the [AGENTS.md Guide](/references/agents-md-guide.html).
+**AGENTS.md support.** Like Claude Code's CLAUDE.md, Amp reads project-level instruction files for persistent context. See the [Harness Engineering](/practices/harness-engineering.html).
 
 **No autocomplete.** Amp dropped inline autocomplete entirely in January 2026 to focus exclusively on agentic workflows. This was a deliberate product decision reflecting the belief that autocomplete and agentic modes require different design tradeoffs.
 
@@ -60,4 +60,4 @@ Amp represents a bet that orchestration -- knowing which model to use when, how 
 
 For practitioners, the relevant question is less about which tool wins and more about understanding the multi-model concept. Even if you use a single-model tool, you can apply multi-model thinking by switching modes (standard vs extended thinking) or models manually based on task type.
 
-For the broader decision framework, see the [Practitioner's Tool Comparison](/references/tool-landscape.html).
+For the broader decision framework, see the [Practitioner's Tool Comparison](/tools/).

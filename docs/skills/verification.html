@@ -37,14 +37,13 @@
       <span>AI Best Practices</span>
     </a>
     <div class="nav-links">
-      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
-      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
       <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
-      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
-      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
       <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
       <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
-      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
     </div>
     <div class="nav-actions">
       <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
@@ -164,24 +163,24 @@
 <h2 id="why-verification-matters-more-than-generation">Why Verification Matters More Than Generation</h2>
 <p>The economics of AI-assisted development are asymmetric. Generating code is now cheap and fast. Deploying broken code is still expensive and slow to fix. The bottleneck has moved from production to quality control.</p>
 <p>This is not a temporary state while models improve. Even as models get better at generating correct code, the consequences of undetected errors in production remain severe. A human who cannot evaluate AI output is a human who ships bugs at the speed of AI generation.</p>
-<p>Anthropic&rsquo;s own research quantified the risk. A <a href="../sources/2026-01-30-ai-assistance-coding-skills/">randomized controlled study</a> found that junior developers using AI assistance scored 17% lower on comprehension tests, with the largest gap appearing on debugging questions. The AI-assisted group finished tasks slightly faster, but the speed advantage was not statistically significant. The implication: AI can make you feel faster while making you less capable of catching mistakes.</p>
+<p>Anthropic&rsquo;s own research quantified the risk. A <a href="../sources/2026-01-30-ai-assistance-coding-skills.html">randomized controlled study</a> found that junior developers using AI assistance scored 17% lower on comprehension tests, with the largest gap appearing on debugging questions. The AI-assisted group finished tasks slightly faster, but the speed advantage was not statistically significant. The implication: AI can make you feel faster while making you less capable of catching mistakes.</p>
 <h2 id="the-karpathy-insight-reading-persists-when-writing-atrophies">The Karpathy Insight: Reading Persists When Writing Atrophies</h2>
-<p>Andrej Karpathy&rsquo;s <a href="../sources/2026-01-26-karpathy-claude-coding-notes/">widely discussed observations</a> on AI-assisted coding identified a critical asymmetry in skill atrophy. After extensive AI usage, he found it harder to recall syntax and implementation details &ndash; writing fluency degraded. But code review ability remained intact. He drew a parallel to how reading comprehension persists even when spelling ability degrades.</p>
+<p>Andrej Karpathy&rsquo;s <a href="../sources/2026-01-26-karpathy-claude-coding-notes.html">widely discussed observations</a> on AI-assisted coding identified a critical asymmetry in skill atrophy. After extensive AI usage, he found it harder to recall syntax and implementation details &ndash; writing fluency degraded. But code review ability remained intact. He drew a parallel to how reading comprehension persists even when spelling ability degrades.</p>
 <p>This asymmetry is the foundation of the verification skill. As long as you can read code effectively, you can verify AI output even if you could no longer write that code from scratch. The developer role evolves from author to editor &ndash; but the editor must be a genuinely skilled reader, not a rubber stamp.</p>
 <p>HN commenter <strong>oxag3n</strong> pushed back on this framing, warning that review skills will also erode eventually if developers stop working in domains they never learned firsthand. The implication: verification skill requires active maintenance through periodic hands-on coding, not just passive review.</p>
 <h2 id="what-ai-gets-wrong">What AI Gets Wrong</h2>
 <p>Understanding common failure modes makes verification more efficient. You learn where to focus attention instead of reviewing every line with equal scrutiny.</p>
 <p><strong>Plausible but incorrect logic.</strong> AI-generated code often looks correct on first reading because it follows familiar patterns. The errors tend to be in edge cases, off-by-one conditions, and subtle misunderstandings of business requirements rather than obvious syntax mistakes.</p>
-<p><strong>Security vulnerabilities.</strong> Models frequently produce code with injection risks, missing input validation, or overly permissive access controls. <a href="../sources/2026-01-06-opus-4-5-agent-experience/">Burke Holland&rsquo;s Opus 4.5 evaluation</a> estimated only about 80% confidence in robust security implementations even from frontier models.</p>
+<p><strong>Security vulnerabilities.</strong> Models frequently produce code with injection risks, missing input validation, or overly permissive access controls. <a href="../sources/2026-01-06-opus-4-5-agent-experience.html">Burke Holland&rsquo;s Opus 4.5 evaluation</a> estimated only about 80% confidence in robust security implementations even from frontier models.</p>
 <p><strong>Architectural drift.</strong> Over multiple agent interactions, small decisions accumulate into an architecture nobody designed. Each individual change seems reasonable; the aggregate result is incoherent. This is the hardest failure mode to catch because it only becomes visible at a scale larger than any individual diff.</p>
-<p><strong>Tests that pass without testing.</strong> <a href="../sources/2025-12-18-two-kinds-vibe-coding/">David Bau&rsquo;s analysis of vibe coding</a> identified a critical failure mode: agents can produce solutions that technically pass tests without actually doing what is intended. Tests themselves must be tested &ndash; through code coverage analysis, fuzz testing, and benchmarking.</p>
+<p><strong>Tests that pass without testing.</strong> <a href="../sources/2025-12-18-two-kinds-vibe-coding.html">David Bau&rsquo;s analysis of vibe coding</a> identified a critical failure mode: agents can produce solutions that technically pass tests without actually doing what is intended. Tests themselves must be tested &ndash; through code coverage analysis, fuzz testing, and benchmarking.</p>
 <p><strong>Overconfident error handling.</strong> Agents tend to add error handling that catches exceptions broadly rather than specifically, masking real failures behind generic error messages. This makes debugging harder, not easier.</p>
 <h2 id="diff-review-as-the-core-workflow">Diff Review as the Core Workflow</h2>
 <p>The most effective verification workflow centers on diff review rather than reading complete files. This is how experienced developers have always reviewed code from other humans, and it transfers directly to AI output.</p>
 <p>Karpathy emphasized that despite the power of CLI agents, visual code review through IDE diffs remains essential for quality control. The diff shows you exactly what changed, focusing attention on the delta rather than the entire codebase.</p>
 <p>Practical diff review habits:</p>
 <ul>
-<li><strong>Review every diff before committing.</strong> <a href="../sources/2026-01-04-llm-coding-workflow-2026/">Addy Osmani&rsquo;s workflow</a> codifies this as a rule: never commit code you cannot explain.</li>
+<li><strong>Review every diff before committing.</strong> <a href="../sources/2026-01-04-llm-coding-workflow-2026.html">Addy Osmani&rsquo;s workflow</a> codifies this as a rule: never commit code you cannot explain.</li>
 <li><strong>Read the diff, not the conversation.</strong> The agent&rsquo;s explanation of what it did may not match what it actually did. Trust the code, not the commentary.</li>
 <li><strong>Check for what is missing.</strong> The hardest verification task is noticing what the agent failed to include &ndash; error handling it skipped, edge cases it did not consider, tests it did not write. Absence is harder to spot than presence.</li>
 <li><strong>Look for patterns, not just individual lines.</strong> Architectural drift shows up as inconsistent patterns across files, not as errors in any single file.</li>
@@ -208,16 +207,16 @@
 <h3 id="reviewing-without-context">Reviewing Without Context</h3>
 <p>Evaluating code changes without understanding the broader system they operate in. AI-generated code may be locally correct but globally wrong &ndash; violating invariants, duplicating existing functionality, or introducing subtle incompatibilities with other modules.</p>
 <h3 id="assuming-models-improve-monotonically">Assuming Models Improve Monotonically</h3>
-<p>Trusting that newer model versions are always better. The <a href="../sources/2026-01-29-claude-code-benchmarks/">Claude Code benchmarks tracker</a> documented statistically significant performance fluctuations, and many practitioners report inconsistent quality across sessions. Verification intensity should not decrease just because a newer model was released.</p>
+<p>Trusting that newer model versions are always better. The <a href="../sources/2026-01-29-claude-code-benchmarks.html">Claude Code benchmarks tracker</a> documented statistically significant performance fluctuations, and many practitioners report inconsistent quality across sessions. Verification intensity should not decrease just because a newer model was released.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><a href="../sources/2026-01-26-karpathy-claude-coding-notes/">Karpathy&rsquo;s Claude coding notes</a> &ndash; Skill atrophy observations and the reading-persists-when-writing-degrades insight</li>
-<li><a href="../sources/2026-01-30-ai-assistance-coding-skills/">AI assistance and coding skills (Anthropic study)</a> &ndash; 17% learning penalty, debugging skills most affected, engagement style matters</li>
-<li><a href="../sources/2026-01-08-ai-coding-getting-worse/">AI coding getting worse? (IEEE Spectrum)</a> &ndash; Perception vs reality of model degradation, consistency as the real problem</li>
-<li><a href="../sources/2026-01-29-claude-code-benchmarks/">Claude Code benchmarks</a> &ndash; Systematic tracking of performance fluctuations</li>
-<li><a href="../sources/2025-12-18-two-kinds-vibe-coding/">Two kinds of vibe coding</a> &ndash; Tests that pass without testing, meta-cognitive infrastructure for verification</li>
-<li><a href="../sources/2026-01-04-llm-coding-workflow-2026/">Addy Osmani&rsquo;s workflow</a> &ndash; &ldquo;Never commit code you cannot explain&rdquo;</li>
-<li><a href="../sources/2026-01-06-opus-4-5-agent-experience/">Opus 4.5 agent experience</a> &ndash; Security confidence gaps even in frontier models</li>
+<li><a href="../sources/2026-01-26-karpathy-claude-coding-notes.html">Karpathy&rsquo;s Claude coding notes</a> &ndash; Skill atrophy observations and the reading-persists-when-writing-degrades insight</li>
+<li><a href="../sources/2026-01-30-ai-assistance-coding-skills.html">AI assistance and coding skills (Anthropic study)</a> &ndash; 17% learning penalty, debugging skills most affected, engagement style matters</li>
+<li><a href="../sources/2026-01-08-ai-coding-getting-worse.html">AI coding getting worse? (IEEE Spectrum)</a> &ndash; Perception vs reality of model degradation, consistency as the real problem</li>
+<li><a href="../sources/2026-01-29-claude-code-benchmarks.html">Claude Code benchmarks</a> &ndash; Systematic tracking of performance fluctuations</li>
+<li><a href="../sources/2025-12-18-two-kinds-vibe-coding.html">Two kinds of vibe coding</a> &ndash; Tests that pass without testing, meta-cognitive infrastructure for verification</li>
+<li><a href="../sources/2026-01-04-llm-coding-workflow-2026.html">Addy Osmani&rsquo;s workflow</a> &ndash; &ldquo;Never commit code you cannot explain&rdquo;</li>
+<li><a href="../sources/2026-01-06-opus-4-5-agent-experience.html">Opus 4.5 agent experience</a> &ndash; Security confidence gaps even in frontier models</li>
 </ul>
 
       </div>
@@ -274,30 +273,29 @@
   <div class="footer-container">
     <div class="footer-brand">
       <span class="footer-logo">AI Best Practices</span>
-      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
     </div>
     <div class="footer-nav">
       <div class="footer-section">
         <h3>Learn</h3>
         <ul>
-          <li><a href="../start-here/index.html">Start Here</a></li>
-          <li><a href="../skills/index.html">Skills</a></li>
-          <li><a href="../workflows/index.html">Workflows</a></li>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Explore</h3>
         <ul>
           <li><a href="../tools/index.html">Tools</a></li>
-          <li><a href="../landscape/index.html">Landscape</a></li>
           <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
           <li><a href="../sources/index.html">Sources</a></li>
-          <li><a href="../tags/">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 84 pages across 187 topics.</p>
     </div>
   </div>
 </footer>

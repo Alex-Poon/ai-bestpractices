@@ -37,14 +37,13 @@
       <span>AI Best Practices</span>
     </a>
     <div class="nav-links">
-      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
-      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
       <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
-      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
-      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
       <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
       <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
-      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
     </div>
     <div class="nav-actions">
       <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
@@ -160,7 +159,7 @@
 <h2 id="stage-2-reproduce-your-own-work">Stage 2: Reproduce Your Own Work</h2>
 <p>This is where calibration happens. The practice is deliberate and initially uncomfortable: complete a task yourself, then attempt the same task through the agent. Do this across a variety of tasks in your codebase.</p>
 <p>The goal is not to prove the agent can replace you. The goal is to build a mental model of what the agent handles well and where it falls apart. Three critical practices emerge from this phase:</p>
-<p><strong>Break work into clear, bounded tasks.</strong> Vague instructions fail reliably. Instead of &ldquo;implement the authentication system,&rdquo; try &ldquo;write the token validation function given this interface.&rdquo; This is the <a href="../patterns/task-scoping/">task scoping</a> skill, and it is the single most important capability in agent-assisted development.</p>
+<p><strong>Break work into clear, bounded tasks.</strong> Vague instructions fail reliably. Instead of &ldquo;implement the authentication system,&rdquo; try &ldquo;write the token validation function given this interface.&rdquo; This is the <a href="../skills/task-scoping.html">task scoping</a> skill, and it is the single most important capability in agent-assisted development.</p>
 <p><strong>Separate planning from execution.</strong> Have the agent propose a plan first. Review it. Then proceed to implementation. When planning and execution mix, the agent builds momentum toward the wrong solution before you can course-correct.</p>
 <p><strong>Give the agent verification tools.</strong> Agents perform dramatically better when they can run tests or check compiler output. An agent operating without feedback is guessing.</p>
 <p>The most valuable outcome of this stage is knowing <strong>when not to use agents.</strong> Not every task benefits from delegation. The reproduction phase gives you the judgment to tell the difference.</p>
@@ -180,7 +179,7 @@
 <p><strong>Where people get stuck:</strong> Practitioners at Stage 4 sometimes regress by delegating outside their calibrated confidence zone. The agent fails, they lose trust, and they stop delegating entirely. The fix is disciplined: only delegate tasks you are confident about, and expand the boundary gradually.</p>
 </blockquote>
 <h2 id="stage-5-engineer-the-harness">Stage 5: Engineer the Harness</h2>
-<p>This is the stage that separates occasional users from practitioners who get compounding returns. <strong><a href="../patterns/harness-engineering/">Harness engineering</a></strong> is the practice of building persistent infrastructure that makes agents more effective across every future session.</p>
+<p>This is the stage that separates occasional users from practitioners who get compounding returns. <strong><a href="../skills/harness-engineering.html">Harness engineering</a></strong> is the practice of building persistent infrastructure that makes agents more effective across every future session.</p>
 <p>The harness has two parts:</p>
 <h3 id="documentation-files">Documentation Files</h3>
 <p>Project-specific files (AGENTS.md, CLAUDE.md) that agents read at the start of every session. They contain:</p>
@@ -197,7 +196,7 @@
 <li>Output formatters that structure results for reliable agent parsing</li>
 <li>Context assemblers that gather related files into a single input</li>
 </ul>
-<p>The compounding effect is the core point. Each mistake documented, each tool built, each convention captured makes every future session more effective. This is the highest-leverage investment in AI-assisted development, and the <a href="../references/agents-md-guide/">AGENTS.md Guide</a> provides practical starting templates.</p>
+<p>The compounding effect is the core point. Each mistake documented, each tool built, each convention captured makes every future session more effective. This is the highest-leverage investment in AI-assisted development, and the <a href="../workflows/agents-md-guide.html">AGENTS.md Guide</a> provides practical starting templates.</p>
 <p><strong>What to do tomorrow:</strong> Create an AGENTS.md file in your project root. Add three entries: one coding convention, one mistake you have corrected before, and one &ldquo;never do this&rdquo; rule. Start small and grow it from observed errors.</p>
 <blockquote>
 <p><strong>Where people get stuck:</strong> Two failure modes dominate. First, over-documenting speculatively &mdash; writing a massive harness before you have real data on what the agent gets wrong. Start with observed mistakes only. Second, harness rot &mdash; letting entries accumulate without pruning. Review weekly and remove anything outdated.</p>
@@ -263,30 +262,29 @@
   <div class="footer-container">
     <div class="footer-brand">
       <span class="footer-logo">AI Best Practices</span>
-      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
     </div>
     <div class="footer-nav">
       <div class="footer-section">
         <h3>Learn</h3>
         <ul>
-          <li><a href="../start-here/index.html">Start Here</a></li>
-          <li><a href="../skills/index.html">Skills</a></li>
-          <li><a href="../workflows/index.html">Workflows</a></li>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Explore</h3>
         <ul>
           <li><a href="../tools/index.html">Tools</a></li>
-          <li><a href="../landscape/index.html">Landscape</a></li>
           <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
           <li><a href="../sources/index.html">Sources</a></li>
-          <li><a href="../tags/">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 84 pages across 187 topics.</p>
     </div>
   </div>
 </footer>

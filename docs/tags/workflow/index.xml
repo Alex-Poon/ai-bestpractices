@@ -9,18 +9,25 @@
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/workflow/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Daily Practice</title>
-      <link>/workflows/daily-practice.html</link>
+      <title>Task Scoping</title>
+      <link>/practices/task-scoping.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/workflows/daily-practice.html</guid>
-      <description>&lt;p&gt;Using AI coding tools effectively is not about writing better prompts on any given day. It is about building habits that compound over weeks and months. This page distills the daily routines that experienced practitioners follow, drawn from &lt;a href=&#34;../../sources/2026-01-26-karpathy-claude-coding-notes/&#34;&gt;Karpathy&amp;rsquo;s coding notes&lt;/a&gt;, &lt;a href=&#34;../../sources/2026-01-04-llm-coding-workflow-2026/&#34;&gt;Addy Osmani&amp;rsquo;s LLM workflow&lt;/a&gt;, and patterns observed across the broader practitioner community.&lt;/p&gt;&#xA;&lt;h2 id=&#34;morning-setup&#34;&gt;Morning Setup&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Review your harness files.&lt;/strong&gt; Open your AGENTS.md or CLAUDE.md and scan for anything outdated. If you corrected the agent yesterday but did not document it, add the entry now. Remove rules that no longer apply. A stale harness teaches the agent outdated habits. See the &lt;a href=&#34;../../workflows/agents-md-guide/&#34;&gt;AGENTS.md Guide&lt;/a&gt; for maintenance discipline.&lt;/p&gt;</description>
+      <guid>/practices/task-scoping.html</guid>
+      <description>&lt;p&gt;Task scoping is the dominant skill in AI-assisted development. It determines whether your interaction with an agent produces usable output in minutes or wasted effort measured in hours. Every practitioner who has moved past the honeymoon phase identifies decomposition &amp;ndash; not prompting, not model selection &amp;ndash; as the discipline that matters most.&lt;/p&gt;&#xA;&lt;p&gt;The core insight is deceptively simple: AI agents execute well-bounded tasks reliably and open-ended tasks poorly. Your job is to turn open-ended work into a series of bounded tasks. This is fundamentally the same skill as delegating to a junior developer, with one critical difference: the agent never learns from the previous session.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>The Vibe Coding Spectrum</title>
-      <link>/workflows/vibe-coding-spectrum.html</link>
+      <title>The Core Loop</title>
+      <link>/guide/core-loop.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/workflows/vibe-coding-spectrum.html</guid>
-      <description>&lt;p&gt;&amp;ldquo;Vibe coding&amp;rdquo; entered the vocabulary in early 2025, but practitioners quickly discovered that the term covered fundamentally different activities. David Bau&amp;rsquo;s influential article identified two distinct types, and the community debate that followed revealed a full spectrum of approaches between them. Understanding where you are on this spectrum &amp;ndash; and where you should be &amp;ndash; is one of the most consequential workflow decisions in AI-assisted development.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-two-types&#34;&gt;The Two Types&lt;/h2&gt;&#xA;&lt;p&gt;David Bau drew a line between two modes that both get called &amp;ldquo;vibe coding&amp;rdquo; but require entirely different infrastructure and mindset.&lt;/p&gt;</description>
+      <guid>/guide/core-loop.html</guid>
+      <description>&lt;p&gt;Every effective AI coding workflow, regardless of which tool or model you use, converges on the same four-phase loop: &lt;strong&gt;Plan, Execute, Verify, Harness.&lt;/strong&gt; The tools change. The models improve. But the loop persists, because it addresses the fundamental constraints of working with systems that are brilliant and forgetful in equal measure.&lt;/p&gt;&#xA;&lt;p&gt;This page describes each phase, why it matters, and what goes wrong when you skip it. If you read nothing else on this site, read this.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Vibe Coding Question</title>
+      <link>/debates/vibe-coding.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/debates/vibe-coding.html</guid>
+      <description>&lt;h2 id=&#34;the-question&#34;&gt;The Question&lt;/h2&gt;&#xA;&lt;p&gt;Andrej Karpathy coined the term &amp;ldquo;vibe coding&amp;rdquo; to describe a mode of AI-assisted development where you fully cede implementation to the model, accepting code you don&amp;rsquo;t fully understand as long as it works. The term quickly became a lightning rod &amp;ndash; embraced by some as the future of software development, rejected by others as professional malpractice.&lt;/p&gt;&#xA;&lt;p&gt;But the community has moved beyond a simple for-or-against debate. Practitioners now describe a spectrum from full delegation to tight step-by-step control, with most experienced developers settling somewhere in between. The real question isn&amp;rsquo;t whether vibe coding is good or bad &amp;ndash; it&amp;rsquo;s where on this spectrum responsible development should land, and whether the answer changes depending on context.&lt;/p&gt;</description>
     </item>
     <item>
       <title>LLM coding workflow going into 2026</title>

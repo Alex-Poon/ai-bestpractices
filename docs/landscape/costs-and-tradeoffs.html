@@ -37,14 +37,13 @@
       <span>AI Best Practices</span>
     </a>
     <div class="nav-links">
-      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
-      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
       <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
-      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
-      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
       <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
       <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
-      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
     </div>
     <div class="nav-actions">
       <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
@@ -160,13 +159,13 @@
 <p>One of the most detailed cost reports comes from a founder and CTO who tracked AI coding expenses over six weeks. The total: $638 in on-demand charges using Cursor with Claude models, with October 2025 alone hitting $348 and reaching Cursor&rsquo;s $400 monthly limit.</p>
 <p>The per-request costs seemed trivial &mdash; $0.02 to $0.06 depending on context size. But at 200+ daily requests, they compounded fast. The author tried seven different models but found Claude consumed 85% of the budget because it produced the best results. A follow-up analysis revealed $928 over 70 days, an average of $13.86 per day, with an 88.8% cache hit rate significantly reducing what costs would otherwise have been.</p>
 <p>The projections are striking: $5,500+ annually just for code assistance. HN user <strong>mnky9800n</strong> recommended Claude Code Max at $125/month for cost predictability, while <strong>Woods369</strong> noted that the industry acknowledges current pricing does not scale sustainably. <strong>6510</strong> reframed the expense as an investment in a skill that will determine future competitive advantage.</p>
-<p>(<a href="../sources/2025-11-13-ai-coding-agent-costs/">Source</a>)</p>
+<p>(<a href="../sources/2025-11-13-ai-coding-agent-costs.html">Source</a>)</p>
 <h2 id="reliability-57-incidents-in-three-months">Reliability: 57 Incidents in Three Months</h2>
 <p>Cost only matters if the service works. A Claude user documented 57 incidents from Anthropic&rsquo;s own status page over three months: 21 in December 2025, 26 in January 2026, and 10 in just the first four days of February. At least 16 incidents directly affected Opus 4.5.</p>
 <p>Beyond the logged incidents, day-to-day issues include responses generated nearly to completion then wiped with no recovery, and silent model switching when the requested model fails &mdash; behavior where the system retries 10 times before falling back to a different model without telling the user.</p>
 <p>These reliability concerns are not unique to Anthropic. They reflect the operational challenges of serving frontier models at scale. But for developers building workflows around AI agents &mdash; particularly multi-step agentic sessions where an interruption can lose significant work &mdash; reliability is a first-order concern.</p>
 <p>Rate limiting compounds the problem. Multiple users reported that even on paid plans, heavy usage of Opus-class models depletes daily allocations quickly, forcing either model downgrades or waiting. The gap between what the models can do in theory and what you can actually access in practice remains a persistent friction.</p>
-<p>(<a href="../sources/2026-02-04-claude-57-incidents/">Source</a>)</p>
+<p>(<a href="../sources/2026-02-04-claude-57-incidents-3-months.html">Source</a>)</p>
 <h2 id="model-degradation-concerns">Model Degradation Concerns</h2>
 <p>An IEEE Spectrum article argued that AI coding assistants are getting worse over time, sparking a major HN debate (451 points, 82 comments). The evidence was widely criticized &mdash; a single three-line Python test case &mdash; but the underlying concern resonated with many developers.</p>
 <p>The most credible explanations for perceived degradation are not about models literally getting worse:</p>
@@ -178,7 +177,7 @@
 </ul>
 <p>HN user <strong>theptip</strong> argued that models are getting better but users have not figured out the scaffolding needed &mdash; unit tests, proper prompts, and understanding where AI capabilities have edges. <strong>StarlaAtNight</strong> proposed that users should be able to pin to specific model versions, analogous to software package versioning.</p>
 <p>The practical takeaway: consistency matters more than peak capability. A model that reliably produces 80% quality output is more useful in an agentic workflow than one that oscillates between 95% and 50%.</p>
-<p>(<a href="../sources/2026-01-08-ai-coding-getting-worse/">Source</a>)</p>
+<p>(<a href="../sources/2026-01-08-ai-coding-getting-worse.html">Source</a>)</p>
 <h2 id="the-broader-economics-bubble-or-business">The Broader Economics: Bubble or Business?</h2>
 <p>Zooming out from individual costs, the AI industry&rsquo;s financial sustainability is an open question. OpenAI&rsquo;s capital requirements have reached a scale that invites bubble comparisons, with infrastructure spending, circular financing arrangements (investors funding OpenAI so it can pay their cloud services back), and delayed data center buildouts.</p>
 <p>The HN discussion around OpenAI&rsquo;s cash burn (514 points) converged on a nuanced view: AI is a genuinely transformative technology that is nonetheless heading for a market correction. The most-cited historical analogy was the railroad boom, where the technology persisted and transformed the world but initial investors largely lost money.</p>
@@ -189,15 +188,15 @@
 <li><strong>Revenue path uncertainty.</strong> HN user <strong>adriand</strong> suggested Anthropic&rsquo;s coding focus offers the clearest path to subscription success, while OpenAI may need advertising revenue.</li>
 </ul>
 <p>Whether the bubble concern materializes directly affects practitioners. If AI pricing is currently subsidized, future costs may rise significantly. If major providers face financial distress, service continuity becomes a risk. Building workflows with low switching costs &mdash; using open protocols, tool-agnostic practices, and avoiding deep lock-in &mdash; is prudent regardless of how the economics play out.</p>
-<p>(<a href="../sources/2025-12-30-openai-cash-burn/">Sources</a>, <a href="../sources/2026-01-19-ai-bubble-bursts-2026/">Bubble Analysis</a>)</p>
+<p>(<a href="../sources/2025-12-30-openai-cash-burn.html">Sources</a>, <a href="../sources/2026-01-19-ai-bubble-bursts-2026.html">Bubble Analysis</a>)</p>
 <h2 id="cost-optimization-strategies">Cost Optimization Strategies</h2>
 <p>Based on practitioner reports, the most effective cost management approaches are:</p>
 <ol>
 <li><strong>Flat-rate plans for predictability.</strong> If you are a heavy user, a $100-200/month flat rate eliminates cost anxiety and encourages full utilization. Claude Code Max at $125/month was cited as a practical option.</li>
 <li><strong>Cache-aware usage patterns.</strong> The 88.8% cache hit rate from the cost study shows that working within the same codebase context significantly reduces effective per-request costs.</li>
 <li><strong>Model selection by task.</strong> Reserve expensive Opus-class models for tasks that genuinely need them. Use faster, cheaper models (Sonnet, Flash) for straightforward completions and formatting.</li>
-<li><strong>Task scoping to reduce iterations.</strong> Well-scoped tasks (<a href="../patterns/task-scoping/">Task Scoping pattern</a>) succeed on fewer attempts, directly reducing token consumption.</li>
-<li><strong>Harness investment.</strong> A good AGENTS.md or CLAUDE.md file prevents the agent from making known mistakes, which eliminates the token cost of correction loops. See <a href="../patterns/harness-engineering/">Harness Engineering</a>.</li>
+<li><strong>Task scoping to reduce iterations.</strong> Well-scoped tasks (<a href="../practices/task-scoping.html">Task Scoping pattern</a>) succeed on fewer attempts, directly reducing token consumption.</li>
+<li><strong>Harness investment.</strong> A good AGENTS.md or CLAUDE.md file prevents the agent from making known mistakes, which eliminates the token cost of correction loops. See <a href="../practices/harness-engineering.html">Harness Engineering</a>.</li>
 </ol>
 
       </div>
@@ -244,30 +243,29 @@
   <div class="footer-container">
     <div class="footer-brand">
       <span class="footer-logo">AI Best Practices</span>
-      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
     </div>
     <div class="footer-nav">
       <div class="footer-section">
         <h3>Learn</h3>
         <ul>
-          <li><a href="../start-here/index.html">Start Here</a></li>
-          <li><a href="../skills/index.html">Skills</a></li>
-          <li><a href="../workflows/index.html">Workflows</a></li>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Explore</h3>
         <ul>
           <li><a href="../tools/index.html">Tools</a></li>
-          <li><a href="../landscape/index.html">Landscape</a></li>
           <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
           <li><a href="../sources/index.html">Sources</a></li>
-          <li><a href="../tags/">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
     </div>
   </div>
 </footer>

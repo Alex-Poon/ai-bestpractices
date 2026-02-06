@@ -24,4 +24,4 @@ The most important distinction is between **autocomplete** tools (inline suggest
 - [GitHub Copilot](/tools/copilot.html) -- The original AI coding assistant
 - [The MCP Ecosystem](/tools/mcp-ecosystem.html) -- Model Context Protocol and the interoperability layer emerging around it
 
-For a decision framework covering pricing, extensibility, and integration approach, see the [Practitioner's Tool Comparison](/references/tool-landscape.html). For a deeper treatment of multi-model routing, see [The Multi-Model Agent Landscape](/deep-dives/multi-model-agents.html).
+For a decision framework covering pricing, extensibility, and integration approach, see the [Practitioner's Tool Comparison](/tools/). For a deeper treatment of multi-model routing, see [The Multi-Model Agent Landscape](/tools/amp.html).

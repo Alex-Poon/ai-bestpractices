@@ -6,8 +6,22 @@
     <description>Recent content in Sustainability on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/sustainability/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Is the AI Coding Tool Economy Sustainable?</title>
+      <link>/debates/cost-sustainability.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/debates/cost-sustainability.html</guid>
+      <description>&lt;h2 id=&#34;the-question&#34;&gt;The Question&lt;/h2&gt;&#xA;&lt;p&gt;The AI coding tool economy in early 2026 runs on a contradiction: developers are addicted to tools whose providers are hemorrhaging cash. OpenAI projects billions in losses, Anthropic burns through venture capital to subsidize Claude Code subscriptions, and Google treats Gemini as a loss leader to protect search revenue. Developers pay $20 to $200 per month for tools that consume far more in compute than those subscriptions cover.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Is AI Coding Killing Open Source?</title>
+      <link>/debates/open-source-impact.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/debates/open-source-impact.html</guid>
+      <description>&lt;h2 id=&#34;the-question&#34;&gt;The Question&lt;/h2&gt;&#xA;&lt;p&gt;Open source software has been the bedrock of modern computing for decades. Linux runs the cloud, Apache and Nginx serve the web, React and Vue power the frontend, and tens of thousands of libraries form the invisible infrastructure of every application we use. The people who built and maintained this commons did so for a complex mix of reasons: personal satisfaction, reputation building, community belonging, and the belief that shared code makes everyone better off.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>OpenAI&#39;s cash burn will be one of the big bubble questions of 2026</title>
       <link>/sources/2025-12-30-openai-cash-burn.html</link>

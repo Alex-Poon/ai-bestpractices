@@ -37,14 +37,13 @@
       <span>AI Best Practices</span>
     </a>
     <div class="nav-links">
-      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
-      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
       <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
-      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
-      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
       <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
       <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
-      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
     </div>
     <div class="nav-actions">
       <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
@@ -167,13 +166,13 @@
 <li><strong>Verifiable output.</strong> You can check correctness through tests or short review.</li>
 </ol>
 <h2 id="the-tree-metaphor">The Tree Metaphor</h2>
-<p>The clearest framework for thinking about human-agent task division comes from the HN discussion on <a href="../sources/2026-01-04-llm-coding-workflow-2026/">Mitchell Hashimoto&rsquo;s adoption journey</a>. A commenter (allenu) described the division as a tree:</p>
+<p>The clearest framework for thinking about human-agent task division comes from the HN discussion on <a href="../sources/2026-01-04-llm-coding-workflow-2026.html">Mitchell Hashimoto&rsquo;s adoption journey</a>. A commenter (allenu) described the division as a tree:</p>
 <p>The <strong>human owns the trunk and main branches</strong> &ndash; overall architecture, system design, module boundaries, key interfaces, and data models. The <strong>agent owns the leaves</strong> &ndash; individual function implementations, boilerplate, test cases, repetitive transformations, and documentation.</p>
-<p>The interface between human and agent work happens at the branch level. You define the branch (module structure, interface contract), and the agent fills in the leaves (implementation details). The agent never needs to understand the full tree. This maps directly to how effective delegation works between senior and junior engineers, with one critical difference: the agent does not learn across sessions unless you build a <a href="../skills/harness-engineering/">harness</a>.</p>
+<p>The interface between human and agent work happens at the branch level. You define the branch (module structure, interface contract), and the agent fills in the leaves (implementation details). The agent never needs to understand the full tree. This maps directly to how effective delegation works between senior and junior engineers, with one critical difference: the agent does not learn across sessions unless you build a <a href="../skills/harness-engineering.html">harness</a>.</p>
 <h2 id="practical-decomposition-techniques">Practical Decomposition Techniques</h2>
 <h3 id="separate-planning-from-execution">Separate Planning from Execution</h3>
 <p>Use the agent in conversation mode to explore the problem space, discuss approaches, and iterate on a plan. Then switch to execution mode for implementation. The planning phase is where you make trunk and branch decisions. The execution phase is where the agent fills in leaves.</p>
-<p>This separation prevents the failure mode where the agent starts implementing before the approach is settled and builds momentum toward a wrong solution. <a href="../sources/2026-01-04-llm-coding-workflow-2026/">Addy Osmani&rsquo;s workflow</a> describes this as completing a specification phase before any code is written.</p>
+<p>This separation prevents the failure mode where the agent starts implementing before the approach is settled and builds momentum toward a wrong solution. <a href="../sources/2026-01-04-llm-coding-workflow-2026.html">Addy Osmani&rsquo;s workflow</a> describes this as completing a specification phase before any code is written.</p>
 <h3 id="write-the-spec-delegate-the-implementation">Write the Spec, Delegate the Implementation</h3>
 <p>Write a precise description of what you want: function signature, expected behavior, edge cases, error handling. Give this spec to the agent as a self-contained task. This forces you to think through the design (a human activity) while offloading the mechanical typing.</p>
 <h3 id="batch-related-leaf-tasks">Batch Related Leaf Tasks</h3>
@@ -196,7 +195,7 @@
 <h2 id="scoping-at-scale-lessons-from-16-parallel-agents">Scoping at Scale: Lessons from 16 Parallel Agents</h2>
 <p>Nicholas Carlini&rsquo;s project building a C compiler with 16 parallel Claude instances provides empirical evidence for how scoping interacts with parallelism. The core lesson: <strong>parallelism requires task structure.</strong> When hundreds of independent failing tests existed, each agent could pick a different one &ndash; the tasks were naturally decomposed. But when a single monolithic failure appeared (compiling the Linux kernel), all 16 agents independently discovered the same bug and overwrote each other&rsquo;s fixes.</p>
 <p>The solution was <strong>oracle-based testing</strong>: using a known-good compiler (GCC) to binary-search for the specific compilation unit causing the failure, converting one opaque problem into many scoped, independent tasks. This technique of manufacturing task boundaries where none naturally exist is generalizable to any domain with a reference implementation.</p>
-<p>The project also demonstrated <strong>role specialization as a scoping strategy</strong> &ndash; rather than N identical generalist agents, deploying specialists (core developers, a deduplicator, a performance optimizer, a code quality critic, a documentation maintainer) whose work products are orthogonal by design. See <a href="../patterns/parallel-agent-coordination/">Parallel Agent Coordination</a> for the full pattern.</p>
+<p>The project also demonstrated <strong>role specialization as a scoping strategy</strong> &ndash; rather than N identical generalist agents, deploying specialists (core developers, a deduplicator, a performance optimizer, a code quality critic, a documentation maintainer) whose work products are orthogonal by design. See <a href="../workflows/parallel-agents.html">Parallel Agent Coordination</a> for the full pattern.</p>
 <h2 id="key-indicators-you-have-scoped-well">Key Indicators You Have Scoped Well</h2>
 <ul>
 <li>Verification is fast &ndash; under two minutes.</li>
@@ -207,10 +206,10 @@
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><a href="../sources/2026-01-04-llm-coding-workflow-2026/">Mitchell Hashimoto&rsquo;s AI adoption journey</a> &ndash; Describes the transition from chatbot usage to scoped task delegation as the key skill inflection point</li>
-<li><a href="../sources/2026-01-04-llm-coding-workflow-2026/">Addy Osmani&rsquo;s LLM coding workflow</a> &ndash; Practical specification-first workflow</li>
-<li><a href="../sources/2026-01-24-claude-code-swarms/">Building a C compiler with Claude</a> &ndash; Empirical evidence on scoping and parallelism from Carlini&rsquo;s 16-agent project</li>
-<li><a href="../sources/2026-01-22-ai-coding-toolkit/">AI Coding Toolkit</a> &ndash; Phase-gated Specify/Plan/Execute workflow</li>
+<li><a href="../sources/2026-01-04-llm-coding-workflow-2026.html">Mitchell Hashimoto&rsquo;s AI adoption journey</a> &ndash; Describes the transition from chatbot usage to scoped task delegation as the key skill inflection point</li>
+<li><a href="../sources/2026-01-04-llm-coding-workflow-2026.html">Addy Osmani&rsquo;s LLM coding workflow</a> &ndash; Practical specification-first workflow</li>
+<li><a href="../sources/2026-01-24-claude-code-swarms.html">Building a C compiler with Claude</a> &ndash; Empirical evidence on scoping and parallelism from Carlini&rsquo;s 16-agent project</li>
+<li><a href="../sources/2026-01-22-ai-coding-toolkit.html">AI Coding Toolkit</a> &ndash; Phase-gated Specify/Plan/Execute workflow</li>
 <li><strong>allenu</strong> (HN) &ndash; Tree metaphor for human-agent task division</li>
 <li><strong>sho_hn</strong> (HN) &ndash; Decomposition skill matters more than prompting skill</li>
 <li><strong>apercu</strong> (HN) &ndash; Inability to articulate success criteria signals a task is not ready for delegation</li>
@@ -271,30 +270,29 @@
   <div class="footer-container">
     <div class="footer-brand">
       <span class="footer-logo">AI Best Practices</span>
-      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
     </div>
     <div class="footer-nav">
       <div class="footer-section">
         <h3>Learn</h3>
         <ul>
-          <li><a href="../start-here/index.html">Start Here</a></li>
-          <li><a href="../skills/index.html">Skills</a></li>
-          <li><a href="../workflows/index.html">Workflows</a></li>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Explore</h3>
         <ul>
           <li><a href="../tools/index.html">Tools</a></li>
-          <li><a href="../landscape/index.html">Landscape</a></li>
           <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
           <li><a href="../sources/index.html">Sources</a></li>
-          <li><a href="../tags/">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 84 pages across 187 topics.</p>
     </div>
   </div>
 </footer>

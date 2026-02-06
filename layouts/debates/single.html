@@ -1,0 +1,53 @@
+{{ define "main" }}
+<div class="page-container">
+  {{ partial "breadcrumbs.html" . }}
+
+  <div class="article-layout{{ if and .TableOfContents (gt .WordCount 500) }} has-toc{{ end }}">
+    <article class="article">
+      <header class="debate-header">
+        {{ partial "tag-pills.html" . }}
+        <h1 class="debate-question">{{ .Title }}</h1>
+        {{ with .Description }}
+        <p class="debate-framing">{{ . }}</p>
+        {{ end }}
+        {{ partial "meta-bar.html" . }}
+      </header>
+
+      <div class="article-content">
+        {{ .Content }}
+      </div>
+
+      {{/* Related debates */}}
+      {{ with .Params.related_debates }}
+      <div class="debate-related">
+        <h3>Related Debates</h3>
+        <div class="debate-related-grid">
+          {{ range . }}
+            {{ with site.GetPage . }}
+            <a href="{{ .RelPermalink }}" class="debate-related-link">{{ .Title }}</a>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+
+      <nav class="article-nav">
+        {{ with .PrevInSection }}
+        <a href="{{ .RelPermalink }}" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">{{ .Title }}</span>
+        </a>
+        {{ end }}
+        {{ with .NextInSection }}
+        <a href="{{ .RelPermalink }}" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">{{ .Title }}</span>
+        </a>
+        {{ end }}
+      </nav>
+    </article>
+
+    {{ partial "toc.html" . }}
+  </div>
+</div>
+{{ end }}

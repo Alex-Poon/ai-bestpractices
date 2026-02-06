@@ -1,0 +1,8 @@
+<div class="voice-card">
+  <blockquote>{{ .Inner | markdownify }}</blockquote>
+  <div class="voice-attribution">
+    <strong>{{ .Get "author" }}</strong>
+    {{ with .Get "thread" }} &middot; {{ . }}{{ end }}
+    {{ with .Get "link" }} &middot; <a href="{{ . }}">View thread</a>{{ end }}
+  </div>
+</div>

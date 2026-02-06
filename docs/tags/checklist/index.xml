@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Checklist on AI Best Practices Knowledge Base</title>
-    <link>/tags/checklist.html</link>
+    <link>//localhost:1314/tags/checklist.html</link>
     <description>Recent content in Checklist on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/checklist/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/checklist/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Daily Practice</title>
-      <link>/workflows/daily-practice.html</link>
+      <link>//localhost:1314/workflows/daily-practice.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/workflows/daily-practice.html</guid>
-      <description>&lt;p&gt;Using AI coding tools effectively is not about writing better prompts on any given day. It is about building habits that compound over weeks and months. This page distills the daily routines that experienced practitioners follow, drawn from &lt;a href=&#34;../../sources/2026-01-26-karpathy-claude-coding-notes/&#34;&gt;Karpathy&amp;rsquo;s coding notes&lt;/a&gt;, &lt;a href=&#34;../../sources/2026-01-04-llm-coding-workflow-2026/&#34;&gt;Addy Osmani&amp;rsquo;s LLM workflow&lt;/a&gt;, and patterns observed across the broader practitioner community.&lt;/p&gt;&#xA;&lt;h2 id=&#34;morning-setup&#34;&gt;Morning Setup&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Review your harness files.&lt;/strong&gt; Open your AGENTS.md or CLAUDE.md and scan for anything outdated. If you corrected the agent yesterday but did not document it, add the entry now. Remove rules that no longer apply. A stale harness teaches the agent outdated habits. See the &lt;a href=&#34;../../workflows/agents-md-guide/&#34;&gt;AGENTS.md Guide&lt;/a&gt; for maintenance discipline.&lt;/p&gt;</description>
+      <guid>//localhost:1314/workflows/daily-practice.html</guid>
+      <description>&lt;p&gt;Using AI coding tools effectively is not about writing better prompts on any given day. It is about building habits that compound over weeks and months. This page distills the daily routines that experienced practitioners follow, drawn from &lt;a href=&#34;../../sources/2026-01-26-karpathy-claude-coding-notes.html&#34;&gt;Karpathy&amp;rsquo;s coding notes&lt;/a&gt;, &lt;a href=&#34;../../sources/2026-01-04-llm-coding-workflow-2026.html&#34;&gt;Addy Osmani&amp;rsquo;s LLM workflow&lt;/a&gt;, and patterns observed across the broader practitioner community.&lt;/p&gt;&#xA;&lt;h2 id=&#34;morning-setup&#34;&gt;Morning Setup&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Review your harness files.&lt;/strong&gt; Open your AGENTS.md or CLAUDE.md and scan for anything outdated. If you corrected the agent yesterday but did not document it, add the entry now. Remove rules that no longer apply. A stale harness teaches the agent outdated habits. See the &lt;a href=&#34;../../workflows/agents-md-guide.html&#34;&gt;AGENTS.md Guide&lt;/a&gt; for maintenance discipline.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

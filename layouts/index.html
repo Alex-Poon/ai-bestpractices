@@ -2,30 +2,57 @@
 {{ partial "hero.html" . }}
 
 <div class="page-container">
-  {{/* Start Here */}}
-  {{ with site.GetPage "/start-here" }}
+  {{/* Three entry points */}}
   <section class="home-section">
-    <div class="start-here-card">
-      <a href="{{ .RelPermalink }}" class="start-here-link">
-        <span class="start-here-badge">Start Here</span>
-        <h2>{{ .Title }}</h2>
-        <p>{{ .Description }}</p>
-        <span class="start-here-cta">Read the guide &rarr;</span>
-      </a>
+    <div class="card-grid" style="grid-template-columns: repeat(3, 1fr);">
+      {{/* Start the Guide */}}
+      {{ with site.GetPage "/guide" }}
+      <div class="start-here-card">
+        <a href="{{ .RelPermalink }}" class="start-here-link">
+          <span class="start-here-badge">New to this?</span>
+          <h2 style="font-size: var(--text-xl);">Start the Guide</h2>
+          <p>A sequential reading path from first principles to productive AI-assisted development.</p>
+          <span class="start-here-cta">Begin reading &rarr;</span>
+        </a>
+      </div>
+      {{ end }}
+
+      {{/* Pick a Debate */}}
+      {{ with site.GetPage "/debates" }}
+      <div class="start-here-card" style="border-color: var(--color-debates);">
+        <a href="{{ .RelPermalink }}" class="start-here-link">
+          <span class="start-here-badge" style="background: rgba(245,158,11,0.1); color: var(--color-debates);">Dive deeper</span>
+          <h2 style="font-size: var(--text-xl);">Pick a Debate</h2>
+          <p>{{ len .RegularPages }} open questions where the community genuinely disagrees. Both sides, strongest arguments.</p>
+          <span class="start-here-cta" style="color: var(--color-debates);">Explore debates &rarr;</span>
+        </a>
+      </div>
+      {{ end }}
+
+      {{/* Hear from Practitioners */}}
+      {{ with site.GetPage "/voices" }}
+      <div class="start-here-card" style="border-color: var(--color-voices);">
+        <a href="{{ .RelPermalink }}" class="start-here-link">
+          <span class="start-here-badge" style="background: rgba(251,113,133,0.1); color: var(--color-voices);">Real voices</span>
+          <h2 style="font-size: var(--text-xl);">Practitioner Voices</h2>
+          <p>Curated insights from developers who've gone deep with AI coding tools. Real experience, not marketing.</p>
+          <span class="start-here-cta" style="color: var(--color-voices);">Read voices &rarr;</span>
+        </a>
+      </div>
+      {{ end }}
     </div>
   </section>
-  {{ end }}
 
-  {{/* Core Skills */}}
-  {{ $skills := (site.GetPage "/skills").RegularPages }}
-  {{ if $skills }}
+  {{/* Practices */}}
+  {{ $practices := (site.GetPage "/practices").RegularPages }}
+  {{ if $practices }}
   <section class="home-section">
     <div class="home-section-header">
-      <h2 class="home-section-title">Core Skills</h2>
-      <a href="{{ with site.GetPage "/skills" }}{{ .RelPermalink }}{{ end }}" class="section-link">View all &rarr;</a>
+      <h2 class="home-section-title">Practices</h2>
+      <a href="{{ with site.GetPage "/practices" }}{{ .RelPermalink }}{{ end }}" class="section-link">View all &rarr;</a>
     </div>
     <div class="card-grid">
-      {{ range $skills.ByWeight }}
+      {{ range first 4 ($practices.ByWeight) }}
         {{ partial "card.html" . }}
       {{ end }}
     </div>
@@ -48,35 +75,17 @@
   </section>
   {{ end }}
 
-  {{/* Workflows */}}
-  {{ $workflows := (site.GetPage "/workflows").RegularPages }}
-  {{ if $workflows }}
+  {{/* Evidence */}}
+  {{ $evidence := (site.GetPage "/evidence").RegularPages }}
+  {{ if $evidence }}
   <section class="home-section">
     <div class="home-section-header">
-      <h2 class="home-section-title">Workflows</h2>
-      <a href="{{ with site.GetPage "/workflows" }}{{ .RelPermalink }}{{ end }}" class="section-link">View all &rarr;</a>
+      <h2 class="home-section-title">Evidence &amp; Case Studies</h2>
+      <a href="{{ with site.GetPage "/evidence" }}{{ .RelPermalink }}{{ end }}" class="section-link">View all &rarr;</a>
     </div>
     <div class="card-grid">
-      {{ range $workflows.ByWeight }}
+      {{ range first 3 ($evidence.ByWeight) }}
         {{ partial "card.html" . }}
-      {{ end }}
-    </div>
-  </section>
-  {{ end }}
-
-  {{/* Latest Synthesis */}}
-  {{ $synthesis := (site.GetPage "/synthesis").RegularPages }}
-  {{ with first 1 $synthesis }}
-  <section class="home-section">
-    <h2 class="home-section-title">Latest Synthesis</h2>
-    <div class="featured-card">
-      {{ range . }}
-      <a href="{{ .RelPermalink }}" class="featured-card-link">
-        <span class="featured-badge">Synthesis</span>
-        <h3>{{ .Title }}</h3>
-        <p>{{ .Description }}</p>
-        <span class="featured-meta">{{ .ReadingTime }} min read</span>
-      </a>
       {{ end }}
     </div>
   </section>
@@ -98,16 +107,16 @@
   </section>
   {{ end }}
 
-  {{/* Evidence */}}
-  {{ $evidence := (site.GetPage "/evidence").RegularPages }}
-  {{ if $evidence }}
+  {{/* Latest Sources */}}
+  {{ $sources := (site.GetPage "/sources").RegularPages }}
+  {{ if $sources }}
   <section class="home-section">
     <div class="home-section-header">
-      <h2 class="home-section-title">Evidence &amp; Case Studies</h2>
-      <a href="{{ with site.GetPage "/evidence" }}{{ .RelPermalink }}{{ end }}" class="section-link">View all &rarr;</a>
+      <h2 class="home-section-title">Latest Sources</h2>
+      <a href="{{ with site.GetPage "/sources" }}{{ .RelPermalink }}{{ end }}" class="section-link">View all &rarr;</a>
     </div>
     <div class="card-grid">
-      {{ range $evidence.ByWeight }}
+      {{ range first 4 ($sources.ByDate.Reverse) }}
         {{ partial "card.html" . }}
       {{ end }}
     </div>

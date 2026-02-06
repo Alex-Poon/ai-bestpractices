@@ -30,13 +30,6 @@
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;MarginLab launched a daily benchmark tracker for Claude Code performance, measuring the CLI tool against a curated subset of SWE-Bench-Pro tasks using the Opus 4.5 model. The tracker was created in response to widespread community concerns about silent model degradation, where users noticed performance fluctuations but had no systematic way to measure or verify them.&lt;/p&gt;&#xA;&lt;p&gt;The methodology involves running 50 daily evaluations against SWE-Bench-Pro tasks without custom harnesses, then aggregating results over 7-day and 30-day windows for statistical reliability. Statistical significance is determined using Bernoulli modeling with 95% confidence intervals. At the time of the HN discussion, the tracker showed a daily pass rate of 48%, a 7-day aggregate of 53%, and a 30-day aggregate of 53%, compared against a historical baseline of 58%.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Harness Engineering</title>
-      <link>/skills/harness-engineering.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/skills/harness-engineering.html</guid>
-      <description>&lt;p&gt;Harness engineering is the practice of building persistent infrastructure that constrains and guides AI agents across sessions. It is the highest-leverage investment in AI-assisted development because it compounds: every mistake you document is a mistake that never recurs.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-the-harness-matters-more-than-the-prompt&#34;&gt;Why the Harness Matters More Than the Prompt&lt;/h2&gt;&#xA;&lt;p&gt;A well-harnessed mediocre prompt outperforms a perfect prompt with no harness. This is counterintuitive because prompt engineering gets most of the public attention. But practitioners who have been using agents for months consistently report that their investment in configuration files and custom tools delivers more value than any improvement in prompting technique.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>A few random notes from Claude coding quite a bit last week</title>
       <link>/sources/2026-01-26-karpathy-claude-coding-notes.html</link>
       <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
@@ -49,13 +42,6 @@
       <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
       <guid>/sources/2026-01-08-claude-code-200-lines.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Mihail Eric&amp;rsquo;s article, provocatively titled &amp;ldquo;The Emperor Has No Clothes,&amp;rdquo; argues that AI coding assistants are not magical — they follow a simple architectural loop. The user sends a request, the LLM decides which tools to call, your code executes those tools locally, and the results flow back to the LLM for context. The critical mental model is that the LLM never actually touches your filesystem; it asks for things to happen, and your code makes them happen.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AGENTS.md Guide</title>
-      <link>/workflows/agents-md-guide.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/workflows/agents-md-guide.html</guid>
-      <description>&lt;p&gt;AGENTS.md and CLAUDE.md are project-root files that AI coding agents read at the start of every session. They give agents persistent, project-specific context that would otherwise be lost between conversations. Different tools use different filenames &amp;ndash; Claude Code reads CLAUDE.md, Amp reads AGENTS.md, and most tools now support both &amp;ndash; but the purpose is identical: tell the agent how to work in this codebase.&lt;/p&gt;&#xA;&lt;p&gt;This guide covers what to put in these files, how to maintain them, and the evaluation evidence showing why this approach works.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Claude Code&#39;s New Hidden Feature: Swarms</title>

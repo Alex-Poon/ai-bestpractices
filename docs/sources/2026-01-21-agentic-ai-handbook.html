@@ -3,12 +3,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Agentic AI Handbook: Production-Ready Patterns | AI Best Practices Knowledge Base</title>
-  <meta name="description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta name="description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
   <meta name="color-scheme" content="dark light">
 
   
   <meta property="og:title" content="The Agentic AI Handbook: Production-Ready Patterns">
-  <meta property="og:description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta property="og:description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
   <meta property="og:type" content="article">
 
   
@@ -37,14 +37,13 @@
       <span>AI Best Practices</span>
     </a>
     <div class="nav-links">
-      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
-      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
       <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
-      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
-      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
       <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
       <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
-      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
     </div>
     <div class="nav-actions">
       <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
@@ -114,7 +113,7 @@
 
   
 
-  <span class="meta-reading-time">3 min read</span>
+  <span class="meta-reading-time">20 min read</span>
 
   
   <span class="tier-badge tier-badge--1">Tier 1</span>
@@ -194,24 +193,531 @@
 <p>&ldquo;An LLM wrapped in a loop that can observe state, call tools, and decide when it&rsquo;s done.&rdquo; — Nibzard</p>
 </blockquote>
 <h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
-<p>The discussion generated 210 points and 20 comments. Key themes:</p>
-<p><strong>Skepticism about AI-generated content</strong></p>
-<ul>
-<li><strong>Bukhmanizer</strong>: Would rather just read the prompt that generated the article</li>
-<li><strong>zuInnp</strong>: Found the website layout hard to read and suspected the article was AI-written</li>
-<li><strong>mellosouls</strong>: Noted the author appears to be an &ldquo;AI Growth Innovator&rdquo; rather than a production engineer</li>
-</ul>
-<p><strong>Practical pattern validation</strong></p>
-<ul>
-<li><strong>MrOrelliOReilly</strong>: Found value in the consolidation and vocabulary standardization, noting developers are converging on similar patterns independently</li>
-<li><strong>comboy</strong>: Observed a meta-pattern — when you notice a working pattern like planning or TODO management, it gets integrated into the agent&rsquo;s own behavior, making your abstraction on top redundant</li>
-<li><strong>N_Lens</strong>: Felt the cognitive cost of agentic coding is much higher than a skilled human, with too much bootstrapping to keep agents on the rails</li>
-</ul>
-<p><strong>Concerns about agent scaling</strong></p>
-<ul>
-<li><strong>embedding-shape</strong>: Disagreed that time is the real bottleneck — the true bottleneck is drowning under your own slop as agents produce fast but lower-quality output that degrades as projects grow</li>
-<li><strong>kstenerud</strong>: Counter-argued with a personal report of 100x productivity using the latest Claude, completing multiple complex projects in a single week</li>
-</ul>
+<p><em>122 comments total</em></p>
+<p><strong>alkonaut</strong>: All of this might as well be greek to me. I use ChatGPT and copy paste code snippets. Which was bleeding edge a year or two ago, and now it feels like banging rocks together when reading these type&hellip;</p>
+<blockquote>
+<p><strong>prettygood</strong>: I&rsquo;m so happy someone else says this, because I&rsquo;m doing exactly the same. I tried to use agent mode in vs code and the output was still bad. You read simple things like: &ldquo;We use it to write tests&rdquo;. &hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>kace91</strong>: I’m not particularly proAI but I struggle with the mentality some engineers seem to apply to trying. If you read someone say “I don’t know what’s the big deal with vim, I ran it and pressed some ke&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Macha</strong>: There isn&rsquo;t a bunch of managers metaphorically asking people if they&rsquo;re using vim enough, and not so many blog posts proclaiming vim as the only future for building software</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>alkonaut</strong>: I don&rsquo;t understand how to get even bad results. Or any results at all. I&rsquo;m at a level where I&rsquo;m going &ldquo;This can&rsquo;t just be me not having read the manual&rdquo;. I get the same change applied multiple time&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>neumann</strong>: I agree to a degree, but I am in that camp. I subscribe to alphasignal, and every morning there are 3 new agent tools, and two new features, and a new agentic approach, and I am left wondering, whe&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>galaxyLogic</strong>: Well one could say that since it&rsquo;s AI, AI should be able to tell us what we&rsquo;re doing wrong. No? AI is supposed to make our work easier.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>chewz</strong>: Some people shouldn&rsquo;t just be engineers in the first place, I guess.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>embedding-shape</strong>: You didn&rsquo;t actually just say &ldquo;write tests&rdquo; though right? What was the actual prompt you used? I feel like that matters more than the tooling at this point. I can&rsquo;t really understand letting LLMs de&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Balinares</strong>: There are a lot of comments on HN and other places breathlessly gushing about agents totally doing everything end to end, so I couldn&rsquo;t blame someone new to this space for naively assuming that age&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>prettygood</strong>: No, that was an exaggeration. The prompt was decent. I explained the point of the repository, that I wanted full coverage with tests, that it could keep going until it worked. Maybe that was still &hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>threecheese</strong>: “Write tests“ may not be enough; provide it with a test harness, and instruct it to “write tests until they pass “. Next would be “your feature isn’t complete without N% coverage”. These require th&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>tasuki</strong>: &gt; I gave it a very simple repository, said to write tests, and the result wasn&rsquo;t usable at all. Really wonder if I&rsquo;m doing it wrong. I think so. The humans should be writing the spec. The AI can th&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>sixtyj</strong>: No, you have similar experience as a lot of people have. LLMs just fail (hallucinate) in less known fields of expertise. Funny: Today I have asked Claude to give me syntax how to run Claude Code. A&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>agumonkey</strong>: you need to write a test suite to check his test generation (soft /s)</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>CurleighBraces</strong>: Yeah if you&rsquo;ve not used codex/agent tooling yet it&rsquo;s a paradigm shift in the way of working, and once you get it it&rsquo;s very very difficult to go back to the copy-pasta technique. There&rsquo;s obviously a&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Bewelge</strong>: - We narrowed it down to the tool we used to flash the code. - I downloaded the repository, jumped into codex, explained the symptoms and it found and fixed the bug in less than ten minutes. Change&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>CurleighBraces</strong>: I agree with your statement and perhaps my example is bad/too specific in this case. Once I started working this way however, I found myself starting to adapt to it. It&rsquo;s not unusual now to find my&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>theshrike79</strong>: Why would you copy files anywhere? My daily process is like this: Claude plans (Opus 4.5) Claude implements (Opus at work, Sonnet at home - I only have the $20 plan personally :P ) After implementa&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>embedding-shape</strong>: &gt; I never had any luck integrating agents What exactly do you mean with &ldquo;integrating agents&rdquo; and what did you try? The simplest (and what I do) is not &ldquo;integrating them&rdquo; anywhere, but just replace &hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>alkonaut</strong>: I installed the copilot extension in my IDE, and switched on Agent mode. I don&rsquo;t really get how the workflow is supposed to work, but I think it&rsquo;s mostly due to how the tool is made. It has like so&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>kaycey2022</strong>: Copilot in vs code is definitely trash. That aside the workflow is simple. If you are familiar with the code base then make sure to refer the files where a newb has to look if you were assigning th&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>embedding-shape</strong>: Hm, yeah maybe. I&rsquo;ve tried Cursor once, but the entire experience was so horrible, and it was really hard to know what&rsquo;s going on. The workflow I have right now, is something like what I put before&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>songodongo</strong>: Make sure you’re clicking “Keep” to “approve” the changes. It’s annoying but I don’t think there is a way around having to do that. Then if you manually edit something, you can mention it in your n&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ctmnt</strong>: Correct. Of the various ways to work, I find the in-IDE chat to be the worst. I rarely use it for anything other than “help me understand this line”. Try one of the CLIs. That’s the good stuff righ&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ikidd</strong>: Copilot is a dumpster fire and I can understand why you&rsquo;re down on agents from that experience. Splurge on the $20 for Cursor, and install their IDE. Start with a simple project, more because it he&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>hahahahhaah</strong>: I feel like just use claude code. That is it. Use it you get the feel for it. Everyone is over complicating. It is like learning to code itself. You need flight hours.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>cobolexpert</strong>: This is something that continues to surprise me. LLMs are extremely flexible and already come prepackaged with a lot of &ldquo;knowledge&rdquo;, you don&rsquo;t need to dump hundreds of lines of text to explain to i&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>vidarh</strong>: You get to 80% there (numbers pulled out of the air) by just telling it to do things. You do need more to get from 80% there to 90%+ there. How much more depends on what you&rsquo;re trying to do and in &hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>TeMPOraL</strong>: There&rsquo;s no such thing as universal &ldquo;good software development practices&rdquo;. There&rsquo;s only lots of opinions. Some are more popular, some less; some are language, domain or company-specific (or even too&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>raesene9</strong>: I think avoiding filling context up with too much pattern information, is partially where agent skills are coming from, with the idea there being that each skill has a set of triggers, and the main&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>epolanski</strong>: &gt; I suspect these frameworks/patterns just fill up the context with unecessary junk. That&rsquo;s exactly the point. Agents have their own context. Thus, you try to leverage them by combining ad-hoc inst&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Macha</strong>: If I don&rsquo;t instruct it to in some way, the agent will not write tests, will not conform with the linter standard, will not correctly figure out the command to run a subset of tests, etc.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>alkonaut</strong>: I&rsquo;m stuck with the Copilot tools. Again, I don&rsquo;t think this is a problem with the models but with the tooling. I can&rsquo;t switch to claude code (for work, that is) and while I don&rsquo;t mind using more co&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong><em>zoltan</em></strong>: It&rsquo;s not that simple. That&rsquo;s how I started as well but now I have hooked up Gemini and GPT 5.2 to review code and plans and then to do consensus on design questions. And then there&rsquo;s Ralph with cro&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>tmountain</strong>: I used to do it the way you were doing it. A friend went to a hackathon and everyone was using Cursor and insisted that I try it. It lets you set project level &ldquo;rules&rdquo; that are basically prompts fo&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>jonathanstrange</strong>: I&rsquo;m doing the same. My reason is not the IDE, I just can&rsquo;t let AI agent software onto my machine. I have no trust at all in it and the companies who make this software. I neither trust them in term&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>ramraj07</strong>: I recently pasted an error I found into claude code and asked who broke this. It found the commit and also found that someone else had fixed it in their branch. You should use claude code.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>JeremyNT</strong>: If your org has a relationship with MS/OpenAI (many do!) you can also use OpenCode with GPT-5.2 for some pretty impressive results. Once you see what is currently possible with this technique you w&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ctmnt</strong>: You don’t even need to paste. Connect it to your IDE (which should be as easy as installing the Claude plugin in your IDE and typing <code>ide</code> in <code>code</code>) and it’ll automatically pull in whatever you ha&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bojan</strong>: There&rsquo;s no reason this should not be possible in other IDEs, except for the vendor lock-in.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>dude250711</strong>: The idea is to produce such articles, not read them. Do not even read them as the agent is spitting them out - simply feed straight into another agent to verify.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>63stack</strong>: Present it at the next team/management meeting to seem in the loop and hope nobody asks any questions</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>chrz</strong>: No questions. It will be pasted into their AI tool. And things will be great. For few weeks at least until something break a nobody will know what</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>breppp</strong>: I also sympathize with that approach, and found it sometimes better than agents. I believe some of the agentic IDEs are missing a &ldquo;contained mode&rdquo;. Let me select lines in my code which you are allo&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>alkonaut</strong>: Yes. And some way of using an instructions file. Because interacting with an agent in a tiny plugin window without use of &ldquo;agents.md&rdquo; or some sort of persistent prompt you can adjust retry etc is h&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>rustyhancock</strong>: I don&rsquo;t think so it seems the aspiration of these tools is it&rsquo;ll be agents all the way down. A high level task is given and outpops a working solution. A) If you can&rsquo;t program and you&rsquo;re just happy&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>wiseowise</strong>: You just didn&rsquo;t drink enough cool-aid and have intact brain.</p>
+</blockquote>
+<blockquote>
+<p><strong>franze</strong>: I am on the other side, I have given the complete control of my computer to Claude Code - Yolo Mode. Sudo. It just works. My servers run the same. I SSH into Claude Code there and let them do whate&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>vidarh</strong>: &gt; end of 2026 we will not use computer the way we use them now. I think it will take much longer than that for most people, but I disagree with the timeline, not where we&rsquo;re headed. I have a projec&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>theshrike79</strong>: Depending on your threat model, I&rsquo;d lean more into building permanent tooling that&rsquo;s not dependent on an external AI API provider. The more you can offload to deterministic tools (script), the easi&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>darkwater</strong>: Claude Code and agents are the hot new hammer, and they are cool, I use CC and like it for many things, but currently they suffer from the &ldquo;hot new hammer&rdquo; hype so people tend to think everything i&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>TeMPOraL</strong>: That &ldquo;hot new hammer&rdquo; hype is a good thing given general enough tool, and LLMs very much are that. We did the same with smartphones, the Internet, personal computers, and even electricity. Some 150&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jangxx</strong>: Don&rsquo;t say &ldquo;we&rdquo; when talking about yourself.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>franze</strong>: I already do. And yes, it is a hypothesis about the future. Claude Code was just a first step. It will happen to the rest of computer use as well.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>photios</strong>: Copilot&rsquo;s agent mode is a disaster. Use better tools: try Claude Code or OpenCode (my favorite). It&rsquo;s a new ecosystem with its own (atrocious!) jargon that you need to learn. The good news is that &hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>darkwater</strong>: Yep, basically this. In the end it helps having the mental model that (almost) everything related to agents is just a way to send the upstream LLM a better and more specific context for the task yo&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>theshrike79</strong>: Skills can (and IMO should) also contain scripts custom made for that skill. Like a code review skill would have scripts that read the actual code.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>alkonaut</strong>: Sadly we have some partnership meaning it&rsquo;s Copilot or nothing.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ryanhecht</strong>: Give Copilot CLI a try if you haven&rsquo;t in a while! The team&rsquo;s been working really hard to improve the harness, and we&rsquo;re taking as much community feedback as we can get! Let me know if you run into &hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>photios</strong>: I feel your pain. I used to work for a bank and the security team only approved Copilot use. OpenCode can use Copilot natively: <a href="https://opencode.ai/docs/providers/#github-copilot">https://opencode.ai/docs/providers/#github-copilot</a> I got Claude Code &hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>JeremyNT</strong>: If you can use the Copilot CLI, it&rsquo;s highly likely you can use OpenCode with the same API key. It&rsquo;s worth doing a little research. The CLI tool matters. If you&rsquo;re not using opencode/claude you&rsquo;re m&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>kaycey2022</strong>: I’m not as behind as that. But i cant figure out this loop thing. We have engineers here saying they are reviewing 100k lines of code a day, slinging 10 agents simultaneously. I just cannot figure &hellip;</p>
+</blockquote>
+<p><strong>Bukhmanizer</strong>: I’d rather just read the prompt that this article was generated from.</p>
+<blockquote>
+<p><strong>straydusk</strong>: I finally found the perfect way to describe what I feel when I read stuff like this.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>aj_g</strong>: I remember some proto-memes about translation of some text between English and Chinese 100 times and the results being hilarious&hellip;modern parallel would be to ask a LLM to read the article, and gen&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>iwrrtp69</strong>: I Would Rather Read The Prompt (IWRRTP)</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>alex_suzuki</strong>: JTPP - just the prompt, please</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>a_victorp</strong>: I laughed when I noticed the username</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>sebastiennight</strong>: I hereby second the motion to get this acronym widely adopted</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ares623</strong>: Tempted to copy the content and launder it through another LLM and post a comment linking to my own version</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>0xbadcafebee</strong>: That&rsquo;s like saying you&rsquo;d rather listen to someone ask a question than read a chapter of a textbook. About 99% of the blogs [written by humans] that reach HN&rsquo;s front page are fundamentally incorrect&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Balinares</strong>: &gt; If it&rsquo;s AI-written, it actually comes close to factual. I am ceaselessly fascinated by how we can all live in the same world yet seemingly inhabit such vastly different realities.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>aitchnyu</strong>: Donate me the tokens, dont donate me slop PRs - open source maintainer</p>
+</blockquote>
+<p><strong>zuInnp</strong>: Not only is the website layout horrible to read, it also smells like the article was written by AI. My brain just screams &ldquo;no&rdquo; when I try to read that.</p>
+<blockquote>
+<p><strong>wiseowise</strong>: Don&rsquo;t worry, it&rsquo;s not supposed to be read. The idea is to induce FOMO and subscribe to authors newsletter to get more &ldquo;insights&rdquo;.</p>
+</blockquote>
+<blockquote>
+<p><strong>wesselbindt</strong>: Seems like a reasonable feeling to have. Anything that&rsquo;s not worth writing is not worth reading imo.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ffsm8</strong>: Eh, you&rsquo;re going too far with that IMO. The other day we were discussing a new core architecture for a Microservice we were meant to split out of a &ldquo;larger&rdquo; Microservice so that separate teams coul&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>gbnwl</strong>: It’s also just fluff and straight up wrong at parts. This wasn’t checked by a human or at least a human who understands enough to catch inaccuracies. For example for “Plan-then-execute” (which is p&hellip;</p>
+</blockquote>
+<p><strong>Bishonen88</strong>: AI written article about AI usage, building things with AI that others will use to build their own AI with. The future is now indeed.</p>
+<blockquote>
+<p><strong>jbstack</strong>: I feel like HN should have a policy of discouraging comments which accuse articles and other comments of being written by AI. We all know this happens, we all know it&rsquo;s a possibility, and often suc&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>simianparrot</strong>: No. Public shaming for sharing AI written slop is what we need more of.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jbstack</strong>: Such public shaming loses its value when it&rsquo;s overused though (see: boy who cried wolf). The &ldquo;written by AI&rdquo; accusation is thrown around so much, when it often isn&rsquo;t even true, that it just trigger&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>wiseowise</strong>: So it begins, Design Patterns and Agile/Scrum snake oil of modern times.</p>
+<blockquote>
+<p><strong>63stack</strong>: No dude, you just don&rsquo;t get it, if you shout at the ai that YOU HAVE SUPERPOWERS GO READ YOUR SUPERPOWERS AT &hellip;, then give it skills to write new skills, and then sprinkle anti grader reward hacki&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>wiseowise</strong>: Curing cancer is H2 2030, once my options have vested. :cool-eyeglasses-emoji:</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>a_victorp</strong>: Yeah the (updated) tag on all patterns was a bit much</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>bandrami</strong>: No no. We promise this solution has a totally different name.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>throwaway_0236</strong>: In the spirit of the article, I asked chatgpt to suggest names. One of the better ones were &ldquo;Unified LLM Interaction Model (ULIM)&rdquo;. You read it here first&hellip;</p>
+</blockquote>
+</blockquote>
+<p><strong>mellosouls</strong>: Not wanting to be a gatekeeper, but the author appears to be a &ldquo;AI Growth Innovator&rdquo; or some-such-I-don&rsquo;t-know-what rather than an actual engineer who has been ramping up on AI use to see what work&hellip;</p>
+<blockquote>
+<p><strong>embedding-shape</strong>: That&rsquo;s so trite, what makes people write such sentences and not feel embarrassed? I remember when bragging so callously about arbitrary stuff would make you seem off-putting, what happened with tha&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>somebehemoth</strong>: the sell outs took over.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>ozim</strong>: I was hoping that&rsquo;s some sitting in the basement playing hard with LLMs dude post. But that&rsquo;s a dead give away he is just scaling GitHub stars not doing actual research.</p>
+</blockquote>
+<p><strong>N_Lens</strong>: I sometimes feel like the cognitive cost of agentic coding is so much higher than a skilled human. There is so much more bootstrap and handling process around making sure agents don&rsquo;t go off the ra&hellip;</p>
+<blockquote>
+<p><strong>nulone</strong>: Cognitive overhead is real. Spent the first few weeks fixing agent mess more than actually shipping. One thing that helped: force the agent to explain confidence before anything irreversible. Delet&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>aaronrobinson</strong>: It can definitely feel like that right now but I think a big part of that is us learning to harness it. That’s why resources like this are so valuable. There’s always going to be pain at the start.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>a_victorp</strong>: I&rsquo;ve seen this &ldquo;we&rsquo;re still learning&rdquo; argument for at least 6 months now and I get it and even agree with it. However at which point do we start to question how much is it part of a learning curve &hellip;</p>
+</blockquote>
+</blockquote>
+<p><strong>embedding-shape</strong>: &gt; The Real Bottleneck: Time Already a &ldquo;no&rdquo;, the bottleneck is &ldquo;drowning under your own slop&rdquo;. Ever noticed how fast agents seems to be able to do their work in the beginning of the project, but the&hellip;</p>
+<blockquote>
+<p><strong>catlifeonmars</strong>: &gt; Moving slower is usually faster long-term granted you think about the design, but obviously slower short-term, which makes it kind of counter-intuitive. Like an old mentor of mine used to say: “S&hellip;</p>
+</blockquote>
+<p><strong>comboy</strong>: Here&rsquo;s a pattern I noticed - you notice some pattern that is working (let&rsquo;s say planning or TODO management) - if the pattern is indeed solid then it gets integrated into the black box and your age&hellip;</p>
+<p><strong><em>pdp</em></strong>: If you are interested here is a list of actual agentic patterns - <a href="https://go.cbk.ai/patterns">https://go.cbk.ai/patterns</a></p>
+<blockquote>
+<p><strong>epolanski</strong>: You could also disclose you work there. Because as soon as I started reading the patterns I realized this was bogus and one could only recommend this because of personal stakes.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong><em>pdp</em></strong>: Bogus in what way?</p>
+</blockquote>
+</blockquote>
+<p><strong>at__</strong>: The emergence of this kind of thing has been so surprising to me. The exact same sort of person that managed to bottleneck themselves and obliterate signal-to-noise ratios at every company they wor&hellip;</p>
+<p><strong>kstenerud</strong>: It&rsquo;s unbelievable how productive AI has made me. With the release of the latest Claude, I&rsquo;m now able to achieve 100x more than I could have without it. In one week, I fine-tuned <a href="https://github.com/">https://github.com/</a>&hellip;</p>
+<blockquote>
+<p><strong>vivzkestrel</strong>: thats all? I made an emulator for every single console in the planet called Universal Emulator in one week, I have not published it because that would be illegal /s</p>
+</blockquote>
+<p><strong>MrOrelliOReilly</strong>: This is a great consolidation of various techniques and patterns for agentic coding. It’s valuable just to standardize our vocabulary in this new world of AI led or assisted programming. I’ve seen &hellip;</p>
+<blockquote>
+<p><strong>Kerrick</strong>: I recognized the need for this recently and started by documenting one [1]&hellip; then I dropped the ball because I, too, spent my winter holiday engrossed in agentic development. (Instead of documenti&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>MrOrelliOReilly</strong>: I will ruefully admit that I had also planned a similar blog post! I am hoping I can still add some value to the conversation, but it does seem like <em>everyone</em> is writing about agentic development &hellip;</p>
+</blockquote>
+</blockquote>
+<p><strong>bluehat974</strong>: Agentic Patterns website <a href="https://agentic-patterns.com/">https://agentic-patterns.com/</a> Github <a href="https://github.com/nibzard/awesome-agentic-patterns">https://github.com/nibzard/awesome-agentic-patterns</a></p>
+<blockquote>
+<p><strong>63stack</strong>: I can imagine all the middle managers are just salivating at the idea of presenting this webpage to higher ups as part of their &ldquo;AI Strategy&rdquo; at the next shareholder meeting. Bullet point lists! Co&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>epolanski</strong>: So it doesn&rsquo;t include the only useful thing: the actual agent &ldquo;code&rdquo;.</p>
+</blockquote>
+<blockquote>
+<p><strong>wiseowise</strong>: &gt; Star History How you know something is done either by a grifter or a starving student looking for work.</p>
+</blockquote>
+<p><strong>0xbadcafebee</strong>: You should definitely read the whole thing, but tl;dr - Generate a stable sequence of steps (a plan), then carry it out. Prevents malicious or unintended tool actions from altering the strategy mid&hellip;</p>
+<blockquote>
+<p><strong>galaxyLogic</strong>: Could I ask the AI to create me a set of template-files as described by you above? Or if there is an example set of template files somewhere then ask the AI to do its thing based on those? Or ask t&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>0xbadcafebee</strong>: Yeah absolutely. But you&rsquo;ll need to modify it until it works better for your use case. It&rsquo;s all still highly flawed, but also highly capable. Like a very fast janitor that occasionally uses chocola&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>galaxyLogic</strong>: LOL</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>vemv</strong>: Why is this at the top? I&rsquo;ve flagged it, that&rsquo;s what we should be doing with AI content.</p>
+<p><strong>laborcontract</strong>: If you&rsquo;re remotely interested in this type of stuff then scan papers arxiv[0] and you&rsquo;ll start to see patterns emerge. This article is awful from a readability standpoint and from an &ldquo;does this aut&hellip;</p>
+<p><strong>dist-epoch</strong>: Am I the only one with scrolling issues in Firefox on this website? It literally gets &ldquo;stuck&rdquo; and becomes un-scrollable.</p>
+<p><strong>drdrek</strong>: The word cost is mentioned only twice in the entire article, lol</p>
+<p><strong>verdverm</strong>: looks to be a good resource with lots of links thanks for the share!</p>
 
       </div>
 
@@ -256,30 +762,29 @@
   <div class="footer-container">
     <div class="footer-brand">
       <span class="footer-logo">AI Best Practices</span>
-      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
     </div>
     <div class="footer-nav">
       <div class="footer-section">
         <h3>Learn</h3>
         <ul>
-          <li><a href="../start-here/index.html">Start Here</a></li>
-          <li><a href="../skills/index.html">Skills</a></li>
-          <li><a href="../workflows/index.html">Workflows</a></li>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Explore</h3>
         <ul>
           <li><a href="../tools/index.html">Tools</a></li>
-          <li><a href="../landscape/index.html">Landscape</a></li>
           <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
           <li><a href="../sources/index.html">Sources</a></li>
-          <li><a href="../tags/">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
     </div>
   </div>
 </footer>

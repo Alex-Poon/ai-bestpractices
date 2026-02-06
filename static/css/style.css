@@ -32,11 +32,15 @@
 
   /* Section accent colors */
   --color-start-here:   #22D3EE;
+  --color-guide:        #4A9EFF;
   --color-skills:       #3B82F6;
+  --color-practices:    #4ADE80;
   --color-tools:        #A78BFA;
   --color-workflows:    #34D399;
+  --color-debates:      #F59E0B;
   --color-landscape:    #FBBF24;
-  --color-evidence:     #F87171;
+  --color-evidence:     #2DD4BF;
+  --color-voices:       #FB7185;
   --color-sources:      #94A3B8;
   --color-synthesis:    #F472B6;
 
@@ -233,11 +237,15 @@ li > ul, li > ol { margin-top: var(--space-1); margin-bottom: 0; }
 
 /* Active nav states — section-specific colors */
 .section-start-here .nav-link[data-section="start-here"] { color: var(--color-start-here); border-bottom-color: var(--color-start-here); }
+.section-guide .nav-link[data-section="guide"]           { color: var(--color-guide); border-bottom-color: var(--color-guide); }
 .section-skills .nav-link[data-section="skills"]         { color: var(--color-skills); border-bottom-color: var(--color-skills); }
+.section-practices .nav-link[data-section="practices"]   { color: var(--color-practices); border-bottom-color: var(--color-practices); }
 .section-tools .nav-link[data-section="tools"]           { color: var(--color-tools); border-bottom-color: var(--color-tools); }
 .section-workflows .nav-link[data-section="workflows"]   { color: var(--color-workflows); border-bottom-color: var(--color-workflows); }
+.section-debates .nav-link[data-section="debates"]       { color: var(--color-debates); border-bottom-color: var(--color-debates); }
 .section-landscape .nav-link[data-section="landscape"]   { color: var(--color-landscape); border-bottom-color: var(--color-landscape); }
 .section-evidence .nav-link[data-section="evidence"]     { color: var(--color-evidence); border-bottom-color: var(--color-evidence); }
+.section-voices .nav-link[data-section="voices"]         { color: var(--color-voices); border-bottom-color: var(--color-voices); }
 .section-sources .nav-link[data-section="sources"]       { color: var(--color-sources); border-bottom-color: var(--color-sources); }
 .section-tags .nav-link[data-section="tags"]             { color: var(--color-accent); border-bottom-color: var(--color-accent); }
 
@@ -435,17 +443,17 @@ li > ul, li > ol { margin-top: var(--space-1); margin-bottom: 0; }
 
 /* Section-colored left borders */
 .card--start-here  { border-left: 3px solid var(--color-start-here); }
+.card--guide       { border-left: 3px solid var(--color-guide); }
 .card--skills      { border-left: 3px solid var(--color-skills); }
+.card--practices   { border-left: 3px solid var(--color-practices); }
 .card--tools       { border-left: 3px solid var(--color-tools); }
 .card--workflows   { border-left: 3px solid var(--color-workflows); }
+.card--debates     { border-left: 3px solid var(--color-debates); }
 .card--landscape   { border-left: 3px solid var(--color-landscape); }
 .card--evidence    { border-left: 3px solid var(--color-evidence); }
+.card--voices      { border-left: 3px solid var(--color-voices); }
 .card--sources     { border-left: 3px solid var(--color-sources); }
 .card--synthesis   { border-left: 3px solid var(--color-synthesis); }
-.card--guides      { border-left: 3px solid var(--color-skills); }
-.card--patterns    { border-left: 3px solid var(--color-tools); }
-.card--deep-dives  { border-left: 3px solid var(--color-evidence); }
-.card--references  { border-left: 3px solid var(--color-workflows); }
 
 .card-link {
   display: block;
@@ -1452,7 +1460,321 @@ li > ul, li > ol { margin-top: var(--space-1); margin-bottom: 0; }
 }
 
 
-/* --- 26. Light Mode Override --- */
+/* --- 26. Debate Page Layout --- */
+
+.debate-header {
+  text-align: center;
+  margin-bottom: var(--space-10);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.debate-question {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-4);
+}
+
+.debate-framing {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: var(--leading-relaxed);
+}
+
+.debate-sides {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  margin: var(--space-8) 0;
+}
+
+.debate-side {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  border-top: 3px solid;
+}
+
+.debate-side--a { border-top-color: #F59E0B; }
+.debate-side--b { border-top-color: #60A5FA; }
+
+.debate-side-label {
+  font-size: var(--text-xs);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-3);
+}
+.debate-side--a .debate-side-label { color: #F59E0B; }
+.debate-side--b .debate-side-label { color: #60A5FA; }
+
+.debate-side h3 {
+  font-size: var(--text-xl);
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+}
+
+.debate-side .article-content blockquote {
+  border-left-color: var(--color-border-hover);
+  margin: var(--space-4) 0;
+}
+
+.debate-where-it-stands,
+.debate-unknown {
+  margin: var(--space-10) 0;
+  padding: var(--space-6);
+  background: var(--color-bg-subtle);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.debate-related {
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.debate-related-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.debate-related-link {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--color-text-body);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+.debate-related-link:hover {
+  border-color: var(--color-debates);
+  background: rgba(245,158,11,0.05);
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 768px) {
+  .debate-sides {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* --- 27. Voice Page Layout --- */
+
+.voice-hero-quote {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-medium);
+  color: var(--color-text-primary);
+  line-height: var(--leading-relaxed);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-6);
+  padding: var(--space-8) 0;
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+}
+
+.voice-hero-quote::before {
+  content: "\201C";
+  font-size: 4rem;
+  color: var(--color-voices);
+  position: absolute;
+  top: var(--space-2);
+  left: -var(--space-2);
+  line-height: 1;
+  opacity: 0.5;
+}
+
+.voice-attribution {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-6);
+}
+.voice-attribution strong {
+  color: var(--color-voices);
+}
+.voice-attribution a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+.voice-context {
+  margin: var(--space-6) 0;
+}
+
+.voice-thread {
+  margin: var(--space-6) 0;
+  padding: var(--space-6);
+  background: var(--color-bg-subtle);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.voice-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-voices);
+  border-radius: var(--radius);
+  padding: var(--space-5);
+  margin-bottom: var(--space-4);
+  transition: border-color var(--transition-fast);
+}
+.voice-card:hover {
+  border-color: var(--color-voices);
+}
+
+.voice-card blockquote {
+  border: none;
+  padding: 0;
+  margin: 0 0 var(--space-3) 0;
+  background: none;
+  font-size: var(--text-base);
+  color: var(--color-text-body);
+  line-height: var(--leading-relaxed);
+}
+
+.voice-card .voice-attribution {
+  margin-bottom: 0;
+  font-size: var(--text-xs);
+}
+
+.voice-category-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: var(--font-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  margin-bottom: var(--space-2);
+}
+.voice-category-badge--power-user { background: rgba(74,158,255,0.15); color: var(--color-guide); }
+.voice-category-badge--skeptic { background: rgba(245,158,11,0.15); color: var(--color-debates); }
+.voice-category-badge--convert { background: rgba(74,222,128,0.15); color: var(--color-practices); }
+.voice-category-badge--builder { background: rgba(167,139,250,0.15); color: var(--color-tools); }
+
+
+/* --- 28. Guide Sequential Nav --- */
+
+.guide-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: var(--space-8) 0;
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.guide-progress {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+.guide-progress-step {
+  flex: 1;
+  height: 3px;
+  background: var(--color-bg-muted);
+  border-radius: 2px;
+}
+
+.guide-progress-step--active {
+  background: var(--color-guide);
+}
+
+.guide-progress-step--done {
+  background: var(--color-practices);
+}
+
+
+/* --- 29. Comparison Matrix --- */
+
+.compare-matrix {
+  overflow-x: auto;
+  margin: var(--space-6) 0;
+}
+
+.compare-matrix table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.compare-matrix th,
+.compare-matrix td {
+  border: 1px solid var(--color-border);
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  vertical-align: top;
+}
+
+.compare-matrix th {
+  background: var(--color-bg-subtle);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+  position: sticky;
+  top: 0;
+}
+
+.compare-matrix td:first-child {
+  font-weight: var(--font-medium);
+  color: var(--color-text-primary);
+  background: var(--color-bg-subtle);
+  white-space: nowrap;
+}
+
+.compare-highlight {
+  background: rgba(74,222,128,0.08);
+}
+
+
+/* --- 30. Provenance Annotations --- */
+
+.provenance {
+  display: inline;
+}
+
+.provenance-toggle {
+  color: var(--color-text-tertiary);
+  font-size: var(--text-xs);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+}
+
+.provenance-detail {
+  display: none;
+  margin: var(--space-2) 0 var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.provenance-detail.open { display: block; }
+
+.provenance-detail li {
+  margin-bottom: var(--space-1);
+}
+
+
+/* --- 31. Light Mode Override --- */
 
 html.light {
   --color-bg:             #FFFFFF;
@@ -1476,11 +1798,15 @@ html.light {
   --color-link-hover:     #1D4ED8;
 
   --color-start-here:   #0891B2;
+  --color-guide:        #2563EB;
   --color-skills:       #2563EB;
+  --color-practices:    #059669;
   --color-tools:        #7C3AED;
   --color-workflows:    #059669;
+  --color-debates:      #D97706;
   --color-landscape:    #D97706;
-  --color-evidence:     #DC2626;
+  --color-evidence:     #0F766E;
+  --color-voices:       #E11D48;
   --color-sources:      #64748B;
   --color-synthesis:    #DB2777;
 }

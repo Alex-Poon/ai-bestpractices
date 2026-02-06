@@ -22,7 +22,7 @@ The counterargument from **dr_dshiv**: they have been learning software concepts
 
 **Where it stands:** Skill atrophy is real and measurable, but it is not inevitable. The evidence suggests that active, questioning engagement with AI preserves learning, while passive delegation degrades it. Organizations need deliberate policies to protect junior skill development.
 
-([Source](/sources/2026-01-30-ai-assistance-coding-skills/), [Karpathy Notes](/sources/2026-01-26-karpathy-claude-coding-notes/))
+([Source](/sources/2026-01-30-ai-assistance-coding-skills.html), [Karpathy Notes](/sources/2026-01-26-karpathy-claude-coding-notes.html))
 
 ## Are AI Assistants Getting Worse Over Time?
 
@@ -39,7 +39,7 @@ HN user **renegade-otter** framed the real problem: results are not repeatable, 
 
 **Where it stands:** There is no strong evidence that models are getting objectively worse. But consistency remains a legitimate concern, and practitioners should build workflows that tolerate quality variation rather than assuming every interaction will match peak performance. Version pinning, when available, may help.
 
-([Source](/sources/2026-01-08-ai-coding-getting-worse/))
+([Source](/sources/2026-01-08-ai-coding-getting-worse.html))
 
 ## Will the AI Bubble Burst?
 
@@ -53,7 +53,7 @@ The implications for practitioners are concrete. If current AI pricing is subsid
 
 **Where it stands:** A correction of some kind is widely expected. The question is magnitude and timing. The technology itself will persist regardless --- but the specific tools, pricing, and providers available to practitioners may change substantially.
 
-([Sources](/sources/2025-12-30-openai-cash-burn/), [Bubble Analysis](/sources/2026-01-19-ai-bubble-bursts-2026/))
+([Sources](/sources/2025-12-30-openai-cash-burn.html), [Bubble Analysis](/sources/2026-01-19-ai-bubble-bursts-2026.html))
 
 ## How Will Vibe Coding Affect Open Source?
 
@@ -69,16 +69,16 @@ The counterarguments are substantive. **observationist** argued that open source
 
 **Where it stands:** The impact on open source is real but still unfolding. Small utility libraries face the most pressure, as their functionality can now be generated on demand. Large, complex projects (Linux, PostgreSQL, React) remain essential. The community has not yet found sustainable models for maintaining the long tail of open-source projects in an AI-assisted world.
 
-([Source](/sources/2026-02-03-vibe-coding-killing-oss/))
+([Source](/sources/2026-02-02-vibe-coding-killing-open-source.html))
 
 ## Is Agent-Oriented Development a Permanent Shift?
 
 The deepest question is whether the move toward agent-assisted coding represents a lasting change in how software is built, or whether it is a productivity fad that will stabilize into a more modest role.
 
-Arguments for permanence: Each model generation makes more tasks delegable. The [Six Stages of AI Adoption](/guides/adoption-stages/) framework describes a ratchet effect where investments in harness engineering compound over time. Developers who reach Stage 5 or 6 report that going back to fully manual workflows feels like abandoning a power tool.
+Arguments for permanence: Each model generation makes more tasks delegable. The [AI Adoption Curve](/guide/adoption-curve.html) framework describes a ratchet effect where investments in harness engineering compound over time. Developers who reach Stage 5 or 6 report that going back to fully manual workflows feels like abandoning a power tool.
 
-Arguments for modesty: The METR study showed a 19% productivity reduction when experienced developers used AI on familiar codebases. **strogonoff** on HN questioned whether AI truly saves time given review overhead. The reliability concerns documented in [Costs and Tradeoffs](/landscape/costs-and-tradeoffs/) create workflow fragility that purely manual coding does not have.
+Arguments for modesty: The METR study showed a 19% productivity reduction when experienced developers used AI on familiar codebases. **strogonoff** on HN questioned whether AI truly saves time given review overhead. The reliability concerns documented in [Costs and Tradeoffs](/landscape/costs-and-tradeoffs.html) create workflow fragility that purely manual coding does not have.
 
 The most likely outcome is neither extreme. Agent-assisted development is probably permanent for the tasks it handles well --- greenfield features, test generation, boilerplate, code in well-documented domains. But the boundary between what to delegate and what to do manually will continue to shift with each model generation, and the skill of knowing where that boundary lies will remain the core practitioner competency.
 
-This is why the [Core Loop](/start-here/core-loop/) emphasizes the "verify" and "harness" phases as heavily as the "delegate" phase. The technology for delegation will keep improving. The judgment about when and how to delegate is the human skill that compounds.
+This is why the [Core Loop](/guide/core-loop.html) emphasizes the "verify" and "harness" phases as heavily as the "delegate" phase. The technology for delegation will keep improving. The judgment about when and how to delegate is the human skill that compounds.

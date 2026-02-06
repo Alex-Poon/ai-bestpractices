@@ -6,8 +6,15 @@
     <description>Recent content in Context-Management on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/context-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Context Management</title>
+      <link>/practices/context-management.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/practices/context-management.html</guid>
+      <description>&lt;p&gt;Context management is the practice of working within and around the finite context window that constrains every AI agent interaction. It is the most technical of the core practices and the one that separates power users from frustrated ones. Most practical failures in agentic coding &amp;ndash; going in circles, forgetting instructions, losing coherence over long sessions &amp;ndash; trace back to context management problems.&lt;/p&gt;&#xA;&lt;p&gt;The context window is not just a size limit. It is the agent&amp;rsquo;s entire working memory. Everything the agent knows about your project, your conversation, its instructions, and its tools must fit within this window. As it fills, quality degrades &amp;ndash; not gradually, but in ways that are hard to predict and hard to recover from.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Obsidian meets Claude Code: A Markdown graph for agents and context</title>
       <link>/sources/2026-02-03-obsidian-claude-code.html</link>

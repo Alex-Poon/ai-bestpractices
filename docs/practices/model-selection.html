@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Model Selection | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="Choosing the right model for each sub-task — when to use fast models, when to use deep reasoning, and when to use multiple.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Model Selection">
+  <meta property="og:description" content="Choosing the right model for each sub-task — when to use fast models, when to use deep reasoning, and when to use multiple.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-practices"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../practices/index.html">Practices</a></li>
+      
+    
+    <li aria-current="page">Model Selection</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Model Selection</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">9 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/model-selection.html" class="tag-pill">model-selection</a>
+  
+  
+  
+  
+  <a href="../tags/multi-model.html" class="tag-pill">multi-model</a>
+  
+  
+  
+  
+  <a href="../tags/cost-optimization.html" class="tag-pill">cost-optimization</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <p>Model selection is the skill of matching the right model to the right task. The gap between a well-chosen and poorly-chosen model often matters more than the quality of the prompt itself. As models proliferate and differentiate, this is no longer a set-and-forget decision &ndash; it is an ongoing practice of matching capability to need.</p>
+<h2 id="what-model-selection-is">What Model Selection Is</h2>
+<p>Model selection means choosing which AI model (or combination of models) to use for a specific task, based on the task&rsquo;s complexity, error tolerance, speed requirements, and cost constraints. It also means knowing when to switch models mid-task, when to use multiple models for cross-validation, and when to escalate from a cheap model to an expensive one.</p>
+<p>The landscape as of early 2026 has settled into recognizable tiers, though the boundaries shift with every major release. Competition is fierce: <strong>esperent</strong> noted that latest models from all providers are &ldquo;great and nearly commodities,&rdquo; while <strong>callamdelaney</strong> found that Claude models are &ldquo;right first time for me&rdquo; whereas ChatGPT and Gemini often have fundamental misunderstandings. The right model depends on your specific workload.</p>
+<h2 id="why-it-matters">Why It Matters</h2>
+<h3 id="first-try-success-saves-more-than-per-token-pricing">First-try success saves more than per-token pricing</h3>
+<p>A frontier model that succeeds on the first try can be cheaper than a budget model that requires three attempts plus an hour of debugging. One developer documented spending $638 over six weeks on AI coding, with 85% of the budget going to Claude despite trying seven alternatives. The reason: cheaper models required more iterations and produced more rework. Total cost is (per-request cost) x (attempts) + (developer time reviewing failures).</p>
+<h3 id="different-models-fail-differently">Different models fail differently</h3>
+<p><strong>endymion-light</strong> compared code review across models: Gemini gives gentle 7/10 feedback, Claude brutally identifies naming and coupling problems, ChatGPT says everything is perfect. For code generation, <strong>fluidcruft</strong> found that GPT 5.2 misses things Opus finds and vice versa. No model dominates across all tasks.</p>
+<h3 id="speed-matters-for-iteration">Speed matters for iteration</h3>
+<p><strong>CraigJPerry</strong> reported that GPT 5.2 in extended thinking mode beats Opus 4.5 by a significant margin &ndash; but is 4x slower, making it unusable for interactive development. For background analysis tasks, that tradeoff might be acceptable. For the tight loop of write-test-fix, speed determines how many iterations you can run before losing focus.</p>
+<h2 id="model-tiers-and-when-to-use-each">Model Tiers and When to Use Each</h2>
+<h3 id="frontier-reasoning-models">Frontier Reasoning Models</h3>
+<p>Claude Opus 4.5/4.6, GPT-5/5.2 (extended thinking), Gemini 3 Pro.</p>
+<p><strong>Use when:</strong></p>
+<ul>
+<li>The task involves architectural decisions or multi-component coordination</li>
+<li>You are working in an unfamiliar codebase or domain</li>
+<li>Errors are expensive to detect or fix (security-critical paths, data migrations)</li>
+<li>The task has failed with a cheaper model and you need the capability uplift</li>
+<li>You need the agent to autonomously debug and self-correct over multiple tool calls</li>
+<li>Code review where thoroughness matters more than speed</li>
+</ul>
+<p><strong>Characteristics:</strong> These models get things right on the first attempt more often, reducing total cost when the alternative is multiple retry cycles. They handle complex multi-file refactoring, novel problems, and tasks requiring sustained coherence across long outputs. <strong>cube2222</strong> described Opus 4.5 as &ldquo;quite a magnificent improvement&rdquo; while finding Codex (pre-GPT-5.2) a letdown for precise context management.</p>
+<h3 id="fast-mid-tier-models">Fast Mid-Tier Models</h3>
+<p>Claude Sonnet 4.5, GPT-4.1, Gemini 3 Flash.</p>
+<p><strong>Use when:</strong></p>
+<ul>
+<li>You have clear specifications and defined success criteria</li>
+<li>The task is implementation within a structure you have already defined</li>
+<li>You can verify output quickly through tests</li>
+<li>You are doing iterative development with frequent human checkpoints</li>
+<li>Budget is a concern and the task is well-scoped</li>
+</ul>
+<p><strong>Characteristics:</strong> The workhorse tier for daily development. Good enough for most implementation tasks, significantly cheaper and faster than frontier models. <strong>verdverm</strong> found Gemini-3-Flash to be a strong model at a fraction of the cost, and suggested that distillations into fast models are the future rather than ever-larger frontier models.</p>
+<h3 id="lightweight-models">Lightweight Models</h3>
+<p>Claude Haiku 4.5, GPT-4.1 mini, small open-weight models.</p>
+<p><strong>Use when:</strong></p>
+<ul>
+<li>Generating boilerplate or repetitive code transformations</li>
+<li>Writing or updating documentation</li>
+<li>Simple refactors (renaming, reformatting, mechanical transformations)</li>
+<li>Quick factual lookups or syntax questions</li>
+<li>Drafting commit messages, PR descriptions, or code comments</li>
+<li>High-volume tasks where per-request cost matters</li>
+</ul>
+<p><strong>Characteristics:</strong> Low cost per request means you can use them liberally. Fast response times keep iteration cycles tight. Not suitable for tasks requiring reasoning about novel problems or maintaining coherence across complex codebases.</p>
+<h3 id="open-weight-models">Open-Weight Models</h3>
+<p>DeepSeek, Qwen, Llama, Mistral, Gemma.</p>
+<p><strong>Use when:</strong></p>
+<ul>
+<li>Privacy requirements prohibit sending code to external APIs</li>
+<li>You need to run models locally or on your own infrastructure</li>
+<li>Cost must be minimized for high-volume workloads</li>
+<li>You need fine-tuning capability for domain-specific tasks</li>
+</ul>
+<p><strong>Characteristics:</strong> As <strong>mvkel</strong> articulated, open-weight models guarantee a competitive floor &ndash; essential to the ecosystem but not chasing state-of-the-art. <strong>cmrdporcupine</strong> noted that DeepSeek 3.2 competes with Sonnet 4 for 80% of use cases at a fraction of the cost. <strong>troyvit</strong> is happy with 80% quality for privacy-friendly, low-energy, cheap inference.</p>
+<h2 id="multi-model-strategies">Multi-Model Strategies</h2>
+<h3 id="start-cheap-escalate-on-failure">Start Cheap, Escalate on Failure</h3>
+<p>Use a mid-tier model by default. If it fails or produces inadequate output, escalate to a frontier model. This captures the cost savings of cheaper models on easy tasks while reserving expensive models for where they are needed. This matches the <a href="../task-scoping.html">task scoping</a> principle: well-scoped leaf tasks rarely need frontier reasoning.</p>
+<h3 id="multi-model-cross-validation">Multi-Model Cross-Validation</h3>
+<p>Generate code with one model and review it with another. <strong>fluidcruft</strong> found that neither Opus nor GPT-5.2 is strictly better &ndash; they catch different things. Disagreements between models flag areas that deserve closer human attention. <strong>harrall</strong> uses ChatGPT for generation and Gemini as a corrective check, exploiting the fact that different models have different sycophancy levels and failure modes.</p>
+<h3 id="frontier-for-planning-fast-for-execution">Frontier for Planning, Fast for Execution</h3>
+<p>Use a frontier model for planning and architectural decisions, then a cheaper model for implementation of the resulting plan. This matches the tree model from <a href="../task-scoping.html">task scoping</a>: trunk and branch decisions demand the highest capability, while leaf-level implementation can be handled by less capable models.</p>
+<h3 id="model-specific-strengths">Model-Specific Strengths</h3>
+<p>Practitioners report different models excelling in different domains:</p>
+<ul>
+<li><strong>Claude (Opus/Sonnet)</strong>: Coding, agentic tool use, code review thoroughness, following complex instructions</li>
+<li><strong>GPT-5.x</strong>: General research, recipes, travel planning, extended reasoning (when speed is not critical)</li>
+<li><strong>Gemini</strong>: Multilingual tasks, search integration, large context windows, some algorithmic exploration</li>
+<li><strong>Open models</strong>: Privacy-sensitive workloads, high-volume batch processing, domain-specific fine-tuning</li>
+</ul>
+<p><strong>wild_egg</strong> observed that different human thinking styles seem to align with different models &ndash; a metacognitive factor that practitioners rarely discuss but that may explain the wide variance in model preferences.</p>
+<h2 id="cost-management">Cost Management</h2>
+<h3 id="caching-matters-enormously">Caching Matters Enormously</h3>
+<p>One practitioner reported an 88.8% cache hit rate that significantly controlled costs. Understanding your tool&rsquo;s caching behavior and optimizing for it (consistent prompts, stable context) can cut spend dramatically.</p>
+<h3 id="flat-rate-plans-change-the-calculus">Flat-Rate Plans Change the Calculus</h3>
+<p>Services like Claude Code Max ($100-200/month flat) remove per-request anxiety and let you use frontier models liberally. If your usage is high enough, flat-rate plans are almost always more economical. <strong>esperent</strong> described cycling between $20 accounts across providers &ndash; an indication that the per-request model creates friction that flat rates eliminate.</p>
+<h3 id="token-efficiency-is-a-harness-problem">Token Efficiency Is a Harness Problem</h3>
+<p><strong>jtms</strong> pointed out that agents &ldquo;blow tens of thousands of tokens just searching for files&rdquo; during refactoring tasks. LSP integration, MCP tools, and better context management save tokens that would otherwise be wasted on mechanical operations. Model selection interacts with <a href="../harness-engineering.html">harness engineering</a>: a well-harnessed cheap model can outperform a poorly-harnessed expensive one.</p>
+<h3 id="environmental-considerations">Environmental Considerations</h3>
+<p><strong>dataviz1000</strong> reported burning $400 in tokens in January, adding &ldquo;this cannot be good for the environment.&rdquo; <strong>dcreater</strong> noted that wasteful token consumption during inefficient agentic operations causes real environmental harm. Token efficiency is not just a cost issue.</p>
+<h2 id="model-degradation-and-consistency">Model Degradation and Consistency</h2>
+<p>A recurring concern is that model quality fluctuates unpredictably. The Claude Code benchmarks tracker documented measurable performance swings, and many practitioners report inconsistent quality across sessions and times of day.</p>
+<p><strong>F7F7F7</strong> reported that performance degrades from 1pm EST until around 8-9pm, with recovery at night. <strong>kuboble</strong> speculated that non-US timezone users may systematically get better performance. <strong>silverlight</strong> noted that after a service outage, performance was 3x faster for remaining users &ndash; suggesting load-related effects.</p>
+<p><strong>antirez</strong> (Redis creator) provided a measured counter-analysis: the oscillation pattern is better explained by A/B testing of checkpoints, Claude Code updates, and natural sampling variability than by intentional model degradation. Anthropic engineer <strong>mgraczyk</strong> stated directly: &ldquo;We never do anything that reduces model intelligence.&rdquo;</p>
+<p><strong>Practical implications:</strong></p>
+<ul>
+<li><strong>Do not assume newer is always better.</strong> Test new model versions against your specific workload before switching.</li>
+<li><strong>Pin to specific versions when possible.</strong> Several practitioners advocate for version pinning similar to software dependency management.</li>
+<li><strong>Maintain a fallback.</strong> If your primary model degrades, have a tested alternative ready.</li>
+<li><strong>Track your own metrics.</strong> Notice when your rework rate increases and investigate whether the model is the cause.</li>
+<li><strong>Consider off-peak usage.</strong> If your schedule permits, heavy AI work during off-peak hours may yield more consistent results.</li>
+</ul>
+<h2 id="anti-patterns">Anti-Patterns</h2>
+<h3 id="one-model-for-everything">One Model for Everything</h3>
+<p>Using the same frontier model for every task regardless of complexity. This maximizes cost without maximizing quality. A lightweight model generating boilerplate is not just cheaper &ndash; it is also faster, reducing your iteration cycle.</p>
+<h3 id="chasing-benchmarks">Chasing Benchmarks</h3>
+<p>Selecting models based on synthetic benchmark scores rather than performance on your actual tasks. <strong>nullbio</strong> reported that despite Gemini performing best on benchmarks, it hallucinates more frequently than ChatGPT or Claude in practice. <strong>alfalfasprout</strong> noted that benchmarks have not been a good measure of competence for some time. <strong>moffkalast</strong> found that Kimi K2 tops open-source benchmarks but fabricates information more than Llama 3.</p>
+<h3 id="ignoring-total-cost-of-ownership">Ignoring Total Cost of Ownership</h3>
+<p>Comparing models only on per-request pricing without accounting for success rate, rework time, and developer review overhead. The cheapest model per token is rarely the cheapest model per completed task.</p>
+<h3 id="loyalty-to-a-single-provider">Loyalty to a Single Provider</h3>
+<p>Refusing to switch models or providers out of familiarity. The model landscape changes rapidly. <strong>cmiles8</strong> observed that AI is a commodity with zero brand loyalty &ndash; customers swap API endpoints instantly. Maintain the ability to switch.</p>
+<h3 id="confusing-the-model-with-the-harness">Confusing the Model with the Harness</h3>
+<p>Attributing quality differences to the model when the harness is the actual variable. <strong>stared</strong> asked of benchmark results: &ldquo;Does it benchmark the underlying model or Claude Code harness?&rdquo; Without controlling for harness version changes, you may be measuring system prompt drift, not model capability.</p>
+<h2 id="evidence">Evidence</h2>
+<p><strong>esperent</strong> (HN, thread 46521144): &ldquo;The real differentiating factor right now is quota and cost.&rdquo; Latest models from all providers are great and nearly commodities.</p>
+<p><strong>callamdelaney</strong> (HN, thread 46910495): &ldquo;Anthropic models are right first time for me.&rdquo; ChatGPT and Gemini often have fundamental misunderstandings on the same tasks.</p>
+<p><strong>CraigJPerry</strong> (HN, thread 46905187): GPT 5.2 in extended thinking mode beats Opus 4.5 by a significant margin &ndash; but is 4x slower, too slow for interactive use.</p>
+<p><strong>endymion-light</strong> (HN, thread 46911261): Code review comparison across models: Gemini gives gentle feedback, Claude identifies real structural problems, ChatGPT praises everything.</p>
+<p><strong>verdverm</strong> (HN, thread 46521531): Paying by token with Gemini-3-Flash. Believes distillations into fast models are the future, not ever-larger frontier models.</p>
+<p><strong>antirez</strong> (HN, thread 46811365): Oscillation pattern in benchmarks is better explained by A/B testing and sampling variability than intentional degradation.</p>
+<p><strong>wild_egg</strong> (HN, thread 46440574): Different human thinking styles align with different models. Nobody discusses this.</p>
+<p><strong>nullbio</strong> (HN, thread 46123345): Despite Gemini performing best on benchmarks, it hallucinates nonsense more frequently than alternatives in practice.</p>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../practices/prompt-craft.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Prompt Craft</span>
+        </a>
+        
+        
+        <a href="../practices/verification.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Verification</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-model-selection-is">What Model Selection Is</a></li>
+    <li><a href="#why-it-matters">Why It Matters</a>
+      <ul>
+        <li><a href="#first-try-success-saves-more-than-per-token-pricing">First-try success saves more than per-token pricing</a></li>
+        <li><a href="#different-models-fail-differently">Different models fail differently</a></li>
+        <li><a href="#speed-matters-for-iteration">Speed matters for iteration</a></li>
+      </ul>
+    </li>
+    <li><a href="#model-tiers-and-when-to-use-each">Model Tiers and When to Use Each</a>
+      <ul>
+        <li><a href="#frontier-reasoning-models">Frontier Reasoning Models</a></li>
+        <li><a href="#fast-mid-tier-models">Fast Mid-Tier Models</a></li>
+        <li><a href="#lightweight-models">Lightweight Models</a></li>
+        <li><a href="#open-weight-models">Open-Weight Models</a></li>
+      </ul>
+    </li>
+    <li><a href="#multi-model-strategies">Multi-Model Strategies</a>
+      <ul>
+        <li><a href="#start-cheap-escalate-on-failure">Start Cheap, Escalate on Failure</a></li>
+        <li><a href="#multi-model-cross-validation">Multi-Model Cross-Validation</a></li>
+        <li><a href="#frontier-for-planning-fast-for-execution">Frontier for Planning, Fast for Execution</a></li>
+        <li><a href="#model-specific-strengths">Model-Specific Strengths</a></li>
+      </ul>
+    </li>
+    <li><a href="#cost-management">Cost Management</a>
+      <ul>
+        <li><a href="#caching-matters-enormously">Caching Matters Enormously</a></li>
+        <li><a href="#flat-rate-plans-change-the-calculus">Flat-Rate Plans Change the Calculus</a></li>
+        <li><a href="#token-efficiency-is-a-harness-problem">Token Efficiency Is a Harness Problem</a></li>
+        <li><a href="#environmental-considerations">Environmental Considerations</a></li>
+      </ul>
+    </li>
+    <li><a href="#model-degradation-and-consistency">Model Degradation and Consistency</a></li>
+    <li><a href="#anti-patterns">Anti-Patterns</a>
+      <ul>
+        <li><a href="#one-model-for-everything">One Model for Everything</a></li>
+        <li><a href="#chasing-benchmarks">Chasing Benchmarks</a></li>
+        <li><a href="#ignoring-total-cost-of-ownership">Ignoring Total Cost of Ownership</a></li>
+        <li><a href="#loyalty-to-a-single-provider">Loyalty to a Single Provider</a></li>
+        <li><a href="#confusing-the-model-with-the-harness">Confusing the Model with the Harness</a></li>
+      </ul>
+    </li>
+    <li><a href="#evidence">Evidence</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Vibe Coding Question | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="Where on the spectrum from full delegation to tight leash should AI-assisted development land?">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="The Vibe Coding Question">
+  <meta property="og:description" content="Where on the spectrum from full delegation to tight leash should AI-assisted development land?">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-debates"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../debates/index.html">Debates</a></li>
+      
+    
+    <li aria-current="page">The Vibe Coding Question</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="debate-header">
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/vibe-coding.html" class="tag-pill">vibe-coding</a>
+  
+  
+  
+  
+  <a href="../tags/delegation.html" class="tag-pill">delegation</a>
+  
+  
+  
+  
+  <a href="../tags/autonomy.html" class="tag-pill">autonomy</a>
+  
+  
+  
+  
+  <a href="../tags/workflow.html" class="tag-pill">workflow</a>
+  
+  
+</div>
+
+
+        <h1 class="debate-question">The Vibe Coding Question</h1>
+        
+        <p class="debate-framing">Where on the spectrum from full delegation to tight leash should AI-assisted development land?</p>
+        
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">10 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+      </header>
+
+      <div class="article-content">
+        <h2 id="the-question">The Question</h2>
+<p>Andrej Karpathy coined the term &ldquo;vibe coding&rdquo; to describe a mode of AI-assisted development where you fully cede implementation to the model, accepting code you don&rsquo;t fully understand as long as it works. The term quickly became a lightning rod &ndash; embraced by some as the future of software development, rejected by others as professional malpractice.</p>
+<p>But the community has moved beyond a simple for-or-against debate. Practitioners now describe a spectrum from full delegation to tight step-by-step control, with most experienced developers settling somewhere in between. The real question isn&rsquo;t whether vibe coding is good or bad &ndash; it&rsquo;s where on this spectrum responsible development should land, and whether the answer changes depending on context.</p>
+<p>This matters because the answer determines how developers spend their time, how teams structure their workflows, how companies assess risk, and ultimately what the software industry looks like in five years. If full delegation works, the developer role transforms into something closer to product management. If it doesn&rsquo;t, we&rsquo;re building on sand.</p>
+<h2 id="side-a-vibe-coding-is-revolutionary">Side A: Vibe Coding Is Revolutionary</h2>
+<h3 id="the-productivity-explosion">The Productivity Explosion</h3>
+<p>The most compelling argument for vibe coding comes from practitioners who report extraordinary productivity gains when they stop trying to understand every line of generated code and instead focus on outcomes.</p>
+<blockquote>
+<p>&ldquo;70%+ of the time I just blindly accept changes.&rdquo; &ndash; kaydub</p>
+</blockquote>
+<p>This developer runs multiple Claude Code sessions simultaneously, catching problems at the PR review stage rather than during generation. The approach is deliberate &ndash; not laziness but a calculated bet that review-at-the-end is more efficient than supervision-during-generation.</p>
+<p>The numbers reported by enthusiasts are striking. One developer described implementing a binary JSON format in Go, Rust, Swift, Python, and Jackson in a single week &ndash; work that would have taken a year otherwise. Another split test-writing into 26 parallel subagents, completing months of work in 20 minutes (though verification took days).</p>
+<p>For builders &ndash; developers who see coding as a means to an end rather than the end itself &ndash; vibe coding represents liberation. The tedious implementation work that stood between an idea and a working product has collapsed from weeks to hours.</p>
+<h3 id="the-spectrum-is-the-point">The Spectrum Is the Point</h3>
+<p>Defenders of vibe coding argue that treating it as binary misses the point. One commenter captures this well: the two kinds of vibe coding are not separate categories but a spectrum of how much context you care to understand.</p>
+<p>In practice, most vibe coders describe a contextual approach. For happy-path work in familiar codebases, they ask for small changes step by step, examining each one. For unfamiliar territory, they let the model generate an initial attempt as inspiration, then direct it from there. The signal to switch modes: when you spend more time explaining context than it would take to just write the code yourself.</p>
+<blockquote>
+<p>&ldquo;Treat it like onboarding a contractor &ndash; bounded tasks with clear acceptance criteria.&rdquo; &ndash; jackfranklyn</p>
+</blockquote>
+<p>This framing recasts vibe coding not as abandoning understanding but as choosing the right level of engagement for the task at hand. Nobody reviews every line of a library they import &ndash; vibe coding extends this trust boundary to AI-generated application code.</p>
+<h3 id="the-new-workflow-paradigm">The New Workflow Paradigm</h3>
+<p>Some practitioners have pushed vibe coding into genuinely new workflow territory. One developer described building a complete SwiftUI application without looking at a single line of code &ndash; using a PRD-to-agent-loop workflow where ideation happens in conversation, specs get broken into tasks, parallel agents implement, and the human does smoke testing.</p>
+<p>The argument here isn&rsquo;t that understanding code doesn&rsquo;t matter but that understanding shifts to a higher level of abstraction. You understand what the system should do, how the pieces connect, and what the acceptance criteria are. The implementation details become analogous to assembly language &ndash; important to someone, but not necessarily to the person directing the work.</p>
+<blockquote>
+<p>&ldquo;I like engineering where I figure out data flow and structures &ndash; writing code is the boring part.&rdquo; &ndash; theshrike79</p>
+</blockquote>
+<p>This perspective sees vibe coding as enabling developers to work at the level they find most valuable: architecture, system design, and data modeling. The actual code generation is the mechanical step, and delegating it to AI is no different from delegating it to a compiler.</p>
+<h3 id="the-good-enough-argument">The &ldquo;Good Enough&rdquo; Argument</h3>
+<p>For personal tools, prototypes, and internal utilities, vibe coding advocates argue that perfect code quality is the wrong optimization target. One developer built a QR code generator rather than fighting adware-laden online tools &ndash; faster and more private than any alternative. A retired developer used Claude to build a disassembler, assembler, and partially working emulator for reverse engineering firmware in weeks.</p>
+<p>The philosophy: if the code works, passes tests, and serves its purpose, the fact that a human didn&rsquo;t write every line is irrelevant. Demanding full human understanding of every line is a luxury that serves craft but not necessarily users.</p>
+<h2 id="side-b-vibe-coding-produces-unmaintainable-systems">Side B: Vibe Coding Produces Unmaintainable Systems</h2>
+<h3 id="the-technical-debt-accelerator">The Technical Debt Accelerator</h3>
+<p>The most damning criticism of vibe coding comes from practitioners who see its aftermath. Consultants report being hired increasingly to rescue vibe-coded projects &ndash; applications with real users but no engineering behind them.</p>
+<blockquote>
+<p>&ldquo;The bottleneck is drowning under your own slop.&rdquo; &ndash; embedding-shape</p>
+</blockquote>
+<p>The pattern is consistent: AI generates code fast initially, but projects slow down as they grow. The models optimize for getting something working now, not for maintainability, readability, or extensibility. What starts as rapid prototyping becomes a maintenance nightmare as features accumulate without coherent architecture.</p>
+<p>One developer coined the term &ldquo;slop-coding&rdquo; to describe the phenomenon, arguing it produces the software equivalent of fast food &ndash; satisfying in the moment, harmful over time. Another noted that vibe-coded stuff &ldquo;limps faster&rdquo; with each model release but still cannot walk.</p>
+<h3 id="the-review-crisis">The Review Crisis</h3>
+<p>Even proponents acknowledge that AI-generated code must be reviewed. But the math doesn&rsquo;t work in vibe coding&rsquo;s favor: generating code is now near-instant, while reviewing it takes the same time it always did. This creates an asymmetry where the bottleneck shifts entirely to human review capacity.</p>
+<blockquote>
+<p>&ldquo;We can only produce code as fast as responsibility-takers can execute due diligence.&rdquo; &ndash; zmmmmm</p>
+</blockquote>
+<p>When a model generates 500 lines of code in seconds, a developer now faces a review task that may take longer than writing the code manually would have. The code often lacks the structural clarity that comes from a human building it incrementally with a mental model of the whole. Misleading comments, inconsistent abstractions, and subtle logical errors hide in the volume.</p>
+<p>One developer caught Sonnet 4.5 producing code with a misleading comment that described the opposite of what the implementation did. They argued that 99.99% of true vibe coders would never have caught this &ndash; and that &ldquo;fix X&rdquo; prompts assume bugs are always detectable, which they&rsquo;re not.</p>
+<h3 id="the-complexity-jenga-tower">The Complexity Jenga Tower</h3>
+<p>A recurring metaphor in the skeptic camp is that of building Jenga towers &ndash; each piece of AI-generated code adds to a structure that looks stable until it suddenly isn&rsquo;t. The problem isn&rsquo;t any individual piece but the accumulation of code that nobody fully understands.</p>
+<blockquote>
+<p>&ldquo;LLMs produce lower quality at higher volumes.&rdquo; &ndash; barrell</p>
+</blockquote>
+<p>One practitioner described building a simple expenses app, only to have the AI keep inserting double-entry bookkeeping, turning a simple tool into an accounting system nobody asked for. This &ldquo;scope creep into the average&rdquo; is a fundamental tendency of models that optimize for typical patterns rather than minimal implementations.</p>
+<p>The professional responsibility angle is sharp. Multiple commenters argue that you cannot prompt, test, and ship a complex multi-service application where nobody understands the implementation. When bugs appear in production &ndash; as they inevitably do &ndash; someone needs to understand the system well enough to diagnose and fix them under pressure.</p>
+<h3 id="the-craft-matters">The Craft Matters</h3>
+<p>Beyond practical concerns, a significant camp argues that understanding your code is a professional obligation, not a luxury.</p>
+<blockquote>
+<p>&ldquo;It is not just my job to generate code; it is my job to know the code.&rdquo; &ndash; chasing</p>
+</blockquote>
+<p>This perspective distinguishes between generating code and taking responsibility for it. A pilot doesn&rsquo;t just get a plane to its destination &ndash; they understand the systems well enough to handle failures. If you can&rsquo;t trust an LLM to either complete a task reliably or explain why it&rsquo;s difficult, then shipping its output into production is a professional risk.</p>
+<p>Several developers describe deliberately avoiding full vibe coding to preserve their skills &ndash; using AI for documentation, debugging, and code review but writing implementations themselves. One maintains a strict separation: AI agents at work for velocity, manual coding for hobby projects to maintain skills.</p>
+<h3 id="the-doom-loop">The Doom Loop</h3>
+<p>Perhaps the most visceral argument against vibe coding is the &ldquo;going in circles&rdquo; failure mode. When vibe-coded projects hit bugs that the model can&rsquo;t fix, the developer &ndash; who doesn&rsquo;t understand the code &ndash; is trapped in a loop of prompting, getting wrong fixes, and prompting again.</p>
+<p>One developer described spending hours and half a million tokens trying to get a frontier LLM to fix a simple CSS issue, ultimately fixing it manually in minutes. Another reported the model claiming to &ldquo;clearly see the issue now&rdquo; ten times in succession, being wrong every time.</p>
+<p>Without a mental model of the code, there&rsquo;s no escape from this loop. The human can&rsquo;t diagnose the problem themselves, and the model&rsquo;s attempts aren&rsquo;t converging on a solution. The result is worse than if the code had been written manually in the first place.</p>
+<h2 id="where-it-stands">Where It Stands</h2>
+<p>The community is converging on a nuanced position that neither fully embraces nor rejects vibe coding:</p>
+<p><strong>Context determines the appropriate level of delegation.</strong> Prototypes, personal tools, and throwaway scripts are broadly accepted as legitimate vibe coding territory. Production systems with real users, regulatory requirements, or long maintenance horizons demand significantly more human oversight.</p>
+<p><strong>The spectrum is real and valuable.</strong> Most effective practitioners work somewhere in the middle &ndash; using AI for generation but maintaining enough understanding to review, debug, and extend the code. Pure vibe coding (zero code reading) and pure manual coding (zero AI assistance) are both suboptimal extremes for most professional work.</p>
+<p><strong>The &ldquo;tight leash&rdquo; approach outperforms full delegation.</strong> Practitioners who ask for small changes step by step, examine each one, and commit before moving on report better outcomes than those who delegate large tasks and hope for the best. Smaller tasks with verification between each produce better results than large delegations.</p>
+<p><strong>Testing is necessary but not sufficient.</strong> Near-100% test coverage with property-based and fuzz tests can substitute for line-by-line code review in some cases. But tests can only catch failures you think to test for, and the code&rsquo;s long-term maintainability isn&rsquo;t captured by any test suite.</p>
+<p><strong>The review bottleneck is real and unsolved.</strong> Until AI-generated code can be reviewed as efficiently as it&rsquo;s generated, human review capacity will cap the productivity benefits of vibe coding. Multi-agent review approaches (using one AI to review another&rsquo;s output) show promise but haven&rsquo;t proven reliable enough for production use.</p>
+<h2 id="whats-still-unknown">What&rsquo;s Still Unknown</h2>
+<ul>
+<li><strong>Will model improvements make vibe coding safer?</strong> If models consistently produce correct, maintainable code, the arguments against delegation weaken. Current evidence suggests improvement is real but uneven.</li>
+<li><strong>Can verification substitute for understanding?</strong> The test-first crowd argues you don&rsquo;t need to understand implementation if your tests are comprehensive enough. Whether this holds for complex systems under edge-case pressure is untested at scale.</li>
+<li><strong>What is the long-term maintenance cost of vibe-coded systems?</strong> Most vibe-coded applications are less than a year old. Whether they survive their first major refactoring, security audit, or scaling challenge is unknown.</li>
+<li><strong>Will liability and regulation force the question?</strong> If legislation holds developers accountable for code they ship, regardless of how it was generated, that may impose a floor on how much understanding is professionally required.</li>
+<li><strong>Does the &ldquo;right level&rdquo; of vibe coding shift as projects mature?</strong> Vibe coding may be appropriate for the first 80% of a project and inappropriate for the last 20%. Whether practitioners can effectively switch modes mid-project is unclear.</li>
+</ul>
+
+      </div>
+
+      
+      
+      <div class="debate-related">
+        <h3>Related Debates</h3>
+        <div class="debate-related-grid">
+          
+            
+            <a href="../debates/junior-skills.html" class="debate-related-link">Does AI Prevent Junior Developer Skill Formation?</a>
+            
+          
+            
+            <a href="../debates/engineering-vs-programming.html" class="debate-related-link">Engineering vs. Programming: Is This &#39;Real&#39; Development?</a>
+            
+          
+        </div>
+      </div>
+      
+
+      <nav class="article-nav">
+        
+        <a href="../debates/junior-skills.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Does AI Prevent Junior Developer Skill Formation?</span>
+        </a>
+        
+        
+        <a href="../debates/is-it-getting-worse.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Is AI-Assisted Coding Getting Worse?</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-question">The Question</a></li>
+    <li><a href="#side-a-vibe-coding-is-revolutionary">Side A: Vibe Coding Is Revolutionary</a>
+      <ul>
+        <li><a href="#the-productivity-explosion">The Productivity Explosion</a></li>
+        <li><a href="#the-spectrum-is-the-point">The Spectrum Is the Point</a></li>
+        <li><a href="#the-new-workflow-paradigm">The New Workflow Paradigm</a></li>
+        <li><a href="#the-good-enough-argument">The &ldquo;Good Enough&rdquo; Argument</a></li>
+      </ul>
+    </li>
+    <li><a href="#side-b-vibe-coding-produces-unmaintainable-systems">Side B: Vibe Coding Produces Unmaintainable Systems</a>
+      <ul>
+        <li><a href="#the-technical-debt-accelerator">The Technical Debt Accelerator</a></li>
+        <li><a href="#the-review-crisis">The Review Crisis</a></li>
+        <li><a href="#the-complexity-jenga-tower">The Complexity Jenga Tower</a></li>
+        <li><a href="#the-craft-matters">The Craft Matters</a></li>
+        <li><a href="#the-doom-loop">The Doom Loop</a></li>
+      </ul>
+    </li>
+    <li><a href="#where-it-stands">Where It Stands</a></li>
+    <li><a href="#whats-still-unknown">What&rsquo;s Still Unknown</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

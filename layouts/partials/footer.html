@@ -8,24 +8,23 @@
       <div class="footer-section">
         <h3>Learn</h3>
         <ul>
-          {{ with site.GetPage "/start-here" }}<li><a href="{{ .RelPermalink }}">Start Here</a></li>{{ end }}
-          {{ with site.GetPage "/skills" }}<li><a href="{{ .RelPermalink }}">Skills</a></li>{{ end }}
-          {{ with site.GetPage "/workflows" }}<li><a href="{{ .RelPermalink }}">Workflows</a></li>{{ end }}
+          {{ with site.GetPage "/guide" }}<li><a href="{{ .RelPermalink }}">Guide</a></li>{{ end }}
+          {{ with site.GetPage "/practices" }}<li><a href="{{ .RelPermalink }}">Practices</a></li>{{ end }}
+          {{ with site.GetPage "/debates" }}<li><a href="{{ .RelPermalink }}">Debates</a></li>{{ end }}
         </ul>
       </div>
       <div class="footer-section">
         <h3>Explore</h3>
         <ul>
           {{ with site.GetPage "/tools" }}<li><a href="{{ .RelPermalink }}">Tools</a></li>{{ end }}
-          {{ with site.GetPage "/landscape" }}<li><a href="{{ .RelPermalink }}">Landscape</a></li>{{ end }}
           {{ with site.GetPage "/evidence" }}<li><a href="{{ .RelPermalink }}">Evidence</a></li>{{ end }}
+          {{ with site.GetPage "/voices" }}<li><a href="{{ .RelPermalink }}">Voices</a></li>{{ end }}
           {{ with site.GetPage "/sources" }}<li><a href="{{ .RelPermalink }}">Sources</a></li>{{ end }}
-          <li><a href="{{ "tags/" | relURL }}">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from {{ len (where site.RegularPages "Section" "sources") }} HN articles and practitioner experience. {{ len site.RegularPages }} pages across {{ len site.Taxonomies.tags }} topics.</p>
+      <p>Built with Hugo. Synthesized from {{ len (where site.RegularPages "Section" "sources") }} HN discussions and 6,000+ practitioner comments. {{ len site.RegularPages }} pages across {{ len site.Taxonomies.tags }} topics.</p>
     </div>
   </div>
 </footer>

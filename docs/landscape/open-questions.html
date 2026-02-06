@@ -37,14 +37,13 @@
       <span>AI Best Practices</span>
     </a>
     <div class="nav-links">
-      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
-      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
       <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
-      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
-      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
       <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
       <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
-      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
     </div>
     <div class="nav-actions">
       <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
@@ -168,7 +167,7 @@
 <p>The concern is sharpest for junior engineers. <strong>FitchApps</strong> on HN raised the scenario of agents being unavailable during a midnight production deployment, arguing developers risk becoming unable to debug their own systems. <strong>postalcoder</strong> observed that older models forced developers to do 30% of the tough work themselves, but current models are too capable, removing the productive struggle that builds intuition.</p>
 <p>The counterargument from <strong>dr_dshiv</strong>: they have been learning software concepts faster since offloading implementation to AI. <strong>visarga</strong> compared the dynamic to Star Trek replicators, arguing that iterative refinement through AI tools is itself a form of learning.</p>
 <p><strong>Where it stands:</strong> Skill atrophy is real and measurable, but it is not inevitable. The evidence suggests that active, questioning engagement with AI preserves learning, while passive delegation degrades it. Organizations need deliberate policies to protect junior skill development.</p>
-<p>(<a href="../sources/2026-01-30-ai-assistance-coding-skills/">Source</a>, <a href="../sources/2026-01-26-karpathy-claude-coding-notes/">Karpathy Notes</a>)</p>
+<p>(<a href="../sources/2026-01-30-ai-assistance-coding-skills.html">Source</a>, <a href="../sources/2026-01-26-karpathy-claude-coding-notes.html">Karpathy Notes</a>)</p>
 <h2 id="are-ai-assistants-getting-worse-over-time">Are AI Assistants Getting Worse Over Time?</h2>
 <p>Many developers report that AI coding tools feel less reliable than they used to. The evidence for actual model regression is weak &mdash; an IEEE Spectrum article making this claim was criticized for using a single three-line test case as evidence. But the perception is widespread enough to warrant explanation.</p>
 <p>The most credible theories:</p>
@@ -180,14 +179,14 @@
 </ul>
 <p>HN user <strong>renegade-otter</strong> framed the real problem: results are not repeatable, which is more concerning than consistent decline. <strong>Kuinox</strong> speculated about providers dynamically serving smaller models before new releases. <strong>theptip</strong> argued the issue is not model quality but insufficient scaffolding &mdash; tests, specifications, and harness engineering that make agent interactions reliable.</p>
 <p><strong>Where it stands:</strong> There is no strong evidence that models are getting objectively worse. But consistency remains a legitimate concern, and practitioners should build workflows that tolerate quality variation rather than assuming every interaction will match peak performance. Version pinning, when available, may help.</p>
-<p>(<a href="../sources/2026-01-08-ai-coding-getting-worse/">Source</a>)</p>
+<p>(<a href="../sources/2026-01-08-ai-coding-getting-worse.html">Source</a>)</p>
 <h2 id="will-the-ai-bubble-burst">Will the AI Bubble Burst?</h2>
 <p>The financial sustainability of the AI industry is a serious open question. OpenAI&rsquo;s capital requirements are staggering. Data center financing is tightening. Infrastructure milestones are slipping. And the market sentiment has begun shifting from uncritical enthusiasm to active skepticism.</p>
 <p>The prevailing view in the HN discussion around OpenAI&rsquo;s cash burn was that AI is analogous to railroads: a genuinely transformative technology that will nonetheless produce massive investor losses during its bubble phase. <strong>avalys</strong> argued that every company investing similar resources produces roughly the same results, suggesting no technological moat exists. <strong>cmiles8</strong> described AI as the worst possible business setup: a commodity requiring huge capital with zero brand loyalty.</p>
 <p>The bubble analysis from Ed Zitron identified three pressure points: OpenAI&rsquo;s cash constraints (with circular financing arrangements), tightening data center lending conditions, and cascading infrastructure delays. Market sentiment has begun to shift, with AI announcements no longer reliably boosting stock prices.</p>
 <p>The implications for practitioners are concrete. If current AI pricing is subsidized by venture capital, costs will eventually rise &mdash; possibly significantly. If major providers face financial distress, service continuity becomes a risk. The practical response is to build workflows with low switching costs: use open protocols, maintain tool-agnostic practices, and avoid deep provider lock-in.</p>
 <p><strong>Where it stands:</strong> A correction of some kind is widely expected. The question is magnitude and timing. The technology itself will persist regardless &mdash; but the specific tools, pricing, and providers available to practitioners may change substantially.</p>
-<p>(<a href="../sources/2025-12-30-openai-cash-burn/">Sources</a>, <a href="../sources/2026-01-19-ai-bubble-bursts-2026/">Bubble Analysis</a>)</p>
+<p>(<a href="../sources/2025-12-30-openai-cash-burn.html">Sources</a>, <a href="../sources/2026-01-19-ai-bubble-bursts-2026.html">Bubble Analysis</a>)</p>
 <h2 id="how-will-vibe-coding-affect-open-source">How Will Vibe Coding Affect Open Source?</h2>
 <p>Vibe coding &mdash; generating code through AI prompts rather than writing it manually &mdash; threatens the ecosystem that AI models themselves depend on. The concern has three dimensions.</p>
 <p>First, <strong>community bypass.</strong> When developers ask an LLM for code instead of visiting project documentation, filing issues, or contributing patches, the organic engagement that sustains open-source projects is diverted. As <strong>arjie</strong> noted on HN, there is no longer pressure to contribute upstream when you can generate a custom solution.</p>
@@ -195,13 +194,13 @@
 <p>Third, <strong>maintainer burden.</strong> AI-generated pull requests &mdash; some legitimate, some padding &mdash; add new work for already-stretched maintainers, while the organic contributions and bug reports they relied on decline.</p>
 <p>The counterarguments are substantive. <strong>observationist</strong> argued that open source is adapting, not dying, and communities will develop new curation hierarchies. <strong>Flavius</strong> defended open source as an ideology about freedom, arguing the mechanism of code creation is irrelevant to the principle. <strong>charcircuit</strong> criticized the concern as outdated, noting modern AI agents search for current libraries rather than relying solely on training data.</p>
 <p><strong>Where it stands:</strong> The impact on open source is real but still unfolding. Small utility libraries face the most pressure, as their functionality can now be generated on demand. Large, complex projects (Linux, PostgreSQL, React) remain essential. The community has not yet found sustainable models for maintaining the long tail of open-source projects in an AI-assisted world.</p>
-<p>(<a href="../sources/2026-02-03-vibe-coding-killing-oss/">Source</a>)</p>
+<p>(<a href="../sources/2026-02-02-vibe-coding-killing-open-source.html">Source</a>)</p>
 <h2 id="is-agent-oriented-development-a-permanent-shift">Is Agent-Oriented Development a Permanent Shift?</h2>
 <p>The deepest question is whether the move toward agent-assisted coding represents a lasting change in how software is built, or whether it is a productivity fad that will stabilize into a more modest role.</p>
-<p>Arguments for permanence: Each model generation makes more tasks delegable. The <a href="../guides/adoption-stages/">Six Stages of AI Adoption</a> framework describes a ratchet effect where investments in harness engineering compound over time. Developers who reach Stage 5 or 6 report that going back to fully manual workflows feels like abandoning a power tool.</p>
-<p>Arguments for modesty: The METR study showed a 19% productivity reduction when experienced developers used AI on familiar codebases. <strong>strogonoff</strong> on HN questioned whether AI truly saves time given review overhead. The reliability concerns documented in <a href="../landscape/costs-and-tradeoffs/">Costs and Tradeoffs</a> create workflow fragility that purely manual coding does not have.</p>
+<p>Arguments for permanence: Each model generation makes more tasks delegable. The <a href="../guide/adoption-curve.html">AI Adoption Curve</a> framework describes a ratchet effect where investments in harness engineering compound over time. Developers who reach Stage 5 or 6 report that going back to fully manual workflows feels like abandoning a power tool.</p>
+<p>Arguments for modesty: The METR study showed a 19% productivity reduction when experienced developers used AI on familiar codebases. <strong>strogonoff</strong> on HN questioned whether AI truly saves time given review overhead. The reliability concerns documented in <a href="../landscape/costs-and-tradeoffs.html">Costs and Tradeoffs</a> create workflow fragility that purely manual coding does not have.</p>
 <p>The most likely outcome is neither extreme. Agent-assisted development is probably permanent for the tasks it handles well &mdash; greenfield features, test generation, boilerplate, code in well-documented domains. But the boundary between what to delegate and what to do manually will continue to shift with each model generation, and the skill of knowing where that boundary lies will remain the core practitioner competency.</p>
-<p>This is why the <a href="../start-here/core-loop/">Core Loop</a> emphasizes the &ldquo;verify&rdquo; and &ldquo;harness&rdquo; phases as heavily as the &ldquo;delegate&rdquo; phase. The technology for delegation will keep improving. The judgment about when and how to delegate is the human skill that compounds.</p>
+<p>This is why the <a href="../guide/core-loop.html">Core Loop</a> emphasizes the &ldquo;verify&rdquo; and &ldquo;harness&rdquo; phases as heavily as the &ldquo;delegate&rdquo; phase. The technology for delegation will keep improving. The judgment about when and how to delegate is the human skill that compounds.</p>
 
       </div>
 
@@ -242,30 +241,29 @@
   <div class="footer-container">
     <div class="footer-brand">
       <span class="footer-logo">AI Best Practices</span>
-      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
     </div>
     <div class="footer-nav">
       <div class="footer-section">
         <h3>Learn</h3>
         <ul>
-          <li><a href="../start-here/index.html">Start Here</a></li>
-          <li><a href="../skills/index.html">Skills</a></li>
-          <li><a href="../workflows/index.html">Workflows</a></li>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Explore</h3>
         <ul>
           <li><a href="../tools/index.html">Tools</a></li>
-          <li><a href="../landscape/index.html">Landscape</a></li>
           <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
           <li><a href="../sources/index.html">Sources</a></li>
-          <li><a href="../tags/">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
     </div>
   </div>
 </footer>

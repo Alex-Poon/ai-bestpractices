@@ -3,12 +3,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>I spent $638 on AI coding agents in 6 weeks | AI Best Practices Knowledge Base</title>
-  <meta name="description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta name="description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
   <meta name="color-scheme" content="dark light">
 
   
   <meta property="og:title" content="I spent $638 on AI coding agents in 6 weeks">
-  <meta property="og:description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta property="og:description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
   <meta property="og:type" content="article">
 
   
@@ -37,14 +37,13 @@
       <span>AI Best Practices</span>
     </a>
     <div class="nav-links">
-      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
-      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
       <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
-      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
-      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
       <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
       <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
-      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
     </div>
     <div class="nav-actions">
       <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
@@ -101,7 +100,7 @@
 
 
 
-  <div class="article-layout">
+  <div class="article-layout has-toc">
     <article class="article">
       <header class="article-header">
         <h1 class="article-title">I spent $638 on AI coding agents in 6 weeks</h1>
@@ -192,21 +191,23 @@
 <p>&ldquo;more than some cloud bills&rdquo; — nthypes (HN submission)</p>
 </blockquote>
 <h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
-<p>The discussion generated 1 point and 5 comments, reflecting the niche audience for cost analysis posts.</p>
-<p><strong>Detailed usage analytics</strong></p>
-<ul>
-<li><strong>nthypes</strong> (OP): Shared Cursor-generated statistics showing $928.45 over 70 days, average $13.86/day, with peak activity at 1-2 PM and Saturdays being the busiest day. The 88.8% cache hit rate was highlighted as a major cost saver.</li>
-</ul>
-<p><strong>Value assessment and alternatives</strong></p>
-<ul>
-<li><strong>Rochus</strong>: Asked about concrete ROI, reporting mixed results with Claude where re-work consumed most time savings, but finding GPT-5 produced code that compiled and ran correctly more often, all covered by a Perplexity subscription</li>
-<li><strong>mnky9800n</strong>: Recommended switching to Claude Code Max at $125/month flat rate, noting they run multiple agents doing research as a scientist without cost surprises</li>
-<li><strong>Woods369</strong>: Pointed out that pricing is still stabilizing, noting Warp terminal&rsquo;s new lower-cost plans and an industry acknowledgment that current pricing doesn&rsquo;t scale sustainably</li>
-</ul>
-<p><strong>The investment framing</strong></p>
-<ul>
-<li><strong>6510</strong>: Suggested that AI coding costs are an ongoing investment in skill development, noting that proficiency with these tools will determine future competitive advantage</li>
-</ul>
+<p><em>8 comments total</em></p>
+<p><strong>nthypes</strong> (OP): Shared detailed Cursor-generated usage stats: $928.45 over 70 days, average $0.06/request, projected monthly cost ~$416. Median time between requests was just 13 seconds (burst activity). Cache hit rate of 88.8% saved significant costs&hellip;</p>
+<p><strong>Rochus</strong>: Asked about concrete ROI. Reported mixed results with Claude Sonnet and Opus where re-work consumed most time savings. Found GPT-5 via Perplexity produced code that usually compiles and runs correctly up front&hellip;</p>
+<blockquote>
+<p><strong>nthypes</strong>: Replied that the value-to-token ratio feels off. Many of those 340M tokens feel wasteful — the LLM uses 50k tokens exploring dead ends before finding a solution expressible in 5k tokens. The productivity gain is real but feels like paying 10x more than fair&hellip;</p>
+</blockquote>
+<p><strong>Woods369</strong>: Agreed with the closing questions. Noted pricing fluctuation as companies find the sweet spot. Mentioned Warp terminal&rsquo;s new plan with lower cost per request, citing their acknowledgment that plans didn&rsquo;t scale sustainably at full usage&hellip;</p>
+<p><strong>mnky9800n</strong>: Recommended Claude Code Max ($125/month flat) — runs multiple agents on clusters doing research as a scientist with no cost surprises. Suggested the $638/6 weeks is a budget question for the founder to decide&hellip;</p>
+<blockquote>
+<p><strong>nthypes</strong>: Noted even Claude Code Max&rsquo;s $200/month plan has weekly rate limits (240-480 hours Sonnet 4, 24-40 hours Opus 4/week). Main concern: if AI coding becomes a $5-6k/year baseline expense per developer, it changes unit economics for early-stage companies&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mnky9800n</strong>: Argued that when testing ideas you can&rsquo;t also be thinking about efficiency. The LLM explores different solutions to arrive at ones that work — those tokens on bad solutions were useful. Many software licenses cost multiples of $5-6k/year and are still worth it&hellip;</p>
+</blockquote>
+</blockquote>
+<p><strong>6510</strong>: Suggested it&rsquo;s important to consider training costs — proficiency requires practice, and from now on everything you do will be this expensive.</p>
 
       </div>
 
@@ -229,6 +230,20 @@
     </article>
 
     
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#key-insights">Key Insights</a></li>
+    <li><a href="#notable-quotes">Notable Quotes</a></li>
+    <li><a href="#hn-discussion-highlights">HN Discussion Highlights</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
 
   </div>
 </div>
@@ -237,30 +252,29 @@
   <div class="footer-container">
     <div class="footer-brand">
       <span class="footer-logo">AI Best Practices</span>
-      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
     </div>
     <div class="footer-nav">
       <div class="footer-section">
         <h3>Learn</h3>
         <ul>
-          <li><a href="../start-here/index.html">Start Here</a></li>
-          <li><a href="../skills/index.html">Skills</a></li>
-          <li><a href="../workflows/index.html">Workflows</a></li>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Explore</h3>
         <ul>
           <li><a href="../tools/index.html">Tools</a></li>
-          <li><a href="../landscape/index.html">Landscape</a></li>
           <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
           <li><a href="../sources/index.html">Sources</a></li>
-          <li><a href="../tags/">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
     </div>
   </div>
 </footer>

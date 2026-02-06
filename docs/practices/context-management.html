@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Context Management | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="Working within and around context window limits — TODO lists, plan files, working memory patterns.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Context Management">
+  <meta property="og:description" content="Working within and around context window limits — TODO lists, plan files, working memory patterns.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-practices"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../practices/index.html">Practices</a></li>
+      
+    
+    <li aria-current="page">Context Management</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Context Management</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">10 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/context-management.html" class="tag-pill">context-management</a>
+  
+  
+  
+  
+  <a href="../tags/working-memory.html" class="tag-pill">working-memory</a>
+  
+  
+  
+  
+  <a href="../tags/context-window.html" class="tag-pill">context-window</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <p>Context management is the practice of working within and around the finite context window that constrains every AI agent interaction. It is the most technical of the core practices and the one that separates power users from frustrated ones. Most practical failures in agentic coding &ndash; going in circles, forgetting instructions, losing coherence over long sessions &ndash; trace back to context management problems.</p>
+<p>The context window is not just a size limit. It is the agent&rsquo;s entire working memory. Everything the agent knows about your project, your conversation, its instructions, and its tools must fit within this window. As it fills, quality degrades &ndash; not gradually, but in ways that are hard to predict and hard to recover from.</p>
+<h2 id="what-context-management-is">What Context Management Is</h2>
+<p>Context management encompasses three activities:</p>
+<ol>
+<li><strong>Context budgeting</strong>: Deciding what information to include in the agent&rsquo;s context and what to exclude.</li>
+<li><strong>Session management</strong>: Knowing when to start fresh sessions, when to continue, and how to hand off between sessions.</li>
+<li><strong>Working memory patterns</strong>: Using external files (TODO lists, plan documents, state files) to extend the agent&rsquo;s effective memory beyond the context window.</li>
+</ol>
+<p>The fundamental constraint is simple: the agent can only reason about what it can see. Everything outside the context window does not exist for the agent. Your job is to ensure that what matters most is inside the window and what matters least is not wasting space.</p>
+<h2 id="why-context-management-matters">Why Context Management Matters</h2>
+<h3 id="context-windows-are-the-central-bottleneck">Context windows are the central bottleneck</h3>
+<p><strong>conception</strong> found that &ldquo;after any compacting of the context window, the session is more or less useless.&rdquo; Context compaction &ndash; where the system summarizes earlier conversation to make room for new content &ndash; reliably degrades session quality with no good recovery mechanism. This is not a bug that will be fixed soon; it is inherent to how current models process information.</p>
+<p><strong>joshuaisaact</strong> framed it precisely: agents are &ldquo;stateless functions with a limited heap.&rdquo; The context window is local memory. As it fills, the function&rsquo;s behavior degrades &ndash; it processes new information less effectively, follows instructions less reliably, and produces lower-quality output.</p>
+<h3 id="most-agent-failures-are-context-failures">Most agent failures are context failures</h3>
+<p>When the agent goes in circles, it is usually because the context is polluted with previous failed attempts, pushing useful information out of effective attention range. When the agent ignores your AGENTS.md instructions, it is often because the instructions are buried under thousands of tokens of conversation and tool output. When the agent makes the same mistake it made three turns ago, it is because the correction was compacted away.</p>
+<p><strong>guluarte</strong> reported that agents follow the first two or three lines of AGENTS.md and selectively ignore instructions deeper in the file. This is a context attention problem, not a comprehension problem.</p>
+<h3 id="token-waste-is-real-and-expensive">Token waste is real and expensive</h3>
+<p><strong>shimman</strong> pointed out that LLM agents spend tens of thousands of tokens grepping entire codebases to find symbols that LSP could locate instantly. <strong>jtms</strong> confirmed that refactoring tasks consume context budget on mechanical operations that deterministic tools could handle. Every wasted token is context window space that could have held useful information.</p>
+<h2 id="how-to-manage-context-effectively">How to Manage Context Effectively</h2>
+<h3 id="strategy-1-short-sessions">Strategy 1: Short Sessions</h3>
+<p>The single most effective context management technique is keeping sessions short. Start a new session for each distinct task rather than reusing a long-running conversation.</p>
+<p><strong>bushbaba</strong> advocates avoiding session reuse beyond the initial task or two. Fresh sessions start with clean context &ndash; no pollution from previous attempts, no compaction artifacts, no accumulated tool output. The agent reasons better in a fresh context than in a long one.</p>
+<p>The practical workflow: scope a task (see <a href="../task-scoping.html">task scoping</a>), open a new session, provide the relevant context, complete the task, commit the result, close the session. Each session is disposable.</p>
+<p><strong>jackfranklyn</strong> identified the key signal: when the agent starts going in circles, the session is spent. Stop, start fresh, and provide a narrower task.</p>
+<h3 id="strategy-2-external-working-memory">Strategy 2: External Working Memory</h3>
+<p>Use files on disk to extend the agent&rsquo;s effective memory beyond the context window. The agent reads from and writes to these files, creating a form of persistent memory that survives context compaction and session boundaries.</p>
+<p><strong>Common working memory patterns:</strong></p>
+<p><strong>TODO files.</strong> A markdown file listing remaining tasks, completed items, and blockers. The agent reads the TODO at the start of each session to understand where things stand and updates it as work progresses. This prevents the agent from losing track of the overall plan when context is compacted.</p>
+<p><strong>Plan files.</strong> A document describing the current approach, key decisions made, and the rationale behind them. When a session gets long, the agent can re-read the plan file to recover alignment rather than relying on compacted conversation history.</p>
+<p><strong>State files.</strong> For multi-agent workflows, a shared state file records what each agent has done and what remains. This is how independent agents coordinate without sharing context windows.</p>
+<p><strong>Decision logs.</strong> A record of architectural decisions and their rationale. When the agent proposes something that contradicts a previous decision, you can point it to the decision log rather than re-explaining the reasoning.</p>
+<p><strong>stevenslade</strong> summarized the fundamental principle: &ldquo;memory = prompt assembly.&rdquo; All agent memory is just text assembled into prompts. The strategies (sliding window, summarization, RAG, external files) differ in how that assembly happens, but the constraint is the same.</p>
+<h3 id="strategy-3-context-efficient-tools">Strategy 3: Context-Efficient Tools</h3>
+<p>Replace context-heavy operations with context-efficient tools. Every tool output that enters the context window competes with your instructions and conversation for the agent&rsquo;s attention.</p>
+<p><strong>LSP integration.</strong> Instead of the agent grepping the entire codebase to find a symbol definition (thousands of tokens of file content), an LSP-backed tool returns just the definition (a few tokens). <strong>jtms</strong> estimated this could save tens of thousands of tokens per refactoring session.</p>
+<p><strong>Filtered test runners.</strong> A wrapper that runs only tests relevant to modified files and formats output concisely. Full test suite output can consume enormous amounts of context.</p>
+<p><strong>Minimal-output tools.</strong> Design agent tools to return the minimum useful output. A tool that returns &ldquo;3 tests passed, 1 failed: test_auth_token_expiry&rdquo; is better for context than one that dumps the full pytest output.</p>
+<p><strong>Pre-computed statistics.</strong> Rather than having the agent analyze raw data, provide pre-computed summaries. The agent does not need to see 500 lines of test output if you can tell it &ldquo;487 passed, 13 failed, failures are in auth and payments modules.&rdquo;</p>
+<h3 id="strategy-4-subagent-context-freshness">Strategy 4: Subagent Context Freshness</h3>
+<p>Delegate self-contained tasks to subagents so they work with fresh, focused context rather than on top of a large monolithic context.</p>
+<p><strong>AffableSpatula</strong> found that subagents with fresh context burn fewer tokens and reason better than continuing in a degraded parent context. The principle is simple: rather than asking a 100k-token-deep session to do one more thing, spawn a new session with only the 5k tokens of context it actually needs.</p>
+<p><strong>baby</strong> always handles Claude Code by spawning subagents for self-contained tasks, with the lead agent maintaining a dependency graph so subagents do not step on each other.</p>
+<p>The tradeoff: subagent spawning has overhead (context transfer, result integration). For tasks that take less than a few minutes, the overhead may exceed the benefit. Use subagents for tasks that would suffer in a degraded parent context, not for quick operations.</p>
+<h3 id="strategy-5-structured-handoffs">Strategy 5: Structured Handoffs</h3>
+<p>When you must continue work across sessions, structure the handoff explicitly. At the end of a session, have the agent write a summary of:</p>
+<ul>
+<li>What was accomplished</li>
+<li>What remains to do</li>
+<li>Key decisions made and why</li>
+<li>Any blockers or open questions</li>
+</ul>
+<p>Start the next session by providing this summary alongside the relevant files. This is more reliable than relying on the new session to re-derive context from the codebase alone.</p>
+<p>The pattern is analogous to shift handoffs in operations: the outgoing shift briefs the incoming shift, ensuring continuity without requiring shared memory.</p>
+<h3 id="strategy-6-context-checkpointing">Strategy 6: Context Checkpointing</h3>
+<p>Some practitioners create explicit checkpoints during long sessions. Before undertaking a risky or complex sub-task, have the agent write its current understanding and plan to a file. If the sub-task goes badly and pollutes the context, you can start a new session and restore from the checkpoint rather than losing the entire session&rsquo;s progress.</p>
+<h2 id="anti-patterns">Anti-Patterns</h2>
+<h3 id="marathon-sessions">Marathon Sessions</h3>
+<p>Running a single agent session for hours, accumulating context until quality degrades noticeably, then struggling with an agent that cannot follow instructions or remember what it was doing.</p>
+<p><strong>Fix:</strong> Short sessions. One task per session when possible. Commit between sessions.</p>
+<h3 id="dumping-everything-into-context">Dumping Everything into Context</h3>
+<p>Providing the entire codebase, all documentation, and exhaustive background information &ldquo;just in case.&rdquo; The agent&rsquo;s attention is finite. Irrelevant context dilutes attention to relevant content.</p>
+<p><strong>Fix:</strong> Include only what the agent needs for this specific task. Use the &ldquo;explain back&rdquo; test: could a competent developer complete this task with only the information you are providing?</p>
+<h3 id="ignoring-context-compaction">Ignoring Context Compaction</h3>
+<p>Continuing a session after the system has compacted previous messages, without realizing that important instructions or corrections have been summarized away.</p>
+<p><strong>Fix:</strong> When you notice the agent behaving inconsistently or forgetting rules, check whether compaction has occurred. If so, start a fresh session and re-provide critical context.</p>
+<h3 id="relying-on-conversation-history">Relying on Conversation History</h3>
+<p>Assuming the agent can reference and reason about earlier parts of a long conversation. As context fills, earlier turns receive less attention even before compaction occurs.</p>
+<p><strong>Fix:</strong> For any information that must remain active throughout the session, put it in a file the agent can re-read rather than relying on it existing in conversation history.</p>
+<h3 id="no-external-memory">No External Memory</h3>
+<p>Running every session from scratch without TODO files, plan documents, or state files. Each session starts with zero accumulated knowledge, forcing you to re-explain the project state every time.</p>
+<p><strong>Fix:</strong> Maintain working memory files. Even a simple TODO.md that the agent updates at the end of each session dramatically improves continuity.</p>
+<h3 id="massive-agentsmd-files">Massive AGENTS.md Files</h3>
+<p>Writing an AGENTS.md so large that it consumes a significant fraction of the context window on its own, leaving less room for the actual task. <strong>CjHuber</strong> warned about this failure mode: elaborate procedures that overwhelm the context before work even begins.</p>
+<p><strong>Fix:</strong> Keep AGENTS.md concise and focused on critical rules. Move specialized instructions to skills or separate files loaded on demand.</p>
+<h2 id="context-window-sizes-and-practical-limits">Context Window Sizes and Practical Limits</h2>
+<p>While context windows are measured in tokens (ranging from 128K to 1M+ across current models), the effective context is always smaller than the theoretical maximum. Attention quality degrades well before the window fills. Practitioners consistently report that agent behavior deteriorates long before hitting the hard limit.</p>
+<p><strong>dmos62</strong> discovered a hard performance cliff at 45k tokens with ChatGPT &ndash; not the stated limit, but a practical one where quality drops sharply. The effective context for reliable work is often 30-50% of the stated maximum.</p>
+<p>This means that even with a 200K context window, treating the first 50-80K as your reliable working space and managing the rest carefully is the pragmatic approach.</p>
+<h2 id="evidence">Evidence</h2>
+<p><strong>conception</strong> (HN, thread 46815585): &ldquo;After any compacting of the context window, the session is more or less useless.&rdquo; Context compaction reliably degrades quality with no good recovery.</p>
+<p><strong>joshuaisaact</strong> (HN, thread 46752037): Agents are &ldquo;stateless functions with a limited heap.&rdquo; Context window is local memory that degrades as it fills.</p>
+<p><strong>AffableSpatula</strong> (HN, thread 46744478): Subagents with fresh context burn fewer tokens and reason better than a monolithic context.</p>
+<p><strong>guluarte</strong> (HN, thread 46827212): Agents follow the first two or three lines of AGENTS.md and selectively ignore deeper instructions.</p>
+<p><strong>jtms</strong> (HN, thread 46365747): Refactoring tasks &ldquo;blow tens of thousands of tokens just searching for files.&rdquo; LSP integration would dramatically reduce waste.</p>
+<p><strong>stevenslade</strong> (HN, thread 46577498): &ldquo;Memory = prompt assembly.&rdquo; All agent memory is text assembled into prompts. The fundamental constraint is always the same.</p>
+<p><strong>baby</strong> (HN, thread 46752104): The system produces better results because of clean context windows. Always delegates to subagents for self-contained tasks.</p>
+<p><strong>dmos62</strong> (HN, thread 46812832): Discovered hard performance cliff at 45k tokens. Prefers honest refusals over silent quality degradation.</p>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../practices/multi-agent.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Multi-Agent Patterns</span>
+        </a>
+        
+        
+        <a href="../practices/prompt-craft.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Prompt Craft</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-context-management-is">What Context Management Is</a></li>
+    <li><a href="#why-context-management-matters">Why Context Management Matters</a>
+      <ul>
+        <li><a href="#context-windows-are-the-central-bottleneck">Context windows are the central bottleneck</a></li>
+        <li><a href="#most-agent-failures-are-context-failures">Most agent failures are context failures</a></li>
+        <li><a href="#token-waste-is-real-and-expensive">Token waste is real and expensive</a></li>
+      </ul>
+    </li>
+    <li><a href="#how-to-manage-context-effectively">How to Manage Context Effectively</a>
+      <ul>
+        <li><a href="#strategy-1-short-sessions">Strategy 1: Short Sessions</a></li>
+        <li><a href="#strategy-2-external-working-memory">Strategy 2: External Working Memory</a></li>
+        <li><a href="#strategy-3-context-efficient-tools">Strategy 3: Context-Efficient Tools</a></li>
+        <li><a href="#strategy-4-subagent-context-freshness">Strategy 4: Subagent Context Freshness</a></li>
+        <li><a href="#strategy-5-structured-handoffs">Strategy 5: Structured Handoffs</a></li>
+        <li><a href="#strategy-6-context-checkpointing">Strategy 6: Context Checkpointing</a></li>
+      </ul>
+    </li>
+    <li><a href="#anti-patterns">Anti-Patterns</a>
+      <ul>
+        <li><a href="#marathon-sessions">Marathon Sessions</a></li>
+        <li><a href="#dumping-everything-into-context">Dumping Everything into Context</a></li>
+        <li><a href="#ignoring-context-compaction">Ignoring Context Compaction</a></li>
+        <li><a href="#relying-on-conversation-history">Relying on Conversation History</a></li>
+        <li><a href="#no-external-memory">No External Memory</a></li>
+        <li><a href="#massive-agentsmd-files">Massive AGENTS.md Files</a></li>
+      </ul>
+    </li>
+    <li><a href="#context-window-sizes-and-practical-limits">Context Window Sizes and Practical Limits</a></li>
+    <li><a href="#evidence">Evidence</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

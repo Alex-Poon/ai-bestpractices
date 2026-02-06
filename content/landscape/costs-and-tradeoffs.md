@@ -16,7 +16,7 @@ The per-request costs seemed trivial --- $0.02 to $0.06 depending on context siz
 
 The projections are striking: $5,500+ annually just for code assistance. HN user **mnky9800n** recommended Claude Code Max at $125/month for cost predictability, while **Woods369** noted that the industry acknowledges current pricing does not scale sustainably. **6510** reframed the expense as an investment in a skill that will determine future competitive advantage.
 
-([Source](/sources/2025-11-13-ai-coding-agent-costs/))
+([Source](/sources/2025-11-13-ai-coding-agent-costs.html))
 
 ## Reliability: 57 Incidents in Three Months
 
@@ -28,7 +28,7 @@ These reliability concerns are not unique to Anthropic. They reflect the operati
 
 Rate limiting compounds the problem. Multiple users reported that even on paid plans, heavy usage of Opus-class models depletes daily allocations quickly, forcing either model downgrades or waiting. The gap between what the models can do in theory and what you can actually access in practice remains a persistent friction.
 
-([Source](/sources/2026-02-04-claude-57-incidents/))
+([Source](/sources/2026-02-04-claude-57-incidents-3-months.html))
 
 ## Model Degradation Concerns
 
@@ -45,7 +45,7 @@ HN user **theptip** argued that models are getting better but users have not fig
 
 The practical takeaway: consistency matters more than peak capability. A model that reliably produces 80% quality output is more useful in an agentic workflow than one that oscillates between 95% and 50%.
 
-([Source](/sources/2026-01-08-ai-coding-getting-worse/))
+([Source](/sources/2026-01-08-ai-coding-getting-worse.html))
 
 ## The Broader Economics: Bubble or Business?
 
@@ -61,7 +61,7 @@ Several structural observations emerged:
 
 Whether the bubble concern materializes directly affects practitioners. If AI pricing is currently subsidized, future costs may rise significantly. If major providers face financial distress, service continuity becomes a risk. Building workflows with low switching costs --- using open protocols, tool-agnostic practices, and avoiding deep lock-in --- is prudent regardless of how the economics play out.
 
-([Sources](/sources/2025-12-30-openai-cash-burn/), [Bubble Analysis](/sources/2026-01-19-ai-bubble-bursts-2026/))
+([Sources](/sources/2025-12-30-openai-cash-burn.html), [Bubble Analysis](/sources/2026-01-19-ai-bubble-bursts-2026.html))
 
 ## Cost Optimization Strategies
 
@@ -70,5 +70,5 @@ Based on practitioner reports, the most effective cost management approaches are
 1. **Flat-rate plans for predictability.** If you are a heavy user, a $100-200/month flat rate eliminates cost anxiety and encourages full utilization. Claude Code Max at $125/month was cited as a practical option.
 2. **Cache-aware usage patterns.** The 88.8% cache hit rate from the cost study shows that working within the same codebase context significantly reduces effective per-request costs.
 3. **Model selection by task.** Reserve expensive Opus-class models for tasks that genuinely need them. Use faster, cheaper models (Sonnet, Flash) for straightforward completions and formatting.
-4. **Task scoping to reduce iterations.** Well-scoped tasks ([Task Scoping pattern](/patterns/task-scoping/)) succeed on fewer attempts, directly reducing token consumption.
-5. **Harness investment.** A good AGENTS.md or CLAUDE.md file prevents the agent from making known mistakes, which eliminates the token cost of correction loops. See [Harness Engineering](/patterns/harness-engineering/).
+4. **Task scoping to reduce iterations.** Well-scoped tasks ([Task Scoping pattern](/practices/task-scoping.html)) succeed on fewer attempts, directly reducing token consumption.
+5. **Harness investment.** A good AGENTS.md or CLAUDE.md file prevents the agent from making known mistakes, which eliminates the token cost of correction loops. See [Harness Engineering](/practices/harness-engineering.html).

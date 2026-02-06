@@ -9,6 +9,13 @@
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/reliability/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Is AI-Assisted Coding Getting Worse?</title>
+      <link>/debates/is-it-getting-worse.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/debates/is-it-getting-worse.html</guid>
+      <description>&lt;h2 id=&#34;the-question&#34;&gt;The Question&lt;/h2&gt;&#xA;&lt;p&gt;Few topics generate more heat in developer communities than the question of whether AI coding tools are getting worse over time. The complaint surfaces constantly: tasks that worked last month now require more prompting, models seem to lose coherence during US business hours, and context windows that once felt adequate now collapse under normal workloads.&lt;/p&gt;&#xA;&lt;p&gt;The stakes are real. Developers are paying $125-400+ per month for AI coding tools and building workflows around model capabilities they believe were promised. When those capabilities seem to fluctuate &amp;ndash; or quietly degrade &amp;ndash; trust erodes. And in a market where providers compete fiercely for developer loyalty, the perception of degradation can be as damaging as actual degradation.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Claude Code daily benchmarks for degradation tracking</title>
       <link>/sources/2026-01-29-claude-code-benchmarks.html</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>

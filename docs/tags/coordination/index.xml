@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Coordination on AI Best Practices Knowledge Base</title>
-    <link>/tags/coordination.html</link>
+    <link>//localhost:1314/tags/coordination.html</link>
     <description>Recent content in Coordination on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/coordination/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/coordination/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Parallel Agent Coordination</title>
-      <link>/workflows/parallel-agents.html</link>
+      <link>//localhost:1314/workflows/parallel-agents.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/workflows/parallel-agents.html</guid>
-      <description>&lt;p&gt;A single agent is often too slow for large projects. Running multiple agents in parallel is the obvious solution, but naive parallelism introduces failure modes that can waste more time and money than sequential work. This page covers when parallel agents help, when they hurt, and the coordination infrastructure that makes the difference.&lt;/p&gt;&#xA;&lt;p&gt;The strongest empirical evidence comes from Nicholas Carlini&amp;rsquo;s compiler project, where 16 parallel Claude instances produced 100,000 lines of working Rust compiler code over two weeks. The full case study is covered in &lt;a href=&#34;../../deep-dives/parallel-compiler-lessons/&#34;&gt;What 100 Parallel Agents Taught Us&lt;/a&gt;. This page focuses on the reusable coordination patterns.&lt;/p&gt;</description>
+      <guid>//localhost:1314/workflows/parallel-agents.html</guid>
+      <description>&lt;p&gt;A single agent is often too slow for large projects. Running multiple agents in parallel is the obvious solution, but naive parallelism introduces failure modes that can waste more time and money than sequential work. This page covers when parallel agents help, when they hurt, and the coordination infrastructure that makes the difference.&lt;/p&gt;&#xA;&lt;p&gt;The strongest empirical evidence comes from Nicholas Carlini&amp;rsquo;s compiler project, where 16 parallel Claude instances produced 100,000 lines of working Rust compiler code over two weeks. The full case study is covered in &lt;a href=&#34;../../evidence/carlini-compiler.html&#34;&gt;What 100 Parallel Agents Taught Us&lt;/a&gt;. This page focuses on the reusable coordination patterns.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

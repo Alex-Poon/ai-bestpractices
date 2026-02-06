@@ -52,9 +52,9 @@ Each generation opened capability frontiers that the previous one could not reac
 
 This case study validates several principles that experienced practitioners have identified independently:
 
-1. **The test harness is the product.** Agent output quality is bounded by verification quality, not prompt quality. If you invest in one thing when deploying agents, invest in the harness. See [Harness Engineering](/patterns/harness-engineering.html).
+1. **The test harness is the product.** Agent output quality is bounded by verification quality, not prompt quality. If you invest in one thing when deploying agents, invest in the harness. See [Harness Engineering](/practices/harness-engineering.html).
 
-2. **Decomposition determines parallelism.** You cannot make a monolithic task faster by adding agents. You can only make a decomposable task faster by matching agent count to the number of independent work units. See [Task Scoping](/patterns/task-scoping.html).
+2. **Decomposition determines parallelism.** You cannot make a monolithic task faster by adding agents. You can only make a decomposable task faster by matching agent count to the number of independent work units. See [Task Scoping](/practices/task-scoping.html).
 
 3. **Design for agent cognition.** Test output formatting, execution time limits, and progress tracking all need to account for how the agent processes information. Human-oriented tooling often works poorly for agents.
 
@@ -62,4 +62,4 @@ This case study validates several principles that experienced practitioners have
 
 5. **Human judgment remains the final gate.** A 99% pass rate sounds reassuring until you consider what the remaining 1% might contain. Autonomous development without human verification remains a genuine concern -- one the project's author, whose background is in security research, was candid about.
 
-The full technical details are available in [Anthropic's engineering blog post](https://www.anthropic.com/engineering/building-c-compiler). The deep-dive analysis of harness engineering lessons is in [What 100 Parallel AI Agents Taught Us About Harness Engineering](/deep-dives/parallel-compiler-lessons.html).
+The full technical details are available in [Anthropic's engineering blog post](https://www.anthropic.com/engineering/building-c-compiler). The coordination patterns from this project are distilled in [Multi-Agent Coordination](/practices/multi-agent.html).

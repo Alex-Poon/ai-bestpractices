@@ -37,14 +37,13 @@
       <span>AI Best Practices</span>
     </a>
     <div class="nav-links">
-      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
-      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
       <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
-      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
-      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
       <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
       <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
-      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
     </div>
     <div class="nav-actions">
       <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
@@ -189,7 +188,7 @@
 </ul>
 <h2 id="cost-quality-tradeoffs">Cost-Quality Tradeoffs</h2>
 <p>The economics of model selection are not intuitive. Cheaper per-request does not always mean cheaper per-task.</p>
-<p>One developer <a href="../sources/2025-11-13-ai-coding-agent-costs/">documented spending $638 over six weeks</a> on AI coding, with 85% of the budget going to Claude despite trying seven alternative models. The reason: cheaper models required more iterations and produced more rework. The total cost of a task is (per-request cost) x (number of attempts) + (developer time reviewing failed attempts). A frontier model that succeeds on the first try can be cheaper than a budget model that requires three attempts plus an hour of debugging.</p>
+<p>One developer <a href="../sources/2025-11-13-ai-coding-agent-costs.html">documented spending $638 over six weeks</a> on AI coding, with 85% of the budget going to Claude despite trying seven alternative models. The reason: cheaper models required more iterations and produced more rework. The total cost of a task is (per-request cost) x (number of attempts) + (developer time reviewing failed attempts). A frontier model that succeeds on the first try can be cheaper than a budget model that requires three attempts plus an hour of debugging.</p>
 <p>Key cost-management strategies from the community:</p>
 <ul>
 <li><strong>Caching matters enormously.</strong> The same developer reported an 88.8% cache hit rate that significantly controlled costs. Understanding your tool&rsquo;s caching behavior and optimizing for it (consistent prompts, stable context) can cut spend dramatically.</li>
@@ -198,12 +197,12 @@
 </ul>
 <h2 id="multi-model-approaches">Multi-Model Approaches</h2>
 <p>Several tools and workflows now support using different models for different stages of the same task.</p>
-<p>The pattern is straightforward: use a frontier model for planning and architectural decisions, then use a cheaper model for implementation of the resulting plan. This matches the <a href="../skills/task-scoping/">task scoping</a> principle that architectural reasoning (trunk/branch work) demands the highest capability, while leaf-level implementation can often be handled by less capable models.</p>
-<p><a href="../sources/2026-01-04-llm-coding-workflow-2026/">Addy Osmani&rsquo;s workflow</a> describes multi-model pragmatism: using different models for different tasks and switching when one gets stuck, rather than maintaining loyalty to a single provider.</p>
+<p>The pattern is straightforward: use a frontier model for planning and architectural decisions, then use a cheaper model for implementation of the resulting plan. This matches the <a href="../skills/task-scoping.html">task scoping</a> principle that architectural reasoning (trunk/branch work) demands the highest capability, while leaf-level implementation can often be handled by less capable models.</p>
+<p><a href="../sources/2026-01-04-llm-coding-workflow-2026.html">Addy Osmani&rsquo;s workflow</a> describes multi-model pragmatism: using different models for different tasks and switching when one gets stuck, rather than maintaining loyalty to a single provider.</p>
 <p>Some practitioners use multiple models as a verification mechanism &ndash; generating code with one model and reviewing it with another. Disagreements between models flag areas that deserve closer human attention.</p>
 <h2 id="model-degradation-and-consistency">Model Degradation and Consistency</h2>
-<p>A recurring concern in the community is that model quality fluctuates unpredictably. The <a href="../sources/2026-01-29-claude-code-benchmarks/">Claude Code benchmarks tracker</a> documented measurable performance swings: a daily pass rate of 48% against a historical baseline of 58%, with statistically significant degradation at both 7-day and 30-day windows. The Claude Code team confirmed at least one harness bug contributed to the observed decline.</p>
-<p>The <a href="../sources/2026-01-08-ai-coding-getting-worse/">IEEE Spectrum analysis</a> explored whether AI coding tools are genuinely degrading. The HN discussion identified several possible explanations: changing user expectations, improved instructability that breaks old prompts, dynamic model routing during high demand, and training data feedback loops where poor code acceptance degrades future model quality.</p>
+<p>A recurring concern in the community is that model quality fluctuates unpredictably. The <a href="../sources/2026-01-29-claude-code-benchmarks.html">Claude Code benchmarks tracker</a> documented measurable performance swings: a daily pass rate of 48% against a historical baseline of 58%, with statistically significant degradation at both 7-day and 30-day windows. The Claude Code team confirmed at least one harness bug contributed to the observed decline.</p>
+<p>The <a href="../sources/2026-01-08-ai-coding-getting-worse.html">IEEE Spectrum analysis</a> explored whether AI coding tools are genuinely degrading. The HN discussion identified several possible explanations: changing user expectations, improved instructability that breaks old prompts, dynamic model routing during high demand, and training data feedback loops where poor code acceptance degrades future model quality.</p>
 <p>Practical implications for model selection:</p>
 <ul>
 <li><strong>Do not assume newer is always better.</strong> Test new model versions against your specific workload before switching.</li>
@@ -212,8 +211,8 @@
 <li><strong>Track your own metrics.</strong> Community benchmarks are useful but your specific codebase and task profile may behave differently. Notice when your rework rate increases and investigate whether the model is the cause.</li>
 </ul>
 <h2 id="the-diminishing-returns-of-prompt-engineering">The Diminishing Returns of Prompt Engineering</h2>
-<p>As models improve, the marginal return on prompt engineering diminishes. A strong model with a simple prompt increasingly outperforms a weak model with an elaborate prompt. The <a href="../sources/2026-01-18-model-matters-more-than-prompts/">model-matters-more-than-prompts analysis</a> argues that the optimization priority should be: choose the best available model first, then optimize your prompting and workflow around its specific capabilities.</p>
-<p>This does not mean prompting is irrelevant. But it means that switching from a mid-tier model to a frontier model often produces a larger quality improvement than spending an hour refining a prompt for the mid-tier model. <a href="../skills/harness-engineering/">Harness engineering</a> &ndash; persistent project context via AGENTS.md files &ndash; captures the value of good prompting in a durable form, while one-off prompt optimization is ephemeral.</p>
+<p>As models improve, the marginal return on prompt engineering diminishes. A strong model with a simple prompt increasingly outperforms a weak model with an elaborate prompt. The <a href="../sources/2026-01-18-model-matters-more-than-prompts.html">model-matters-more-than-prompts analysis</a> argues that the optimization priority should be: choose the best available model first, then optimize your prompting and workflow around its specific capabilities.</p>
+<p>This does not mean prompting is irrelevant. But it means that switching from a mid-tier model to a frontier model often produces a larger quality improvement than spending an hour refining a prompt for the mid-tier model. <a href="../skills/harness-engineering.html">Harness engineering</a> &ndash; persistent project context via AGENTS.md files &ndash; captures the value of good prompting in a durable form, while one-off prompt optimization is ephemeral.</p>
 <h2 id="anti-patterns">Anti-Patterns</h2>
 <h3 id="one-model-for-everything">One Model for Everything</h3>
 <p>Using the same frontier model for every task regardless of complexity. This maximizes cost without maximizing quality, since simple tasks do not benefit from frontier reasoning. A lightweight model generating boilerplate is not just cheaper &ndash; it is also faster, reducing your iteration cycle.</p>
@@ -225,13 +224,13 @@
 <p>Refusing to switch models or providers out of familiarity or sunk-cost reasoning. The model landscape changes rapidly. The best model for your workload six months ago may not be the best model today. Maintain the ability to switch.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><a href="../sources/2025-11-13-ai-coding-agent-costs/">AI coding agent costs ($638 study)</a> &ndash; Detailed cost breakdown showing 85% of budget on Claude despite trying 7 alternatives</li>
-<li><a href="../sources/2026-01-18-model-matters-more-than-prompts/">Model matters more than prompts</a> &ndash; Argument that model capability now dominates prompt quality</li>
-<li><a href="../sources/2026-01-29-claude-code-benchmarks/">Claude Code benchmarks</a> &ndash; Systematic tracking of model performance fluctuations</li>
-<li><a href="../sources/2026-01-08-ai-coding-getting-worse/">AI coding getting worse?</a> &ndash; Exploration of perceived degradation and its multiple possible causes</li>
-<li><a href="../sources/2026-01-06-opus-4-5-agent-experience/">Opus 4.5 agent experience</a> &ndash; Evidence that frontier models deliver qualitatively different results</li>
-<li><a href="../sources/2026-01-04-llm-coding-workflow-2026/">Addy Osmani&rsquo;s workflow</a> &ndash; Multi-model pragmatism in practice</li>
-<li><a href="../sources/2026-01-01-deepseek-bigger-models-less/">DeepSeek analysis</a> &ndash; Open-source model landscape and cost alternatives</li>
+<li><a href="../sources/2025-11-13-ai-coding-agent-costs.html">AI coding agent costs ($638 study)</a> &ndash; Detailed cost breakdown showing 85% of budget on Claude despite trying 7 alternatives</li>
+<li><a href="../sources/2026-01-18-model-matters-more-than-prompts.html">Model matters more than prompts</a> &ndash; Argument that model capability now dominates prompt quality</li>
+<li><a href="../sources/2026-01-29-claude-code-benchmarks.html">Claude Code benchmarks</a> &ndash; Systematic tracking of model performance fluctuations</li>
+<li><a href="../sources/2026-01-08-ai-coding-getting-worse.html">AI coding getting worse?</a> &ndash; Exploration of perceived degradation and its multiple possible causes</li>
+<li><a href="../sources/2026-01-06-opus-4-5-agent-experience.html">Opus 4.5 agent experience</a> &ndash; Evidence that frontier models deliver qualitatively different results</li>
+<li><a href="../sources/2026-01-04-llm-coding-workflow-2026.html">Addy Osmani&rsquo;s workflow</a> &ndash; Multi-model pragmatism in practice</li>
+<li><a href="../sources/2026-01-01-deepseek-bigger-models-less.html">DeepSeek analysis</a> &ndash; Open-source model landscape and cost alternatives</li>
 </ul>
 
       </div>
@@ -283,30 +282,29 @@
   <div class="footer-container">
     <div class="footer-brand">
       <span class="footer-logo">AI Best Practices</span>
-      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
     </div>
     <div class="footer-nav">
       <div class="footer-section">
         <h3>Learn</h3>
         <ul>
-          <li><a href="../start-here/index.html">Start Here</a></li>
-          <li><a href="../skills/index.html">Skills</a></li>
-          <li><a href="../workflows/index.html">Workflows</a></li>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Explore</h3>
         <ul>
           <li><a href="../tools/index.html">Tools</a></li>
-          <li><a href="../landscape/index.html">Landscape</a></li>
           <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
           <li><a href="../sources/index.html">Sources</a></li>
-          <li><a href="../tags/">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 84 pages across 187 topics.</p>
     </div>
   </div>
 </footer>

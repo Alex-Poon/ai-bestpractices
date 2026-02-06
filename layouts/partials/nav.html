@@ -13,14 +13,13 @@
       <span>AI Best Practices</span>
     </a>
     <div class="nav-links">
-      {{ with site.GetPage "/start-here" }}<a class="nav-link" data-section="start-here" href="{{ .RelPermalink }}">Start Here</a>{{ end }}
-      {{ with site.GetPage "/skills" }}<a class="nav-link" data-section="skills" href="{{ .RelPermalink }}">Skills</a>{{ end }}
+      {{ with site.GetPage "/guide" }}<a class="nav-link" data-section="guide" href="{{ .RelPermalink }}">Guide</a>{{ end }}
+      {{ with site.GetPage "/practices" }}<a class="nav-link" data-section="practices" href="{{ .RelPermalink }}">Practices</a>{{ end }}
+      {{ with site.GetPage "/debates" }}<a class="nav-link" data-section="debates" href="{{ .RelPermalink }}">Debates</a>{{ end }}
       {{ with site.GetPage "/tools" }}<a class="nav-link" data-section="tools" href="{{ .RelPermalink }}">Tools</a>{{ end }}
-      {{ with site.GetPage "/workflows" }}<a class="nav-link" data-section="workflows" href="{{ .RelPermalink }}">Workflows</a>{{ end }}
-      {{ with site.GetPage "/landscape" }}<a class="nav-link" data-section="landscape" href="{{ .RelPermalink }}">Landscape</a>{{ end }}
       {{ with site.GetPage "/evidence" }}<a class="nav-link" data-section="evidence" href="{{ .RelPermalink }}">Evidence</a>{{ end }}
+      {{ with site.GetPage "/voices" }}<a class="nav-link" data-section="voices" href="{{ .RelPermalink }}">Voices</a>{{ end }}
       {{ with site.GetPage "/sources" }}<a class="nav-link" data-section="sources" href="{{ .RelPermalink }}">Sources</a>{{ end }}
-      <a class="nav-link" data-section="tags" href="{{ "tags/" | relURL }}">Tags</a>
     </div>
     <div class="nav-actions">
       <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">

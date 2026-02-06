@@ -29,5 +29,26 @@
       <guid>/evidence/practitioner-voices.html</guid>
       <description>&lt;p&gt;The best evidence for how AI coding tools actually perform comes not from marketing materials or press releases but from practitioners reporting concrete experiences. The following quotes and observations are drawn from Hacker News discussions that collectively represent thousands of upvotes and hundreds of comments from working developers.&lt;/p&gt;&#xA;&lt;p&gt;Each entry is attributed to its original author and linked to the source discussion. Longer sentiments have been paraphrased to capture the core insight.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>The Real Cost of AI Coding Tools</title>
+      <link>/evidence/cost-data.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/evidence/cost-data.html</guid>
+      <description>&lt;p&gt;AI coding tools are not free. Despite the productivity narratives, few adoption stories include a line item for what the tools actually cost. This page aggregates the cost data that practitioners have shared &amp;ndash; from individual developer spending to enterprise claims to the macro-economic forces reshaping AI pricing &amp;ndash; to give a grounded picture of the economics of AI-assisted development in early 2026.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-individual-developers-actually-spend&#34;&gt;What individual developers actually spend&lt;/h2&gt;&#xA;&lt;p&gt;The most detailed public cost breakdown comes from a founder and CTO building an AI-first CRM, who tracked every dollar across six weeks of heavy Cursor usage in late 2025. The total: $638 in on-demand charges, with October alone hitting $348.56. A follow-up analysis extended the picture to $928.45 over 70 days &amp;ndash; roughly $400 per month.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI&#39;s Impact on Coding Skills: What the Research Shows</title>
+      <link>/evidence/coding-skills-impact.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/evidence/coding-skills-impact.html</guid>
+      <description>&lt;p&gt;In early 2026, Anthropic published a study examining how AI coding assistance affects developer skill development. The study became one of the most intensely debated pieces of AI research in the developer community, generating over 346 comments on Hacker News. The reaction was notable not for the usual pro/anti-AI polarization but for the depth of personal reflection it provoked &amp;ndash; developers grappling honestly with what they had already noticed happening to their own abilities.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Karpathy&#39;s AI Coding Notes: A Deep Reading</title>
+      <link>/evidence/karpathy-notes.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/evidence/karpathy-notes.html</guid>
+      <description>&lt;p&gt;In late January 2026, Andrej Karpathy &amp;ndash; former director of AI at Tesla, founding member of OpenAI, and one of the most respected voices in machine learning &amp;ndash; shared a thread of observations from a week of intensive Claude Code usage. The post received 911 upvotes on Hacker News and generated over 800 comments, making it one of the most substantive community discussions on AI-assisted development in the corpus.&lt;/p&gt;&#xA;&lt;p&gt;What made this discussion exceptional was not Karpathy&amp;rsquo;s observations alone, but the quality of the community response. His notes served as a catalyst for practitioners across the experience spectrum to articulate positions they had been forming through months of daily AI tool usage. The result is a uniquely rich snapshot of how the developer community was processing the AI-assisted coding transition in early 2026.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

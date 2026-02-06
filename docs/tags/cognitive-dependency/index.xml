@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cognitive-Dependency on AI Best Practices Knowledge Base</title>
+    <link>/tags/cognitive-dependency.html</link>
+    <description>Recent content in Cognitive-Dependency on AI Best Practices Knowledge Base</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/cognitive-dependency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cognitive Dependency: Are Developers Losing Their Edge?</title>
+      <link>/debates/brain-atrophy.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/debates/brain-atrophy.html</guid>
+      <description>&lt;h2 id=&#34;the-question&#34;&gt;The Question&lt;/h2&gt;&#xA;&lt;p&gt;Andrej Karpathy, one of the most prominent voices in AI, admitted that he can barely write C++ anymore after years of relying on AI assistants. For many developers, this confession crystallized a fear they had been quietly carrying: that the tools making them faster are simultaneously making them less capable.&lt;/p&gt;&#xA;&lt;p&gt;The atrophy question cuts deeper than the related debate about whether juniors can develop skills with AI assistance. This is about experienced developers &amp;ndash; people who already had hard-won expertise &amp;ndash; watching those abilities fade. It is the difference between never learning to navigate without GPS and being a former navigator who can no longer read a map. The loss feels more personal and more concrete.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

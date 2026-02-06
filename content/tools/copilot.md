@@ -49,4 +49,4 @@ Many practitioners use Copilot alongside an agentic tool. Copilot handles the mo
 
 If your team is evaluating whether to adopt AI coding tools, Copilot is often the lowest-risk starting point: cheap, broadly supported, and requiring no workflow changes. If your team already uses Copilot and wants more, the next step is typically adding an agentic tool for tasks that autocomplete cannot address.
 
-For the broader decision framework, see the [Practitioner's Tool Comparison](/references/tool-landscape.html).
+For the broader decision framework, see the [Practitioner's Tool Comparison](/tools/).

@@ -3,12 +3,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AGENTS.md Outperforms Skills in Our Agent Evals | AI Best Practices Knowledge Base</title>
-  <meta name="description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta name="description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
   <meta name="color-scheme" content="dark light">
 
   
   <meta property="og:title" content="AGENTS.md Outperforms Skills in Our Agent Evals">
-  <meta property="og:description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta property="og:description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
   <meta property="og:type" content="article">
 
   
@@ -37,14 +37,13 @@
       <span>AI Best Practices</span>
     </a>
     <div class="nav-links">
-      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
-      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
       <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
-      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
-      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
       <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
       <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
-      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
     </div>
     <div class="nav-actions">
       <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
@@ -114,7 +113,7 @@
 
   
 
-  <span class="meta-reading-time">3 min read</span>
+  <span class="meta-reading-time">24 min read</span>
 
   
   <span class="tier-badge tier-badge--1">Tier 1</span>
@@ -201,25 +200,493 @@
 <p>&ldquo;Don&rsquo;t wait for skill improvements; results matter now.&rdquo; — Vercel blog</p>
 </blockquote>
 <h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
-<p>The discussion generated 520 points and 70 comments. Key themes:</p>
-<p><strong>Debate over whether this is genuinely new</strong></p>
-<ul>
-<li><strong>thorum</strong>: Argued that AGENTS.md is actually a simplified instance of the same concept as skills — telling the AI where to find instructions is itself a skill, just better designed</li>
-<li><strong>jgbuddy</strong>: Pointed out that directly including context in a system prompt will obviously put it in context 100% of the time, questioning the novelty of the finding</li>
-<li><strong>EnPissant</strong>: Found the distinction confusing since skills also provide short descriptions up front, wondering what specifically makes the AGENTS.md approach different</li>
-</ul>
-<p><strong>Practical improvements and extensions</strong></p>
-<ul>
-<li><strong>chr15m</strong>: Suggested going further than AGENTS.md by creating a .context folder with symlinked relevant documentation from dependencies</li>
-<li><strong>verdverm</strong>: Shared experience that mirrors these findings — using AGENTS.md as a table of contents and putting compressed docs everywhere works best</li>
-<li><strong>meatcar</strong>: Proposed distributing documentation alongside libraries as a dev dependency, version-locked and accessible locally</li>
-</ul>
-<p><strong>Concerns about methodology and fragility</strong></p>
-<ul>
-<li><strong>motoboi</strong>: Argued models are text generators forced to produce tool-triggering text, so skill invocation failure reflects the mismatch between generation and tool use</li>
-<li><strong>jryan49</strong>: Questioned whether tests were run once or multiple times, noting LLM inconsistency makes single-run evaluations unreliable</li>
-<li><strong>rao-v</strong>: Predicted that smaller, cheaper models optimized for routing queries to the right context will soon make this debate moot</li>
-</ul>
+<p><em>158 comments total</em></p>
+<p><strong>motoboi</strong>: Models are not AGI. They are text generators forced to generate text in a way useful to trigger a harness that will produce effects, like editing files or calling tools. So the model won’t&hellip;</p>
+<blockquote>
+<p><strong>vidarh</strong>: &gt; AGENTS.md, on the other hand, is context. Models have been trained to follow context since the dawn of the thing. The skills frontmatter end up in context as well. If AGENTS.md outperform skills in&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>OJFord</strong>: No it&rsquo;s more than that - they didn&rsquo;t just put the skills instructions directly in AGENTS.md, they put the whole index for the docs (the skill in this case being a docs lookup) in there, so there&rsquo;s&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>vidarh</strong>: &gt; No it&rsquo;s more than that - they didn&rsquo;t just put the skills instructions directly in AGENTS.md, they put the whole index for the docs (the skill in this case being a docs lookup) in there, so there&rsquo;s&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>seunosewa</strong>: What if they used the same compressed documentation in the skill? That would be just fine too.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>js8</strong>: &gt; Models are not AGI. How do you know? What if AGI can be implemented as a reasonably small set of logic rules, which implement what we call &ldquo;epistemology&rdquo; and &ldquo;informal reasoning&rdquo;? And this set of&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>blueprint</strong>: It&rsquo;s very simple. The model itself doesn&rsquo;t know and can&rsquo;t verify it.  It knows that it doesn&rsquo;t know. Do you deny that? Or do you think that a general intelligence would be in the habit of lying to&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>js8</strong>: All I asked for was the OP to substantiate their claim that LLMs are not AGI. I am agnostic on that - either way seems plausible. I don&rsquo;t think there even is an agreed criterion of what AGI is&hellip;.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>coldtea</strong>: None of the above are even remotely epistemologically sound. &ldquo;Or do you think that a general intelligence would be in the habit of lying to people and concealing why?&rdquo; First, why couldn&rsquo;t it? &ldquo;At the&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>themoose8</strong>: Indeed, they&rsquo;re not AGI. They&rsquo;re basically autocomplete on steroids. They&rsquo;re very useful, but as we all know - they&rsquo;re far from infallible. We&rsquo;re probably plateauing on the improvement of the core&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>whattheheckheck</strong>: They haven&rsquo;t even released the full complete retrain on the entire corpus of what they have in the training data. They have billions of chats detailing precisely a high fidelity map of the inner&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>coldtea</strong>: &gt;Indeed, they&rsquo;re not AGI. They&rsquo;re basically autocomplete on steroids. This makes the assumption that AGI is not autocomplete of steroids, which even before LLMs was a very plausible suggested&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>baby</strong>: I was thinking about that these says and experimenting like so: a system prompt that asks the agent to load any skills that seem relevant early, and a user prompt that asks the agent to do that later&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>DanOpcode</strong>: What&rsquo;s RL?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jacobkg</strong>: Reinforcement Learning <a href="https://en.wikipedia.org/wiki/Reinforcement_learning">https://en.wikipedia.org/wiki/Reinforcement_learning</a></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>wahnfrieden</strong>: Reinforcement learning</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>bzGoRust</strong>: I completed agree with your point</p>
+</blockquote>
+<blockquote>
+<p><strong>anal_reactor</strong>: &gt; Models are not AGI <a href="https://en.wikipedia.org/wiki/GNU/Linux_naming_controversy">https://en.wikipedia.org/wiki/GNU/Linux_naming_controversy</a></p>
+</blockquote>
+<p><strong>tottenhm</strong>: &gt; In 56% of eval cases, the skill was never invoked. The agent had access to the documentation but didn&rsquo;t use it. The agent passes the Turing test&hellip;</p>
+<blockquote>
+<p><strong>cainxinth</strong>: Even AI doesn’t RTFM</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>seanhunter</strong>: I can see the future.  In a few years, HN will consist entirely of: 1) Bots posting “Show HN” of things they’ve vibecoded 2) Bots replying to those posts, 3) Bots asking whether the bots in #2 even&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>rglynn</strong>: In the future?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>joseda-hg</strong>: God dang it, Dang!</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>pylotlight</strong>: It learnt from the best</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>deadbabe</strong>: If humans would just RTFM they wouldn’t need AI.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>BiteCode_dev</strong>: You got me good with this one. But seriously, this is my main answer to people telling me AI is not reliable: &ldquo;guess what, most humans are not either, but at least I can tell AI to correct course and&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>gjadi</strong>: It&rsquo;s ego won&rsquo;t get in the way but it&rsquo;s lack of intelligence will. Whereas a junior might be reluctant at first, but if they are smart they will learn and get better. So maybe LLM are better than&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>falcor84</strong>: That&rsquo;s exactly the thing. Claude Code with Opus 4.5 is already significantly better at essentially everything than a large percentage of devs I had the displeasure of working with, including learning&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bonesss</strong>: Key differences, though: Humans are reliably unreliable.  Some are lazy, some sloppy, some obtuse, some all at once. As a tech lead you can learn their strengths and weaknesses.  LLMs vacillate&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>vidarh</strong>: You can absolutely learn LLMs strengths and weaknesses too. E.g. Claude gets &ldquo;bored&rdquo; easily (it will even tell you this if you give it too repetitive tasks). The solution is simple: Since we control&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>w10-1</strong>: The key finding is that &ldquo;compression&rdquo; of doc pointers works. It&rsquo;s barely readable to humans, but directly and efficiently relevant to LLM&rsquo;s (direct reference -&gt; referent, without language verbiage)&hellip;.</p>
+<blockquote>
+<p><strong>postalcoder</strong>: That&rsquo;s not the only useful takeaway. I found this to be true:   &gt; &ldquo;Explore project first, then invoke skill&rdquo; [produces better results than] &ldquo;You MUST invoke the skill&rdquo;. I recently tried to get&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Izkata</strong>: An idea: The first two are obviously written as second-person commands, but the third is ambiguous and could be interpreted as a first-person thought.  Have you tried the first two without the &ldquo;you&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>postalcoder</strong>: Solid intuition. Testing this on antigravity is a chore because I&rsquo;m not sure if I have to kill the background agent to force a refresh of the GEMINI.md file so I just did it anyway&hellip;.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>inadequatespace</strong>: Interesting. It&rsquo;s almost like models don&rsquo;t like being ordered around rudely with this &ldquo;must” language. Perhaps what they&rsquo;ve learned from training data is “must” often occurs in cases with bullshit&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>baby</strong>: ln -s</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>jcheng</strong>: Would’ve been perfectly readable and no larger if they had used newline instead of pipe.</p>
+</blockquote>
+<blockquote>
+<p><strong>ai-christianson</strong>: They say compressed&hellip; but isn&rsquo;t this just &ldquo;minified&rdquo;?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ethmarks</strong>: Minification is still a form of compression, it just leaves the file more readable than more powerful compression methods (such as ZIP archives).</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>throwaway314155</strong>: I&rsquo;d say minification/summarization is more like a lossy, semantic compression. This is only relevant to LLM&rsquo;s and doesn&rsquo;t really fit more classical notions of compression. Minification would&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>seunosewa</strong>: Most llms.txt are very similar to the compressed docs.</p>
+</blockquote>
+<p><strong>jgbuddy</strong>: Am I missing something here? Obviously directly including context in something like a system prompt will put it in context 100% of the time. You could just as easily take all of an agent&rsquo;s skills,&hellip;</p>
+<blockquote>
+<p><strong>jstummbillig</strong>: &gt; Obviously directly including context in something like a system prompt will put it in context 100% of the time. How do you suppose skills get announced to the model? It&rsquo;s all in the context in some&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>cortesoft</strong>: Isn&rsquo;t the difference that a skill means you just have to add the script name and explanation to the context instead of the entire script plus the explanation?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>majormajor</strong>: Their non-skill based &ldquo;compressed index&rdquo; is just similarly &ldquo;Each line maps a directory path to the doc files it contains&rdquo; but without &ldquo;skillification.&rdquo; They didn&rsquo;t load all those things into context&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>sevg</strong>: You could put the name and explanation in CLAUDE.md/AGENTS.md, plus the path to the rest of the skill that Claude can read if needed. That seems roughly equivalent to my unenlightened mind!</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>verdverm</strong>: I like to think about it this way, you want to put some high level, table of contents, sparknotes like stuff in the system prompt. This helps warm up the right pathways. In this, you also need to&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jmathai</strong>: Skills have frontmatter which includes a name and description. The description is what determines if the llm finds the skill useful for the task at hand. If your agent isn’t being used, it’s not as&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Spivak</strong>: Sure, but then you&rsquo;re playing a very annoying and boring game of model-whispering to specific versions of models that are ever changing as well as trying to hopefully get it to respond correctly with&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>observationist</strong>: This is one of the reasons the RLM methodology works so well. You have access to as much information as you want in the overall environment, but only the things relevant to the task at hand get put&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>judahmeek</strong>: &gt; only the things relevant to the task at hand get put into context for the current task And how do you guarantee that said relevant things actually get put into the context? OP is about the same&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>_the_inflator</strong>: I agree with you. I think Vercel mixes skills and context configuration up. So the whole evaluation is totally misleading because it tests for two completely different use cases. To sum it up: Vercel&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>verdverm</strong>: You aren&rsquo;t wrong, you really want a bit of both. 1. You absolutely want to force certain context in, no questions or non-determinism asked (index and sparknotes). This can be done conditionally, but&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>teknopaul</strong>: My reading was that copying the doc&rsquo;s ToC in markdown + links was significantly more effective than giving it a link to the ToC and instructions to read it. Which makes sense. &amp; some numbers that&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>singingbard</strong>: So you’re not missing anything if you use Claude by yourself. You just update your local system prompt. Instead it’s a problem when you’re part of a team and you’re using skills for standards like&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>orlandohohmeier</strong>: I’ve been using symlinked agent files for about a year as a hacky workaround before skils became a thing load additional “context” for different tasks, and it might actually address the issue you’re&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mbm</strong>: What sort of files do you generally symlink in?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>deaux</strong>: You&rsquo;re right, the results are completely as expected. The article also doesn&rsquo;t mention that they don&rsquo;t know how the compressed index output quality. That&rsquo;s always a concern with this kind of&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>TeeWEE</strong>: Indeed seems like Vercel completely missed the point about agents. In Claude Code you can invoke an agent when you want as a developer and it copies the file content as context in the prompt.</p>
+</blockquote>
+<p><strong>thorum</strong>: The article presents AGENTS.md as something distinct from Skills, but it is actually a simplified instance of the same concept. Their AGENTS.md approach tells the AI where to find instructions for&hellip;</p>
+<blockquote>
+<p><strong>verdverm</strong>: Yea, I am now separating them based on 1. Those I force into the system prompt using rules based systems and &ldquo;context&rdquo; 2. Those I let the agent lookup or discover I also limit what gets into message&hellip;</p>
+</blockquote>
+<p><strong>jryan49</strong>: Something that I always wonder with each blog post comparing different types of prompt engineering is did they run it once, or multiple times? LLMs are not consistent for the same task. I imagine&hellip;</p>
+<blockquote>
+<p><strong>only-one1701</strong>: This drives me absolutely crazy. Non-falsifiable and non-deterministic results. All of this stuff is (at best) anecdotes and vibes being presented as science and engineering.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bluGill</strong>: That is my experience.  Sometimes the LLM gives good results, sometimes it does something stupid. You tell it what to do, and like a stubborn 5 year old it ignores you - even after it tries it and&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>CuriouslyC</strong>: I always make a habit of doing a lot of duplicate runs when I benchmark for this reason. Joke&rsquo;s on me, in the time I spent doing 1 benchmark with real confidence intervals and getting no traction on&hellip;</p>
+</blockquote>
+<p><strong>EnPissant</strong>: This is confusing. TFA says they added an index to Agents.md that told the agent where to find all documentation and that was a big improvement. The part I don&rsquo;t understand is that this is exactly&hellip;</p>
+<blockquote>
+<p><strong>NitpickLawyer</strong>: The reported tables also don&rsquo;t match the screenshots. And their baselines and tests are too close to tell (judging by the screenshots not tables). 29/33 baseline, 31/33 skills, 32/33 skills + use&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>sally_glance</strong>: I also thought this is how skills work, but in practice I experienced similar issues. The agents I&rsquo;m using (Gemini CLI, Opencode, Claude) all seem to have trouble activating skills on their own&hellip;</p>
+</blockquote>
+<p><strong>chr15m</strong>: I&rsquo;m not sure if this is widely known but you can do a lot better even than AGENTS.md. Create a folder called .context and symlink anything in there that is relevant to the project. For example&hellip;</p>
+<blockquote>
+<p><strong>gbnwl</strong>: Cheaper? Loading every bit of documentation into context every time, regardless of whether it’s relevant to the task the agent is working on? How? I’d much rather call out the location of relevant&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>chr15m</strong>: As they point out in the article, that approach is fragile. Cheaper because it has the right context from the start instead of faffing about trying to find it, which uses tokens and ironically bloats&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>gbnwl</strong>: &gt; Extracting the most useful parts of documentation into a file Yes, and this file becomes: also documentation. I didn’t mean throw entire unabridged docs at it, I should’ve been more clear. All of&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>d3m0t3p</strong>: Yea but the goal it not to bloat the context space. Here you &ldquo;waste&rdquo; context by providing non usefull information. What they did instead is put an index of the documentation into the context, then&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>chr15m</strong>: The minification is a great idea. Will try this. Their approach is still agentic in the sense that the LLM must make a tool cool to load the particular doc in. The most efficient approach would be to&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bmitc</strong>: What does it mean to waste context?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>therealpygon</strong>: Context quite literally degrades performance of attention with size in non-needle-in-haystack lookups in almost every model to varying degrees. Thus to answer the question, the “waste” is making the&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bagels</strong>: The context window is finite. You can easily fill it with documentation and have no room left for the code and question you want to work on. It also means more tokens sent with every request,&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>PKop</strong>: Think of context switching when you yourself are programming. You can only hold some finite amount of concepts in your head at one time. If you have distractions, or try to focus on too many things&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>epolanski</strong>: Docs of dependencies aren&rsquo;t that much of a game changer. Multiple frameworks and libraries have been releasing llm.txt compressed versions of their docs from ages, and it doesn&rsquo;t make that much of a&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>TeeWEE</strong>: This is quite a bad idea. You need to control the size and quality of your context by giving it one file that is optimized. You don’t want to be burning tokens and large files will give diminishing&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>chr15m</strong>: It is not an &ldquo;idea&rdquo; but something I&rsquo;ve been doing for months and it works very well. YMMV. Yes, you should avoid large files and control the size and quality of your context.</p>
+</blockquote>
+</blockquote>
+<p><strong>verdverm</strong>: This largely mirrors my experience building my custom agent 1. Start from the Claude Code extracted instructions, they have many things like this in there. Their knowledge share in docs and blog on&hellip;</p>
+<blockquote>
+<p><strong>aktau</strong>: &gt; I changed read/write_file to put contents in the state and presented in the system prompt, same for the agents.md, now working on evals to show how much better this is, because anecdotally, it&hellip;</p>
+</blockquote>
+<p><strong>BenoitEssiambre</strong>: Wouldn&rsquo;t this have been more readable with a \n newline instead of a pipe operator as a seperator? This wouldn&rsquo;t have made the prompt longer.</p>
+<p><strong>denolfe</strong>: PreSession Hook from obra/superpowers injects this along with more logic for getting rid of rationalizing out of using skills: &gt; If you think there is even a 1% chance a skill might apply to what you&hellip;</p>
+<blockquote>
+<p><strong>stingraycharles</strong>: I always say “invoke your  skill to do X. then invoke your  skill to do Y. “ works pretty well</p>
+</blockquote>
+<p><strong>ares623</strong>: 2 months later: &ldquo;Anthropic introduces &lsquo;Claude Instincts&rsquo;&rdquo;</p>
+<p><strong>rao-v</strong>: In a month or three we’ll have the sensible approach, which is smaller cheaper fast models optimized for looking at a query and identifying which skills / context to provide in full to the main&hellip;</p>
+<blockquote>
+<p><strong>Calavar</strong>: I thought most of the major AI programming tools were already doing this. Isn&rsquo;t this what subagents are in Claude code?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>MillionOClock</strong>: I don&rsquo;t know about Claude Code but in GitHub Copilot as far as I can tell the subagents are just always the same model as the main one you are using. They also need to be started manually by the main&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jimmydoe</strong>: Copilot is garbage, even MSFT employees I know all use cc. The only thing useful is you can route cc to use models in copilot sub which corp had a deal from their m365</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>rao-v</strong>: Sub-agents are typically one of the major models but with a specific and limited context + prompt. I’m talking about a small fast model focused on purely curating the skills / MCPs / files to provide&hellip;</p>
+</blockquote>
+</blockquote>
+<p><strong>meatcar</strong>: What if instead of needing to run a codemod to cache per-lib docs locally, documentation could be distributed alongside a given lib, as a dev dependency, version locked, and accessible locally as&hellip;</p>
+<blockquote>
+<p><strong>tobyjsullivan</strong>: Sounds a bit like man pages. I think you’re onto something.</p>
+</blockquote>
+<p><strong>farhanhubble</strong>: So the root cause was the model&rsquo;s indisposition to calling the skills. That seems contrary to what we see with function calling. Models call functions quite reliably most of the time. This is more&hellip;</p>
+<p><strong>armcat</strong>: Firstly this is great work from Vercel - I am especially impressed with the evals setup (evals are the most undervalued component in any project IMO). Secondly the result is not surprising and I’ve&hellip;</p>
+<p><strong>thevinter</strong>: I&rsquo;m a bit confused by their claims. Or maybe I&rsquo;m misunderstanding how Skills should work. But from what I know (and the small experience I had with them), skills are meant to be specifications for&hellip;</p>
+<p><strong>micimize</strong>: Measuring in terms of KB is not quite as useful as it seems here IMO - this should be measured in terms of context tokens used. I ran their tool with an otherwise empty CLAUDE.md, and ran `claude&hellip;</p>
+<p><strong>holocen</strong>: Prompted and built a bit of an extension of skills.sh with <a href="https://passivecontext.dev">https://passivecontext.dev</a> it basically just takes the skill and creates that &ldquo;compressed&rdquo; index. Still have to install the skill and all&hellip;</p>
+<p><strong>wakeless</strong>: I did a similar set of evals myself utilising the baseline capabilities that Phoenix (elixir) ships with and then skillified them. Regularly the skills were not being loaded and thus not utilised&hellip;.</p>
+<p><strong>gpm</strong>: Compressing information in AGENTS.md makes a ton of sense, but why are they measuring their context in bytes and not tokens!?</p>
+<p><strong>psychoslave</strong>: Over the last week I went with a bigger dig on using agent mode et work, and my experiment align with this observation. The first thing that surprising to me is how much the default tuning are leaned&hellip;</p>
+<blockquote>
+<p><strong>hu3</strong>: That&rsquo;s my observation too. And I have been trying to improve the framework and abstractions/types to reduce the lines of code required for LLMs to create features in my web app. Did the LLM really&hellip;</p>
+</blockquote>
+<p><strong>underdeserver</strong>: I don&rsquo;t think you can really learn from this experiment unless you specify which models you used, if you tried it against at least 3 frontier models, if you ran each eval multiple times, and what&hellip;</p>
+<p><strong>msp26</strong>: This doesn&rsquo;t surprise me. I have a SKILL.md for marimo notebooks with instructions in the frontmatter to always read it before working with marimo files. But half the time Claude Code still doesn&rsquo;t&hellip;</p>
+<p><strong>bandrami</strong>: Blackbox oracles make bad workflows, and tend to produce a whole lot of cargo culting. It&rsquo;s this kind of opacity (why does the markdown outperform agents? there&rsquo;s no real way to find out, even with a&hellip;</p>
+<p><strong>pietz</strong>: Isn&rsquo;t it obvious that an agent will do better if he internalizes the knowledge on something instead of having the option to request it? Skills are new. Models haven&rsquo;t been trained on them yet. Give&hellip;</p>
+<blockquote>
+<p><strong>WA</strong>: Not so obvious, because the model still needs to look up the required doc. The article glances over this detail a little bit unfortunately. The model needs to decide when to use a skill, but doesn’t&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>velcrovan</strong>: Removing the skill does remove a level of indirection. It&rsquo;s a difference of &ldquo;choose whether or not to make use of a skill that would THEN attempt to find what you need in the docs&rdquo; vs. &ldquo;here&rsquo;s a list&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>sothatsit</strong>: I believe the skills would contain the documentation. It would have been nice for them to give more information on the granularity of the skills they created though.</p>
+</blockquote>
+</blockquote>
+<p><strong>farhanhubble</strong>: &gt; Before writing code, first explore the project structure,  then invoke the nextjs-doc skill for documentation. Does the model even understand what this line even means?</p>
+<p><strong>someguyiguess</strong>: The problem is that Agents.md is only read on initial load. Once context grows too large the agent will not reload the md file and loses / forgets the info from Agents.md.</p>
+<blockquote>
+<p><strong>taberiand</strong>: Other comments suggest that the Agents.md is read into the system prompt and never leaves the context. But it&rsquo;s better to avoid excessive context regardless</p>
+</blockquote>
+<blockquote>
+<p><strong>remify</strong>: That&rsquo;s the thing that bothers me here. They loaded the doc of course it will work but as your project grows you won&rsquo;t be able to put all your documentation in there (at least with current context&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>bushbaba</strong>: Why you try and avoid re using the same session beyond the initial task or two</p>
+</blockquote>
+<p><strong>smrtinsert</strong>: Are people running into mismatched code vs project a lot?  I&rsquo;ve worked on python and java codebases with claude code and have yet to run into a version mismatch issue.  I think maybe once it got&hellip;</p>
+<p><strong>smcleod</strong>: Sounds like they&rsquo;ve been using skills incorrectly if they&rsquo;re finding their agents don&rsquo;t invoke the skills. I have Claude Code agents calling my skills frequently, almost every session. You need to&hellip;</p>
+<blockquote>
+<p><strong>velcrovan</strong>: I think if you read it, their agents did invoke the skills and they did find ways to increase the agents&rsquo; use of skills quite a bit. But the new approach works 100% of the time as opposed to 79% of&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>joebates</strong>: It&rsquo;s still not always reliable. I have a skill in a project named &ldquo;determine-feature-directory&rdquo; with a short description explaining that it is meant to determine the feature directory of a current&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>JamesSwift</strong>: I have a couple skills invoked with specific commands (&rsquo;enter planning mode&rsquo; and &rsquo;enter execution mode&rsquo;) and they have never failed to activate. Maybe make the activation a very rigid phrase and not&hellip;</p>
+</blockquote>
+</blockquote>
+<p><strong>heliumtera</strong>: you are telling me that a markdown saying: <em>You are the Super Duper Database Master Administrator of the Galaxy</em> does not improve the model ability reason about databases?</p>
+<p><strong>robertheadley</strong>: I will have to look into this this weekend. Antigravity is my current favorite agentic IDE and I have been having problems getting it to explicitly follow my agent.md settings. If I remind it, it&hellip;</p>
+<blockquote>
+<p><strong>embedding-shape</strong>: I feel like all agents currently do better if you explicitly end with &ldquo;Remember to follow AGENTS.md&rdquo;, even if that&rsquo;s automatically injected into the context. Seems the same across all I&rsquo;m using.</p>
+</blockquote>
+<p><strong>epolanski</strong>: I&rsquo;m working on stuff in a similar space. I need to evaluate how do different project scaffolding impacts the results of Claude Code/Opencode (either with Anthropic models or third party) for agentic&hellip;</p>
+<p><strong>songodongo</strong>: &gt; When it needs specific information, it reads the relevant file from the .next-docs/ directory. I guess you need to make sure your file paths are self-explanatory and fairly unique, otherwise the&hellip;</p>
+<p><strong>hahahahhaah</strong>: Next.js sure makes a good benchmark for AI capability (and for clarity&hellip; this is not a compliment).</p>
+<p><strong>j45</strong>: Don&rsquo;t want to dither the topic, but could skills not just be sub agents in this contextualization? There is a lot of language floating around what effectively groups of text files put together in&hellip;</p>
+<p><strong>minimal_action</strong>: It&rsquo;s very interesting but presenting success rates without any measure of the error, or at least inline details about the number of iterations is unprofessional. Especially for small differences or&hellip;</p>
+<p><strong>whinvik</strong>: When we were trying to build our own agents we put quite a bit of effort on evals which was useful. But switching over to using coding agents we never did the same. Feels like building an eval set&hellip;</p>
+<p><strong>user3939382</strong>: I’m working on an AGI model that will make the discussion of skills look silly. Skills strikes in the right direction in some sense but it’s an extremely weak 1% echo of what’s actually needed to&hellip;</p>
+<p><strong>jascha_eng</strong>: This does not normalize for tokens used if their skill description was as large as the docs index and contained all the reasons the LLM might want to use the skill, it likely performs much better&hellip;</p>
+<p><strong>underlines</strong>: Oh got, this scales bad and bloats your context window! Just create an MCP server that does embedding retrieval or agentic retrieval with a sub agent on your framework docs. Finally add an&hellip;</p>
+<p><strong>aaroninsf</strong>: You will see another 14% bump in performance if you include in the first 16 lines of the README.md in the project, &ldquo;Coding agents and LLM, see AGENTS.md&rdquo;</p>
+<p><strong>xnx</strong>: Agents.md, skills, MCP, tools, etc. There&rsquo;s going to be a lot of areas explored that may yield no/negative benefit over the fundamentals of a clear prompt.</p>
+<p><strong>guluarte</strong>: In my experience, agents only follow the first two or three lines of AGENTS.md + message. As the context grows, they start following random rules and ignoring others.</p>
+<p><strong>sghiassy</strong>: N00b Question - how do you measure performance for AI agents like the way they did in this article? Are there frameworks to support this type of work?</p>
+<p><strong>sheepscreek</strong>: It seems their tests rely on Claude alone. It’s not safe to assume that Codex or Gemini will behave the same way as Claude. I use all three and each has its own idiosyncrasies.</p>
+<blockquote>
+<p><strong>verdverm</strong>: I&rsquo;ve done very similar things with my custom agent that uses Gemini and have gotten very similar results. Working on the evals to back that claim up</p>
+</blockquote>
+<p><strong>rohitghumare</strong>: That&rsquo;s why <a href="https://agenstskills.com">https://agenstskills.com</a> validate every skills</p>
+<p><strong>ChrisArchitect</strong>: Title is: AGENTS.md outperforms skills in our agent evals</p>
+<p><strong>tanishqkanc</strong>: this is only gonna be an issue until the next gen models where the labs will aggressively post train the models to proactively call skills</p>
+<p><strong>onnimonni</strong>: Would someone know if their eval tests are open source and where I could find them? Seems useful for iterating on Claude Code behaviour.</p>
+<blockquote>
+<p><strong>JamesSwift</strong>: I also was looking for specific info on the evals, because I wanted to see if they were separately confirming that shoving the skills into the main context didnt degrade the non-skills evals. Thats&hellip;</p>
+</blockquote>
+<p><strong>keeganpoppen</strong>: i dont know why, but this just feels like the most shallow “i compare llms based on the specs” kind of analysis you can get… it has extreme “we couldn’t get the llm to intuit what we wanted to do, so&hellip;</p>
+<p><strong>tdiff</strong>: Is not that model-dependant? Skimmed through, but did not find which model the tests were run with.</p>
+<p><strong>sothatsit</strong>: This seems like an issue that will be fixed in newer model releases that are better trained to use skills.</p>
+<p><strong>AndyNemmity</strong>: My experience agrees with this. Which is why I use a skill that is a command, that routes requests to agents and skills.</p>
+<p><strong>rcarmo</strong>: Everything outperforms skills if the system prompt doesn’t prioritize them. No news here.</p>
+<p><strong>carterschonwald</strong>: static linking va dynamic but we dont know the actual config and setup. and also the choice of totally changes the problem</p>
+<p><strong>shinhyeok</strong>: But aren&rsquo;t you guys released skills.sh?</p>
+<p><strong>killerstorm</strong>: inb4 people re-discover RAG, re-branding it as a parallel speculative data lookup</p>
+<p><strong>CjHuber</strong>: That feels like a stupid article. well of course if you have one single thing you want to optimize putting it into AGENTS.md is better. but the advantage of skills is exactly that you don&rsquo;t cram them&hellip;</p>
+<p><strong>meeech</strong>: question: anyone recognize that eval UI or is it something they made in-house?</p>
+<p><strong>thighbaugh</strong>: &gt; [Specifically Crafted Instructions For Working With A Specific Repository] outperforms [More General Instructions] in our agent evals &mdash;&mdash;&gt; Captain Obvious Strikes Again! &lt;&mdash;&mdash;&mdash;- See the rest&hellip;</p>
+<p><strong>thom</strong>: You need the model to interpret documentation as policy you care about (in which case it will pay attention) rather than as something it can look up if it doesn’t know something (which it will never&hellip;</p>
+<p><strong>delduca</strong>: Ah nice… vercel is vibecoded</p>
+<blockquote>
+<p><strong>heliumtera</strong>: web people opted into react, dude. that says a lot. they used prisma to handle their database interactions. they preached tRPC and screamed TYPE SAFETY!!! you really think these guys will ever again&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>dca88</strong>: This. I read this article and it pains me to see the amount of manpower put into doing anything but actually getting work done.</p>
+</blockquote>
+</blockquote>
 
       </div>
 
@@ -264,30 +731,29 @@
   <div class="footer-container">
     <div class="footer-brand">
       <span class="footer-logo">AI Best Practices</span>
-      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
     </div>
     <div class="footer-nav">
       <div class="footer-section">
         <h3>Learn</h3>
         <ul>
-          <li><a href="../start-here/index.html">Start Here</a></li>
-          <li><a href="../skills/index.html">Skills</a></li>
-          <li><a href="../workflows/index.html">Workflows</a></li>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Explore</h3>
         <ul>
           <li><a href="../tools/index.html">Tools</a></li>
-          <li><a href="../landscape/index.html">Landscape</a></li>
           <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
           <li><a href="../sources/index.html">Sources</a></li>
-          <li><a href="../tags/">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
     </div>
   </div>
 </footer>

@@ -9,7 +9,7 @@
       {{ if .Description }}
         {{ .Description }}
       {{ else }}
-        {{ .Summary | truncate 120 }}
+        {{ .Summary | plainify | htmlUnescape | replaceRE "^Summary\\s*" "" | truncate 120 }}
       {{ end }}
     </p>
     <div class="card-meta">

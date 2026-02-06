@@ -9,11 +9,25 @@
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/tooling/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Harness Engineering</title>
+      <link>/practices/harness-engineering.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/practices/harness-engineering.html</guid>
+      <description>&lt;p&gt;Harness engineering is the practice of building persistent infrastructure that constrains and guides AI agents across sessions. It is the highest-leverage investment in AI-assisted development because it compounds: every mistake you document is a mistake that never recurs, every custom tool you build saves time in every future session, and every test harness you configure raises the floor on output quality.&lt;/p&gt;&#xA;&lt;p&gt;The harness is the answer to the fundamental limitation of current AI agents: they are stateless. Each session starts fresh with no memory of corrections, preferences, or past failures. The harness is the only mechanism that carries knowledge forward.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>The MCP Ecosystem</title>
       <link>/tools/mcp-ecosystem.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tools/mcp-ecosystem.html</guid>
       <description>&lt;p&gt;Model Context Protocol (MCP) is an open standard introduced by Anthropic for connecting AI agents to external tools and data sources. It defines a structured interface through which an agent can discover, invoke, and receive results from tools &amp;ndash; databases, APIs, file systems, cloud services, and more &amp;ndash; without custom integration code for each one.&lt;/p&gt;&#xA;&lt;p&gt;MCP matters because it addresses a fundamental problem in the AI tooling landscape: every agent-tool integration was previously bespoke. If you wanted Claude Code to interact with your Terraform infrastructure, or Cursor to query your Postgres database, each combination required its own glue code. MCP standardizes this interface so that a tool built for one agent can work with any MCP-compatible agent.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Which Programming Languages Work Best with AI?</title>
+      <link>/debates/language-matters.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/debates/language-matters.html</guid>
+      <description>&lt;h2 id=&#34;the-question&#34;&gt;The Question&lt;/h2&gt;&#xA;&lt;p&gt;When developers adopt AI coding tools, they quickly discover that results vary by programming language. Python and TypeScript seem to get the best outputs. Rust and Go produce code that at least compiles. C++ and niche languages often yield frustrating results. But is this a fundamental property of the languages, a reflection of training data distribution, or something that will be optimized away as models improve?&lt;/p&gt;&#xA;&lt;p&gt;The question matters because language choice has long-term consequences. Teams choosing a technology stack in 2026 must consider not only the traditional factors &amp;ndash; performance, ecosystem, hiring &amp;ndash; but also how well their chosen language works with the AI tools that are rapidly becoming essential to developer productivity. If language choice determines a 2x or 5x difference in AI-assisted productivity, that factor could outweigh nearly everything else.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

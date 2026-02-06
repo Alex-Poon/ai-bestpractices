@@ -3,12 +3,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Claude Code&#39;s New Hidden Feature: Swarms | AI Best Practices Knowledge Base</title>
-  <meta name="description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta name="description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
   <meta name="color-scheme" content="dark light">
 
   
   <meta property="og:title" content="Claude Code&#39;s New Hidden Feature: Swarms">
-  <meta property="og:description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta property="og:description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
   <meta property="og:type" content="article">
 
   
@@ -37,14 +37,13 @@
       <span>AI Best Practices</span>
     </a>
     <div class="nav-links">
-      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
-      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
       <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
-      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
-      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
       <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
       <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
-      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
     </div>
     <div class="nav-actions">
       <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
@@ -101,7 +100,7 @@
 
 
 
-  <div class="article-layout">
+  <div class="article-layout has-toc">
     <article class="article">
       <header class="article-header">
         <h1 class="article-title">Claude Code&#39;s New Hidden Feature: Swarms</h1>
@@ -114,7 +113,7 @@
 
   
 
-  <span class="meta-reading-time">3 min read</span>
+  <span class="meta-reading-time">36 min read</span>
 
   
   <span class="tier-badge tier-badge--1">Tier 1</span>
@@ -194,24 +193,1049 @@
 <p>&ldquo;Native multi-agent orchestration with TeammateTool&rdquo; — claude-sneakpeek docs</p>
 </blockquote>
 <h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
-<p>The discussion generated 521 points and 47 comments. Key themes:</p>
-<p><strong>Skepticism about multi-agent value</strong></p>
-<ul>
-<li><strong>czhu12</strong>: Expressed concern that swarms generate copious code that becomes harder to review, undermining quality assurance</li>
-<li><strong>replwoacause</strong>: Preferred working with a single agent through its CLI where progress can be followed and understood, seeing little upside to swarms</li>
-<li><strong>daxfohl</strong>: Wanted better quality code rather than more code, and more proactive human feedback before agents go off the rails</li>
-</ul>
-<p><strong>Practical experiences with sub-agents</strong></p>
-<ul>
-<li><strong>mafriese</strong>: Reported getting the best code quality by running a full &ldquo;project team&rdquo; of sub-agents managed by a single Opus instance, though at roughly 10x the cost</li>
-<li><strong>joshribakoff</strong>: Argued this is simply built-in sub-agents and that you do not need massive external orchestration frameworks — just tell Claude to work in parallel</li>
-</ul>
-<p><strong>Concerns about token economics</strong></p>
-<ul>
-<li><strong>nehalem</strong>: Suggested swarms answer the question of how to sell more tokens per customer while maintaining results</li>
-<li><strong>lysace</strong>: Already burning through enough tokens with one worker and producing more code than can be maintained</li>
-<li><strong>joshuaisaact</strong>: Characterized the swarm paradigm as function scoping and memory management cosplaying as an org chart</li>
-</ul>
+<p><em>260 comments total</em></p>
+<p><strong>mafriese</strong>: Ok it might sound crazy but I actually got the best quality of code (completely ignoring that the cost is likely 10x more) by having a full “project team” using opencode with multiple sub agents wh&hellip;</p>
+<blockquote>
+<p><strong>alphazard</strong>: Every time I read something like this, it strikes me as an attempt to convince people that various people-management memes are still going to be relevant moving forward. Or even that they currently&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>rlayton2</strong>: My understanding is that the main reason splitting up work is effective is context management. For instance, if an agent only has to be concerned with one task, its context can be massively reduced&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>fphhotchips</strong>: Which, ultimately, is not such a big difference to the reason we split up work for humans, either. Human job specialization is just context management over the course of 30 years.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>purplepatrick</strong>: I’ve found that task isolation, rather than preserving your current session’s context budget, is where subagents shine. In other words, when I have a task that specifically should not have project &hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>XenophileJKO</strong>: So two things.. Yes this helps with context and is a primary reason to break out the sub-agents. However one of the bigger things is by having a focus on a specific task or a role, you force the LL&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>simondotau</strong>: I suppose it’s could end up being an LLM variant of Conway’s Law. “Organizations are constrained to produce designs which are copies of the communication structures of these organizations.” https:/&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>_kb</strong>: If so, one benefit is you can quickly and safely mix up your set of agents (a la Inverse Conway Manoeuvre) without the downsides that normally entails (people being forced to move teams or change h&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>miki123211</strong>: I think it&rsquo;s just the opposite, as LLMs feed on human language. &ldquo;You are a scrum master.&rdquo; Automatically encodes most of what the LLM needs to know. Trying to describe the same role in a prompt woul&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>joshuaisaact</strong>: This has been pretty comprehensively disproven: <a href="https://arxiv.org/abs/2311.10054">https://arxiv.org/abs/2311.10054</a> Key findings: -Tested 162 personas across 6 types of interpersonal relationships and 8 domains of expertise, with 4 &hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ttoinou</strong>: Developers do want managers actually, to simplify their daily lives. Otherwise they would self manage themselves better and keep more of the share of revenues for them</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>shermantanktop</strong>: Unfortunately some managers get lonely and want a friendly face in their org meetings, or can’t answer any technical questions, or aren’t actually tracking what their team is doing. And so they pul&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ljm</strong>: It shows me that there doesn’t appear to be an escape from Conway’s Law, even when you replace the people in an organisation with machines. Fundamentally, the problem is still being explored from t&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>generallyjosh</strong>: I do think there is some actual value in telling an LLM &ldquo;you are an expert code reviewer&rdquo;. You really do tend to get better results in the output When you think about what an LLM is, it makes more &hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>zhenyakovalyov</strong>: i guess, as a human it’s easier to reason about a multi-agent system when the roles are split intuitively, as we all have mental models. but i agree - it’s a bit redundant/unnecessary</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>AlexErrant</strong>: For those ignorant, CAB is Change-advisory board <a href="https://en.wikipedia.org/wiki/Change-advisory_board">https://en.wikipedia.org/wiki/Change-advisory_board</a></p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>rafaelmdec</strong>: Thank you for the link and the compliment.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>sathish316</strong>: Subagent orchestration without the overhead of frameworks like Gastown is genuinely exciting to see. I’ve recorded several long-running demos of Pied-Piper, which is a Subagents orchestration syste&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>vercaemert</strong>: Personally, I&rsquo;m fascinated by the opening for protocol languages to become relevant. The previous generations of AI (AI in the academic sense) like JASON, when combined with a protocol language lik&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>juanre</strong>: I have been using a simpler version of this pattern, with a coordinator and several more or less specialized agents (eg, backend, frontend, db expert). It really works, but I think that the key is &hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>big-guy23</strong>: Share your code of the “actual best quality “ or this is just another meaningless and suspicious attempt to get users to put the already expensive AI in a for-loop to make it even more expensive</p>
+</blockquote>
+<blockquote>
+<p><strong>kaspermarstal</strong>: Can you share technical details please? How is this implemented? Is it pure prompt-based, plugins, or do you have like script that repeatedly calls the agents? Where does the kanban live?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mogili1</strong>: Not the OP, but this is how I manage my coding agent loops: I built a drag and drop UI tool that sets up a sequence of agent steps (Claude code or codex) and have created different workflows based &hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>kaspermarstal</strong>: Cool, thanks for sharing!</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>taspeotis</strong>: This sounds like BMAD? <a href="https://github.com/bmad-code-org/BMAD-METHOD">https://github.com/bmad-code-org/BMAD-METHOD</a></p>
+</blockquote>
+<blockquote>
+<p><strong>paulnovacovici</strong>: I’ve been messing around with the BMAD process as well which seems like a simpler workflow than you described. My only concern is that it’s able to get 90% of the way there for productionized ready&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>JasperBekkers</strong>: This is genuinely cool, the CAB rejecting implementations must be hilarious to watch in action. The Kanban + Git worktree isolation is smart for keeping agents from stepping on each other. I&rsquo;ve bee&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>DanOpcode</strong>: Very cool! A couple of questions: 1. Are you using a Claude Code subscription? Or are you using the Claude API? I&rsquo;m a bit scared to use the subscription in OpenCode due to Anthropic&rsquo;s ToS change. 2&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>porker</strong>: &gt; due to Anthropic&rsquo;s ToS change. Not a change, but enforcing terms that have been there all the time.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>ComplexSystems</strong>: How much does this setup cost? I don&rsquo;t think a regular Claude Max subscription makes this possible.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>amelius</strong>: Can&rsquo;t you just use time-sharing and let the entire task run over night?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>potamic</strong>: Could you share some details? How many lines of code? How much time did it take, and how much did it cost?</p>
+</blockquote>
+<blockquote>
+<p><strong>karmasimida</strong>: You might as well just have planner and workers, or your architecture essentially echos to such structure. It is difficult to discern how semantics can drive to different behavior amongst those rol&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>alexwrboulter</strong>: This now makes me think that the only way to get AI to work well enough to actually actually replace programmers will probably be paying so much for compute that it&rsquo;s less expensive to just have a &hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>RestartKernel</strong>: What are the costs looking like to run this? I wonder whether you would be able to use this approach within a mixture-of-experts model trained end-to-end in ensemble. That might take out some guess&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>fortedoesnthack</strong>: I was getting good results with a similar flow but was using claude max with ChatGPT. unfortunately not an option available to me anymore unless either I or my company wants to foot the bill.</p>
+</blockquote>
+<blockquote>
+<p><strong>ceroxylon</strong>: What are you building with the code you are generating?</p>
+</blockquote>
+<blockquote>
+<p><strong><em>alex</em></strong>: Interesting that your impl agents are not opus. I guess having the more rigorous spec pipeline helps scope it to something sonnet can knock out.</p>
+</blockquote>
+<blockquote>
+<p><strong>tommica</strong>: Is it just multiple opencode instances inside tmux panels or how do you run your setup?</p>
+</blockquote>
+<blockquote>
+<p><strong>5Qn8mNbc2FNCiVV</strong>: Do you mind sharing the prompts? Would be greatly appreciated</p>
+</blockquote>
+<blockquote>
+<p><strong>ggoo</strong>: Is this satire?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mafriese</strong>: Nope it isn’t. I did it as a joke initially (I also had a version where every 2 stories there was a meeting and if a someone underperformed it would get fired). I think there are multiple reasons w&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ggoo</strong>: Thanks for clarifying - I think some of the wording was throwing me off. What a wild time we are in!</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>stavros</strong>: What OpenCode primitive did you use to implement this? I&rsquo;d quite like a &ldquo;senior&rdquo; Opus agent that lays out a plan, a &ldquo;junior&rdquo; Sonnet that does the work, and a senior Opus reviewer to check that it a&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>overfeed</strong>: &gt; [&hellip;]coding agents only get the information they actually need and nothing more Extrapolating from this concept led me to a hot-take I haven&rsquo;t had time to blog about: Agentic AI will revive the p&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>imiric</strong>: Isn&rsquo;t all this a manual implementation of prompt routing, and, to a lesser extent, Mixture of Experts? These tools and services are already expected to do the best job for specific prompts. The wor&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>nobody_r_knows</strong>: I&rsquo;m confused when you say you have a manager, scrum master, archetech, all supposdely sharing the same memory, do each of those &ldquo;employees&rdquo; &ldquo;know&rdquo; what they are? And if so, based on what are their &hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>simultsop</strong>: quite a storyteller</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>GoatInGrey</strong>: It&rsquo;s not satire but I see where you&rsquo;re coming from. Applying distributed human team concepts to a porting task squeezes extra performance from LLMs much further up the diminishing returns curve. Th&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>vidarh</strong>: I don&rsquo;t know about something this complex, but right this moment I have something similar running in Claude Code in another window, and it is very helpful even with a much simpler setup: If you hav&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>SkyPuncher</strong>: Doubt it. I use a similar setup from time to time. You need to have different skills at different times. This type of setup helps break those skills out.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>hereme888</strong>: why would it be? It&rsquo;s a creative setup.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ggoo</strong>: I just actually can&rsquo;t tell, it reads like satire to me.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>thaynt</strong>: I think many people really like the gamification and complex role playing. That is how GitHub got popular, that is how Rube Goldberg agent/swarm/cult setups get popular. It attracts the gamers and &hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>krackers</strong>: I&rsquo;ve heard some people say that &ldquo;vibe coding&rdquo; with chatbots is like slot machines, you just keep &ldquo;propmting&rdquo; until you hit the jackpot. And there was some earlier study that people <em>felt</em> more prod&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>theonething</strong>: I don&rsquo;t think so.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>tehlike</strong>: You probably implemented gastown.</p>
+</blockquote>
+<blockquote>
+<p><strong>raffraffraff</strong>: The next stage in all of this shit is to turn what you have into a service. What&rsquo;s the phrase? I don&rsquo;t want to talk to the monkey, I want to talk to the organ grinder. So when you kick things off i&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>justmedep</strong>: Scrum masters typically do not assign tickets.</p>
+</blockquote>
+<blockquote>
+<p><strong>heliumtera</strong>: Congratulations on coming up with the cringiest thing I have ever seen. Nothing will top this, ever. Corporate has to die</p>
+</blockquote>
+<p><strong>joshribakoff</strong>: This is just sub agents, built into Claude. You don’t need 300,000 line tmux abstractions written in go. You just tell Claude to do work in parallel with background sub agents. It helps to have a f&hellip;</p>
+<blockquote>
+<p><strong>skippyboxedhero</strong>: It isn&rsquo;t sub agents. The gap with existing tooling is that the abstraction is over a task rather than a conversation (due to the issue with third-party apps, Claude Code has been inherently limited&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>vidarh</strong>: It isn&rsquo;t &ldquo;just&rdquo; sub agents, but you can achieve most of this just with a few agents that take on generic roles, and a skill or command that just tells claude to orchestrate those agents, and a CLAU&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>skippyboxedhero</strong>: Right, but the model is still: you tell the AI what to do, this is the AI tells other AIs what to do. The context makes a huge difference because it has to be able to run autonomously. It is possib&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>adastra22</strong>: &gt; Claude Code has been inherently limited to conversations How so? I’ve been using “claude -p” for a while now. But even within an interactive session, an agent call out is non-interactive. It oper&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>skippyboxedhero</strong>: Because of OAuth. If they gave people API keys then no-one buys their ludicrously priced API product (I assume their strategy is to subsidise their consumer product with the business product). You &hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>stingraycharles</strong>: It’s even less of a feature, Claude Code already has subagents; this new feature just ensures Claude Code actually uses this for implementation. imho the plans of Claude Code are not detailed enoug&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ctoth</strong>: I agree with this. Any time I make a plan I have to go back and fill it in, fill it in, what did we miss, tdd, yada yada. And yes, I have all this stuff in CLAUDE.md. You start to get a sense for w&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>tobyjsullivan</strong>: It’s moving fast. Just today I noticed Claude Code now ends plans with a reference to the entire prior conversation (as a .jsonl file on disk) with instructions to check that for more details. Not &hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>dceddia</strong>: Interesting about the level of detail. I’ve noticed that myself but I haven’t done much to address it yet. I can imagine some ideas (ask it for more detail, ask it to make a smaller plan and add de&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>stingraycharles</strong>: I’m trying to solve this myself by implementing a whole planner workflow at <a href="https://github.com/solatis/claude-config">https://github.com/solatis/claude-config</a> Effectively it tries to resolve all ambiguities by making all decisions explicit&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>colelyman</strong>: I have had good success with the plans generated by <a href="https://github.com/obra/superpowers">https://github.com/obra/superpowers</a> I also really like the Socratic method it uses to create the plans.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>vardalab</strong>: I iterate around issues. I have a skill to launch a new tmux window for worktree with Claude in one pane and Codex in another pane with instructions on which issue to work on, Claude has instructio&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>chickensong</strong>: &gt; the plans of Claude Code are not detailed enough You can make a template and tell Claude to make a plan that follows the template.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>AffableSpatula</strong>: Claude already had subagents. This is a new mode for the main agent to be in (bespoke context oriented to delegation), combined with a team-oriented task system and a mailbox system for subagents t&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>theturtletalks</strong>: Wow there goes a lot of harnesses out the window. The main limitation of subagents was they couldn’t communicate back and forth with the main agent. How do we invoke swarm mode in Claude Code?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>apsurd</strong>: OT: Your visual on &ldquo;stacked PRs&rdquo; instantly made me understand what a stacked PR is. Thank you! I had read about them before but for whatever reason it never clicked. Turns out I already work like t&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>abhinavg</strong>: If you’re interested in exploring tooling around stacked PRs, I wrote git-spice (<a href="https://abhinav.github.io/git-spice/">https://abhinav.github.io/git-spice/</a>) a while ago. It’s free and open-source, no strings attached.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Griffinsauce</strong>: If you&rsquo;re rebasing a lot, definitely set up rerere (reuse recorded solution) - it improves things enormously. Do make sure you know how to reset the cache, in case you did a bad conflict resolution&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>byproxy</strong>: Isn’t this just “Gitflow”? <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/">https://www.atlassian.com/git/tutorials/comparing-workflows/</a>&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>apsurd</strong>: After a quick read it seems like gitflow is intended to model a release cycle. It uses branches to coordinate and log releases. Stacking is meant to make development of non-trivial features more ma&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>withinboredom</strong>: Please don’t use git-flow. Every time I see it, it looks like an over-engineer’s wet dream.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>mkw5053</strong>: Yeah, since they introduced (possibly async) subagents, I&rsquo;ve had my main claude instance act as a manager overseeing implementation agents, keeping it&rsquo;s context clean, and ensuring everything goes &hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>AffableSpatula</strong>: yep this is exactly how I use the main agent too, I explicitly instruct to only ever use background async subagents. Not enough people understand that the claude code harness is event driven now an&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>bradgessler</strong>: Any recommendations on sandboxing agents? Last time I asked folks recommended docker.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ahstilde</strong>: <a href="https://github.com/finbarr/yolobox/">https://github.com/finbarr/yolobox/</a></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>skybrian</strong>: I like running remotely using exe.dev with SyncThing to sync files to my laptop. I use Shelley (their web-based agent) but they have Claude Code installed too.</p>
+</blockquote>
+</blockquote>
+<p><strong>daxfohl</strong>: I want it to generate better code but less of it, and be more proactive about getting human feedback before it starts going off the rails. This sounds like an inexorable push in the opposite direct&hellip;</p>
+<blockquote>
+<p><strong>mtalantikite</strong>: Agreed, I&rsquo;m constantly coming back to a Claude tmux pane just to see it&rsquo;s decided to do something completely ridiculous. Just the other day I was having it add some test coverage stats to CI runs a&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>spondyl</strong>: &gt; it was basically trying to reinvent Istanbul in a bash script because the nyc tool wasn&rsquo;t installed in CI For the first part of this comment, I thought &ldquo;trying to reinvent Istanbul in a bash scri&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>xyzsparetimexyz</strong>: If only Rome could be built in a day..</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>sothatsit</strong>: They haven’t released this feature, so maybe they know the models aren’t good enough yet. I also think it’s interesting to see Anthropic continue to experiment at the edge of what models are capabl&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>daxfohl</strong>: True, though even then I kind of wonder what&rsquo;s the point. Once they build an AI that&rsquo;s as good as a human coder but 1000x faster, parallelization no longer buys you anything. Writing and deploying &hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>sothatsit</strong>: Each agent having their own fresh context window for each task is probably alone a good way to improve quality. And then I can imagine agents reviewing each others work might work to improve qualit&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>nojs</strong>: It’s more about context management, not speed</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>lupire</strong>: All you have to do is set up an MCP that routes to a human on the backend, and you d got an AI that asks for human feedback. Antigravity and others already ask for human feedback on their plans.</p>
+</blockquote>
+<p><strong>birken</strong>: I&rsquo;d really like to see a regular poll on HN that keeps track of which AI coding agents are the most popular among this community, like the TIOBE Index for programming languages. Hard to keep up wit&hellip;</p>
+<blockquote>
+<p><strong>samsolomon</strong>: Not this community&rsquo;s opinion on agents, but I&rsquo;ve found it helpful to check the lmarena leaderboards occasionally. Your comment prompted me to take a look for the first time in a while. Kind of surp&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>7777777phil</strong>: I just started something like that, haven’t shared it widely yet, but here we go - happy if you participate: <a href="https://agentic-coding-survey.pages.dev/">https://agentic-coding-survey.pages.dev/</a></p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>danjl</strong>: Add vscode. Add a list of models, since many tools allow you to select which model you use.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>7777777phil</strong>: Thanks for the feedback. I thought there are just too many models and versions to list them all. For now, if you select &ldquo;other&rdquo; you get a text field to add any model not listed, hope this helps.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>hmottestad</strong>: You should add OpenAI Codex CLI.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>7777777phil</strong>: Thanks for the feedback, I&rsquo;ll do that. For now, if you select &ldquo;other&rdquo; you get a text field to add any model not listed..</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Kerrick</strong>: Any chance you&rsquo;ll add Antigravity and Jetbrains Junie? I&rsquo;ve been using almost nothing but those for the last month. Antigravity at home, Junie at work.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>7777777phil</strong>: Done, upon popular demand I added Antigravity, Codex CLI, and Junie</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>mudkipdev</strong>: Just pick your favorite one and stick with it. There is no point in keeping up, since we&rsquo;re in an endless cycle of hype where is one ranked higher than the other, with them eventually catching up t&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>simoncion</strong>: &gt; &hellip;like the TIOBE Index for programming languages. Why would you want a list with such godawful methodology? Here&rsquo;s [0] what the TIOBE folks have to say about their data analysis process: Since t&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>nikcub</strong>: I have an agent skill that is currently in the top 10 or so of the skills.sh directory - in terms of that audience, it&rsquo;s about 80% claude code. Also 75% darwin-arm64</p>
+</blockquote>
+<blockquote>
+<p><strong>morley</strong>: I personally don&rsquo;t want to trawl through Twitter to find the current state-of-the-art, so I read Zvi Mowshowitz&rsquo;s newsletter: <a href="https://thezvi.substack.com/">https://thezvi.substack.com/</a> His newsletter put me onto using Opus 4.5 &hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>xyzsparetimexyz</strong>: Christ, the latest post is about dating and uses an ai generated wojak meme..</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>ramoz</strong>: When all of industry is trying to catch up with the features of one coding agent - it may be a signal to just use that one.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>anhner</strong>: Sure, let&rsquo;s all ditch linux and macOS as well since they&rsquo;re not the most popular&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>fragmede</strong>: Question is, are people on HN procrastinating and commenting here because the agent isn&rsquo;t very good and they&rsquo;re avoiding having to write the code themselves, or is the agent so good that it&rsquo;s off w&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>thevinter</strong>: You&rsquo;re making it sound like before agents existed HN was a ghost town because everyone was too busy building ImportantThingTM by hand</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>fragmede</strong>: Oh. Surely you know this forum didn&rsquo;t exist pre-ChatGPT. Everything in the archives was generated so it just looks that way.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>nonethewiser</strong>: &gt;Question is, are people on HN procrastinating and commenting here because the agent isn&rsquo;t very good and they&rsquo;re avoiding having to write the code themselves Can you help me envision what you&rsquo;re sa&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>fragmede</strong>: I&rsquo;m saying if it&rsquo;s that bad, then it&rsquo;s pure procrastination</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>g947o</strong>: People have been procrastinating on HN since the beginning of time, before coding agents existed.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>fragmede</strong>: Correct me if I&rsquo;m wrong, but before ChatGPT, there was fewer comments about vibecoding.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>coldtea</strong>: &gt;You&rsquo;re not talking to an AI coder anymore. You&rsquo;re talking to a team lead. The lead doesn&rsquo;t write code - it plans, delegates, and synthesizes. They couldn&rsquo;t even be bothered to write the Tweet them&hellip;</p>
+<blockquote>
+<p><strong>mrtesthah</strong>: isn’t it interesting how often this rhetorical construction is overused by AI?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>TeMPOraL</strong>: Partly because it&rsquo;s a good construct. Most people&rsquo;s writing is garbage compared to what LLMs output by default. But the other part of it is, each conversation you have, and each piece of AI output &hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mrtesthah</strong>: &gt;But the other part of it is, each conversation you have, and each piece of AI output you read online, is written by LLM instance that has no memory of prior conversations, so it doesn&rsquo;t know that,&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bangaladore</strong>: Very much so. It feels like it can&rsquo;t have been that common in the original training corpus. Probably more common now given that we are training slop generators with slop.</p>
+</blockquote>
+</blockquote>
+<p><strong>replwoacause</strong>: I&rsquo;ve done plenty of vibe coding even though I know how to program but I mostly work with a single agent through its CLI. The progress is really good and more importantly, I can follow it. I can rea&hellip;</p>
+<blockquote>
+<p><strong>mythrwy</strong>: Ya I saw a comment a few weeks ago about &ldquo;leaving productivity on the table!&rdquo;. I&rsquo;m generating 3 long files at a prompt now, how much more productivity do I need? Any more and I&rsquo;ll have zero idea wh&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>baby</strong>: My understanding is that this system just produces much better result (it’s all about clean context windows) so you just don’t have a choice. What they could improve on is logs where you can easily&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>asimeqi</strong>: I can barely keep up with one instance of Claude Code. In fact even that one sits iddle half the time as I test its output and try to explain what it did wrong. What are people programming that nee&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>chickensong</strong>: I think the highly parallel setups make more sense if you fully embrace vibe coding, but there&rsquo;s value to be had outside of that as well. Delegating tasks to sub-agents to help with context managem&hellip;</p>
+</blockquote>
+</blockquote>
+<p><strong>czhu12</strong>: The problem I’ve been having is that when Claude generates copious amounts of code, it makes it way harder to review than small snippets one at a time. Some would argue there’s no point reviewing t&hellip;</p>
+<blockquote>
+<p><strong>serial_dev</strong>: In a professional setting where you still have coding standards, and people will review your code, and the code actually reaches hundreds of thousands of real users, handling one agent at a time is&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>pron</strong>: This is my problem with the whole &ldquo;can LLMs code?&rdquo; discussion. Obviously, LLMs can produce code, well even, much like a champion golfer can get a hole in one. But can they code in the sense of &ldquo;the&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>lupire</strong>: That&rsquo;s a funny analogy. You should look into how modern planes are flown. Hint: it&rsquo;s a computer.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Sateeshm</strong>: Exactly my experience too. I also heard &ldquo;I see the issue now&rdquo; so many times because it missed or misunderstood something very simple.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>KaiserPro</strong>: &gt; people will review your code, I mean you&rsquo;d think. But it depends on the motivations. At meta, we had league tables for reviewing code. Even then people only really looked at it if a) they were a &hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>serial_dev</strong>: Well, it certainly depends on the culture of the team and organization. Where you have shared ownership, meaning once I approved your PR, I am just as responsible of something goes wrong as you are&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>prmoustache</strong>: &gt; people will review your code, People will ask LLM to review some slop made by LLM and they will be absolutely right! There is no limit to lazyness.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>flemhans</strong>: Soon you&rsquo;ll be seen as irresponsible and wasteful if you don&rsquo;t let the smarter LLM do it.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>idontwantthis</strong>: I just can’t get with this. There is so much beyond “works” in software. There are requirements that you didn’t know about and breaking scenarios that you didn’t plan for and if you don’t know how &hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>zmmmmm</strong>: Yes this is one of my concerns. Usually about 50% of my understanding of the domain comes from the process of building the code. I can see a scenario where large scale automated code works for a wh&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>atonse</strong>: I don’t know what your stack is, but at least with elixir and especially typescript/nextJS projects, and properly documenting all those pieces you mentioned, it goes a long way. You’d be amazed.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mrtesthah</strong>: I would never use, let alone pay for, a fully vibe-coded app whose implementation no human understands. Whether you’re reading a book or using an app, you’re communicating with the author by way of&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>idontwantthis</strong>: If it involves Nextjs then we aren’t talking about the same category of software. Yes it can make a website pretty darn well. Can it debug and fix excessive database connection creation in a way th&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>gen220</strong>: In my (admittedly conflict-of-interest, I work for graphite/cursor) opinion, asking CC to stack changes, and then having an automated reviewer agent help a lot with digesting and building convictio&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>squirrellous</strong>: Not a direct answer to your question, but I’m recently trying to adopt the mindset of letting Claude “prove” to me with very high confidence that what they did works. The bar for this would be much&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>AstroBen</strong>: I think we&rsquo;ll start to see the results of that late this year, but it&rsquo;s a little early yet. Plenty of people are diving headfirst into it To me it feels like building your project on sand. Not a go&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>linsomniac</strong>: I have Claude Code author changes, and then I use this &ldquo;codex-review&rdquo; skill I wrote that does a review of the last commit. You might try asking Codex (or whatever) to review the change to give you &hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>yencabulator</strong>: &gt; when Claude generates copious amounts of code, it makes it way harder to review than small snippets one at a time. I find Claude Code to be very steerable. Ask it to make small atomic commits and&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>chasing</strong>: Yeah, it&rsquo;s not just my job to generate the code: It&rsquo;s my job to know the code. I can&rsquo;t let code out into the wild that I&rsquo;m not 100% willing to vouch for.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>zmmmmm</strong>: At a higher level, it goes beyond that. It&rsquo;s my job to take responsibility for code. At some fundamental level that puts a limit on how productive AI can be. Because we can only produce code as fas&hellip;</p>
+</blockquote>
+</blockquote>
+<p><strong>bakugo</strong>: &gt; You&rsquo;re not talking to an AI coder anymore. You&rsquo;re talking to a team lead. The lead doesn&rsquo;t write code - it plans, delegates, and synthesizes. Even 90 word tweets are now too long for these people&hellip;</p>
+<blockquote>
+<p><strong>jen729w</strong>: I wonder how much &rsquo;listening&rsquo; to an LLM all day affects one&rsquo;s own prose? Mimicry is in the genes…</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>flkiwi</strong>: I accidentally gave my wife a prompt the other day. Everything was hellishly busy and I said something along the lines of “I need to ask you a question. Please answer the question. Please don’t ans&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Jweb_Guru</strong>: It affects it very heavily IME. People need to make sure they are getting a good mix of writing from other sources.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>AffableSpatula</strong>: You&rsquo;re absolutely right! I apologise — hopefully you can forgive me.</p>
+</blockquote>
+<blockquote>
+<p><strong>wiseowise</strong>: Them words be hard, man! We builders, changing da world!</p>
+</blockquote>
+<p><strong>joshuaisaact</strong>: This feels like massively overengineering something very simple. Agents are stateless functions with a limited heap (context window) that degrades in quality as it fills. Once you see it that way, &hellip;</p>
+<blockquote>
+<p><strong>baby</strong>: I basically always handled claude code in this way, by asking it to spawn subagents as much as possible to handle self contained tasks (heard there are hacks to make subagents work with codex). But&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>ryanjshaw</strong>: I don’t follow. You said it’s over engineering and then proposed what appears to be functionally the exact same thing? Isn’t a “role” just a compact way to configure well-known systems of constrain&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>joshuaisaact</strong>: Fair push back. The distinction I&rsquo;m drawing is between: A. Using a role prompt to configure a single function&rsquo;s scope (&ldquo;you are a code reviewer, focus on X&rdquo;) - totally reasonable, leverages trainin&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ryanjshaw</strong>: Thanks for clarifying. I’ve queued up that paper. I’m building an agentic solution to a problem (monitoring social media and news sources, then building world views of different participants). A si&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>Androider</strong>: Looks like agent orchestrators provided by the foundation model providers will become a big theme in 2026. By wrapping it in terms that are already used in software development today like team lead&hellip;</p>
+<blockquote>
+<p><strong>bloppe</strong>: Respectfully disagree. I think polecats are a reasonable antidote to overanthropomorphization.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>qdot76367</strong>: Furries would like to have a word.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>MrOrelliOReilly</strong>: Totally agreed. Most the weird concepts of Gas Town are just workarounds for bad behavior in Claude or the underlying models. Anthropic is in the best position to get their own model to adhere to o&hellip;</p>
+</blockquote>
+<p><strong>wild_pointer</strong>: Listen team lead and the whole team, make this button red.</p>
+<blockquote>
+<p><strong>brookst</strong>: Principal engineers! We need architecture! Marketing team, we need ads with celebrities! Product team, we need a roadmap to build on this for the next year! ML experts, get this into the training a&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>simultsop</strong>: We have to reject claude can do it simply by a prompt, then everyone can do it. As SWE&rsquo;s we are not going to pragmatically accept we are done. <a href="https://www.youtube.com/watch?v=g_Bvo0tsD9s">https://www.youtube.com/watch?v=g_Bvo0tsD9s</a></p>
+</blockquote>
+<blockquote>
+<p><strong>AffableSpatula</strong>: ha! The default system prompt appears to give the main agent appropriate guidance about only using swarm mode when appropriate (same as entering itself into plan mode). You can further prompt it in&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>vorticalbox</strong>: I like opencode for the fact I can switch between build and plan mode just by pressing tab.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>thevinter</strong>: Isn&rsquo;t it the same in base claude-code?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Shebanator</strong>: Its shift-tab in Claude Code, fyi</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>stevenwilkin</strong>: Don&rsquo;t make mistakes.</p>
+</blockquote>
+<p><strong>flurdy</strong>: This smells like Claude&rsquo;s own version of Gas Town by Steve Yegge. Probably more constrained and less of a crazy bull ride. But seems we are heading this way, from initially: - a Senior Dev pairing &hellip;</p>
+<p><strong>hirako2000</strong>: I didn&rsquo;t sleep enough, or slept for 10 years. This thread seems surreal, I see multiple flow repositories mentioned with 10k+ stars. Comprehensive doc. genAI image as a logo. Can anyone show me one&hellip;</p>
+<blockquote>
+<p><strong>baby</strong>: You are clearly behind, no offense but what do you do on HN</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Biganon</strong>: I usually try to stay polite here, but what a deeply stupid comment This person is on HN for the same reasons as I am, presumably: reading about hacker stuff. Entering prompts in black boxes and wa&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>hirako2000</strong>: Exactly my thought. I wasn&rsquo;t sure but I came across a wit comment the other day: that hackernews is a ycombinator forum that happens to be public. I then went to see the latest batches. Cohorts are&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>hirako2000</strong>: Time traveling.</p>
+</blockquote>
+</blockquote>
+<p><strong>nehalem</strong>: Answering the question how to sell more tokens per customer while maintaining <del>mediocre</del> breakthrough results.</p>
+<blockquote>
+<p><strong>AffableSpatula</strong>: Delegation patterns like swarm lead to less token usage because: 1. Subagents doing work have a fresh context (ie. focused and not working on the top of a larger monolithic context) 2. Subagents en&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>nulone</strong>: Merge cost kills this. Does the harness enforce file/ownership boundaries per worker, and run tests before folding changes back into the lead context?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>AffableSpatula</strong>: I don&rsquo;t know what you&rsquo;re referring to but I can say with confidence that I see more efficient token usage from a delegated approach, for the reasons I stated, provided that the tasks are correctly &hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>lysace</strong>: I&rsquo;m already burning through enough tokens and producing more code than can be maintained - with just one claude worker. Feel like I need to move into the other direction, more personal hands-on &ldquo;ma&hellip;</p>
+<blockquote>
+<p><strong>AffableSpatula</strong>: I&rsquo;ve seen more efficient use of tokens by using delegation. Unless you continually compact or summarise and clear a single main agent - you end up doing work on top of a large context; burning toke&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>storystarling</strong>: I&rsquo;ve found the opposite to be true when building this out with LangGraph. While the subagent contexts are cleaner, the orchestration overhead usually ends up costing more. You burn a surprising amo&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>AffableSpatula</strong>: Task sizing is important. You can address this by including guidance in the CLAUDE.md around that ie. give it heuristics to use to figure out how to size tasks. Mine includes some heuristics and T &hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>stuaxo</strong>: If there&rsquo;s any kind of management some of it could use small local models - e.g. to see when it looks like its stuck.</p>
+</blockquote>
+<p><strong>neom</strong>: Claude Code in the desktop app seems to do this? It&rsquo;s crazy to watch. It sets of these huge swarms of worker readers under master task headings, that go off and explore the code base and compile hu&hellip;</p>
+<blockquote>
+<p><strong>jswny</strong>: That’s just spawning multiple parallel explore agents instructed to look at different things, and then compiling results That’s a pretty basic functionality in Claude code</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>neom</strong>: Sounds like I should probably switch to claude code cli. Thanks for the info. :)</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>esperent</strong>: I added tests to an old project a few days ago. I spent a while to carefully spec everything out, and there was a lot of tedious work. Aiming for 70% coverage meant that a few thousand unit tests w&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>deaux</strong>: Sounds very similar to oh-my-opencode.</p>
+</blockquote>
+<p><strong>bigiain</strong>: So this is Gas Town, just without the &ldquo;Steve Yegge makes a quarter of a million on a memecoin pump-n-dump&rdquo; step (yet)?</p>
+<blockquote>
+<p><strong>hmokiguess</strong>: Am I the only one who’s been so late to crypto? I still have not touched a single cryptocurrency, even somewhat stable/legit ones. It always gives me a bit of FOMO hearing these stories</p>
+</blockquote>
+<p><strong>basedrum</strong>: How is this different from GSD: <a href="https://github.com/glittercowboy/get-shit-done">https://github.com/glittercowboy/get-shit-done</a> I&rsquo;ve been using that and it&rsquo;s excellent</p>
+<blockquote>
+<p><strong>nonethewiser</strong>: GSD was the first project management framework I used. Initially I loved it because it felt like I was so much better organized. As time went on I felt like the organization was kind of an illusion&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>djfdat</strong>: Really boils down to the benefits of first party software from a company that has billions of dollars of funding vs similar third party software from an individual with no funding. GSD might be bet&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>ramoz</strong>: I dont understand these questions/references. It&rsquo;s different because it&rsquo;s a capability baked into the actual tool and maintained by the originators of the tool.</p>
+</blockquote>
+<blockquote>
+<p><strong>AffableSpatula</strong>: a similar question was asked elsewhere in the thread; the difference is that this is tightly integrated into the harness</p>
+</blockquote>
+<p><strong>tiberriver256</strong>: We call it Shawarma where I come from</p>
+<p><strong>svara</strong>: I&rsquo;m a fan of AI coding tools but the trend of adding ever more autonomy to agents confuses me. The rate at which a person running these tools can review and comprehend the output properly is basica&hellip;</p>
+<blockquote>
+<p><strong>nilamo</strong>: It works for me, in that I don&rsquo;t care about all the intermediate babble ai generates. What matters is the final changelist before hitting commit&hellip; going through that, editing it, fixing comments, &hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>vorticalbox</strong>: After I have wrote a feature and I’m in the ironing out bug stage this is where I like the agents do a lot of the grunt work, I don’t want to write jsdocs, or fix this lint issue. I have also start&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>plagiarist</strong>: Based on Gas Town, the people doing this agree that they are well beyond an amount of code they can review and comprehend. The difference seems to be they have decided on a system that makes it not&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>gedy</strong>: &gt; running these tools can review and comprehend the output properly You have to realize this is targeting manager and team lead types who already mostly ignore the details and quality frankly. &ldquo;Jus&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>aschla</strong>: It likely is acceptable for business-focused code. Compared to a lot of code written by humans, even if the AI code is less than optimal, it&rsquo;s probably better quality than what many humans will wri&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>IAmGraydon</strong>: No, it doesn&rsquo;t work in practice because they make far too many mistakes.</p>
+</blockquote>
+<blockquote>
+<p><strong>ttul</strong>: Yes, this actually works. In 2026, software engineering is going to change a great deal as a result, and if you&rsquo;re not at least experimenting with this stuff to learn what it&rsquo;s capable of, that&rsquo;s a&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>xyzsparetimexyz</strong>: The FOMO nonsense is really uncalled for. If everything is going to be vibecoded in the future then either theres going to be a million code-unfucking jobs or no jobs at all. Attitudes like that, w&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>alehlopeh</strong>: The comment you’re replying to is actually very sensible and non-hypey. I wouldn’t even categorize it as particularly pro-AI, considering how ridiculous some of the frothing pro-AI stuff can get.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>wiseowise</strong>: Uhuh, heard the same thing about IDEs, Machine Learning in your tools and others. Yet the most impressive people that I’ve met, actual wizards who could achieve what no one else could, were using E&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>pton_xd</strong>: &gt; The rate at which a person running these tools can review and comprehend the output properly is basically reached with just a single thread with a human in the loop. That&rsquo;s what you&rsquo;re missing &ndash;&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>zmmmmm</strong>: It&rsquo;s a bit like the argument with self driving cars though. They may be safer overall, but there&rsquo;s a big difference in how responsibility for errors is attributed. If a human is not a decision make&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>vunderba</strong>: I&rsquo;ve commented on this before, but issuing a prompt like &ldquo;Fix X&rdquo; makes so many assumptions (like a &ldquo;behaviorism&rdquo; approach to coding) including that the bug manifests in both an externally and consi&hellip;</p>
+</blockquote>
+</blockquote>
+<p><strong>MetaMonk</strong>: A guy who worked at docker on docker swarm now works at Anthropic so makes sense</p>
+<blockquote>
+<p><strong>mohsen1</strong>: Swarm is actually OpenAI&rsquo;s terminology <a href="https://github.com/openai/swarm">https://github.com/openai/swarm</a></p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ecto</strong>: Swarm is actually bee terminology</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Razengan</strong>: Swarm is actually human terminology I believe bees call it &ldquo;bzz bzzt <em>clockwise dance</em> <em>wiggle</em>&rdquo;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>nonethewiser</strong>: I think we can all agree Swarm is a proprietary term coined by LargeCorpB for a project that never really got off the ground but definitely can&rsquo;t share the name with any other commercial venture.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>MetaMonk</strong>: The first pre-release for Docker Swarm came out a decade ago, the first release of OpenAI swarm came out only a year ago, I guess I&rsquo;m not sure what you&rsquo;re trying to say. <a href="https://github.com/docker-a">https://github.com/docker-a</a>&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>nevir</strong>: <a href="https://gist.github.com/kieranklaassen/d2b35569be2c7f1412c64">https://gist.github.com/kieranklaassen/d2b35569be2c7f1412c64</a>&hellip; Looks like claude calls it just &ldquo;teams&rdquo; under the covers</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>brookst</strong>: Probably a beekeeper in spare time</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>MetaMonk</strong>: He&rsquo;s really into APIary things</p>
+</blockquote>
+</blockquote>
+<p><strong>dlojudice</strong>: It feels like Auto-GPT, BabyAGI, and the like were simply ahead of their time</p>
+<blockquote>
+<p><strong>woeirua</strong>: Had to wait for the models to catch up&hellip;</p>
+</blockquote>
+<p><strong>hereme888</strong>: So apparently all swarm features are controlled by a single gate function in Claude Code: &mdash; function i8() { if (Yz(process.env.CLAUDE_CODE_AGENT_SWARMS)) return !1; return xK(&ldquo;tengu_brass_pebble&rdquo;&hellip;</p>
+<p><strong>VivaTechnics</strong>: OPINION: This will only compound wasted time on Claude.ai, which exploits that time to train its own models. Why time wasted? Claude’s accuracy for shell, Bash, regex, Perl, text manipulation/scrip&hellip;</p>
+<p><strong>engates</strong>: Isn&rsquo;t this pretty much what Ruv has been building for like two years? <a href="https://github.com/ruvnet/claude-flow">https://github.com/ruvnet/claude-flow</a></p>
+<blockquote>
+<p><strong>dratopher</strong>: His latest editions are a bit alarming&hellip;The telemetry system explicitly captures: &ldquo;Claude session JSONL files (when accessible)&rdquo; Those session files contain complete conversation histories - every&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>AffableSpatula</strong>: The difference is that this is tightly integrated into the harness. There&rsquo;s a &ldquo;delegation mode&rdquo; (akin to plan mode) that appears to clear out the context for the team lead. The harness appears to b&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>estearum</strong>: It&rsquo;s insane to me that people choose to build anything in the perimeter of Claude Code (et al). The combination of the fairly primitive current state of them and the pace at which they&rsquo;re advancing&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>AffableSpatula</strong>: yeah I tend to agree. They&rsquo;re must be reaching the point where they can automate the analysis of claude code prompts to extract techniques and build them directly into the harness. Going up against&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>skippyboxedhero</strong>: Also created my own version of this. Seems like this is an idea whose time has come. My implementation was slightly different as there is no shared state between tasks, and I don&rsquo;t run them concurr&hellip;</p>
+<p><strong>threecheese</strong>: Did they release this already? With version 2.1.9 the behavior is vastly different, all of a sudden the main loop is orchestrating subagents in a way I’ve not seen before. “FTSChunkManager agent is&hellip;</p>
+<p><strong>iwasbirchyfirst</strong>: And, in a few months, this will all be under the hood, with summary reports and checkins. We won&rsquo;t care how the swarms split up the work. We&rsquo;ll just watch the results come together and answer quest&hellip;</p>
+<p><strong>rco8786</strong>: Is this significantly different that the subagents that are already in CC?</p>
+<p><strong>RockRobotRock</strong>: <a href="https://x.com/nayshins/status/2014473343542706392">https://x.com/nayshins/status/2014473343542706392</a></p>
+<p><strong>kordlessagain</strong>: It&rsquo;s agents all the way down.</p>
+<p><strong>mohsen1</strong>: Everyone is wrapping Claude Code in Tmux and claiming they are a magician. I am not so good at marketing but I&rsquo;ve done this here <a href="https://github.com/mohsen1/claude-code-orchestrator">https://github.com/mohsen1/claude-code-orchestrator</a> Mine also rotate&hellip;</p>
+<blockquote>
+<p><strong>AffableSpatula</strong>: I think you&rsquo;ve misunderstood what this is.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mohsen1</strong>: Sorry, you&rsquo;re right. went through the code and understood now. I&rsquo;m going to try the patch. Claude Code doing team work natively would be amazing! Honestly if people in AI coding write less hype-dri&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>bicx</strong>: Well good sir, I <em>am</em> a tmux magician.</p>
+</blockquote>
+<p><strong>timwis</strong>: Hasn&rsquo;t cursor been doing this with it&rsquo;s Plan mode for a while? Or is this different?</p>
+<blockquote>
+<p><strong>markstos</strong>: With plan mode, I would hope there&rsquo;s an approval step. With Swarm mode, it seems there&rsquo;s a new option for an entire team of agents to be working in the wrong direction before they check back in to &hellip;</p>
+</blockquote>
+<p><strong>bpavuk</strong>: hey that&rsquo;s exactly how I made Gemini 2.5 Flash give useful results in Opencode! a few specialized &ldquo;Merc&rdquo; subagents and a &ldquo;Master&rdquo; agent that can do nothing but send &ldquo;Mercs&rdquo; into the codebase</p>
+<p><strong>vatsachak</strong>: Cursor browser all over again</p>
+<p><strong>sfortis</strong>: I&rsquo;m not going to try this. Anthropic will probably ban me again.</p>
+<p><strong>reilly3000</strong>: This no doubt takes some inspiration from mcp_agent_mail <a href="https://github.com/Dicklesworthstone/mcp_agent_mail">https://github.com/Dicklesworthstone/mcp_agent_mail</a></p>
+<p><strong>ZuzuDuck</strong>: Amazing, I need to check it out in my projects</p>
+<p><strong>donniedice</strong>: You guys have been intentionally milking clocks and gate keeping information. Keep crying that you&rsquo;re losing your jobs. It&rsquo;s funny.</p>
+<p><strong>wiseowise</strong>: I seriously hate this timeline. Is this madness going to become the reality of our jobs? The only way I’m going to be okay with it if they put a simulation GUI à la OpenTTD/GameDev tycoon so I can &hellip;</p>
+<p><strong>mempko</strong>: Am I the only one still looking at different and correcting the AI abiyt design and algorithms so it stays on the path I want, or do you just YOLO at this point?</p>
+<p><strong>tom2948329494</strong>: And… how?</p>
+<blockquote>
+<p><strong>AffableSpatula</strong>: The feature is shipped in the latest builds of claude code, but it&rsquo;s turned off by a feature flag check that phones home to the backend to see if the user&rsquo;s account is meant to have it on. You can &hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bonsai_spool</strong>: Do you know what patch to apply? The Github link from the OP seems to have a lot of other things included.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mohsen1</strong>: <a href="https://github.com/numman-ali/cc-mirror/commit/0408f60bd7c75">https://github.com/numman-ali/cc-mirror/commit/0408f60bd7c75</a>&hellip; Way too much code for such a small patch</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>AffableSpatula</strong>: it&rsquo;s my repo - it&rsquo;s a fork of cc-mirror which is an established project for parallel claude installs. I wanted to take the least disruptive approach for the sake of using working code and not spelu&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>codethief</strong>: <a href="https://xcancel.com/NicerInPerson/status/2014989679796347375">https://xcancel.com/NicerInPerson/status/2014989679796347375</a> In his second post he included a link to GitHub: <a href="https://github.com/mikekelly/claude-sneakpeek">https://github.com/mikekelly/claude-sneakpeek</a></p>
+<blockquote>
+<p><strong>dang</strong>: Thanks! We&rsquo;ll put those links in the toptext.</p>
+</blockquote>
 
       </div>
 
@@ -234,6 +1258,20 @@
     </article>
 
     
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#key-insights">Key Insights</a></li>
+    <li><a href="#notable-quotes">Notable Quotes</a></li>
+    <li><a href="#hn-discussion-highlights">HN Discussion Highlights</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
 
   </div>
 </div>
@@ -242,30 +1280,29 @@
   <div class="footer-container">
     <div class="footer-brand">
       <span class="footer-logo">AI Best Practices</span>
-      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
     </div>
     <div class="footer-nav">
       <div class="footer-section">
         <h3>Learn</h3>
         <ul>
-          <li><a href="../start-here/index.html">Start Here</a></li>
-          <li><a href="../skills/index.html">Skills</a></li>
-          <li><a href="../workflows/index.html">Workflows</a></li>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Explore</h3>
         <ul>
           <li><a href="../tools/index.html">Tools</a></li>
-          <li><a href="../landscape/index.html">Landscape</a></li>
           <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
           <li><a href="../sources/index.html">Sources</a></li>
-          <li><a href="../tags/">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
     </div>
   </div>
 </footer>

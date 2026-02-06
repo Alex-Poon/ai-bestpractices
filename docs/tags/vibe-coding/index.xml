@@ -9,6 +9,13 @@
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/vibe-coding/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>The Vibe Coding Question</title>
+      <link>/debates/vibe-coding.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/debates/vibe-coding.html</guid>
+      <description>&lt;h2 id=&#34;the-question&#34;&gt;The Question&lt;/h2&gt;&#xA;&lt;p&gt;Andrej Karpathy coined the term &amp;ldquo;vibe coding&amp;rdquo; to describe a mode of AI-assisted development where you fully cede implementation to the model, accepting code you don&amp;rsquo;t fully understand as long as it works. The term quickly became a lightning rod &amp;ndash; embraced by some as the future of software development, rejected by others as professional malpractice.&lt;/p&gt;&#xA;&lt;p&gt;But the community has moved beyond a simple for-or-against debate. Practitioners now describe a spectrum from full delegation to tight step-by-step control, with most experienced developers settling somewhere in between. The real question isn&amp;rsquo;t whether vibe coding is good or bad &amp;ndash; it&amp;rsquo;s where on this spectrum responsible development should land, and whether the answer changes depending on context.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>A few random notes from Claude coding quite a bit last week</title>
       <link>/sources/2026-01-26-karpathy-claude-coding-notes.html</link>
       <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
@@ -21,13 +28,6 @@
       <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
       <guid>/sources/2026-01-06-opus-4-5-agent-experience.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Burke Holland wrote an enthusiastic account of his experience using Claude&amp;rsquo;s Opus 4.5 model, arguing it represents a fundamental shift in AI agent capabilities that goes beyond anything he had previously experienced. His central claim is that Opus 4.5 delivers on promises that earlier AI coding agents could not fulfill, particularly around autonomous problem-solving and first-attempt success rates.&lt;/p&gt;&#xA;&lt;p&gt;Holland completed four substantial projects in rapid succession: an image conversion utility, a video editor, a social media automation app, and a route optimization tool. He highlighted the model&amp;rsquo;s ability to handle full-stack development spanning frontend, backend, authentication, database integration, and cloud infrastructure &amp;ndash; areas that had traditionally been weak points for AI agents.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>The Vibe Coding Spectrum</title>
-      <link>/workflows/vibe-coding-spectrum.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/workflows/vibe-coding-spectrum.html</guid>
-      <description>&lt;p&gt;&amp;ldquo;Vibe coding&amp;rdquo; entered the vocabulary in early 2025, but practitioners quickly discovered that the term covered fundamentally different activities. David Bau&amp;rsquo;s influential article identified two distinct types, and the community debate that followed revealed a full spectrum of approaches between them. Understanding where you are on this spectrum &amp;ndash; and where you should be &amp;ndash; is one of the most consequential workflow decisions in AI-assisted development.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-two-types&#34;&gt;The Two Types&lt;/h2&gt;&#xA;&lt;p&gt;David Bau drew a line between two modes that both get called &amp;ldquo;vibe coding&amp;rdquo; but require entirely different infrastructure and mindset.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Two Kinds of Vibe Coding</title>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Getting Started | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="Your first week with AI coding tools — practical steps to get productive fast.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Getting Started">
+  <meta property="og:description" content="Your first week with AI coding tools — practical steps to get productive fast.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-guide"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../guide/index.html">The Guide</a></li>
+      
+    
+    <li aria-current="page">Getting Started</li>
+  </ol>
+</nav>
+
+
+
+  
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  <div class="guide-progress">
+    
+      <div class="guide-progress-step guide-progress-step--done"></div>
+    
+      <div class="guide-progress-step guide-progress-step--active"></div>
+    
+      <div class="guide-progress-step"></div>
+    
+      <div class="guide-progress-step"></div>
+    
+  </div>
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Getting Started</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">10 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+      </header>
+
+      <div class="article-content">
+        <p>You have read about the <a href="core-loop.html">core loop</a>. Now it is time to put it into practice. This page covers the concrete steps for your first week with AI coding tools &ndash; which tool to pick, what to try first, which mistakes to avoid, and what &ldquo;working&rdquo; actually looks like.</p>
+<p>The goal is not mastery. The goal is calibration: developing an accurate sense of what AI agents handle well and where they fall apart. That calibration is the foundation everything else builds on, and there is no shortcut to it except doing real work.</p>
+<h2 id="pick-your-tool">Pick Your Tool</h2>
+<p>The tool landscape changes fast, but the categories are stable. You need to make one decision: <strong>CLI agent or IDE agent?</strong></p>
+<h3 id="cli-agents">CLI agents</h3>
+<p>Tools like Claude Code run in your terminal. You describe a task, the agent reads your files, runs commands, writes code, and iterates in a loop. The interaction feels like directing a collaborator over text.</p>
+<p>The advantages are flexibility and independence from any particular editor. <strong>BeetleB</strong> pointed out that CLI tools do not tie you to a specific IDE, which matters if you work across environments. <strong>blitz_skull</strong> was more direct: despite the theoretical advantages of IDE integration, no IDE agent matched the Claude Code CLI experience in practice.</p>
+<p>The disadvantage is that you lose built-in visual tools &ndash; inline diffs, syntax highlighting in context, and direct integration with editor features like rename-across-files.</p>
+<h3 id="ide-agents">IDE agents</h3>
+<p>Tools like Cursor, Copilot, and the Claude Code VS Code extension embed AI assistance directly into your editor. You get inline suggestions, visual diff review, and tight integration with language servers and refactoring tools.</p>
+<p><strong>anthonypasq</strong> argued that CLI agents end up reinventing what IDEs already provide for free &ndash; diffs, LSP integration, refactoring support. That is a fair point. If you live in your editor and want the tightest possible integration, an IDE agent reduces friction.</p>
+<h3 id="which-one-to-start-with">Which one to start with</h3>
+<p>If you are already comfortable in a terminal and prefer text-based workflows, start with Claude Code or a similar CLI agent. If you want the lowest friction path and work primarily in VS Code, start with Cursor or the Claude Code extension.</p>
+<p>The specific tool matters less than you think. <strong>esperent</strong> observed that the latest models from all major providers are competitive and approaching commodity status &ndash; the differentiator is how the tool manages context and workflow, not the underlying model. You can switch later. What matters now is picking one and using it consistently for a week.</p>
+<p>Do not start with inline autocomplete tools like basic Copilot. The flashing suggestions create a distracting, reactive workflow. <strong>amluto</strong> found it the most skill-atrophy-inducing tool available and turned off autocomplete entirely to preserve agency. Start with an agent that works in a request-response pattern, where you direct the work rather than reacting to suggestions.</p>
+<h2 id="your-first-day">Your First Day</h2>
+<h3 id="set-up-a-test-project">Set up a test project</h3>
+<p>Do not start with your most important production codebase. Use a side project, a personal tool, or a fresh repository. You need room to experiment without consequences.</p>
+<p>If you do not have a suitable project, create one. <strong>TeMPOraL</strong> described the kind of task that works perfectly for a first session: building a small utility &ndash; something you would otherwise search for online. A static page generator, a data format converter, a simple CLI tool. These are bounded, verifiable, and low-stakes.</p>
+<h3 id="run-the-loop-once-deliberately">Run the loop once, deliberately</h3>
+<p>Pick a small, concrete task. Not &ldquo;build the backend&rdquo; but something like &ldquo;write a function that parses this CSV format and returns a list of records.&rdquo; Something you could write yourself in 15-30 minutes.</p>
+<p>Then run each phase of the <a href="core-loop.html">core loop</a> deliberately:</p>
+<ol>
+<li>
+<p><strong>Plan.</strong> Write down the task boundary, the input, the expected output, and how you will verify the result. Two sentences is enough.</p>
+</li>
+<li>
+<p><strong>Execute.</strong> Give the task to the agent with sufficient context. Include the relevant file, any constraints, and the verification method. If the agent can run tests, tell it which tests to run.</p>
+</li>
+<li>
+<p><strong>Verify.</strong> Check the output. Run the tests. Read the diff. Does it do what you specified?</p>
+</li>
+<li>
+<p><strong>Harness.</strong> If the agent got something wrong, note it. If you had to correct a convention or pattern, note that too. You do not need a formal file yet &ndash; just keep a mental or written log of what worked and what did not.</p>
+</li>
+</ol>
+<p>The first pass will feel slow. That is normal. You are building the calibration that makes every subsequent pass faster.</p>
+<h3 id="do-not-evaluate-yet">Do not evaluate yet</h3>
+<p>Resist the urge to judge the tool after one task. Your prompting is not good yet, your task scoping is not calibrated, and you do not have harness infrastructure in place. Judging the tool now is like evaluating a programming language after writing Hello World.</p>
+<h2 id="days-two-and-three-reproduce-your-own-work">Days Two and Three: Reproduce Your Own Work</h2>
+<p>This is the most important practice in the entire getting-started process. The exercise is simple: complete a task yourself, then attempt the same task through the agent. Compare the results.</p>
+<p>Do this across several different kinds of tasks in your codebase:</p>
+<ul>
+<li>A bug fix where you know the root cause</li>
+<li>A small feature addition with clear requirements</li>
+<li>A refactoring task like renaming a concept across files</li>
+<li>Writing tests for existing untested code</li>
+</ul>
+<p>The goal is not to prove the agent can replace you. The goal is to build a mental model of where the agent excels and where it struggles. You will discover patterns quickly: the agent is probably strong at boilerplate, test generation, and straightforward implementations, and weaker at tasks requiring deep domain context or novel architecture.</p>
+<p><strong>comrade1234</strong> described the experience of a developer with existing expertise: tasks that would take a couple of hours manually took less than ten minutes with AI &ndash; but only because the developer already knew exactly what needed to happen and could direct the agent precisely. Without that existing knowledge, the same tasks would have produced what <strong>drooby</strong> called &ldquo;working monsters.&rdquo;</p>
+<p>This reproduction phase reveals the gap between what the tool can do and what you can get it to do. That gap closes with practice, but only if you have honest data about where it exists.</p>
+<h2 id="day-four-create-your-first-harness">Day Four: Create Your First Harness</h2>
+<p>By now you have a short list of things the agent got wrong, conventions it missed, or patterns it did not follow. Turn those observations into your first AGENTS.md or CLAUDE.md file.</p>
+<p>Create the file in your project root and add three entries:</p>
+<ol>
+<li>
+<p><strong>One coding convention.</strong> A rule about how code should be written in this project &ndash; naming patterns, file organization, import style, whatever the agent got wrong or inconsistent.</p>
+</li>
+<li>
+<p><strong>One corrected mistake.</strong> A specific error the agent made and the correct approach. Example: &ldquo;When writing tests for the API layer, always use the test client fixture, not direct function calls.&rdquo;</p>
+</li>
+<li>
+<p><strong>One hard constraint.</strong> Something the agent must never do. Example: &ldquo;Never modify the migration files directly. Always create new migrations.&rdquo;</p>
+</li>
+</ol>
+<p>Keep it concise. <strong>guluarte</strong> found that agents tend to follow only the first few lines of long instruction files as context grows. Front-load the most important rules and keep each entry brief.</p>
+<p>This file is the seed of your harness. It will grow over the coming weeks as you observe more failure modes. Each entry represents a mistake that will not happen again.</p>
+<h2 id="day-five-push-the-boundaries">Day Five: Push the Boundaries</h2>
+<p>Now that you have basic calibration and a starter harness, try a task that is slightly outside your comfort zone. Not a task you could do in your sleep, but one that stretches your delegation skills:</p>
+<ul>
+<li>A multi-file change that requires coordinated edits</li>
+<li>A task where you write the tests first and let the agent write the implementation</li>
+<li>A task in a part of the codebase you are less familiar with</li>
+</ul>
+<p>Pay attention to where the agent needs more context, where your task description was ambiguous, and where the harness file helped or could have helped. Update the harness with what you learn.</p>
+<p>This is also a good day to try the test-first pattern. Write a failing test that specifies the behavior you want, then ask the agent to make it pass. <strong>teiferer</strong> proposed this as the natural workflow: human-written tests as specifications, AI-generated implementation. It works well because the tests give the agent a concrete, verifiable goal &ndash; and as <strong>wongarsu</strong> observed, verifiable goals produce the agent&rsquo;s best work.</p>
+<h2 id="common-first-week-mistakes">Common First-Week Mistakes</h2>
+<h3 id="delegating-too-broadly">Delegating too broadly</h3>
+<p>The single most common mistake. &ldquo;Build the authentication system&rdquo; is not a task &ndash; it is a project. Break it into pieces small enough to verify in a few minutes each. If you cannot describe the expected output in a sentence, the task is too broad.</p>
+<h3 id="evaluating-the-tool-after-one-bad-result">Evaluating the tool after one bad result</h3>
+<p>AI agents are probabilistic. A single failure tells you almost nothing. What matters is the pattern across many tasks. <strong>eli</strong> noted a well-documented phenomenon: initial amazement gives way to frustration as you calibrate to the tool&rsquo;s real capabilities. This is normal. Push through it.</p>
+<h3 id="accepting-output-without-reading-the-diff">Accepting output without reading the diff</h3>
+<p>Speed feels good. Accepting a plausible-looking output without checking it is how subtle bugs enter your codebase. <strong>InfinityByTen</strong> described the overwhelm: after a few seconds of &ldquo;thinking,&rdquo; you get hundreds of lines to review from an entity that never pushes back. The antidote is Phase 1 discipline &ndash; scope tasks so the diffs are small enough to review in seconds.</p>
+<h3 id="fighting-the-models-preferences">Fighting the model&rsquo;s preferences</h3>
+<p>The agent will have default patterns that differ from yours. <strong>nonethewiser</strong> described fighting Claude&rsquo;s preference for ReactRouter over TanStack Router before realizing the agent&rsquo;s default worked correctly. Pick your battles. Fight for constraints that matter &ndash; architecture, security, correctness &ndash; and let go of stylistic preferences that have no practical impact.</p>
+<h3 id="skipping-the-harness">Skipping the harness</h3>
+<p>Every correction you make manually but do not encode in your harness file is a correction you will make again. And again. The compounding benefit of the harness is the single highest-leverage investment in AI-assisted development, and it is the investment most beginners skip. Start on day four, not day forty.</p>
+<h3 id="long-sessions-without-fresh-context">Long sessions without fresh context</h3>
+<p>Agent quality degrades as sessions get long and context fills up. <strong>conception</strong> observed that after context compaction, sessions become unreliable. Start fresh sessions for new tasks. A new session with a good harness file is almost always better than a long session with accumulated context debt.</p>
+<h2 id="what-success-looks-like-after-one-week">What Success Looks Like After One Week</h2>
+<p>You will not be a power user after five days. But you should have:</p>
+<ul>
+<li>
+<p><strong>Calibration.</strong> An honest sense of which tasks the agent handles well (boilerplate, tests, straightforward implementations) and which it struggles with (novel architecture, deep domain reasoning, large cross-cutting changes).</p>
+</li>
+<li>
+<p><strong>A starter harness.</strong> An AGENTS.md or CLAUDE.md file with at least a handful of entries based on real observed errors.</p>
+</li>
+<li>
+<p><strong>Loop fluency.</strong> The ability to run the plan-execute-verify-harness cycle without thinking about the steps. The phases should feel natural, not mechanical.</p>
+</li>
+<li>
+<p><strong>Realistic expectations.</strong> Neither &ldquo;this will replace all coding&rdquo; nor &ldquo;this is useless.&rdquo; The tool has a specific capability profile, and you are beginning to map it.</p>
+</li>
+</ul>
+<p><strong>mlrtime</strong>, a developer with over 25 years of experience, described the feeling of finding the right working relationship with AI tools as reaching &ldquo;god mode&rdquo; where the work becomes fun again. That feeling is real, but it comes after the calibration period, not before.</p>
+<p>Similarly, <strong>freediver</strong> observed that working with AI effectively meant using their brain more, not less. The joy comes from operating at a higher level of abstraction &ndash; focusing on design, architecture, and problem decomposition while the agent handles implementation. But that higher level only works if you have built the calibration and harness to support it.</p>
+<h2 id="what-comes-next">What Comes Next</h2>
+<p>You now have the foundation. The <a href="core-loop.html">core loop</a> gives you the workflow. This page gave you the first week. The next two pages address what happens after that:</p>
+<ul>
+<li><a href="adoption-curve.html">The Adoption Curve</a> maps the progression from beginner through the inevitable frustration valley to proficiency.</li>
+<li><a href="when-it-fails.html">When It Fails</a> gives you an honest account of the failure modes you will encounter, so you can recognize them early and respond well.</li>
+</ul>
+<p>The most important thing you can do right now is keep going. The first week is about building foundation. The second week is where the investment starts paying off.</p>
+
+      </div>
+
+      <nav class="article-nav">
+        
+        <a href="../guide/adoption-curve.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">The Adoption Curve</span>
+        </a>
+        
+        
+        <a href="../guide/core-loop.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">The Core Loop</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pick-your-tool">Pick Your Tool</a>
+      <ul>
+        <li><a href="#cli-agents">CLI agents</a></li>
+        <li><a href="#ide-agents">IDE agents</a></li>
+        <li><a href="#which-one-to-start-with">Which one to start with</a></li>
+      </ul>
+    </li>
+    <li><a href="#your-first-day">Your First Day</a>
+      <ul>
+        <li><a href="#set-up-a-test-project">Set up a test project</a></li>
+        <li><a href="#run-the-loop-once-deliberately">Run the loop once, deliberately</a></li>
+        <li><a href="#do-not-evaluate-yet">Do not evaluate yet</a></li>
+      </ul>
+    </li>
+    <li><a href="#days-two-and-three-reproduce-your-own-work">Days Two and Three: Reproduce Your Own Work</a></li>
+    <li><a href="#day-four-create-your-first-harness">Day Four: Create Your First Harness</a></li>
+    <li><a href="#day-five-push-the-boundaries">Day Five: Push the Boundaries</a></li>
+    <li><a href="#common-first-week-mistakes">Common First-Week Mistakes</a>
+      <ul>
+        <li><a href="#delegating-too-broadly">Delegating too broadly</a></li>
+        <li><a href="#evaluating-the-tool-after-one-bad-result">Evaluating the tool after one bad result</a></li>
+        <li><a href="#accepting-output-without-reading-the-diff">Accepting output without reading the diff</a></li>
+        <li><a href="#fighting-the-models-preferences">Fighting the model&rsquo;s preferences</a></li>
+        <li><a href="#skipping-the-harness">Skipping the harness</a></li>
+        <li><a href="#long-sessions-without-fresh-context">Long sessions without fresh context</a></li>
+      </ul>
+    </li>
+    <li><a href="#what-success-looks-like-after-one-week">What Success Looks Like After One Week</a></li>
+    <li><a href="#what-comes-next">What Comes Next</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

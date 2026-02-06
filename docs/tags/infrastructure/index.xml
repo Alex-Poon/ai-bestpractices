@@ -6,8 +6,22 @@
     <description>Recent content in Infrastructure on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/infrastructure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Harness Engineering</title>
+      <link>/practices/harness-engineering.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/practices/harness-engineering.html</guid>
+      <description>&lt;p&gt;Harness engineering is the practice of building persistent infrastructure that constrains and guides AI agents across sessions. It is the highest-leverage investment in AI-assisted development because it compounds: every mistake you document is a mistake that never recurs, every custom tool you build saves time in every future session, and every test harness you configure raises the floor on output quality.&lt;/p&gt;&#xA;&lt;p&gt;The harness is the answer to the fundamental limitation of current AI agents: they are stateless. Each session starts fresh with no memory of corrections, preferences, or past failures. The harness is the only mechanism that carries knowledge forward.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Builders</title>
+      <link>/voices/builders.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/voices/builders.html</guid>
+      <description>&lt;p&gt;These are the people building the coding agents, harnesses, and infrastructure that everyone else uses. Their perspective is shaped by implementation reality: what actually works at scale, what breaks in production, and what the architecture looks like from the inside.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;the-moat-analyst&#34;&gt;The moat analyst&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;tptacek&lt;/strong&gt; argues that there is no such thing as a frontier agent. While frontier models require massive resources to train, any proficient developer could build a competitive coding agent. The moat, if it exists, is in the engineering of the harness &amp;ndash; not in model access. This reframes the competitive landscape: agents are democratizable in a way that models are not.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>How the AI Bubble Bursts in 2026</title>
       <link>/sources/2026-01-19-ai-bubble-bursts-2026.html</link>

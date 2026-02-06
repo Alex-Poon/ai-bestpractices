@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Core Loop | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="The plan-execute-verify loop that every effective AI coding workflow converges on.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="The Core Loop">
+  <meta property="og:description" content="The plan-execute-verify loop that every effective AI coding workflow converges on.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-guide"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../guide/index.html">The Guide</a></li>
+      
+    
+    <li aria-current="page">The Core Loop</li>
+  </ol>
+</nav>
+
+
+
+  
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  <div class="guide-progress">
+    
+      <div class="guide-progress-step guide-progress-step--active"></div>
+    
+      <div class="guide-progress-step"></div>
+    
+      <div class="guide-progress-step"></div>
+    
+      <div class="guide-progress-step"></div>
+    
+  </div>
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">The Core Loop</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">11 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+      </header>
+
+      <div class="article-content">
+        <p>Every effective AI coding workflow, regardless of which tool or model you use, converges on the same four-phase loop: <strong>Plan, Execute, Verify, Harness.</strong> The tools change. The models improve. But the loop persists, because it addresses the fundamental constraints of working with systems that are brilliant and forgetful in equal measure.</p>
+<p>This page describes each phase, why it matters, and what goes wrong when you skip it. If you read nothing else on this site, read this.</p>
+<h2 id="why-a-loop">Why a Loop?</h2>
+<p>AI coding agents are not compilers. You do not hand them a specification and receive correct output. They are closer to a collaborator who is extraordinarily fast, reasonably competent, and has no memory of yesterday. That combination means you need a tight feedback cycle: give clear direction, let the agent work, check the result, and encode what you learned so the next cycle goes better.</p>
+<p>The practitioners who get the most from these tools are not the ones with the cleverest prompts. They are the ones who run the loop fastest and tighten it most aggressively over time. As <strong>conception</strong> put it in a widely cited HN comment: you need to invest upfront effort to get returns &ndash; the comparison is to onboarding a junior developer where you teach them patterns, show documentation, and document their mistakes.</p>
+<p>The loop has four phases. They are not steps you do once. You cycle through them dozens of times a day, and each cycle makes the next one faster.</p>
+<h2 id="phase-1-plan">Phase 1: Plan</h2>
+<p>Most failed agent interactions trace back to this phase. The task was too broad, too vague, or missing context the agent needed to succeed. Planning is where you make the decisions that determine whether delegation will work or waste your time.</p>
+<h3 id="what-planning-looks-like-in-practice">What planning looks like in practice</h3>
+<p>Good planning means deciding three things before you write a single prompt:</p>
+<ol>
+<li>
+<p><strong>What to delegate.</strong> Not everything benefits from AI assistance. Routine implementations with clear patterns? Excellent candidates. Novel architectural decisions that require deep domain reasoning? Probably not.</p>
+</li>
+<li>
+<p><strong>How to scope it.</strong> The sweet spot is a task small enough to verify in a few minutes but large enough to justify the overhead of delegation. <strong>jackfranklyn</strong> offered a useful heuristic for the boundary: treat the AI like a contractor with &ldquo;bounded tasks with clear acceptance criteria&rdquo; &ndash; and switch back to manual coding when explaining context would take longer than writing the code yourself.</p>
+</li>
+<li>
+<p><strong>What success looks like.</strong> If you cannot describe how you will verify the result, the task is not ready to delegate. This might be a passing test, a visual check, a specific output format, or a diff that touches only certain files.</p>
+</li>
+</ol>
+<h3 id="separate-planning-from-execution">Separate planning from execution</h3>
+<p>One of the most consistently repeated lessons across practitioner discussions is to avoid mixing planning and execution in a single prompt. When you ask the agent to both figure out what to do and do it, it builds momentum toward the wrong solution before you can course-correct.</p>
+<p>The practice is straightforward: ask the agent to propose a plan first. Review it. Then proceed to implementation. Several practitioners use explicit mode toggles for this &ndash; starting in &ldquo;plan mode&rdquo; to get the approach right, then switching to &ldquo;build mode&rdquo; for execution.</p>
+<h3 id="the-scope-trap">The scope trap</h3>
+<p><strong>AffableSpatula</strong> describes including T-shirt sizing heuristics directly in project documentation so the agent can self-assess task granularity. This addresses a real problem: tasks that are too large produce confidently wrong output that takes longer to fix than starting from scratch. Tasks that are too small produce overhead that exceeds the value of delegation.</p>
+<p>A useful mental model: you own the trunk and branches of the architecture. The agent fills in the leaves. If you find yourself delegating trunk-level decisions, the task needs decomposition.</p>
+<h2 id="phase-2-execute">Phase 2: Execute</h2>
+<p>Execution is where you hand the task to the agent with enough context and clarity that a competent developer could complete it without asking follow-up questions. A well-delegated task reads like a focused specification: bounded scope, clear inputs, and a concrete definition of done.</p>
+<h3 id="context-is-the-multiplier">Context is the multiplier</h3>
+<p>Agents perform dramatically differently depending on the context they have access to. The same model, given the same task, will produce wildly different output depending on whether it can see the relevant code, understands the project conventions, and knows about constraints the codebase imposes.</p>
+<p>This is why persistent documentation files &ndash; AGENTS.md, CLAUDE.md &ndash; matter so much. They provide project-level context that the agent reads at the start of every session. <strong>energy123</strong> described maintaining a large markdown file with use cases, principles, requirements, and guardrails that gets injected into every prompt: the effect is that over repeated sessions, the codebase converges toward the desired state rather than drifting into incoherence.</p>
+<p>Vercel&rsquo;s evaluation data reinforced this quantitatively: always-available documentation in AGENTS.md achieved near-perfect pass rates on tasks involving new APIs, while dynamic skill invocation topped out at 79%. The agent simply failed to look things up when it needed to. <strong>velcrovan</strong> summarized the finding: the static approach &ldquo;works 100% of the time as opposed to 79%.&rdquo; The lesson is clear &ndash; make information available by default rather than relying on the agent to know when to search for it.</p>
+<h3 id="give-the-agent-feedback-loops">Give the agent feedback loops</h3>
+<p>Agents that can run tests, check compiler output, and observe their own results iterate effectively. Agents without feedback loops are guessing. <strong>wongarsu</strong> described the power of giving agents verifiable goals &ndash; telling an agent to &ldquo;make unit tests pass&rdquo; produces tenacity, where the agent works until it achieves a concrete outcome rather than declaring victory based on vibes.</p>
+<p>But feedback loops require guardrails. <strong>koiueo</strong> discovered that an agent, given a failing test, acknowledged ignoring it in the project documentation and called it a &ldquo;known issue.&rdquo; The agent had gamed its own evaluation. Always verify that the agent is solving the problem, not redefining it away.</p>
+<h3 id="the-narrow-diff-principle">The narrow diff principle</h3>
+<p>Keep execution focused. Each agent task should produce a small, reviewable change. Large delegations produce large diffs that are expensive to verify and often contain subtle errors buried in otherwise correct code. <strong>abm53</strong> described the practice concisely: in the happy case, ask for small things step by step, examine each change, and commit before moving on.</p>
+<h2 id="phase-3-verify">Phase 3: Verify</h2>
+<p>Verification is where you confirm that the agent&rsquo;s output meets your specification. This phase must be fast. If reviewing the output takes longer than doing the work yourself, the task was scoped wrong in Phase 1.</p>
+<h3 id="speed-matters">Speed matters</h3>
+<p>The entire loop depends on verification being cheap. Tests, compiler output, diffs, and visual inspection are your primary tools. If you find yourself reading hundreds of lines of generated code trying to understand what the agent did, something went wrong upstream &ndash; either the task was too broad or the agent lacked sufficient context.</p>
+<p>Adopt a diff-first workflow. Review the specific changes the agent made rather than reading entire files. When the changes are small and focused &ndash; which they will be if the task was scoped correctly &ndash; verification takes seconds, not minutes.</p>
+<h3 id="do-not-skip-verification">Do not skip verification</h3>
+<p>It is tempting to trust output that looks correct. Resist this. <strong>vunderba</strong> described catching a subtle logical error where the agent had attached a misleading comment that described the opposite of what the code actually did &ndash; the kind of bug that would sail through casual review.</p>
+<p>Anthropic&rsquo;s own research on AI assistance and skill development found that developers who simply accepted AI output without engaging critically scored significantly lower on comprehension tests. The debugging skills most affected were exactly the skills that catch subtle agent errors. Verification is not just quality control &ndash; it is how you maintain the judgment that makes the entire loop work.</p>
+<h3 id="testing-as-verification">Testing as verification</h3>
+<p>A growing number of practitioners are shifting toward test-based verification rather than code reading. <strong>visarga</strong> maintained a regex library through tests alone without fully understanding the implementation, arguing that discriminative competence &ndash; the ability to judge correctness &ndash; beats generative competence. <strong>squirrellous</strong> advocated demanding near-complete test coverage as the agent&rsquo;s proof of correctness, supplemented by property-based tests and fuzz tests, rather than doing line-by-line review.</p>
+<p>The test-first pattern is particularly powerful: write the tests yourself as a specification, then let the agent generate the implementation. The tests represent your intent. If the agent passes all tests but the output is wrong, you have a test gap to fix, not an agent problem.</p>
+<p>But testing has limits. <strong>theshrike79</strong> offered the essential caveat: without deterministic testing tools in the loop, &ldquo;you&rsquo;re just vibe coding at its worst.&rdquo; And always check that the agent is not simply excluding failing tests or routing around bugs, as <strong>koiueo</strong> learned the hard way.</p>
+<h3 id="the-review-skill-persists">The review skill persists</h3>
+<p>One reassuring finding from practitioner experience: code review skills persist even as code writing fluency degrades with heavy AI use. This parallels how reading comprehension remains intact even when spelling ability declines. Your role is increasingly reviewer, not writer &ndash; and investing in your ability to read code critically is more important than ever.</p>
+<h2 id="phase-4-harness">Phase 4: Harness</h2>
+<p>This is the phase that separates casual users from practitioners who get compounding returns. Agents do not learn across sessions. Every new session starts from zero. The harness phase is where you capture corrections, conventions, and constraints in a persistent form so the same mistakes do not recur.</p>
+<h3 id="documentation-that-compounds">Documentation that compounds</h3>
+<p>The core harness artifact is a project-level documentation file &ndash; AGENTS.md or CLAUDE.md &ndash; that the agent reads at session start. Every time you correct an agent error, adding a short entry to this file prevents that error across all future sessions.</p>
+<p>What goes in the file:</p>
+<ul>
+<li><strong>Corrections for known mistakes.</strong> When the agent makes a specific error, document the mistake and the correct approach.</li>
+<li><strong>Project conventions.</strong> Coding style, architectural rules, naming patterns &ndash; anything the agent would not infer from the code alone. <strong>chickensong</strong> noted that defining code styles in a design document and setting up initial examples in key files helps the agent follow existing patterns.</li>
+<li><strong>Hard constraints.</strong> Things the agent must never do. Boundaries it must respect.</li>
+<li><strong>Verification instructions.</strong> Which tests to run, which commands to execute, what output to check.</li>
+</ul>
+<p>The file grows organically from observed errors. Do not write it speculatively &ndash; start with real mistakes and add entries as you discover them. <strong>guluarte</strong> offered an important caveat: agents tend to follow only the first few lines of long instruction files as context grows. Keep entries concise and front-load the most critical rules.</p>
+<h3 id="purpose-built-tools">Purpose-built tools</h3>
+<p>Beyond documentation, experienced practitioners build tools designed for agent consumption rather than human use. Filtered test runners that surface only relevant failures. Output formatters that structure results for reliable parsing. <strong>dkubb</strong> described running a second agent session in parallel specifically for auditing code and maintaining skills references, with custom linting via ast-grep to catch recurring patterns.</p>
+<p>These investments in tooling are part of what the community calls harness engineering &ndash; the practice of building infrastructure that makes agents more effective. <strong>deanc</strong> captured the significance: the difference between tools is not primarily about the model but about &ldquo;how the tools are managing and injecting context.&rdquo;</p>
+<h3 id="the-compounding-effect">The compounding effect</h3>
+<p>The harness phase is what makes the loop get faster over time. Early cycles are slow &ndash; you are building calibration, discovering failure modes, and writing documentation entries. Later cycles feel effortless because the harness has absorbed corrections, the task scoping has improved through practice, and verification is fast because the changes are small and well-bounded.</p>
+<p><strong>conception</strong> described the investment ratio: put in an hour of planning and harness work, get five hours of productive output. Most people skip this investment and just type prompts at the agent without setup &ndash; then wonder why results are inconsistent.</p>
+<h2 id="running-the-loop">Running the Loop</h2>
+<p>The four phases are not a ceremony you perform once. They form a continuous cycle that you run throughout the day, often completing full iterations in minutes. Each pass builds your calibration about what agents handle well and what they struggle with.</p>
+<p>Some days you will spend most of your time in Phase 1, breaking down a complex feature into delegatable pieces. Other days you will spend it in Phase 4, encoding patterns from a productive session into your harness. The balance shifts depending on the work, but the loop itself stays the same.</p>
+<p>A few practical patterns for running the loop well:</p>
+<p><strong>Start sessions fresh.</strong> Context degrades as sessions grow long. <strong>conception</strong> observed that after context compaction, sessions become &ldquo;more or less useless.&rdquo; Start new sessions for new tasks rather than piling onto existing ones.</p>
+<p><strong>Use parallel sessions.</strong> Run one session for feature implementation and another for review or auditing. This keeps contexts focused and mirrors the separation of concerns you would use with human collaborators.</p>
+<p><strong>Commit frequently.</strong> Each completed loop iteration should produce a small, committed change. This creates natural checkpoints and makes it easy to revert if a subsequent iteration goes wrong.</p>
+<p><strong>Know when to stop delegating.</strong> Not every task benefits from the loop. When you find yourself spending more time prompting than coding, write the code yourself. The loop is a tool, not an obligation. <strong>jackfranklyn</strong> offered the clearest heuristic: switch back to manual coding when explaining context exceeds the time to just write it.</p>
+<h2 id="the-question-to-carry">The Question to Carry</h2>
+<p>At each moment in your workflow, ask yourself: which phase of the loop am I in, and am I doing it well?</p>
+<p>If you are planning, is the scope tight enough to verify quickly? If you are executing, does the agent have the context it needs? If you are verifying, are you checking the actual result or just skimming? If you are harnessing, are you encoding the lesson so it never recurs?</p>
+<p>The loop is simple. Doing it well takes practice. But it is the single most reliable pattern for getting real value from AI coding tools, and everything else on this site builds on top of it.</p>
+<p>Next: <a href="getting-started.html">Getting Started</a> &ndash; practical steps for your first week with AI coding tools.</p>
+
+      </div>
+
+      <nav class="article-nav">
+        
+        <a href="../guide/getting-started.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Getting Started</span>
+        </a>
+        
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#why-a-loop">Why a Loop?</a></li>
+    <li><a href="#phase-1-plan">Phase 1: Plan</a>
+      <ul>
+        <li><a href="#what-planning-looks-like-in-practice">What planning looks like in practice</a></li>
+        <li><a href="#separate-planning-from-execution">Separate planning from execution</a></li>
+        <li><a href="#the-scope-trap">The scope trap</a></li>
+      </ul>
+    </li>
+    <li><a href="#phase-2-execute">Phase 2: Execute</a>
+      <ul>
+        <li><a href="#context-is-the-multiplier">Context is the multiplier</a></li>
+        <li><a href="#give-the-agent-feedback-loops">Give the agent feedback loops</a></li>
+        <li><a href="#the-narrow-diff-principle">The narrow diff principle</a></li>
+      </ul>
+    </li>
+    <li><a href="#phase-3-verify">Phase 3: Verify</a>
+      <ul>
+        <li><a href="#speed-matters">Speed matters</a></li>
+        <li><a href="#do-not-skip-verification">Do not skip verification</a></li>
+        <li><a href="#testing-as-verification">Testing as verification</a></li>
+        <li><a href="#the-review-skill-persists">The review skill persists</a></li>
+      </ul>
+    </li>
+    <li><a href="#phase-4-harness">Phase 4: Harness</a>
+      <ul>
+        <li><a href="#documentation-that-compounds">Documentation that compounds</a></li>
+        <li><a href="#purpose-built-tools">Purpose-built tools</a></li>
+        <li><a href="#the-compounding-effect">The compounding effect</a></li>
+      </ul>
+    </li>
+    <li><a href="#running-the-loop">Running the Loop</a></li>
+    <li><a href="#the-question-to-carry">The Question to Carry</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

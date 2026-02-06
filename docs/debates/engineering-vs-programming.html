@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Engineering vs. Programming: Is This &#39;Real&#39; Development? | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="The identity question — does managing AI agents count as engineering, or is something fundamental being lost?">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Engineering vs. Programming: Is This &#39;Real&#39; Development?">
+  <meta property="og:description" content="The identity question — does managing AI agents count as engineering, or is something fundamental being lost?">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-debates"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../debates/index.html">Debates</a></li>
+      
+    
+    <li aria-current="page">Engineering vs. Programming: Is This &#39;Real&#39; Development?</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="debate-header">
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/engineering-identity.html" class="tag-pill">engineering-identity</a>
+  
+  
+  
+  
+  <a href="../tags/career.html" class="tag-pill">career</a>
+  
+  
+  
+  
+  <a href="../tags/developer-role.html" class="tag-pill">developer-role</a>
+  
+  
+  
+  
+  <a href="../tags/management-analogy.html" class="tag-pill">management-analogy</a>
+  
+  
+</div>
+
+
+        <h1 class="debate-question">Engineering vs. Programming: Is This &#39;Real&#39; Development?</h1>
+        
+        <p class="debate-framing">The identity question — does managing AI agents count as engineering, or is something fundamental being lost?</p>
+        
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">11 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+      </header>
+
+      <div class="article-content">
+        <h2 id="the-question">The Question</h2>
+<p>Something uncomfortable is happening to the developer identity. Tools that were supposed to make programming more productive are instead making some developers feel like they&rsquo;re not programming at all. When your day consists of writing prompts, reviewing AI output, and shepherding agents through tasks, the question becomes unavoidable: is this still engineering?</p>
+<p>The tension runs deep because it touches on why people entered the field. Some developers are in it to build things &ndash; shipping products, solving user problems, creating value. For them, AI is a superpower that eliminates the tedious translation between intent and implementation. Others are in it because they love the craft of programming itself &ndash; the elegance of a well-structured algorithm, the satisfaction of making something work through direct understanding. For them, AI threatens the very activity that makes the work meaningful.</p>
+<p>This isn&rsquo;t just a philosophical debate. It determines how companies hire, how developers build careers, how teams structure their workflows, and whether the next generation of engineers will recognize their profession in what the field is becoming. The management analogy that keeps surfacing in community discussions may be the most revealing framework for understanding what&rsquo;s actually changing.</p>
+<h2 id="side-a-the-nature-of-engineering-is-changing">Side A: The Nature of Engineering Is Changing</h2>
+<h3 id="the-management-transition">The Management Transition</h3>
+<p>The most common analogy in practitioner discussions compares the shift to AI-assisted development to the transition from individual contributor to engineering manager. Just as managers must let go of implementation details and focus on direction, developers using AI must accept that the agent won&rsquo;t do things their way.</p>
+<blockquote>
+<p>&ldquo;Eerily similar to the jump from IC to manager.&rdquo; &ndash; seer</p>
+</blockquote>
+<p>This developer stopped obsessing over implementation details &ndash; if the LLM chose an iterative for loop instead of a functional approach, the tests still passed. The parallel is precise: managers who micromanage every line of code are ineffective, and developers who fight AI over stylistic preferences waste time that could be spent on higher-value work.</p>
+<p>The management analogy extends further. Just as managers learn which team members are strong at what, developers learn what each model is good and bad at. Trust builds through experience. You delegate, verify, and redirect &ndash; the same skills that make effective managers make effective AI-assisted developers.</p>
+<blockquote>
+<p>&ldquo;25+ years of experience + LLM = god mode, and it&rsquo;s fun again.&rdquo; &ndash; mlrtime</p>
+</blockquote>
+<p>For senior developers, the shift is often liberating. One described experiencing brain fog before LLMs &ndash; the accumulated burnout of decades of implementation work. AI tools brought them back to the IC role with renewed energy, handling the mechanical parts while the human focused on engineering judgment.</p>
+<h3 id="builders-vs-coders">Builders vs. Coders</h3>
+<p>A revealing fault line has emerged between developers who identify primarily as builders &ndash; people who use code as a means to create products &ndash; and those who identify as coders &ndash; people who find intrinsic satisfaction in the act of programming.</p>
+<p>One developer who identifies as a builder observes that AI tools have revealed a tension that always existed but was previously hidden. When implementation was the only path to a working product, builders and coders worked side by side with aligned incentives. Now that implementation can be partially automated, their interests diverge.</p>
+<p>For builders, the current moment is electrifying. Projects that would have taken months are completed in weeks. Ideas that were too ambitious to attempt are now feasible. The barrier between concept and working software has dropped dramatically.</p>
+<blockquote>
+<p>&ldquo;Language models have enabled me to do passion projects I never would have attempted before.&rdquo; &ndash; GorbachevyChase</p>
+</blockquote>
+<p>A retired developer used Claude to build a disassembler, assembler, and partially working emulator for reverse engineering firmware &ndash; work that would have been impractical as a solo hobby project without AI assistance. These aren&rsquo;t trivial toys but sophisticated tools that serve genuine needs.</p>
+<h3 id="the-higher-level-engineering">The Higher-Level Engineering</h3>
+<p>Advocates argue that what&rsquo;s being lost isn&rsquo;t engineering but merely one form of it. The developer role is shifting from low-level implementation to higher-level concerns that were always the more valuable part of the work.</p>
+<blockquote>
+<p>&ldquo;I like engineering where I figure out data flow and structures &ndash; writing code is the boring part.&rdquo; &ndash; theshrike79</p>
+</blockquote>
+<p>This perspective holds that system design, data modeling, architecture, and understanding user needs are the real engineering work. Writing code is the translation step &ndash; important, but not the creative core. AI handles the translation while humans do the engineering that actually matters.</p>
+<p>The emerging role of &ldquo;AI-augmented engineer&rdquo; combines traditional engineering skills with new capabilities: orchestration of AI agents, context management, verification design, and prompt engineering. One commenter compared this to the DevOps movement &ndash; it requires education and culture change, but represents a genuine evolution of the profession rather than its elimination.</p>
+<blockquote>
+<p>&ldquo;How to make mixed AI-human teams successful is an unexplored area.&rdquo; &ndash; virgilp</p>
+</blockquote>
+<p>Some see an entirely new discipline forming around the industrialization of AI-assisted development. This isn&rsquo;t a diminished version of engineering but a new frontier with its own challenges, skills, and craft.</p>
+<h3 id="the-evolution-timeline">The Evolution Timeline</h3>
+<p>Practitioners have mapped the developer-AI relationship evolving over a remarkably short period: pairing with AI as a junior developer in 2024, directing it as a tech lead in 2025, and delegating to agent teams as a product owner in 2026. The role isn&rsquo;t disappearing &ndash; it&rsquo;s ascending to higher levels of abstraction, as it has throughout the history of computing.</p>
+<p>After all, nobody argues that writing C instead of assembly makes you less of an engineer. Nobody claims that using a high-level framework instead of raw system calls disqualifies you from the title. Each generation of abstraction eliminated work that the previous generation considered essential craft. This may simply be the next step.</p>
+<h2 id="side-b-something-essential-is-being-lost">Side B: Something Essential Is Being Lost</h2>
+<h3 id="the-craft-argument">The Craft Argument</h3>
+<p>The opposing camp argues that there&rsquo;s something qualitatively different about this particular abstraction step. Previous advances (compilers, frameworks, libraries) still required the developer to think in code. AI-assisted development can bypass code-level thinking entirely &ndash; and that&rsquo;s where the danger lies.</p>
+<blockquote>
+<p>&ldquo;I got into programming because I like programming.&rdquo; &ndash; ryandrake</p>
+</blockquote>
+<p>This developer captures the existential tension with precision. They entered the field for the thrill of defining problems in data structures, the satisfaction of making abstractions work. If what excited them was telling something else to do it for them, they&rsquo;d have gone into management. Building things faster with AI is hollow if the process that attracted you to the field is removed.</p>
+<p>The craft argument isn&rsquo;t mere nostalgia. It holds that the act of writing code creates understanding that no amount of review can replicate. When you write code, you make hundreds of small decisions about naming, structure, error handling, and edge cases. Each decision reflects and deepens your understanding of the problem. When AI makes those decisions, the understanding doesn&rsquo;t transfer.</p>
+<blockquote>
+<p>&ldquo;It&rsquo;s like I&rsquo;m always in a meeting.&rdquo; &ndash; viccis</p>
+</blockquote>
+<p>One developer described AI-assisted coding as removing the building aspect of their work and replacing it with business logic, product requirements, and code reviews &ndash; the parts of software development that most developers actively try to minimize. The result is a job that looks more like middle management than engineering.</p>
+<h3 id="the-memoryless-junior-problem">The Memoryless Junior Problem</h3>
+<p>The management analogy, embraced by Side A, actually contains a devastating counterpoint when examined closely.</p>
+<blockquote>
+<p>&ldquo;A team with severe brain damage affecting long-term memory.&rdquo; &ndash; Ronsenshi</p>
+</blockquote>
+<p>Unlike human team members who learn from mistakes and grow over time, AI agents with context limitations never form lasting memories. Each new session starts from scratch. Each conversation requires re-establishing context. The &ldquo;team&rdquo; you&rsquo;re managing never improves, never develops expertise in your codebase, and never anticipates your needs based on past experience.</p>
+<p>This means the management analogy breaks down precisely where it matters most. Good management involves developing your team. AI-assisted development involves perpetually managing newcomers who forget everything between sessions. The developer writes natural language for what one commenter memorably called a &ldquo;junior-goldfish-memory-allstar-developer&rdquo; &ndash; simultaneously brilliant and forgetful.</p>
+<h3 id="the-identity-crisis">The Identity Crisis</h3>
+<p>Beyond practical concerns, many developers are experiencing genuine identity distress about what their work has become.</p>
+<blockquote>
+<p>&ldquo;Doom-tinkering&rdquo; &ndash; Imustaskforhelp</p>
+</blockquote>
+<p>This developer coined the term to describe how tinkering &ndash; once an active, joyful hobby &ndash; has become passive. Instead of building things, they watch AI build things and try to feel the same satisfaction. The shift from active creation to passive supervision feels like a fundamental loss.</p>
+<p>The anxiety extends to career concerns. If a project manager can now report bugs with Claude&rsquo;s suggested fix pasted in, and the developer&rsquo;s job is reduced to copying and confirming compilation, what is the developer&rsquo;s unique value? What prevents that role from being eliminated entirely?</p>
+<blockquote>
+<p>&ldquo;Laying things out the way LLMs can understand is becoming more important than doing them the right way.&rdquo; &ndash; keeganpoppen</p>
+</blockquote>
+<p>This observation points to a subtle but important distortion: AI-assisted development doesn&rsquo;t just change how work gets done, it changes what &ldquo;good&rdquo; looks like. Code optimized for human readability differs from code optimized for LLM comprehension. When the latter takes priority, the craft traditions that made software engineering a respected discipline begin to erode.</p>
+<h3 id="the-productivity-illusion">The Productivity Illusion</h3>
+<p>Skeptics challenge the productivity narrative directly. The expectation that AI makes developers faster may not translate into actual quality-of-life improvements.</p>
+<p>One commenter argues that the productivity gains are &ldquo;at best a very momentary thing.&rdquo; Expectations adapt. The free time gained from AI-assisted development gets absorbed by higher output expectations. Life satisfaction may actually decrease because the agency and creative satisfaction of manual coding are gone, replaced by the stress of managing AI output under tighter deadlines.</p>
+<blockquote>
+<p>&ldquo;LLMs produce lower quality at higher volumes in more time than it would take to write it myself.&rdquo; &ndash; barrell</p>
+</blockquote>
+<p>This developer, running a one-man business, finds the &ldquo;coding vs. building&rdquo; framing offensive and reductive. The reality of their experience is that AI produces more code, but it&rsquo;s lower quality and requires more total time once review and debugging are included. The productivity gains are illusory when measured end-to-end rather than just at the generation step.</p>
+<h3 id="the-feels-like-problem">The &ldquo;Feels Like&rdquo; Problem</h3>
+<p>Several developers describe an uncomfortable disconnect between how their work is valued by their organizations and how it feels to them personally.</p>
+<blockquote>
+<p>&ldquo;I feel as I am becoming tester more than developer.&rdquo; &ndash; ps</p>
+</blockquote>
+<p>This developer uses Opus on a 50,000-line Django project and finds that the shift from developer to tester is unwelcome. The AI sometimes excels and sometimes makes obvious mistakes that only visual inspection catches. The work feels less like engineering and more like quality assurance on someone else&rsquo;s output.</p>
+<p>Another developer observes that modern AI-assisted development has the qualities of perpetual meetings: constant review, constant communication about intent, constant supervision. The solitary, focused, creative work that attracted many to engineering has been replaced by a social, supervisory role that not everyone finds fulfilling.</p>
+<h2 id="where-it-stands">Where It Stands</h2>
+<p>This debate may be unresolvable because it ultimately rests on values rather than evidence:</p>
+<p><strong>Both sides agree that the developer role is changing.</strong> The disagreement is whether the change represents evolution (a natural progression toward higher abstraction) or degradation (the loss of something that made the work meaningful and the profession distinctive).</p>
+<p><strong>The builder/coder split is real and significant.</strong> Developers who entered the field to build products experience AI-assisted development very differently from those who entered to practice the craft of programming. Neither perspective is wrong, but they lead to genuinely incompatible conclusions about whether the change is positive.</p>
+<p><strong>The management analogy is more apt than either side fully acknowledges.</strong> The transition from IC to manager is genuinely one of the hardest in a developer&rsquo;s career. Many hate it. Many leave management to return to IC work. The fact that AI-assisted development triggers similar feelings should be taken seriously, not dismissed.</p>
+<p><strong>Experienced developers are adapting; the question is whether everyone can.</strong> Senior developers with decades of accumulated judgment report that AI tools amplify their effectiveness. But this success depends on skills they built before AI tools existed. Whether developers who grow up with AI tools will develop equivalent judgment is the open question at the heart of the <a href="../debates/junior-skills.html">junior skills debate</a>.</p>
+<p><strong>The emotional dimension matters.</strong> Developer satisfaction, identity, and sense of purpose are not trivial concerns. An industry that makes its practitioners miserable &ndash; even if they&rsquo;re more &ldquo;productive&rdquo; by some metric &ndash; is an industry with a retention problem. The developers who love the craft of programming won&rsquo;t simply accept its elimination; they&rsquo;ll leave, retire early, or find niches where manual coding is still valued.</p>
+<h2 id="whats-still-unknown">What&rsquo;s Still Unknown</h2>
+<ul>
+<li><strong>Is the management analogy temporary or permanent?</strong> If AI agents develop persistent memory and learning capabilities, the &ldquo;memoryless junior&rdquo; problem disappears and the management analogy becomes more apt. Current limitations may not reflect the steady state.</li>
+<li><strong>Will the market reward or punish AI-native development practices?</strong> If companies that fully embrace AI-assisted development consistently outperform those that prioritize craft, market forces will resolve the debate. If vibe-coded systems produce more incidents, security vulnerabilities, or maintenance costs, the pendulum may swing back.</li>
+<li><strong>Can new forms of craft emerge around AI orchestration?</strong> Some developers already find deep satisfaction in designing prompts, building verification systems, and engineering context management strategies. Whether this becomes a recognized craft with its own traditions and standards is an open question.</li>
+<li><strong>What happens to developers who can&rsquo;t or won&rsquo;t adapt?</strong> The history of technology is littered with displaced craftspeople. Whether the transition creates a new underclass of unemployable programmers or opens pathways to adjacent roles will depend on market dynamics and individual adaptability.</li>
+<li><strong>Does the builder/coder split predict career outcomes?</strong> If builders thrive and coders struggle in the AI era, this may reshape who enters the profession and what computer science education looks like. The long-term consequences for the field&rsquo;s intellectual diversity and innovation capacity are unknown.</li>
+</ul>
+
+      </div>
+
+      
+      
+      <div class="debate-related">
+        <h3>Related Debates</h3>
+        <div class="debate-related-grid">
+          
+            
+            <a href="../debates/junior-skills.html" class="debate-related-link">Does AI Prevent Junior Developer Skill Formation?</a>
+            
+          
+            
+            <a href="../debates/brain-atrophy.html" class="debate-related-link">Cognitive Dependency: Are Developers Losing Their Edge?</a>
+            
+          
+        </div>
+      </div>
+      
+
+      <nav class="article-nav">
+        
+        <a href="../debates/cost-sustainability.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Is the AI Coding Tool Economy Sustainable?</span>
+        </a>
+        
+        
+        <a href="../debates/junior-skills.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Does AI Prevent Junior Developer Skill Formation?</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-question">The Question</a></li>
+    <li><a href="#side-a-the-nature-of-engineering-is-changing">Side A: The Nature of Engineering Is Changing</a>
+      <ul>
+        <li><a href="#the-management-transition">The Management Transition</a></li>
+        <li><a href="#builders-vs-coders">Builders vs. Coders</a></li>
+        <li><a href="#the-higher-level-engineering">The Higher-Level Engineering</a></li>
+        <li><a href="#the-evolution-timeline">The Evolution Timeline</a></li>
+      </ul>
+    </li>
+    <li><a href="#side-b-something-essential-is-being-lost">Side B: Something Essential Is Being Lost</a>
+      <ul>
+        <li><a href="#the-craft-argument">The Craft Argument</a></li>
+        <li><a href="#the-memoryless-junior-problem">The Memoryless Junior Problem</a></li>
+        <li><a href="#the-identity-crisis">The Identity Crisis</a></li>
+        <li><a href="#the-productivity-illusion">The Productivity Illusion</a></li>
+        <li><a href="#the-feels-like-problem">The &ldquo;Feels Like&rdquo; Problem</a></li>
+      </ul>
+    </li>
+    <li><a href="#where-it-stands">Where It Stands</a></li>
+    <li><a href="#whats-still-unknown">What&rsquo;s Still Unknown</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

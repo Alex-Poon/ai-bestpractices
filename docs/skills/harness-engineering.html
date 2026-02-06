@@ -37,14 +37,13 @@
       <span>AI Best Practices</span>
     </a>
     <div class="nav-links">
-      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
-      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
       <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
-      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
-      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
       <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
       <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
-      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
     </div>
     <div class="nav-actions">
       <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
@@ -164,7 +163,7 @@
 <h2 id="why-the-harness-matters-more-than-the-prompt">Why the Harness Matters More Than the Prompt</h2>
 <p>A well-harnessed mediocre prompt outperforms a perfect prompt with no harness. This is counterintuitive because prompt engineering gets most of the public attention. But practitioners who have been using agents for months consistently report that their investment in configuration files and custom tools delivers more value than any improvement in prompting technique.</p>
 <p>The reason is simple: prompts are ephemeral, but the harness is persistent. Each session starts fresh &ndash; the agent has no memory of corrections you made yesterday. The harness is the only thing that carries forward.</p>
-<p>Vercel&rsquo;s evaluation of AGENTS.md files provides the strongest quantitative evidence. Their team tested documentation strategies against Next.js 16 APIs that were absent from model training data. An 8KB compressed documentation index embedded in AGENTS.md achieved a 100% pass rate, while active retrieval tools (skills) maxed out at 79%. The root cause: in 56% of cases, the agent simply failed to invoke the retrieval tool when it needed help. Passive context eliminates that decision point entirely. See the <a href="../sources/2026-01-29-agents-md-outperforms-skills/">full source</a>.</p>
+<p>Vercel&rsquo;s evaluation of AGENTS.md files provides the strongest quantitative evidence. Their team tested documentation strategies against Next.js 16 APIs that were absent from model training data. An 8KB compressed documentation index embedded in AGENTS.md achieved a 100% pass rate, while active retrieval tools (skills) maxed out at 79%. The root cause: in 56% of cases, the agent simply failed to invoke the retrieval tool when it needed help. Passive context eliminates that decision point entirely. See the <a href="../sources/2026-01-29-agents-md-outperforms-skills.html">full source</a>.</p>
 <h2 id="mechanism-1-documentation-files-agentsmd--claudemd">Mechanism 1: Documentation Files (AGENTS.md / CLAUDE.md)</h2>
 <p>These are markdown files placed in the root of your project (or in relevant subdirectories) that the agent reads at the start of every session. They serve as a persistent memory layer.</p>
 <h3 id="what-to-include">What to Include</h3>
@@ -198,7 +197,7 @@
 <li><strong>Deterministic behavior.</strong> Same input, same output. Non-deterministic tools confuse agents.</li>
 </ul>
 <h2 id="anthropomorphic-test-design">Anthropomorphic Test Design</h2>
-<p>Nicholas Carlini&rsquo;s <a href="../patterns/parallel-agent-coordination/">parallel compiler project</a> introduced a concept worth naming: designing test infrastructure for the agent&rsquo;s cognition, not for human developers. Techniques from the project:</p>
+<p>Nicholas Carlini&rsquo;s <a href="../workflows/parallel-agents.html">parallel compiler project</a> introduced a concept worth naming: designing test infrastructure for the agent&rsquo;s cognition, not for human developers. Techniques from the project:</p>
 <ul>
 <li><strong>Limited output verbosity</strong> to prevent context window pollution</li>
 <li><strong>Pre-computed aggregate statistics</strong> presented to the agent rather than requiring the agent to calculate them</li>
@@ -220,13 +219,13 @@
 <h3 id="harness-rot">Harness Rot</h3>
 <p>Letting the documentation accumulate outdated entries. Rules that reference old libraries or resolved issues add noise and can mislead the agent. Review the harness periodically and remove entries that no longer apply.</p>
 <h2 id="the-klaus-example">The Klaus Example</h2>
-<p>The <a href="../sources/2026-01-25-klaus-agentic-harness/">Klaus project</a> demonstrates harness engineering taken to its logical extreme: a full delegation system built entirely on Claude Code&rsquo;s native features. It uses a keyword-based scoring algorithm to route tasks to different agent tiers (from single-agent for simple edits to six-agent teams for complex architecture). The key insight is that sophisticated orchestration can be achieved through harness design alone, without external APIs or services.</p>
+<p>The <a href="../sources/2026-01-25-klaus-agentic-harness.html">Klaus project</a> demonstrates harness engineering taken to its logical extreme: a full delegation system built entirely on Claude Code&rsquo;s native features. It uses a keyword-based scoring algorithm to route tasks to different agent tiers (from single-agent for simple edits to six-agent teams for complex architecture). The key insight is that sophisticated orchestration can be achieved through harness design alone, without external APIs or services.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><a href="../sources/2026-01-29-agents-md-outperforms-skills/">AGENTS.md Outperforms Skills (Vercel)</a> &ndash; Quantitative evidence that passive context beats active retrieval, 100% vs 79%</li>
-<li><a href="../patterns/parallel-agent-coordination/">Building a C compiler with Claude</a> &ndash; Anthropomorphic test design and harness engineering at scale</li>
-<li><a href="../sources/2026-01-25-klaus-agentic-harness/">Klaus agentic harness</a> &ndash; Native Claude Code harness with tiered task routing</li>
-<li><a href="../sources/2026-01-22-ai-coding-toolkit/">AI Coding Toolkit</a> &ndash; Phase-gated workflow with built-in verification</li>
+<li><a href="../sources/2026-01-29-agents-md-outperforms-skills.html">AGENTS.md Outperforms Skills (Vercel)</a> &ndash; Quantitative evidence that passive context beats active retrieval, 100% vs 79%</li>
+<li><a href="../workflows/parallel-agents.html">Building a C compiler with Claude</a> &ndash; Anthropomorphic test design and harness engineering at scale</li>
+<li><a href="../sources/2026-01-25-klaus-agentic-harness.html">Klaus agentic harness</a> &ndash; Native Claude Code harness with tiered task routing</li>
+<li><a href="../sources/2026-01-22-ai-coding-toolkit.html">AI Coding Toolkit</a> &ndash; Phase-gated workflow with built-in verification</li>
 <li><strong>EastLondonCoder</strong> (HN) &ndash; Coined &ldquo;continuously tightening the harness&rdquo; as the iterative documentation discipline</li>
 <li><strong>fix4fun</strong> (HN) &ndash; Building custom tools specifically for agent consumption as a key productivity multiplier</li>
 </ul>
@@ -295,30 +294,29 @@
   <div class="footer-container">
     <div class="footer-brand">
       <span class="footer-logo">AI Best Practices</span>
-      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
     </div>
     <div class="footer-nav">
       <div class="footer-section">
         <h3>Learn</h3>
         <ul>
-          <li><a href="../start-here/index.html">Start Here</a></li>
-          <li><a href="../skills/index.html">Skills</a></li>
-          <li><a href="../workflows/index.html">Workflows</a></li>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Explore</h3>
         <ul>
           <li><a href="../tools/index.html">Tools</a></li>
-          <li><a href="../landscape/index.html">Landscape</a></li>
           <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
           <li><a href="../sources/index.html">Sources</a></li>
-          <li><a href="../tags/">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 84 pages across 187 topics.</p>
     </div>
   </div>
 </footer>

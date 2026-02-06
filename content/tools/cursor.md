@@ -49,4 +49,4 @@ Many practitioners use both. Cursor for in-flow editing and quick completions; C
 
 Cursor is the strongest choice for developers who want AI assistance tightly integrated into a familiar VS Code environment, value both autocomplete and agentic modes, and prefer visual feedback over terminal workflows. It is less well-suited for developers committed to other editors, those who want maximum extensibility through project files and hooks, or those who primarily need autonomous task execution.
 
-For the broader decision framework, see the [Practitioner's Tool Comparison](/references/tool-landscape.html).
+For the broader decision framework, see the [Practitioner's Tool Comparison](/tools/).

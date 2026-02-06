@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prompt Craft | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="Writing effective prompts for coding agents — from simple instructions to complex architectural guidance.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Prompt Craft">
+  <meta property="og:description" content="Writing effective prompts for coding agents — from simple instructions to complex architectural guidance.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-practices"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../practices/index.html">Practices</a></li>
+      
+    
+    <li aria-current="page">Prompt Craft</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Prompt Craft</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">9 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/prompts.html" class="tag-pill">prompts</a>
+  
+  
+  
+  
+  <a href="../tags/instructions.html" class="tag-pill">instructions</a>
+  
+  
+  
+  
+  <a href="../tags/context-engineering.html" class="tag-pill">context-engineering</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <p>Prompt craft is the skill of communicating effectively with AI coding agents. It is not the most important skill in AI-assisted development &ndash; <a href="../task-scoping.html">task scoping</a> and <a href="../verification.html">verification</a> matter more &ndash; but it is the interface through which every other skill is expressed. A well-scoped task still needs to be communicated clearly. A well-built harness still needs to be written in language the agent processes reliably.</p>
+<p>The key insight practitioners have converged on: prompt craft is less about clever techniques and more about providing the right context. The model&rsquo;s behavior is dominated by what you put in front of it, not by how cleverly you phrase the request.</p>
+<h2 id="what-prompt-craft-is">What Prompt Craft Is</h2>
+<p>Prompt craft encompasses three activities:</p>
+<ol>
+<li><strong>Instruction writing</strong>: Telling the agent what to do in a single interaction.</li>
+<li><strong>Context engineering</strong>: Deciding what information the agent needs to see and in what order.</li>
+<li><strong>Persistent documentation</strong>: Writing AGENTS.md files, skills, and system-level instructions that shape every interaction.</li>
+</ol>
+<p>Activity 3 overlaps heavily with <a href="../harness-engineering.html">harness engineering</a>. The distinction is that harness engineering is about the infrastructure (files, tools, scripts), while prompt craft is about the language within that infrastructure.</p>
+<h2 id="why-context-dominates-technique">Why Context Dominates Technique</h2>
+<p>As models improve, the marginal return on prompt engineering tricks diminishes. A strong model with a simple, well-contextualized prompt increasingly outperforms a weak model with an elaborate prompt. The optimization priority should be: choose the best available model first, then provide the right context, then refine your phrasing.</p>
+<p><strong>energy123</strong> maintains a 15k-token markdown file containing the full project world model &ndash; use cases, principles, requirements, and guardrails &ndash; that goes into every prompt. The result: over repeated inferences, the codebase converges toward the desired state. The investment is in context, not in prompt tricks.</p>
+<p><strong>smhinsey</strong> observed a &ldquo;strange insistence on not helping the LLM&rdquo; among practitioners &ndash; treating AI as a black box you throw requests at rather than a collaborator you equip with information. Describing data structures, algorithms, and solution architecture alongside your request dramatically improves output. People resist this, like watching a &ldquo;John Henry legend in real time.&rdquo;</p>
+<p><strong>hug</strong> provided a philosophical defense of why good prompting matters: it is the primary interface. Those who prompt poorly and complain about results are within the scope of the advice to improve their approach. But this is not victim-blaming &ndash; it is acknowledging that communication skill is a real and learnable factor.</p>
+<h2 id="how-to-write-effective-prompts">How to Write Effective Prompts</h2>
+<h3 id="principle-1-be-specific-about-the-outcome">Principle 1: Be Specific About the Outcome</h3>
+<p>Vague goals produce vague results. &ldquo;Make this code better&rdquo; gives the agent no target. &ldquo;Extract the validation logic from this 200-line function into separate functions, one per validation rule, maintaining the same execution order&rdquo; gives the agent a concrete specification.</p>
+<p>The more precisely you can describe the desired state, the more likely the agent is to reach it. This connects directly to task scoping: a well-scoped task is inherently easier to describe precisely.</p>
+<h3 id="principle-2-provide-examples-not-just-rules">Principle 2: Provide Examples, Not Just Rules</h3>
+<p>Agents follow demonstrated patterns more reliably than stated rules. If you want a specific coding style, show it. If you want a particular error-handling approach, include an example. <strong>chickensong</strong> found that defining code styles in a design document and setting up initial examples in key files produces much better adherence than stating rules abstractly.</p>
+<p>This principle applies to AGENTS.md files as well. A rule that says &ldquo;use functional error handling&rdquo; is less effective than a rule that says &ldquo;use functional error handling&rdquo; followed by a 5-line code example of the pattern.</p>
+<h3 id="principle-3-state-constraints-explicitly">Principle 3: State Constraints Explicitly</h3>
+<p>The agent does not know what it does not know. Constraints that are obvious to you are invisible to the agent unless you state them:</p>
+<ul>
+<li>&ldquo;Do not modify files outside the /src/auth/ directory.&rdquo;</li>
+<li>&ldquo;This function must remain backwards-compatible with the existing API.&rdquo;</li>
+<li>&ldquo;Do not add new dependencies.&rdquo;</li>
+<li>&ldquo;The solution must work with Node 18.&rdquo;</li>
+</ul>
+<p>Each unstated constraint is an opportunity for the agent to produce plausible but wrong output.</p>
+<h3 id="principle-4-frame-instructions-as-policy">Principle 4: Frame Instructions as Policy</h3>
+<p><strong>thom</strong> identified the key to making agents follow instructions: frame docs as policy the agent must follow, not as reference material it can optionally consult. The difference between &ldquo;here is how we handle errors&rdquo; (informational) and &ldquo;you must handle errors this way&rdquo; (prescriptive) is significant for agent compliance.</p>
+<p>Models are, as <strong>thom</strong> put it, &ldquo;wildly overconfident but utterly obsequious.&rdquo; They will confidently ignore guidelines they interpret as suggestions while dutifully following rules they interpret as mandates.</p>
+<h3 id="principle-5-front-load-the-most-important-information">Principle 5: Front-Load the Most Important Information</h3>
+<p><strong>guluarte</strong> reported that in practice, agents follow the first two or three lines of AGENTS.md and selectively ignore instructions deeper in the file. As context grows, attention to later instructions degrades.</p>
+<p>Practical implication: put your most critical rules first. Put &ldquo;never do X&rdquo; rules before &ldquo;prefer Y&rdquo; guidelines. Put architectural constraints before style preferences. The information the agent must never ignore goes at the top.</p>
+<p><strong>aaroninsf</strong> found an additional 14% improvement just from mentioning AGENTS.md in the first 16 lines of the README &ndash; increasing the probability that the agent loads the documentation at all.</p>
+<h3 id="principle-6-use-structured-formats">Principle 6: Use Structured Formats</h3>
+<p>Agents parse structured formats (bullet points, numbered lists, headers, do/don&rsquo;t comparisons) more reliably than narrative prose. A prompt that says:</p>
+<pre tabindex="0"><code>**Do:**
+- Use date-fns for date manipulation
+- Return typed errors, not thrown exceptions
+- Include JSDoc for public functions
+
+**Do Not:**
+- Import from the legacy utils package
+- Use any/unknown types
+- Catch errors silently
+</code></pre><p>is more effective than the equivalent information written as a paragraph.</p>
+<h3 id="principle-7-include-verification-instructions">Principle 7: Include Verification Instructions</h3>
+<p>Tell the agent how to verify its own work. &ldquo;After implementing, run <code>npm test</code> and confirm all tests pass.&rdquo; &ldquo;After making changes, verify the build succeeds with <code>cargo build</code>.&rdquo; This leverages the agent&rsquo;s tool-calling ability to self-check before presenting results to you.</p>
+<p><strong>wongarsu</strong> found that giving agents verifiable goals like &ldquo;make these unit tests pass&rdquo; produces significantly better outcomes than open-ended implementation requests. The verifiable goal creates a feedback loop the agent can use to self-correct.</p>
+<h2 id="writing-agentsmd-files">Writing AGENTS.md Files</h2>
+<p>The AGENTS.md file (or CLAUDE.md for Claude Code) is the most durable form of prompt craft. It shapes every interaction without requiring you to repeat yourself.</p>
+<h3 id="structure-that-works">Structure That Works</h3>
+<p>Based on Vercel&rsquo;s evaluation and practitioner consensus, effective AGENTS.md files share these characteristics:</p>
+<p><strong>Compressed, not verbose.</strong> Aggressively compressed documentation performs as well as full content in evals. Concise rules work better than lengthy explanations.</p>
+<p><strong>Organized by priority.</strong> Critical constraints first, style preferences later. The agent&rsquo;s attention to later sections degrades as context fills.</p>
+<p><strong>Empirically grown.</strong> Start small. Add entries only when you observe actual mistakes. The best AGENTS.md files are collections of corrections, not speculative guidelines.</p>
+<p><strong>Action-oriented.</strong> &ldquo;Always do X&rdquo; and &ldquo;never do Y&rdquo; rather than &ldquo;consider whether X might be appropriate.&rdquo; Remove ambiguity.</p>
+<h3 id="the-scaling-problem">The Scaling Problem</h3>
+<p>Static AGENTS.md works well for small to medium projects. For large projects with many procedures, the document exceeds useful context limits. The resolution, as discussed in <a href="../harness-engineering.html">harness engineering</a>, is to split between always-loaded critical rules and on-demand skills for specialized workflows.</p>
+<p><strong>hu3</strong> is experimenting with splitting a large AGENTS.md into smaller SKILL.md files, though worried the agent might skip loading some of them. The 5-10% skill invocation failure rate that <strong>joebates</strong> reported suggests this concern is valid.</p>
+<h2 id="prompting-for-different-modes">Prompting for Different Modes</h2>
+<h3 id="planning-prompts">Planning Prompts</h3>
+<p>When using the agent to explore a problem space:</p>
+<ul>
+<li>Ask open-ended questions about tradeoffs</li>
+<li>Request multiple approaches with pros and cons</li>
+<li>Ask the agent to identify risks and edge cases</li>
+<li>Do not ask for code yet &ndash; keep the conversation at the design level</li>
+</ul>
+<h3 id="implementation-prompts">Implementation Prompts</h3>
+<p>When delegating execution:</p>
+<ul>
+<li>Provide the spec (function signature, expected behavior, edge cases)</li>
+<li>Reference the relevant existing code</li>
+<li>State constraints explicitly</li>
+<li>Include verification instructions</li>
+</ul>
+<h3 id="debugging-prompts">Debugging Prompts</h3>
+<p>When investigating failures:</p>
+<ul>
+<li>Include the error message and stack trace</li>
+<li>Describe what you expected vs. what happened</li>
+<li>Indicate what you have already tried</li>
+<li>Ask for hypotheses before fixes</li>
+</ul>
+<h3 id="review-prompts">Review Prompts</h3>
+<p>When asking the agent to review code:</p>
+<ul>
+<li>Specify what to focus on (security, performance, correctness, style)</li>
+<li>Ask for specific concerns, not generic approval</li>
+<li>Request the agent to identify what is missing, not just what is wrong</li>
+</ul>
+<h2 id="anti-patterns">Anti-Patterns</h2>
+<h3 id="the-wall-of-text">The Wall of Text</h3>
+<p>Providing so much context that the agent drowns in information. Context windows are finite, and attention degrades with length. <strong>conception</strong> warned that after context window compaction, sessions become &ldquo;more or less useless.&rdquo; Include only what the agent needs for this specific task.</p>
+<h3 id="prompt-and-pray">Prompt-and-Pray</h3>
+<p>Firing off a prompt and hoping for the best without providing context, constraints, or examples. This is the most common mistake practitioners make and the source of most complaints about model quality.</p>
+<p><strong>Fix:</strong> Invest the &ldquo;hour of setup&rdquo; that <strong>conception</strong> described. Provide context, examples, and constraints. The agent cannot read your mind.</p>
+<h3 id="fighting-the-agents-defaults">Fighting the Agent&rsquo;s Defaults</h3>
+<p>Spending more time overriding the agent&rsquo;s preferences than it would take to write the code yourself. <strong>nonethewiser</strong> described fighting Claude&rsquo;s preference for ReactRouter, eventually concluding it was pointless when the agent&rsquo;s default works correctly.</p>
+<p><strong>Fix:</strong> Pick your battles. Fight the agent on architectural decisions and security constraints. Accept its preferences on implementation details that do not matter. If the choice genuinely does not affect quality, let it go.</p>
+<h3 id="copy-paste-prompting">Copy-Paste Prompting</h3>
+<p>Reusing the same prompt across different projects or contexts without adaptation. Prompts that worked on one codebase may fail on another because the implicit context has changed.</p>
+<p><strong>Fix:</strong> Externalize the reusable parts into AGENTS.md and keep per-task prompts focused on the specific task.</p>
+<h3 id="anthropomorphizing-intent">Anthropomorphizing Intent</h3>
+<p>Assuming the agent &ldquo;understands&rdquo; your goal when it is simply pattern-matching on your text. <strong>serial_dev</strong> described the agent claiming &ldquo;I can clearly see the issue now&rdquo; ten times &ndash; always wrong. The agent&rsquo;s confident tone does not indicate comprehension.</p>
+<p><strong>Fix:</strong> Verify the output rather than trusting the agent&rsquo;s self-assessment. Rely on tests and review, not on the agent&rsquo;s explanation of what it did.</p>
+<h2 id="evidence">Evidence</h2>
+<p><strong>energy123</strong> (HN, thread 46550710): Maintains a 15k-token markdown file with the full project world model injected into every prompt. Over time, the codebase converges toward the desired state.</p>
+<p><strong>smhinsey</strong> (HN, thread 46790769): Observes a &ldquo;strange insistence on not helping the LLM.&rdquo; Describing data structures and architecture alongside requests dramatically improves output.</p>
+<p><strong>chickensong</strong> (HN, thread 46797040): Defining code styles in design docs and setting up initial examples in key files produces much better pattern adherence.</p>
+<p><strong>thom</strong> (HN, thread 46817363): Frame documentation as policy the agent must follow, not as reference material. Models are responsive to authority framing.</p>
+<p><strong>guluarte</strong> (HN, thread 46827212): Agents follow the first two or three lines of AGENTS.md and selectively ignore deeper instructions.</p>
+<p><strong>hug</strong> (HN, thread 46547792): Philosophical defense of prompt quality as valid criticism. The prompt is the primary interface; communication skill is a learnable factor.</p>
+<p><strong>conception</strong> (HN, thread 46549865): &ldquo;Put in an hour of work, get five hours out.&rdquo; Most people skip the setup investment and then wonder why output is poor.</p>
+<p><strong>nonethewiser</strong> (HN, thread 46799218): Fighting the agent&rsquo;s preference for ReactRouter was pointless. Accept defaults when the choice does not affect quality.</p>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../practices/context-management.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Context Management</span>
+        </a>
+        
+        
+        <a href="../practices/model-selection.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Model Selection</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-prompt-craft-is">What Prompt Craft Is</a></li>
+    <li><a href="#why-context-dominates-technique">Why Context Dominates Technique</a></li>
+    <li><a href="#how-to-write-effective-prompts">How to Write Effective Prompts</a>
+      <ul>
+        <li><a href="#principle-1-be-specific-about-the-outcome">Principle 1: Be Specific About the Outcome</a></li>
+        <li><a href="#principle-2-provide-examples-not-just-rules">Principle 2: Provide Examples, Not Just Rules</a></li>
+        <li><a href="#principle-3-state-constraints-explicitly">Principle 3: State Constraints Explicitly</a></li>
+        <li><a href="#principle-4-frame-instructions-as-policy">Principle 4: Frame Instructions as Policy</a></li>
+        <li><a href="#principle-5-front-load-the-most-important-information">Principle 5: Front-Load the Most Important Information</a></li>
+        <li><a href="#principle-6-use-structured-formats">Principle 6: Use Structured Formats</a></li>
+        <li><a href="#principle-7-include-verification-instructions">Principle 7: Include Verification Instructions</a></li>
+      </ul>
+    </li>
+    <li><a href="#writing-agentsmd-files">Writing AGENTS.md Files</a>
+      <ul>
+        <li><a href="#structure-that-works">Structure That Works</a></li>
+        <li><a href="#the-scaling-problem">The Scaling Problem</a></li>
+      </ul>
+    </li>
+    <li><a href="#prompting-for-different-modes">Prompting for Different Modes</a>
+      <ul>
+        <li><a href="#planning-prompts">Planning Prompts</a></li>
+        <li><a href="#implementation-prompts">Implementation Prompts</a></li>
+        <li><a href="#debugging-prompts">Debugging Prompts</a></li>
+        <li><a href="#review-prompts">Review Prompts</a></li>
+      </ul>
+    </li>
+    <li><a href="#anti-patterns">Anti-Patterns</a>
+      <ul>
+        <li><a href="#the-wall-of-text">The Wall of Text</a></li>
+        <li><a href="#prompt-and-pray">Prompt-and-Pray</a></li>
+        <li><a href="#fighting-the-agents-defaults">Fighting the Agent&rsquo;s Defaults</a></li>
+        <li><a href="#copy-paste-prompting">Copy-Paste Prompting</a></li>
+        <li><a href="#anthropomorphizing-intent">Anthropomorphizing Intent</a></li>
+      </ul>
+    </li>
+    <li><a href="#evidence">Evidence</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

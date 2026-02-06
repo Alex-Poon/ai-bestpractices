@@ -1,25 +1,25 @@
 <section class="hero">
   <div class="hero-container">
-    <p class="hero-eyebrow">Knowledge Base</p>
-    <h1 class="hero-title">AI Best Practices</h1>
-    <p class="hero-description">{{ .Site.Params.description }}</p>
+    <p class="hero-eyebrow">Synthesized from 6,000+ practitioner comments</p>
+    <h1 class="hero-title">What Actually Works in AI-Assisted Development</h1>
+    <p class="hero-description">The definitive reference on AI coding tools — where every claim is backed by real practitioner experience across 20 major HN discussions.</p>
     <div class="hero-stats">
       <div class="hero-stat">
+        <span class="hero-stat-number">6,000+</span>
+        <span class="hero-stat-label">Comments Analyzed</span>
+      </div>
+      <div class="hero-stat">
         <span class="hero-stat-number">{{ len (where site.RegularPages "Section" "sources") }}</span>
-        <span class="hero-stat-label">Sources</span>
+        <span class="hero-stat-label">Source Discussions</span>
       </div>
       <div class="hero-stat">
-        <span class="hero-stat-number">{{ add (add (len (where site.RegularPages "Section" "skills")) (len (where site.RegularPages "Section" "workflows"))) (add (len (where site.RegularPages "Section" "tools")) (len (where site.RegularPages "Section" "landscape"))) }}</span>
-        <span class="hero-stat-label">Articles</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-number">{{ len site.Taxonomies.tags }}</span>
-        <span class="hero-stat-label">Topics</span>
+        <span class="hero-stat-number">{{ len site.RegularPages }}</span>
+        <span class="hero-stat-label">Pages</span>
       </div>
     </div>
     <div class="hero-actions">
-      {{ with site.GetPage "/start-here" }}<a href="{{ .RelPermalink }}" class="btn btn-primary">Start Here</a>{{ end }}
-      {{ with site.GetPage "/skills" }}<a href="{{ .RelPermalink }}" class="btn btn-secondary">Core Skills</a>{{ end }}
+      {{ with site.GetPage "/guide" }}<a href="{{ .RelPermalink }}" class="btn btn-primary">Start the Guide</a>{{ end }}
+      {{ with site.GetPage "/debates" }}<a href="{{ .RelPermalink }}" class="btn btn-secondary">Explore Debates</a>{{ end }}
     </div>
   </div>
 </section>

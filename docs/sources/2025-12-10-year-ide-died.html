@@ -3,12 +3,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>2026: The Year the IDE Died (Steve Yegge and Gene Kim) | AI Best Practices Knowledge Base</title>
-  <meta name="description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta name="description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
   <meta name="color-scheme" content="dark light">
 
   
   <meta property="og:title" content="2026: The Year the IDE Died (Steve Yegge and Gene Kim)">
-  <meta property="og:description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta property="og:description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
   <meta property="og:type" content="article">
 
   
@@ -37,14 +37,13 @@
       <span>AI Best Practices</span>
     </a>
     <div class="nav-links">
-      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
-      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
       <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
-      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
-      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
       <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
       <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
-      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
     </div>
     <div class="nav-actions">
       <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
@@ -114,7 +113,7 @@
 
   
 
-  <span class="meta-reading-time">3 min read</span>
+  <span class="meta-reading-time">4 min read</span>
 
   
   <span class="tier-badge tier-badge--2">Tier 2</span>
@@ -195,20 +194,44 @@
 <p>&ldquo;building on sand&rdquo; — mikebiglan (HN, on students who skip fundamentals)</p>
 </blockquote>
 <h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
-<p>The discussion generated 7 points and 4 comments. Key themes:</p>
-<p><strong>Static Typing as Enabler</strong></p>
-<ul>
-<li><strong>raw_anon_1111</strong>: Argued that AI coding will only improve significantly with statically typed languages and tools that can do guaranteed-safe refactoring, envisioning a combination of C#, ReSharper-style tools, and AI that can do deterministic type checks.</li>
-</ul>
-<p><strong>Talk Reception</strong></p>
-<ul>
-<li><strong>lkbm</strong>: Found Yegge&rsquo;s talks always fun and insightful but noted this particular one was light on concrete content.</li>
-<li><strong>Sevii</strong>: Expressed enthusiasm for Claude Code making IDEs less necessary, preferring a terminal-and-light-editor workflow.</li>
-</ul>
-<p><strong>Nuanced Future View</strong></p>
-<ul>
-<li><strong>mikebiglan</strong>: Provided a detailed five-point framework arguing that (1) the IDE will evolve into a new category, (2) professionals will still read code, (3) senior devs risk dismissing the new modality, (4) students must still learn fundamentals, and (5) humans should stay in control of the development process.</li>
-</ul>
+<p><em>11 comments total</em></p>
+<p><strong>raw_anon_1111</strong>: Argued AI coding will only improve with static typing, guaranteed-safe refactoring tools, and immediate feedback on breaking changes. Envisioned a combination of C#, ReSharper-style tools, and AI doing deterministic type checks along with running unit tests&hellip;</p>
+<p><strong>lkbm</strong>: Found Yegge&rsquo;s talks always fun and insightful, but noted this particular one was enjoyable with not much content to his portion.</p>
+<blockquote>
+<p><strong>mikebiglan</strong>: Agreed, adding that Gene Kim&rsquo;s insights were also valuable and that we&rsquo;re now in a time of insights about how all this plays out.</p>
+</blockquote>
+<p><strong>Sevii</strong>: Expressed enthusiasm for Claude Code making IDEs less necessary. Wants to be in the terminal and a light text editor like Sublime Text.</p>
+<blockquote>
+<p><strong>mikebiglan</strong>: Suggested checking out DevSwarm for the best of both worlds, noting the next update would take it to the next level.</p>
+</blockquote>
+<p><strong>mikebiglan</strong>: Provided a detailed five-point framework: (1) the IDE will evolve into a new AI-first, workflow-first category, not die; (2) professionals will still read and reason about code for production systems; (3) senior devs risk dismissing the new modality&hellip;</p>
+<blockquote>
+<p><strong>skydhash</strong>: Noted an assumption that IDEs mean Visual Studio or IDEA. No comparison is ever made to Smalltalk, REPL development like Slime, or programmable editors like VIM and Emacs which leverage the Unix environment&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Sevii</strong>: Countered that most people in the industry have never used Smalltalk, VIM, Emacs, or heard of Slime — that&rsquo;s where the hidden assumption comes from.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mikebiglan</strong>: Shared years of emacs (and dired) experience. Asked whether these could be leveraged for AI development, noting Claude Code has brought terminals back into the limelight.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>skydhash</strong>: Argued LLMs are text-focused technology and tools like Unix Shell, Emacs, and Vi provide the key capability of defining custom commands on the fly. Described a vision of <code>~/ai/bulletify</code> scripts invoked via Vi&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>gregben</strong>: Described living in Emacs with shell buffers, using gptel to interact with Anthropic/Google/OpenAI LLMs. Running an Emacs daemon for days/weeks takes things to another level. Moved from mutt to mu4e for email, switched from Vim to Emacs for org-mode&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
 
       </div>
 
@@ -253,30 +276,29 @@
   <div class="footer-container">
     <div class="footer-brand">
       <span class="footer-logo">AI Best Practices</span>
-      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
     </div>
     <div class="footer-nav">
       <div class="footer-section">
         <h3>Learn</h3>
         <ul>
-          <li><a href="../start-here/index.html">Start Here</a></li>
-          <li><a href="../skills/index.html">Skills</a></li>
-          <li><a href="../workflows/index.html">Workflows</a></li>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Explore</h3>
         <ul>
           <li><a href="../tools/index.html">Tools</a></li>
-          <li><a href="../landscape/index.html">Landscape</a></li>
           <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
           <li><a href="../sources/index.html">Sources</a></li>
-          <li><a href="../tags/">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
     </div>
   </div>
 </footer>

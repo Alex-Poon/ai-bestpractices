@@ -3,12 +3,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>How to Code Claude Code in 200 Lines of Code | AI Best Practices Knowledge Base</title>
-  <meta name="description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta name="description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
   <meta name="color-scheme" content="dark light">
 
   
   <meta property="og:title" content="How to Code Claude Code in 200 Lines of Code">
-  <meta property="og:description" content="What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.">
+  <meta property="og:description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
   <meta property="og:type" content="article">
 
   
@@ -37,14 +37,13 @@
       <span>AI Best Practices</span>
     </a>
     <div class="nav-links">
-      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
-      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
       <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
-      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
-      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
       <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
       <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
-      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
     </div>
     <div class="nav-actions">
       <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
@@ -114,7 +113,7 @@
 
   
 
-  <span class="meta-reading-time">4 min read</span>
+  <span class="meta-reading-time">28 min read</span>
 
   
   <span class="tier-badge tier-badge--1">Tier 1</span>
@@ -194,26 +193,658 @@
 <p>&ldquo;The LLM never actually touches your filesystem.&rdquo; — Mihail Eric</p>
 </blockquote>
 <h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
-<p>The discussion generated 816 points and 70 comments. Key themes:</p>
-<p><strong>Agreement on simplicity with caveats</strong></p>
-<ul>
-<li><strong>libraryofbabel</strong>: Agreed the core of a coding agent is a simple loop with tool calling, but felt the article undersells the engineering required to make it production-ready</li>
-<li><strong>mirzap</strong>: Compared the 200-line loop to saying &ldquo;a DB is a B-tree&rdquo; — technically true but operationally incomplete</li>
-<li><strong>prodigycorp</strong>: Argued that modern harnesses have evolved so far past the simple loop that this is no longer an accurate mental model of what Claude Code actually does</li>
-</ul>
-<p><strong>Production engineering challenges</strong></p>
-<ul>
-<li><strong>joshmlewis</strong>: Shared experience building an enterprise-grade agentic loop processing a billion-plus tokens per month, noting many small details that greatly magnify complexity in real-world use</li>
-<li><strong>sams99</strong>: Highlighted that file editing is a surprisingly difficult problem involving fine-tuning challenges and real-world hallucinations</li>
-<li><strong>nyellin</strong>: Pointed out that the demo agent will exhibit early stopping where it finishes before the task is done, and that reasoning models alone do not fix this</li>
-</ul>
-<p><strong>Broader implications for agent building</strong></p>
-<ul>
-<li><strong>tptacek</strong>: Found it interesting that the realistic questions about competing with Claude Code boil down to things any proficient developer could do, while the competitive moat is in the model itself</li>
-<li><strong>dmvaldman</strong>: Noted that agentic LLMs are trained via reinforcement learning to use specific tools, giving vertically integrated tools like Claude Code an advantage over adding custom tools</li>
-<li><strong>lmeyerov</strong>: Added that planning is the missing piece — effective agents run on dynamic TODO lists, and plan mode is about bootstrapping how those lists get seeded</li>
-<li><strong>miki123211</strong>: Took the minimalism further, arguing all you actually need is 50 lines and one tool — bash — since it can do everything</li>
-</ul>
+<p><em>193 comments total</em></p>
+<p><strong>lmeyerov</strong>: Something I would add is planning. A big &ldquo;aha&rdquo; for effective use of these tools is realizing they run on dynamic TODO lists. Ex: Plan mode is basically bootstrapping how that TODO list gets seeded&hellip;</p>
+<blockquote>
+<p><strong>btown</strong>: I&rsquo;m unsure of its accuracy/provenance/outdatedness, but this purportedly extracted system prompt for Claude Code provides a lot more detail about TODO iteration and how powerful it can be:&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>lmeyerov</strong>: I find in coding + investigating there&rsquo;s a lot of mileage to being fancier on the todo list. Eg, we make sure timestamps, branches, outcomes, etc are represented.  It&rsquo;s impressive how far they get&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>btown</strong>: Ooh, am I reading correctly that you&rsquo;re using the filesystem as the storage for a &ldquo;living system prompt&rdquo; that also includes a living TODO list? That&rsquo;s pretty cool! And on a separate note - it looks&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jodleif</strong>: For humans org-mode is good at this</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>homarp</strong>: aren&rsquo;t the system prompt of Claude public in the doc at <a href="https://platform.claude.com/docs/en/release-notes/system-pro">https://platform.claude.com/docs/en/release-notes/system-pro</a>&hellip; ?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Stagnant</strong>: The system prompt of claude code changes constantly. I use this site to see what has changed between versions: <a href="https://cchistory.mariozechner.at/">https://cchistory.mariozechner.at/</a> It is a bit weird why anthropic doesn&rsquo;t make that&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>btown</strong>: This is for Claude Code, not just Claude.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>what</strong>: From elsewhere in that prompt: &gt; Only use emojis if the user explicitly requests it. Avoid adding emojis to files unless asked. When did they add this? Real shame because the abundance of emojis in a&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>rrvsh</strong>: I&rsquo;ve had a LOT of success keeping a &ldquo;working memory&rdquo; file for CLI agents. Currently testing out Codex now, and what I&rsquo;ll do is spend ~10mins hashing out the spec and splitting it into a list of&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>tacone</strong>: I use a folder for each feature I add. The LLM is only allowed to output markdown file in the output subfolder (of course it doesn&rsquo;t always obey, but it still limits pollution in the main folder) The&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>fastball</strong>: Planning mode actually creates whole markdown files, then wipes the context that was required to create that plan before starting work. Then it holds the plan at the system prompt level to ensure it&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>ramoz</strong>: I don’t think it wipes the context window.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>matchagaucho</strong>: The TODO lists are also frequently re-inserted into the context HEAD to keep the LLM aware of past and next steps. And in the event of context compression, the TODO serves as a compact representation&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>dboon</strong>: I’m a DIY (or, less generously and not altogether inaccurately, NIH) type who thinks he could do a good job of smarter context management. But, I have no particular reason to know better than anyone&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>lmeyerov</strong>: I&rsquo;m optimistic most people can, given the time and resources In the CCC video, you may enjoy the section on how we are moving to eval-driven AI coding for how we more methodically improve agents&hellip;.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>shnpln</strong>: Oh yes, I commonly add something like &ldquo;Use a very granular todo list for this task&rdquo; at the end of my prompts. And sometimes I will say something like &ldquo;as your last todo, go over everything you just&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>hadlock</strong>: Right now I start chatting with a separate LLM about the issue, the best structure for maintainability and then best libraries for the job, edge and corner cases, how to handle those, and then have&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>shnpln</strong>: Yeah, this is a good idea. I will have a Claude chat session and a Claude Code session open side by side too. Like a manual sub agents approach. I try not to pollute the Claude code session context&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>renjimen</strong>: If you have pre-commit hooks it should do this last bit automatically, and use your project settings</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>shnpln</strong>: Yes, I do. But it does not always use them when I change contexts. I just get in the habit of saying it. Belt and suspenders approach.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>sathish316</strong>: It’s surprising how simple TodoWrite and TodoRead tools are in planning and making sure an Agent follows the plan. This is supposed to be an emulator of Claude’s own TodoWrite and TodoRead, which&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>sathish316</strong>: Complex planning and orchestration for Multi-step usecases or persistent Todo lists is achievable by spinning up your own tools that does something similar to this. By extending Claude Todo emulator,&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>veselin</strong>: I run evals and the Todo tool doesn&rsquo;t help most of the time. Usually models on high thinking would maintain Todo/state in their thinking tokens. What Todo helps is for cases like Anthropic models to&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>lmeyerov</strong>: Curious what kinds of evals you focus on? We&rsquo;re finding investigating to be same-but-different to coding. Probably the most close to ours that has a bigger evals community is AI SRE tasks. Agreed wrt&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>veselin</strong>: I am taking for SWE bench style problems where Todo doesn&rsquo;t help, except for more parallelism.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>jcims</strong>: Mind if I ask what models you’re using for CTF?  I got out of the game about ten years ago and have been recently thinking about doing my toes back in.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>lmeyerov</strong>: Yep &ndash; one fun experiment early in the video is showing sonnet 4.5 -&gt; opus 4.5 gave a 20% lift We do a bit of model-per-task, like most calls are sending targeted &amp; limited context fetches into&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jcims</strong>: Nice! Thank you! I just did an experiment yesterday with Opus 4.5 just operating in agent mode in vscode copilot.  Handed it a live STS session for AWS to see if it could help us troubleshoot an&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>bdangubic</strong>: at the end of the year than you get “How to Code Claude Code in 200 Million Lines of Code” :)</p>
+</blockquote>
+<blockquote>
+<p><strong>redanddead</strong>: ironic how the peak of code is a TODO list app</p>
+</blockquote>
+<p><strong>libraryofbabel</strong>: It&rsquo;s a great point and everyone should know it: the core of a coding agent is really simple, it&rsquo;s a loop with tool calling. Having said that, I think if you&rsquo;re going to write an article like this and&hellip;</p>
+<blockquote>
+<p><strong>bredren</strong>: I&rsquo;ve been exploring the internals of Claude Code and Codex via the transcripts they generate locally (these serve as the only record of your interactions with the products)[1]. Given the stance of&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jake-coworker</strong>: IMO these articles are akin to &ldquo;Twitter in 200 lines of code!&rdquo; and &ldquo;Why does Uber need 1000 engineers?&rdquo; type articles. They&rsquo;re cool demos/POCs of real-world things, (and indeed are informative to&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>tomtomtom777</strong>: &gt; IMO these articles are akin to &ldquo;Twitter in 200 lines of code!&rdquo; I don&rsquo;t think it serves the same purpose. Many people understand the difference between a 200 lines twitter prototype and the real&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>d4rkp4ttern</strong>: Nice, I have something similar [1], a super-fast Rust/Tantivy-based full-text search across Claude Code + Codex-CLI session JSONL logs, with a TUI (for humans) and a CLI/JSONL mode for agents. For&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>dnw</strong>: That is a cool tool. Also one can set &ldquo;cleanupPeriodDays&rdquo;: in ~/.claude/settings.json to extend cleanup. There is so much information these tools keep around we could use. I came across this one the&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Johnny_Bonk</strong>: This is very interesting, especially if you could then use an llm across that search to figure out what has and maybe has not been completed, and then reinject those findings into a new Claude code&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>bredren</strong>: I haven&rsquo;t written the entry yet but it is pretty incredible what you can get when letting a frontier model RAG your complete CLI convo history. You can find out not just what you did and did not do&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>handfuloflight</strong>: For that you&rsquo;d be better off having the LLM write TODO stubs in the codebase and search for that. In fact, most of the recent models just do this, even without prompting.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>lelanthran</strong>: &gt; So &ldquo;200 lines&rdquo; captures the concept but not the production reality of what is involved. How many lines would you estimate it takes to capture that production reality of something like CC? I ask&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>foltik</strong>: My guess is &lt;5k for a coherent and intentional expert human design. Certainly &lt;10k. It’s telling that they can’t fix the screen flickering issue, claiming “the problem goes deep.”</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>misternugget</strong>: Hey! Thorsten Ball here. Thanks for the shout-out. I was quite confused when someone sent me this article: same &ldquo;Emperor has no clothes&rdquo;, same &ldquo;it&rsquo;s only x hundred lines&rdquo;, implements the same tools,&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>libraryofbabel</strong>: Hi! Thanks again for writing that first Emperor Has No Clothes blog post; like I said, it really inspired me and made everything click early on when I was first dipping my toes into the world of&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>justanotherprof</strong>: Many thanks for your article, it was one of the true &ldquo;aha&rdquo; moments for me in 2025! It is a shame that your work is apparently being appropriated without attribution to sell an online course&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>aszen</strong>: The most imp part is editing code, to do that reliably Claude models are trained on their own str replace tool schema I think. Models find it hard to modify existing code, they also can&rsquo;t just&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>embedding-shape</strong>: Here&rsquo;s where I was hoping openly available models would shine. Some community gets together, starts sharing successful/failed runs with their own agent, start building a open dataset for their&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>libraryofbabel</strong>: Yeah, there is definitely some RLVR training going on for the Claude LLMs to get them good at some of the specific tool calls used in Claude Code, I expect. Having said that, the string replacement&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>aszen</strong>: Yeah that&rsquo;s one example, but I suspect they train the model on entire sequences of tool calls, so unless you prompt the model exactly as them you won&rsquo;t get the same results. There&rsquo;s a reason they won&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>alansaber</strong>: Ah I just assumed it was the same article reposted</p>
+</blockquote>
+<blockquote>
+<p><strong>justanotherprof</strong>: I am glad you pointed out Thorsten Ball&rsquo;s truly excellent article: I was about to add a comment to that effect!</p>
+</blockquote>
+<blockquote>
+<p><strong>KellyCriterion</strong>: can you show us the &raquo;core of a coding agent which is, according to your words, &raquo;really simple and would you mind sharing a URL so I could check it out then?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>libraryofbabel</strong>: It&rsquo;s in TFA or in the <a href="https://ampcode.com/how-to-build-an-agent">https://ampcode.com/how-to-build-an-agent</a> article I linked? Or is that not what you&rsquo;re looking for?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>KellyCriterion</strong>: Sorry, sounded like &ldquo;your version&rdquo;, instead of the one listed :-)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>joshmlewis</strong>: This is cool but as someone that&rsquo;s built an enterprise grade agentic loop in-house that&rsquo;s processing a billion plus tokens a month, there are so many little things you have to account for that&hellip;</p>
+<blockquote>
+<p><strong>visarga</strong>: A quick glance over the 200 LOC impl - I see no error handling. This is the core of the agent loop, you need to pass some errors back to the LLM to adapt, while other errors should be handled by the&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>joebates</strong>: Please do! This sounds way more interesting than a simple coding loop agent (not to knock the blog)</p>
+</blockquote>
+<blockquote>
+<p><strong>handfuloflight</strong>: &gt; I should start a blog with my experience from all of this. Please do.</p>
+</blockquote>
+<p><strong>jacob019</strong>: Seems everyone is working on the same things these days. I built a persistent Python REPL subprocess as an MCP tool for CC, it worked so insanely well that I decided to go all the way. I already had&hellip;</p>
+<blockquote>
+<p><strong>giancarlostoro</strong>: &gt;  there&rsquo;s a threshold past which Claude loses the forest for the trees and makes the same mistakes over and over. Try using something like Beads with Claude Code. Also don&rsquo;t forget to have a&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jacob019</strong>: Ohh, looks interesting, thanks for the tip! Git as db is clever, and the sqlite cache is nice. I&rsquo;d been sketching sqlite based memory features myself. So much of the current ecosystem is suboptimal&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>giancarlostoro</strong>: I am working on a strict sqlite alternative to Beads as an experiment so far it works.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>freehorse</strong>: This sounds really cool! I love the idea behind it, the agent having persistent access to a repl session, as I like repl-based workflows in general. Do you have any code public from this by any&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>jacob019</strong>: <a href="https://github.com/jacobsparts/agentlib">https://github.com/jacobsparts/agentlib</a> See CodeAgent or subrepl.py if you&rsquo;re just interested in the REPL orchestration. I also have a Python REPL MCP server that works with CC. It isn&rsquo;t published,&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>dunk010</strong>: I request you to publish it! :-D</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>freehorse</strong>: Thanks!</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>nyellin</strong>: There&rsquo;s a bit more to it! For example, the agent in the post will demonstrate &rsquo;early stopping&rsquo; where it finishes before the task is really done. You&rsquo;d think you can solve this with reasoning models,&hellip;</p>
+<blockquote>
+<p><strong>d4rkp4ttern</strong>: Yes this “premature termination”, becomes particularly evident when you switch out Opus/Sonnet with a weaker LLM, and also happens more often in Codex CLI with GPT-5. Since one of the replies asked&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>rtgfhyuj</strong>: why would it early stop?  examples?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>mickeyp</strong>: Models just naturally arrive at a conclusion that they are done. TODO hints can help, but is not infallible: Claude will stop and happily report there&rsquo;s more work to be done and &ldquo;you just say the&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>wxce</strong>: &gt; this is a RL problem where you have to balance the chance of an infinite loop (it keeps thinking there&rsquo;s a little bit more to do when there is not) versus the opposite where it stops short of&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>embedding-shape</strong>: Not all models are trained with long one-shot task following by themselves, seems many of them prefer closer interactions with the user. You could always add another layer/abstraction above/below to&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>fastball</strong>: Can&rsquo;t this just be a Ralph Wiggum loop (i.e. while True)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>prodigycorp</strong>: This article was more true than not a year ago but now the harnesses are so far past the simple agent loop that I&rsquo;d argue that this is not even close to an accurate mental model of what claude code&hellip;</p>
+<blockquote>
+<p><strong>qsort</strong>: Obviously modern harnesses have better features but I wouldn&rsquo;t say it invalidates the mental model. Simpler agents aren&rsquo;t that far behind in performance if the underlying model is the same, including&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>prodigycorp</strong>: You’re not wrong but I still think that the harness matters a lot when trying to accurately describe Claude Code. Here’s a reframing: If you asked people “what would you rather work with, today’s&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>aszen</strong>: I don&rsquo;t think so, model improvements far outweigh any harness or tooling. Look at <a href="https://github.com/SWE-agent/mini-swe-agent">https://github.com/SWE-agent/mini-swe-agent</a> for proof</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>rfw300</strong>: Any person who would choose 3.7 with a fancy harness has a very poor memory about how dramatically the model capabilities have improved between then and now.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>nl</strong>: This is SO wrong. I actually wrote my own simple agent (with some twists) in part so I could compare models. Opus 4.5 is in a completely different league to Sonnet 4.5, and 3.7 isn&rsquo;t even on the same&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>alright2565</strong>: But does that extra complexity actually improve performance? <a href="https://www.tbench.ai/leaderboard/terminal-bench/2.0">https://www.tbench.ai/leaderboard/terminal-bench/2.0</a> says yes, but not as much as you&rsquo;d think. &ldquo;Terminus&rdquo; is basically just a tmux session&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>prodigycorp</strong>: I&rsquo;m not a good representative for claude code because I&rsquo;m primarily a codex user now, but I know that if codex had subagents it would be at least twice as productive. Time spent is an important&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>nyellin</strong>: Not necessarily true. Subagents allow for parallelization but they can decrease accuracy dramatically if you&rsquo;re not careful because there are often dependencies between tasks and swapping context&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>terminalshort</strong>: Are subagents a fundamental change, or just acting as inner loops to the agentic loop similar to the one in the article?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>lukan</strong>: The article was also published one year ago on january 2025. (Should have 2025 in the title? Time flies)</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>llmslave2</strong>: Claude Code didn&rsquo;t exist in January 2025. I think it&rsquo;s a typo and should be 2026.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>prodigycorp</strong>: You’re right. No wonder the date felt odd. iirc Claude code was released around march.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>CuriouslyC</strong>: Less true than you think. A lot of the progress in the last year has been tightening agentic prompts/tools and getting out of the way so the model can flex. Subagents/MCP/Skills are all pretty mid,&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>prodigycorp</strong>: All of these things you mentioned are put into a footnote of the article.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>dkdcio</strong>: it seems to have changed a ton in recent versions too — I would love more details on what exactly I find it doing what I in the past had to interrupt and tell it to do fairly frequently now</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>terminalshort</strong>: For one thing it seems to splitting up the work and making some determination of complexity, then allocating it out to a model based on that complexity to save resources.  When I run Claude with Opus&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>nyellin</strong>: Haiku is called often, but not always the way you think. E.g. every time you write something CC invokes Haiku multiple times to generate the &lsquo;delightful 1-2 word phrase used to indicate progress to&hellip;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>pama</strong>: Agreed. You can get a better model using the codex-cli repo and having an agent help you analyze the core functionality.</p>
+</blockquote>
+<blockquote>
+<p><strong>splike</strong>: I&rsquo;m interested, could you expand on that?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>prodigycorp</strong>: Off the top of my head: parallel subagents, hooks, skills, and a much better plan mode. These features enable way better steering than we had last year. Subagents are a huge boon to productivity.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>rtgfhyuj</strong>: are subagents just tools that are agents themselves?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>floppyd</strong>: &gt; This is the key insight: we’re just telling the LLM “here are your tools, here’s the format to call them.” The LLM figures out when and how to use them. This really blew my mind back then in the&hellip;</p>
+<blockquote>
+<p><strong>utopiah</strong>: Tools documentation is in text, either directly e.g. tool -h or indirectly e.g. man tool plus they are countless examples of usage online, so it seems clear that a textual mapping between the tool&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>voidhorse</strong>: Running a command in a shell is a string of text. LLMs produce text and it&rsquo;s easy to write a program that then executes that text as a process. I don&rsquo;t see what&rsquo;s magical about it at all.</p>
+</blockquote>
+<blockquote>
+<p><strong>naasking</strong>: It would seem magical if you think of LLMs as token predictors with zero understanding of what they&rsquo;re doing. This is evidence that there&rsquo;s more going on though.</p>
+</blockquote>
+<p><strong>ofirpress</strong>: We (the SWE-bench team) have a 100 line of code agent that is now pretty popular in both academic and industry labs: <a href="https://github.com/SWE-agent/mini-swe-agent">https://github.com/SWE-agent/mini-swe-agent</a> I think it&rsquo;s a great way to dive into&hellip;</p>
+<p><strong>miki123211</strong>: All you actually need is 50 lines and one tool. If your agent can execute Bash commands, it can do anything, including reading files (with cat), writing them (with sed / patch / awk /perl), grepping,&hellip;</p>
+<p><strong>sams99</strong>: For those interested, edit is a surprisingly difficult problem, it seems easy on the surface but there is both fine tuning and real world hallucinations you are fighting with. I implemented one this&hellip;</p>
+<p><strong>ulaw</strong>: How many Claudes could Claude Code code if Claude Code could code Claude?</p>
+<blockquote>
+<p><strong>Okkef</strong>: Claude has a nice answer to your riddle: Claude Code could code all the Claudes Claude Code could code, because Claude Code already coded the Claude that codes Claude Code. Or more philosophically:&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>tuhgdetzhh</strong>: &ldquo;if Claude Code could code Claude?&rdquo; Claude Code already codes Claude Code. The limit is set by the amount of GPUs and energy supply.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>handfuloflight</strong>: The human element of the Anthropic organization also has some limits placed there.</p>
+</blockquote>
+</blockquote>
+<p><strong>dmvaldman</strong>: This misses that agentic LLMs are trained via RL to use specific tools. Adding custom tools is subpar to those the model has been trained with. That&rsquo;s why Claude Code has an advantage, over say,&hellip;</p>
+<blockquote>
+<p><strong>firloop</strong>: But if one were to write tools that were &ldquo;abi-compatible&rdquo; with Claude Code&rsquo;s, could you see similar performance with a custom agent? And if so - is Cursor not doing just that?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>yencabulator</strong>: Part of that is likely that Claude Code tools keep changing a little. Imitating them is chasing a moving target.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>mikmoila</strong>: Are they really? I&rsquo;ve been under impression that agentic LLMs are just instances of the LLMs, no &ldquo;specialized training&rdquo; involved</p>
+</blockquote>
+<p><strong>m-hodges</strong>: Also relevant: You Should Write An Agent¹ and, How To Build An Agent.² ¹ <a href="https://fly.io/blog/everyone-write-an-agent/">https://fly.io/blog/everyone-write-an-agent/</a> ² <a href="https://ampcode.com/how-to-build-an-agent">https://ampcode.com/how-to-build-an-agent</a></p>
+<p><strong>mirzap</strong>: The &ldquo;200 lines&rdquo; loop is a good demo of the shape of a coding agent, but it’s like &ldquo;a DB is a B-tree&rdquo; - technically true, operationally incomplete. The hard part isn’t the loop - it’s the boring&hellip;</p>
+<p><strong>tptacek</strong>: What&rsquo;s interesting to me about the question of whether you could realistically compete with Claude Code (not Claude, but the CLI agent) is that the questions boil down to things any proficient&hellip;</p>
+<blockquote>
+<p><strong>libraryofbabel</strong>: This is a great point, although I would add that Anthropic has a possible slight advantage, as they can RLVR the Claude LLMs themselves on Claude Code tool calls and Claude Code tasks. Having said&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>NitpickLawyer</strong>: &gt;  the Charmbracelet people have as much of a shot at building something truly exception as Anthropic does. Yes and no. OpenCode is a great example of yes. But at the same time Anthropic gets to&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>tptacek</strong>: Anthropic has obvious advantages and I&rsquo;m not saying there&rsquo;s a level playing field (they also have the financial resources of a mid-sized industrialized nation). I&rsquo;m saying that there&rsquo;s an absolute&hellip;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>embedding-shape</strong>: &gt; No matter how much I&rsquo;d want to try, I have no hope of building a competitive frontier model A single person, probably not. But a group of dedicated FOSS developers who together build a wide&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>maurycy</strong>: Maybe not necessarily and the Claude model is fine-tuned for <code>claude</code>, so no one can really replicate the experience without unlocking some secret mode in the model. The other comments about editing&hellip;</p>
+</blockquote>
+<p><strong>vinhnx</strong>: This reminds me of Amp&rsquo;s article last year[1]. I building my own coding agent [2]. Two goals: understand real-world agent mechanics and validate patterns I&rsquo;d observed across OpenAI Codex and&hellip;</p>
+<p><strong>afarah1</strong>: Reminds me of this 2023 post &ldquo;re-implementing LangChain in 100 lines of code&rdquo;: <a href="https://blog.scottlogic.com/2023/05/04/langchain-mini.html">https://blog.scottlogic.com/2023/05/04/langchain-mini.html</a> We did just that back then and it worked great, we used it in&hellip;</p>
+<blockquote>
+<p><strong>prodigycorp</strong>: How was this three years ago ;_;</p>
+</blockquote>
+<p><strong>armcat</strong>: The new mental model actually is (1) skills based model, i.e. <a href="https://agentskills.io/home">https://agentskills.io/home</a>, and (2) where the LLM agents &ldquo;see all problems as coding problems&rdquo;. Skills are a bunch of detailed Markdowns&hellip;</p>
+<p><strong>thiagowfx</strong>: The blog post starts with: &gt; I’m using OpenAI here, but this works with any LLM provider Have you noticed there’s no OpenAI in the post?</p>
+<p><strong>RagnarD</strong>: This feels like a pretty deceptive article title. At the end, he does say: &ldquo;What We Built vs. Production Tools This is about 200 lines. Production tools like Claude Code add: Better error handling&hellip;</p>
+<p><strong>johnsmith1840</strong>: Here&rsquo;s the bigger question. Why would you? Claude code feels like the first commodity agent. In theory its simple but in practice you&rsquo;ll have to maintain a ton of random crap you get no value in&hellip;</p>
+<blockquote>
+<p><strong>utopiah</strong>: Because you don&rsquo;t trust Anthropic or you like to learn how the tools you rely on work?</p>
+</blockquote>
+<p><strong>hazrmard</strong>: This reflects my experience. Yet, I feel that getting reliability out of LLM calls with a while-loop harness is elusive. For example - how can I reliably have a decision block to end the loop (or&hellip;</p>
+<blockquote>
+<p><strong>nyellin</strong>: Forgot to address the easiest part: &gt; - how can I reliably call tools with the right schema? This is typically done by enabling strict mode for tool calling which is a hermetic solution. Makes llm&hellip;</p>
+</blockquote>
+<blockquote>
+<p><strong>nyellin</strong>: Re (1) use a TODOs system like Claude code. Re (2) also fairly easy! It&rsquo;s just a summarization prompt. E.g. this is the one we use in our agent:&hellip;</p>
+</blockquote>
+<p><strong>schmuhblaster</strong>: As an experiment over the holidays I had Opus create a coding agent in a Prolog DSL (more than 200 lines though) [0] and I was surprised how well the agent worked out of the box. So I guess that the&hellip;</p>
+<p><strong>sathish316</strong>: Excellent article on the internals of coding CLIs. I learned a similarly powerful way to build DIY coding CLIs from this Martin Fowler post, which uses PydanticAI and MCP-based tools:&hellip;</p>
+<p><strong>bjacobso</strong>: <a href="https://www.youtube.com/watch?v=aueu9lm2ubo">https://www.youtube.com/watch?v=aueu9lm2ubo</a></p>
+<blockquote>
+<p><strong>vrosas</strong>: Unless there&rsquo;s context, I&rsquo;m never clicking on a naked youtube link.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>pests</strong>: Are you worried google is going to hack you or something?</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>handfuloflight</strong>: He was told they were never gonna give up.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>jackfranklyn</strong>: The benchmark point is interesting but I think it undersells what the complexity buys you in practice. Yes, a minimal loop can score similarly on standardised tasks - but real development work has&hellip;</p>
+<p><strong>stevenslade</strong>: I’d been wondering how conversation history actually works in these agent loops — the LLM itself has no memory, so whatever “history” exists is just text you keep feeding back in. At a high level it&hellip;</p>
+<p><strong>bilater</strong>: I&rsquo;m curious how tools like Claude Code or Cursor edit code. Do they regenerate the full file and diff it, or do they just output a diff and apply that directly? The latter feels more efficient, but&hellip;</p>
+<p><strong>cmiles8</strong>: A lot of software is like this. You can build a bare bones but functional version for 1x investment or something that addresses every bell and whistle (often with market research saying it’s really&hellip;</p>
+<p><strong>loeg</strong>: Would be nice to have a different wrapper around Claude, even something bare bones, as long as it&rsquo;s easy to modify.  Claude code terminal has the jankiest text editor I&rsquo;ve ever used &ndash; holding down&hellip;</p>
+<blockquote>
+<p><strong>thierrydamiba</strong>: What editor are you using?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>loeg</strong>: Whatever interface you get running the claude cli.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>thierrydamiba</strong>: Try ghostty, wterm, or kitty as the terminal you run Claude code from. Much better experience.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>emsign</strong>: &gt; The LLM never actually touches your filesystem. But that&rsquo;s not correct. You give them write access to files it then compiles and executes. It could include code that then runs with the rights of&hellip;</p>
+<p><strong>duncancarroll</strong>: &gt; &ldquo;But here’s the thing&rdquo; This phrase feels like the new em dash&hellip;</p>
+<p><strong>lucideer</strong>: This is a really great post, concise &amp; clear &amp; educational. I do find the title slightly ironic though when the code example goes on to immediately do &ldquo;import anthropic&rdquo; right up top. (it&rsquo;s just a&hellip;</p>
+<p><strong>wrochow</strong>: I always laugh when I see a post that claims some tech is &ldquo;easy&rdquo;. Sure, if all you&rsquo;re doing is creating a hello world script. But try to do something for which a client would pay you more than 25¢&hellip;</p>
+<p><strong>rcarmo</strong>: I think mine have a little more code, but they also have a lot more tools: - <a href="https://github.com/rcarmo/bun-steward">https://github.com/rcarmo/bun-steward</a> - <a href="https://github.com/rcarmo/python-steward">https://github.com/rcarmo/python-steward</a> (created with the first one) And they&rsquo;re&hellip;</p>
+<p><strong>domlebo70</strong>: I don&rsquo;t code in Python much. Are those type annotations really how people are using them, or is it just for the example?     def list_files_tool(path: str) -&gt; Dict[str, Any]: And it returns     {&hellip;</p>
+<p><strong>utopiah</strong>: Why limit it to few tools from a tool registry when running in a full sandbox using QEMU or thinner like Podman/Docker literally takes 10 lines of code? You can still use your real files with a mount&hellip;</p>
+<p><strong>cadamsdotcom</strong>: The devil is in the details, so actually, the Emperor in this analogy most definitely does have clothes. For example, post-training / finetuning the model specifically to use the tools it’ll be given&hellip;</p>
+<p><strong>pbw</strong>: I have mixed feelings about the &ldquo;Do X in N lines of code&rdquo; genre. I applaud people taking the time to boil something down to its very essence, and implement just that, but I feel like the tone is&hellip;</p>
+<blockquote>
+<p><strong>utopiah</strong>: I do prototyping for a living and &hellip; I definitely do &ldquo;X in 1/100th lines of code&rdquo; regularly. It&rsquo;s exciting, liberating&hellip; but it&rsquo;s a lie. What I do is to get the CORE of the idea so that I fully&hellip;</p>
+</blockquote>
+<p><strong>ozim</strong>: Magic is not agent, magic is neural network that was trained. Yeah I agree there is bunch of BS tools on top that basically try to coerce people into paying and using their setup so they become&hellip;</p>
+<blockquote>
+<p><strong>egeozcan</strong>: claude opus 4.5 is much more impressive when used in claude code. I also tried it through antigravity but from a users perspective, claude code is magic.</p>
+</blockquote>
+<p><strong>akhil08agrawal</strong>: Nice breakdown. Been thinking about this a lot lately - if the core is this simple, what actually becomes the hard part? Feels like we&rsquo;re headed toward a world where everyone can build these loops&hellip;</p>
+<p><strong>kirjavascript</strong>: here&rsquo;s my take, in 70 lines of code: <a href="https://github.com/kirjavascript/nanoagent/blob/master/nanoa">https://github.com/kirjavascript/nanoagent/blob/master/nanoa</a>&hellip;</p>
+<blockquote>
+<p><strong>fragmede</strong>: I mean, if you take out the guard rails, here&rsquo;s codex in 46 lines of bash:     #!/usr/bin/env bash     set -euo pipefail          # Fail fast if OPENAI_API_KEY is unset or empty     :&hellip;</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>dave1010uk</strong>: Impressive! Here&rsquo;s an agent in 24 lines of PHP, written in 2023. But it relies on <code>llm</code> to do HTTP and JSON. <a href="https://github.com/dave1010/hubcap">https://github.com/dave1010/hubcap</a></p>
+</blockquote>
+</blockquote>
+<p><strong>bochoh</strong>: I’ve had decent results with this for context management in large code bases so far <a href="https://github.com/GMaN1911/claude-cognitive">https://github.com/GMaN1911/claude-cognitive</a></p>
+<p><strong>oars</strong>: Can&rsquo;t believe Claude Code was launched less than a year ago. It&rsquo;s certainly a new tool in my kit and allowed me to approach and work on new coding problems in a new way.</p>
+<p><strong>oli5679</strong>: <a href="https://github.com/mistralai/mistral-vibe">https://github.com/mistralai/mistral-vibe</a> This is a really nice open source coding agent implementation. The use of async is interesting.</p>
+<p><strong>voidhorse</strong>: Wait, did people in the tech world not know this? If this is some shocking revelation to engineers we are in trouble. Any and every &ldquo;AI&rdquo; experience is just kiddie level program mg wrapping LLMs.</p>
+<p><strong>kristopolous</strong>: The source code link at the bottom of the article goes to YouTube for some reason</p>
+<p><strong>mephos</strong>: How much Claude could a Claude code code if a Claude code could code Claude</p>
+<p><strong>santiagobasulto</strong>: I&rsquo;m surprised this post has so many upvotes. This is a gross oversimplification of what Claude Code (and other agents can do). On top of that, it&rsquo;s very poorly engineered.</p>
+<blockquote>
+<p><strong>all2</strong>: &gt; Poorly engineered How so? As a pedagogic tool it seems adequate. How would you change this to be better (either from a teaching standpoint or from a SWE standpoint)?</p>
+</blockquote>
+<p><strong>OsrsNeedsf2P</strong>: Yea.. our startup greatly overestimated how hard it is to make a good agent loop. Handling exit conditions, command timeouts, context management, UI, etc is surprisingly hard to do seamlessly.</p>
+<blockquote>
+<p><strong>nvader</strong>: I&rsquo;m curious which startup, if you wouldn&rsquo;t mind sharing? For reciprocity, I work at Imbue, and we can also attest to the real work complexities of this domain.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>OsrsNeedsf2P</strong>: Called Ziva[0], we do AI agents for game development. If you want to jump on a call and discuss strategies, my email is in my bio <a href="https://ziva.sh/">https://ziva.sh/</a></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>bjt12345</strong>: Do you mean they underestimated how hard it is?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>OsrsNeedsf2P</strong>: No, overestimated. You can make a terrible CC in 200 LoC, but after using it for 3 minutes you&rsquo;ll realize how much more goes into it</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>lemontheme</strong>: Gotta admit, the phrasing tripped me up as well. You underestimated the effort that ultimately went into it</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>nxobject</strong>: I&rsquo;ll admit that I&rsquo;m tickled pink by the idea of a coding agent recreating itself. Are we at a point where agents can significantly and autonomously improve themselves?</p>
+<p><strong>__0x01</strong>: These LLM tools appear to have an unprecedented amount of access to the file systems of their users. Is this correct, and if so do we need to be concerned about user privacy and security?</p>
+<blockquote>
+<p><strong>fragmede</strong>: We should be absolutely terrified about the amount of access these things have to users systems. Of course there is advice to use a sandbox but there are stupid people out there (I&rsquo;m one of them) who&hellip;</p>
+</blockquote>
+<p><strong>andai</strong>: from ddgs import DDGS     def web_search(query: str, max_results: int = 8) -&gt; list[dict]:         return DDGS().text(query, max_results=max_results)</p>
+<p><strong>erelong</strong>: Kind of a meta thought but I guess we could just ask a LLM to guide us through creating some of these things ourselves, right? (Tools, agents, etc.)</p>
+<p><strong>mudkipdev</strong>: Is this not using constrained decoding? You should pass the tool schemas to the &ldquo;tools&rdquo; parameter to make sure all tool calls are valid</p>
+<p><strong>fb03</strong>: &ldquo;I&rsquo;m using OpenAI here&rdquo; proceeds to show a piece of code importing anthropic was pretty confusing to me</p>
+<p><strong>_def</strong>: Are there useful open source &ldquo;agents&rdquo; already ready to use with local LLMs?</p>
+<p><strong>Waterluvian</strong>: How much code could Claude Code code if Claude Code could code Claude?</p>
+<p><strong>dangoodmanUT</strong>: This definitely will handle large files or binary files very poorly</p>
+<p><strong>computerex</strong>: I think some of the commenters are missing the point of this article. Claude Code is a low level harness around the model. Low level thin wrappers are unreasonably effective at code editing. My&hellip;</p>
+<p><strong>erichocean</strong>: The tip of the sphere in agentic code harnesses today is to RL train them as dedicated conductor/orchestrator models. Not 200 lines of Python.</p>
+<blockquote>
+<p><strong>aszen</strong>: Can you elaborate on this?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>erichocean</strong>: Here you go: <a href="https://research.nvidia.com/labs/lpr/ToolOrchestra/">https://research.nvidia.com/labs/lpr/ToolOrchestra/</a> Big models (like Claude Opus 4.5) can (and do) just RL-train this into the main model.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>8note</strong>: as a comparison, the gemini cli agent with gemini 2 half the time writes its own tool call parameters incorrectly. it didnt quite know when to make a tool call, which tool result was the most&hellip;</p>
+</blockquote>
+</blockquote>
+<p><strong>d4rkp4ttern</strong>: This is consistent with how I&rsquo;ve defined the 3 core elements of an agent: - Intelligence (the LLM) - Autonomy (loop) - Tools to have &ldquo;external&rdquo; effects Wrinkles that I haven&rsquo;t seen discussed much&hellip;</p>
+<p><strong>hooverd</strong>: Woah now, did you get Anthropic&rsquo;s permission to use Claude outside of Claude Code?</p>
+<blockquote>
+<p><strong>wizzard0</strong>: wdym? claude code is just a wrapper you can get yourself an api key at console.anthropic.com and build whatever you want (i use local models where possible but must admit opus45 is good)</p>
+</blockquote>
+<p><strong><em>andrei</em></strong>: yes, it&rsquo;s an agent</p>
+<p><strong>m3kw9</strong>: why the pointless exercise? Claude code itself can do all that.</p>
 
       </div>
 
@@ -258,30 +889,29 @@
   <div class="footer-container">
     <div class="footer-brand">
       <span class="footer-logo">AI Best Practices</span>
-      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
     </div>
     <div class="footer-nav">
       <div class="footer-section">
         <h3>Learn</h3>
         <ul>
-          <li><a href="../start-here/index.html">Start Here</a></li>
-          <li><a href="../skills/index.html">Skills</a></li>
-          <li><a href="../workflows/index.html">Workflows</a></li>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Explore</h3>
         <ul>
           <li><a href="../tools/index.html">Tools</a></li>
-          <li><a href="../landscape/index.html">Landscape</a></li>
           <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
           <li><a href="../sources/index.html">Sources</a></li>
-          <li><a href="../tags/">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
     </div>
   </div>
 </footer>

@@ -37,14 +37,13 @@
       <span>AI Best Practices</span>
     </a>
     <div class="nav-links">
-      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
-      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
       <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
-      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
-      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
       <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
       <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
-      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
     </div>
     <div class="nav-actions">
       <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
@@ -167,7 +166,7 @@
 <p>This is what most experienced practitioners actually do. Some in the HN discussion argued this is not &ldquo;vibe coding&rdquo; at all &ndash; it is simply AI-assisted development. The distinction matters because this mode scales safely with normal development practices: code review, testing, and incremental commits.</p>
 <p><strong>Type 2: Surrendered cognitive control.</strong> You stop reading all the code in detail. The AI builds complexity beyond what you have time to fully understand. You are trusting the agent to make autonomous decisions across longer development arcs. You evaluate results by behavior (&ldquo;does it work?&rdquo;) rather than by code comprehension (&ldquo;do I understand how it works?&rdquo;).</p>
 <p>This is closer to what Karpathy originally described: prompting and running the output without closely reading the implementation. It is also where most of the productivity gains and most of the risks concentrate.</p>
-<p>For the full source analysis, see <a href="../sources/2025-12-18-two-kinds-vibe-coding/">Two Kinds of Vibe Coding</a>.</p>
+<p>For the full source analysis, see <a href="../sources/2025-12-18-two-kinds-vibe-coding.html">Two Kinds of Vibe Coding</a>.</p>
 <h2 id="the-full-spectrum">The Full Spectrum</h2>
 <p>In practice, these two types are endpoints on a continuum. Most real work falls somewhere between them.</p>
 <h3 id="pure-vibe-high-risk-high-speed">Pure Vibe (High Risk, High Speed)</h3>
@@ -189,7 +188,7 @@
 <h2 id="the-infrastructure-gap">The Infrastructure Gap</h2>
 <p>The critical insight from Bau&rsquo;s analysis is that moving along the spectrum toward less oversight requires proportionally more infrastructure. Type 1 works with normal development practices. Type 2 requires what Bau calls &ldquo;meta-cognitive infrastructure&rdquo; &ndash; systems that maintain human comprehension and control over increasingly complex agent-built codebases.</p>
 <p><strong>Automated testing is non-negotiable for Type 2.</strong> Without automated tests, the human becomes a manual tester, repeatedly running the application and checking behavior by hand. Automated tests let agents validate their own work across longer development cycles.</p>
-<p><strong>Tests must themselves be tested.</strong> Agents can produce solutions that technically pass tests without actually doing what is intended. Meta-level testing &ndash; code coverage analysis, fuzz testing, property-based testing, benchmarking against reference implementations &ndash; reveals gaps and prevents false confidence. See <a href="../skills/verification/">Verification</a> for techniques.</p>
+<p><strong>Tests must themselves be tested.</strong> Agents can produce solutions that technically pass tests without actually doing what is intended. Meta-level testing &ndash; code coverage analysis, fuzz testing, property-based testing, benchmarking against reference implementations &ndash; reveals gaps and prevents false confidence. See <a href="../skills/verification.html">Verification</a> for techniques.</p>
 <p><strong>The transition point is where projects fail.</strong> Moving from Type 1 to Type 2 without building the supporting infrastructure first is the most common path to the experience one HN commenter described as &ldquo;exhausting QA testing of a bad engineer&rsquo;s work.&rdquo;</p>
 <h2 id="community-debate-quality-vs-speed">Community Debate: Quality vs. Speed</h2>
 <p>The practitioner community remains divided on where vibe coding belongs in professional practice.</p>
@@ -225,9 +224,9 @@
 <p>Match your position on the spectrum to your answers. And invest in the infrastructure that lets you safely move toward speed when the situation warrants it.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><a href="../sources/2025-12-18-two-kinds-vibe-coding/">Two Kinds of Vibe Coding</a> &ndash; Bau&rsquo;s original taxonomy and the community response</li>
-<li><a href="../sources/2026-01-26-karpathy-claude-coding-notes/">Karpathy&rsquo;s Claude Coding Notes</a> &ndash; Observations on skill atrophy and the builder/coder split</li>
-<li><a href="../skills/verification/">Verification</a> &ndash; Techniques for reviewing AI-generated code effectively</li>
+<li><a href="../sources/2025-12-18-two-kinds-vibe-coding.html">Two Kinds of Vibe Coding</a> &ndash; Bau&rsquo;s original taxonomy and the community response</li>
+<li><a href="../sources/2026-01-26-karpathy-claude-coding-notes.html">Karpathy&rsquo;s Claude Coding Notes</a> &ndash; Observations on skill atrophy and the builder/coder split</li>
+<li><a href="../skills/verification.html">Verification</a> &ndash; Techniques for reviewing AI-generated code effectively</li>
 </ul>
 
       </div>
@@ -283,30 +282,29 @@
   <div class="footer-container">
     <div class="footer-brand">
       <span class="footer-logo">AI Best Practices</span>
-      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
     </div>
     <div class="footer-nav">
       <div class="footer-section">
         <h3>Learn</h3>
         <ul>
-          <li><a href="../start-here/index.html">Start Here</a></li>
-          <li><a href="../skills/index.html">Skills</a></li>
-          <li><a href="../workflows/index.html">Workflows</a></li>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Explore</h3>
         <ul>
           <li><a href="../tools/index.html">Tools</a></li>
-          <li><a href="../landscape/index.html">Landscape</a></li>
           <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
           <li><a href="../sources/index.html">Sources</a></li>
-          <li><a href="../tags/">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 84 pages across 187 topics.</p>
     </div>
   </div>
 </footer>

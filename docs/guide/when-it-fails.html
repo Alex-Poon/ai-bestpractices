@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>When It Fails | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="An honest account of AI coding failure modes — drift, hallucination, and the limits of current tools.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="When It Fails">
+  <meta property="og:description" content="An honest account of AI coding failure modes — drift, hallucination, and the limits of current tools.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-guide"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../guide/index.html">The Guide</a></li>
+      
+    
+    <li aria-current="page">When It Fails</li>
+  </ol>
+</nav>
+
+
+
+  
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  <div class="guide-progress">
+    
+      <div class="guide-progress-step guide-progress-step--done"></div>
+    
+      <div class="guide-progress-step guide-progress-step--done"></div>
+    
+      <div class="guide-progress-step guide-progress-step--done"></div>
+    
+      <div class="guide-progress-step guide-progress-step--active"></div>
+    
+  </div>
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">When It Fails</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">11 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+      </header>
+
+      <div class="article-content">
+        <p>AI coding tools fail in characteristic ways. Not randomly &ndash; in patterns that are recognizable, largely predictable, and often preventable if you know what to watch for. This page catalogs the major failure modes from practitioner experience. Some are technical limitations of current models. Some are emergent behaviors of how agents interact with codebases. Some are human failures amplified by the tools.</p>
+<p>Understanding these failure modes is not pessimism. It is the practical knowledge that separates effective users from people who either over-trust or under-trust the tools. Every failure mode here has a corresponding mitigation, and most become manageable once you recognize them.</p>
+<h2 id="context-drift">Context Drift</h2>
+<p>As an agent session continues and the context window fills, output quality degrades. The model loses track of earlier instructions, reverts to default patterns, and produces increasingly generic code that drifts from your project&rsquo;s conventions.</p>
+<p>This is not a bug &ndash; it is a fundamental constraint of how current models work. The context window is finite. As it fills, older information gets compressed or effectively forgotten. <strong>conception</strong> was blunt about the consequence: after context compaction, &ldquo;the session is more or less useless.&rdquo;</p>
+<p>The degradation is not always obvious. The agent does not announce that it has forgotten your architectural decisions. It just starts making choices that contradict them. <strong>SenHeng</strong> described a particularly frustrating variant: asking for a simple expenses tracker and having the agent repeatedly push it toward a full double-entry bookkeeping system &ndash; what they called &ldquo;scope creep into the average.&rdquo; The agent&rsquo;s defaults overwrote the user&rsquo;s intent.</p>
+<p><strong>How to mitigate it:</strong></p>
+<ul>
+<li><strong>Start fresh sessions for new tasks.</strong> Do not pile tasks onto an existing session. A new session with a good harness file is almost always better than a long session with accumulated context.</li>
+<li><strong>Keep critical instructions in your harness file</strong> rather than relying on mid-session conversation. The harness file gets loaded at session start when context is clean.</li>
+<li><strong>Watch for the drift signals.</strong> When the agent starts suggesting patterns you already rejected, or adds features you did not ask for, context has likely degraded. Start a new session.</li>
+<li><strong>Front-load your AGENTS.md.</strong> <strong>guluarte</strong> observed that agents tend to follow only the first few lines of long instruction files. Put your most critical rules at the top.</li>
+</ul>
+<h2 id="going-in-circles">Going in Circles</h2>
+<p>The most distinctive and frustrating failure mode of AI coding agents. The agent attempts a fix, it does not work, and instead of reconsidering the approach, it tries minor variations of the same wrong strategy in an increasingly incoherent loop.</p>
+<p><strong>jackfranklyn</strong> identified the root cause: going in circles tends to happen when the codebase outgrows what the model can hold in context effectively. The agent cannot see enough of the system to find the right solution, so it iterates on what it can see &ndash; which is the wrong part.</p>
+<p><strong>serial_dev</strong> captured the experience vividly: hearing the AI claim it can &ldquo;clearly see the issue now&rdquo; ten times, and being wrong every time. <strong>hirako2000</strong> described the extreme case: spending hours and half a million tokens trying to get a frontier model to fix a simple CSS issue, ultimately fixing it manually in minutes.</p>
+<p>The circling behavior is related to what practitioners call false tenacity. <strong>AnimalMuppet</strong> argued that real tenacity requires an internal timer &ndash; the ability to recognize when an approach is fundamentally wrong and needs to be abandoned. Current models lack this. They will keep trying the same strategy indefinitely unless you intervene.</p>
+<p><strong>How to mitigate it:</strong></p>
+<ul>
+<li><strong>Set a personal time limit.</strong> If the agent has not solved the problem in two or three iterations, it is probably circling. Stop and re-scope the task.</li>
+<li><strong>Give it different context.</strong> Often the agent is circling because it cannot see the relevant code. Point it at the right files or explain the system behavior it is missing.</li>
+<li><strong>Start a fresh session.</strong> A new session with a clear description of the problem and what has already been tried often succeeds where the accumulated session failed.</li>
+<li><strong>Do it yourself.</strong> Some problems are faster to solve manually. Knowing when to stop delegating is a core skill, not a failure.</li>
+</ul>
+<h2 id="sycophancy-and-overcompliance">Sycophancy and Overcompliance</h2>
+<p>Models tend to agree with the user, follow instructions too literally, or add features that were not requested rather than pushing back when the request is problematic. This manifests in several ways:</p>
+<p><strong>Silent agreement with mistakes.</strong> When you give the agent incorrect constraints or a flawed approach, it will often implement exactly what you asked for rather than flagging the problem. <strong>ComplexSystems</strong> noted the core issue: having the model silently change things and cover up problems is a poor way to handle disagreement. You need to know when the agent thinks your approach is wrong.</p>
+<p><strong>Overcompliance with scope.</strong> You ask for a simple function, and the agent adds error handling, logging, configuration options, and documentation you did not request. <strong>SenHeng</strong> described models that massage your original idea into existing common patterns &ndash; useful for producing what already exists, counterproductive when you want something specific and minimal.</p>
+<p><strong>The &ldquo;running wild&rdquo; phenomenon.</strong> <strong>insomagent</strong> described a specific behavior with newer models: the agent understands the issue correctly but does not stop when asked to first verify understanding. It charges ahead with implementation before confirming alignment, producing a large diff that may or may not match your intent.</p>
+<p><strong>How to mitigate it:</strong></p>
+<ul>
+<li><strong>Ask the agent to critique your plan before implementing it.</strong> Force it into a review role before a generation role.</li>
+<li><strong>Be explicit about scope boundaries.</strong> &ldquo;Implement only this function. Do not add error handling, logging, or tests unless I ask.&rdquo;</li>
+<li><strong>Use plan-then-execute mode.</strong> Review the plan before allowing execution. This catches overcompliance before it produces throwaway code.</li>
+<li><strong>Configure anti-sycophancy.</strong> <strong>gridspy</strong> described configuring their AI to explicitly call out assumptions and point out mistakes, which forces the model to present corrections alongside its response.</li>
+</ul>
+<h2 id="hallucination-and-fabrication">Hallucination and Fabrication</h2>
+<p>The model generates code that references APIs, functions, or patterns that do not exist. This is the most widely known failure mode and the one that gets the most attention, though in practice it is less common with current frontier models than it was a year ago.</p>
+<p>Where hallucination still bites:</p>
+<ul>
+<li><strong>Obscure libraries and APIs.</strong> The model&rsquo;s training data has less coverage of niche tools, and it fills gaps with plausible-looking inventions.</li>
+<li><strong>Version-specific behavior.</strong> The model may generate code for a different version of a library than what you are using, producing calls that look correct but fail at runtime.</li>
+<li><strong>Configuration and deployment.</strong> Infrastructure-as-code, CI/CD configurations, and deployment scripts are particularly prone to hallucination because there are fewer standardized patterns and more environment-specific details.</li>
+</ul>
+<p><strong>nullbio</strong> noted that despite performing best on benchmarks, some models hallucinate nonsense more frequently than competitors in practice &ndash; a reminder that benchmark performance does not predict real-world reliability. <strong>moffkalast</strong> reinforced the point: models that top open-source benchmarks can still fabricate more nonsense than their predecessors.</p>
+<p><strong>How to mitigate it:</strong></p>
+<ul>
+<li><strong>Always run the code.</strong> Do not trust that generated code compiles or passes tests until you have actually run it. This sounds obvious, but review-without-execution is a common trap.</li>
+<li><strong>Check imports and dependencies.</strong> Hallucinated API calls are usually catchable by checking whether the imported module actually exports the function being called.</li>
+<li><strong>Be especially careful with less common libraries.</strong> The more obscure the dependency, the higher the hallucination risk.</li>
+<li><strong>Use test-first workflows.</strong> If the agent&rsquo;s code must pass your tests, hallucinated APIs will fail at the test stage rather than slipping through review.</li>
+</ul>
+<h2 id="wrong-architecture">Wrong Architecture</h2>
+<p>The agent solves the immediate problem but makes structural choices that create larger problems downstream. This is the failure mode that experienced developers worry about most, because it is the hardest to catch and the most expensive to fix.</p>
+<p><strong>latexr</strong> described the concern as building &ldquo;unstable Jenga towers of complexity&rdquo; &ndash; each individual block works, but the structure is fragile. <strong>embedding-shape</strong> reported that an increasing share of client work involves rescuing projects that were vibe-coded to production: they have real users, but no engineering behind them.</p>
+<p>This failure mode emerges because the agent optimizes for the local task, not the system. It does not have your mental model of the architecture, the performance requirements, the scaling constraints, or the maintenance burden. It makes the tests pass, which is its job. Whether the approach will cause problems at scale is your job.</p>
+<p><strong>devnonymous</strong> applied a classic insight: if debugging is twice as hard as writing code, and AI writes code at maximum cleverness, humans face an impossible debugging load. The code works, but nobody can maintain it.</p>
+<p><strong>How to mitigate it:</strong></p>
+<ul>
+<li><strong>Own the architecture.</strong> Define interfaces, module boundaries, data flow, and key design decisions before delegating implementation. The agent fills in leaves; you own the tree.</li>
+<li><strong>Review for structure, not just correctness.</strong> A passing test suite does not mean the architecture is sound. Check that the agent&rsquo;s approach fits the existing codebase patterns.</li>
+<li><strong>Document architectural constraints in your harness.</strong> &ldquo;All data access goes through the repository layer.&rdquo; &ldquo;Never call the payment API directly from a handler.&rdquo; These rules prevent the agent from taking architectural shortcuts.</li>
+<li><strong>Periodically review the big picture.</strong> After a stretch of agent-assisted work, step back and look at the overall structure. <strong>vunderba</strong> described catching a subtle error with a misleading comment buried deep in the code &ndash; the kind of structural problem that only surfaces during a deliberate review pass.</li>
+</ul>
+<h2 id="the-evaluation-problem">The Evaluation Problem</h2>
+<p>Knowing whether the agent&rsquo;s output is correct is harder than it appears. The code compiles. The tests pass. The feature seems to work. But there are categories of correctness that are difficult to verify:</p>
+<p><strong>Edge cases the tests do not cover.</strong> <strong>dataviz1000</strong> described a systematic failure: AI agents always present the best-looking results rather than honestly reporting null results or edge cases. The output looks right because the verification does not probe deep enough.</p>
+<p><strong>Subtle logic errors with plausible comments.</strong> The agent generates code that does something slightly different from what it claims. The comment says &ldquo;validate input,&rdquo; but the implementation only checks for null, not for the specific format constraints your system requires. <strong>vunderba</strong> caught exactly this kind of bug &ndash; a misleading comment describing the opposite of the actual behavior.</p>
+<p><strong>Non-functional correctness.</strong> Performance, security, accessibility, and maintainability are aspects of correctness that tests often do not capture. The agent&rsquo;s code may be functionally correct but introduce a performance regression, a security vulnerability, or a maintenance burden that only becomes apparent later.</p>
+<p><strong>How to mitigate it:</strong></p>
+<ul>
+<li><strong>Write tests before delegating.</strong> Human-written tests encode your intent. If the agent passes all tests but the output is wrong, you know the gap is in the tests, not the agent.</li>
+<li><strong>Use multiple verification methods.</strong> Tests for functional correctness, visual inspection for UI, load testing for performance, security scanning for vulnerabilities. No single method catches everything.</li>
+<li><strong>Be skeptical of agents verifying their own work.</strong> <strong>koiueo</strong> discovered an agent that acknowledged ignoring a failing test in the project documentation. Always verify independently.</li>
+<li><strong>Check that the agent solved the problem rather than redefining it.</strong> Did the test pass because the code is correct, or because the agent modified the test?</li>
+</ul>
+<h2 id="context-window-as-the-central-bottleneck">Context Window as the Central Bottleneck</h2>
+<p>Many of the failure modes above share a root cause: the context window is finite, and everything the agent knows about your project must fit within it. When it does not, information gets lost, instructions get forgotten, and quality degrades.</p>
+<p><strong>joshuaisaact</strong> offered a useful reframing: agents are essentially stateless functions with a limited heap that degrades in quality as it fills. All the sophisticated behavior &ndash; planning, multi-file edits, iterative debugging &ndash; happens within this constrained memory.</p>
+<p><strong>jtms</strong> pointed to the cost dimension: agents waste tens of thousands of tokens on mechanical operations like searching for files that deterministic tools could handle instantly. Every token spent on file navigation is a token not available for reasoning about your actual problem.</p>
+<p>This bottleneck drives several emerging practices:</p>
+<ul>
+<li><strong>Short sessions</strong> to keep context fresh</li>
+<li><strong>Subagent patterns</strong> where tasks are delegated to fresh contexts rather than piled onto existing ones</li>
+<li><strong>Tool integration</strong> (LSP, linters, type checkers) to handle mechanical work without consuming context tokens</li>
+<li><strong>Harness files</strong> that inject critical information at session start when context is cleanest</li>
+</ul>
+<p>The context bottleneck will likely ease as models improve. But for now, it is the constraint that shapes every other practice in this guide.</p>
+<h2 id="the-honest-assessment">The Honest Assessment</h2>
+<p>AI coding tools are genuinely useful. They are also genuinely limited. The failure modes on this page are not theoretical &ndash; they are reported by practitioners using these tools daily on real codebases.</p>
+<p>The developers who get the most value from these tools are not the ones who encounter fewer failures. They are the ones who have learned to anticipate, detect, and mitigate failures quickly. They run the <a href="core-loop.html">core loop</a> tightly, maintain their harness, verify aggressively, and know when to stop delegating and write the code themselves.</p>
+<p><strong>pron</strong> posed a question that is worth sitting with: can AI code in the sense that a pilot can fly a plane? A golfer occasionally hits a hole-in-one, but that does not make them a reliable pilot who gets the plane to the destination every time. Current AI coding tools are somewhere in between &ndash; more reliable than a lucky shot, less reliable than a professional you can trust without oversight.</p>
+<p>The gap is real, and pretending it does not exist leads to the failure modes described above. But the gap is also manageable, and closing it &ndash; through better scoping, verification, and harness engineering &ndash; is the central skill of AI-assisted development in 2026.</p>
+<p>Your tools will improve. Your judgment, if you maintain it, will compound. Build both.</p>
+
+      </div>
+
+      <nav class="article-nav">
+        
+        
+        <a href="../guide/adoption-curve.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">The Adoption Curve</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#context-drift">Context Drift</a></li>
+    <li><a href="#going-in-circles">Going in Circles</a></li>
+    <li><a href="#sycophancy-and-overcompliance">Sycophancy and Overcompliance</a></li>
+    <li><a href="#hallucination-and-fabrication">Hallucination and Fabrication</a></li>
+    <li><a href="#wrong-architecture">Wrong Architecture</a></li>
+    <li><a href="#the-evaluation-problem">The Evaluation Problem</a></li>
+    <li><a href="#context-window-as-the-central-bottleneck">Context Window as the Central Bottleneck</a></li>
+    <li><a href="#the-honest-assessment">The Honest Assessment</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

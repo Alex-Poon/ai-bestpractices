@@ -16,18 +16,18 @@
       <description>&lt;p&gt;Claude Code is Anthropic&amp;rsquo;s CLI-first coding agent. It runs in the terminal, takes natural language task descriptions, and executes autonomously &amp;ndash; reading files, running commands, editing code, and iterating on failures. It is single-model (Anthropic&amp;rsquo;s Claude family), available through Claude Max subscriptions at $100-200/month, and focused entirely on agentic workflows with no autocomplete mode.&lt;/p&gt;&#xA;&lt;p&gt;What sets Claude Code apart from other agents is its extensibility. It supports CLAUDE.md project files, custom sub-agents, hooks for CI/CD integration, and MCP servers for structured tool access. This page covers the major features and developments that matter to practitioners.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Parallel Agent Coordination</title>
-      <link>/workflows/parallel-agents.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/workflows/parallel-agents.html</guid>
-      <description>&lt;p&gt;A single agent is often too slow for large projects. Running multiple agents in parallel is the obvious solution, but naive parallelism introduces failure modes that can waste more time and money than sequential work. This page covers when parallel agents help, when they hurt, and the coordination infrastructure that makes the difference.&lt;/p&gt;&#xA;&lt;p&gt;The strongest empirical evidence comes from Nicholas Carlini&amp;rsquo;s compiler project, where 16 parallel Claude instances produced 100,000 lines of working Rust compiler code over two weeks. The full case study is covered in &lt;a href=&#34;../../deep-dives/parallel-compiler-lessons/&#34;&gt;What 100 Parallel Agents Taught Us&lt;/a&gt;. This page focuses on the reusable coordination patterns.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Claude Code&#39;s New Hidden Feature: Swarms</title>
       <link>/sources/2026-01-24-claude-code-swarms.html</link>
       <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate>
       <guid>/sources/2026-01-24-claude-code-swarms.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;A tweet by @NicerInPerson revealed that Claude Code contains hidden multi-agent orchestration capabilities, colloquially referred to as &amp;ldquo;swarms.&amp;rdquo; The discovery, corroborated by a GitHub repository (claude-sneakpeek by mikekelly), showed that Anthropic had built native sub-agent coordination features including a TeammateTool, delegate mode for spawning background agents, and a team coordination system with messaging and task ownership. Rather than relying on third-party orchestration frameworks, these capabilities are built directly into Claude Code but gated behind feature flags not yet available in general release.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Multi-Agent Patterns</title>
+      <link>/practices/multi-agent.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/practices/multi-agent.html</guid>
+      <description>&lt;p&gt;Multi-agent patterns involve running multiple AI agents simultaneously on related tasks. They represent the highest-throughput mode of AI-assisted development &amp;ndash; and the most complex. When they work, months of work happen in minutes. When they fail, you get merge conflicts, duplicated effort, and code that no single agent (or human) fully understands.&lt;/p&gt;&#xA;&lt;p&gt;The practice is still emerging. There is no consensus on when multi-agent is worth the overhead versus well-scoped single-agent work. But practitioners are converging on principles that separate productive multi-agent usage from expensive chaos.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

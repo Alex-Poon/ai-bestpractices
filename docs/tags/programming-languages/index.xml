@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming-Languages on AI Best Practices Knowledge Base</title>
+    <link>/tags/programming-languages.html</link>
+    <description>Recent content in Programming-Languages on AI Best Practices Knowledge Base</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/programming-languages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Which Programming Languages Work Best with AI?</title>
+      <link>/debates/language-matters.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/debates/language-matters.html</guid>
+      <description>&lt;h2 id=&#34;the-question&#34;&gt;The Question&lt;/h2&gt;&#xA;&lt;p&gt;When developers adopt AI coding tools, they quickly discover that results vary by programming language. Python and TypeScript seem to get the best outputs. Rust and Go produce code that at least compiles. C++ and niche languages often yield frustrating results. But is this a fundamental property of the languages, a reflection of training data distribution, or something that will be optimized away as models improve?&lt;/p&gt;&#xA;&lt;p&gt;The question matters because language choice has long-term consequences. Teams choosing a technology stack in 2026 must consider not only the traditional factors &amp;ndash; performance, ecosystem, hiring &amp;ndash; but also how well their chosen language works with the AI tools that are rapidly becoming essential to developer productivity. If language choice determines a 2x or 5x difference in AI-assisted productivity, that factor could outweigh nearly everything else.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

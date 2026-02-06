@@ -37,14 +37,13 @@
       <span>AI Best Practices</span>
     </a>
     <div class="nav-links">
-      <a class="nav-link" data-section="start-here" href="../start-here/index.html">Start Here</a>
-      <a class="nav-link" data-section="skills" href="../skills/index.html">Skills</a>
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
       <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
-      <a class="nav-link" data-section="workflows" href="../workflows/index.html">Workflows</a>
-      <a class="nav-link" data-section="landscape" href="../landscape/index.html">Landscape</a>
       <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
       <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
-      <a class="nav-link" data-section="tags" href="../tags/">Tags</a>
     </div>
     <div class="nav-actions">
       <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
@@ -152,26 +151,26 @@
       <div class="article-content">
         <p>AI-assisted development in early 2026 is past the novelty phase but far from universal. The community is split, the data is mixed, and where a given developer lands depends as much on their workflow and identity as on the technology itself.</p>
 <h2 id="the-six-stages-framework">The Six Stages Framework</h2>
-<p>The <a href="../guides/adoption-stages/">Six Stages of AI Adoption</a> framework, synthesized from Mitchell Hashimoto&rsquo;s influential account and extensive practitioner discussion, describes a progression from chatbot usage through always-running agents. It remains the best map of the adoption journey because each stage builds on the calibration and infrastructure of the previous one.</p>
-<p>Most developers who abandon AI tools get stuck between Stages 1 and 2 &mdash; using chatbots rather than agents, or delegating without first calibrating on what the agent handles well. Most who succeed credit investments in Stage 2 (reproducing their own work to build intuition) and Stage 5 (engineering the harness). See the <a href="../deep-dives/practitioner-consensus/">Practitioner Consensus</a> for the community data behind these observations.</p>
+<p>The <a href="../guide/adoption-curve.html">AI Adoption Curve</a> framework, synthesized from Mitchell Hashimoto&rsquo;s influential account and extensive practitioner discussion, describes a progression from chatbot usage through always-running agents. It remains the best map of the adoption journey because each stage builds on the calibration and infrastructure of the previous one.</p>
+<p>Most developers who abandon AI tools get stuck between Stages 1 and 2 &mdash; using chatbots rather than agents, or delegating without first calibrating on what the agent handles well. Most who succeed credit investments in Stage 2 (reproducing their own work to build intuition) and Stage 5 (engineering the harness). See the <a href="../evidence/practitioner-voices.html">Practitioner Consensus</a> for the community data behind these observations.</p>
 <p>The framework&rsquo;s central insight is that AI adoption is primarily about engineering maturity applied to a new tool, not about learning AI-specific techniques. Developers who already practice decomposition, specification, and verification have a structural advantage &mdash; not because they know AI better, but because they already do what agents require.</p>
 <h2 id="community-sentiment-polarized-but-trending-positive">Community Sentiment: Polarized but Trending Positive</h2>
 <p>The HN discussions captured in this knowledge base reveal a community that is deeply divided but trending toward cautious adoption. The data points:</p>
 <p><strong>Enthusiastic adopters</strong> report transformative productivity gains, particularly for greenfield projects and personal tools. Burke Holland described completing four substantial full-stack projects in rapid succession with Opus 4.5. <strong>jedberg</strong> on HN described a decade-old app idea built exactly as specified on the first attempt. <strong>simonw</strong> reported consistent surprise at the results of absurdly difficult challenges.</p>
 <p><strong>Experienced skeptics</strong> push back on the replacement narrative while acknowledging real gains. <strong>mcv</strong> concluded that despite heavy use, the model still frequently gets stuck. <strong>honeycrispy</strong> found architecture decisions that required rewriting half the code. <strong>multisport</strong> argued the demos address isolated greenfield work, not the team-scale engineering that constitutes most professional development.</p>
-<p><strong>Measured practitioners</strong> occupy the middle ground. The <a href="../deep-dives/practitioner-consensus/">Practitioner Consensus</a> synthesis found convergence on several points: agents work best for well-scoped tasks with clear verification, the quality of the harness determines the quality of the output, and experienced developers get more value than novices because they already have the judgment AI adoption requires.</p>
-<p>(<a href="../sources/2026-01-06-opus-4-5-agent-experience/">Sources</a>, <a href="../deep-dives/practitioner-consensus/">Practitioner Consensus</a>)</p>
+<p><strong>Measured practitioners</strong> occupy the middle ground. The <a href="../evidence/practitioner-voices.html">Practitioner Consensus</a> synthesis found convergence on several points: agents work best for well-scoped tasks with clear verification, the quality of the harness determines the quality of the output, and experienced developers get more value than novices because they already have the judgment AI adoption requires.</p>
+<p>(<a href="../sources/2026-01-06-opus-4-5-agent-experience.html">Sources</a>, <a href="../evidence/practitioner-voices.html">Practitioner Consensus</a>)</p>
 <h2 id="the-builder-vs-crafter-split">The Builder vs. Crafter Split</h2>
 <p>Andrej Karpathy identified what may be the most useful lens for understanding adoption patterns: the split between engineers who primarily enjoy building products and those who primarily enjoy the craft of programming.</p>
 <p>Builder-oriented engineers tend to embrace AI tools enthusiastically. They see code as a means to an end and welcome anything that accelerates the path from idea to working product. <strong>atonse</strong> on HN identified with this group explicitly, noting they have always coded for outcomes rather than craft.</p>
 <p>Craft-oriented engineers feel their identity threatened by AI tools. For them, the act of writing code is the point, not just the artifact it produces. <strong>tripledry</strong> expressed concern that if programming becomes prompt engineering, the joy of building would be lost.</p>
 <p>This split is not about skill level. Both groups contain excellent engineers. But it predicts adoption behavior more reliably than technical sophistication, years of experience, or even measured productivity gains. Organizations rolling out AI tools should expect fundamentally different reactions from these two groups and plan accordingly.</p>
-<p>(<a href="../sources/2026-01-26-karpathy-claude-coding-notes/">Source</a>)</p>
+<p>(<a href="../sources/2026-01-26-karpathy-claude-coding-notes.html">Source</a>)</p>
 <h2 id="enterprise-adoption-patterns">Enterprise Adoption Patterns</h2>
 <p>Large organizations face a distinct set of adoption challenges that individual developers do not:</p>
 <p><strong>Security and compliance.</strong> Enterprise adoption requires clearing legal, security, and compliance hurdles before any productivity discussion begins. Apple&rsquo;s decision to run Gemini under its Private Cloud Compute infrastructure illustrates the level of architectural consideration required. Even trillion-dollar companies need guarantees about data handling before integrating AI models into core workflows.</p>
-<p><strong>Cost predictability.</strong> Individual developers can tolerate variable costs. Enterprises need budgets. The tension between flat-rate plans (with rate limits) and pay-as-you-go pricing (with unpredictable bills) is an active friction point. The <a href="../landscape/costs-and-tradeoffs/">Costs and Tradeoffs</a> section covers this in detail.</p>
-<p><strong>Skill development concerns.</strong> Anthropic&rsquo;s own research found a 17% learning penalty when junior developers used AI assistance, with debugging skills most affected. Organizations that care about developing their junior talent face a genuine dilemma: the promise of productivity versus the risk of skill atrophy. See <a href="../landscape/open-questions/">Open Questions</a> for the ongoing debate.</p>
+<p><strong>Cost predictability.</strong> Individual developers can tolerate variable costs. Enterprises need budgets. The tension between flat-rate plans (with rate limits) and pay-as-you-go pricing (with unpredictable bills) is an active friction point. The <a href="../landscape/costs-and-tradeoffs.html">Costs and Tradeoffs</a> section covers this in detail.</p>
+<p><strong>Skill development concerns.</strong> Anthropic&rsquo;s own research found a 17% learning penalty when junior developers used AI assistance, with debugging skills most affected. Organizations that care about developing their junior talent face a genuine dilemma: the promise of productivity versus the risk of skill atrophy. See <a href="../landscape/open-questions.html">Open Questions</a> for the ongoing debate.</p>
 <p><strong>Uneven adoption across teams.</strong> Some teams within an organization will reach Stage 5 or 6 while others remain at Stage 1. This creates coordination challenges, as the teams using agents extensively may produce code with different characteristics than teams coding manually.</p>
 <h2 id="where-we-are">Where We Are</h2>
 <p>If forced to place the industry on a single point of the adoption curve, the best characterization is: <strong>early mainstream, with a long tail of holdouts</strong>. The enthusiasts have moved well beyond experimentation into daily use. A growing middle group is actively integrating agents into their workflows. But a substantial minority remains skeptical or has tried and abandoned AI tools, often because they hit the Stage 1-to-2 gap without building the calibration needed to see reliable results.</p>
@@ -221,30 +220,29 @@
   <div class="footer-container">
     <div class="footer-brand">
       <span class="footer-logo">AI Best Practices</span>
-      <p class="footer-description">What the best practitioners know about AI-assisted software development — synthesized from 35&#43; HN discussions and practitioner articles.</p>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
     </div>
     <div class="footer-nav">
       <div class="footer-section">
         <h3>Learn</h3>
         <ul>
-          <li><a href="../start-here/index.html">Start Here</a></li>
-          <li><a href="../skills/index.html">Skills</a></li>
-          <li><a href="../workflows/index.html">Workflows</a></li>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Explore</h3>
         <ul>
           <li><a href="../tools/index.html">Tools</a></li>
-          <li><a href="../landscape/index.html">Landscape</a></li>
           <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
           <li><a href="../sources/index.html">Sources</a></li>
-          <li><a href="../tags/">Tags</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Content sourced from 32 HN articles and practitioner experience. 55 pages across 137 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
     </div>
   </div>
 </footer>

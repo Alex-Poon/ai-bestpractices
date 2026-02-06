@@ -9,11 +9,11 @@
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/verification/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Verification: Reading AI-Generated Code</title>
-      <link>/skills/verification.html</link>
+      <title>Verification</title>
+      <link>/practices/verification.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/skills/verification.html</guid>
-      <description>&lt;p&gt;As AI takes over more code generation, the developer&amp;rsquo;s primary contribution shifts from writing to reading. Verification &amp;ndash; the ability to evaluate whether AI-generated code is correct, secure, and aligned with intent &amp;ndash; becomes the skill that separates productive AI usage from expensive mistakes.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-verification-matters-more-than-generation&#34;&gt;Why Verification Matters More Than Generation&lt;/h2&gt;&#xA;&lt;p&gt;The economics of AI-assisted development are asymmetric. Generating code is now cheap and fast. Deploying broken code is still expensive and slow to fix. The bottleneck has moved from production to quality control.&lt;/p&gt;</description>
+      <guid>/practices/verification.html</guid>
+      <description>&lt;p&gt;Verification is the skill that makes every other AI-assisted development practice work. Task scoping, harness engineering, and model selection all ultimately exist to make verification easier and faster. If you cannot verify the output, nothing else matters.&lt;/p&gt;&#xA;&lt;p&gt;The shift is fundamental: as AI takes over code generation, the developer&amp;rsquo;s primary contribution moves from writing to reading, reviewing, and validating. You are no longer the author. You are the editor &amp;ndash; and the editor must be a genuinely skilled reader, not a rubber stamp.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

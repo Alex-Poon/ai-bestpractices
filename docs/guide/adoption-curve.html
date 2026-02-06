@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Adoption Curve | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="What to expect at each stage — from skepticism through the valley of inefficiency to proficiency.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="The Adoption Curve">
+  <meta property="og:description" content="What to expect at each stage — from skepticism through the valley of inefficiency to proficiency.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-guide"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../guide/index.html">The Guide</a></li>
+      
+    
+    <li aria-current="page">The Adoption Curve</li>
+  </ol>
+</nav>
+
+
+
+  
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  <div class="guide-progress">
+    
+      <div class="guide-progress-step guide-progress-step--done"></div>
+    
+      <div class="guide-progress-step guide-progress-step--done"></div>
+    
+      <div class="guide-progress-step guide-progress-step--active"></div>
+    
+      <div class="guide-progress-step"></div>
+    
+  </div>
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">The Adoption Curve</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">8 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+      </header>
+
+      <div class="article-content">
+        <p>If you have been using AI coding tools for more than a few weeks, you have probably noticed something: the initial excitement fades. Tasks that seemed magical at first start revealing cracks. The agent makes the same category of mistake for the third time. You spend twenty minutes fixing something that should have taken five. You wonder if you were wrong about the whole thing.</p>
+<p>You are not wrong. You are on the adoption curve, and almost everyone passes through this valley. Understanding the shape of the curve does not make the valley disappear, but it does help you avoid quitting at the point of maximum frustration &ndash; which is exactly when you are closest to the breakthrough.</p>
+<h2 id="the-honeymoon">The Honeymoon</h2>
+<p>Every practitioner starts here. The first time you watch an agent generate a working function in seconds, or produce a comprehensive test suite from a brief description, it feels like a different world. You tell colleagues. You try bigger tasks. The tool seems to understand you.</p>
+<p>This phase is real. The capabilities are real. But your expectations are calibrating upward much faster than your skills are calibrating to the tool&rsquo;s actual limitations. <strong>eli</strong> described a well-documented pattern: users &ldquo;just notice the flaws more the longer they use them.&rdquo; <strong>warkdarrior</strong> asked the question directly: &ldquo;Is it possible that your expectations are increasing, not that the model is getting worse?&rdquo;</p>
+<p>The honeymoon typically lasts one to three weeks. It ends not because the tool changes but because you start encountering the failure modes that were always there. You just had not hit them yet because your early tasks were simple and well-suited to AI assistance.</p>
+<h2 id="the-hangover">The Hangover</h2>
+<p>This is where most people drop out.</p>
+<p>The agent starts going in circles on a task that seems straightforward. It produces plausible-looking code that has a subtle bug buried in it. It ignores a convention you explained three times. It adds a feature you did not ask for. You spend more time reviewing and fixing output than it would have taken to write the code yourself.</p>
+<p><strong>postalcoder</strong> captured the emotional dimension of this phase: with older, weaker models, you still had to do a significant amount of the thinking yourself, which forced learning. The newer models are so capable that they short-circuit the productive struggle &ndash; until they fail, and the failure is disorienting because you were not engaged enough to see it coming.</p>
+<p>The hangover is not a sign that the tool is bad. It is a sign that your calibration is adjusting. You are discovering the real boundaries of what works, and those boundaries are less magical than the honeymoon suggested.</p>
+<p>Common hangover symptoms:</p>
+<ul>
+<li><strong>Over-delegation.</strong> You tried a task that was too broad, and the agent produced something confidently wrong. The fix took longer than doing it from scratch.</li>
+<li><strong>Trust whiplash.</strong> The agent nailed a hard task, so you trusted it on the next one. It failed badly. You do not know which results to trust.</li>
+<li><strong>Review fatigue.</strong> <strong>InfinityByTen</strong> described the experience: after a few seconds of &ldquo;thinking,&rdquo; you get hundreds of lines of code to review from an entity that never pushes back. The volume is overwhelming.</li>
+<li><strong>The &ldquo;holding it wrong&rdquo; frustration.</strong> You read comments saying the tool works great and wonder what you are doing wrong. <strong>dannersy</strong> expressed the exhaustion: tired of being told AI is great if only you used it right, when the amount of knowledge required to get useful output is unreasonable. <strong>frizlab</strong> distilled the sentiment to a terse question that resonated widely.</li>
+</ul>
+<h2 id="the-valley-of-inefficiency">The Valley of Inefficiency</h2>
+<p>The hangover settles into a longer period where you are slower with the tool than without it, but you can see the potential. You know what needs to change &ndash; better task scoping, more harness investment, improved verification habits &ndash; but you have not built those muscles yet.</p>
+<p>This is the phase where discipline matters most. The practitioners who emerge from the valley share a few characteristics:</p>
+<p><strong>They invest in the harness.</strong> Every mistake becomes an entry in AGENTS.md. Every convention the agent misses gets documented. The harness grows from real failures, not speculation. <strong>conception</strong> described the investment ratio that makes the valley worth crossing: invest an hour of upfront work in context and documentation, and get five hours of productive output in return.</p>
+<p><strong>They tighten task scope.</strong> Tasks get smaller and more precisely defined. Instead of &ldquo;implement the settings page,&rdquo; it becomes &ldquo;add the email validation function with these specific rules.&rdquo; Smaller tasks mean faster verification, which means faster loop iterations, which means faster calibration.</p>
+<p><strong>They separate their learning from the tool&rsquo;s output.</strong> <strong>renegade-otter</strong> made the analogy to physical training: use AI for the tedious repetitive work, but do the learning work yourself. &ldquo;It requires discipline&hellip; sometimes you need to embrace the discomfort.&rdquo; <strong>ekropotin</strong> described an elegant split: AI agents at work where velocity matters, but deliberately coding by hand on hobby projects to maintain skills and neural connections.</p>
+<p><strong>They accept non-determinism.</strong> The tool does not produce the same output twice. <strong>joebates</strong> noted that skills fail 5-10% of the time with no clear pattern, making it nearly impossible to evaluate prompt improvements. The valley includes learning to work with a probabilistic collaborator rather than a deterministic compiler.</p>
+<h2 id="the-breakthrough">The Breakthrough</h2>
+<p>At some point &ndash; usually after two to four weeks of deliberate practice &ndash; something clicks. You stop fighting the tool and start working with its grain. Task scoping becomes instinctive. The harness catches most recurring errors. Verification is fast because the tasks are properly sized. You develop what <strong>handoflixue</strong> described as a &ldquo;trust but verify&rdquo; relationship, similar to managing human collaborators: you learn what the agent is good and bad at, like learning how each employee works.</p>
+<p>The breakthrough does not mean the tool stops failing. It means you anticipate the failure modes and have systems in place to catch them. The loop is fast enough that a failed iteration costs you minutes, not hours.</p>
+<p>Several markers indicate you have crossed into this territory:</p>
+<ul>
+<li>You instinctively know which tasks to delegate and which to do yourself</li>
+<li>Your harness file is a living document that you update weekly</li>
+<li>You review diffs rather than reading entire files</li>
+<li>You start new sessions for new tasks without thinking about it</li>
+<li>Failed agent outputs no longer frustrate you &ndash; they are just data</li>
+</ul>
+<p><strong>seer</strong> described the mental shift as &ldquo;eerily similar to jump from IC to manager&rdquo; &ndash; you stop obsessing over implementation details and focus on direction, guidance, and review. If the agent chose an approach that differs from yours but the tests pass, you accept it.</p>
+<h2 id="proficiency">Proficiency</h2>
+<p>Proficient practitioners have internalized the loop to the point where it is invisible. They think in terms of delegatable units of work. They maintain harnesses across multiple projects. They run parallel agent sessions &ndash; one for feature work, one for review, sometimes a third for exploration.</p>
+<p>This is where the experience split becomes most visible. <strong>drooby</strong> described the dynamic bluntly: experienced developers who already know what needs to happen make AI produce quality output, while those without that foundation create &ldquo;working monsters.&rdquo; <strong>Oras</strong> framed it as an architect-coder split: system design remains the human&rsquo;s domain, and AI handles implementation within well-designed boundaries.</p>
+<p><strong>mlrtime</strong>, with over 25 years of experience, described reaching this stage as &ldquo;god mode, and it&rsquo;s fun again.&rdquo; <strong>freediver</strong> said something similar: the joy of building came back because the boring parts were handled. But both of these experiences were grounded in decades of prior expertise that informed their direction, review, and architectural decisions.</p>
+<p>The proficiency stage is not a destination. Models change. Tools evolve. New failure modes appear. But the underlying skills &ndash; task scoping, context management, verification discipline, harness engineering &ndash; transfer across tools and models. They are the durable investment.</p>
+<h2 id="the-skill-development-question">The Skill Development Question</h2>
+<p>There is a tension running through the entire adoption curve that deserves direct acknowledgment.</p>
+<p>Anthropic&rsquo;s own research found that AI-assisted developers learned less while coding only marginally faster. The skills most affected were debugging and comprehension &ndash; exactly the skills you need to verify agent output effectively. <strong>gergo_b</strong> described the practical consequence: returning to AI-written code after two weeks and being unable to understand it, while self-written code remained immediately clear.</p>
+<p>This creates a paradox: the more you use AI, the less equipped you become to check its work, unless you actively counteract the effect. <strong>jbellis</strong> offered a useful analogy: it is like arithmetic with calculators. You do not need to mentally compute large multiplications, but you should know roughly what the answer should be. Maintaining that high-level understanding &ndash; enough to detect when something is wrong &ndash; is the essential skill.</p>
+<p>The practitioners who navigate this best use a combination of approaches: they engage critically with output rather than accepting it passively, they review diffs line by line, they periodically implement tasks manually, and some deliberately maintain non-AI coding practice outside of work. The adoption curve is not just about learning the tool. It is about learning the tool while preserving the judgment that makes you effective with it.</p>
+<h2 id="where-you-are-is-normal">Where You Are Is Normal</h2>
+<p>If you are in the honeymoon, enjoy it &ndash; but start building your harness now, while motivation is high.</p>
+<p>If you are in the hangover, know that it passes. Tighten your task scoping, invest in documentation, and resist the urge to evaluate the tool based on your worst experience.</p>
+<p>If you are in the valley, keep going. The practitioners who emerge from it consistently say the investment was worth it. But be honest about the skill development question. Use the tool deliberately, not passively.</p>
+<p>If you have broken through, the next page is for you too. <a href="when-it-fails.html">When It Fails</a> covers the failure modes that affect even proficient users &ndash; because the tool&rsquo;s limitations do not disappear with experience. They just become easier to manage.</p>
+
+      </div>
+
+      <nav class="article-nav">
+        
+        <a href="../guide/when-it-fails.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">When It Fails</span>
+        </a>
+        
+        
+        <a href="../guide/getting-started.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Getting Started</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-honeymoon">The Honeymoon</a></li>
+    <li><a href="#the-hangover">The Hangover</a></li>
+    <li><a href="#the-valley-of-inefficiency">The Valley of Inefficiency</a></li>
+    <li><a href="#the-breakthrough">The Breakthrough</a></li>
+    <li><a href="#proficiency">Proficiency</a></li>
+    <li><a href="#the-skill-development-question">The Skill Development Question</a></li>
+    <li><a href="#where-you-are-is-normal">Where You Are Is Normal</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

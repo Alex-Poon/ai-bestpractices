@@ -21,7 +21,7 @@ Each entry is attributed to its original author and linked to the source discuss
 [Source](/sources/2026-01-26-karpathy-claude-coding-notes.html)
 
 **EastLondonCoder** shipped four real projects using agent-assisted tight feedback loops, including a ticketing system with real users and a git-like tool for media projects.
-[Source](/deep-dives/practitioner-consensus.html)
+[Source](/sources/2026-01-04-llm-coding-workflow-2026.html)
 
 **joshmlewis** described building an enterprise agentic loop processing over a billion tokens monthly, noting that small production details compound complexity enormously.
 [Source](/sources/2026-01-08-claude-code-200-lines.html)
@@ -72,10 +72,10 @@ Each entry is attributed to its original author and linked to the source discuss
 [Source](/sources/2026-01-08-ai-coding-getting-worse.html)
 
 **JoshuaDavid** reported spending around $190 per month on AI coding tools.
-[Source](/deep-dives/practitioner-consensus.html)
+[Source](/sources/2026-01-04-llm-coding-workflow-2026.html)
 
 **latchkey** described a multi-tool stack implying $175-325 in monthly AI expenses.
-[Source](/deep-dives/practitioner-consensus.html)
+[Source](/sources/2026-01-04-llm-coding-workflow-2026.html)
 
 **Kuinox** speculated that providers may dynamically serve smaller models during usage spikes, explaining perceived quality inconsistency.
 [Source](/sources/2026-01-08-ai-coding-getting-worse.html)
@@ -94,7 +94,7 @@ Each entry is attributed to its original author and linked to the source discuss
 [Source](/sources/2026-01-08-ai-coding-getting-worse.html)
 
 **tux1968** argued that if AI tools require expert skill to use effectively, their broad applicability is fundamentally limited -- making them specialized instruments, not universal multipliers.
-[Source](/deep-dives/practitioner-consensus.html)
+[Source](/sources/2026-01-04-llm-coding-workflow-2026.html)
 
 **nyrikki** explained how training feedback loops are flawed -- experienced users accept suggestions then heavily edit them, which looks like approval in the training data.
 [Source](/sources/2026-01-08-ai-coding-getting-worse.html)
@@ -103,7 +103,7 @@ Each entry is attributed to its original author and linked to the source discuss
 [Source](/sources/2026-01-26-karpathy-claude-coding-notes.html)
 
 **underdeserver** noted that the capabilities agents require -- file access, code execution, HTTP requests -- are what security researchers call a prompt injection risk trifecta.
-[Source](/deep-dives/practitioner-consensus.html)
+[Source](/sources/2026-01-04-llm-coding-workflow-2026.html)
 
 **strogonoff** questioned whether AI truly saves time given review overhead, arguing that after sufficient experience, coding is overwhelmingly architecture work anyway.
 [Source](/sources/2026-01-26-karpathy-claude-coding-notes.html)
@@ -114,4 +114,4 @@ Each entry is attributed to its original author and linked to the source discuss
 
 These voices represent a community that is neither uniformly enthusiastic nor uniformly skeptical. The emerging picture is one of genuine utility bounded by real limitations, meaningful productivity gains for some workflows alongside skill development concerns, and a cost structure that most adoption narratives conveniently omit.
 
-For the synthesized analysis behind these voices, see [What Practitioners Actually Think About AI Coding](/deep-dives/practitioner-consensus.html). For the controlled study on skill development, see the [Anthropic research coverage](/sources/2026-01-30-ai-assistance-coding-skills.html).
+For the controlled study on skill development, see the [Anthropic research coverage](/sources/2026-01-30-ai-assistance-coding-skills.html). For curated practitioner perspectives by category, see the [Voices section](/voices/).

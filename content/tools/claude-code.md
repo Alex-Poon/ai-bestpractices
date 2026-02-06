@@ -30,7 +30,7 @@ Vercel's evaluation found that passive context in AGENTS.md files achieved a 100
 
 The practical implication is clear: invest in your CLAUDE.md file. Document build commands, architecture constraints, coding conventions, and known pitfalls. Start sparse and add entries as you encounter real issues. The file compounds in value over time -- each documented correction prevents the same mistake from recurring in future sessions.
 
-For a practical template and maintenance guide, see the [AGENTS.md / CLAUDE.md Guide](/references/agents-md-guide.html). For Vercel's evaluation details, see the [source capture](/sources/2026-01-29-agents-md-outperforms-skills.html).
+For a practical template and maintenance guide, see the [Harness Engineering](/practices/harness-engineering.html). For Vercel's evaluation details, see the [source capture](/sources/2026-01-29-agents-md-outperforms-skills.html).
 
 ## Native LSP Support
 

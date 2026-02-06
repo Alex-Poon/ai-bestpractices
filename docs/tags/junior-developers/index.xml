@@ -6,8 +6,15 @@
     <description>Recent content in Junior-Developers on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/junior-developers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Does AI Prevent Junior Developer Skill Formation?</title>
+      <link>/debates/junior-skills.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/debates/junior-skills.html</guid>
+      <description>&lt;h2 id=&#34;the-question&#34;&gt;The Question&lt;/h2&gt;&#xA;&lt;p&gt;In early 2026, Anthropic published a study on AI-assisted coding that confirmed what many practitioners already suspected: developers using AI tools showed impaired conceptual understanding and weaker debugging skills compared to those who struggled through problems manually. The study landed in a community already anxious about what AI means for the next generation of programmers.&lt;/p&gt;&#xA;&lt;p&gt;The implications are profound. If AI tools prevent junior developers from forming the deep skills that senior developers rely on, the industry faces a compounding problem. Today&amp;rsquo;s juniors become tomorrow&amp;rsquo;s seniors. If they never develop the judgment to direct and verify AI output, who reviews the code? Who diagnoses production failures? Who makes architectural decisions that AI can&amp;rsquo;t yet make well?&lt;/p&gt;</description>
+    </item>
     <item>
       <title>How AI assistance impacts the formation of coding skills</title>
       <link>/sources/2026-01-30-ai-assistance-coding-skills.html</link>
