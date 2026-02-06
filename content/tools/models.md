@@ -70,47 +70,59 @@ The speed tier. SWE-bench Verified: 73.3% -- within 5 points of best-in-class at
 
 ## OpenAI Reasoning Models (o-series)
 
+{{< callout type="warning" >}}
+**Temporal context matters.** The o-series reports below are from January-September 2025. When practitioners say "Claude" in these comparisons, they mean Sonnet 3.5, Claude 4, or Opus 4.1 -- models that are 1-2 generations behind Opus 4.5/4.6. The relative advantage of o-series models over Claude was likely larger then than it would be today. We note the specific Claude version where identifiable.
+{{< /callout >}}
+
 ### o3
 
 Released February 2025. The architecture and planning specialist.
 
-**What it feels like:** Practitioners consistently describe o3 as a thinking partner, not an implementer. The dominant workflow pattern: use o3 for architecture decisions and planning, then switch to Claude or a faster model for implementation. The output is described as "tidy, thoughtful, and well-commented" (ttul). Moderately better than GPT-5 at context retention over long tool-use chains (vessels).
+**What it feels like:** Practitioners consistently describe o3 as a thinking partner, not an implementer. The dominant workflow pattern: use o3 for architecture decisions and planning, then switch to Claude or a faster model for implementation. The output is described as "tidy, thoughtful, and well-commented" (ttul, Jun 2025). Moderately better than GPT-5 at context retention over long tool-use chains (vessels, Aug 2025).
 
-**What practitioners build with it:** 13K lines of Go via Codex with o3, writing only about 100 lines manually (mhandley). An 8,000-line Android app rewritten in hours using o3-Codex combined with Claude Opus -- described as 10-100x faster (dweekly). Full-stack productivity doubling reported across projects (TekMol).
+**What practitioners build with it:** 13K lines of Go via Codex with o3, writing only about 100 lines manually (mhandley, Jul 2025). An 8,000-line Android app rewritten in hours using o3-Codex combined with Claude Opus 4 -- described as 10-100x faster (dweekly, Aug 2025). Full-stack productivity doubling reported across projects (TekMol, May 2025).
 
-**The planning pattern:** o3 for architecture, Claude for implementation (Pandabob). o3 Deep Search for planning, Claude 4 in Cursor for execution (baranoncel). o3 for technology research, Claude Code for component generation (gravity9). o3 as the "brain," smaller models execute (radio879).
+**The planning pattern:** o3 for architecture, Claude 4 for implementation (Pandabob, Jun 2025). o3 Deep Search for planning, Claude 4 in Cursor for execution (baranoncel, May 2025). o3 for technology research, Claude Code for component generation (gravity9, May 2025). o3 as the "brain," smaller models execute (radio879, Aug 2025).
 
 **Reasoning effort:** Most coding practitioners default to high. 1,000-2,000 reasoning tokens for routine coding, 5,000+ for hard problems (energy123).
+
+**Current relevance:** The planning pattern likely still holds -- o3's architectural thinking is a distinct capability. But the "Claude fails, o3 succeeds" comparisons were made against Opus 4.0/4.1, not the current 4.5/4.6 generation. The gap has likely narrowed.
 
 ### o3-pro
 
 The hard debugging specialist. 10-15 minute response times make interactive use impractical, but for the right task, nothing else comes close.
 
-**What it feels like:** One-shots problems after Claude Opus and Gemini both failed, finding root causes in 1-2 line fixes (WXLCKNO). Best at finding race conditions in concurrency code (danenania). Multiple practitioners recommend it as the top choice for security auditing and bug detection (dudeinhawaii, aurareturn). Planning specificity from o3-pro "changed how a team thinks about their future" (swyx).
+**What it feels like:** One-shots problems after Claude Opus 4/4.1 and Gemini 2.5 both failed, finding root causes in 1-2 line fixes (WXLCKNO, Aug 2025). Best at finding race conditions in concurrency code (danenania, Aug 2025). Multiple practitioners recommend it as the top choice for security auditing and bug detection (dudeinhawaii Jul 2025, aurareturn Sep 2025). Planning specificity from o3-pro "changed how a team thinks about their future" (swyx, Jun 2025).
 
-**Where it fails:** Confabulates problems during code reviews -- gets confused seeing code twice (boole1854). Can fixate on a wrong hypothesis despite contrary evidence (GMoromisato). Lags behind Sonnet 3.5 for basic code generation (danenania). Output lengths severely limited in the ChatGPT interface versus API (jameshiew).
+**Where it fails:** Confabulates problems during code reviews -- gets confused seeing code twice (boole1854, Jun 2025). Can fixate on a wrong hypothesis despite contrary evidence (GMoromisato, Jul 2025). Lags behind Sonnet 3.5 for basic code generation -- but this comparison predates Sonnet 4.5 (danenania, Aug 2025). Output lengths severely limited in the ChatGPT interface versus API (jameshiew, Jul 2025).
 
-**The review hierarchy:** o3-pro catches the most issues but with false positives. Claude is more creative but also has false positives. Gemini is the most conservative with fewest false positives (JamesBarney). Using multiple models for review catches different things.
+**The review hierarchy (Jun 2025, vs Opus 4/Gemini 2.5 Pro):** o3-pro catches the most issues but with false positives. Claude is more creative but also has false positives. Gemini is the most conservative with fewest false positives (JamesBarney). Using multiple models for review catches different things. This dynamic may have shifted with Opus 4.5/4.6.
+
+**Current relevance:** o3-pro's niche -- hard debugging, security auditing, concurrency analysis -- remains strong. These are reasoning-intensive tasks where extended thinking time genuinely helps. Whether Opus 4.6 at max effort has closed the gap is untested in the practitioner data.
 
 ### o3-mini
 
 Exceptional cost-performance ratio. The best value in the o-series family.
 
-**What it feels like:** 60% on the Aider polyglot benchmark at $18 cost -- nearly matching o1 at 10x lower expense (anotherpaulg). antirez found it outperformed Sonnet 3.5 on complex coding. Top 5% Codeforces ranking (anonylizard). Free o3-mini outperformed paid R1 models (GaggiX).
+**What it feels like (Jan-Apr 2025):** 60% on the Aider polyglot benchmark at $18 cost -- nearly matching o1 at 10x lower expense (anotherpaulg, Jan 2025). antirez found it outperformed Sonnet 3.5 on complex coding (Jan 2025) -- notably, Sonnet 3.5 was the frontier Claude model at the time. Top 5% Codeforces ranking (anonylizard, Feb 2025). Free o3-mini outperformed paid R1 models (GaggiX, Feb 2025).
 
-**Best as a sub-agent:** Integrated for narrow tasks within Plandex agents -- faster at one-third the cost and more reliable than larger models for focused work (danenania). Uses o3-mini-high for planning, delegates execution to Claude for inline edits (rotcev).
+**Best as a sub-agent:** Integrated for narrow tasks within Plandex agents -- faster at one-third the cost and more reliable than larger models for focused work (danenania, Apr 2025). Uses o3-mini-high for planning, delegates execution to Claude for inline edits (rotcev, Feb 2025).
 
 **The -high distinction matters:** o3-mini-high significantly outperforms base o3-mini. Performance varies greatly by reasoning effort level (chaos_emergent). Practitioners recommend always using the -high variant for serious coding work.
+
+**Current relevance:** o3-mini was superseded by o4-mini (Apr 2025). Its cost-performance niche has been partially absorbed by Haiku 4.5 (Oct 2025) and Gemini 3 Flash (Dec 2025). Still relevant for users on older OpenAI plans or local deployments.
 
 ### o4-mini
 
 Released April 2025. Mixed reception with a critical variant distinction.
 
-**What it feels like:** The o4-mini-high variant gets strong praise. "Mind-blowing" for computer vision and OpenCV (waynecochran). Called a "domain expert" across React Native framework versions (l33tman). A 7-hour session maintaining 15-file context impressed one user (TrackerFF). Works "really well in any agentic environment" (radio879).
+**What it feels like (Apr-Aug 2025, vs Claude Sonnet 4/Opus 4.1):** The o4-mini-high variant gets strong praise. "Mind-blowing" for computer vision and OpenCV (waynecochran, May 2025). Called a "domain expert" across React Native framework versions (l33tman, May 2025). A 7-hour session maintaining 15-file context impressed one user (TrackerFF, Jul 2025). Works "really well in any agentic environment" (radio879, Aug 2025).
 
-**Base o4-mini is weaker:** Described as "not really that great compared to o3" (stingraycharles). More thinking tokens do not equal better integration coding (sfaist). Codex built on o4-mini took 200 requests to change 3 lines of code (andai). Hallucinated architectural details where Claude Code performed well (gklitt).
+**Base o4-mini is weaker:** Described as "not really that great compared to o3" (stingraycharles, Aug 2025). More thinking tokens do not equal better integration coding (sfaist, Jul 2025). Codex built on o4-mini took 200 requests to change 3 lines of code (andai, Aug 2025). Hallucinated architectural details where Claude Code (Sonnet 4) performed well (gklitt, Apr 2025).
 
-**Complementary pairing:** Claude as orchestrator plus o4-mini for reasoning achieved 59.7% on SWE-bench Lite (kate_at_refact). Multi-agent deliberation with o4-mini in a council outperforms single models (esamust). Good for cheaper inference on business use cases, not for complex coding (mind-blight).
+**Complementary pairing:** Claude 3.7 as orchestrator plus o4-mini for reasoning achieved 59.7% on SWE-bench Lite (kate_at_refact, May 2025). Multi-agent deliberation with o4-mini in a council outperforms single models (esamust, Apr 2025). Good for cheaper inference on business use cases, not for complex coding (mind-blight, Aug 2025).
+
+**Current relevance:** o4-mini-high's domain expertise (computer vision, React Native) is a genuine strength that likely persists. GPT-5.2 Codex (Jan 2026) has largely superseded o4-mini for general coding tasks, but o4-mini-high may still be the best choice for specific vision and mobile development workflows.
 
 ---
 
@@ -189,7 +201,7 @@ MoE architecture gives fast inference on consumer hardware. Multiple practitione
 
 24B size fits on a single RTX 4090 with 24GB VRAM. SWE-bench: 68% (Small 2 variant).
 
-**What practitioners build with it:** Agentic coding via Cline and OpenHands (NitpickLawyer, diggan, incomingpain). A raytracer in C on AMD RX 7900 XTX (badsectoracula). Data processing and summarization on approximately 24GB VRAM (hickelpickle). Described as competitive with Sonnet 3.5 on benchmarks (Lapel2742).
+**What practitioners build with it:** Agentic coding via Cline and OpenHands (NitpickLawyer, diggan, incomingpain). A raytracer in C on AMD RX 7900 XTX (badsectoracula). Data processing and summarization on approximately 24GB VRAM (hickelpickle). Described as competitive with Sonnet 3.5 on benchmarks (Lapel2742, Dec 2025) -- note this comparison predates Sonnet 4.5.
 
 **The limitation:** Slow inference speed on consumer GPUs makes interactive daily use impractical for some configurations. Fine-tuning potential noted (cmrdporcupine).
 
@@ -197,7 +209,7 @@ MoE architecture gives fast inference on consumer hardware. Multiple practitione
 
 The best hybrid open-weight pattern: R1 as architect, V3 as coder.
 
-**The pattern:** R1-0528 for `/architect` mode and V3-0325 for `/code` mode in Aider -- one practitioner claims this surpasses Claude Code at a fraction of the cost (miroljub). R1 for planning combined with Qwen3 for implementation is an emerging local-first workflow (faangguyindia). R1 excels at reasoning-heavy tasks but runs at 1-2 tokens/sec on consumer hardware, making it practical only for async planning (mechagodzilla, ryan_glass).
+**The pattern:** R1-0528 for `/architect` mode and V3-0325 for `/code` mode in Aider -- one practitioner claims this surpassed Claude Code (Sonnet 4 era, Jun 2025) at a fraction of the cost (miroljub). R1 for planning combined with Qwen3 for implementation is an emerging local-first workflow (faangguyindia). R1 excels at reasoning-heavy tasks but runs at 1-2 tokens/sec on consumer hardware, making it practical only for async planning (mechagodzilla, ryan_glass).
 
 **R1-Distill-Qwen-32B:** The popular local reasoning variant. Runs on M2 MacBook at approximately 20GB. Good for refactoring guidance (simonw). Visible reasoning traces valued for learning and verification (m11a).
 
@@ -223,7 +235,7 @@ Claude leads for complex agentic coding and large codebases. Gemini's advantages
 
 ### o3/o3-pro vs Claude
 
-Complementary, not competitive. Most practitioners use both. o3-pro one-shots debugging problems Claude fails on (WXLCKNO). Claude wins on basic code generation and implementation speed (danenania). o3-mini at one-third the cost of Sonnet with comparable performance on scoped tasks (ctoth). Different review strengths: o3-pro catches more issues with false positives, Claude more creative, Gemini most conservative (JamesBarney).
+Complementary, not competitive -- but the comparisons are dated. Most o3/o3-pro reports (Jan-Sep 2025) compare against Claude Sonnet 3.5 through Opus 4.1. Key findings from that era: o3-pro one-shots debugging problems Opus 4.0/4.1 failed on (WXLCKNO, Aug 2025). Claude wins on basic code generation and implementation speed (danenania, Aug 2025). o3-mini at one-third the cost of Sonnet 3.7 with comparable performance on scoped tasks (ctoth, Feb 2025). The "o3 for thinking, Claude for doing" pattern is likely still valid, but the gap between o3-pro's debugging advantage and Claude's current generation (Opus 4.5/4.6) remains untested in the available practitioner data.
 
 ### Claude Code vs Codex CLI
 
@@ -246,7 +258,7 @@ The most reported workflow across all data sources:
 | Architect/Planner | Opus 4.6, o3, or GPT-5.2 xhigh | Deep multi-step reasoning |
 | Implementer | Sonnet 4.5 or GPT-5.2 medium | Speed; plan already exists |
 | Reviewer | GPT-5.2 high + Opus 4.6 | "They find different things" |
-| Security Auditor | o3-pro | One-shots concurrency bugs and security issues |
+| Security Auditor | o3-pro | One-shots concurrency bugs and security issues (tested vs Opus 4.0/4.1) |
 | Codebase Search | Gemini 3 Flash | 3x faster with parallel tool calls |
 | Sub-agent Tasks | Haiku 4.5 or o3-mini | Cost-effective focused work |
 
@@ -362,8 +374,8 @@ Cost and speed are the top reasons for leaving Claude. Quality and reliability b
 |--------|-----------|-----------|
 | Full-stack web (React) | Opus 4.6 (high effort) | GPT-5.2 Codex high |
 | Rust | Opus 4.6 + cargo check loop | GPT-5.2 Codex |
-| Hard debugging | o3-pro | GPT-5.2 Codex xhigh |
-| Security auditing | o3-pro | Opus 4.6 max |
+| Hard debugging | o3-pro (tested vs Opus 4.1) | GPT-5.2 Codex xhigh |
+| Security auditing | o3-pro (tested vs Opus 4.1) | Opus 4.6 max |
 | Architecture planning | o3 or Opus 4.6 max | GPT-5.2 xhigh |
 | Concurrency bugs | o3-pro | -- |
 | Code review | GPT-5.2 high + Opus 4.6 (cross-model) | o3-pro |
