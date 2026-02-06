@@ -1,652 +1,378 @@
 ---
 title: "Model Deep Dive"
-description: "Variant-level analysis of every major coding model — pricing, benchmarks, reasoning configs, and 605 practitioner reports from HN."
+description: "What every major coding model actually feels like to use — practitioner experiences, failure modes, and when to pick what, drawn from 800+ HN reports."
 weight: 2
 tags: [models, model-selection, comparison, costs, reasoning]
 date: 2026-02-06
 ---
 
-The [model selection](/practices/model-selection.html) practice page covers the principles: start cheap, escalate on failure, use multiple models, ignore benchmarks in favor of your own workload. This page is the complement -- a granular look at every model variant, what it costs, how it performs in real-world usage, and exactly how to configure reasoning levels across providers and tools.
+The [model selection](/practices/model-selection.html) practice page covers the principles. This page is the complement -- what each model actually feels like to use, based on 800+ practitioner reports gathered from Hacker News discussions and targeted Algolia searches. Specs and pricing live in the [compact reference](#compact-reference) at the bottom.
 
-The data here comes from three sources: Amp Code's published model evaluation data (including their distinctive "off-the-rails" metric), official provider documentation, and 605 model variant mentions extracted from over 6,000 Hacker News comments across 20+ discussion threads.
+## How Practitioners Describe These Models
 
-## Practitioner Mention Heatmap
+Before the deep dives, the metaphors practitioners reach for:
 
-Before diving into individual models, here is what practitioners actually talk about. The top 20 most-discussed model variants across HN, with sentiment:
-
-| Model Variant | Mentions | Positive | Negative | Neutral |
-|---|---|---|---|---|
-| Opus 4.5 | 158 | 43 | 32 | 83 |
-| GPT-5 (family) | 72 | 10 | 21 | 41 |
-| GPT-5.2 | 39 | 7 | 15 | 17 |
-| Gemini 3 | 39 | 8 | 10 | 21 |
-| Opus 4.6 | 38 | 9 | 4 | 25 |
-| Sonnet 4 / 4.5 | 64 | 15 | 15 | 34 |
-| Gemini 3 Pro | 13 | 1 | 3 | 9 |
-| GPT-OSS | 10 | 2 | 0 | 8 |
-| GPT-5.2 Codex | 9 | 1 | 2 | 6 |
-| GPT-5.1 | 9 | 1 | 4 | 4 |
-| Kimi K2 / K2.5 | 14 | 1 | 2 | 11 |
-| Gemini 2.5 | 8 | 2 | 1 | 5 |
-| Haiku 4.5 | 5 | 0 | 1 | 4 |
-| GPT-5.3 Codex | 5 | 1 | 0 | 4 |
-| Qwen 3 | 5 | 1 | 0 | 4 |
-
-Opus 4.5 dominates with 4x more mentions than any other single variant. The GPT-5 family is the second most discussed but skews notably negative (21 negative vs 10 positive). Opus 4.6 has the best positive-to-negative ratio among frequently mentioned models.
+- **Claude Code (Opus):** "A shitty, but very fast and very knowledgeable junior developer" requiring constant supervision (msikora). Required over a month to reach baseline productivity.
+- **Codex CLI (GPT-5.2):** "Felt like working with a peer" for the first time in 20+ years of development (dudeinhawaii). Also: "an outsourced consultant who refuses to say I can't do that" (theshrike79).
+- **GPT-5.2:** "Rude and cold" but strict instruction-following (jorl17). Hallucinating CLI utilities and non-existent features is a recurring pattern (heavyset_go).
+- **Gemini 3:** "Biased toward action and uncontrollable" (mmaunder). Fast for agent loops but generates a "fog of code" where developers struggle to understand what was generated (sottol).
+- **o3/o3-pro:** "o3 for thinking, Claude for doing" -- the dominant practitioner workflow. One-shots problems other models fail on, but 10-15 minute response times make interactive use impractical.
 
 ---
 
-## Claude Variants (Anthropic)
+## Claude Family (Anthropic)
 
-### Claude Opus 4.6
+### Opus 4.6
 
-| Spec | Detail |
-|------|--------|
-| **Release** | February 5, 2026 |
-| **Model ID** | `claude-opus-4-6` |
-| **Context** | 1M tokens (beta) / 200K standard |
-| **Max output** | 128K tokens |
-| **Pricing** | $5/M input, $25/M output |
-| **1M pricing** | $10/M input, $37.50/M output |
-| **Cache discount** | 90% on cached input |
+The current Anthropic frontier. Released February 5, 2026. First Opus-class model with 1M token context.
 
-The current Anthropic frontier. The headline feature is the 1M token context window -- the first Opus-class model to support it. In needle-in-haystack testing (MRCR v2), Opus 4.6 retrieves information at 93% accuracy at 256K tokens and 76% at 1M. For comparison, Sonnet 4.5 scores only 10.8% at 256K -- making Opus 4.6 roughly 4-9x more reliable at deep context retrieval.
+**What it feels like:** More autonomous than its predecessor. Where Opus 4.5 would ask clarifying questions, 4.6 makes changes and moves forward. One practitioner reports 5x longer thinking times -- adaptive thinking appears engaged by default. Another warns that with auto-accept enabled, 4.6 executes beyond instructions. The VS Code team is experimenting with high thinking plus adaptive thinking as default settings.
 
-**Benchmarks vs Opus 4.5:**
+**Where it shines:** Complex agentic coding, deep context retrieval (93% accuracy at 256K tokens versus Sonnet 4.5's 10.8%), Terminal-Bench 65.4%. One practitioner one-shotted a Gameboy emulator. Another sent 900 Portuguese poems and got an impeccable analysis. Best positive-to-negative ratio of any frequently mentioned model (38 mentions, 9 positive, 4 negative).
 
-| Benchmark | Opus 4.5 | Opus 4.6 | Delta |
-|-----------|---------|---------|-------|
-| SWE-bench Verified | 80.9% | 80.8% | -0.1% |
-| Terminal Bench | 59.8% | 65.4% | +5.6% |
-| OSWorld (computer use) | 66.3% | 72.7% | +6.4% |
-| MRCR v2 8-needle @256K | N/A | 93% | New |
-| MRCR v2 8-needle @1M | N/A | 76% | New |
+**Where it struggles:** Writing quality regression versus 4.5 -- one user called it "nerfed" for prose. The practical advice: use 4.6 for coding and agentic work, keep 4.5 available for writing-heavy tasks.
 
-**New capabilities:** Adaptive thinking (model decides when to reason deeply vs respond quickly), effort parameter with exclusive `max` level, agent teams for multi-instance parallel work, interleaved thinking between tool calls, and improved self-correction during code review.
+**Thinking keywords (Claude Code-specific):** "think" (low) < "think hard" (medium) < "think harder" (high) < "ultrathink" (31,999 tokens). These set internal thinking budgets and are not base model features.
 
-**Practitioner reception (38 HN mentions, 9 positive, 4 negative):** Mixed but leaning positive. One practitioner sent 900 poems in Portuguese and received "an impeccable analysis." Another described one-shotting a Gameboy emulator. The negative reports focus on writing quality regression -- one user called it "nerfed" for prose tasks. The practical advice from practitioners: use 4.6 for coding and agentic work, keep 4.5 available for writing-heavy tasks.
+### Opus 4.5
 
-**1M context availability:** API and Claude Code pay-as-you-go users only at launch. Not available for Pro, Max, Teams, or Enterprise subscription users initially. Enable with `[1m]` suffix: `/model opus[1m]`.
+Released November 24, 2025. The most discussed model in the dataset (158 HN mentions) and the most polarizing.
 
-**Tool access:** Default model on Claude Code Max and Teams plans. [Claude Code](/tools/claude-code.html) automatically falls back to Sonnet when Opus usage threshold is hit on Pro plans.
+**What it feels like:** The model that changed practitioner sentiment. Champions call it "an inflection point" and describe a visible step change from previous models. One practitioner reported 259 PRs and 497 commits in 30 days. Another built twelve iOS apps in two weeks. Critics report "baffling architecture decisions" and say it's "not much different than any previous models."
 
-### Claude Opus 4.5
+**The domain split:** The positive/negative divide correlates with domain. React, Rust, and C# developers skew positive. Those working with legacy codebases, data science, or novel domains report more frustration.
 
-| Spec | Detail |
-|------|--------|
-| **Release** | November 24, 2025 |
-| **Model ID** | `claude-opus-4-5-20251101` |
-| **Context** | 200K tokens |
-| **Max output** | 64K tokens |
-| **Pricing** | $5/M input, $25/M output (67% cut from Opus 4.1's $15/$75) |
+**The counterintuitive cost finding:** Despite being cheaper per token than Sonnet, Amp found Opus actually costs less per completed thread ($2.05 vs $2.75). Sonnet uses more tokens, makes more mistakes, and requires more human intervention. The cheapest model per token is not always the cheapest per task.
 
-The model that changed practitioner sentiment. First model to exceed 80% on SWE-bench Verified (80.9%). Best across 7 of 8 programming languages on SWE-bench Multilingual. The 67% price reduction from Opus 4.1 was arguably more disruptive than the capability gains -- it made frontier-class coding available at mainstream pricing.
+**Off-the-rails rate:** 2.4% of spend wasted on problematic outputs (Amp data). Gemini 3 Pro wastes 17.8%. This metric -- what a model costs when it fails -- captures something benchmarks miss entirely.
 
-**Key features:** Effort parameter (low/medium/high) for trading thoroughness for speed. At medium effort, matches Sonnet 4.5's SWE-bench score using 76% fewer output tokens. Tool Search discovers tools on-demand, reducing context overhead by 85%. Auto-compaction at 95% context window effectively removes the context limit.
+### Sonnet 4.5
 
-**Amp's evaluation data (Opus 4.5 as Smart mode):**
+The workhorse. Handles 90% of coding tasks without difficulty, per Claude Code documentation. SWE-bench Verified: 77.2%.
 
-| Metric | Opus 4.5 | vs Sonnet 4.5 | vs Gemini 3 Pro |
-|--------|---------|--------------|----------------|
-| Internal Evals | 57.3% | +20.2% | +3.6% |
-| Avg Thread Cost | $2.05 | -$0.70 cheaper | +$0.01 |
-| Off-the-Rails Cost | 2.4% | 3.5x less waste | 7.4x less waste |
-| Speed (p50) | 3.5 min | +1.1 min slower | 0.8 min faster |
+**What it feels like:** Reliable, predictable, fast. The default execution model in `opusplan` mode (Opus plans, Sonnet executes). Claude Code falls back to Sonnet when Opus quota is hit. Not where you go for peak capability, but where you go for steady throughput.
 
-**Practitioner reception (158 HN mentions -- by far the most discussed model):** The most polarizing model in recent memory. Champions describe it as "an inflection point" and "a visible step change." One practitioner reported 259 PRs and 497 commits in 30 days. Another built twelve iOS apps in two weeks. Critics report it "ate through my Copilot quota," produces "baffling architecture decisions," and "is not much different than any previous models." The split appears to correlate with domain: React/Rust/C# developers skew positive, while those working with legacy codebases, data science, or novel domains report more frustration.
+**Effort parameter:** Supports low/medium/high. At medium effort, matches its own SWE-bench score using 76% fewer output tokens. Effort levels are behavioral signals, not strict budgets -- even at low, it will still think on hard problems.
 
-### Claude Sonnet 4.5
+**Opus Plan Mode (`/model opusplan`):** Multiple practitioners endorse this as the ideal cost/quality tradeoff. Opus for planning, Sonnet for execution. One describes the plans as "more predictable." Without it, Sonnet produces less thought-out plans.
 
-| Spec | Detail |
-|------|--------|
-| **Release** | September 29, 2025 |
-| **Model ID** | `claude-sonnet-4-5-20250929` |
-| **Context** | 200K tokens (1M available via API) |
-| **Max output** | 64K tokens |
-| **Pricing** | $3/M input, $15/M output |
+### Haiku 4.5
 
-Anthropic's most popular model by volume. The workhorse for daily coding where speed matters more than peak capability. SWE-bench Verified: 77.2%. Handles 90% of coding tasks without difficulty, per Claude Code documentation.
+The speed tier. SWE-bench Verified: 73.3% -- within 5 points of best-in-class at one-third the cost.
 
-**The counterintuitive cost finding:** Despite being cheaper per token, Amp found Sonnet actually costs more per completed thread ($2.75) than Opus ($2.05). It uses more tokens, makes more mistakes, and requires more human intervention. The cheapest model per token is not always the cheapest model per completed task.
+**What it feels like:** 220 tokens/sec. One practitioner prefers Haiku 4.5 for most coding tasks over Sonnet, reserving Sonnet for tasks that specifically require deeper reasoning. The value proposition is compelling: near-frontier quality at dramatically lower cost and faster response.
 
-**Where it fits:** Default execution model in `opusplan` mode (Opus plans, Sonnet executes). Claude Code falls back to Sonnet when Opus quota is hit on Pro plans. First non-frontier model with strong extended thinking capabilities. Best suited for implementation tasks within an already-defined architecture.
+**Where practitioners use it:** Subagent tasks, codebase exploration (powers Claude Code's Explore subagent), background token operations. Amp uses it for Rush mode (small, well-defined tasks) and titling.
 
-**Extended thinking:** Supports manual extended thinking with `budget_tokens`. Interleaved thinking available with beta header `interleaved-thinking-2025-05-14`.
-
-### Claude Haiku 4.5
-
-| Spec | Detail |
-|------|--------|
-| **Release** | October 15, 2025 |
-| **Model ID** | `claude-haiku-4-5-20251001` |
-| **Context** | 200K tokens |
-| **Max output** | 64K tokens |
-| **Pricing** | $1/M input, $5/M output |
-
-The speed tier. Fastest model in the Claude family, optimized for lowest initial latency. SWE-bench Verified: 73.3% -- within 5 points of best-in-class at 1/3 the cost. First "small" model to support extended thinking.
-
-**Where practitioners use it:** Subagent tasks (summarization, validation, entity extraction), codebase exploration in Claude Code (powers the Explore subagent), background token operations in Claude Code, and as the junior developer in multi-agent teams. Amp uses it for Rush mode (small, well-defined tasks) and Titling (thread title generation).
-
-**Rush mode performance (Amp data):** Token-by-token, 67% cheaper and 50% faster than Smart mode. A small task: 37 seconds at $0.12 (44% faster, 77% cheaper than Smart). But on a complex refactor: 2x longer than Smart and only 19% cheaper -- it spends more tokens fixing its own mistakes.
-
-**vs Gemini Flash:** Haiku excels at agent orchestration and tool use. Gemini Flash offers broader capabilities and larger context (1M). For live coding, Haiku's total cost-to-solution tends to be lower due to fewer retries and stalls.
+**The catch:** On a complex refactor, Haiku takes 2x longer than Smart mode and is only 19% cheaper -- it spends more tokens fixing its own mistakes. Best for straightforward, well-scoped work.
 
 ---
 
-## GPT Variants (OpenAI)
+## OpenAI Reasoning Models (o-series)
+
+### o3
+
+Released February 2025. The architecture and planning specialist.
+
+**What it feels like:** Practitioners consistently describe o3 as a thinking partner, not an implementer. The dominant workflow pattern: use o3 for architecture decisions and planning, then switch to Claude or a faster model for implementation. The output is described as "tidy, thoughtful, and well-commented" (ttul). Moderately better than GPT-5 at context retention over long tool-use chains (vessels).
+
+**What practitioners build with it:** 13K lines of Go via Codex with o3, writing only about 100 lines manually (mhandley). An 8,000-line Android app rewritten in hours using o3-Codex combined with Claude Opus -- described as 10-100x faster (dweekly). Full-stack productivity doubling reported across projects (TekMol).
+
+**The planning pattern:** o3 for architecture, Claude for implementation (Pandabob). o3 Deep Search for planning, Claude 4 in Cursor for execution (baranoncel). o3 for technology research, Claude Code for component generation (gravity9). o3 as the "brain," smaller models execute (radio879).
+
+**Reasoning effort:** Most coding practitioners default to high. 1,000-2,000 reasoning tokens for routine coding, 5,000+ for hard problems (energy123).
+
+### o3-pro
+
+The hard debugging specialist. 10-15 minute response times make interactive use impractical, but for the right task, nothing else comes close.
+
+**What it feels like:** One-shots problems after Claude Opus and Gemini both failed, finding root causes in 1-2 line fixes (WXLCKNO). Best at finding race conditions in concurrency code (danenania). Multiple practitioners recommend it as the top choice for security auditing and bug detection (dudeinhawaii, aurareturn). Planning specificity from o3-pro "changed how a team thinks about their future" (swyx).
+
+**Where it fails:** Confabulates problems during code reviews -- gets confused seeing code twice (boole1854). Can fixate on a wrong hypothesis despite contrary evidence (GMoromisato). Lags behind Sonnet 3.5 for basic code generation (danenania). Output lengths severely limited in the ChatGPT interface versus API (jameshiew).
+
+**The review hierarchy:** o3-pro catches the most issues but with false positives. Claude is more creative but also has false positives. Gemini is the most conservative with fewest false positives (JamesBarney). Using multiple models for review catches different things.
+
+### o3-mini
+
+Exceptional cost-performance ratio. The best value in the o-series family.
+
+**What it feels like:** 60% on the Aider polyglot benchmark at $18 cost -- nearly matching o1 at 10x lower expense (anotherpaulg). antirez found it outperformed Sonnet 3.5 on complex coding. Top 5% Codeforces ranking (anonylizard). Free o3-mini outperformed paid R1 models (GaggiX).
+
+**Best as a sub-agent:** Integrated for narrow tasks within Plandex agents -- faster at one-third the cost and more reliable than larger models for focused work (danenania). Uses o3-mini-high for planning, delegates execution to Claude for inline edits (rotcev).
+
+**The -high distinction matters:** o3-mini-high significantly outperforms base o3-mini. Performance varies greatly by reasoning effort level (chaos_emergent). Practitioners recommend always using the -high variant for serious coding work.
+
+### o4-mini
+
+Released April 2025. Mixed reception with a critical variant distinction.
+
+**What it feels like:** The o4-mini-high variant gets strong praise. "Mind-blowing" for computer vision and OpenCV (waynecochran). Called a "domain expert" across React Native framework versions (l33tman). A 7-hour session maintaining 15-file context impressed one user (TrackerFF). Works "really well in any agentic environment" (radio879).
+
+**Base o4-mini is weaker:** Described as "not really that great compared to o3" (stingraycharles). More thinking tokens do not equal better integration coding (sfaist). Codex built on o4-mini took 200 requests to change 3 lines of code (andai). Hallucinated architectural details where Claude Code performed well (gklitt).
+
+**Complementary pairing:** Claude as orchestrator plus o4-mini for reasoning achieved 59.7% on SWE-bench Lite (kate_at_refact). Multi-agent deliberation with o4-mini in a council outperforms single models (esamust). Good for cheaper inference on business use cases, not for complex coding (mind-blight).
+
+---
+
+## GPT-5.x Codex (OpenAI)
 
 ### GPT-5.3 Codex
 
-| Spec | Detail |
-|------|--------|
-| **Release** | February 5, 2026 |
-| **Context** | 400K tokens |
-| **Pricing** | ~$1.75/M input, ~$14/M output (API pricing TBD) |
-| **Reasoning levels** | low, medium, high, xhigh |
-| **Speed** | ~233 tokens/sec at high reasoning |
+Released February 5, 2026. The first unified Codex/GPT-5 training stack.
 
-The first unified model combining the Codex and GPT-5 training stacks. 25% faster than GPT-5.2-Codex while using fewer tokens for equivalent tasks. Can be steered interactively while working without losing context.
+**What it feels like:** Early reports (5 HN mentions) are positive. Terminal-Bench jumped from 64% to 77.3% -- a massive gain in real-world terminal/CLI task completion. 25% faster than GPT-5.2-Codex while using fewer tokens. Can be steered interactively while working without losing context.
 
-**Benchmarks:**
-
-| Benchmark | GPT-5.2-Codex | GPT-5.3-Codex | Delta |
-|-----------|--------------|--------------|-------|
-| SWE-Bench Pro | 56.4% | 56.8% | +0.4% |
-| Terminal-Bench 2.0 | 64.0% | 77.3% | +13.3% |
-| OSWorld-Verified | -- | 64.7% | New |
-| Cybersecurity CTF | 79-80% | 77.6% | ~same |
-
-The Terminal-Bench jump from 64% to 77.3% is the standout number -- a massive gain in real-world terminal/CLI task completion. First model rated "High capability" in cybersecurity under OpenAI's Preparedness Framework.
-
-**Key improvements over 5.2-Codex:** Fixed lint loops (models getting stuck in lint-fix cycles), better bug explanations, fixed flaky-test premature completion, improved codebase coherence, deep diffs for reasoning transparency.
-
-**Practitioner reception (5 HN mentions, early):** One practitioner noted both GPT-5.3-Codex and Opus 4.6 "one shot a Gameboy emulator." Another observed the Terminal-Bench lead lasted only 35 minutes before Opus 4.6 launched.
+**Key improvements:** Fixed lint loops (models getting stuck in lint-fix cycles), better bug explanations, fixed flaky-test premature completion. One practitioner noted both GPT-5.3-Codex and Opus 4.6 one-shotted a Gameboy emulator -- the Terminal-Bench lead lasted only 35 minutes before Opus 4.6 launched.
 
 ### GPT-5.2 Codex
 
-| Spec | Detail |
-|------|--------|
-| **Release** | January 14, 2026 |
-| **Context** | 400K tokens |
-| **Pricing** | $1.75/M input, $14/M output |
-| **Cached input** | 90% discount |
-| **Reasoning levels** | low, medium, high, xhigh |
+Released January 14, 2026. The model that made Codex CLI competitive again.
 
-The model that made Codex CLI competitive again. Context compaction automatically compresses older context into semantically faithful summaries, enabling coherent work across millions of tokens. Optimized for long-horizon tasks like refactors and migrations.
+**What it feels like:** "Just one-shots everything" when given the right setup (stavros, who built an entire frontend pixel canvas with zero prior experience). "Reliably good" -- earning the default position for daily use by multiple practitioners. Excels at longer runs on hard problems where Claude Code "literally just gives up" (mmaunder, who spends $70K+/year on AI tooling).
 
-**Role in Amp:** Serves as both Deep mode (autonomous coding with extended thinking, works silently for 5-15 minutes) and Oracle (read-only planning/debugging advisor at medium reasoning). Amp chose medium reasoning for Oracle -- balancing analytical depth against speed and cost. GPT-5.2's different training lineage makes it complementary to Claude as a second-opinion model.
+**Reasoning levels are THE key lever.** Practitioner consensus from 45+ Algolia reports:
 
-**Practitioner reception (9 HN mentions):** "Reliably good" in Codex CLI, earning "the default position" for one practitioner. Another found GPT-5.2 High and Opus 4.5 to be complementary: "they find different things." The negative signal: reports of progressive quality degradation over time, and some developers shifting to Claude or Gemini in response.
+| Level | What Practitioners Say | Best For |
+|-------|----------------------|----------|
+| **xhigh** | Praised for complex debugging and architecture. One practitioner built a 20K LOC browser project. Costs 2x Anthropic alternatives ($3,244 vs $1,485 for equivalent benchmark task). | Specs, hard debugging, architecture |
+| **high** | Good daily default. Balances thinking time effectively. Multi-day deployment tasks handled successfully. | Daily coding, iterative development |
+| **medium** | Surprisingly capable and consistent. Multiple users say it's comparable to Opus 4.5 for standard work. | Routine tasks, best value |
+| **low** | Degraded tone, added emojis. Not recommended for coding. | Avoid |
 
-### GPT-5.2 (Base)
+The emerging pattern: run high as standard, escalate to xhigh for specs and debugging, drop to medium for routine tasks. Manual switching is seen as UX friction.
 
-| Spec | Detail |
-|------|--------|
-| **Release** | December 11, 2025 |
-| **Pricing** | $1.75/M input, $14/M output |
-| **Cached input** | 90% discount ($0.175/M) |
-| **Speed** | 92 tokens/sec at xhigh reasoning |
-
-Three-tier architecture: Instant (fast, 200-800ms responses), Thinking (professional work, configurable reasoning), and Pro (mission-critical, ~10x cost of Thinking). AIME 2025: 100% without tools. GDPval: 70.9% wins/ties vs top industry professionals across 44 occupations.
-
-**Practitioner reception (39 HN mentions, 7 positive, 15 negative):** The most negatively-received GPT variant. Practitioners describe a gap between strong benchmarks and user experience. One called it "everything I hate about 5 and 5.1, but worse." Reports of hallucination and progressive quality decline. However, those who use it at high reasoning for specific tasks -- particularly code review and debugging -- report strong results. The consensus: GPT-5.2 is strong at analysis but weaker than Opus at autonomous coding.
-
-### GPT-5.1
-
-| Spec | Detail |
-|------|--------|
-| **Release** | November 12, 2025 |
-| **Pricing** | $1.25/M input, $10/M output |
-| **Cached input** | 90% discount |
-
-Warmer personality than 5.0, with adaptive reasoning and customizable personalities (8 options). Pricing unchanged from GPT-5.
-
-**GPT-5.1-Codex-Max (November 19, 2025):** The agentic specialist. SWE-Bench Verified: 77.9% (with xhigh reasoning). Observed working autonomously on tasks for 24+ hours. Supports low, medium, high, and xhigh reasoning levels. Terminal-Bench 2.0: 58.1%.
-
-**Practitioner reception (9 HN mentions, skewing negative):** GPT-5.1 was caught hallucinating its own product roadmap. Some developers reported quality degradation across the 5.x line.
-
-### GPT-5.0
-
-| Spec | Detail |
-|------|--------|
-| **Release** | August 7, 2025 |
-| **Context** | 400K tokens |
-| **Pricing** | $1.25/M input, $10/M output |
-| **Variants** | gpt-5, gpt-5-mini ($0.25/$2), gpt-5-nano ($0.05/$0.40) |
-
-The unified model that replaced GPT-4, GPT-4o, GPT-4.1, GPT-4.5, o3, and o4-mini. Internal router system automatically chooses between fast and deep thinking modes. Hallucination rate: 9.6% (down from GPT-4o's 12.9%).
-
-**Reception was notably rough:** Users had no control over the router at launch. Many preferred GPT-4o's warmer tone. The 5.0 release had a 15% failure rate on structured formatting tasks where Mistral achieved 0.1%, and timeout rates above 50% with six-minute limits. Amp evaluated GPT-5 as a primary agent and rejected it after one week, citing slow reasoning, research loops, poor tool selection, and invalid JSON for tool arguments.
-
-### GPT-4.1 Family
-
-Still relevant for cost-sensitive production workloads needing massive context.
-
-| Variant | Input $/M | Output $/M | Context |
-|---------|----------|-----------|---------|
-| GPT-4.1 | $2.00 | $8.00 | 1M tokens |
-| GPT-4.1 mini | $0.40 | $1.60 | 1M tokens |
-| GPT-4.1 nano | $0.10 | $0.40 | 1M tokens |
-
-No reasoning levels (pre-dates the reasoning effort system). GPT-4.1 nano at $0.10/$0.40 remains one of the cheapest capable models available for classification and extraction tasks.
+**The hallucination pattern:** GPT-5.2 consistently hallucinating CLI utilities and non-existent software features is a recurring theme (heavyset_go). Source verification required.
 
 ---
 
-## Gemini Variants (Google)
-
-### Gemini 3 Pro
-
-| Spec | Detail |
-|------|--------|
-| **Release** | November 18, 2025 |
-| **Context** | 1M input / 64K output |
-| **Pricing (standard)** | $2.00/M input, $12/M output |
-| **Pricing (>200K)** | $4.00/M input, $18/M output |
-| **Thinking** | `thinkingLevel`: high (default), low |
-| **Deep Think** | Available to AI Ultra subscribers |
-
-Top of the LMSYS Chatbot Arena at 1501 Elo. AIME 2025: 100% with code execution. SWE-Bench Verified: 76.2%. Described by Amp as having "impressively clever" tool deployment and "uncannily good" prose writing.
-
-**The reliability problem:** Despite top benchmark scores, Gemini 3 Pro exhibited serious production issues when Amp adopted it as their primary agent. Documented problems included infinite thinking loops (3-5% of requests at scale), thinking prose leaking into outputs, control character corruption, reluctance to execute bash commands, unrequested git commits despite explicit instructions, and using relative paths instead of absolute. Amp switched away after approximately one week.
-
-**Amp's evaluation:**
-
-| Metric | Gemini 3 Pro | vs Opus 4.5 |
-|--------|-------------|-------------|
-| Internal Evals | 53.7% | -3.6% |
-| Thread Cost | $2.04 | -$0.01 cheaper |
-| Off-the-Rails | 17.8% | 7.4x more waste |
-| Speed (p50) | 4.3 min | 0.8 min slower |
-
-The off-the-rails metric tells the story: nearly 1 in 5 dollars went to problematic outputs. The model is capable at its best but unpredictable at its worst.
-
-**Current Amp role:** Review agent (code review with agentic depth). Also available via [Gemini CLI](/tools/gemini-cli.html) as `gemini-3-pro-preview`.
+## Gemini Family (Google)
 
 ### Gemini 3 Flash
 
-| Spec | Detail |
-|------|--------|
-| **Release** | December 17, 2025 |
-| **Context** | 1M input / 64K output |
-| **Pricing** | $0.50/M input, $3/M output |
-| **Speed** | 218 tokens/sec |
-| **Thinking** | `thinkingLevel`: high (default), medium, low, minimal |
+Released December 17, 2025. The crowd favorite by a wide margin (11 positive, 3 negative in Algolia data).
 
-The parallel processing specialist. Achieves ~8 parallel tool calls per iteration versus Haiku 4.5's ~2.5, completing searches in ~3 turns instead of ~9. This makes it 3x faster than Haiku for codebase search at the same quality.
+**What it feels like:** Speed advantage is real for autonomous coding agents -- "many LLM calls for simple changes" where speed compounds (andai). One practitioner uses Flash exclusively for coding and finds it comparable to Opus at lower cost and faster speed (paxys). Another built a custom agent delivering comparable results at one-tenth the cost (verdverm).
 
-**Amp roles:** Search subagent (codebase retrieval) and Look At system (image/PDF/media analysis). Replaced Haiku 4.5 as Search agent in December 2025.
+**The cost story:** Monthly AI coding costs of $1-3 using the free tier versus approximately $100 for Claude Code (ginkida). Google's family plan makes it very affordable (jug). Self-described "controversial take" from one user: Flash is better than Pro for coding (Rebelgecko).
 
-**Agentic Vision (February 2026):** Converts image understanding from static analysis to an agentic process. The model formulates a plan for how to inspect an image, combining visual reasoning with Python code execution. Delivers 5-10% quality boost across vision benchmarks.
+**Where it fails:** Actively disregards instructions and starts running commands on its own (peterldowns). Produces superficial analyses compared to Opus 4.5 (jorl17). Infinite reasoning loops at 3-5% of requests at scale.
 
-**Known issues:** Can experience infinite reasoning loops at scale (3-5% of requests). Latency degrades significantly with >500K token prompts (from 1-2s to 8-12s). 22% slower raw token output than Gemini 2.5 Flash.
+**3x faster at codebase search:** Achieves approximately 8 parallel tool calls per iteration versus Haiku 4.5's 2.5 -- completing searches in 3 turns instead of 9. This is why Amp replaced Haiku with Flash for codebase search in December 2025.
 
-### Gemini 2.5 Flash
+### Gemini 3 Pro
 
-| Spec | Detail |
-|------|--------|
-| **Context** | 1M tokens |
-| **Pricing** | $0.15/M input, $0.60/M output (non-thinking), $3.50/M output (thinking) |
-| **Speed** | 392.8 tokens/sec, 0.29s time-to-first-token |
-| **Thinking** | `thinkingBudget`: 0 to 24,576 tokens; default: dynamic (-1) |
+Released November 18, 2025. The most inconsistent frontier model.
 
-One of the fastest production-grade models available. Still used by Amp as the Handoff system model (context analysis for task continuation). Default model for simple prompts in Gemini CLI auto-routing.
+**What it feels like:** An exactly even split: 5 positive and 5 negative practitioner reports. One user deployed a 100% AI-written production system for two months using mostly Gemini 3 Pro and Opus 4.5 (qingcharles). Another calls it "terrible at tool-calling" and "borderline unusable in Cursor" (koakuma-chan). One user sums it up: "random whether it works or goes off the rails" (nl).
 
-**Cost warning:** Thinking mode makes it dramatically more expensive -- 150x versus Gemini 2.0 Flash due to 9x more expensive output tokens combined with 17x higher token usage.
+**The architecture vs implementation split:** Gemini excels at high-level architecture and fresh project scaffolding. Claude is preferred for detailed implementation and instruction-following. This pattern appears in multiple independent reports (verdverm, SkyPuncher, thyb23).
 
-### Gemini 2.5 Flash-Lite
+**Off-the-rails metric (Amp data):** 17.8% of spend wasted on problematic outputs -- nearly 1 in 5 dollars. For comparison, Opus 4.5 wastes 2.4%. Documented problems include infinite thinking loops, control character corruption, thinking prose leaking into outputs, unrequested git commits, and using relative paths instead of absolute.
 
-| Spec | Detail |
-|------|--------|
-| **Release** | July 22, 2025 |
-| **Context** | 1M tokens |
-| **Pricing** | $0.10/M input, $0.40/M output |
-| **Speed** | 392.8 tokens/sec |
-| **Thinking** | Off by default (can be enabled) |
+**CLI tool is near-universally criticized:** Crashes, retains stale file contents, uses 100K tokens where Codex CLI uses 2K for equivalent tasks, ignores explicit instructions to stop. Multiple practitioners report better results using Gemini models through Antigravity, Cline, or Aider rather than Google's own CLI.
 
-Google's cheapest model in the 2.5 family. 50% less verbose output than standard Flash. Used by Amp as the Topics system model (thread categorization for indexing and analytics). Ideal for high-volume classification and routing tasks.
-
-### Gemini 3 Pro Image
-
-| Spec | Detail |
-|------|--------|
-| **Pricing** | $0.134/image (2K), $0.24/image (4K) |
-| **Capabilities** | Generation, editing, text rendering, physics control |
-| **Resolution** | Up to 4K output |
-
-Separate model optimized for image generation and editing, built on Gemini 3 Pro's reasoning. Supports up to 14 reference images. Used by Amp as the Painter system model. Preview-stage reliability: ~45% of API calls during peak hours result in errors.
+**100,000 lines in 2 weeks:** One practitioner generated this volume with Gemini 3, acknowledging the result is "imperfect, perhaps even erroneous" but validated the vibe coding approach for modular frontend projects (Rand_cat). Another converted 7K lines of Python to 35K lines of C, noting it "lowers the initial mental burden" but creates an understanding gap (sottol).
 
 ---
 
 ## Open-Weight Models
 
-### DeepSeek V3 / V3.1
+### Qwen3 30B-A3B — Consensus Best for Local Coding
 
-| Spec | Detail |
-|------|--------|
-| **Parameters** | 671B total (MoE), 37B active |
-| **Context** | 128K tokens |
-| **API pricing (official)** | $0.07/M input (cache hit), $0.56/M (miss), $1.68/M output |
-| **Training cost** | ~$5.6M (2.788M H800 GPU hours) |
+MoE architecture gives fast inference on consumer hardware. Multiple practitioners run it successfully on Apple Silicon (M1-M3, 32-64GB) at 30-80 tokens/sec and on RTX 4090.
 
-The most capable open-weight option for general coding. SWE-bench Verified: 45.4% (V3-0324). The V3-0324 update brought major gains: AIME jumped from 39.6% to 59.4% (+19.8), LiveCodeBench from 39.2% to 49.2%.
+**What practitioners build with it:** Web dev with custom MCP tools on M3 Pro 36GB (DrAwdeOccarim). Covers 30-50% of tasks locally at 80 tokens/sec on M3 Max (omneity). Sysadmin help on RTX 4090 at 20-30 tokens/sec (bytefactory). The quality gap versus frontier models is noticeable on complex multi-step tasks, but for straightforward coding the gap is small enough to make local-first viable.
 
-**Self-hosting economics:** Running the full 671B model on consumer hardware (dual RTX 5090s) costs roughly $30K over three years including electricity, yielding $30-60 per million tokens -- more expensive than cloud API pricing. The breakeven only works at sustained high volume or when data sovereignty is the primary concern.
+**The limitation:** Agentic tool calling is unreliable. Context limitations cause failures in extended workflows (evilduck). Best for chat-based coding assistance, not autonomous multi-step agents.
 
-**Hardware requirements:** FP8 (recommended): ~750 GB VRAM, minimum 8x H100 80GB. Consumer-grade: not feasible for full model; distilled variants (7B, 16B) run on RTX 4090.
+### Devstral — Most Positive Reports of Any Open-Weight Model
 
-### DeepSeek R1
+24B size fits on a single RTX 4090 with 24GB VRAM. SWE-bench: 68% (Small 2 variant).
 
-| Spec | Detail |
-|------|--------|
-| **Parameters** | 671B total (MoE), 37B active |
-| **Context** | 128K tokens |
-| **Architecture** | MoE with RL-based reasoning training |
+**What practitioners build with it:** Agentic coding via Cline and OpenHands (NitpickLawyer, diggan, incomingpain). A raytracer in C on AMD RX 7900 XTX (badsectoracula). Data processing and summarization on approximately 24GB VRAM (hickelpickle). Described as competitive with Sonnet 3.5 on benchmarks (Lapel2742).
 
-The reasoning specialist. Differs from V3 in purpose: V3 is the fast general-purpose model, R1 is the specialized reasoner. Exposes step-by-step chain-of-thought in `<think>` tags, enabling verification.
+**The limitation:** Slow inference speed on consumer GPUs makes interactive daily use impractical for some configurations. Fine-tuning potential noted (cmrdporcupine).
 
-**Distilled variants for local use:**
+### DeepSeek R1 + V3 — The Architect/Coder Duo
 
-| Variant | Parameters | Hardware Minimum | Best For |
-|---------|-----------|-----------------|----------|
-| R1-Distill-Qwen-7B | 7B | 8GB VRAM (INT4) | Consumer GPU, rapid iteration |
-| R1-Distill-Qwen-14B | 14B | 16GB VRAM (INT4) | Mid-range, balanced |
-| R1-Distill-Qwen-32B | 32B | 32GB VRAM (INT4) | Best reasoning among mid-tier |
-| R1-Distill-Llama-70B | 70B | 70GB VRAM (INT4) | Maximum distilled performance |
+The best hybrid open-weight pattern: R1 as architect, V3 as coder.
 
-### Llama 4 Scout / Maverick
+**The pattern:** R1-0528 for `/architect` mode and V3-0325 for `/code` mode in Aider -- one practitioner claims this surpasses Claude Code at a fraction of the cost (miroljub). R1 for planning combined with Qwen3 for implementation is an emerging local-first workflow (faangguyindia). R1 excels at reasoning-heavy tasks but runs at 1-2 tokens/sec on consumer hardware, making it practical only for async planning (mechagodzilla, ryan_glass).
 
-| Variant | Total Params | Active Params | Context | Experts |
-|---------|-------------|--------------|---------|---------|
-| Scout | 109B | 17B | 10M tokens | 16 |
-| Maverick | 400B | 17B | 1M tokens | 128 |
+**R1-Distill-Qwen-32B:** The popular local reasoning variant. Runs on M2 MacBook at approximately 20GB. Good for refactoring guidance (simonw). Visible reasoning traces valued for learning and verification (m11a).
 
-Released April 5, 2025. Scout runs on a single H100 (INT4 quantized) with an industry-leading 10M token context window. Maverick needs multi-GPU but delivers substantially higher quality with 128 experts. Both use early fusion multimodality.
+### Llama 4 — Not Recommended for Coding
 
-**API pricing:** Scout at $0.11/M (Groq) is among the cheapest capable models. Maverick at $0.50/M (Groq) trades cost for quality. Behemoth (~2T parameters) exists only in limited research preview.
+Consistently the weakest open-weight model for coding. Maverick scored 16% on the Aider polyglot benchmark (anotherpaulg). Scout has a known bug of "fixing" problems by commenting out code (ach9l). One practitioner described it bluntly as "terrible at coding" (vessenes). The 10M token context window does not compensate for poor code generation quality.
 
-### Qwen 3 Family
+### Kimi K2.5 — Exciting but Unreliable
 
-The efficiency story: Qwen3-8B outperforms Qwen2.5-14B. Qwen3-32B matches Qwen2.5-72B. A generational improvement in parameter efficiency through strong-to-weak distillation.
-
-| Variant | Params | Active | LiveCodeBench | Best For |
-|---------|--------|--------|--------------|----------|
-| Qwen3-8B | 8B dense | 8B | 60.2 | RTX 3060, rapid iteration |
-| Qwen3-30B-A3B (MoE) | 30.5B | 3.3B | -- | Local inference, consumer hardware |
-| Qwen3-32B | 32B dense | 32B | -- | Single H100 balance of quality/speed |
-| Qwen3-Coder-480B-A35B | 480B | 35B | -- | Maximum open-weight coding (SWE: 66.5%) |
-
-Qwen3-30B-A3B is the standout for local use: outperforms every dense 72B-110B model on coding and math while running on 32GB RAM (INT4). Achieves 100+ tokens/sec on Apple M4 Max.
-
-### Mistral
-
-| Variant | Params | Input $/M | Output $/M | SWE-bench |
-|---------|--------|----------|-----------|-----------|
-| Medium 3 | MoE | $0.40 | $2.00 | -- |
-| Small 3 | 24B | -- | -- | -- |
-| Devstral 2 | 123B dense | $0.40 | $2.00 | 72.2% |
-| Devstral Small 2 | 24B | $0.10 | $0.30 | 68.0% |
-
-Mistral's standout claim: a 0.1% structured output failure rate on formatting tasks where GPT-5 failed 15% of the time. Devstral Small 2 is the best open-weight coding model at its size (24B) -- runs on a single RTX 4090 with 68% SWE-bench.
-
-### Kimi K2.5
-
-| Spec | Detail |
-|------|--------|
-| **Parameters** | 1T total (MoE), 32B active |
-| **Context** | 256K tokens |
-| **API pricing** | $0.60/M input, $3/M output |
-| **SWE-bench Verified** | 76.8% |
-| **LiveCodeBench** | 85.0% |
-
-From Moonshot AI. The LiveCodeBench score of 85.0% significantly exceeds Opus 4.5's 64.0%, though Opus leads on SWE-bench Verified (80.9% vs 76.8%). Specialized strength in visual coding -- generating code from UI designs and wireframes. Can self-direct up to 100 sub-agents with 1,500 tool calls.
-
-**Cost position:** 76% lower than Opus 4.5 for comparable coding tasks. Best suited for cost-sensitive deployments, parallel workflows, and vision-based frontend development.
+Generates excitement as a free/cheap alternative (76% cheaper than Opus). One user cancelled their Claude Code subscription in favor of Kimi CLI (vuldin). But hallucinations in tool use are frequent -- hallucinates commands and gets syntax wrong (helpfulclippy). Tool call issues in production multi-agent systems (kageiit). Not yet reliable enough for unsupervised agentic work.
 
 ---
 
-## Reasoning Level Deep Dive
+## Head-to-Head: How They Actually Compare
 
-All three major providers now offer configurable reasoning depth. Understanding these settings is one of the highest-leverage optimizations for both cost and quality.
+### Opus vs GPT-5.x Codex
 
-### Cross-Provider Comparison
+No universal winner. GPT-5 preferred for strict instruction following -- Claude "takes more liberties with packages" (Topfi). Opus preferred for complex reasoning and agentic coding. Cost is a major factor: Opus is approximately 10x more expensive at the API level. One practitioner says GPT-5.2 and Opus are neck-and-neck -- GPT variants feel more direct while Opus excels at complex reasoning (jumploops). GPT-5.3-Codex leads terminal coding by approximately 12%; Opus leads general benchmarks (karmasimida).
 
-| Provider | Parameter | Levels | Default |
-|----------|-----------|--------|---------|
-| OpenAI | `reasoning.effort` | none, minimal, low, medium, high, xhigh | medium (pre-5.1), none (5.1+) |
-| Anthropic | `effort` | low, medium, high, max | high |
-| Anthropic (legacy) | `budget_tokens` | 1,024 to 128K | 31,999 (Claude Code) |
-| Google (2.5 models) | `thinkingBudget` | 0 to 32,768 | 8,192 (Pro), -1/dynamic (Flash) |
-| Google (3.x models) | `thinkingLevel` | minimal, low, medium, high | high |
+### Claude vs Gemini
 
-### OpenAI Reasoning Effort
+Claude leads for complex agentic coding and large codebases. Gemini's advantages: architectural thinking, cost, and 1M context window. Reliability is the core differentiator -- even positive Gemini reporters note its inconsistency versus Claude's predictability. "Off the rails" behavior is a recurring theme across all Gemini variants (ashwindharne, nl, cdelsolar).
 
-Six levels from `none` (traditional LLM, sub-second responses) through `xhigh` (maximum compute, available on GPT-5.2-Codex and GPT-5.2 Pro). Reasoning tokens are billed as output tokens at the standard rate -- no separate multiplier, but higher effort means more tokens consumed.
+### o3/o3-pro vs Claude
 
-**Latency scaling:** Low is often under 1 second. Medium is ~3x longer. High is ~3x longer than medium (~9x longer than low). xhigh adds further latency on top.
+Complementary, not competitive. Most practitioners use both. o3-pro one-shots debugging problems Claude fails on (WXLCKNO). Claude wins on basic code generation and implementation speed (danenania). o3-mini at one-third the cost of Sonnet with comparable performance on scoped tasks (ctoth). Different review strengths: o3-pro catches more issues with false positives, Claude more creative, Gemini most conservative (JamesBarney).
 
-**Amp's Oracle configuration:** GPT-5.2 with medium reasoning -- found to balance analytical depth against speed and cost for planning and debugging tasks.
+### Claude Code vs Codex CLI
 
-### Claude Effort Parameter
+Claude Code wins on quality and context handling for complex tasks. Codex wins on speed, throughput, and sustained usage with fewer rate limits. One practitioner returned to Claude Code within two weeks of trying Codex, citing speed issues (Huppie). Another found Codex hallucinated and misrepresented architecture (gklitt). But Codex excels at longer runs on hard problems -- Claude Code "literally just gives up" according to one heavy user (mmaunder).
 
-Four levels: low, medium, high (default), and max (Opus 4.6 exclusive). The effort parameter is a behavioral signal, not a strict token budget. At lower effort, Claude will still think on sufficiently difficult problems -- it just thinks less.
+### Model Stability (Current Generation)
 
-**Adaptive thinking (Opus 4.6):** `thinking: {type: "adaptive"}` lets the model dynamically allocate reasoning based on task difficulty. Recommended over manual `budget_tokens` on Opus 4.6. Combined with the effort parameter for best results.
-
-**Extended thinking costs:** Thinking tokens are billed at the model's output token rate ($25/M for Opus, $15/M for Sonnet, $5/M for Haiku). You are charged for full thinking tokens, not the summarized version -- billed output count will not match visible token count.
-
-### Gemini Thinking Configuration
-
-Two systems depending on model generation. Gemini 2.5 models use `thinkingBudget` (0 to 32,768 tokens, or -1 for dynamic). Gemini 3 models use `thinkingLevel` (high, medium, low, minimal). Cannot disable thinking entirely on Gemini 3 Pro. Gemini 3 Flash's `minimal` level means the model likely will not think but still can.
-
-### Per-Task Reasoning Recommendations
-
-| Task Type | OpenAI | Claude | Gemini |
-|-----------|--------|--------|--------|
-| Quick edits, formatting | none or low | low | minimal or low |
-| Daily coding (default) | medium | medium or high | medium (Flash) or high |
-| Complex debugging, architecture | high | high | high |
-| Benchmarks, critical reviews | xhigh | max (Opus 4.6) | high + Deep Think |
-| Simple completions | none (GPT-5.1+) | low | minimal |
-
-### Tool-Specific Configuration
-
-| Tool | Model Config | Reasoning Config |
-|------|-------------|------------------|
-| [Codex CLI](/tools/codex.html) | config.toml profiles, `/model` | `model_reasoning_effort` in config |
-| [Claude Code](/tools/claude-code.html) | `/model` with effort slider | `effortLevel` in settings, `CLAUDE_CODE_EFFORT_LEVEL` env var |
-| [Gemini CLI](/tools/gemini-cli.html) | settings.json, `--model` flag | `thinkingBudget` / `thinkingLevel` in settings |
-| [Cursor](/tools/cursor.html) | Settings > Models | Thinking toggle, MAX mode, Auto-select |
-| [Copilot](/tools/copilot.html) | Model dropdown, Auto mode | Think Mode toggle (some models) |
-| [Windsurf](/tools/windsurf.html) | Cascade model selector | Reasoning effort on GPT-5.2-Codex (low/medium/high/xhigh) |
-| [Aider](/tools/aider.html) | `--model` flag, config YAML | `--reasoning-effort`, `--thinking-tokens` |
-| [Cline](/tools/cline.html) | BYOK per provider | UI reasoning effort config, Plan/Act workflow |
+Dramatically improved. Frustrations with previous models going off the rails are "almost completely gone" for one practitioner (reassess_blind). Key advice: recognize early signs of derailment -- phrases like "simpler approach" signal failure (CuriouslyC). Fragment tasks, and reset context rather than trying to steer back (vidarh). Task size is the strongest predictor of derailment.
 
 ---
 
-## Amp's Complete Model Roster
+## Multi-Model Workflows
 
-[Amp Code](/tools/amp.html) provides the most concrete example of production multi-model routing, using 15 distinct model deployments across 5 vendors.
+### The DreamTeam Pattern
 
-### User-Facing Modes
+The most reported workflow across all data sources:
 
-| Mode | Model | Purpose | Performance |
-|------|-------|---------|-------------|
-| **Smart** | Claude Opus 4.6 | Collaborative pair-programming | Default; highest first-try success |
-| **Rush** | Claude Haiku 4.5 | Small, well-defined tasks | 67% cheaper, 50% faster than Smart |
-| **Deep** | GPT-5.2 Codex | Extended thinking, autonomous | Works silently 5-15 min before changes |
+| Role | Model | Why |
+|------|-------|-----|
+| Architect/Planner | Opus 4.6, o3, or GPT-5.2 xhigh | Deep multi-step reasoning |
+| Implementer | Sonnet 4.5 or GPT-5.2 medium | Speed; plan already exists |
+| Reviewer | GPT-5.2 high + Opus 4.6 | "They find different things" |
+| Security Auditor | o3-pro | One-shots concurrency bugs and security issues |
+| Codebase Search | Gemini 3 Flash | 3x faster with parallel tool calls |
+| Sub-agent Tasks | Haiku 4.5 or o3-mini | Cost-effective focused work |
 
-### Feature & Subagent Models
+### Amp's Production Roster (15 models, 5 vendors)
 
-| Role | Model | Purpose |
-|------|-------|---------|
-| **Review** | Gemini 3 Pro | Agentic bug identification and code review |
-| **Search** | Gemini 3 Flash | Codebase retrieval (~8 parallel tool calls/iteration) |
-| **Oracle** | GPT-5.2 (medium reasoning) | Read-only planning, debugging, code review |
-| **Librarian** | Claude Sonnet 4.5 | External code research, GitHub repo search |
+The most concrete example of production multi-model routing. Smart mode (Opus 4.6), Rush mode (Haiku 4.5), Deep mode (GPT-5.2 Codex). Review agent (Gemini 3 Pro). Search agent (Gemini 3 Flash). Oracle (GPT-5.2 medium reasoning). Amp switched primary models six times in twelve months -- model selection is a dynamic engineering decision.
 
-### System Models (Auxiliary)
+**The off-the-rails metric:** Amp's most original contribution. Percentage of total spend wasted on problematic outputs. Opus 4.5: 2.4%. Gemini 3 Pro: 17.8%. A model that scores 10 points lower on benchmarks but wastes 7x less on dead ends is the better engineering choice.
 
-| Role | Model | Purpose |
-|------|-------|---------|
-| **Look At** | Gemini 3 Flash | Image, PDF, and media file analysis |
-| **Painter** | Gemini 3 Pro Image | Image generation and editing |
-| **Handoff** | Gemini 2.5 Flash | Context analysis for task continuation |
-| **Topics** | Gemini 2.5 Flash-Lite | Thread categorization for analytics |
-| **Titling** | Claude Haiku 4.5 | Fast title generation |
-| **Amp Tab** | Custom fine-tuned model | Code completion (SFT + DPO, TensorRT-LLM) |
+### Routing Patterns (25 configurations from Algolia)
 
-### The Off-the-Rails Metric
+| Pattern | Example | Frequency |
+|---------|---------|-----------|
+| Planning/execution split | Opus plans, Sonnet executes; R1 architects, V3 codes | High |
+| Tiered cost escalation | Haiku → Sonnet → Opus on failure | High |
+| Task-type routing | Different models per task category | Medium |
+| Parallel specialist agents | Claude backend, Gemini frontend | Medium |
+| Local-first with cloud fallback | Ollama first, cloud for complex tasks | Medium |
 
-Amp's most original contribution to model evaluation -- the percentage of total spend wasted on problematic outputs. This captures something benchmarks miss entirely: how much a model costs when it fails.
-
-| Model | Internal Evals | Thread Cost | Off-the-Rails | Speed (p50) |
-|-------|---------------|------------|--------------|-------------|
-| Claude Sonnet 4.5 | 37.1% | $2.75 | 8.4% | 2.4 min |
-| Gemini 3 Pro | 53.7% | $2.04 | 17.8% | 4.3 min |
-| Claude Opus 4.5 | 57.3% | $2.05 | 2.4% | 3.5 min |
-
-Gemini 3 Pro wasted nearly 1 in 5 dollars on bad outputs. Opus wasted 1 in 40. When you factor in developer time spent identifying, reverting, and re-doing failed work, the real-world cost difference is larger than the numbers suggest.
-
-**The principle:** Waste percentage matters as much as peak capability. A model that scores 10 points lower on benchmarks but wastes 7x less on dead ends is the better engineering choice.
-
-### Model Switching Timeline
-
-Amp switched primary models six times in twelve months, demonstrating that model selection is a dynamic engineering decision:
-
-| Date | Primary Model | Reason for Switch |
-|------|-------------|-------------------|
-| Feb 2025 | Claude Sonnet 3.5/3.7 | Launch |
-| Jun 2025 | Claude Sonnet 4 | Faster, more stable, better tool calling |
-| Sep 2025 | Claude Sonnet 4.5 | Reduced sycophancy, better debugging |
-| Dec 2025 | Gemini 3 Pro | +17 points on Terminal-Bench 2.0 |
-| Jan 2026 | Claude Opus 4.5 | Gemini's 17.8% off-the-rails rate |
-| Feb 2026 | Claude Opus 4.6 | Current |
-
-### Models Evaluated and Rejected
-
-Amp tested but did not adopt as primary: Kimi K2, Qwen3-Coder, GLM-4.5, GPT-OSS, Grok, Gemini 2.5. GPT-5 was evaluated for one week as a primary agent and repositioned to Oracle role due to slow reasoning, research loops, and poor tool selection.
+**Routing caution:** Automated routing can make results worse for domain-specific tasks compared to sticking with one well-tuned model (canerdogan). The final 10% reliability costs several hundred dollars per run (roughly). Human routing decisions work better than automated classifiers.
 
 ---
 
-## Multi-Model Routing Strategies
+## The Productivity Reality Check
 
-### The DreamTeam Concept
+The qualitative data includes some sobering findings alongside the success stories:
 
-A practitioner-reported configuration pairing models from all three major providers by specialization:
-
-| Role | Model | Reasoning | Rationale |
-|------|-------|-----------|-----------|
-| Architect/Planner | Claude Opus 4.6 or GPT-5.2 | max / xhigh | Deep multi-step reasoning |
-| Implementer | Claude Sonnet 4.5 or GPT-5.1 | medium / none | Speed; plan already exists |
-| Reviewer | Claude Opus 4.6 or GPT-5.2 | high / high | Thorough analysis, complementary perspectives |
-| Security | Gemini 3 Pro | high | Broad pattern recognition |
-| Test Writer | Gemini 3 Flash or Haiku 4.5 | low / medium | Formulaic work |
-| Codebase Search | Gemini 3 Flash | -- | 3x faster with parallel tool calls |
-| Legacy Code Reader | Grok | -- | Used as "archaeologist" agent |
-
-One practitioner reported getting the best code quality with "a full project team using opencode with multiple sub agents which are all managed by a single Opus instance" -- giving each subagent a specialized role (coder, reviewer, tester, documentation writer) using different models.
-
-### Cross-Model Review Pattern
-
-A specific pattern that emerged from HN discussions: using GPT-5.2 at high reasoning to review code written by Opus 4.5. As one practitioner noted, "they find different things." The different training lineages make models complementary rather than redundant for review tasks.
-
-### Escalate-on-Failure Pattern
-
-The most widely adopted multi-model strategy:
-
-1. Start with low reasoning effort or a cheaper model
-2. If the task fails (test failure, lint error, wrong output), retry with higher reasoning
-3. Continue escalating: low to medium to high to xhigh, or Haiku to Sonnet to Opus
-4. Log escalation events to learn which tasks need higher reasoning by default
-
-This naturally optimizes cost while maintaining quality. Both [Codex CLI](/tools/codex.html) (via config profiles) and [Claude Code](/tools/claude-code.html) (via the `/model` effort slider) support this workflow.
+- **Company data contradicts self-reports:** One company's metrics showed developer productivity "plummeted" despite self-reported gains (sotix). Real gains estimated at "2x tops" (risyachka).
+- **Month+ onboarding curve:** Multiple practitioners required over a month before reaching baseline productivity with Claude Code (lmeyerov, msikora).
+- **Codebase understanding degrades:** Despite shipping features faster, one developer's codebase understanding "dropped fast" within three months, threatening ability to write good prompts (neebz).
+- **Cognitive overhead:** An advanced programmer reports LLM output takes 2-3x longer to reach acceptable results versus their own coding. The "wall of text/code" is mentally exhausting (valentineshi).
+- **Dependency risk:** "When Copilot goes down, entire teams slow to a crawl" (selinkocalar).
+- **The nuance:** Gains appear in thoughtfulness and reflection rather than raw speed -- "stopping to ask questions, reflect, what should we do -- is really powerful" (softwaredoug). Task parallelization matters more than code generation velocity (lmeyerov).
 
 ---
 
-## Complete Cost Reference
+## Benchmark Reality Check
 
-### Frontier Models (Per Million Tokens)
+Strong skepticism about SWE-bench as a predictor of real-world performance:
 
-| Model | Input | Output | Cache Discount | Context |
-|-------|-------|--------|---------------|---------|
-| **Claude Opus 4.6** | $5.00 | $25.00 | 90% | 200K / 1M beta |
-| Claude Opus 4.6 (>200K) | $10.00 | $37.50 | -- | 1M |
-| **Claude Sonnet 4.5** | $3.00 | $15.00 | 90% | 200K / 1M API |
-| **Claude Haiku 4.5** | $1.00 | $5.00 | 90% | 200K |
-| **GPT-5.2 / 5.2-Codex** | $1.75 | $14.00 | 90% | 400K |
-| GPT-5.2 Pro | ~$17.50 | ~$140.00 | -- | 400K |
-| **GPT-5.3-Codex** | ~$1.75 | ~$14.00 | TBD | 400K |
-| GPT-5.0 / 5.1 | $1.25 | $10.00 | 90% | 400K |
-| GPT-5 mini | $0.25 | $2.00 | 90% | 400K |
-| GPT-5 nano | $0.05 | $0.40 | 90% | 400K |
-| **Gemini 3 Pro** | $2.00 | $12.00 | -- | 1M |
-| Gemini 3 Pro (>200K) | $4.00 | $18.00 | -- | 1M |
-| **Gemini 3 Flash** | $0.50 | $3.00 | -- | 1M |
-| Gemini 2.5 Flash | $0.15 | $0.60 | -- | 1M |
-| Gemini 2.5 Flash-Lite | $0.10 | $0.40 | -- | 1M |
-| **GPT-4.1** | $2.00 | $8.00 | -- | 1M |
-| GPT-4.1 mini | $0.40 | $1.60 | -- | 1M |
-| GPT-4.1 nano | $0.10 | $0.40 | -- | 1M |
+- **Data contamination concern:** 94% of SWE-bench PRs predate model training cutoffs (Bjorkbat)
+- **Real-world gap:** Expensify solved only 16.5% of well-articulated tasks despite frontier benchmark scores (Bjorkbat)
+- **Custom scaffolding required:** Top scores require scaffolding that doesn't reflect typical developer workflows (georgewsinger)
+- **swe-REbench emerging:** Tracks monthly updates to prevent contamination (NitpickLawyer)
 
-### Open-Weight / API Models
+The practitioner consensus: trust personal experience over published scores. Test on your own workload.
 
-| Model | Input $/M | Output $/M | Provider |
-|-------|----------|-----------|----------|
-| DeepSeek V3 (cache hit) | $0.07 | $1.68 | Official API |
-| DeepSeek V3 (cache miss) | $0.56 | $1.68 | Official API |
-| Llama 4 Scout | $0.11 | varies | Groq |
-| Llama 4 Maverick | $0.50 | varies | Groq |
-| Devstral Small 2 | $0.10 | $0.30 | Mistral |
-| Mistral Medium 3 | $0.40 | $2.00 | Mistral |
-| Kimi K2.5 | $0.60 | $3.00 | Moonshot |
-| Qwen3 (various) | $0.20-$1.20 | varies | Alibaba Cloud |
+---
 
-### Subscription Plans
+## Migration Patterns
 
-| Plan | Monthly | What You Get |
-|------|---------|-------------|
-| Claude Pro | $20 | Sonnet primary, limited Opus |
-| Claude Max 5x | $100 | Full Opus 4.6, 1M context, agent teams |
-| Claude Max 20x | $200 | 20x Pro usage, everything in 5x |
-| ChatGPT Plus | $20 | GPT-5.x access, Codex |
-| ChatGPT Pro | $200 | xhigh reasoning, maximum quality |
-| Gemini CLI | Free | 1,000 requests/day (mix of Flash and Pro) |
+Cost and speed are the top reasons for leaving Claude. Quality and reliability bring people back:
+
+- **Away from Claude:** To Qwen3-Coder-Next for daily dev (redwood_), to Codex for faster Swift iteration (jawon), to Gemini for cost (dist-epoch), to manual coding when AI proves unreliable for complex features (cleverwebble)
+- **Back to Claude:** From Cursor for superior output (solumunus), from ChatGPT for preferred tone (andai)
+- **High churn:** Practitioners are not brand-loyal. Multiple users run 2-3 models simultaneously. Best tool per task is the norm.
+
+---
+
+## Compact Reference
+
+### Pricing (Per Million Tokens)
+
+| Model | Input | Output | Context |
+|-------|-------|--------|---------|
+| Opus 4.6 | $5.00 | $25.00 | 200K / 1M beta |
+| Sonnet 4.5 | $3.00 | $15.00 | 200K / 1M API |
+| Haiku 4.5 | $1.00 | $5.00 | 200K |
+| GPT-5.3/5.2 Codex | $1.75 | $14.00 | 400K |
+| GPT-5.2 Pro | ~$17.50 | ~$140.00 | 400K |
+| Gemini 3 Pro | $2.00 | $12.00 | 1M |
+| Gemini 3 Flash | $0.50 | $3.00 | 1M |
+| Gemini 2.5 Flash | $0.15 | $0.60 | 1M |
+| DeepSeek V3 | $0.07-$0.56 | $1.68 | 128K |
+| Devstral Small 2 | $0.10 | $0.30 | -- |
+| Kimi K2.5 | $0.60 | $3.00 | 256K |
+| Llama 4 Scout | $0.11 | varies | 10M |
+
+### Reasoning Configuration
+
+| Provider | Parameter | Levels |
+|----------|-----------|--------|
+| OpenAI | `reasoning.effort` | none, low, medium, high, xhigh |
+| Anthropic | `effort` | low, medium, high, max (Opus 4.6 only) |
+| Anthropic (legacy) | `budget_tokens` | 1,024 to 128K |
+| Google (3.x) | `thinkingLevel` | minimal, low, medium, high |
+| Google (2.5) | `thinkingBudget` | 0 to 32,768 |
 
 ### What Practitioners Actually Spend
 
-- **Individual developers:** Claude Max at $100-200/month flat rate. One practitioner described never exceeding 80% of the weekly limit at $200/month. Cursor tracked at $928 over 70 days (~$416/month) with heavy use.
-- **Per-thread (Amp data):** $2.05 with Opus, $2.04 with Gemini 3 Pro, $2.75 with Sonnet. Comparable headline numbers but dramatically different waste profiles.
-- **Annual baseline:** Multiple sources converge on $5-6K per year per developer for AI tooling.
-- **Cache optimization:** One Cursor user achieved 88.8% cache hit rate, bringing effective cost per 1,000 tokens to $0.0009. Understanding your tool's caching behavior can reduce spend by an order of magnitude.
+- **Claude Max:** $100-200/month flat rate
+- **Codex CLI heavy use:** $70K+/year (mmaunder)
+- **Per-thread (Amp):** $2.05 Opus, $2.75 Sonnet, $2.04 Gemini 3 Pro
+- **Gemini free tier:** $1-3/month for basic AI coding
+- **Annual baseline:** $5-6K/year per developer converging across sources
+- **Reasoning cost multiplier:** GPT-5.2 xhigh costs approximately 2x Anthropic alternatives
+- **Token efficiency variance:** Gemini CLI uses approximately 100K tokens for tasks where Codex CLI uses 2K
 
----
+### Tool-Specific Model Configuration
 
-## Domain-Specific Recommendations (Variant Precision)
+| Tool | Model Config | Reasoning Config |
+|------|-------------|------------------|
+| [Claude Code](/tools/claude-code.html) | `/model` command | effort slider, thinking keywords, `CLAUDE_CODE_EFFORT_LEVEL` env |
+| [Codex CLI](/tools/codex.html) | config.toml profiles | `model_reasoning_effort` |
+| [Gemini CLI](/tools/gemini-cli.html) | `--model` flag | `thinkingBudget` / `thinkingLevel` in settings |
+| [Cursor](/tools/cursor.html) | Settings > Models | Thinking toggle, MAX mode |
+| [Aider](/tools/aider.html) | `--model` flag | `--reasoning-effort`, `--thinking-tokens` |
+| [Cline](/tools/cline.html) | BYOK per provider | UI reasoning effort, Plan/Act workflow |
 
-Based on aggregated practitioner reports across all sources:
+### Domain-Specific Picks
 
-| Domain | Top Choice | Config | Runner-Up |
-|--------|-----------|--------|-----------|
-| Full-stack web (React) | Opus 4.6 via Claude Code | high effort | Opus 4.5 |
-| Rust | Opus 4.6 + cargo check loop | high effort | -- |
-| C# | Opus 4.5/4.6 | high effort | -- |
-| C++ (mainstream) | Opus 4.5/4.6 | high effort | Gemini 3 Pro |
-| 3D / Graphics / Spatial | Gemini 3 Flash | high thinking | -- |
-| Low-level C / Shaders | GPT-5.2-Codex | high reasoning | -- |
-| CUDA kernels | Opus 4.5/4.6 | max effort | -- |
-| Transpilation | GPT-5.2 | high reasoning | -- |
-| Structured output | Mistral Medium 3 | -- | GPT-4.1 mini |
-| Architecture guidance | Opus 4.6 at max effort | + Kimi K2.5 | GPT-5.2 xhigh |
-| Codebase search | Gemini 3 Flash | default thinking | Haiku 4.5 |
-| Code review | GPT-5.2 high + Opus 4.6 | cross-model | Gemini 3 Pro |
-| Complex debugging | GPT-5.2 Codex xhigh | autonomous mode | Opus 4.6 max |
-| Legacy code reading | Grok | -- | Opus 4.6 (1M context) |
-| Data science | Opus 4.5/4.6 | high effort | GPT-5.2 Thinking |
-| Batch analysis | GPT-5.2 Pro | xhigh | -- |
-| Local coding (single GPU) | Devstral Small 2 (24B) | -- | Qwen3-30B-A3B |
-| Local coding (Mac) | Qwen3-30B-A3B | -- | Devstral Small 2 |
-| Swift | None excel | -- | -- |
+| Domain | Top Choice | Runner-Up |
+|--------|-----------|-----------|
+| Full-stack web (React) | Opus 4.6 (high effort) | GPT-5.2 Codex high |
+| Rust | Opus 4.6 + cargo check loop | GPT-5.2 Codex |
+| Hard debugging | o3-pro | GPT-5.2 Codex xhigh |
+| Security auditing | o3-pro | Opus 4.6 max |
+| Architecture planning | o3 or Opus 4.6 max | GPT-5.2 xhigh |
+| Concurrency bugs | o3-pro | -- |
+| Code review | GPT-5.2 high + Opus 4.6 (cross-model) | o3-pro |
+| Codebase search | Gemini 3 Flash | Haiku 4.5 |
+| Computer vision code | o4-mini-high | -- |
+| Local coding (Mac) | Qwen3-30B-A3B | Devstral Small 2 |
+| Local agentic (Cline) | Devstral (24B) | Qwen3-30B-A3B |
+| Local reasoning | R1-Distill-Qwen-32B | R1 + V3 via Aider |
+| Cost-sensitive sub-agent | o3-mini-high | Haiku 4.5 |
+| Structured output | Mistral Medium 3 | GPT-4.1 mini |
 
-These are practitioner opinions, not controlled evaluations. Your mileage will vary based on codebase, prompt quality, and harness configuration. The most reliable approach remains: test on your own workload, track your own metrics, and maintain the ability to switch.
-
-For comprehensive tool-by-tool comparison, see the [Tool Comparison Matrix](/tools/compare.html). For the principles behind choosing and switching models, see [Model Selection](/practices/model-selection.html).
+For the principles behind choosing and switching models, see [Model Selection](/practices/model-selection.html). For comprehensive tool comparisons, see the [Tool Comparison Matrix](/tools/compare.html).
