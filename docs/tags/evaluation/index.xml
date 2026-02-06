@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Evaluation on AI Best Practices Knowledge Base</title>
-    <link>/tags/evaluation.html</link>
+    <link>//localhost:1314/tags/evaluation.html</link>
     <description>Recent content in Evaluation on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 29 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/evaluation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/evaluation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Claude Code daily benchmarks for degradation tracking</title>
-      <link>/sources/2026-01-29-claude-code-benchmarks.html</link>
+      <link>//localhost:1314/sources/2026-01-29-claude-code-benchmarks.html</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-01-29-claude-code-benchmarks.html</guid>
+      <guid>//localhost:1314/sources/2026-01-29-claude-code-benchmarks.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;MarginLab launched a daily benchmark tracker for Claude Code performance, measuring the CLI tool against a curated subset of SWE-Bench-Pro tasks using the Opus 4.5 model. The tracker was created in response to widespread community concerns about silent model degradation, where users noticed performance fluctuations but had no systematic way to measure or verify them.&lt;/p&gt;&#xA;&lt;p&gt;The methodology involves running 50 daily evaluations against SWE-Bench-Pro tasks without custom harnesses, then aggregating results over 7-day and 30-day windows for statistical reliability. Statistical significance is determined using Bernoulli modeling with 95% confidence intervals. At the time of the HN discussion, the tracker showed a daily pass rate of 48%, a 7-day aggregate of 53%, and a 30-day aggregate of 53%, compared against a historical baseline of 58%.&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI coding assistants are getting worse?</title>
-      <link>/sources/2026-01-08-ai-coding-getting-worse.html</link>
+      <link>//localhost:1314/sources/2026-01-08-ai-coding-getting-worse.html</link>
       <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-01-08-ai-coding-getting-worse.html</guid>
+      <guid>//localhost:1314/sources/2026-01-08-ai-coding-getting-worse.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This IEEE Spectrum article by Jamie Twiss presents the provocative claim that AI coding assistants are experiencing degradation rather than improvement. The central narrative comes from power users who report that these tools have hit a plateau, with some even declining in capability. The article identifies what it calls &amp;ldquo;silent failures&amp;rdquo; &amp;ndash; situations where AI coding tools appear functional on the surface but are actually underperforming in subtle, hard-to-detect ways.&lt;/p&gt;</description>
     </item>
   </channel>

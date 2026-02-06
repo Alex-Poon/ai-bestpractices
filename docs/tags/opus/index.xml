@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Opus on AI Best Practices Knowledge Base</title>
-    <link>/tags/opus.html</link>
+    <link>//localhost:1314/tags/opus.html</link>
     <description>Recent content in Opus on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/opus/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/opus/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Claude Opus 4.6</title>
-      <link>/sources/2026-02-05-claude-opus-4-6.html</link>
+      <link>//localhost:1314/sources/2026-02-05-claude-opus-4-6.html</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-02-05-claude-opus-4-6.html</guid>
+      <guid>//localhost:1314/sources/2026-02-05-claude-opus-4-6.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Anthropic announced Claude Opus 4.6, their most advanced model to date, featuring a landmark 1 million token context window in beta &amp;ndash; the first for an Opus-class model. The release emphasizes substantial improvements in agentic coding, long-context work, and sustained multi-step workflows.&lt;/p&gt;&#xA;&lt;p&gt;On benchmarks, Opus 4.6 achieved the top score on Terminal-Bench 2.0 for agentic coding and led on Humanity&amp;rsquo;s Last Exam for complex reasoning. On GDPval-AA, which measures economically valuable work tasks, it outperformed the industry&amp;rsquo;s next-best model by a significant margin. Long-context retrieval accuracy hit 76% on needle-in-haystack tests compared to much lower scores from competitors.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Opus 4.5 is not the normal AI agent experience</title>
-      <link>/sources/2026-01-06-opus-4-5-agent-experience.html</link>
+      <link>//localhost:1314/sources/2026-01-06-opus-4-5-agent-experience.html</link>
       <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-01-06-opus-4-5-agent-experience.html</guid>
+      <guid>//localhost:1314/sources/2026-01-06-opus-4-5-agent-experience.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Burke Holland wrote an enthusiastic account of his experience using Claude&amp;rsquo;s Opus 4.5 model, arguing it represents a fundamental shift in AI agent capabilities that goes beyond anything he had previously experienced. His central claim is that Opus 4.5 delivers on promises that earlier AI coding agents could not fulfill, particularly around autonomous problem-solving and first-attempt success rates.&lt;/p&gt;&#xA;&lt;p&gt;Holland completed four substantial projects in rapid succession: an image conversion utility, a video editor, a social media automation app, and a route optimization tool. He highlighted the model&amp;rsquo;s ability to handle full-stack development spanning frontend, backend, authentication, database integration, and cloud infrastructure &amp;ndash; areas that had traditionally been weak points for AI agents.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -12,6 +12,8 @@ The market has bifurcated into three categories: **terminal-based agents** (Clau
 
 ## Comparison Matrix: CLI / Terminal Tools
 
+<div class="compare-matrix">
+
 | | **Claude Code** | **OpenAI Codex** | **Gemini CLI** | **Aider** |
 |---|---|---|---|---|
 | **Approach** | Agent (CLI-first) | Agent (desktop + CLI + cloud) | Agent (CLI) | Pair programmer (CLI) |
@@ -26,7 +28,11 @@ The market has bifurcated into three categories: **terminal-based agents** (Clau
 | **LSP support** | Plugin-based (Dec 2025) | No | No | No |
 | **Editor lock-in** | None (terminal) | None (terminal/desktop) | None (terminal) | None (terminal) |
 
+</div>
+
 ## Comparison Matrix: IDE Tools
+
+<div class="compare-matrix">
 
 | | **Cursor** | **Windsurf** | **Copilot** | **Cline** | **Amp Code** | **Kiro** |
 |---|---|---|---|---|---|---|
@@ -40,6 +46,8 @@ The market has bifurcated into three categories: **terminal-based agents** (Clau
 | **Multi-agent** | No | No | No | No (but Roo Code fork adds this) | Built-in (Oracle, Librarian, Search) | Multi-repo awareness |
 | **MCP support** | Partial | Yes | No | Yes (native) | Partial | No |
 | **Editor support** | VS Code only | Standalone IDE | VS Code, JetBrains, Neovim+ | VS Code, JetBrains, Cursor, Windsurf | CLI + VS Code + JetBrains | Standalone IDE + CLI |
+
+</div>
 
 ## Detailed Profiles
 

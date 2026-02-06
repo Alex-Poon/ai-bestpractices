@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Skeptics on AI Best Practices Knowledge Base</title>
-    <link>/tags/skeptics.html</link>
+    <link>//localhost:1314/tags/skeptics.html</link>
     <description>Recent content in Skeptics on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/skeptics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/skeptics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Thoughtful Skeptics</title>
-      <link>/voices/skeptics.html</link>
+      <link>//localhost:1314/voices/skeptics.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/voices/skeptics.html</guid>
+      <guid>//localhost:1314/voices/skeptics.html</guid>
       <description>&lt;p&gt;These are not people who dismiss AI coding tools without trying them. They are practitioners who have used the tools extensively and articulate specific, concrete concerns. Their critiques are grounded in real failures, not theoretical objections.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;the-craft-programmer&#34;&gt;The craft programmer&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;ryandrake&lt;/strong&gt; got into programming because he enjoys programming &amp;ndash; the act of defining problems in data structures, the puzzle of finding elegant solutions. If he wanted to tell someone else how to do the work, he would have gone into management. AI tools remove the very thing that attracted him to the field.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Adoption on AI Best Practices Knowledge Base</title>
-    <link>/tags/adoption.html</link>
+    <link>//localhost:1314/tags/adoption.html</link>
     <description>Recent content in Adoption on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/adoption/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/adoption/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Converts</title>
-      <link>/voices/converts.html</link>
+      <link>//localhost:1314/voices/converts.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/voices/converts.html</guid>
+      <guid>//localhost:1314/voices/converts.html</guid>
       <description>&lt;p&gt;The most interesting voices in any technology debate are the ones who changed their mind. These practitioners describe a specific before-and-after: a concrete moment or experience that shifted their position. The conversions go both directions &amp;ndash; skeptics who became believers and enthusiasts who developed reservations.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;from-ic-to-manager-reluctantly&#34;&gt;From IC to manager (reluctantly)&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;seer&lt;/strong&gt; describes the shift to AI-assisted coding as eerily similar to the jump from individual contributor to manager. He stopped obsessing over implementation details and learned to give guidance instead of instructions. If the AI chose an iterative loop instead of a functional pattern, he let it go &amp;ndash; the tests still pass. The conversion was not instant; it required the same letting-go that management demands.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Adoption Curve</title>
-      <link>/guide/adoption-curve.html</link>
+      <link>//localhost:1314/guide/adoption-curve.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/guide/adoption-curve.html</guid>
+      <guid>//localhost:1314/guide/adoption-curve.html</guid>
       <description>&lt;p&gt;If you have been using AI coding tools for more than a few weeks, you have probably noticed something: the initial excitement fades. Tasks that seemed magical at first start revealing cracks. The agent makes the same category of mistake for the third time. You spend twenty minutes fixing something that should have taken five. You wonder if you were wrong about the whole thing.&lt;/p&gt;&#xA;&lt;p&gt;You are not wrong. You are on the adoption curve, and almost everyone passes through this valley. Understanding the shape of the curve does not make the valley disappear, but it does help you avoid quitting at the point of maximum frustration &amp;ndash; which is exactly when you are closest to the breakthrough.&lt;/p&gt;</description>
     </item>
   </channel>

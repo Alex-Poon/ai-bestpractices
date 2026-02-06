@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ai-Skepticism on AI Best Practices Knowledge Base</title>
-    <link>/tags/ai-skepticism.html</link>
+    <link>//localhost:1314/tags/ai-skepticism.html</link>
     <description>Recent content in Ai-Skepticism on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/ai-skepticism/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/ai-skepticism/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Open Questions</title>
-      <link>/landscape/open-questions.html</link>
+      <link>//localhost:1314/landscape/open-questions.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/landscape/open-questions.html</guid>
+      <guid>//localhost:1314/landscape/open-questions.html</guid>
       <description>&lt;p&gt;Not everything about AI-assisted development is settled. Several major questions remain genuinely open, with credible evidence and strong opinions on multiple sides. This page captures the debates as they stand in early 2026.&lt;/p&gt;&#xA;&lt;h2 id=&#34;is-ai-making-coding-skills-atrophy&#34;&gt;Is AI Making Coding Skills Atrophy?&lt;/h2&gt;&#xA;&lt;p&gt;Anthropic&amp;rsquo;s own randomized controlled study provides the most rigorous data point. Junior developers using AI assistance scored 17% lower on comprehension quizzes &amp;mdash; a gap the researchers characterized as equivalent to nearly two letter grades, with the largest deficit appearing in debugging skills. The speed gains (roughly two minutes faster) were not statistically significant.&lt;/p&gt;</description>
     </item>
   </channel>

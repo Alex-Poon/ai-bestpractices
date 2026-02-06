@@ -2,101 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tool Landscape on AI Best Practices Knowledge Base</title>
-    <link>/tools/index.html</link>
+    <link>//localhost:1314/tools/index.html</link>
     <description>Recent content in Tool Landscape on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tools/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Claude Code Deep Dive</title>
-      <link>/tools/claude-code.html</link>
+      <link>//localhost:1314/tools/claude-code.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tools/claude-code.html</guid>
+      <guid>//localhost:1314/tools/claude-code.html</guid>
       <description>&lt;p&gt;Claude Code is Anthropic&amp;rsquo;s CLI-first coding agent. It runs in the terminal, takes natural language task descriptions, and executes autonomously &amp;ndash; reading files, running commands, editing code, and iterating on failures. It is single-model (Anthropic&amp;rsquo;s Claude family), available through Claude Max subscriptions at $100-200/month, and focused entirely on agentic workflows with no autocomplete mode.&lt;/p&gt;&#xA;&lt;p&gt;What sets Claude Code apart from other agents is its extensibility. It supports CLAUDE.md project files, custom sub-agents, hooks for CI/CD integration, and MCP servers for structured tool access. This page covers the major features and developments that matter to practitioners.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tool Comparison Matrix</title>
-      <link>/tools/compare.html</link>
+      <link>//localhost:1314/tools/compare.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tools/compare.html</guid>
+      <guid>//localhost:1314/tools/compare.html</guid>
       <description>&lt;p&gt;Choosing an AI coding tool in early 2026 is less about finding the objectively best option and more about understanding which tradeoffs match your workflow. Every tool has vocal advocates and equally vocal critics. The comparison below is drawn entirely from practitioner reports in community discussions &amp;ndash; not from vendor marketing or benchmark claims.&lt;/p&gt;&#xA;&lt;p&gt;The market has bifurcated into three categories: &lt;strong&gt;terminal-based agents&lt;/strong&gt; (Claude Code, Aider, Gemini CLI, Codex CLI), &lt;strong&gt;AI-native IDEs&lt;/strong&gt; (Cursor, Windsurf, Kiro), and &lt;strong&gt;IDE extensions&lt;/strong&gt; (Copilot, Cline, Amp). Each category implies different assumptions about how developers want to work.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cursor</title>
-      <link>/tools/cursor.html</link>
+      <link>//localhost:1314/tools/cursor.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tools/cursor.html</guid>
+      <guid>//localhost:1314/tools/cursor.html</guid>
       <description>&lt;p&gt;Cursor is a VS Code fork with AI capabilities built directly into the editor. It offers both autocomplete (Tab) and agentic (Composer/Agent) modes as first-class features, multi-model support with user-selectable models, and pricing starting at $20/month with usage-based tiers for heavier workloads. It has the largest adoption among AI coding tools in the IDE-first category.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-cursor-does-well&#34;&gt;What Cursor Does Well&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Low friction entry point.&lt;/strong&gt; Because Cursor is a VS Code fork, developers who already use VS Code can switch with minimal disruption. Extensions, keybindings, and settings transfer directly. This removes the adoption barrier that CLI-first tools face with developers unfamiliar with terminal workflows.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Model Deep Dive</title>
-      <link>/tools/models.html</link>
+      <link>//localhost:1314/tools/models.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tools/models.html</guid>
+      <guid>//localhost:1314/tools/models.html</guid>
       <description>&lt;p&gt;The &lt;a href=&#34;../practices/model-selection.html&#34;&gt;model selection&lt;/a&gt; practice page covers the principles: start cheap, escalate on failure, use multiple models, ignore benchmarks in favor of your own workload. This page is the complement &amp;ndash; a deep look at specific models, how they compare in real-world usage, and what they actually cost when practitioners put them to work.&lt;/p&gt;&#xA;&lt;p&gt;The data here comes from two sources: Amp Code&amp;rsquo;s published model evaluation data (including their distinctive &amp;ldquo;off-the-rails&amp;rdquo; metric), and practitioner reports from over 6,000 Hacker News comments across 20+ discussion threads.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Amp Code</title>
-      <link>/tools/amp.html</link>
+      <link>//localhost:1314/tools/amp.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tools/amp.html</guid>
+      <guid>//localhost:1314/tools/amp.html</guid>
       <description>&lt;p&gt;Amp Code is a coding agent built by the team behind Sourcegraph&amp;rsquo;s code intelligence platform. Available as a CLI, VS Code extension, and JetBrains plugin, it is the most explicit implementation of multi-model routing in a production coding tool. Rather than letting users pick a single model, Amp routes tasks automatically based on type &amp;ndash; sending planning, implementation, review, and search to whichever model is best suited for each.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-multi-model-architecture&#34;&gt;The Multi-Model Architecture&lt;/h2&gt;&#xA;&lt;p&gt;Amp&amp;rsquo;s core design principle is that no single model is best at everything. Different cognitive tasks &amp;ndash; planning, code generation, search, review &amp;ndash; have different performance profiles across models. Amp makes this explicit by maintaining named agent roles across three providers (Anthropic, OpenAI, Google):&lt;/p&gt;</description>
     </item>
     <item>
       <title>GitHub Copilot</title>
-      <link>/tools/copilot.html</link>
+      <link>//localhost:1314/tools/copilot.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tools/copilot.html</guid>
+      <guid>//localhost:1314/tools/copilot.html</guid>
       <description>&lt;p&gt;GitHub Copilot is the most widely deployed AI coding tool, with access available to over 100 million developers through the GitHub ecosystem. It started as an inline autocomplete tool and has gradually expanded into chat and agentic capabilities, but its core strength remains fast, in-flow code completion.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-copilot-does&#34;&gt;What Copilot Does&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Inline autocomplete.&lt;/strong&gt; Copilot&amp;rsquo;s primary feature is suggesting code as you type. It runs as an extension in VS Code, JetBrains, Neovim, and other editors, providing context-aware completions drawn from the current file and surrounding project context. This is what most users know Copilot for, and it remains the most polished autocomplete experience available.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The MCP Ecosystem</title>
-      <link>/tools/mcp-ecosystem.html</link>
+      <link>//localhost:1314/tools/mcp-ecosystem.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tools/mcp-ecosystem.html</guid>
+      <guid>//localhost:1314/tools/mcp-ecosystem.html</guid>
       <description>&lt;p&gt;Model Context Protocol (MCP) is an open standard introduced by Anthropic for connecting AI agents to external tools and data sources. It defines a structured interface through which an agent can discover, invoke, and receive results from tools &amp;ndash; databases, APIs, file systems, cloud services, and more &amp;ndash; without custom integration code for each one.&lt;/p&gt;&#xA;&lt;p&gt;MCP matters because it addresses a fundamental problem in the AI tooling landscape: every agent-tool integration was previously bespoke. If you wanted Claude Code to interact with your Terraform infrastructure, or Cursor to query your Postgres database, each combination required its own glue code. MCP standardizes this interface so that a tool built for one agent can work with any MCP-compatible agent.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Gemini CLI</title>
-      <link>/tools/gemini-cli.html</link>
+      <link>//localhost:1314/tools/gemini-cli.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tools/gemini-cli.html</guid>
+      <guid>//localhost:1314/tools/gemini-cli.html</guid>
       <description>&lt;p&gt;Gemini CLI is Google&amp;rsquo;s terminal-based coding agent, powered by Gemini models. It offers a similar interaction model to Claude Code &amp;ndash; describe a task in natural language, and the agent reads files, generates code, and iterates &amp;ndash; but draws on Google&amp;rsquo;s model family and ecosystem. It is notable for its generous free tier, massive context windows, a sophisticated memory system, an agent skills framework, and the polarized practitioner reception that consistently separates benchmark performance from real-world experience. As of February 2026, it is at v0.27.0 with rapid weekly releases.&lt;/p&gt;</description>
     </item>
     <item>
       <title>OpenAI Codex</title>
-      <link>/tools/codex.html</link>
+      <link>//localhost:1314/tools/codex.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tools/codex.html</guid>
+      <guid>//localhost:1314/tools/codex.html</guid>
       <description>&lt;p&gt;OpenAI Codex has evolved from a single cloud-sandboxed coding agent into a multi-surface ecosystem: a Desktop App for parallel agent orchestration, a CLI for terminal-first workflows, and an IDE extension for in-editor use. The February 2026 launch of the Codex Desktop App and GPT-5.3-Codex model represents a significant expansion of what Codex can do, moving it from a submit-and-review tool to a full multi-agent development environment.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-codex-ecosystem-february-2026&#34;&gt;The Codex Ecosystem (February 2026)&lt;/h2&gt;&#xA;&lt;p&gt;Codex now spans three surfaces, each targeting different workflows:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Aider</title>
-      <link>/tools/aider.html</link>
+      <link>//localhost:1314/tools/aider.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tools/aider.html</guid>
+      <guid>//localhost:1314/tools/aider.html</guid>
       <description>&lt;p&gt;Aider is an open-source, terminal-based AI pair programming tool released under the MIT license. It operates through a chat interface where you describe changes in natural language and Aider edits files directly, staging and committing them with descriptive messages. It represents the fully open alternative to proprietary CLI agents like Claude Code and Codex CLI &amp;ndash; you bring your own API keys, choose your own models, and pay nothing beyond inference costs.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cline</title>
-      <link>/tools/cline.html</link>
+      <link>//localhost:1314/tools/cline.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tools/cline.html</guid>
+      <guid>//localhost:1314/tools/cline.html</guid>
       <description>&lt;p&gt;Cline is an open-source VS Code extension that turns large language models into autonomous coding agents. Originally released as &amp;ldquo;Claude Dev,&amp;rdquo; it has grown to over 5 million installs across VS Code, JetBrains, Cursor, and Windsurf. Its defining characteristic is a human-in-the-loop design: the agent proposes actions at every step and waits for your approval before executing. This makes it one of the most transparent and controllable AI coding tools available.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Windsurf</title>
-      <link>/tools/windsurf.html</link>
+      <link>//localhost:1314/tools/windsurf.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tools/windsurf.html</guid>
+      <guid>//localhost:1314/tools/windsurf.html</guid>
       <description>&lt;p&gt;Windsurf is a full AI-native IDE built by Codeium. Unlike extensions that bolt AI onto existing editors, Windsurf was designed from the ground up around AI-first workflows. Its Cascade agent plans multi-step edits, calls tools, and maintains deep repository context. The tool positions itself as the primary alternative to Cursor, competing on context handling, pricing, and enterprise security features.&lt;/p&gt;&#xA;&lt;p&gt;The core technical differentiator is context. Windsurf uses a RAG-based context engine that maintains an effective working context of approximately 200,000 tokens &amp;ndash; substantially larger than the practical context most other IDE-based agents achieve. This makes a meaningful difference on large codebases where the agent needs awareness of distant architectural decisions, shared types, and cross-module dependencies.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Kiro</title>
-      <link>/tools/kiro.html</link>
+      <link>//localhost:1314/tools/kiro.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tools/kiro.html</guid>
+      <guid>//localhost:1314/tools/kiro.html</guid>
       <description>&lt;p&gt;Kiro is AWS&amp;rsquo;s entry into the AI coding tool space. It went generally available in November 2025 and takes a fundamentally different approach from other AI IDEs: spec-driven development. Instead of starting with code and having AI assist along the way, Kiro starts with requirements described in natural language and produces user stories, technical design documents, coding task lists, and then code &amp;ndash; along with documentation and tests.&lt;/p&gt;&#xA;&lt;p&gt;This positions Kiro as the anti-vibe-coding tool. Where most AI coding assistants optimize for speed and developer flow, Kiro optimizes for rigor and traceability. Requirements link to specs, specs link to code, code links to tests. The entire chain is auditable, which appeals to organizations that need to demonstrate compliance or maintain strict engineering standards.&lt;/p&gt;</description>
     </item>
   </channel>

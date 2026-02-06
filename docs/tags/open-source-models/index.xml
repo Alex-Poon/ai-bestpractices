@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Open-Source-Models on AI Best Practices Knowledge Base</title>
-    <link>/tags/open-source-models.html</link>
+    <link>//localhost:1314/tags/open-source-models.html</link>
     <description>Recent content in Open-Source-Models on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 02 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/open-source-models/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/open-source-models/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mistral 3 family of models released</title>
-      <link>/sources/2025-12-02-mistral-3-models.html</link>
+      <link>//localhost:1314/sources/2025-12-02-mistral-3-models.html</link>
       <pubDate>Tue, 02 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>/sources/2025-12-02-mistral-3-models.html</guid>
+      <guid>//localhost:1314/sources/2025-12-02-mistral-3-models.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Mistral AI released the Mistral 3 family, a new generation of open-source multimodal models under the Apache 2.0 license. The lineup includes three dense models at 3B, 8B, and 14B parameters (the Ministral variants), plus Mistral Large 3, a sparse mixture-of-experts model with 41B active parameters drawn from a 675B total pool.&lt;/p&gt;&#xA;&lt;p&gt;All models feature native multimodal and multilingual capabilities, handling both text and images across more than 40 languages. The smaller Ministral variants target cost-efficiency, with the 14B reasoning variant achieving strong accuracy on math benchmarks. Mistral Large 3 ranks highly among open-source non-reasoning models on the LMArena leaderboard and demonstrates parity with leading instruction-tuned open-weight models for general tasks. A notable efficiency claim is that the Ministral family produces far fewer tokens than competitors while achieving comparable performance, significantly reducing computational costs.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mcp on AI Best Practices Knowledge Base</title>
-    <link>/tags/mcp.html</link>
+    <link>//localhost:1314/tags/mcp.html</link>
     <description>Recent content in Mcp on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/mcp/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/mcp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The MCP Ecosystem</title>
-      <link>/tools/mcp-ecosystem.html</link>
+      <link>//localhost:1314/tools/mcp-ecosystem.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tools/mcp-ecosystem.html</guid>
+      <guid>//localhost:1314/tools/mcp-ecosystem.html</guid>
       <description>&lt;p&gt;Model Context Protocol (MCP) is an open standard introduced by Anthropic for connecting AI agents to external tools and data sources. It defines a structured interface through which an agent can discover, invoke, and receive results from tools &amp;ndash; databases, APIs, file systems, cloud services, and more &amp;ndash; without custom integration code for each one.&lt;/p&gt;&#xA;&lt;p&gt;MCP matters because it addresses a fundamental problem in the AI tooling landscape: every agent-tool integration was previously bespoke. If you wanted Claude Code to interact with your Terraform infrastructure, or Cursor to query your Postgres database, each combination required its own glue code. MCP standardizes this interface so that a tool built for one agent can work with any MCP-compatible agent.&lt;/p&gt;</description>
     </item>
   </channel>

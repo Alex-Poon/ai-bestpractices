@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reliability on AI Best Practices Knowledge Base</title>
-    <link>/tags/reliability.html</link>
+    <link>//localhost:1314/tags/reliability.html</link>
     <description>Recent content in Reliability on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/reliability/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/reliability/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Is AI-Assisted Coding Getting Worse?</title>
-      <link>/debates/is-it-getting-worse.html</link>
+      <link>//localhost:1314/debates/is-it-getting-worse.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/debates/is-it-getting-worse.html</guid>
+      <guid>//localhost:1314/debates/is-it-getting-worse.html</guid>
       <description>&lt;h2 id=&#34;the-question&#34;&gt;The Question&lt;/h2&gt;&#xA;&lt;p&gt;Few topics generate more heat in developer communities than the question of whether AI coding tools are getting worse over time. The complaint surfaces constantly: tasks that worked last month now require more prompting, models seem to lose coherence during US business hours, and context windows that once felt adequate now collapse under normal workloads.&lt;/p&gt;&#xA;&lt;p&gt;The stakes are real. Developers are paying $125-400+ per month for AI coding tools and building workflows around model capabilities they believe were promised. When those capabilities seem to fluctuate &amp;ndash; or quietly degrade &amp;ndash; trust erodes. And in a market where providers compete fiercely for developer loyalty, the perception of degradation can be as damaging as actual degradation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Claude Code daily benchmarks for degradation tracking</title>
-      <link>/sources/2026-01-29-claude-code-benchmarks.html</link>
+      <link>//localhost:1314/sources/2026-01-29-claude-code-benchmarks.html</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-01-29-claude-code-benchmarks.html</guid>
+      <guid>//localhost:1314/sources/2026-01-29-claude-code-benchmarks.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;MarginLab launched a daily benchmark tracker for Claude Code performance, measuring the CLI tool against a curated subset of SWE-Bench-Pro tasks using the Opus 4.5 model. The tracker was created in response to widespread community concerns about silent model degradation, where users noticed performance fluctuations but had no systematic way to measure or verify them.&lt;/p&gt;&#xA;&lt;p&gt;The methodology involves running 50 daily evaluations against SWE-Bench-Pro tasks without custom harnesses, then aggregating results over 7-day and 30-day windows for statistical reliability. Statistical significance is determined using Bernoulli modeling with 95% confidence intervals. At the time of the HN discussion, the tracker showed a daily pass rate of 48%, a 7-day aggregate of 53%, and a 30-day aggregate of 53%, compared against a historical baseline of 58%.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Costs and Tradeoffs</title>
-      <link>/landscape/costs-and-tradeoffs.html</link>
+      <link>//localhost:1314/landscape/costs-and-tradeoffs.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/landscape/costs-and-tradeoffs.html</guid>
+      <guid>//localhost:1314/landscape/costs-and-tradeoffs.html</guid>
       <description>&lt;p&gt;AI coding tools promise productivity gains, but they come with real costs &amp;mdash; financial, operational, and strategic. This page collects what practitioners have reported spending, the reliability challenges they face, and the economic questions that remain unresolved.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-638-study-what-heavy-usage-actually-costs&#34;&gt;The $638 Study: What Heavy Usage Actually Costs&lt;/h2&gt;&#xA;&lt;p&gt;One of the most detailed cost reports comes from a founder and CTO who tracked AI coding expenses over six weeks. The total: $638 in on-demand charges using Cursor with Claude models, with October 2025 alone hitting $348 and reaching Cursor&amp;rsquo;s $400 monthly limit.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tell HN: Claude Has Had 57 Incidents in the Past 3 Months</title>
-      <link>/sources/2026-02-04-claude-57-incidents-3-months.html</link>
+      <link>//localhost:1314/sources/2026-02-04-claude-57-incidents-3-months.html</link>
       <pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-02-04-claude-57-incidents-3-months.html</guid>
+      <guid>//localhost:1314/sources/2026-02-04-claude-57-incidents-3-months.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This HN text post by shikkra documents reliability concerns with Anthropic&amp;rsquo;s Claude service, providing a detailed incident count from the official status page (status.claude.com). The author, a $100/month Max plan subscriber, was prompted to investigate after encountering a retry issue where Claude attempted to generate a response 10 times with Opus 4.5 and extended thinking enabled before silently switching to a different model without indication or confirmation.&lt;/p&gt;&#xA;&lt;p&gt;The incident data paints a concerning picture of service reliability. February 2026 had 10 incidents in just 4 days. January 2026 had 26 incidents. December 2025 had 21 incidents. At least 16 of these directly affected Claude Opus 4.5: 3 incidents in December (21-23), 9 in January (across 7-28), and 4 in February (1-4). Ten additional incidents affected the claude.ai platform itself.&lt;/p&gt;</description>
     </item>
   </channel>

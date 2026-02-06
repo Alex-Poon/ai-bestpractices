@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tool-Comparison on AI Best Practices Knowledge Base</title>
-    <link>/tags/tool-comparison.html</link>
+    <link>//localhost:1314/tags/tool-comparison.html</link>
     <description>Recent content in Tool-Comparison on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/tool-comparison/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/tool-comparison/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cursor</title>
-      <link>/tools/cursor.html</link>
+      <link>//localhost:1314/tools/cursor.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tools/cursor.html</guid>
+      <guid>//localhost:1314/tools/cursor.html</guid>
       <description>&lt;p&gt;Cursor is a VS Code fork with AI capabilities built directly into the editor. It offers both autocomplete (Tab) and agentic (Composer/Agent) modes as first-class features, multi-model support with user-selectable models, and pricing starting at $20/month with usage-based tiers for heavier workloads. It has the largest adoption among AI coding tools in the IDE-first category.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-cursor-does-well&#34;&gt;What Cursor Does Well&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Low friction entry point.&lt;/strong&gt; Because Cursor is a VS Code fork, developers who already use VS Code can switch with minimal disruption. Extensions, keybindings, and settings transfer directly. This removes the adoption barrier that CLI-first tools face with developers unfamiliar with terminal workflows.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Amp Code</title>
-      <link>/tools/amp.html</link>
+      <link>//localhost:1314/tools/amp.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tools/amp.html</guid>
+      <guid>//localhost:1314/tools/amp.html</guid>
       <description>&lt;p&gt;Amp Code is a coding agent built by the team behind Sourcegraph&amp;rsquo;s code intelligence platform. Available as a CLI, VS Code extension, and JetBrains plugin, it is the most explicit implementation of multi-model routing in a production coding tool. Rather than letting users pick a single model, Amp routes tasks automatically based on type &amp;ndash; sending planning, implementation, review, and search to whichever model is best suited for each.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-multi-model-architecture&#34;&gt;The Multi-Model Architecture&lt;/h2&gt;&#xA;&lt;p&gt;Amp&amp;rsquo;s core design principle is that no single model is best at everything. Different cognitive tasks &amp;ndash; planning, code generation, search, review &amp;ndash; have different performance profiles across models. Amp makes this explicit by maintaining named agent roles across three providers (Anthropic, OpenAI, Google):&lt;/p&gt;</description>
     </item>
     <item>
       <title>GitHub Copilot</title>
-      <link>/tools/copilot.html</link>
+      <link>//localhost:1314/tools/copilot.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tools/copilot.html</guid>
+      <guid>//localhost:1314/tools/copilot.html</guid>
       <description>&lt;p&gt;GitHub Copilot is the most widely deployed AI coding tool, with access available to over 100 million developers through the GitHub ecosystem. It started as an inline autocomplete tool and has gradually expanded into chat and agentic capabilities, but its core strength remains fast, in-flow code completion.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-copilot-does&#34;&gt;What Copilot Does&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Inline autocomplete.&lt;/strong&gt; Copilot&amp;rsquo;s primary feature is suggesting code as you type. It runs as an extension in VS Code, JetBrains, Neovim, and other editors, providing context-aware completions drawn from the current file and surrounding project context. This is what most users know Copilot for, and it remains the most polished autocomplete experience available.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,859 +2,859 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/evidence/carlini-compiler.html</loc>
+    <loc>//localhost:1314/evidence/carlini-compiler.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tools/claude-code.html</loc>
+    <loc>//localhost:1314/tools/claude-code.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/debates/is-it-getting-worse.html</loc>
+    <loc>//localhost:1314/debates/is-it-getting-worse.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/landscape/model-releases-2026.html</loc>
+    <loc>//localhost:1314/landscape/model-releases-2026.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/voices/power-users.html</loc>
+    <loc>//localhost:1314/voices/power-users.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/practices/task-scoping.html</loc>
+    <loc>//localhost:1314/practices/task-scoping.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/guide/core-loop.html</loc>
+    <loc>//localhost:1314/guide/core-loop.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/guide/index.html</loc>
+    <loc>//localhost:1314/guide/index.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tools/compare.html</loc>
+    <loc>//localhost:1314/tools/compare.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-02-05-claude-opus-4-6.html</loc>
+    <loc>//localhost:1314/sources/2026-02-05-claude-opus-4-6.html</loc>
     <lastmod>2026-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-01-29-claude-code-benchmarks.html</loc>
+    <loc>//localhost:1314/sources/2026-01-29-claude-code-benchmarks.html</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/evidence/hashimoto-journey.html</loc>
+    <loc>//localhost:1314/evidence/hashimoto-journey.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tools/cursor.html</loc>
+    <loc>//localhost:1314/tools/cursor.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/guide/getting-started.html</loc>
+    <loc>//localhost:1314/guide/getting-started.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/practices/harness-engineering.html</loc>
+    <loc>//localhost:1314/practices/harness-engineering.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tools/models.html</loc>
+    <loc>//localhost:1314/tools/models.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/practices/index.html</loc>
+    <loc>//localhost:1314/practices/index.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/landscape/adoption-curve.html</loc>
+    <loc>//localhost:1314/landscape/adoption-curve.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/debates/vibe-coding.html</loc>
+    <loc>//localhost:1314/debates/vibe-coding.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/voices/skeptics.html</loc>
+    <loc>//localhost:1314/voices/skeptics.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-01-26-karpathy-claude-coding-notes.html</loc>
+    <loc>//localhost:1314/sources/2026-01-26-karpathy-claude-coding-notes.html</loc>
     <lastmod>2026-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-01-12-apple-picks-gemini-siri.html</loc>
+    <loc>//localhost:1314/sources/2026-01-12-apple-picks-gemini-siri.html</loc>
     <lastmod>2026-01-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-01-08-claude-code-200-lines.html</loc>
+    <loc>//localhost:1314/sources/2026-01-08-claude-code-200-lines.html</loc>
     <lastmod>2026-01-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tools/amp.html</loc>
+    <loc>//localhost:1314/tools/amp.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/voices/converts.html</loc>
+    <loc>//localhost:1314/voices/converts.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/landscape/costs-and-tradeoffs.html</loc>
+    <loc>//localhost:1314/landscape/costs-and-tradeoffs.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/debates/index.html</loc>
+    <loc>//localhost:1314/debates/index.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/debates/junior-skills.html</loc>
+    <loc>//localhost:1314/debates/junior-skills.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/evidence/practitioner-voices.html</loc>
+    <loc>//localhost:1314/evidence/practitioner-voices.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/guide/adoption-curve.html</loc>
+    <loc>//localhost:1314/guide/adoption-curve.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/practices/verification.html</loc>
+    <loc>//localhost:1314/practices/verification.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-01-30-ai-assistance-coding-skills.html</loc>
+    <loc>//localhost:1314/sources/2026-01-30-ai-assistance-coding-skills.html</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-01-29-agents-md-outperforms-skills.html</loc>
+    <loc>//localhost:1314/sources/2026-01-29-agents-md-outperforms-skills.html</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-01-24-claude-code-swarms.html</loc>
+    <loc>//localhost:1314/sources/2026-01-24-claude-code-swarms.html</loc>
     <lastmod>2026-01-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-01-06-opus-4-5-agent-experience.html</loc>
+    <loc>//localhost:1314/sources/2026-01-06-opus-4-5-agent-experience.html</loc>
     <lastmod>2026-01-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/voices/builders.html</loc>
+    <loc>//localhost:1314/voices/builders.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/debates/engineering-vs-programming.html</loc>
+    <loc>//localhost:1314/debates/engineering-vs-programming.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tools/copilot.html</loc>
+    <loc>//localhost:1314/tools/copilot.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/practices/model-selection.html</loc>
+    <loc>//localhost:1314/practices/model-selection.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/landscape/open-questions.html</loc>
+    <loc>//localhost:1314/landscape/open-questions.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/evidence/cost-data.html</loc>
+    <loc>//localhost:1314/evidence/cost-data.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/guide/when-it-fails.html</loc>
+    <loc>//localhost:1314/guide/when-it-fails.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/evidence/coding-skills-impact.html</loc>
+    <loc>//localhost:1314/evidence/coding-skills-impact.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/debates/cost-sustainability.html</loc>
+    <loc>//localhost:1314/debates/cost-sustainability.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/practices/prompt-craft.html</loc>
+    <loc>//localhost:1314/practices/prompt-craft.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tools/mcp-ecosystem.html</loc>
+    <loc>//localhost:1314/tools/mcp-ecosystem.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2025-12-22-claude-code-lsp-support.html</loc>
+    <loc>//localhost:1314/sources/2025-12-22-claude-code-lsp-support.html</loc>
     <lastmod>2025-12-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/debates/brain-atrophy.html</loc>
+    <loc>//localhost:1314/debates/brain-atrophy.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/practices/context-management.html</loc>
+    <loc>//localhost:1314/practices/context-management.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/evidence/karpathy-notes.html</loc>
+    <loc>//localhost:1314/evidence/karpathy-notes.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-01-21-agentic-ai-handbook.html</loc>
+    <loc>//localhost:1314/sources/2026-01-21-agentic-ai-handbook.html</loc>
     <lastmod>2026-01-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tools/gemini-cli.html</loc>
+    <loc>//localhost:1314/tools/gemini-cli.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/debates/open-source-impact.html</loc>
+    <loc>//localhost:1314/debates/open-source-impact.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/practices/multi-agent.html</loc>
+    <loc>//localhost:1314/practices/multi-agent.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/voices/index.html</loc>
+    <loc>//localhost:1314/voices/index.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tools/codex.html</loc>
+    <loc>//localhost:1314/tools/codex.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/debates/language-matters.html</loc>
+    <loc>//localhost:1314/debates/language-matters.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2025-12-18-two-kinds-vibe-coding.html</loc>
+    <loc>//localhost:1314/sources/2025-12-18-two-kinds-vibe-coding.html</loc>
     <lastmod>2025-12-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tools/aider.html</loc>
+    <loc>//localhost:1314/tools/aider.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tools/cline.html</loc>
+    <loc>//localhost:1314/tools/cline.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-02-02-vibe-coding-killing-open-source.html</loc>
+    <loc>//localhost:1314/sources/2026-02-02-vibe-coding-killing-open-source.html</loc>
     <lastmod>2026-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tools/windsurf.html</loc>
+    <loc>//localhost:1314/tools/windsurf.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tools/kiro.html</loc>
+    <loc>//localhost:1314/tools/kiro.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-01-04-llm-coding-workflow-2026.html</loc>
+    <loc>//localhost:1314/sources/2026-01-04-llm-coding-workflow-2026.html</loc>
     <lastmod>2026-01-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tools/index.html</loc>
+    <loc>//localhost:1314/tools/index.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-02-04-claude-57-incidents-3-months.html</loc>
+    <loc>//localhost:1314/sources/2026-02-04-claude-57-incidents-3-months.html</loc>
     <lastmod>2026-02-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-01-18-model-matters-more-than-prompts.html</loc>
+    <loc>//localhost:1314/sources/2026-01-18-model-matters-more-than-prompts.html</loc>
     <lastmod>2026-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-01-06-agentic-frameworks-2026.html</loc>
+    <loc>//localhost:1314/sources/2026-01-06-agentic-frameworks-2026.html</loc>
     <lastmod>2026-01-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2025-12-02-mistral-3-models.html</loc>
+    <loc>//localhost:1314/sources/2025-12-02-mistral-3-models.html</loc>
     <lastmod>2025-12-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2025-12-30-openai-cash-burn.html</loc>
+    <loc>//localhost:1314/sources/2025-12-30-openai-cash-burn.html</loc>
     <lastmod>2025-12-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-01-08-ai-coding-getting-worse.html</loc>
+    <loc>//localhost:1314/sources/2026-01-08-ai-coding-getting-worse.html</loc>
     <lastmod>2026-01-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/landscape/index.html</loc>
+    <loc>//localhost:1314/landscape/index.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/evidence/index.html</loc>
+    <loc>//localhost:1314/evidence/index.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-02-05-ask-hn-llama-4-meta.html</loc>
+    <loc>//localhost:1314/sources/2026-02-05-ask-hn-llama-4-meta.html</loc>
     <lastmod>2026-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-01-19-ai-bubble-bursts-2026.html</loc>
+    <loc>//localhost:1314/sources/2026-01-19-ai-bubble-bursts-2026.html</loc>
     <lastmod>2026-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-01-01-deepseek-bigger-models-less.html</loc>
+    <loc>//localhost:1314/sources/2026-01-01-deepseek-bigger-models-less.html</loc>
     <lastmod>2026-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2025-12-10-year-ide-died.html</loc>
+    <loc>//localhost:1314/sources/2025-12-10-year-ide-died.html</loc>
     <lastmod>2025-12-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/index.html</loc>
+    <loc>//localhost:1314/sources/index.html</loc>
     <lastmod>2026-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-02-01-state-of-ai-2026.html</loc>
+    <loc>//localhost:1314/sources/2026-02-01-state-of-ai-2026.html</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-01-10-llm-coding-workflow-2026.html</loc>
+    <loc>//localhost:1314/sources/2026-01-10-llm-coding-workflow-2026.html</loc>
     <lastmod>2026-01-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-02-03-obsidian-claude-code.html</loc>
+    <loc>//localhost:1314/sources/2026-02-03-obsidian-claude-code.html</loc>
     <lastmod>2026-02-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2025-11-13-ai-coding-agent-costs.html</loc>
+    <loc>//localhost:1314/sources/2025-11-13-ai-coding-agent-costs.html</loc>
     <lastmod>2025-11-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-01-22-ai-coding-toolkit.html</loc>
+    <loc>//localhost:1314/sources/2026-01-22-ai-coding-toolkit.html</loc>
     <lastmod>2026-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-02-03-gemini-3-agentic-vision.html</loc>
+    <loc>//localhost:1314/sources/2026-02-03-gemini-3-agentic-vision.html</loc>
     <lastmod>2026-02-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-01-25-klaus-agentic-harness.html</loc>
+    <loc>//localhost:1314/sources/2026-01-25-klaus-agentic-harness.html</loc>
     <lastmod>2026-01-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sources/2026-01-19-terraform-skill-claude.html</loc>
+    <loc>//localhost:1314/sources/2026-01-19-terraform-skill-claude.html</loc>
     <lastmod>2026-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/adoption.html</loc>
+    <loc>//localhost:1314/tags/adoption.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/adoption-strategy.html</loc>
+    <loc>//localhost:1314/tags/adoption-strategy.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/agent.html</loc>
+    <loc>//localhost:1314/tags/agent.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/agent-architecture.html</loc>
+    <loc>//localhost:1314/tags/agent-architecture.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/agent-workflows.html</loc>
+    <loc>//localhost:1314/tags/agent-workflows.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/agents-md.html</loc>
+    <loc>//localhost:1314/tags/agents-md.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/index.html</loc>
+    <loc>//localhost:1314/index.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/ai-economics.html</loc>
+    <loc>//localhost:1314/tags/ai-economics.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/ai-skepticism.html</loc>
+    <loc>//localhost:1314/tags/ai-skepticism.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/aider.html</loc>
+    <loc>//localhost:1314/tags/aider.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/amp-code.html</loc>
+    <loc>//localhost:1314/tags/amp-code.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/autonomous-coding.html</loc>
+    <loc>//localhost:1314/tags/autonomous-coding.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/autonomy.html</loc>
+    <loc>//localhost:1314/tags/autonomy.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/aws.html</loc>
+    <loc>//localhost:1314/tags/aws.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/beginner.html</loc>
+    <loc>//localhost:1314/tags/beginner.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/benchmarks.html</loc>
+    <loc>//localhost:1314/tags/benchmarks.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/brain-atrophy.html</loc>
+    <loc>//localhost:1314/tags/brain-atrophy.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/builders.html</loc>
+    <loc>//localhost:1314/tags/builders.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/career.html</loc>
+    <loc>//localhost:1314/tags/career.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/cascade.html</loc>
+    <loc>//localhost:1314/tags/cascade.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/case-study.html</loc>
+    <loc>//localhost:1314/tags/case-study.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/changed-minds.html</loc>
+    <loc>//localhost:1314/tags/changed-minds.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/claude-code.html</loc>
+    <loc>//localhost:1314/tags/claude-code.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/cli.html</loc>
+    <loc>//localhost:1314/tags/cli.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/cline.html</loc>
+    <loc>//localhost:1314/tags/cline.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/code-review.html</loc>
+    <loc>//localhost:1314/tags/code-review.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/codeium.html</loc>
+    <loc>//localhost:1314/tags/codeium.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/codex.html</loc>
+    <loc>//localhost:1314/tags/codex.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/cognitive-dependency.html</loc>
+    <loc>//localhost:1314/tags/cognitive-dependency.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/community.html</loc>
+    <loc>//localhost:1314/tags/community.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/community-discussion.html</loc>
+    <loc>//localhost:1314/tags/community-discussion.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/comparison.html</loc>
+    <loc>//localhost:1314/tags/comparison.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/context-engineering.html</loc>
+    <loc>//localhost:1314/tags/context-engineering.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/context-management.html</loc>
+    <loc>//localhost:1314/tags/context-management.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/context-window.html</loc>
+    <loc>//localhost:1314/tags/context-window.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/contributions.html</loc>
+    <loc>//localhost:1314/tags/contributions.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/converts.html</loc>
+    <loc>//localhost:1314/tags/converts.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/copilot.html</loc>
+    <loc>//localhost:1314/tags/copilot.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/core-loop.html</loc>
+    <loc>//localhost:1314/tags/core-loop.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/cost-optimization.html</loc>
+    <loc>//localhost:1314/tags/cost-optimization.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/costs.html</loc>
+    <loc>//localhost:1314/tags/costs.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/criticism.html</loc>
+    <loc>//localhost:1314/tags/criticism.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/cursor.html</loc>
+    <loc>//localhost:1314/tags/cursor.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/data.html</loc>
+    <loc>//localhost:1314/tags/data.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/debate.html</loc>
+    <loc>//localhost:1314/tags/debate.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/decision-making.html</loc>
+    <loc>//localhost:1314/tags/decision-making.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/deepseek.html</loc>
+    <loc>//localhost:1314/tags/deepseek.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/degradation.html</loc>
+    <loc>//localhost:1314/tags/degradation.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/delegation.html</loc>
+    <loc>//localhost:1314/tags/delegation.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/developer-experience.html</loc>
+    <loc>//localhost:1314/tags/developer-experience.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/developer-role.html</loc>
+    <loc>//localhost:1314/tags/developer-role.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/drift.html</loc>
+    <loc>//localhost:1314/tags/drift.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/economics.html</loc>
+    <loc>//localhost:1314/tags/economics.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/education.html</loc>
+    <loc>//localhost:1314/tags/education.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/engineering-identity.html</loc>
+    <loc>//localhost:1314/tags/engineering-identity.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/enterprise.html</loc>
+    <loc>//localhost:1314/tags/enterprise.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/expert-techniques.html</loc>
+    <loc>//localhost:1314/tags/expert-techniques.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/expertise.html</loc>
+    <loc>//localhost:1314/tags/expertise.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/failure-modes.html</loc>
+    <loc>//localhost:1314/tags/failure-modes.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/fundamentals.html</loc>
+    <loc>//localhost:1314/tags/fundamentals.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/gemini.html</loc>
+    <loc>//localhost:1314/tags/gemini.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/getting-started.html</loc>
+    <loc>//localhost:1314/tags/getting-started.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/git.html</loc>
+    <loc>//localhost:1314/tags/git.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/google.html</loc>
+    <loc>//localhost:1314/tags/google.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/harness-engineering.html</loc>
+    <loc>//localhost:1314/tags/harness-engineering.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/honest-assessment.html</loc>
+    <loc>//localhost:1314/tags/honest-assessment.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/human-in-the-loop.html</loc>
+    <loc>//localhost:1314/tags/human-in-the-loop.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/ide.html</loc>
+    <loc>//localhost:1314/tags/ide.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/ide-tools.html</loc>
+    <loc>//localhost:1314/tags/ide-tools.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/industry-trends.html</loc>
+    <loc>//localhost:1314/tags/industry-trends.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/infrastructure.html</loc>
+    <loc>//localhost:1314/tags/infrastructure.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/instructions.html</loc>
+    <loc>//localhost:1314/tags/instructions.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/interoperability.html</loc>
+    <loc>//localhost:1314/tags/interoperability.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/junior-developers.html</loc>
+    <loc>//localhost:1314/tags/junior-developers.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/karpathy.html</loc>
+    <loc>//localhost:1314/tags/karpathy.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/kiro.html</loc>
+    <loc>//localhost:1314/tags/kiro.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/learning.html</loc>
+    <loc>//localhost:1314/tags/learning.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/learning-curve.html</loc>
+    <loc>//localhost:1314/tags/learning-curve.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/limitations.html</loc>
+    <loc>//localhost:1314/tags/limitations.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/llama.html</loc>
+    <loc>//localhost:1314/tags/llama.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/management-analogy.html</loc>
+    <loc>//localhost:1314/tags/management-analogy.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/mcp.html</loc>
+    <loc>//localhost:1314/tags/mcp.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/memory.html</loc>
+    <loc>//localhost:1314/tags/memory.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/mistral.html</loc>
+    <loc>//localhost:1314/tags/mistral.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/model-agnostic.html</loc>
+    <loc>//localhost:1314/tags/model-agnostic.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/model-quality.html</loc>
+    <loc>//localhost:1314/tags/model-quality.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/model-releases.html</loc>
+    <loc>//localhost:1314/tags/model-releases.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/model-routing.html</loc>
+    <loc>//localhost:1314/tags/model-routing.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/model-selection.html</loc>
+    <loc>//localhost:1314/tags/model-selection.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/models.html</loc>
+    <loc>//localhost:1314/tags/models.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/multi-agent.html</loc>
+    <loc>//localhost:1314/tags/multi-agent.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/multi-model.html</loc>
+    <loc>//localhost:1314/tags/multi-model.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/open-questions.html</loc>
+    <loc>//localhost:1314/tags/open-questions.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/open-source.html</loc>
+    <loc>//localhost:1314/tags/open-source.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/openai.html</loc>
+    <loc>//localhost:1314/tags/openai.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/orchestration.html</loc>
+    <loc>//localhost:1314/tags/orchestration.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/parallel.html</loc>
+    <loc>//localhost:1314/tags/parallel.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/parallel-agents.html</loc>
+    <loc>//localhost:1314/tags/parallel-agents.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/power-users.html</loc>
+    <loc>//localhost:1314/tags/power-users.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/practitioner-insights.html</loc>
+    <loc>//localhost:1314/tags/practitioner-insights.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/pricing.html</loc>
+    <loc>//localhost:1314/tags/pricing.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/programming-languages.html</loc>
+    <loc>//localhost:1314/tags/programming-languages.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/prompts.html</loc>
+    <loc>//localhost:1314/tags/prompts.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/quality.html</loc>
+    <loc>//localhost:1314/tags/quality.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/reliability.html</loc>
+    <loc>//localhost:1314/tags/reliability.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/research.html</loc>
+    <loc>//localhost:1314/tags/research.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/setup.html</loc>
+    <loc>//localhost:1314/tags/setup.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/skeptics.html</loc>
+    <loc>//localhost:1314/tags/skeptics.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/skill-atrophy.html</loc>
+    <loc>//localhost:1314/tags/skill-atrophy.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/skill-development.html</loc>
+    <loc>//localhost:1314/tags/skill-development.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/skill-formation.html</loc>
+    <loc>//localhost:1314/tags/skill-formation.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/skills.html</loc>
+    <loc>//localhost:1314/tags/skills.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/spec-driven.html</loc>
+    <loc>//localhost:1314/tags/spec-driven.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/sustainability.html</loc>
+    <loc>//localhost:1314/tags/sustainability.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/swarms.html</loc>
+    <loc>//localhost:1314/tags/swarms.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/index.html</loc>
+    <loc>//localhost:1314/tags/index.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/task-scoping.html</loc>
+    <loc>//localhost:1314/tags/task-scoping.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/terminal.html</loc>
+    <loc>//localhost:1314/tags/terminal.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/test-design.html</loc>
+    <loc>//localhost:1314/tags/test-design.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/testing.html</loc>
+    <loc>//localhost:1314/tags/testing.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/tool-comparison.html</loc>
+    <loc>//localhost:1314/tags/tool-comparison.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/tooling.html</loc>
+    <loc>//localhost:1314/tags/tooling.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/toolmakers.html</loc>
+    <loc>//localhost:1314/tags/toolmakers.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/tools.html</loc>
+    <loc>//localhost:1314/tags/tools.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/verification.html</loc>
+    <loc>//localhost:1314/tags/verification.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/vibe-coding.html</loc>
+    <loc>//localhost:1314/tags/vibe-coding.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/vs-code.html</loc>
+    <loc>//localhost:1314/tags/vs-code.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/windsurf.html</loc>
+    <loc>//localhost:1314/tags/windsurf.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/workflow.html</loc>
+    <loc>//localhost:1314/tags/workflow.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/working-memory.html</loc>
+    <loc>//localhost:1314/tags/working-memory.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/agent-teams.html</loc>
+    <loc>//localhost:1314/tags/agent-teams.html</loc>
     <lastmod>2026-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/anthropic.html</loc>
+    <loc>//localhost:1314/tags/anthropic.html</loc>
     <lastmod>2026-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/claude.html</loc>
+    <loc>//localhost:1314/tags/claude.html</loc>
     <lastmod>2026-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/industry-analysis.html</loc>
+    <loc>//localhost:1314/tags/industry-analysis.html</loc>
     <lastmod>2026-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/long-context.html</loc>
+    <loc>//localhost:1314/tags/long-context.html</loc>
     <lastmod>2026-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/meta.html</loc>
+    <loc>//localhost:1314/tags/meta.html</loc>
     <lastmod>2026-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/model-release.html</loc>
+    <loc>//localhost:1314/tags/model-release.html</loc>
     <lastmod>2026-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/open-source-ai.html</loc>
+    <loc>//localhost:1314/tags/open-source-ai.html</loc>
     <lastmod>2026-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/opus.html</loc>
+    <loc>//localhost:1314/tags/opus.html</loc>
     <lastmod>2026-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/service-quality.html</loc>
+    <loc>//localhost:1314/tags/service-quality.html</loc>
     <lastmod>2026-02-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/agentic-vision.html</loc>
+    <loc>//localhost:1314/tags/agentic-vision.html</loc>
     <lastmod>2026-02-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/developer-tools.html</loc>
+    <loc>//localhost:1314/tags/developer-tools.html</loc>
     <lastmod>2026-02-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/multimodal.html</loc>
+    <loc>//localhost:1314/tags/multimodal.html</loc>
     <lastmod>2026-02-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/obsidian.html</loc>
+    <loc>//localhost:1314/tags/obsidian.html</loc>
     <lastmod>2026-02-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/spatial-computing.html</loc>
+    <loc>//localhost:1314/tags/spatial-computing.html</loc>
     <lastmod>2026-02-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/ai-impact.html</loc>
+    <loc>//localhost:1314/tags/ai-impact.html</loc>
     <lastmod>2026-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/agents.html</loc>
+    <loc>//localhost:1314/tags/agents.html</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/agi.html</loc>
+    <loc>//localhost:1314/tags/agi.html</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/ai-landscape.html</loc>
+    <loc>//localhost:1314/tags/ai-landscape.html</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/china-ai.html</loc>
+    <loc>//localhost:1314/tags/china-ai.html</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/coding-tools.html</loc>
+    <loc>//localhost:1314/tags/coding-tools.html</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/podcast.html</loc>
+    <loc>//localhost:1314/tags/podcast.html</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/scaling-laws.html</loc>
+    <loc>//localhost:1314/tags/scaling-laws.html</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/code-quality.html</loc>
+    <loc>//localhost:1314/tags/code-quality.html</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/productivity.html</loc>
+    <loc>//localhost:1314/tags/productivity.html</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/evals.html</loc>
+    <loc>//localhost:1314/tags/evals.html</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/evaluation.html</loc>
+    <loc>//localhost:1314/tags/evaluation.html</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/model-degradation.html</loc>
+    <loc>//localhost:1314/tags/model-degradation.html</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/next-js.html</loc>
+    <loc>//localhost:1314/tags/next-js.html</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/prompt-engineering.html</loc>
+    <loc>//localhost:1314/tags/prompt-engineering.html</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/swe-bench.html</loc>
+    <loc>//localhost:1314/tags/swe-bench.html</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/vercel.html</loc>
+    <loc>//localhost:1314/tags/vercel.html</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/tool-routing.html</loc>
+    <loc>//localhost:1314/tags/tool-routing.html</loc>
     <lastmod>2026-01-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/sdlc.html</loc>
+    <loc>//localhost:1314/tags/sdlc.html</loc>
     <lastmod>2026-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/workflow-template.html</loc>
+    <loc>//localhost:1314/tags/workflow-template.html</loc>
     <lastmod>2026-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/agentic-patterns.html</loc>
+    <loc>//localhost:1314/tags/agentic-patterns.html</loc>
     <lastmod>2026-01-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/production-engineering.html</loc>
+    <loc>//localhost:1314/tags/production-engineering.html</loc>
     <lastmod>2026-01-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/security.html</loc>
+    <loc>//localhost:1314/tags/security.html</loc>
     <lastmod>2026-01-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/ai-bubble.html</loc>
+    <loc>//localhost:1314/tags/ai-bubble.html</loc>
     <lastmod>2026-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/data-centers.html</loc>
+    <loc>//localhost:1314/tags/data-centers.html</loc>
     <lastmod>2026-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/devops.html</loc>
+    <loc>//localhost:1314/tags/devops.html</loc>
     <lastmod>2026-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/infrastructure-as-code.html</loc>
+    <loc>//localhost:1314/tags/infrastructure-as-code.html</loc>
     <lastmod>2026-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/skepticism.html</loc>
+    <loc>//localhost:1314/tags/skepticism.html</loc>
     <lastmod>2026-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/terraform.html</loc>
+    <loc>//localhost:1314/tags/terraform.html</loc>
     <lastmod>2026-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/ai-strategy.html</loc>
+    <loc>//localhost:1314/tags/ai-strategy.html</loc>
     <lastmod>2026-01-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/apple.html</loc>
+    <loc>//localhost:1314/tags/apple.html</loc>
     <lastmod>2026-01-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/industry-partnerships.html</loc>
+    <loc>//localhost:1314/tags/industry-partnerships.html</loc>
     <lastmod>2026-01-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/siri.html</loc>
+    <loc>//localhost:1314/tags/siri.html</loc>
     <lastmod>2026-01-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/ai-coding-tools.html</loc>
+    <loc>//localhost:1314/tags/ai-coding-tools.html</loc>
     <lastmod>2026-01-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/coding-agents.html</loc>
+    <loc>//localhost:1314/tags/coding-agents.html</loc>
     <lastmod>2026-01-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/demystification.html</loc>
+    <loc>//localhost:1314/tags/demystification.html</loc>
     <lastmod>2026-01-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/tool-calling.html</loc>
+    <loc>//localhost:1314/tags/tool-calling.html</loc>
     <lastmod>2026-01-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/agentic-frameworks.html</loc>
+    <loc>//localhost:1314/tags/agentic-frameworks.html</loc>
     <lastmod>2026-01-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/ai-capabilities.html</loc>
+    <loc>//localhost:1314/tags/ai-capabilities.html</loc>
     <lastmod>2026-01-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/memory-systems.html</loc>
+    <loc>//localhost:1314/tags/memory-systems.html</loc>
     <lastmod>2026-01-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/ai-coding-workflow.html</loc>
+    <loc>//localhost:1314/tags/ai-coding-workflow.html</loc>
     <lastmod>2026-01-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/tool-selection.html</loc>
+    <loc>//localhost:1314/tags/tool-selection.html</loc>
     <lastmod>2026-01-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/model-architecture.html</loc>
+    <loc>//localhost:1314/tags/model-architecture.html</loc>
     <lastmod>2026-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/research-papers.html</loc>
+    <loc>//localhost:1314/tags/research-papers.html</loc>
     <lastmod>2026-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/training-efficiency.html</loc>
+    <loc>//localhost:1314/tags/training-efficiency.html</loc>
     <lastmod>2026-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/business-models.html</loc>
+    <loc>//localhost:1314/tags/business-models.html</loc>
     <lastmod>2025-12-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/venture-capital.html</loc>
+    <loc>//localhost:1314/tags/venture-capital.html</loc>
     <lastmod>2025-12-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/code-intelligence.html</loc>
+    <loc>//localhost:1314/tags/code-intelligence.html</loc>
     <lastmod>2025-12-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/lsp.html</loc>
+    <loc>//localhost:1314/tags/lsp.html</loc>
     <lastmod>2025-12-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/plugins.html</loc>
+    <loc>//localhost:1314/tags/plugins.html</loc>
     <lastmod>2025-12-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/meta-cognition.html</loc>
+    <loc>//localhost:1314/tags/meta-cognition.html</loc>
     <lastmod>2025-12-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/developer-workflows.html</loc>
+    <loc>//localhost:1314/tags/developer-workflows.html</loc>
     <lastmod>2025-12-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/future-of-coding.html</loc>
+    <loc>//localhost:1314/tags/future-of-coding.html</loc>
     <lastmod>2025-12-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/open-source-models.html</loc>
+    <loc>//localhost:1314/tags/open-source-models.html</loc>
     <lastmod>2025-12-02T00:00:00+00:00</lastmod>
   </url>
 </urlset>

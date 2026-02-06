@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Parallel on AI Best Practices Knowledge Base</title>
-    <link>/tags/parallel.html</link>
+    <link>//localhost:1314/tags/parallel.html</link>
     <description>Recent content in Parallel on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/parallel/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/parallel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Multi-Agent Patterns</title>
-      <link>/practices/multi-agent.html</link>
+      <link>//localhost:1314/practices/multi-agent.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/practices/multi-agent.html</guid>
+      <guid>//localhost:1314/practices/multi-agent.html</guid>
       <description>&lt;p&gt;Multi-agent patterns involve running multiple AI agents simultaneously on related tasks. They represent the highest-throughput mode of AI-assisted development &amp;ndash; and the most complex. When they work, months of work happen in minutes. When they fail, you get merge conflicts, duplicated effort, and code that no single agent (or human) fully understands.&lt;/p&gt;&#xA;&lt;p&gt;The practice is still emerging. There is no consensus on when multi-agent is worth the overhead versus well-scoped single-agent work. But practitioners are converging on principles that separate productive multi-agent usage from expensive chaos.&lt;/p&gt;</description>
     </item>
   </channel>

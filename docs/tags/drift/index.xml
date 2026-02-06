@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Drift on AI Best Practices Knowledge Base</title>
-    <link>/tags/drift.html</link>
+    <link>//localhost:1314/tags/drift.html</link>
     <description>Recent content in Drift on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/drift/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/drift/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>When It Fails</title>
-      <link>/guide/when-it-fails.html</link>
+      <link>//localhost:1314/guide/when-it-fails.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/guide/when-it-fails.html</guid>
+      <guid>//localhost:1314/guide/when-it-fails.html</guid>
       <description>&lt;p&gt;AI coding tools fail in characteristic ways. Not randomly &amp;ndash; in patterns that are recognizable, largely predictable, and often preventable if you know what to watch for. This page catalogs the major failure modes from practitioner experience. Some are technical limitations of current models. Some are emergent behaviors of how agents interact with codebases. Some are human failures amplified by the tools.&lt;/p&gt;&#xA;&lt;p&gt;Understanding these failure modes is not pessimism. It is the practical knowledge that separates effective users from people who either over-trust or under-trust the tools. Every failure mode here has a corresponding mitigation, and most become manageable once you recognize them.&lt;/p&gt;</description>
     </item>
   </channel>

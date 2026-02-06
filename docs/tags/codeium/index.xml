@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Codeium on AI Best Practices Knowledge Base</title>
-    <link>/tags/codeium.html</link>
+    <link>//localhost:1314/tags/codeium.html</link>
     <description>Recent content in Codeium on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/codeium/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/codeium/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Windsurf</title>
-      <link>/tools/windsurf.html</link>
+      <link>//localhost:1314/tools/windsurf.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tools/windsurf.html</guid>
+      <guid>//localhost:1314/tools/windsurf.html</guid>
       <description>&lt;p&gt;Windsurf is a full AI-native IDE built by Codeium. Unlike extensions that bolt AI onto existing editors, Windsurf was designed from the ground up around AI-first workflows. Its Cascade agent plans multi-step edits, calls tools, and maintains deep repository context. The tool positions itself as the primary alternative to Cursor, competing on context handling, pricing, and enterprise security features.&lt;/p&gt;&#xA;&lt;p&gt;The core technical differentiator is context. Windsurf uses a RAG-based context engine that maintains an effective working context of approximately 200,000 tokens &amp;ndash; substantially larger than the practical context most other IDE-based agents achieve. This makes a meaningful difference on large codebases where the agent needs awareness of distant architectural decisions, shared types, and cross-module dependencies.&lt;/p&gt;</description>
     </item>
   </channel>

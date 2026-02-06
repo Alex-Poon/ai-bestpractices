@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Contributions on AI Best Practices Knowledge Base</title>
-    <link>/tags/contributions.html</link>
+    <link>//localhost:1314/tags/contributions.html</link>
     <description>Recent content in Contributions on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/contributions/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/contributions/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Is AI Coding Killing Open Source?</title>
-      <link>/debates/open-source-impact.html</link>
+      <link>//localhost:1314/debates/open-source-impact.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/debates/open-source-impact.html</guid>
+      <guid>//localhost:1314/debates/open-source-impact.html</guid>
       <description>&lt;h2 id=&#34;the-question&#34;&gt;The Question&lt;/h2&gt;&#xA;&lt;p&gt;Open source software has been the bedrock of modern computing for decades. Linux runs the cloud, Apache and Nginx serve the web, React and Vue power the frontend, and tens of thousands of libraries form the invisible infrastructure of every application we use. The people who built and maintained this commons did so for a complex mix of reasons: personal satisfaction, reputation building, community belonging, and the belief that shared code makes everyone better off.&lt;/p&gt;</description>
     </item>
   </channel>

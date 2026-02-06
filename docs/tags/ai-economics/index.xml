@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ai-Economics on AI Best Practices Knowledge Base</title>
-    <link>/tags/ai-economics.html</link>
+    <link>//localhost:1314/tags/ai-economics.html</link>
     <description>Recent content in Ai-Economics on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/ai-economics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/ai-economics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Costs and Tradeoffs</title>
-      <link>/landscape/costs-and-tradeoffs.html</link>
+      <link>//localhost:1314/landscape/costs-and-tradeoffs.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/landscape/costs-and-tradeoffs.html</guid>
+      <guid>//localhost:1314/landscape/costs-and-tradeoffs.html</guid>
       <description>&lt;p&gt;AI coding tools promise productivity gains, but they come with real costs &amp;mdash; financial, operational, and strategic. This page collects what practitioners have reported spending, the reliability challenges they face, and the economic questions that remain unresolved.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-638-study-what-heavy-usage-actually-costs&#34;&gt;The $638 Study: What Heavy Usage Actually Costs&lt;/h2&gt;&#xA;&lt;p&gt;One of the most detailed cost reports comes from a founder and CTO who tracked AI coding expenses over six weeks. The total: $638 in on-demand charges using Cursor with Claude models, with October 2025 alone hitting $348 and reaching Cursor&amp;rsquo;s $400 monthly limit.&lt;/p&gt;</description>
     </item>
   </channel>

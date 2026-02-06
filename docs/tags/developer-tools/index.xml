@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Developer-Tools on AI Best Practices Knowledge Base</title>
-    <link>/tags/developer-tools.html</link>
+    <link>//localhost:1314/tags/developer-tools.html</link>
     <description>Recent content in Developer-Tools on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 03 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/developer-tools/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/developer-tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Claude Code gets native LSP support</title>
-      <link>/sources/2025-12-22-claude-code-lsp-support.html</link>
+      <link>//localhost:1314/sources/2025-12-22-claude-code-lsp-support.html</link>
       <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>/sources/2025-12-22-claude-code-lsp-support.html</guid>
+      <guid>//localhost:1314/sources/2025-12-22-claude-code-lsp-support.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Anthropic added native Language Server Protocol (LSP) support to Claude Code, enabling the CLI-based agent to integrate with language servers for improved code understanding, navigation, and analysis. The feature was announced through Claude Code&amp;rsquo;s changelog and surfaced via a plugin system where users can discover and install LSP integrations.&lt;/p&gt;&#xA;&lt;p&gt;LSP support represents a significant step in making CLI-based AI coding agents competitive with IDE-based tools like Cursor. Language servers provide structured information about code: type definitions, references, diagnostics, and refactoring capabilities. By connecting Claude Code to these servers, the agent gains access to the same code intelligence that powers IDE features, without requiring a full IDE environment.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Obsidian meets Claude Code: A Markdown graph for agents and context</title>
-      <link>/sources/2026-02-03-obsidian-claude-code.html</link>
+      <link>//localhost:1314/sources/2026-02-03-obsidian-claude-code.html</link>
       <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-02-03-obsidian-claude-code.html</guid>
+      <guid>//localhost:1314/sources/2026-02-03-obsidian-claude-code.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Voicetree is an Electron-based desktop application that reimagines the development environment as a spatial graph where markdown notes and AI agent sessions coexist as interconnected nodes. The project merges Obsidian&amp;rsquo;s graph-view visualization paradigm with Claude Code&amp;rsquo;s agentic capabilities, addressing the growing challenge of managing multiple AI agent sessions and their outputs.&lt;/p&gt;&#xA;&lt;p&gt;The core innovation is a shared memory graph between the user and their agents. Rather than agents operating in isolated conversation histories, each agent node receives task content plus contextual information from nearby nodes in the graph. This spatial proximity model provides more targeted context retrieval than dumping entire conversation histories, which the creator claims avoids a documented performance degradation from context overload.&lt;/p&gt;</description>
     </item>
   </channel>

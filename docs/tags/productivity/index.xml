@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Productivity on AI Best Practices Knowledge Base</title>
-    <link>/tags/productivity.html</link>
+    <link>//localhost:1314/tags/productivity.html</link>
     <description>Recent content in Productivity on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 30 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A few random notes from Claude coding quite a bit last week</title>
-      <link>/sources/2026-01-26-karpathy-claude-coding-notes.html</link>
+      <link>//localhost:1314/sources/2026-01-26-karpathy-claude-coding-notes.html</link>
       <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-01-26-karpathy-claude-coding-notes.html</guid>
+      <guid>//localhost:1314/sources/2026-01-26-karpathy-claude-coding-notes.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Andrej Karpathy shared a widely discussed thread of observations from extensive Claude Code usage. His notes touched on several key themes that resonated deeply with the developer community, generating nearly 100 HN comments and over 900 upvotes.&lt;/p&gt;&#xA;&lt;p&gt;One of Karpathy&amp;rsquo;s central observations was around the tension between AI-assisted productivity and personal skill development. He noted that he was already experiencing atrophy in his ability to write code manually, finding it harder to recall syntax and implementation details. However, he argued this might be acceptable since code review skills remain intact even as writing fluency declines, drawing a parallel to how reading comprehension persists even when spelling ability degrades.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How AI assistance impacts the formation of coding skills</title>
-      <link>/sources/2026-01-30-ai-assistance-coding-skills.html</link>
+      <link>//localhost:1314/sources/2026-01-30-ai-assistance-coding-skills.html</link>
       <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-01-30-ai-assistance-coding-skills.html</guid>
+      <guid>//localhost:1314/sources/2026-01-30-ai-assistance-coding-skills.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Anthropic published a randomized controlled study examining how AI assistance affects skill acquisition among junior software engineers. The research involved 52 participants divided into AI-assisted and control groups, tasked with learning and using Trio (a Python asynchronous programming library). After completing coding tasks, participants took a comprehension quiz covering debugging, code reading, code writing, and conceptual understanding.&lt;/p&gt;&#xA;&lt;p&gt;The results revealed a significant trade-off between speed and learning. The AI-assisted group scored 17% lower on the comprehension quiz, a gap the researchers characterized as equivalent to nearly two letter grades, with a large effect size (Cohen&amp;rsquo;s d of 0.738, p=0.01). The largest performance gap appeared on debugging questions, suggesting that AI assistance particularly impairs the development of error identification skills. Meanwhile, AI users finished tasks roughly two minutes faster on average, though this speed advantage was not statistically significant.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Autonomous-Coding on AI Best Practices Knowledge Base</title>
-    <link>/tags/autonomous-coding.html</link>
+    <link>//localhost:1314/tags/autonomous-coding.html</link>
     <description>Recent content in Autonomous-Coding on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/autonomous-coding/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/autonomous-coding/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Case Study: Building a C Compiler with AI Agents</title>
-      <link>/evidence/carlini-compiler.html</link>
+      <link>//localhost:1314/evidence/carlini-compiler.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/evidence/carlini-compiler.html</guid>
+      <guid>//localhost:1314/evidence/carlini-compiler.html</guid>
       <description>&lt;p&gt;Nicholas Carlini set out to answer a simple question: can you build real, production-grade software using nothing but parallel AI agents? The result was a 100,000-line Rust-based C compiler, produced by 16 parallel Claude instances over two weeks, that passed 99% of the GCC torture test suite and compiled the Linux 6.9 kernel across x86, ARM, and RISC-V architectures.&lt;/p&gt;&#xA;&lt;p&gt;The compiler itself is impressive. But the lasting value of this experiment lies in what it revealed about how autonomous agents succeed and fail at scale &amp;ndash; and why the infrastructure surrounding the agents matters more than the agents themselves.&lt;/p&gt;</description>
     </item>
   </channel>

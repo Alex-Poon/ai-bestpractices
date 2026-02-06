@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Workflow on AI Best Practices Knowledge Base</title>
-    <link>/tags/workflow.html</link>
+    <link>//localhost:1314/tags/workflow.html</link>
     <description>Recent content in Workflow on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/workflow/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/workflow/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Task Scoping</title>
-      <link>/practices/task-scoping.html</link>
+      <link>//localhost:1314/practices/task-scoping.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/practices/task-scoping.html</guid>
+      <guid>//localhost:1314/practices/task-scoping.html</guid>
       <description>&lt;p&gt;Task scoping is the dominant skill in AI-assisted development. It determines whether your interaction with an agent produces usable output in minutes or wasted effort measured in hours. Every practitioner who has moved past the honeymoon phase identifies decomposition &amp;ndash; not prompting, not model selection &amp;ndash; as the discipline that matters most.&lt;/p&gt;&#xA;&lt;p&gt;The core insight is deceptively simple: AI agents execute well-bounded tasks reliably and open-ended tasks poorly. Your job is to turn open-ended work into a series of bounded tasks. This is fundamentally the same skill as delegating to a junior developer, with one critical difference: the agent never learns from the previous session.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Core Loop</title>
-      <link>/guide/core-loop.html</link>
+      <link>//localhost:1314/guide/core-loop.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/guide/core-loop.html</guid>
+      <guid>//localhost:1314/guide/core-loop.html</guid>
       <description>&lt;p&gt;Every effective AI coding workflow, regardless of which tool or model you use, converges on the same four-phase loop: &lt;strong&gt;Plan, Execute, Verify, Harness.&lt;/strong&gt; The tools change. The models improve. But the loop persists, because it addresses the fundamental constraints of working with systems that are brilliant and forgetful in equal measure.&lt;/p&gt;&#xA;&lt;p&gt;This page describes each phase, why it matters, and what goes wrong when you skip it. If you read nothing else on this site, read this.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Vibe Coding Question</title>
-      <link>/debates/vibe-coding.html</link>
+      <link>//localhost:1314/debates/vibe-coding.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/debates/vibe-coding.html</guid>
+      <guid>//localhost:1314/debates/vibe-coding.html</guid>
       <description>&lt;h2 id=&#34;the-question&#34;&gt;The Question&lt;/h2&gt;&#xA;&lt;p&gt;Andrej Karpathy coined the term &amp;ldquo;vibe coding&amp;rdquo; to describe a mode of AI-assisted development where you fully cede implementation to the model, accepting code you don&amp;rsquo;t fully understand as long as it works. The term quickly became a lightning rod &amp;ndash; embraced by some as the future of software development, rejected by others as professional malpractice.&lt;/p&gt;&#xA;&lt;p&gt;But the community has moved beyond a simple for-or-against debate. Practitioners now describe a spectrum from full delegation to tight step-by-step control, with most experienced developers settling somewhere in between. The real question isn&amp;rsquo;t whether vibe coding is good or bad &amp;ndash; it&amp;rsquo;s where on this spectrum responsible development should land, and whether the answer changes depending on context.&lt;/p&gt;</description>
     </item>
     <item>
       <title>LLM coding workflow going into 2026</title>
-      <link>/sources/2026-01-10-llm-coding-workflow-2026.html</link>
+      <link>//localhost:1314/sources/2026-01-10-llm-coding-workflow-2026.html</link>
       <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-01-10-llm-coding-workflow-2026.html</guid>
+      <guid>//localhost:1314/sources/2026-01-10-llm-coding-workflow-2026.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Addy Osmani, a well-known Google engineering leader, shared his comprehensive approach to integrating LLMs into daily coding workflows. The article frames LLMs not as autonomous coders but as powerful pair programmers requiring clear direction, context, and consistent oversight.&lt;/p&gt;&#xA;&lt;p&gt;The workflow begins with collaborative planning, where the developer works with an AI to develop detailed specifications and project plans before writing code. Osmani describes this as achieving a traditional waterfall planning cycle compressed into roughly 15 minutes. Implementation then proceeds in small, iterative chunks sized to fit within context windows and remain comprehensible for human review.&lt;/p&gt;</description>
     </item>
   </channel>

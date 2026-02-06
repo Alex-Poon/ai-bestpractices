@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Evidence &amp; Case Studies on AI Best Practices Knowledge Base</title>
-    <link>/evidence/index.html</link>
+    <link>//localhost:1314/evidence/index.html</link>
     <description>Recent content in Evidence &amp; Case Studies on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/evidence/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/evidence/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Case Study: Building a C Compiler with AI Agents</title>
-      <link>/evidence/carlini-compiler.html</link>
+      <link>//localhost:1314/evidence/carlini-compiler.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/evidence/carlini-compiler.html</guid>
+      <guid>//localhost:1314/evidence/carlini-compiler.html</guid>
       <description>&lt;p&gt;Nicholas Carlini set out to answer a simple question: can you build real, production-grade software using nothing but parallel AI agents? The result was a 100,000-line Rust-based C compiler, produced by 16 parallel Claude instances over two weeks, that passed 99% of the GCC torture test suite and compiled the Linux 6.9 kernel across x86, ARM, and RISC-V architectures.&lt;/p&gt;&#xA;&lt;p&gt;The compiler itself is impressive. But the lasting value of this experiment lies in what it revealed about how autonomous agents succeed and fail at scale &amp;ndash; and why the infrastructure surrounding the agents matters more than the agents themselves.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Case Study: Hashimoto&#39;s AI Adoption Journey</title>
-      <link>/evidence/hashimoto-journey.html</link>
+      <link>//localhost:1314/evidence/hashimoto-journey.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/evidence/hashimoto-journey.html</guid>
+      <guid>//localhost:1314/evidence/hashimoto-journey.html</guid>
       <description>&lt;p&gt;Mitchell Hashimoto &amp;ndash; co-founder of HashiCorp, creator of Vagrant, Terraform, and Consul &amp;ndash; published a detailed account of his personal journey adopting AI coding tools. The article resonated far beyond the usual AI discourse because Hashimoto is not a hype-prone commentator. He is a practitioner with decades of experience shipping infrastructure software used by millions of developers. When he says something works, the community pays attention.&lt;/p&gt;&#xA;&lt;p&gt;His account became a focal point for one of the most grounded Hacker News discussions on AI-assisted development, drawing dozens of experienced practitioners into a conversation about what actually works, what fails, and what remains genuinely uncertain.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Practitioner Voices</title>
-      <link>/evidence/practitioner-voices.html</link>
+      <link>//localhost:1314/evidence/practitioner-voices.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/evidence/practitioner-voices.html</guid>
+      <guid>//localhost:1314/evidence/practitioner-voices.html</guid>
       <description>&lt;p&gt;The best evidence for how AI coding tools actually perform comes not from marketing materials or press releases but from practitioners reporting concrete experiences. The following quotes and observations are drawn from Hacker News discussions that collectively represent thousands of upvotes and hundreds of comments from working developers.&lt;/p&gt;&#xA;&lt;p&gt;Each entry is attributed to its original author and linked to the source discussion. Longer sentiments have been paraphrased to capture the core insight.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Real Cost of AI Coding Tools</title>
-      <link>/evidence/cost-data.html</link>
+      <link>//localhost:1314/evidence/cost-data.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/evidence/cost-data.html</guid>
+      <guid>//localhost:1314/evidence/cost-data.html</guid>
       <description>&lt;p&gt;AI coding tools are not free. Despite the productivity narratives, few adoption stories include a line item for what the tools actually cost. This page aggregates the cost data that practitioners have shared &amp;ndash; from individual developer spending to enterprise claims to the macro-economic forces reshaping AI pricing &amp;ndash; to give a grounded picture of the economics of AI-assisted development in early 2026.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-individual-developers-actually-spend&#34;&gt;What individual developers actually spend&lt;/h2&gt;&#xA;&lt;p&gt;The most detailed public cost breakdown comes from a founder and CTO building an AI-first CRM, who tracked every dollar across six weeks of heavy Cursor usage in late 2025. The total: $638 in on-demand charges, with October alone hitting $348.56. A follow-up analysis extended the picture to $928.45 over 70 days &amp;ndash; roughly $400 per month.&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI&#39;s Impact on Coding Skills: What the Research Shows</title>
-      <link>/evidence/coding-skills-impact.html</link>
+      <link>//localhost:1314/evidence/coding-skills-impact.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/evidence/coding-skills-impact.html</guid>
+      <guid>//localhost:1314/evidence/coding-skills-impact.html</guid>
       <description>&lt;p&gt;In early 2026, Anthropic published a study examining how AI coding assistance affects developer skill development. The study became one of the most intensely debated pieces of AI research in the developer community, generating over 346 comments on Hacker News. The reaction was notable not for the usual pro/anti-AI polarization but for the depth of personal reflection it provoked &amp;ndash; developers grappling honestly with what they had already noticed happening to their own abilities.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Karpathy&#39;s AI Coding Notes: A Deep Reading</title>
-      <link>/evidence/karpathy-notes.html</link>
+      <link>//localhost:1314/evidence/karpathy-notes.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/evidence/karpathy-notes.html</guid>
+      <guid>//localhost:1314/evidence/karpathy-notes.html</guid>
       <description>&lt;p&gt;In late January 2026, Andrej Karpathy &amp;ndash; former director of AI at Tesla, founding member of OpenAI, and one of the most respected voices in machine learning &amp;ndash; shared a thread of observations from a week of intensive Claude Code usage. The post received 911 upvotes on Hacker News and generated over 800 comments, making it one of the most substantive community discussions on AI-assisted development in the corpus.&lt;/p&gt;&#xA;&lt;p&gt;What made this discussion exceptional was not Karpathy&amp;rsquo;s observations alone, but the quality of the community response. His notes served as a catalyst for practitioners across the experience spectrum to articulate positions they had been forming through months of daily AI tool usage. The result is a uniquely rich snapshot of how the developer community was processing the AI-assisted coding transition in early 2026.&lt;/p&gt;</description>
     </item>
   </channel>

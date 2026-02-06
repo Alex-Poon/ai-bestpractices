@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Landscape on AI Best Practices Knowledge Base</title>
-    <link>/landscape/index.html</link>
+    <link>//localhost:1314/landscape/index.html</link>
     <description>Recent content in Landscape on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/landscape/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/landscape/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Model Releases in 2026</title>
-      <link>/landscape/model-releases-2026.html</link>
+      <link>//localhost:1314/landscape/model-releases-2026.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/landscape/model-releases-2026.html</guid>
+      <guid>//localhost:1314/landscape/model-releases-2026.html</guid>
       <description>&lt;p&gt;The first weeks of 2026 have seen an extraordinary density of model releases. The pace itself is informative: frontier model competition has intensified to the point where simultaneous launches are the norm rather than the exception. Here is what has shipped and what it means for practitioners.&lt;/p&gt;&#xA;&lt;h2 id=&#34;claude-opus-46-february-2026&#34;&gt;Claude Opus 4.6 (February 2026)&lt;/h2&gt;&#xA;&lt;p&gt;Anthropic&amp;rsquo;s latest flagship arrived with a 1M-token context window in beta &amp;mdash; the first at the Opus tier. Benchmark results placed it at the top of Terminal-Bench 2.0 for agentic coding and Humanity&amp;rsquo;s Last Exam for complex reasoning.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Adoption Curve</title>
-      <link>/landscape/adoption-curve.html</link>
+      <link>//localhost:1314/landscape/adoption-curve.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/landscape/adoption-curve.html</guid>
+      <guid>//localhost:1314/landscape/adoption-curve.html</guid>
       <description>&lt;p&gt;AI-assisted development in early 2026 is past the novelty phase but far from universal. The community is split, the data is mixed, and where a given developer lands depends as much on their workflow and identity as on the technology itself.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-six-stages-framework&#34;&gt;The Six Stages Framework&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;a href=&#34;../guide/adoption-curve.html&#34;&gt;AI Adoption Curve&lt;/a&gt; framework, synthesized from Mitchell Hashimoto&amp;rsquo;s influential account and extensive practitioner discussion, describes a progression from chatbot usage through always-running agents. It remains the best map of the adoption journey because each stage builds on the calibration and infrastructure of the previous one.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Costs and Tradeoffs</title>
-      <link>/landscape/costs-and-tradeoffs.html</link>
+      <link>//localhost:1314/landscape/costs-and-tradeoffs.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/landscape/costs-and-tradeoffs.html</guid>
+      <guid>//localhost:1314/landscape/costs-and-tradeoffs.html</guid>
       <description>&lt;p&gt;AI coding tools promise productivity gains, but they come with real costs &amp;mdash; financial, operational, and strategic. This page collects what practitioners have reported spending, the reliability challenges they face, and the economic questions that remain unresolved.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-638-study-what-heavy-usage-actually-costs&#34;&gt;The $638 Study: What Heavy Usage Actually Costs&lt;/h2&gt;&#xA;&lt;p&gt;One of the most detailed cost reports comes from a founder and CTO who tracked AI coding expenses over six weeks. The total: $638 in on-demand charges using Cursor with Claude models, with October 2025 alone hitting $348 and reaching Cursor&amp;rsquo;s $400 monthly limit.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Open Questions</title>
-      <link>/landscape/open-questions.html</link>
+      <link>//localhost:1314/landscape/open-questions.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/landscape/open-questions.html</guid>
+      <guid>//localhost:1314/landscape/open-questions.html</guid>
       <description>&lt;p&gt;Not everything about AI-assisted development is settled. Several major questions remain genuinely open, with credible evidence and strong opinions on multiple sides. This page captures the debates as they stand in early 2026.&lt;/p&gt;&#xA;&lt;h2 id=&#34;is-ai-making-coding-skills-atrophy&#34;&gt;Is AI Making Coding Skills Atrophy?&lt;/h2&gt;&#xA;&lt;p&gt;Anthropic&amp;rsquo;s own randomized controlled study provides the most rigorous data point. Junior developers using AI assistance scored 17% lower on comprehension quizzes &amp;mdash; a gap the researchers characterized as equivalent to nearly two letter grades, with the largest deficit appearing in debugging skills. The speed gains (roughly two minutes faster) were not statistically significant.&lt;/p&gt;</description>
     </item>
   </channel>

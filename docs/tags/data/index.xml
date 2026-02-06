@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Data on AI Best Practices Knowledge Base</title>
-    <link>/tags/data.html</link>
+    <link>//localhost:1314/tags/data.html</link>
     <description>Recent content in Data on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/data/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Real Cost of AI Coding Tools</title>
-      <link>/evidence/cost-data.html</link>
+      <link>//localhost:1314/evidence/cost-data.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/evidence/cost-data.html</guid>
+      <guid>//localhost:1314/evidence/cost-data.html</guid>
       <description>&lt;p&gt;AI coding tools are not free. Despite the productivity narratives, few adoption stories include a line item for what the tools actually cost. This page aggregates the cost data that practitioners have shared &amp;ndash; from individual developer spending to enterprise claims to the macro-economic forces reshaping AI pricing &amp;ndash; to give a grounded picture of the economics of AI-assisted development in early 2026.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-individual-developers-actually-spend&#34;&gt;What individual developers actually spend&lt;/h2&gt;&#xA;&lt;p&gt;The most detailed public cost breakdown comes from a founder and CTO building an AI-first CRM, who tracked every dollar across six weeks of heavy Cursor usage in late 2025. The total: $638 in on-demand charges, with October alone hitting $348.56. A follow-up analysis extended the picture to $928.45 over 70 days &amp;ndash; roughly $400 per month.&lt;/p&gt;</description>
     </item>
   </channel>

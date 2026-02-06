@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Service-Quality on AI Best Practices Knowledge Base</title>
-    <link>/tags/service-quality.html</link>
+    <link>//localhost:1314/tags/service-quality.html</link>
     <description>Recent content in Service-Quality on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 04 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/service-quality/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/service-quality/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tell HN: Claude Has Had 57 Incidents in the Past 3 Months</title>
-      <link>/sources/2026-02-04-claude-57-incidents-3-months.html</link>
+      <link>//localhost:1314/sources/2026-02-04-claude-57-incidents-3-months.html</link>
       <pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-02-04-claude-57-incidents-3-months.html</guid>
+      <guid>//localhost:1314/sources/2026-02-04-claude-57-incidents-3-months.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This HN text post by shikkra documents reliability concerns with Anthropic&amp;rsquo;s Claude service, providing a detailed incident count from the official status page (status.claude.com). The author, a $100/month Max plan subscriber, was prompted to investigate after encountering a retry issue where Claude attempted to generate a response 10 times with Opus 4.5 and extended thinking enabled before silently switching to a different model without indication or confirmation.&lt;/p&gt;&#xA;&lt;p&gt;The incident data paints a concerning picture of service reliability. February 2026 had 10 incidents in just 4 days. January 2026 had 26 incidents. December 2025 had 21 incidents. At least 16 of these directly affected Claude Opus 4.5: 3 incidents in December (21-23), 9 in January (across 7-28), and 4 in February (1-4). Ten additional incidents affected the claude.ai platform itself.&lt;/p&gt;</description>
     </item>
   </channel>

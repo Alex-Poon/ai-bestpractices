@@ -2,94 +2,94 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Claude-Code on AI Best Practices Knowledge Base</title>
-    <link>/tags/claude-code.html</link>
+    <link>//localhost:1314/tags/claude-code.html</link>
     <description>Recent content in Claude-Code on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/claude-code/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/claude-code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Claude Code Deep Dive</title>
-      <link>/tools/claude-code.html</link>
+      <link>//localhost:1314/tools/claude-code.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tools/claude-code.html</guid>
+      <guid>//localhost:1314/tools/claude-code.html</guid>
       <description>&lt;p&gt;Claude Code is Anthropic&amp;rsquo;s CLI-first coding agent. It runs in the terminal, takes natural language task descriptions, and executes autonomously &amp;ndash; reading files, running commands, editing code, and iterating on failures. It is single-model (Anthropic&amp;rsquo;s Claude family), available through Claude Max subscriptions at $100-200/month, and focused entirely on agentic workflows with no autocomplete mode.&lt;/p&gt;&#xA;&lt;p&gt;What sets Claude Code apart from other agents is its extensibility. It supports CLAUDE.md project files, custom sub-agents, hooks for CI/CD integration, and MCP servers for structured tool access. This page covers the major features and developments that matter to practitioners.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Model Releases in 2026</title>
-      <link>/landscape/model-releases-2026.html</link>
+      <link>//localhost:1314/landscape/model-releases-2026.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/landscape/model-releases-2026.html</guid>
+      <guid>//localhost:1314/landscape/model-releases-2026.html</guid>
       <description>&lt;p&gt;The first weeks of 2026 have seen an extraordinary density of model releases. The pace itself is informative: frontier model competition has intensified to the point where simultaneous launches are the norm rather than the exception. Here is what has shipped and what it means for practitioners.&lt;/p&gt;&#xA;&lt;h2 id=&#34;claude-opus-46-february-2026&#34;&gt;Claude Opus 4.6 (February 2026)&lt;/h2&gt;&#xA;&lt;p&gt;Anthropic&amp;rsquo;s latest flagship arrived with a 1M-token context window in beta &amp;mdash; the first at the Opus tier. Benchmark results placed it at the top of Terminal-Bench 2.0 for agentic coding and Humanity&amp;rsquo;s Last Exam for complex reasoning.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Claude Code daily benchmarks for degradation tracking</title>
-      <link>/sources/2026-01-29-claude-code-benchmarks.html</link>
+      <link>//localhost:1314/sources/2026-01-29-claude-code-benchmarks.html</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-01-29-claude-code-benchmarks.html</guid>
+      <guid>//localhost:1314/sources/2026-01-29-claude-code-benchmarks.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;MarginLab launched a daily benchmark tracker for Claude Code performance, measuring the CLI tool against a curated subset of SWE-Bench-Pro tasks using the Opus 4.5 model. The tracker was created in response to widespread community concerns about silent model degradation, where users noticed performance fluctuations but had no systematic way to measure or verify them.&lt;/p&gt;&#xA;&lt;p&gt;The methodology involves running 50 daily evaluations against SWE-Bench-Pro tasks without custom harnesses, then aggregating results over 7-day and 30-day windows for statistical reliability. Statistical significance is determined using Bernoulli modeling with 95% confidence intervals. At the time of the HN discussion, the tracker showed a daily pass rate of 48%, a 7-day aggregate of 53%, and a 30-day aggregate of 53%, compared against a historical baseline of 58%.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A few random notes from Claude coding quite a bit last week</title>
-      <link>/sources/2026-01-26-karpathy-claude-coding-notes.html</link>
+      <link>//localhost:1314/sources/2026-01-26-karpathy-claude-coding-notes.html</link>
       <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-01-26-karpathy-claude-coding-notes.html</guid>
+      <guid>//localhost:1314/sources/2026-01-26-karpathy-claude-coding-notes.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Andrej Karpathy shared a widely discussed thread of observations from extensive Claude Code usage. His notes touched on several key themes that resonated deeply with the developer community, generating nearly 100 HN comments and over 900 upvotes.&lt;/p&gt;&#xA;&lt;p&gt;One of Karpathy&amp;rsquo;s central observations was around the tension between AI-assisted productivity and personal skill development. He noted that he was already experiencing atrophy in his ability to write code manually, finding it harder to recall syntax and implementation details. However, he argued this might be acceptable since code review skills remain intact even as writing fluency declines, drawing a parallel to how reading comprehension persists even when spelling ability degrades.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Code Claude Code in 200 Lines of Code</title>
-      <link>/sources/2026-01-08-claude-code-200-lines.html</link>
+      <link>//localhost:1314/sources/2026-01-08-claude-code-200-lines.html</link>
       <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-01-08-claude-code-200-lines.html</guid>
+      <guid>//localhost:1314/sources/2026-01-08-claude-code-200-lines.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Mihail Eric&amp;rsquo;s article, provocatively titled &amp;ldquo;The Emperor Has No Clothes,&amp;rdquo; argues that AI coding assistants are not magical — they follow a simple architectural loop. The user sends a request, the LLM decides which tools to call, your code executes those tools locally, and the results flow back to the LLM for context. The critical mental model is that the LLM never actually touches your filesystem; it asks for things to happen, and your code makes them happen.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Claude Code&#39;s New Hidden Feature: Swarms</title>
-      <link>/sources/2026-01-24-claude-code-swarms.html</link>
+      <link>//localhost:1314/sources/2026-01-24-claude-code-swarms.html</link>
       <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-01-24-claude-code-swarms.html</guid>
+      <guid>//localhost:1314/sources/2026-01-24-claude-code-swarms.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;A tweet by @NicerInPerson revealed that Claude Code contains hidden multi-agent orchestration capabilities, colloquially referred to as &amp;ldquo;swarms.&amp;rdquo; The discovery, corroborated by a GitHub repository (claude-sneakpeek by mikekelly), showed that Anthropic had built native sub-agent coordination features including a TeammateTool, delegate mode for spawning background agents, and a team coordination system with messaging and task ownership. Rather than relying on third-party orchestration frameworks, these capabilities are built directly into Claude Code but gated behind feature flags not yet available in general release.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Opus 4.5 is not the normal AI agent experience</title>
-      <link>/sources/2026-01-06-opus-4-5-agent-experience.html</link>
+      <link>//localhost:1314/sources/2026-01-06-opus-4-5-agent-experience.html</link>
       <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-01-06-opus-4-5-agent-experience.html</guid>
+      <guid>//localhost:1314/sources/2026-01-06-opus-4-5-agent-experience.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Burke Holland wrote an enthusiastic account of his experience using Claude&amp;rsquo;s Opus 4.5 model, arguing it represents a fundamental shift in AI agent capabilities that goes beyond anything he had previously experienced. His central claim is that Opus 4.5 delivers on promises that earlier AI coding agents could not fulfill, particularly around autonomous problem-solving and first-attempt success rates.&lt;/p&gt;&#xA;&lt;p&gt;Holland completed four substantial projects in rapid succession: an image conversion utility, a video editor, a social media automation app, and a route optimization tool. He highlighted the model&amp;rsquo;s ability to handle full-stack development spanning frontend, backend, authentication, database integration, and cloud infrastructure &amp;ndash; areas that had traditionally been weak points for AI agents.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Claude Code gets native LSP support</title>
-      <link>/sources/2025-12-22-claude-code-lsp-support.html</link>
+      <link>//localhost:1314/sources/2025-12-22-claude-code-lsp-support.html</link>
       <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>/sources/2025-12-22-claude-code-lsp-support.html</guid>
+      <guid>//localhost:1314/sources/2025-12-22-claude-code-lsp-support.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Anthropic added native Language Server Protocol (LSP) support to Claude Code, enabling the CLI-based agent to integrate with language servers for improved code understanding, navigation, and analysis. The feature was announced through Claude Code&amp;rsquo;s changelog and surfaced via a plugin system where users can discover and install LSP integrations.&lt;/p&gt;&#xA;&lt;p&gt;LSP support represents a significant step in making CLI-based AI coding agents competitive with IDE-based tools like Cursor. Language servers provide structured information about code: type definitions, references, diagnostics, and refactoring capabilities. By connecting Claude Code to these servers, the agent gains access to the same code intelligence that powers IDE features, without requiring a full IDE environment.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Coding with LLMs in 2026: The Model Matters More Than the Prompts</title>
-      <link>/sources/2026-01-18-model-matters-more-than-prompts.html</link>
+      <link>//localhost:1314/sources/2026-01-18-model-matters-more-than-prompts.html</link>
       <pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-01-18-model-matters-more-than-prompts.html</guid>
+      <guid>//localhost:1314/sources/2026-01-18-model-matters-more-than-prompts.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This post by @slow_developer on X (formerly Twitter) argues that the shift from 2025 to 2026 in AI-assisted coding has been defined by a fundamental rebalancing: model choice now outweighs prompt engineering as the primary lever for coding quality. Where 2025 workflows focused heavily on crafting precise prompts and structuring interactions carefully, the advancements in frontier models have made the underlying model capability the dominant factor in output quality.&lt;/p&gt;</description>
     </item>
     <item>
       <title>I spent $638 on AI coding agents in 6 weeks</title>
-      <link>/sources/2025-11-13-ai-coding-agent-costs.html</link>
+      <link>//localhost:1314/sources/2025-11-13-ai-coding-agent-costs.html</link>
       <pubDate>Thu, 13 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>/sources/2025-11-13-ai-coding-agent-costs.html</guid>
+      <guid>//localhost:1314/sources/2025-11-13-ai-coding-agent-costs.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;A founder and CTO building an AI-first CRM product shared a detailed breakdown of their AI coding costs, revealing surprisingly high expenses from using Cursor with Claude models. Over a six-week period spanning October and November 2025, the author accumulated $638 in on-demand charges, with October alone costing $348.56 and hitting Cursor&amp;rsquo;s $400 limit.&lt;/p&gt;&#xA;&lt;p&gt;The cost analysis revealed that Claude 4.5 Sonnet Thinking requests ranged from $0.02 to $0.06 depending on context size, which seemed modest per-request but compounded rapidly at 200+ daily requests. The author experimented with 7 different models (GPT-5, Gemini 2.5 Pro, Cheetah, and others) but found Claude consumed 85% of the budget because it consistently produced the best results.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Klaus – a Claude Code native delegating agentic harness</title>
-      <link>/sources/2026-01-25-klaus-agentic-harness.html</link>
+      <link>//localhost:1314/sources/2026-01-25-klaus-agentic-harness.html</link>
       <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-01-25-klaus-agentic-harness.html</guid>
+      <guid>//localhost:1314/sources/2026-01-25-klaus-agentic-harness.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Klaus Baudelaire is an open-source agentic harness built entirely on top of Claude Code&amp;rsquo;s native features, designed to automate task delegation and agent routing without external APIs or services. The system addresses the overhead of manually deciding which agent configuration to use for a given prompt by implementing a keyword-based scoring algorithm that evaluates prompt complexity and routes tasks to the appropriate execution tier.&lt;/p&gt;&#xA;&lt;p&gt;The core mechanism works through a single &lt;code&gt;UserPromptSubmit&lt;/code&gt; hook. When a user submits a prompt, Klaus analyzes it by assigning scores based on keyword complexity (terms like &amp;ldquo;system architecture&amp;rdquo; or &amp;ldquo;oauth&amp;rdquo; increase scores, while &amp;ldquo;fix typo&amp;rdquo; decreases them) and prompt length. The resulting score maps to one of four tiers: DIRECT (score 0-2, no agents needed for simple edits), LIGHT (3-4, single agent for basic features), MEDIUM (5-6, four agents for multi-file changes), and FULL (7+ for complex architecture requiring six agents).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Claude Skill for Terraform/OpenTofu</title>
-      <link>/sources/2026-01-19-terraform-skill-claude.html</link>
+      <link>//localhost:1314/sources/2026-01-19-terraform-skill-claude.html</link>
       <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-01-19-terraform-skill-claude.html</guid>
+      <guid>//localhost:1314/sources/2026-01-19-terraform-skill-claude.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Anton Babenko, a well-known contributor in the Terraform ecosystem and maintainer of many popular terraform-aws-modules, released a Claude Code skill focused on Terraform and OpenTofu best practices. The skill aggregates trusted sources including terraform-best-practices.com and community-tested patterns from over 100 production modules.&lt;/p&gt;&#xA;&lt;p&gt;The skill provides comprehensive guidance across several domains: a testing decision matrix for choosing between native tests and Terratest, module development standards for naming conventions and directory structure, CI/CD workflows for GitHub Actions and GitLab CI with Atlantis integration, and security and compliance patterns including policy-as-code and secrets management.&lt;/p&gt;</description>
     </item>
   </channel>

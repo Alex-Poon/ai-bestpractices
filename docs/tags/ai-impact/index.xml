@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ai-Impact on AI Best Practices Knowledge Base</title>
-    <link>/tags/ai-impact.html</link>
+    <link>//localhost:1314/tags/ai-impact.html</link>
     <description>Recent content in Ai-Impact on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 02 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/ai-impact/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/ai-impact/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How Vibe Coding Is Killing Open Source</title>
-      <link>/sources/2026-02-02-vibe-coding-killing-open-source.html</link>
+      <link>//localhost:1314/sources/2026-02-02-vibe-coding-killing-open-source.html</link>
       <pubDate>Mon, 02 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-02-02-vibe-coding-killing-open-source.html</guid>
+      <guid>//localhost:1314/sources/2026-02-02-vibe-coding-killing-open-source.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This Hackaday article reports on research examining how vibe coding — using LLM chatbots to generate code — creates systemic problems for open source projects. The core argument is that AI-mediated coding disrupts the traditional feedback loops between developers and open source communities in several damaging ways.&lt;/p&gt;&#xA;&lt;p&gt;First, developer engagement shifts away from open source communities entirely. Instead of visiting project websites, consulting documentation, or participating in forums, users interact exclusively with chatbots, eliminating opportunities for sponsorships, bug reports, and community building. Second, LLMs introduce library selection bias by favoring dependencies most prevalent in their training data rather than promoting merit-based adoption, concentrating usage around already-popular projects while marginalizing smaller initiatives. Third, a quality control crisis emerges because LLMs will not interact with library developers, submit usable bug reports, or be aware of potential issues.&lt;/p&gt;</description>
     </item>
   </channel>

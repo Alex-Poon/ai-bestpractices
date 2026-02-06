@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Model-Selection on AI Best Practices Knowledge Base</title>
-    <link>/tags/model-selection.html</link>
+    <link>//localhost:1314/tags/model-selection.html</link>
     <description>Recent content in Model-Selection on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/model-selection/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/model-selection/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Model Deep Dive</title>
-      <link>/tools/models.html</link>
+      <link>//localhost:1314/tools/models.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tools/models.html</guid>
+      <guid>//localhost:1314/tools/models.html</guid>
       <description>&lt;p&gt;The &lt;a href=&#34;../../practices/model-selection.html&#34;&gt;model selection&lt;/a&gt; practice page covers the principles: start cheap, escalate on failure, use multiple models, ignore benchmarks in favor of your own workload. This page is the complement &amp;ndash; a deep look at specific models, how they compare in real-world usage, and what they actually cost when practitioners put them to work.&lt;/p&gt;&#xA;&lt;p&gt;The data here comes from two sources: Amp Code&amp;rsquo;s published model evaluation data (including their distinctive &amp;ldquo;off-the-rails&amp;rdquo; metric), and practitioner reports from over 6,000 Hacker News comments across 20+ discussion threads.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Apple picks Gemini to power Siri</title>
-      <link>/sources/2026-01-12-apple-picks-gemini-siri.html</link>
+      <link>//localhost:1314/sources/2026-01-12-apple-picks-gemini-siri.html</link>
       <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-01-12-apple-picks-gemini-siri.html</guid>
+      <guid>//localhost:1314/sources/2026-01-12-apple-picks-gemini-siri.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Apple announced a partnership with Google to use Gemini as the foundational AI technology powering Siri, marking one of the most significant strategic moves in the AI industry. The deal, reportedly valued near $1 billion, represents Apple&amp;rsquo;s acknowledgment that building competitive frontier AI models in-house is not where their advantage lies.&lt;/p&gt;&#xA;&lt;p&gt;Apple&amp;rsquo;s decision was driven by several practical realities. Despite having world-class edge inference silicon through their Neural Engine, Apple has effectively zero presence in training datacenters &amp;ndash; lacking the TPU pods or GPU clusters needed to train frontier models from scratch. Google, by contrast, has deep pockets, enterprise infrastructure experience, and diversified revenue streams that make them a stable long-term partner.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Model Selection</title>
-      <link>/practices/model-selection.html</link>
+      <link>//localhost:1314/practices/model-selection.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/practices/model-selection.html</guid>
+      <guid>//localhost:1314/practices/model-selection.html</guid>
       <description>&lt;p&gt;Model selection is the skill of matching the right model to the right task. The gap between a well-chosen and poorly-chosen model often matters more than the quality of the prompt itself. As models proliferate and differentiate, this is no longer a set-and-forget decision &amp;ndash; it is an ongoing practice of matching capability to need.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-model-selection-is&#34;&gt;What Model Selection Is&lt;/h2&gt;&#xA;&lt;p&gt;Model selection means choosing which AI model (or combination of models) to use for a specific task, based on the task&amp;rsquo;s complexity, error tolerance, speed requirements, and cost constraints. It also means knowing when to switch models mid-task, when to use multiple models for cross-validation, and when to escalate from a cheap model to an expensive one.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Coding with LLMs in 2026: The Model Matters More Than the Prompts</title>
-      <link>/sources/2026-01-18-model-matters-more-than-prompts.html</link>
+      <link>//localhost:1314/sources/2026-01-18-model-matters-more-than-prompts.html</link>
       <pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-01-18-model-matters-more-than-prompts.html</guid>
+      <guid>//localhost:1314/sources/2026-01-18-model-matters-more-than-prompts.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This post by @slow_developer on X (formerly Twitter) argues that the shift from 2025 to 2026 in AI-assisted coding has been defined by a fundamental rebalancing: model choice now outweighs prompt engineering as the primary lever for coding quality. Where 2025 workflows focused heavily on crafting precise prompts and structuring interactions carefully, the advancements in frontier models have made the underlying model capability the dominant factor in output quality.&lt;/p&gt;</description>
     </item>
     <item>
       <title>LLM coding workflow going into 2026</title>
-      <link>/sources/2026-01-10-llm-coding-workflow-2026.html</link>
+      <link>//localhost:1314/sources/2026-01-10-llm-coding-workflow-2026.html</link>
       <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-01-10-llm-coding-workflow-2026.html</guid>
+      <guid>//localhost:1314/sources/2026-01-10-llm-coding-workflow-2026.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Addy Osmani, a well-known Google engineering leader, shared his comprehensive approach to integrating LLMs into daily coding workflows. The article frames LLMs not as autonomous coders but as powerful pair programmers requiring clear direction, context, and consistent oversight.&lt;/p&gt;&#xA;&lt;p&gt;The workflow begins with collaborative planning, where the developer works with an AI to develop detailed specifications and project plans before writing code. Osmani describes this as achieving a traditional waterfall planning cycle compressed into roughly 15 minutes. Implementation then proceeds in small, iterative chunks sized to fit within context windows and remain comprehensible for human review.&lt;/p&gt;</description>
     </item>
     <item>
       <title>I spent $638 on AI coding agents in 6 weeks</title>
-      <link>/sources/2025-11-13-ai-coding-agent-costs.html</link>
+      <link>//localhost:1314/sources/2025-11-13-ai-coding-agent-costs.html</link>
       <pubDate>Thu, 13 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>/sources/2025-11-13-ai-coding-agent-costs.html</guid>
+      <guid>//localhost:1314/sources/2025-11-13-ai-coding-agent-costs.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;A founder and CTO building an AI-first CRM product shared a detailed breakdown of their AI coding costs, revealing surprisingly high expenses from using Cursor with Claude models. Over a six-week period spanning October and November 2025, the author accumulated $638 in on-demand charges, with October alone costing $348.56 and hitting Cursor&amp;rsquo;s $400 limit.&lt;/p&gt;&#xA;&lt;p&gt;The cost analysis revealed that Claude 4.5 Sonnet Thinking requests ranged from $0.02 to $0.06 depending on context size, which seemed modest per-request but compounded rapidly at 200+ daily requests. The author experimented with 7 different models (GPT-5, Gemini 2.5 Pro, Cheetah, and others) but found Claude consumed 85% of the budget because it consistently produced the best results.&lt;/p&gt;</description>
     </item>
   </channel>

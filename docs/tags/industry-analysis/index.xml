@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Industry-Analysis on AI Best Practices Knowledge Base</title>
-    <link>/tags/industry-analysis.html</link>
+    <link>//localhost:1314/tags/industry-analysis.html</link>
     <description>Recent content in Industry-Analysis on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/industry-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/tags/industry-analysis/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ask HN: 10 months since the Llama-4 release: what happened to Meta AI?</title>
-      <link>/sources/2026-02-05-ask-hn-llama-4-meta.html</link>
+      <link>//localhost:1314/sources/2026-02-05-ask-hn-llama-4-meta.html</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/sources/2026-02-05-ask-hn-llama-4-meta.html</guid>
+      <guid>//localhost:1314/sources/2026-02-05-ask-hn-llama-4-meta.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;An Ask HN post raised questions about the state of Meta&amp;rsquo;s AI efforts roughly 10 months after the Llama 4 release, which was widely considered a disappointment. The original poster noted that Meta&amp;rsquo;s API remained waitlist-only even after that long period, suggesting significant organizational or strategic problems.&lt;/p&gt;&#xA;&lt;p&gt;The discussion paints a picture of a company that, despite enormous resources, has struggled to maintain momentum in the open-source AI space. Multiple commenters pointed to internal dysfunction and leadership issues as likely explanations rather than technical limitations. The consensus was that Meta has the financial and engineering resources to compete but may be hampered by organizational challenges at the executive level.&lt;/p&gt;</description>
     </item>
   </channel>
