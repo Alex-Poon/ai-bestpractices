@@ -1,0 +1,45 @@
+{{ define "main" }}
+<div class="page-container">
+  {{ partial "breadcrumbs.html" . }}
+
+  <div class="article-layout{{ if and .TableOfContents (gt .WordCount 500) }} has-toc{{ end }}">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">{{ .Title }}</h1>
+        {{ partial "meta-bar.html" . }}
+        {{ partial "tag-pills.html" . }}
+      </header>
+
+      <div class="article-content">
+        {{ .Content }}
+      </div>
+
+      {{ with .Params.sources }}
+      <div class="article-sources">
+        <h3>Sources</h3>
+        <ul>
+          {{ range . }}<li><a href="{{ . }}">{{ . }}</a></li>{{ end }}
+        </ul>
+      </div>
+      {{ end }}
+
+      <nav class="article-nav">
+        {{ with .PrevInSection }}
+        <a href="{{ .RelPermalink }}" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">{{ .Title }}</span>
+        </a>
+        {{ end }}
+        {{ with .NextInSection }}
+        <a href="{{ .RelPermalink }}" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">{{ .Title }}</span>
+        </a>
+        {{ end }}
+      </nav>
+    </article>
+
+    {{ partial "toc.html" . }}
+  </div>
+</div>
+{{ end }}

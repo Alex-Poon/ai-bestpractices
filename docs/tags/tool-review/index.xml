@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tool-Review on AI Best Practices Knowledge Base</title>
+    <link>//localhost:1313/tags/tool-review.html</link>
+    <description>Recent content in Tool-Review on AI Best Practices Knowledge Base</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/tool-review/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Multi-Model Agent Landscape</title>
+      <link>//localhost:1313/deep-dives/multi-model-agents.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/deep-dives/multi-model-agents.html</guid>
+      <description>&lt;h2 id=&#34;why-one-model-is-not-enough&#34;&gt;Why One Model Is Not Enough&lt;/h2&gt;&#xA;&lt;p&gt;Every frontier language model has a performance profile. Some excel at planning and reasoning over large contexts. Others are fast and cheap enough for routine lookups. Still others have been tuned for code generation, image understanding, or structured review. No single model is best at everything, and the gap between models on specific tasks can be significant.&lt;/p&gt;&#xA;&lt;p&gt;This is not a theoretical observation. Practitioners who use AI coding agents daily have noticed that the same model that writes excellent code may produce mediocre plans, and the model that reasons carefully through a complex architecture decision may be too slow and expensive for quick file searches. The question is no longer whether to use AI for coding but how to match the right model to the right subtask.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

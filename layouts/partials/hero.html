@@ -1,0 +1,25 @@
+<section class="hero">
+  <div class="hero-container">
+    <p class="hero-eyebrow">Knowledge Base</p>
+    <h1 class="hero-title">AI Best Practices</h1>
+    <p class="hero-description">{{ .Site.Params.description }}</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-number">{{ add (len (where site.RegularPages "Section" "guides")) (len (where site.RegularPages "Section" "deep-dives")) }}</span>
+        <span class="hero-stat-label">Articles</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-number">{{ len (where site.RegularPages "Section" "patterns") }}</span>
+        <span class="hero-stat-label">Patterns</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-number">{{ len site.Taxonomies.tags }}</span>
+        <span class="hero-stat-label">Topics</span>
+      </div>
+    </div>
+    <div class="hero-actions">
+      <a href="{{ with site.GetPage "/guides/getting-started" }}{{ .RelPermalink }}{{ end }}" class="btn btn-primary">Start Here</a>
+      <a href="{{ with site.GetPage "/patterns" }}{{ .RelPermalink }}{{ end }}" class="btn btn-secondary">View Patterns</a>
+    </div>
+  </div>
+</section>

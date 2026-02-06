@@ -1,0 +1,22 @@
+baseURL = ""
+relativeURLs = true
+uglyURLs = true
+title = "AI Best Practices Knowledge Base"
+languageCode = "en-us"
+publishDir = "docs"
+
+[taxonomies]
+  tag = "tags"
+
+[params]
+  description = "What the best practitioners know about AI-assisted software development."
+  author = "AI Best Practices Knowledge Base"
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -1,0 +1,8 @@
+{{ if and .TableOfContents (gt .WordCount 500) }}
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    {{ .TableOfContents }}
+  </div>
+</aside>
+{{ end }}

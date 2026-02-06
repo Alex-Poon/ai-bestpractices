@@ -1,0 +1,38 @@
+<div class="meta-bar">
+  {{ with .Date }}
+  <time class="meta-date" datetime="{{ .Format "2006-01-02" }}">
+    {{ .Format "January 2, 2006" }}
+  </time>
+  {{ end }}
+
+  {{ with .Params.author }}
+  <span class="meta-author">{{ . }}</span>
+  {{ end }}
+
+  <span class="meta-reading-time">{{ .ReadingTime }} min read</span>
+
+  <div class="meta-links">
+    {{ with .Params.source }}
+    <a href="{{ . }}" class="meta-link meta-link--source" target="_blank" rel="noopener">
+      Source &#8599;
+    </a>
+    {{ end }}
+    {{ with .Params.hn_link }}
+    <a href="{{ . }}" class="meta-link meta-link--hn" target="_blank" rel="noopener">
+      HN Discussion &#8599;
+    </a>
+    {{ end }}
+    {{ with .Params.article_source }}
+    <a href="{{ . }}" class="meta-link meta-link--article" target="_blank" rel="noopener">
+      Article &#8599;
+    </a>
+    {{ end }}
+  </div>
+
+  {{ with .Params.points }}
+  <span class="meta-stat">{{ . }} points</span>
+  {{ end }}
+  {{ with .Params.comments }}
+  <span class="meta-stat">{{ . }} comments</span>
+  {{ end }}
+</div>

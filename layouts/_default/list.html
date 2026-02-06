@@ -1,0 +1,50 @@
+{{ define "main" }}
+<div class="page-container">
+  {{ partial "breadcrumbs.html" . }}
+
+  <header class="section-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.description }}
+    <p class="section-description">{{ . }}</p>
+    {{ end }}
+  </header>
+
+  {{ if .Content }}
+  <div class="section-content">{{ .Content }}</div>
+  {{ end }}
+
+  {{/* Subsections */}}
+  {{ $sections := .Sections }}
+  {{ if $sections }}
+    {{ range $sections }}
+      {{ $pages := .Pages }}
+      {{ if $pages }}
+      <section class="subsection">
+        <div class="subsection-header">
+          <h2>{{ .Title }}</h2>
+          {{ with .Params.description }}
+          <p class="subsection-description">{{ . }}</p>
+          {{ end }}
+          <a href="{{ .RelPermalink }}" class="subsection-link">View all →</a>
+        </div>
+        <div class="card-grid">
+          {{ range $pages.ByWeight }}
+            {{ partial "card.html" . }}
+          {{ end }}
+        </div>
+      </section>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{/* Direct child pages */}}
+  {{ $directPages := .RegularPages }}
+  {{ if $directPages }}
+  <div class="card-grid">
+    {{ range $directPages.ByWeight }}
+      {{ partial "card.html" . }}
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
+{{ end }}

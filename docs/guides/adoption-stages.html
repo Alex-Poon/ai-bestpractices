@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Six Stages of AI Adoption | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="A practitioner-validated framework for progressing from chatbot to always-running agents.">
+  <meta name="color-scheme" content="light dark">
+
+  
+  <meta property="og:title" content="The Six Stages of AI Adoption">
+  <meta property="og:description" content="A practitioner-validated framework for progressing from chatbot to always-running agents.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-guides"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg class="nav-logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="guides" href="../guides/index.html">Guides</a>
+      <a class="nav-link" data-section="patterns" href="../patterns/index.html">Patterns</a>
+      <a class="nav-link" data-section="deep-dives" href="../deep-dives/index.html">Deep Dives</a>
+      <a class="nav-link" data-section="references" href="../references/index.html">References</a>
+      <a class="nav-link" data-section="tags" href="../tags/index.html">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../guides/index.html">Guides</a></li>
+      
+    
+    <li aria-current="page">The Six Stages of AI Adoption</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">The Six Stages of AI Adoption</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-05">
+    February 5, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">7 min read</span>
+
+  <div class="meta-links">
+    
+    
+    
+  </div>
+
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/adoption-strategy.html" class="tag-pill">adoption-strategy</a>
+  
+  
+  
+  
+  <a href="../tags/agent-workflows.html" class="tag-pill">agent-workflows</a>
+  
+  
+  
+  
+  <a href="../tags/harness-engineering.html" class="tag-pill">harness-engineering</a>
+  
+  
+  
+  
+  <a href="../tags/task-scoping.html" class="tag-pill">task-scoping</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <p>Developers who successfully adopt AI coding agents tend to follow the same progression. Not because someone prescribed it, but because each stage builds the calibration and infrastructure required by the next. Skipping stages leads to frustration, wasted effort, and the conclusion that agents do not work &mdash; when the real problem was missing foundations.</p>
+<p>This framework synthesizes practitioner experience into six stages. Most developers who abandon AI-assisted development get stuck between Stages 1 and 2. Most developers who succeed credit the investments made in Stages 2 and 5.</p>
+<h2 id="stage-1-drop-the-chatbot">Stage 1: Drop the Chatbot</h2>
+<p>The first shift is recognizing that a chatbot is not the right tool for coding work. Copy-pasting code into ChatGPT or Gemini and hoping the response works is not AI-assisted development. It is guessing with extra steps.</p>
+<p>The minimum viable tool is an <strong>agent</strong> &mdash; software that can read your files, execute commands, observe output, and iterate in an autonomous loop. The difference is fundamental: a chatbot gives you one shot and requires you to manually evaluate and re-prompt. An agent runs tests, sees failures, adjusts, and tries again without you shuttling context back and forth.</p>
+<p>If you are currently using a chatbot for coding tasks, switching to an agent (Claude Code, Cursor, Copilot Workspace, Amp) is the single highest-impact change you can make.</p>
+<p><strong>What to do differently tomorrow:</strong> Install an agent tool and use it for a task you would normally do manually. Do not evaluate the result yet &mdash; just observe how the agent works compared to a chatbot.</p>
+<h2 id="stage-2-reproduce-your-own-work">Stage 2: Reproduce Your Own Work</h2>
+<p>This stage is where calibration happens. The practice is deliberate and initially painful: complete a task yourself, then attempt the same task through the agent. Do this for a variety of tasks across your codebase.</p>
+<p>The goal is not to prove the agent can do your job. The goal is to build a mental model of what the agent handles well and what it does not. Three critical practices emerge from this phase:</p>
+<p><strong>Break work into clear, bounded tasks.</strong> Vague or sweeping instructions fail reliably. Instead of &ldquo;implement the authentication system,&rdquo; try &ldquo;write the token validation function given this interface.&rdquo; This is the <a href="../patterns/task-scoping.html">Task Scoping</a> skill, and it is the single most important capability in agent-assisted development.</p>
+<p><strong>Separate planning from execution.</strong> Have the agent propose a plan first. Review it. Then proceed to implementation. When planning and execution mix, the agent builds momentum toward the wrong solution before you can course-correct.</p>
+<p><strong>Give the agent verification tools.</strong> Agents perform dramatically better when they can run tests, check compiler output, or otherwise confirm their own work. An agent operating without feedback is guessing &mdash; just like a chatbot.</p>
+<p>The most valuable outcome of this stage is knowing <strong>when not to use agents.</strong> Not every task benefits from delegation. The reproduction phase gives you the judgment to tell the difference, which prevents the most common source of wasted time.</p>
+<blockquote>
+<p><strong>Where people get stuck:</strong> Stage 2 requires doing work twice, which feels like it slows you down. It does, temporarily. Practitioners who push through report that the calibration pays for itself within a week. Those who skip this stage spend months oscillating between over-delegation and under-delegation, never building reliable intuition.</p>
+</blockquote>
+<h2 id="stage-3-end-of-day-agents">Stage 3: End-of-Day Agents</h2>
+<p>Timing is a lever most people overlook. The practice is simple: during the last 30 minutes of your workday, launch agents on tasks that benefit from extended runtime.</p>
+<p>Good candidates include:</p>
+<ul>
+<li><strong>Research tasks</strong> &mdash; exploring a codebase, reading documentation, investigating a technical question</li>
+<li><strong>Parallel exploration</strong> &mdash; having the agent try alternative approaches to a problem you have been thinking about</li>
+<li><strong>Issue triage</strong> &mdash; processing, categorizing, and drafting responses to accumulated issues</li>
+</ul>
+<p>Results are waiting when you start work the next morning, providing immediate momentum. This is the lowest-risk way to start getting real productivity gains from agents because the cost of a bad result is near zero &mdash; you just discard it.</p>
+<p><strong>What to do differently tomorrow:</strong> Before you close your laptop, identify one research or exploration task and hand it to an agent. Review the output first thing the next morning.</p>
+<h2 id="stage-4-outsource-the-slam-dunks">Stage 4: Outsource the Slam Dunks</h2>
+<p>By this point, you have calibrated. You know which tasks agents handle reliably. Now you start delegating those high-confidence tasks while doing your own deep work in parallel.</p>
+<p>The critical insight at this stage is about attention management: <strong>disable agent notifications.</strong> Notifications create an interruption-driven workflow where the agent dictates your context-switching. Instead, check agent results on your own schedule, at natural stopping points in your own work. You control when you shift focus, not the agent.</p>
+<p>This preserves the deep work benefits of delegation. Without this discipline, running an agent becomes another tab you compulsively check, and the net productivity gain evaporates.</p>
+<p><strong>What to do differently tomorrow:</strong> The next time you delegate a task, mute notifications and set a timer for when you will check the result.</p>
+<blockquote>
+<p><strong>Where people get stuck:</strong> Practitioners at Stage 4 sometimes regress by delegating tasks outside their calibrated confidence zone. The agent fails, they lose trust, and they stop delegating entirely. The fix is disciplined: only delegate tasks you are confident about, and expand the envelope gradually as your harness improves.</p>
+</blockquote>
+<h2 id="stage-5-engineer-the-harness">Stage 5: Engineer the Harness</h2>
+<p>This is the stage that separates occasional users from practitioners who get compounding returns. <strong>Harness engineering</strong> is the practice of building persistent infrastructure that makes agents more effective across every future session.</p>
+<p>The harness has two parts:</p>
+<h3 id="documentation-files">Documentation Files</h3>
+<p>Project-specific files (AGENTS.md, CLAUDE.md) that agents read at the start of every session. They contain:</p>
+<ul>
+<li><strong>Corrections for known mistakes.</strong> When the agent makes a specific error, document the mistake and the correct approach. This entry prevents the same error in every future session.</li>
+<li><strong>Project conventions.</strong> Coding style, architectural rules, naming patterns &mdash; anything the agent would not infer from the code alone.</li>
+<li><strong>Hard constraints.</strong> Things the agent must never do. Boundaries it must respect. Non-obvious requirements.</li>
+</ul>
+<h3 id="purpose-built-tools">Purpose-Built Tools</h3>
+<p>Scripts and utilities designed for agent consumption, not human use:</p>
+<ul>
+<li>Filtered test runners that show only relevant failures</li>
+<li>Output formatters that structure results for reliable agent parsing</li>
+<li>Context assemblers that gather related files into a single input</li>
+</ul>
+<p>The <a href="../patterns/harness-engineering.html">Harness Engineering pattern</a> covers both mechanisms in detail.</p>
+<p>The compounding effect is the core point. Each mistake documented, each tool built, each convention captured makes every future session more effective. After 50 sessions, a well-maintained harness dramatically reduces the error rate on common tasks. This is the highest-leverage investment in agent-assisted development.</p>
+<p><strong>What to do differently tomorrow:</strong> Create an AGENTS.md (or CLAUDE.md) file in your project root. Add three entries: one coding convention, one common mistake you have corrected before, and one &ldquo;never do this&rdquo; rule. Start small and add entries as you observe real mistakes.</p>
+<blockquote>
+<p><strong>Where people get stuck:</strong> Two failure modes dominate. First, over-documenting speculatively &mdash; writing a massive harness file before you have real data on what the agent gets wrong. Start with observed mistakes only. Second, harness rot &mdash; letting entries accumulate without pruning outdated rules. Review weekly and remove anything that no longer applies.</p>
+</blockquote>
+<h2 id="stage-6-always-have-an-agent-running">Stage 6: Always Have an Agent Running</h2>
+<p>The final stage is maintaining continuous background agent work throughout the day. The developer habitually identifies delegable tasks and maintains a mental queue of work that can be handed off at any moment.</p>
+<p>This requires the culmination of everything prior: the calibration from Stage 2 to identify suitable tasks, the timing intuition from Stage 3, the attention discipline from Stage 4, and the harness from Stage 5 to ensure consistent quality. Without those foundations, continuous delegation produces continuous waste.</p>
+<p>The question that becomes habitual: <strong>&ldquo;What can I delegate right now?&rdquo;</strong></p>
+<p>Not every practitioner reaches this stage, and not every codebase supports it. But for those who do, the workflow fundamentally changes. Deep human work and parallel agent work become concurrent streams, with the developer operating as a technical lead who defines, delegates, and reviews rather than implementing everything directly.</p>
+<p><strong>What to do differently tomorrow:</strong> At the start of your next work session, before you begin coding, spend two minutes listing tasks that could be delegated. Pick one and hand it off before you start your own work.</p>
+<h2 id="progression-is-not-linear">Progression Is Not Linear</h2>
+<p>Most practitioners report moving back and forth between stages depending on the project, the task, and how well their harness fits the current work. A new codebase resets you to Stage 2 until you build calibration and a harness for that specific context. A well-harnessed project might support Stage 6 workflows immediately.</p>
+<p>The stages are a framework for knowing what to practice, not a ladder you climb once and stay on top of. The underlying skill &mdash; knowing what to delegate, how to scope it, and how to build infrastructure that compounds &mdash; is what persists across projects and tools.</p>
+
+      </div>
+
+      
+      <div class="article-sources">
+        <h3>Sources</h3>
+        <ul>
+          <li><a href="https://mitchellh.com/writing/my-ai-adoption-journey">https://mitchellh.com/writing/my-ai-adoption-journey</a></li><li><a href="https://news.ycombinator.com/item?id=46903558">https://news.ycombinator.com/item?id=46903558</a></li>
+        </ul>
+      </div>
+      
+
+      <nav class="article-nav">
+        
+        
+        <a href="../guides/getting-started.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Start Here: AI-Assisted Development</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#stage-1-drop-the-chatbot">Stage 1: Drop the Chatbot</a></li>
+    <li><a href="#stage-2-reproduce-your-own-work">Stage 2: Reproduce Your Own Work</a></li>
+    <li><a href="#stage-3-end-of-day-agents">Stage 3: End-of-Day Agents</a></li>
+    <li><a href="#stage-4-outsource-the-slam-dunks">Stage 4: Outsource the Slam Dunks</a></li>
+    <li><a href="#stage-5-engineer-the-harness">Stage 5: Engineer the Harness</a>
+      <ul>
+        <li><a href="#documentation-files">Documentation Files</a></li>
+        <li><a href="#purpose-built-tools">Purpose-Built Tools</a></li>
+      </ul>
+    </li>
+    <li><a href="#stage-6-always-have-an-agent-running">Stage 6: Always Have an Agent Running</a></li>
+    <li><a href="#progression-is-not-linear">Progression Is Not Linear</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Content</h3>
+        <ul>
+          <li><a href="../guides/index.html">Guides</a></li>
+          <li><a href="../deep-dives/index.html">Deep Dives</a></li>
+          <li><a href="../tags/index.html">Topics</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="../patterns/index.html">Patterns</a></li>
+          <li><a href="../references/index.html">References</a></li>
+          <li><a href="../synthesis/index.html">Synthesis</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from practitioner experience.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

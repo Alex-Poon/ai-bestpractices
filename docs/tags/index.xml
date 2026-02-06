@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on AI Best Practices Knowledge Base</title>
+    <link>//localhost:1313/tags/index.html</link>
+    <description>Recent content in Tags on AI Best Practices Knowledge Base</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adoption-Strategy</title>
+      <link>//localhost:1313/tags/adoption-strategy.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/adoption-strategy.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agent-Architecture</title>
+      <link>//localhost:1313/tags/agent-architecture.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/agent-architecture.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agent-Workflows</title>
+      <link>//localhost:1313/tags/agent-workflows.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/agent-workflows.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agents-Md</title>
+      <link>//localhost:1313/tags/agents-md.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/agents-md.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Amp-Code</title>
+      <link>//localhost:1313/tags/amp-code.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/amp-code.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Autonomous-Coding</title>
+      <link>//localhost:1313/tags/autonomous-coding.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/autonomous-coding.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Best-Practices</title>
+      <link>//localhost:1313/tags/best-practices.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/best-practices.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Checklist</title>
+      <link>//localhost:1313/tags/checklist.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/checklist.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Claude-Code</title>
+      <link>//localhost:1313/tags/claude-code.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/claude-code.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Community-Discussion</title>
+      <link>//localhost:1313/tags/community-discussion.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/community-discussion.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Coordination</title>
+      <link>//localhost:1313/tags/coordination.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/coordination.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Copilot</title>
+      <link>//localhost:1313/tags/copilot.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/copilot.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Core-Concepts</title>
+      <link>//localhost:1313/tags/core-concepts.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/core-concepts.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Core-Skill</title>
+      <link>//localhost:1313/tags/core-skill.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/core-skill.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Craft-vs-Ai</title>
+      <link>//localhost:1313/tags/craft-vs-ai.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/craft-vs-ai.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cursor</title>
+      <link>//localhost:1313/tags/cursor.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/cursor.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Getting-Started</title>
+      <link>//localhost:1313/tags/getting-started.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/getting-started.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git-Sync</title>
+      <link>//localhost:1313/tags/git-sync.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/git-sync.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Harness-Engineering</title>
+      <link>//localhost:1313/tags/harness-engineering.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/harness-engineering.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Multi-Model</title>
+      <link>//localhost:1313/tags/multi-model.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/multi-model.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Parallel-Agents</title>
+      <link>//localhost:1313/tags/parallel-agents.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/parallel-agents.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pattern</title>
+      <link>//localhost:1313/tags/pattern.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/pattern.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Practical</title>
+      <link>//localhost:1313/tags/practical.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/practical.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Practical-Guide</title>
+      <link>//localhost:1313/tags/practical-guide.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/practical-guide.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Productivity-Debate</title>
+      <link>//localhost:1313/tags/productivity-debate.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/productivity-debate.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Synthesis</title>
+      <link>//localhost:1313/tags/synthesis.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/synthesis.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Task-Locking</title>
+      <link>//localhost:1313/tags/task-locking.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/task-locking.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Task-Scoping</title>
+      <link>//localhost:1313/tags/task-scoping.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/task-scoping.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Test-Design</title>
+      <link>//localhost:1313/tags/test-design.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/test-design.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tool-Comparison</title>
+      <link>//localhost:1313/tags/tool-comparison.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/tool-comparison.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tool-Review</title>
+      <link>//localhost:1313/tags/tool-review.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/tool-review.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tooling</title>
+      <link>//localhost:1313/tags/tooling.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/tooling.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Workflow</title>
+      <link>//localhost:1313/tags/workflow.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/workflow.html</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

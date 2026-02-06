@@ -1,0 +1,26 @@
+<article class="card card--{{ .Section }}">
+  <a href="{{ .RelPermalink }}" class="card-link">
+    <div class="card-badge">
+      {{ partial "section-icon.html" . }}
+      <span>{{ .Section | title }}</span>
+    </div>
+    <h3 class="card-title">{{ .Title }}</h3>
+    <p class="card-excerpt">
+      {{ if .Description }}
+        {{ .Description }}
+      {{ else }}
+        {{ .Summary | truncate 120 }}
+      {{ end }}
+    </p>
+    <div class="card-meta">
+      {{ with .Date }}<time>{{ .Format "Jan 2, 2006" }}</time>{{ end }}
+      <span class="card-reading-time">{{ .ReadingTime }} min read</span>
+    </div>
+    {{ with .Params.tags }}
+    <div class="card-tags">
+      {{ range first 3 . }}<span class="tag-pill">{{ . }}</span>{{ end }}
+      {{ if gt (len .) 3 }}<span class="tag-pill tag-pill--more">+{{ sub (len .) 3 }}</span>{{ end }}
+    </div>
+    {{ end }}
+  </a>
+</article>

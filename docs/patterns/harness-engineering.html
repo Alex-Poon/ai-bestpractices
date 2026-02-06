@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pattern: Harness Engineering | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="Build persistent infrastructure that constrains and guides agents across sessions.">
+  <meta name="color-scheme" content="light dark">
+
+  
+  <meta property="og:title" content="Pattern: Harness Engineering">
+  <meta property="og:description" content="Build persistent infrastructure that constrains and guides agents across sessions.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-patterns"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg class="nav-logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="guides" href="../guides/index.html">Guides</a>
+      <a class="nav-link" data-section="patterns" href="../patterns/index.html">Patterns</a>
+      <a class="nav-link" data-section="deep-dives" href="../deep-dives/index.html">Deep Dives</a>
+      <a class="nav-link" data-section="references" href="../references/index.html">References</a>
+      <a class="nav-link" data-section="tags" href="../tags/index.html">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../patterns/index.html">Patterns</a></li>
+      
+    
+    <li aria-current="page">Pattern: Harness Engineering</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Pattern: Harness Engineering</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-05">
+    February 5, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">9 min read</span>
+
+  <div class="meta-links">
+    
+    
+    
+  </div>
+
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/pattern.html" class="tag-pill">pattern</a>
+  
+  
+  
+  
+  <a href="../tags/harness-engineering.html" class="tag-pill">harness-engineering</a>
+  
+  
+  
+  
+  <a href="../tags/tooling.html" class="tag-pill">tooling</a>
+  
+  
+  
+  
+  <a href="../tags/agents-md.html" class="tag-pill">agents-md</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <h2 id="problem">Problem</h2>
+<p>The agent keeps making the same mistakes. You correct it in-session, it complies, and then the next session it makes the identical error because it has no memory of the previous correction. You find yourself re-explaining the same project conventions, re-specifying the same constraints, and re-fixing the same categories of errors across every interaction.</p>
+<p>There is no institutional memory across sessions. Each session starts from zero.</p>
+<h2 id="solution">Solution</h2>
+<p>Build persistent infrastructure that constrains and guides agents across sessions. This infrastructure &mdash; the &ldquo;harness&rdquo; &mdash; takes two complementary forms: documentation files that agents read, and purpose-built tools that agents use.</p>
+<p>The harness externalizes your accumulated knowledge about how the agent should behave in your specific codebase. Instead of relying on the agent to remember or infer constraints, you make the constraints explicit and persistent.</p>
+<h2 id="mechanism-1-documentation-files-agentsmd--claudemd">Mechanism 1: Documentation Files (AGENTS.md / CLAUDE.md)</h2>
+<p>These are markdown files placed in the root of your project (or in relevant subdirectories) that the agent reads at the start of every session. They serve as a persistent memory layer.</p>
+<h3 id="what-to-include">What to Include</h3>
+<p><strong>Project conventions:</strong></p>
+<ul>
+<li>Coding style rules that differ from common defaults</li>
+<li>Naming conventions specific to the project</li>
+<li>File organization patterns</li>
+<li>Import ordering and grouping rules</li>
+</ul>
+<p><strong>Architectural constraints:</strong></p>
+<ul>
+<li>&ldquo;Module X should never import from module Y&rdquo;</li>
+<li>&ldquo;All database access goes through the repository layer, never direct queries&rdquo;</li>
+<li>&ldquo;The API layer must not contain business logic&rdquo;</li>
+<li>Technology-specific rules (&ldquo;Use date-fns, not moment.js&rdquo;)</li>
+</ul>
+<p><strong>Known mistakes and corrections:</strong></p>
+<ul>
+<li>&ldquo;When generating tests for the auth module, always mock the token service. Do not call the real service.&rdquo;</li>
+<li>&ldquo;The config object uses snake_case keys, not camelCase, even though the rest of the codebase uses camelCase.&rdquo;</li>
+<li>&ldquo;Never use <code>any</code> type in TypeScript files under src/core/. Use proper generics instead.&rdquo;</li>
+</ul>
+<p><strong>Testing requirements:</strong></p>
+<ul>
+<li>How to run tests (specific commands, environment variables)</li>
+<li>What constitutes a passing test in this project</li>
+<li>Common test setup patterns</li>
+</ul>
+<p><strong>&ldquo;Never do X&rdquo; rules:</strong></p>
+<ul>
+<li>Hard-won corrections from past mistakes</li>
+<li>Framework-specific gotchas</li>
+<li>Deprecated patterns that the agent might still suggest</li>
+</ul>
+<h3 id="how-to-maintain-it">How to Maintain It</h3>
+<p>The documentation file is a living document. The maintenance cycle is:</p>
+<ol>
+<li>Agent makes a mistake during a session.</li>
+<li>You correct the mistake.</li>
+<li>Before moving on, you add an entry to the documentation file describing the mistake and the correct approach.</li>
+<li>The mistake does not recur in future sessions.</li>
+</ol>
+<p>Step 3 is the critical discipline. It takes thirty seconds and prevents hours of future re-correction. The most common failure mode is skipping this step because you are focused on the immediate task.</p>
+<h2 id="mechanism-2-purpose-built-tools">Mechanism 2: Purpose-Built Tools</h2>
+<p>Some constraints are better enforced through tooling than documentation. Purpose-built tools are scripts and utilities designed specifically for agent consumption, not for human use.</p>
+<h3 id="examples">Examples</h3>
+<p><strong>Screenshot tools with structured output:</strong>
+Instead of letting the agent interpret raw screenshots, provide a tool that captures a screenshot and returns structured data (element positions, text content, visual state) that the agent can parse reliably.</p>
+<p><strong>Filtered test runners:</strong>
+A wrapper around your test suite that runs only the tests relevant to the files the agent has modified, formats the output in a way the agent can parse, and highlights only the failures that need attention. This prevents the agent from being overwhelmed by unrelated test output.</p>
+<p><strong>Output formatters:</strong>
+Scripts that take the output of a command (build output, linter results, API responses) and restructure it for agent consumption. Agents process structured, concise output more reliably than verbose human-oriented output.</p>
+<p><strong>Pre-commit validators:</strong>
+Scripts that check agent output against project constraints before it reaches human review. Catches common agent errors (wrong import paths, incorrect naming, missing error handling) automatically.</p>
+<p><strong>Context assemblers:</strong>
+Scripts that gather relevant context (related files, interface definitions, recent changes) and present it to the agent in a single, well-organized input. Reduces the chance that the agent misses important context.</p>
+<h3 id="design-principles-for-agent-tools">Design Principles for Agent Tools</h3>
+<ul>
+<li><strong>Structured output over prose.</strong> Agents parse JSON, YAML, and consistent formats more reliably than free-text descriptions.</li>
+<li><strong>Minimal output.</strong> Include only what the agent needs. Verbose output increases the chance of distraction and drift.</li>
+<li><strong>Clear error messages.</strong> When something fails, the error message should tell the agent exactly what went wrong and what to do about it.</li>
+<li><strong>Deterministic behavior.</strong> The tool should produce the same output for the same input. Non-deterministic tools confuse agents.</li>
+</ul>
+<h2 id="why-this-compounds">Why This Compounds</h2>
+<p>The compounding effect is the core reason harness engineering is the highest-leverage investment in agent-assisted development.</p>
+<p><strong>Linear effort, exponential return:</strong></p>
+<ul>
+<li>Session 1: You document 3 mistakes. Future sessions avoid those 3 mistakes.</li>
+<li>Session 10: You have documented 30 mistakes. The agent&rsquo;s effective error rate is dramatically lower.</li>
+<li>Session 50: The harness is tight enough that the agent&rsquo;s output requires minimal correction for common tasks.</li>
+</ul>
+<p><strong>Knowledge preservation:</strong>
+When you leave the project, the harness stays. A new developer inheriting the codebase gets the benefit of all your accumulated agent-interaction knowledge. This is institutional memory that persists across people, not just across sessions.</p>
+<p><strong>Transferable patterns:</strong>
+Many harness entries are transferable across projects. &ldquo;Always handle the error case first&rdquo; or &ldquo;Never use string concatenation for SQL queries&rdquo; are universal. Over time, you develop a starter harness that you bring to new projects.</p>
+<p><strong>Quality floor, not ceiling:</strong>
+The harness establishes a minimum quality level. The agent cannot drop below the constraints the harness enforces. This makes the worst-case output better, which matters more for productivity than making the best-case output better.</p>
+<h2 id="anti-patterns">Anti-Patterns</h2>
+<h3 id="relying-on-prompt-memory">Relying on Prompt Memory</h3>
+<p>Assuming the agent will remember corrections from earlier in the session or from previous sessions. Agents have limited context windows, and sessions are stateless. If a correction matters, externalize it.</p>
+<h3 id="the-agent-will-learn">&ldquo;The Agent Will Learn&rdquo;</h3>
+<p>Hoping that repeating a correction enough times will train the agent. Current agents do not learn from in-session corrections in any persistent way. The only persistent memory is what you write down in the harness.</p>
+<h3 id="over-documenting-too-early">Over-Documenting Too Early</h3>
+<p>Writing a massive AGENTS.md file before you have real data on what the agent gets wrong. Start small. Add entries only when you observe actual mistakes. The harness should be empirical, not speculative.</p>
+<h3 id="documentation-without-structure">Documentation Without Structure</h3>
+<p>Writing harness documentation in long paragraphs instead of scannable rules. Agents process structured, concise rules better than narrative text. Use bullet points, headers, and explicit &ldquo;do this / not that&rdquo; formatting.</p>
+<h3 id="harness-rot">Harness Rot</h3>
+<p>Letting the documentation file accumulate outdated entries. Rules that referenced old libraries, deprecated patterns, or resolved issues add noise and can mislead the agent. Review the harness periodically (weekly is a reasonable cadence) and remove entries that no longer apply.</p>
+<h2 id="key-insight">Key Insight</h2>
+<p><strong>The harness is MORE important than the prompt.</strong></p>
+<p>A well-harnessed mediocre prompt outperforms a perfect prompt with no harness. The harness constrains the space of possible outputs, reducing the chance of drift and repeated errors. A perfect prompt in a vacuum still allows the full range of agent failure modes because it has no persistent memory of what has gone wrong before.</p>
+<p>This is counterintuitive because prompt engineering gets most of the attention in public discussion. But practitioners who have been using agents for months consistently report that their investment in harness files and custom tools delivers more value than any improvement in prompting technique.</p>
+<p>See also: <a href="../deep-dives/parallel-compiler-lessons.html">What 100 Parallel Agents Taught Us</a> for empirical evidence of harness engineering at scale, and <a href="../references/agents-md-guide.html">The AGENTS.md Guide</a> for a practical template.</p>
+<h2 id="sources">Sources</h2>
+<ul>
+<li><strong>Hashimoto, Stage 5:</strong> Identifies the transition to infrastructure-building (harness engineering) as a distinct and advanced stage of AI adoption, beyond prompting proficiency.</li>
+<li><strong>EastLondonCoder</strong> (HN): Coined the phrase &ldquo;continuously tightening the harness&rdquo; to describe the iterative process of documenting mistakes and constraints.</li>
+<li><strong>fix4fun</strong> (HN): Described building custom tools specifically for agent consumption, distinct from human-facing tooling, as a key productivity multiplier.</li>
+</ul>
+<h2 id="evidence-from-scale-the-carlini-compiler-project">Evidence from Scale: The Carlini Compiler Project</h2>
+<p>Nicholas Carlini&rsquo;s parallel Claude agents project provides the strongest empirical evidence to date for harness engineering as the dominant factor in agent productivity. The project used 16 parallel Claude instances to build a 100,000-line C-to-x86 compiler in Rust over two weeks, at a total cost of approximately $20,000. The compiler successfully compiled the Linux kernel, QEMU, FFmpeg, and Doom.</p>
+<p>The project&rsquo;s results validate every principle in this pattern and add several new insights about harness design at scale.</p>
+<h3 id="the-verifier-must-be-nearly-perfect">The Verifier Must Be Nearly Perfect</h3>
+<p>Carlini stated directly: &ldquo;Claude will work autonomously to solve whatever problem I give it. So it&rsquo;s important that the task verifier is nearly perfect, otherwise Claude will solve the wrong problem.&rdquo;</p>
+<p>This is the harness engineering thesis in one sentence. When agents run autonomously across thousands of sessions, the harness is the only thing standing between productive work and systematic drift. A flawed verifier does not just miss errors &mdash; it actively teaches agents to produce wrong solutions that satisfy the verifier. At scale, this compounds catastrophically.</p>
+<h3 id="anthropomorphic-test-design">Anthropomorphic Test Design</h3>
+<p>The project introduced a concept worth naming: <strong>anthropomorphic test design</strong> &mdash; designing test infrastructure for the LLM&rsquo;s cognition, not for human developers. This goes beyond &ldquo;structured output&rdquo; into deliberately shaping the information environment the agent operates in.</p>
+<p>Specific techniques used:</p>
+<ul>
+<li>
+<p><strong>Limited output verbosity.</strong> Test output was kept minimal to prevent context window pollution. Verbose test output wastes tokens and increases the chance of the agent fixating on irrelevant details rather than the actual failure.</p>
+</li>
+<li>
+<p><strong>Pre-computed aggregate statistics.</strong> Summary statistics (pass rates, failure counts, regression counts) were computed by the harness and presented to the agent, rather than requiring the agent to recalculate them from raw output. Every token the agent spends on arithmetic is a token not spent on reasoning about the actual problem.</p>
+</li>
+<li>
+<p><strong>ERROR-prefixed single-line formatting.</strong> Error messages were formatted with an &ldquo;ERROR&rdquo; prefix on single lines, making them grep-friendly for both agents and humans. This is structured output taken to its logical extreme &mdash; the format is optimized for mechanical parsing, not human readability.</p>
+</li>
+<li>
+<p><strong>Fast random sampling (<code>--fast</code> option).</strong> A <code>--fast</code> flag ran only 1-10% of tests, randomly sampled. Carlini observed that without this, agents would &ldquo;happily spend hours running tests instead of making progress.&rdquo; This is a critical insight: agents have no internal sense of time-cost tradeoff. The harness must impose it.</p>
+</li>
+<li>
+<p><strong>Agent-maintained READMEs and progress files.</strong> Agents were required to update README files and progress logs frequently. Since each session starts fresh (no conversation memory), these files served as the persistent memory layer &mdash; exactly the AGENTS.md pattern described above, but written by the agents themselves as part of their workflow.</p>
+</li>
+</ul>
+<h3 id="cicd-as-harness-enforcement">CI/CD as Harness Enforcement</h3>
+<p>The project enforced a strict rule: new commits cannot break existing passing tests. This is CI/CD used not as a development convenience but as a hard constraint on agent behavior. It prevents the common failure mode where an agent &ldquo;fixes&rdquo; one thing by breaking three others, and the breakage is not caught until much later.</p>
+<h3 id="the-economics-of-harness-investment">The Economics of Harness Investment</h3>
+<p>The total project cost was approximately $20,000 across roughly 2,000 sessions, producing 100,000 lines of working compiler code. The harness infrastructure &mdash; the test suite, the anthropomorphic output formatting, the CI enforcement, the task locking system &mdash; represented a significant upfront investment. But the return was unambiguous: 100,000 lines of code that compiled real-world software.</p>
+<p>Without the harness, 16 parallel agents would have produced 16 parallel streams of confidently wrong code overwriting each other. The harness is what converted raw compute into usable output.</p>
+<p>This is the strongest quantitative evidence yet that <strong>harness engineering is the bottleneck, not model capability.</strong> The model was the same Claude available to everyone. The harness is what made the difference.</p>
+<h3 id="source">Source</h3>
+<ul>
+<li><strong>Carlini, Nicholas.</strong> &ldquo;Building a C compiler with Claude as my coding agent.&rdquo; Anthropic Engineering Blog. <a href="https://www.anthropic.com/engineering/building-c-compiler">https://www.anthropic.com/engineering/building-c-compiler</a></li>
+</ul>
+
+      </div>
+
+      
+      <div class="article-sources">
+        <h3>Sources</h3>
+        <ul>
+          <li><a href="https://mitchellh.com/writing/my-ai-adoption-journey">https://mitchellh.com/writing/my-ai-adoption-journey</a></li><li><a href="https://news.ycombinator.com/item?id=46903558">https://news.ycombinator.com/item?id=46903558</a></li><li><a href="https://www.anthropic.com/engineering/building-c-compiler">https://www.anthropic.com/engineering/building-c-compiler</a></li>
+        </ul>
+      </div>
+      
+
+      <nav class="article-nav">
+        
+        <a href="../patterns/parallel-agent-coordination.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Pattern: Parallel Agent Coordination</span>
+        </a>
+        
+        
+        <a href="../patterns/task-scoping.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Pattern: Task Scoping for AI Agents</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#problem">Problem</a></li>
+    <li><a href="#solution">Solution</a></li>
+    <li><a href="#mechanism-1-documentation-files-agentsmd--claudemd">Mechanism 1: Documentation Files (AGENTS.md / CLAUDE.md)</a>
+      <ul>
+        <li><a href="#what-to-include">What to Include</a></li>
+        <li><a href="#how-to-maintain-it">How to Maintain It</a></li>
+      </ul>
+    </li>
+    <li><a href="#mechanism-2-purpose-built-tools">Mechanism 2: Purpose-Built Tools</a>
+      <ul>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#design-principles-for-agent-tools">Design Principles for Agent Tools</a></li>
+      </ul>
+    </li>
+    <li><a href="#why-this-compounds">Why This Compounds</a></li>
+    <li><a href="#anti-patterns">Anti-Patterns</a>
+      <ul>
+        <li><a href="#relying-on-prompt-memory">Relying on Prompt Memory</a></li>
+        <li><a href="#the-agent-will-learn">&ldquo;The Agent Will Learn&rdquo;</a></li>
+        <li><a href="#over-documenting-too-early">Over-Documenting Too Early</a></li>
+        <li><a href="#documentation-without-structure">Documentation Without Structure</a></li>
+        <li><a href="#harness-rot">Harness Rot</a></li>
+      </ul>
+    </li>
+    <li><a href="#key-insight">Key Insight</a></li>
+    <li><a href="#sources">Sources</a></li>
+    <li><a href="#evidence-from-scale-the-carlini-compiler-project">Evidence from Scale: The Carlini Compiler Project</a>
+      <ul>
+        <li><a href="#the-verifier-must-be-nearly-perfect">The Verifier Must Be Nearly Perfect</a></li>
+        <li><a href="#anthropomorphic-test-design">Anthropomorphic Test Design</a></li>
+        <li><a href="#cicd-as-harness-enforcement">CI/CD as Harness Enforcement</a></li>
+        <li><a href="#the-economics-of-harness-investment">The Economics of Harness Investment</a></li>
+        <li><a href="#source">Source</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Content</h3>
+        <ul>
+          <li><a href="../guides/index.html">Guides</a></li>
+          <li><a href="../deep-dives/index.html">Deep Dives</a></li>
+          <li><a href="../tags/index.html">Topics</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="../patterns/index.html">Patterns</a></li>
+          <li><a href="../references/index.html">References</a></li>
+          <li><a href="../synthesis/index.html">Synthesis</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from practitioner experience.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

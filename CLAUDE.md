@@ -12,25 +12,28 @@ This repository consolidates articles, insights, and practical advice on using A
 
 The repo has two layers: **source** (full-fidelity captures) and **analysis** (practical takeaways).
 
-### Source Layer (`articles/`)
+### Source Layer (`content/articles/`)
 Full-fidelity captures of articles and discussions, organized by type:
-- `articles/tools/` — Product reviews and tool comparisons (Amp, Claude Code, Cursor, etc.)
-- `articles/workflows/` — Development workflows and integration patterns
-- `articles/discussions/` — HN and community discussions with attributed quotes
-- `articles/prompting/` — Prompt engineering and interaction patterns
-- `articles/coding/` — AI-assisted coding practices
-- `articles/pitfalls/` — Common mistakes and antipatterns
-- `articles/evaluation/` — Testing, benchmarking, and evaluating AI outputs
+- `content/articles/tools/` — Product reviews and tool comparisons (Amp, Claude Code, Cursor, etc.)
+- `content/articles/workflows/` — Development workflows and integration patterns
+- `content/articles/discussions/` — HN and community discussions with attributed quotes
+- `content/articles/prompting/` — Prompt engineering and interaction patterns
+- `content/articles/coding/` — AI-assisted coding practices
+- `content/articles/pitfalls/` — Common mistakes and antipatterns
+- `content/articles/evaluation/` — Testing, benchmarking, and evaluating AI outputs
 
-### Analysis Layer (`analysis/`)
+### Analysis Layer (`content/analysis/`)
 Synthesized insights and practical takeaways:
-- `analysis/synthesis/` — Cross-source synthesis documents
-- `analysis/patterns/` — Reusable pattern cards (problem → solution → anti-patterns → sources)
-- `analysis/checklists/` — Practical daily/weekly checklists
+- `content/analysis/synthesis/` — Cross-source synthesis documents
+- `content/analysis/patterns/` — Reusable pattern cards (problem → solution → anti-patterns → sources)
+- `content/analysis/checklists/` — Practical daily/weekly checklists
 
 ### Metadata
 - `sources.md` — Master list of all source URLs with dates and HN discussion links
-- `summaries/` — One-pager distillations of key articles
+- `content/summaries/` — One-pager distillations of key articles
+
+### Static Site (`docs/`)
+Hugo-generated static site. Rebuilt by running `hugo` at the project root.
 
 ## Conventions
 
@@ -45,10 +48,11 @@ Synthesized insights and practical takeaways:
 
 To add a new article, provide the URL (and optionally the HN discussion link). Claude will:
 1. Fetch and read the article
-2. Create a full-fidelity source capture in the appropriate `articles/` subdirectory
-3. Create or update relevant `analysis/` files (synthesis, patterns, checklists)
+2. Create a full-fidelity source capture in the appropriate `content/articles/` subdirectory
+3. Create or update relevant `content/analysis/` files (synthesis, patterns, checklists)
 4. Add the source to `sources.md`
-5. Commit the changes
+5. Run `hugo` to rebuild the static site into `docs/`
+6. Commit the changes (markdown + docs/)
 
 When using subagent teams, parallelize: one agent per source file, one agent for analysis layer.
 

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Amp-Code on AI Best Practices Knowledge Base</title>
+    <link>//localhost:1313/tags/amp-code.html</link>
+    <description>Recent content in Amp-Code on AI Best Practices Knowledge Base</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/amp-code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Coding Tools: A Practitioner&#39;s Comparison</title>
+      <link>//localhost:1313/references/tool-landscape.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/references/tool-landscape.html</guid>
+      <description>&lt;h2 id=&#34;use-a-decision-framework-not-rankings&#34;&gt;Use a Decision Framework, Not Rankings&lt;/h2&gt;&#xA;&lt;p&gt;The AI coding tool landscape changes faster than any comparison can keep up with. Models improve monthly. Pricing shifts quarterly. New entrants appear constantly. Nearly $2 billion has been raised by coding agent startups in just the past five months.&lt;/p&gt;&#xA;&lt;p&gt;Rather than ranking tools, this page provides a decision framework based on factors that are relatively stable: workflow type, pricing model, extensibility, and integration approach. Use these to evaluate any tool, including ones that do not exist yet.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Multi-Model Agent Landscape</title>
+      <link>//localhost:1313/deep-dives/multi-model-agents.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/deep-dives/multi-model-agents.html</guid>
+      <description>&lt;h2 id=&#34;why-one-model-is-not-enough&#34;&gt;Why One Model Is Not Enough&lt;/h2&gt;&#xA;&lt;p&gt;Every frontier language model has a performance profile. Some excel at planning and reasoning over large contexts. Others are fast and cheap enough for routine lookups. Still others have been tuned for code generation, image understanding, or structured review. No single model is best at everything, and the gap between models on specific tasks can be significant.&lt;/p&gt;&#xA;&lt;p&gt;This is not a theoretical observation. Practitioners who use AI coding agents daily have noticed that the same model that writes excellent code may produce mediocre plans, and the model that reasons carefully through a complex architecture decision may be too slow and expensive for quick file searches. The question is no longer whether to use AI for coding but how to match the right model to the right subtask.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

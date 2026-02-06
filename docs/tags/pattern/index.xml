@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pattern on AI Best Practices Knowledge Base</title>
+    <link>//localhost:1313/tags/pattern.html</link>
+    <description>Recent content in Pattern on AI Best Practices Knowledge Base</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/pattern/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pattern: Task Scoping for AI Agents</title>
+      <link>//localhost:1313/patterns/task-scoping.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/patterns/task-scoping.html</guid>
+      <description>&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;&#xA;&lt;p&gt;Agent produces unusable output. Either the task is so trivial that delegation is pointless (writing a for loop, renaming a variable), or so broad that the output is confidently wrong and must be discarded entirely. In both cases, the time spent prompting and reviewing exceeds the time it would have taken to do the work manually.&lt;/p&gt;&#xA;&lt;p&gt;This is the single most common reason practitioners abandon agent-assisted development during the adoption valley.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pattern: Harness Engineering</title>
+      <link>//localhost:1313/patterns/harness-engineering.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/patterns/harness-engineering.html</guid>
+      <description>&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;&#xA;&lt;p&gt;The agent keeps making the same mistakes. You correct it in-session, it complies, and then the next session it makes the identical error because it has no memory of the previous correction. You find yourself re-explaining the same project conventions, re-specifying the same constraints, and re-fixing the same categories of errors across every interaction.&lt;/p&gt;&#xA;&lt;p&gt;There is no institutional memory across sessions. Each session starts from zero.&lt;/p&gt;&#xA;&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;&#xA;&lt;p&gt;Build persistent infrastructure that constrains and guides agents across sessions. This infrastructure &amp;mdash; the &amp;ldquo;harness&amp;rdquo; &amp;mdash; takes two complementary forms: documentation files that agents read, and purpose-built tools that agents use.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pattern: Parallel Agent Coordination</title>
+      <link>//localhost:1313/patterns/parallel-agent-coordination.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/patterns/parallel-agent-coordination.html</guid>
+      <description>&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;&#xA;&lt;p&gt;A single agent is too slow for large projects. Building a 100,000-line codebase one session at a time could take months. The obvious solution &amp;mdash; running multiple agents in parallel &amp;mdash; introduces new failure modes: agents overwrite each other&amp;rsquo;s work, duplicate effort on the same problem, create merge conflicts, and produce inconsistent code because they have no shared context.&lt;/p&gt;&#xA;&lt;p&gt;Naively adding agents does not scale. Without coordination infrastructure, more agents can mean less progress.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

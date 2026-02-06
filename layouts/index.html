@@ -1,0 +1,98 @@
+{{ define "main" }}
+{{ partial "hero.html" . }}
+
+<div class="page-container">
+  {{/* Start Here */}}
+  {{ with site.GetPage "/guides/getting-started" }}
+  <section class="home-section">
+    <div class="start-here-card">
+      <a href="{{ .RelPermalink }}" class="start-here-link">
+        <span class="start-here-badge">Start Here</span>
+        <h2>{{ .Title }}</h2>
+        <p>{{ .Description }}</p>
+        <span class="start-here-cta">Read the guide →</span>
+      </a>
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* Core Patterns */}}
+  {{ $patterns := (site.GetPage "/patterns").RegularPages }}
+  {{ if $patterns }}
+  <section class="home-section">
+    <div class="home-section-header">
+      <h2 class="home-section-title">Core Patterns</h2>
+      <a href="{{ with site.GetPage "/patterns" }}{{ .RelPermalink }}{{ end }}" class="section-link">View all →</a>
+    </div>
+    <div class="card-grid">
+      {{ range $patterns }}
+        {{ partial "card.html" . }}
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* Latest Synthesis */}}
+  {{ $synthesis := (site.GetPage "/synthesis").RegularPages }}
+  {{ with first 1 $synthesis }}
+  <section class="home-section">
+    <h2 class="home-section-title">Latest Synthesis</h2>
+    <div class="featured-card">
+      {{ range . }}
+      <a href="{{ .RelPermalink }}" class="featured-card-link">
+        <span class="featured-badge">Synthesis</span>
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Description }}</p>
+        <span class="featured-meta">{{ .ReadingTime }} min read</span>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* Deep Dives */}}
+  {{ $deepdives := (site.GetPage "/deep-dives").RegularPages }}
+  {{ if $deepdives }}
+  <section class="home-section">
+    <div class="home-section-header">
+      <h2 class="home-section-title">Deep Dives</h2>
+      <a href="{{ with site.GetPage "/deep-dives" }}{{ .RelPermalink }}{{ end }}" class="section-link">View all →</a>
+    </div>
+    <div class="card-grid">
+      {{ range $deepdives }}
+        {{ partial "card.html" . }}
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* Quick References */}}
+  {{ $refs := (site.GetPage "/references").RegularPages }}
+  {{ if $refs }}
+  <section class="home-section">
+    <div class="home-section-header">
+      <h2 class="home-section-title">Quick References</h2>
+      <a href="{{ with site.GetPage "/references" }}{{ .RelPermalink }}{{ end }}" class="section-link">View all →</a>
+    </div>
+    <div class="card-grid">
+      {{ range $refs }}
+        {{ partial "card.html" . }}
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* Browse by Topic */}}
+  <section class="home-section">
+    <h2 class="home-section-title">Browse by Topic</h2>
+    <div class="tag-cloud">
+      {{ range site.Taxonomies.tags.ByCount }}
+        <a href="{{ .Page.RelPermalink }}" class="tag-cloud-item">
+          {{ .Page.Title }}
+          <span class="tag-count">{{ .Count }}</span>
+        </a>
+      {{ end }}
+    </div>
+  </section>
+</div>
+{{ end }}

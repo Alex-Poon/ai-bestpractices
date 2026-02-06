@@ -1,0 +1,10 @@
+{{ with .Params.tags }}
+<div class="tag-pills">
+  {{ range . }}
+  {{ $tag := . }}
+  {{ with site.GetPage (printf "/tags/%s" (. | urlize)) }}
+  <a href="{{ .RelPermalink }}" class="tag-pill">{{ $tag }}</a>
+  {{ end }}
+  {{ end }}
+</div>
+{{ end }}

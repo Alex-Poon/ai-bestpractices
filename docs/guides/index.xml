@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Guides on AI Best Practices Knowledge Base</title>
+    <link>//localhost:1313/guides/index.html</link>
+    <description>Recent content in Guides on AI Best Practices Knowledge Base</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/guides/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Start Here: AI-Assisted Development</title>
+      <link>//localhost:1313/guides/getting-started.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/guides/getting-started.html</guid>
+      <description>&lt;p&gt;This site is a practitioner reference for developers who use AI coding agents in their daily work. It is built from real-world experience, community discussion, and empirical evidence &amp;mdash; not marketing claims. If you use tools like Claude Code, Cursor, Copilot, or Amp to write and modify code, the patterns and frameworks here will help you get better results and waste less time.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-core-loop&#34;&gt;The Core Loop&lt;/h2&gt;&#xA;&lt;p&gt;Effective AI-assisted development follows a four-phase loop. Every technique on this site maps back to one of these phases.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Six Stages of AI Adoption</title>
+      <link>//localhost:1313/guides/adoption-stages.html</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/guides/adoption-stages.html</guid>
+      <description>&lt;p&gt;Developers who successfully adopt AI coding agents tend to follow the same progression. Not because someone prescribed it, but because each stage builds the calibration and infrastructure required by the next. Skipping stages leads to frustration, wasted effort, and the conclusion that agents do not work &amp;mdash; when the real problem was missing foundations.&lt;/p&gt;&#xA;&lt;p&gt;This framework synthesizes practitioner experience into six stages. Most developers who abandon AI-assisted development get stuck between Stages 1 and 2. Most developers who succeed credit the investments made in Stages 2 and 5.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

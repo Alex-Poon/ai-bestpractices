@@ -1,0 +1,29 @@
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">{{ .Site.Params.description }}</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Content</h3>
+        <ul>
+          <li><a href="{{ with site.GetPage "/guides" }}{{ .RelPermalink }}{{ end }}">Guides</a></li>
+          <li><a href="{{ with site.GetPage "/deep-dives" }}{{ .RelPermalink }}{{ end }}">Deep Dives</a></li>
+          <li><a href="{{ with site.GetPage "/tags" }}{{ .RelPermalink }}{{ end }}">Topics</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="{{ with site.GetPage "/patterns" }}{{ .RelPermalink }}{{ end }}">Patterns</a></li>
+          <li><a href="{{ with site.GetPage "/references" }}{{ .RelPermalink }}{{ end }}">References</a></li>
+          <li><a href="{{ with site.GetPage "/synthesis" }}{{ .RelPermalink }}{{ end }}">Synthesis</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from practitioner experience.</p>
+    </div>
+  </div>
+</footer>

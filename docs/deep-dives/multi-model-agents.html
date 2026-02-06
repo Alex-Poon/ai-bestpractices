@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Multi-Model Agent Landscape | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="Why the future of AI coding tools is multi-model, and what practitioners should know about it.">
+  <meta name="color-scheme" content="light dark">
+
+  
+  <meta property="og:title" content="The Multi-Model Agent Landscape">
+  <meta property="og:description" content="Why the future of AI coding tools is multi-model, and what practitioners should know about it.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-deep-dives"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg class="nav-logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="guides" href="../guides/index.html">Guides</a>
+      <a class="nav-link" data-section="patterns" href="../patterns/index.html">Patterns</a>
+      <a class="nav-link" data-section="deep-dives" href="../deep-dives/index.html">Deep Dives</a>
+      <a class="nav-link" data-section="references" href="../references/index.html">References</a>
+      <a class="nav-link" data-section="tags" href="../tags/index.html">Tags</a>
+    </div>
+    <div class="nav-actions">
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../deep-dives/index.html">Deep Dives</a></li>
+      
+    
+    <li aria-current="page">The Multi-Model Agent Landscape</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">The Multi-Model Agent Landscape</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-05">
+    February 5, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">6 min read</span>
+
+  <div class="meta-links">
+    
+    
+    
+  </div>
+
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/multi-model.html" class="tag-pill">multi-model</a>
+  
+  
+  
+  
+  <a href="../tags/agent-architecture.html" class="tag-pill">agent-architecture</a>
+  
+  
+  
+  
+  <a href="../tags/tool-review.html" class="tag-pill">tool-review</a>
+  
+  
+  
+  
+  <a href="../tags/amp-code.html" class="tag-pill">amp-code</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <h2 id="why-one-model-is-not-enough">Why One Model Is Not Enough</h2>
+<p>Every frontier language model has a performance profile. Some excel at planning and reasoning over large contexts. Others are fast and cheap enough for routine lookups. Still others have been tuned for code generation, image understanding, or structured review. No single model is best at everything, and the gap between models on specific tasks can be significant.</p>
+<p>This is not a theoretical observation. Practitioners who use AI coding agents daily have noticed that the same model that writes excellent code may produce mediocre plans, and the model that reasons carefully through a complex architecture decision may be too slow and expensive for quick file searches. The question is no longer whether to use AI for coding but how to match the right model to the right subtask.</p>
+<p>The multi-model approach follows naturally: instead of routing every interaction through one model, decompose the work into distinct phases and use the model best suited for each. Planning, implementation, code review, search, and visual analysis are fundamentally different cognitive tasks. Treating them identically is a design choice, not a requirement.</p>
+<h2 id="the-routing-concept">The Routing Concept</h2>
+<p>Think of a multi-model system as a routing layer sitting above a set of specialist models. The router examines the current task type and dispatches it to the appropriate backend:</p>
+<ul>
+<li><strong>Planning and architecture</strong> goes to a model with strong reasoning capabilities, often one that takes longer but produces more coherent multi-step plans.</li>
+<li><strong>Implementation</strong> goes to a model optimized for code generation &ndash; typically the best available frontier model.</li>
+<li><strong>Fast lookups and search</strong> go to a smaller, cheaper model that can scan a codebase quickly without burning through budget.</li>
+<li><strong>Code review</strong> goes to a model that catches bugs and style issues reliably, which may not be the same model that wrote the code.</li>
+<li><strong>Visual analysis</strong> (screenshots, PDFs, diagrams) goes to a model with strong multimodal capabilities.</li>
+</ul>
+<p>This is not a new idea in software engineering. Load balancers, microservice architectures, and tiered caching all follow the same principle: different workloads deserve different resources. Applying it to LLM-based tools is a natural evolution.</p>
+<p>The tradeoff is complexity. A single-model system is simpler to reason about, debug, and predict. Multi-model routing introduces questions about handoff quality, context transfer between models, and the overhead of maintaining integrations with multiple providers. Whether the tradeoff is worth it depends on the practitioner&rsquo;s workload and budget.</p>
+<h2 id="amp-code-as-case-study">Amp Code as Case Study</h2>
+<p>Amp Code, built by the team behind Sourcegraph&rsquo;s code intelligence platform, is the most explicit implementation of multi-model routing in a production coding agent. Rather than letting users pick a model, Amp routes automatically based on task type.</p>
+<p>As of early 2026, Amp&rsquo;s routing table spans three providers (Anthropic, OpenAI, Google) and assigns specialized models to distinct roles:</p>
+<ul>
+<li>The main coding agent uses Claude Opus 4.5 for implementation work.</li>
+<li>Extended reasoning tasks (&ldquo;Deep mode&rdquo;) use GPT-5.2 Codex, which reads and navigates the codebase for 5-15 minutes before making changes.</li>
+<li>A &ldquo;second opinion&rdquo; system (&ldquo;Oracle&rdquo;) uses GPT-5.2 with medium reasoning effort &ndash; a dedicated planning check with no direct equivalent in other tools.</li>
+<li>Code review and codebase search use Gemini models, leveraging Google&rsquo;s strength in fast, large-context processing.</li>
+<li>A &ldquo;Librarian&rdquo; agent uses Claude Sonnet 4.5 to search public GitHub repositories for usage patterns and documentation.</li>
+</ul>
+<p>The routing has evolved over time. The main agent model progressed through Claude 3.7 Sonnet, Claude Sonnet 4, a brief period on Gemini 3 Pro, and then Claude Opus 4.5. The Oracle model moved from o3 to GPT-5 to GPT-5.2. This evolution illustrates both the advantage and the risk of multi-model routing: you can always upgrade individual components, but your system&rsquo;s quality depends on external providers you do not control.</p>
+<p>Amp also supports parallel subagents &ndash; spawning multiple independent agents on subtasks simultaneously. Combined with the Librarian&rsquo;s cross-repository search and built-in image generation, the system demonstrates what a fully committed multi-model architecture looks like in practice.</p>
+<p>The pricing model follows from the architecture. Because Amp uses multiple providers with different cost structures, it offers pay-as-you-go pricing rather than a flat subscription. Most tasks cost cents to a few dollars, but power users report monthly spend exceeding $1,000. Cost unpredictability is the most frequently cited weakness among users.</p>
+<h2 id="what-this-means-for-practitioners">What This Means for Practitioners</h2>
+<p>You do not need to use a multi-model tool to benefit from multi-model thinking. The underlying principle &ndash; matching model capabilities to task types &ndash; applies to any workflow.</p>
+<p><strong>Mode-switching in single-model tools.</strong> Tools like Claude Code offer different modes (standard, extended thinking) that serve a similar purpose. Using extended thinking for planning and architecture while using standard mode for implementation is manual multi-model routing. Cursor allows switching between models mid-conversation. Even without automatic routing, you can apply the concept yourself.</p>
+<p><strong>Cost and quality tradeoffs.</strong> The multi-model approach makes cost optimization explicit. Using a smaller, cheaper model for search and a frontier model only for complex implementation can dramatically reduce costs without sacrificing quality on the tasks that matter. Pay attention to where your budget is going and whether a cheaper model would suffice for routine operations.</p>
+<p><strong>Context transfer is the hard problem.</strong> When switching between models &ndash; whether automatically or manually &ndash; the quality of context transfer matters enormously. What does the planning model&rsquo;s output look like when handed to the implementation model? If important nuance is lost in translation, the routing advantage disappears. Watch for this in any multi-model workflow.</p>
+<p><strong>Evaluation is harder.</strong> With a single model, you know who to blame when output quality drops. With multiple models, diagnosing whether a problem originated in planning, implementation, or review requires understanding the full routing chain. This operational complexity is real.</p>
+<h2 id="the-no-moat-question">The &ldquo;No Moat&rdquo; Question</h2>
+<p>Ryan Carson, Amp&rsquo;s Builder in Residence, offered a candid assessment that applies to the entire space: the coding agent market may not have durable competitive moats. If the core value is orchestrating other companies&rsquo; models, what happens when those model providers build their own orchestration, or when a new tool routes to the same models more effectively?</p>
+<p>Amp&rsquo;s bet is that orchestration itself &ndash; knowing which model to use when, how to transfer context, how to parallelize effectively &ndash; is the defensible skill. Claude Code bets on having the best single model. Cursor bets on the best IDE experience. Each bet reflects a different theory about where lasting value accrues.</p>
+<p>For practitioners, the strategic question is less about which tool wins and more about building workflows that are portable. The models will keep changing. The providers will keep competing. The skill of knowing how to decompose tasks, evaluate outputs, and match capabilities to requirements will remain valuable regardless of which tool you use.</p>
+<p>See the <a href="../references/tool-landscape.html">AI Coding Tools: A Practitioner&rsquo;s Comparison</a> for a decision framework covering the current tool landscape.</p>
+
+      </div>
+
+      
+      <div class="article-sources">
+        <h3>Sources</h3>
+        <ul>
+          <li><a href="https://ampcode.com">https://ampcode.com</a></li>
+        </ul>
+      </div>
+      
+
+      <nav class="article-nav">
+        
+        
+        <a href="../deep-dives/practitioner-consensus.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">What Practitioners Actually Think About AI Coding</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#why-one-model-is-not-enough">Why One Model Is Not Enough</a></li>
+    <li><a href="#the-routing-concept">The Routing Concept</a></li>
+    <li><a href="#amp-code-as-case-study">Amp Code as Case Study</a></li>
+    <li><a href="#what-this-means-for-practitioners">What This Means for Practitioners</a></li>
+    <li><a href="#the-no-moat-question">The &ldquo;No Moat&rdquo; Question</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What the best practitioners know about AI-assisted software development.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Content</h3>
+        <ul>
+          <li><a href="../guides/index.html">Guides</a></li>
+          <li><a href="../deep-dives/index.html">Deep Dives</a></li>
+          <li><a href="../tags/index.html">Topics</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="../patterns/index.html">Patterns</a></li>
+          <li><a href="../references/index.html">References</a></li>
+          <li><a href="../synthesis/index.html">Synthesis</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Content sourced from practitioner experience.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>
