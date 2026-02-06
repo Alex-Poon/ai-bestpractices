@@ -3,12 +3,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Amp Code | AI Best Practices Knowledge Base</title>
-  <meta name="description" content="Sourcegraph&#39;s multi-model coding agent — architecture and practitioner reception.">
+  <meta name="description" content="Sourcegraph&#39;s multi-model coding agent — architecture, model routing, and practitioner reception.">
   <meta name="color-scheme" content="dark light">
 
   
   <meta property="og:title" content="Amp Code">
-  <meta property="og:description" content="Sourcegraph&#39;s multi-model coding agent — architecture and practitioner reception.">
+  <meta property="og:description" content="Sourcegraph&#39;s multi-model coding agent — architecture, model routing, and practitioner reception.">
   <meta property="og:type" content="article">
 
   
@@ -113,7 +113,7 @@
 
   
 
-  <span class="meta-reading-time">4 min read</span>
+  <span class="meta-reading-time">7 min read</span>
 
   
 
@@ -153,6 +153,11 @@
   <a href="../tags/tool-comparison.html" class="tag-pill">tool-comparison</a>
   
   
+  
+  
+  <a href="../tags/model-routing.html" class="tag-pill">model-routing</a>
+  
+  
 </div>
 
 
@@ -161,24 +166,141 @@
       <div class="article-content">
         <p>Amp Code is a coding agent built by the team behind Sourcegraph&rsquo;s code intelligence platform. Available as a CLI, VS Code extension, and JetBrains plugin, it is the most explicit implementation of multi-model routing in a production coding tool. Rather than letting users pick a single model, Amp routes tasks automatically based on type &ndash; sending planning, implementation, review, and search to whichever model is best suited for each.</p>
 <h2 id="the-multi-model-architecture">The Multi-Model Architecture</h2>
-<p>Amp&rsquo;s core design principle is that no single model is best at everything. Different cognitive tasks &ndash; planning, code generation, search, review, visual analysis &ndash; have different performance profiles across models. Amp makes this explicit by maintaining a routing table across three providers (Anthropic, OpenAI, Google):</p>
-<ul>
-<li><strong>Main coding agent</strong>: Claude Opus 4.5 for implementation</li>
-<li><strong>Extended reasoning</strong> (&ldquo;Deep mode&rdquo;): GPT-5.2 Codex, which reads and navigates the codebase for 5-15 minutes before making changes</li>
-<li><strong>Second opinion</strong> (&ldquo;Oracle&rdquo;): GPT-5.2 with medium reasoning effort, serving as a dedicated planning check</li>
-<li><strong>Code review and search</strong>: Gemini models, leveraging fast large-context processing</li>
-<li><strong>Cross-repo search</strong> (&ldquo;Librarian&rdquo;): Claude Sonnet 4.5 for searching public GitHub repositories for usage patterns</li>
-</ul>
-<p>This routing has evolved significantly over time. The main agent model progressed through multiple generations, and the Oracle model moved through several OpenAI versions. This evolution illustrates both the advantage (always upgrade to the best available) and the risk (your system depends on providers you do not control) of multi-model routing.</p>
-<p>For a deeper treatment of the multi-model concept, see <a href="../tools/amp.html">The Multi-Model Agent Landscape</a>.</p>
+<p>Amp&rsquo;s core design principle is that no single model is best at everything. Different cognitive tasks &ndash; planning, code generation, search, review &ndash; have different performance profiles across models. Amp makes this explicit by maintaining named agent roles across three providers (Anthropic, OpenAI, Google):</p>
+<table>
+  <thead>
+      <tr>
+          <th>Role</th>
+          <th>Model</th>
+          <th>Purpose</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Smart</strong> (primary agent)</td>
+          <td>Claude Opus 4.6</td>
+          <td>Main coding agent; state-of-the-art model for implementation</td>
+      </tr>
+      <tr>
+          <td><strong>Rush</strong> (fast agent)</td>
+          <td>Claude Haiku 4.5</td>
+          <td>Faster and cheaper; for small, well-defined tasks</td>
+      </tr>
+      <tr>
+          <td><strong>Deep</strong> (reasoning)</td>
+          <td>GPT-5.2 Codex</td>
+          <td>Deep reasoning with extended thinking</td>
+      </tr>
+      <tr>
+          <td><strong>Oracle</strong> (planning)</td>
+          <td>GPT-5.2</td>
+          <td>Complex reasoning and planning on code</td>
+      </tr>
+      <tr>
+          <td><strong>Librarian</strong> (research)</td>
+          <td>Claude Sonnet 4.5</td>
+          <td>Large-scale retrieval and research on external code</td>
+      </tr>
+      <tr>
+          <td><strong>Search</strong> (codebase)</td>
+          <td>Gemini 3 Flash</td>
+          <td>Fast, accurate codebase retrieval</td>
+      </tr>
+  </tbody>
+</table>
+<p>Users choose their primary mode (Smart, Rush, or Deep), but within a thread, Amp dispatches to specialized subagents &ndash; Search, Librarian, Oracle &ndash; as needed. The routing is not purely automatic; it blends user selection with task-aware dispatching.</p>
+<h3 id="why-multi-provider-matters">Why Multi-Provider Matters</h3>
+<p>Amp draws from all three major providers simultaneously, choosing the best model for each specific subtask rather than committing to a single vendor. This is a fundamentally different bet from Claude Code (best single model), Cursor (best IDE experience), or Codex (best orchestration platform). Amp bets that the defensible skill is knowing which model to use when.</p>
+<h2 id="model-selection-in-practice-three-switches-in-three-months">Model Selection in Practice: Three Switches in Three Months</h2>
+<p>Amp has demonstrated a willingness to rapidly switch primary models based on internal evaluations. This timeline illustrates how dynamic model selection has become:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Date</th>
+          <th>Primary Agent Model</th>
+          <th>Trigger</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Early 2025</td>
+          <td>Claude Sonnet 4.5</td>
+          <td>Initial default</td>
+      </tr>
+      <tr>
+          <td>November 18, 2025</td>
+          <td>Gemini 3 Pro</td>
+          <td>17-point improvement on internal benchmarks</td>
+      </tr>
+      <tr>
+          <td>November 27, 2025</td>
+          <td>Claude Opus 4.5</td>
+          <td>Higher evals, dramatically lower failure rate</td>
+      </tr>
+      <tr>
+          <td>Current (February 2026)</td>
+          <td>Claude Opus 4.6</td>
+          <td>Incremental upgrade</td>
+      </tr>
+  </tbody>
+</table>
+<p>Three primary model switches in three months. This rapid switching demonstrates that Amp treats model selection as a dynamic, ongoing process rather than a fixed architectural decision &ndash; and it offers a cautionary tale about the gap between benchmarks and production behavior.</p>
+<h2 id="the-off-the-rails-metric">The &ldquo;Off-the-Rails&rdquo; Metric</h2>
+<p>Amp&rsquo;s most distinctive contribution to the model evaluation conversation is the &ldquo;off-the-rails cost&rdquo; metric &ndash; the percentage of spend wasted on problematic outputs. This captures something benchmarks miss: how badly a model fails when it fails.</p>
+<p>From Amp&rsquo;s November 2025 evaluation comparing their three primary model candidates:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Metric</th>
+          <th>Sonnet 4.5</th>
+          <th>Gemini 3 Pro</th>
+          <th>Opus 4.5</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Internal Evals</td>
+          <td>37.1%</td>
+          <td>53.7%</td>
+          <td>57.3%</td>
+      </tr>
+      <tr>
+          <td>Avg. Thread Cost</td>
+          <td>$2.75</td>
+          <td>$2.04</td>
+          <td>$2.05</td>
+      </tr>
+      <tr>
+          <td>Off-the-Rails Cost</td>
+          <td>8.4%</td>
+          <td>17.8%</td>
+          <td>2.4%</td>
+      </tr>
+      <tr>
+          <td>Speed (p50)</td>
+          <td>2.4 min</td>
+          <td>4.3 min</td>
+          <td>3.5 min</td>
+      </tr>
+  </tbody>
+</table>
+<p>The off-the-rails numbers tell the real story. Gemini 3 Pro scored well on benchmarks (53.7% on internal evals, a 17-point jump over Sonnet), but wasted 17.8% of spend on bad outputs &ndash; nearly 1 in 5 dollars went to problematic results. Opus 4.5 wasted only 2.4%, or 1 in 40 dollars.</p>
+<p>This is why Amp switched back to Claude after just nine days with Gemini 3 Pro as primary agent. Despite strong benchmark scores, Gemini produced what Amp&rsquo;s team described as &ldquo;frustrating behaviors&rdquo; in production. Known issues included infinite thinking loops, thinking-like prose leaking into visible outputs, control character corruption, reluctance to execute bash commands, and making unrequested git commits.</p>
+<h3 id="what-this-means-for-practitioners">What This Means for Practitioners</h3>
+<p>The off-the-rails metric reveals that <strong>reliability matters more than peak capability</strong>. A model&rsquo;s worst-case behavior matters as much as its best-case performance. It also shows that <strong>total cost does not equal token cost</strong> &ndash; a more expensive model that completes tasks reliably can be cheaper overall than a cheap model that wastes tokens on retries and dead ends. Opus 4.5&rsquo;s average thread cost ($2.05) nearly matched Gemini 3 Pro ($2.04) despite significantly higher per-token pricing, because it made fewer mistakes.</p>
+<h2 id="search-subagent-a-case-study-in-specialization">Search Subagent: A Case Study in Specialization</h2>
+<p>When Amp switched their Search subagent from Claude Haiku 4.5 to Gemini 3 Flash, they saw dramatic improvements: 3x faster overall search completion, 8 parallel tool calls per iteration (versus roughly 2.5 for Haiku), and 3 turns to complete a search versus 9 turns for Haiku. Gemini 3 Flash&rsquo;s advantage came from superior parallel tool calling and the ability to conclude searches early when good results were found.</p>
+<p>This illustrates the multi-model thesis in microcosm: using a smaller, specialized model for a specific subtask produced better results than using a larger, more capable model that was not optimized for that particular function.</p>
 <h2 id="key-features-beyond-routing">Key Features Beyond Routing</h2>
 <p><strong>Parallel sub-agents.</strong> Amp can spawn multiple independent agents on subtasks simultaneously, similar to Claude Code&rsquo;s swarm feature but available earlier and with multi-model flexibility.</p>
-<p><strong>AGENTS.md support.</strong> Like Claude Code&rsquo;s CLAUDE.md, Amp reads project-level instruction files for persistent context. See the <a href="../practices/harness-engineering.html">Harness Engineering</a>.</p>
+<p><strong>AGENTS.md support.</strong> Like Claude Code&rsquo;s CLAUDE.md, Amp reads project-level instruction files for persistent context. See <a href="../practices/harness-engineering.html">Harness Engineering</a>.</p>
 <p><strong>No autocomplete.</strong> Amp dropped inline autocomplete entirely in January 2026 to focus exclusively on agentic workflows. This was a deliberate product decision reflecting the belief that autocomplete and agentic modes require different design tradeoffs.</p>
 <p><strong>Cross-repository search.</strong> The Librarian feature uses code intelligence from Sourcegraph&rsquo;s platform to search public repositories for usage patterns and documentation &ndash; a capability that leverages Sourcegraph&rsquo;s existing infrastructure.</p>
-<h2 id="pricing-pay-as-you-go">Pricing: Pay-As-You-Go</h2>
-<p>Because Amp routes to multiple providers with different cost structures, it uses pay-as-you-go pricing with no markup for individual users rather than a flat subscription. Most tasks cost cents to a few dollars, but costs scale with usage. Power users report monthly spend exceeding $1,000.</p>
-<p>Cost unpredictability is the most frequently cited weakness among Amp users. Without a flat cap, heavy usage during complex refactors or multi-agent sessions can produce surprising bills. The flip side is no rate limits or throttling &ndash; you never hit a usage ceiling.</p>
+<h2 id="pricing-ad-supported-free-tier--pay-as-you-go">Pricing: Ad-Supported Free Tier + Pay-As-You-Go</h2>
+<p>Amp&rsquo;s pricing model is distinctive in the space:</p>
+<p><strong>Free tier</strong>: Ad-supported, providing roughly $10/day in credits (approximately $300/month). Credits replenish hourly. Text-only ads can be disabled by paying. Smart mode uses Opus 4.6 with GPT-5 and Gemini-3 subagents; Rush mode uses Haiku 4.5.</p>
+<p><strong>Paid features</strong>: CLI execute mode (<code>amp -x</code>), programmatic API invocations, and Amp SDK usage require a paid plan.</p>
+<p><strong>Per-thread economics</strong> (from Amp&rsquo;s published data): a typical coding thread costs roughly $2.05 with Opus 4.5, $2.04 with Gemini 3 Pro, or $2.75 with Sonnet 4.5. Because Amp routes to multiple providers with different cost structures, costs scale with usage and can be unpredictable during intensive sessions.</p>
 <h2 id="community-reception">Community Reception</h2>
 <p>Practitioner reception reflects the tradeoffs of the multi-model approach:</p>
 <p><strong>Strengths users highlight:</strong></p>
@@ -186,17 +308,34 @@
 <li>The ability to use the best model for each task type, rather than compromising on one</li>
 <li>No rate limits or throttling, even during heavy use</li>
 <li>Strong code search capabilities via the Sourcegraph backend</li>
-<li>The Oracle &ldquo;second opinion&rdquo; feature catches planning mistakes other tools miss</li>
+<li>The Oracle planning check catches mistakes that single-model tools miss</li>
+<li>Deep mode (GPT-5.2 Codex with extended thinking) for genuinely hard reasoning tasks</li>
 </ul>
 <p><strong>Weaknesses users highlight:</strong></p>
 <ul>
-<li>Cost unpredictability, especially during intensive sessions</li>
+<li>Cost unpredictability, especially during intensive sessions &ndash; power users report monthly spend exceeding $1,000</li>
 <li>Complexity of debugging when output quality drops (which model in the chain caused the issue?)</li>
 <li>Dependence on external model providers who may change performance or pricing</li>
 <li>The &ldquo;no moat&rdquo; concern: if the value is orchestrating others&rsquo; models, what prevents those providers from building their own orchestration?</li>
 </ul>
+<h2 id="lessons-from-amps-model-evaluation">Lessons from Amp&rsquo;s Model Evaluation</h2>
+<p>Amp&rsquo;s published evaluation data offers several insights applicable beyond their specific tool:</p>
+<ol>
+<li>
+<p><strong>Multi-model beats single-model for diverse tasks.</strong> Using different models for primary coding, search, reasoning, and research outperforms relying on one model for everything.</p>
+</li>
+<li>
+<p><strong>Evaluate in production context.</strong> Amp learned that early-access benchmark performance does not always predict production behavior. After getting burned by Gemini 3 Pro&rsquo;s gap between benchmarks and reality, they adopted a more cautious evaluation pipeline.</p>
+</li>
+<li>
+<p><strong>Smaller models for specialized tasks.</strong> Using Gemini 3 Flash for search (3x faster than Haiku 4.5) and Haiku for rush tasks shows that matching model size to task complexity yields better results than always using the biggest model.</p>
+</li>
+<li>
+<p><strong>Model loyalty is counterproductive.</strong> The willingness to move between providers based on evaluation data, rather than committing to a single vendor, is central to Amp&rsquo;s approach and increasingly common among sophisticated users.</p>
+</li>
+</ol>
 <h2 id="the-strategic-question">The Strategic Question</h2>
-<p>Amp represents a bet that orchestration &ndash; knowing which model to use when, how to transfer context, how to parallelize effectively &ndash; is the defensible skill in AI coding tools. Claude Code bets on having the best single model. Cursor bets on the best IDE experience. Each reflects a different theory about where lasting value accrues.</p>
+<p>Amp represents a bet that orchestration &ndash; knowing which model to use when, how to transfer context, how to parallelize effectively &ndash; is the defensible skill in AI coding tools. Claude Code bets on having the best single model. Cursor bets on the best IDE experience. Codex bets on multi-agent orchestration and automation. Each reflects a different theory about where lasting value accrues.</p>
 <p>For practitioners, the relevant question is less about which tool wins and more about understanding the multi-model concept. Even if you use a single-model tool, you can apply multi-model thinking by switching modes (standard vs extended thinking) or models manually based on task type.</p>
 <p>For the broader decision framework, see the <a href="../tools/">Practitioner&rsquo;s Tool Comparison</a>.</p>
 
@@ -212,9 +351,9 @@
         </a>
         
         
-        <a href="../tools/cursor.html" class="article-nav-link article-nav-link--next">
+        <a href="../tools/models.html" class="article-nav-link article-nav-link--next">
           <span class="article-nav-direction">Next</span>
-          <span class="article-nav-title">Cursor</span>
+          <span class="article-nav-title">Model Deep Dive</span>
         </a>
         
       </nav>
@@ -226,10 +365,22 @@
     <h2 class="toc-title">On this page</h2>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#the-multi-model-architecture">The Multi-Model Architecture</a></li>
+    <li><a href="#the-multi-model-architecture">The Multi-Model Architecture</a>
+      <ul>
+        <li><a href="#why-multi-provider-matters">Why Multi-Provider Matters</a></li>
+      </ul>
+    </li>
+    <li><a href="#model-selection-in-practice-three-switches-in-three-months">Model Selection in Practice: Three Switches in Three Months</a></li>
+    <li><a href="#the-off-the-rails-metric">The &ldquo;Off-the-Rails&rdquo; Metric</a>
+      <ul>
+        <li><a href="#what-this-means-for-practitioners">What This Means for Practitioners</a></li>
+      </ul>
+    </li>
+    <li><a href="#search-subagent-a-case-study-in-specialization">Search Subagent: A Case Study in Specialization</a></li>
     <li><a href="#key-features-beyond-routing">Key Features Beyond Routing</a></li>
-    <li><a href="#pricing-pay-as-you-go">Pricing: Pay-As-You-Go</a></li>
+    <li><a href="#pricing-ad-supported-free-tier--pay-as-you-go">Pricing: Ad-Supported Free Tier + Pay-As-You-Go</a></li>
     <li><a href="#community-reception">Community Reception</a></li>
+    <li><a href="#lessons-from-amps-model-evaluation">Lessons from Amp&rsquo;s Model Evaluation</a></li>
     <li><a href="#the-strategic-question">The Strategic Question</a></li>
   </ul>
 </nav>
@@ -266,7 +417,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 78 pages across 197 topics.</p>
     </div>
   </div>
 </footer>

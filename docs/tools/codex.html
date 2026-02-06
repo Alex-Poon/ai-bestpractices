@@ -3,12 +3,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>OpenAI Codex | AI Best Practices Knowledge Base</title>
-  <meta name="description" content="OpenAI&#39;s coding agent — how it compares to Claude Code and what practitioners report.">
+  <meta name="description" content="OpenAI&#39;s coding agent ecosystem — Desktop App, CLI, IDE extension, and the GPT-5.3-Codex model.">
   <meta name="color-scheme" content="dark light">
 
   
   <meta property="og:title" content="OpenAI Codex">
-  <meta property="og:description" content="OpenAI&#39;s coding agent — how it compares to Claude Code and what practitioners report.">
+  <meta property="og:description" content="OpenAI&#39;s coding agent ecosystem — Desktop App, CLI, IDE extension, and the GPT-5.3-Codex model.">
   <meta property="og:type" content="article">
 
   
@@ -113,7 +113,7 @@
 
   
 
-  <span class="meta-reading-time">7 min read</span>
+  <span class="meta-reading-time">8 min read</span>
 
   
 
@@ -153,131 +153,179 @@
   <a href="../tags/agent.html" class="tag-pill">agent</a>
   
   
+  
+  
+  <a href="../tags/multi-agent.html" class="tag-pill">multi-agent</a>
+  
+  
 </div>
 
 
       </header>
 
       <div class="article-content">
-        <p>OpenAI Codex is a cloud-sandboxed coding agent that takes a fundamentally different approach from CLI-first tools like Claude Code. Rather than operating interactively in your terminal, Codex runs tasks in isolated cloud environments &ndash; you provide specifications, it executes in a sandbox, and returns results. This &ldquo;outsourcing&rdquo; model prioritizes safety and deep reasoning over real-time collaboration.</p>
-<h2 id="how-codex-works">How Codex Works</h2>
-<p>Codex operates on a submit-and-review model:</p>
-<ol>
-<li><strong>You provide a task</strong> &ndash; a bug to fix, a feature to implement, code to analyze</li>
-<li><strong>Codex spins up a sandboxed environment</strong> with your code</li>
-<li><strong>The agent works autonomously</strong> &ndash; reading files, writing code, running tests &ndash; without access to your local machine</li>
-<li><strong>You receive results</strong> to review, approve, or iterate on</li>
-</ol>
-<p>This is architecturally distinct from Claude Code and Gemini CLI, which operate directly in your terminal with access to your filesystem, environment variables, and local toolchain. Codex&rsquo;s sandbox provides isolation at the cost of local context.</p>
-<p>The agent is powered by GPT-5.2, with an &ldquo;extended thinking&rdquo; mode that spends 5-15 minutes reading and reasoning about the codebase before making changes. This extended reasoning is Codex&rsquo;s core differentiator &ndash; it trades speed for depth.</p>
+        <p>OpenAI Codex has evolved from a single cloud-sandboxed coding agent into a multi-surface ecosystem: a Desktop App for parallel agent orchestration, a CLI for terminal-first workflows, and an IDE extension for in-editor use. The February 2026 launch of the Codex Desktop App and GPT-5.3-Codex model represents a significant expansion of what Codex can do, moving it from a submit-and-review tool to a full multi-agent development environment.</p>
+<h2 id="the-codex-ecosystem-february-2026">The Codex Ecosystem (February 2026)</h2>
+<p>Codex now spans three surfaces, each targeting different workflows:</p>
+<p><strong>Codex Desktop App</strong> (launched February 2, 2026): A standalone macOS application for managing multiple AI agents in parallel. This is the newest and most ambitious surface &ndash; it introduces multi-agent orchestration, git worktree isolation, scheduled automations, and a skills system. Windows support is planned.</p>
+<p><strong>Codex CLI</strong>: The original terminal-based agent (<code>npm install -g @openai/codex</code>), now updated with parallel shell command execution, steer mode for mid-task redirection, and personal skill loading.</p>
+<p><strong>Codex IDE Extension</strong>: A VS Code extension (also compatible with Cursor and Windsurf) offering three autonomy levels &ndash; Chat, Agent, and Agent (Full Access). Supports image drag-and-drop for visual context.</p>
+<p>All three surfaces share the same model (GPT-5.3-Codex), AGENTS.md configuration, and skills system, giving developers a consistent experience across form factors.</p>
+<h2 id="gpt-53-codex-the-model">GPT-5.3-Codex: The Model</h2>
+<p>Released February 5, 2026, GPT-5.3-Codex is OpenAI&rsquo;s most capable agentic coding model. It combines frontier coding performance with general reasoning and runs 25% faster than its predecessor GPT-5.2-Codex. OpenAI reports the model was instrumental in building itself during training and deployment.</p>
+<p><strong>Benchmark highlights:</strong></p>
+<ul>
+<li><strong>SWE-Bench Pro</strong>: 56.8% (industry high across 4 languages)</li>
+<li><strong>Terminal-Bench 2.0</strong>: 77.3% (terminal skills for coding agents)</li>
+<li><strong>OSWorld-Verified</strong>: 64.7% (up from 38.2% for GPT-5.2-Codex; human baseline is roughly 72%)</li>
+</ul>
+<p>Reasoning levels are selectable (low, medium, high, minimal), letting users trade depth for speed depending on the task. API access is planned but not yet available.</p>
+<h2 id="codex-desktop-app-multi-agent-orchestration">Codex Desktop App: Multi-Agent Orchestration</h2>
+<p>The Desktop App is Codex&rsquo;s most distinctive new surface. It introduces capabilities that no other coding tool currently offers:</p>
+<h3 id="git-worktrees-for-agent-isolation">Git Worktrees for Agent Isolation</h3>
+<p>Each agent works on an isolated git worktree &ndash; an independent copy of the codebase. Multiple agents can work on the same repository simultaneously without merge conflicts. This fundamentally changes how developers approach complex features: instead of working sequentially, you can have agents explore different architectural approaches in parallel, then review and merge the best result.</p>
+<h3 id="skills-system">Skills System</h3>
+<p>Skills are reusable instruction sets that package domain knowledge into discoverable capabilities:</p>
+<ul>
+<li><strong>Repository skills</strong> live in <code>.agents/skills/</code> and are shared via version control</li>
+<li><strong>Personal skills</strong> live in <code>~/.codex/skills/</code> and apply across projects</li>
+<li><strong>Remote skills</strong> can be listed and downloaded from a public catalog</li>
+<li>OpenAI ships built-in &ldquo;plan&rdquo; and &ldquo;skill-creator&rdquo; skills</li>
+</ul>
+<p>Each skill is a folder containing a <code>SKILL.md</code> file with a name and description. The model decides when to activate a skill based on the current task.</p>
+<h3 id="automations-scheduled-tasks">Automations (Scheduled Tasks)</h3>
+<p>Automations combine instructions with optional skills, running on user-defined schedules. Results land in a review queue and are auto-archived if there is nothing to report. Use cases include daily issue triage, CI failure summarization, release brief generation, and scheduled bug detection. Future plans include cloud-based triggers so Codex runs continuously rather than only when the computer is open.</p>
+<h3 id="mid-turn-steering">Mid-Turn Steering</h3>
+<p>You can submit a message while Codex is actively working to redirect its behavior. This addresses one of the original Codex&rsquo;s biggest criticisms &ndash; the inability to course-correct mid-task. Steer mode is now stable and enabled by default.</p>
+<h3 id="agentsmd-configuration">AGENTS.md Configuration</h3>
+<p>Codex supports two-level discovery: global scope (<code>~/.codex/AGENTS.md</code>) and project scope (git root down to current working directory). Override files (<code>AGENTS.override.md</code>) are supported, with configurable fallback filenames and byte limits via <code>~/.codex/config.toml</code>.</p>
+<h2 id="security-model">Security Model</h2>
+<p>The Desktop App uses defense-in-depth security: approval policies, command safety analysis, and OS-level sandboxing (Seatbelt on macOS, Landlock on Linux, experimental on Windows). Cloud runs use isolated OpenAI-managed containers. Local execution limits agents to designated folders and branches by default, with network access and elevated permissions requiring explicit approval.</p>
 <h2 id="what-practitioners-report">What Practitioners Report</h2>
 <h3 id="strengths">Strengths</h3>
-<p><strong>Deep analysis capabilities.</strong> When given time to reason, Codex produces strong results on complex tasks. One practitioner described GPT-5.2 in extended thinking mode as winning by a comfortable margin over alternatives &ndash; though noting it was roughly four times slower, making it impractical for interactive use.</p>
-<p><strong>Planning and architecture.</strong> The extended thinking mode particularly excels at tasks that benefit from upfront reasoning: code analysis, architectural review, understanding complex codebases, and generating comprehensive test suites. Codex reads and navigates the codebase extensively before making changes, which reduces the &ldquo;just start coding&rdquo; failure mode that faster agents sometimes exhibit.</p>
-<p><strong>Sandboxed safety.</strong> For organizations concerned about AI agents running arbitrary commands on developer machines, the sandbox model provides guarancees that CLI agents cannot. Codex cannot accidentally delete files, modify system configurations, or run destructive commands outside its isolated environment.</p>
-<p><strong>Background task execution.</strong> Codex is well-suited for work that does not require real-time human interaction. Submit a task, do other work, review results later. This &ldquo;fire and forget&rdquo; model works well for code review, test generation, documentation, and large-scale analysis that would otherwise consume developer attention.</p>
+<p><strong>Multi-agent worktrees are genuinely novel.</strong> Simultaneous architectural exploration without merge conflicts is a workflow no other tool offers. Practitioners describe it as fundamentally changing how they approach complex features.</p>
+<p><strong>GPT-5.2/5.3 has improved substantially.</strong> Multiple practitioners report that Codex with GPT-5.2+ reliably handles complex problems. One user described switching to Codex around the GPT-5 timeframe because it was solving problems that other tools struggled with. Another noted that Codex with 5.2 is &ldquo;reliably good&rdquo; enough to earn default status.</p>
+<p><strong>Deep analysis remains strong.</strong> Extended thinking mode, where the agent spends several minutes reading and reasoning about the codebase before making changes, continues to produce thorough results on complex tasks. The agent reads and navigates the codebase extensively, reducing the failure mode of editing before understanding.</p>
+<p><strong>Background task execution.</strong> The submit-and-review model works well for code review, test generation, documentation, and large-scale analysis. The new automations feature extends this into scheduled, recurring work.</p>
+<p><strong>Token efficiency.</strong> OpenAI claims roughly 3x fewer tokens for equivalent tasks compared to competitors, which matters for cost-conscious teams at scale.</p>
 <h3 id="weaknesses">Weaknesses</h3>
-<p><strong>No real-time steering.</strong> The most cited limitation is the inability to redirect Codex mid-task. With Claude Code, you can watch the agent work and correct course when it takes a wrong turn. With Codex, you submit a specification and receive a finished result. One commenter captured this distinction precisely: Codex operates like an outsourcing company where you provide specifications and get results back, while Claude Code functions as a pair programmer that you can redirect in real time.</p>
-<p><strong>Slow for iterative work.</strong> Extended thinking takes minutes per task. For the rapid iterate-test-fix cycle that characterizes most development work, this latency is a significant friction. Practitioners describe it as better for long-running background work where the time investment pays off through higher quality.</p>
-<p><strong>Missing local context.</strong> The sandboxed environment can miss project-specific context that CLI agents pick up naturally: custom build tools, local dependencies, environment configuration, and runtime behavior. This means Codex sometimes produces code that works in its sandbox but fails in the actual project environment.</p>
-<p><strong>Cost.</strong> Access through OpenAI&rsquo;s Pro plan at $200/month, or through API pricing, puts it at the higher end of the market. For teams already paying for Claude Code Max plans, adding Codex as a second tool is a significant expense.</p>
+<p><strong>Quality still trails Claude Code for some users.</strong> Several practitioners report that Claude models produce correct code on the first attempt more consistently, with one noting roughly 30% less rework. The gap has narrowed with GPT-5.2+, but it persists in reports from users who have tried both recently.</p>
+<p><strong>Experiences vary widely across model versions.</strong> The quality improvement from GPT-5.1 to GPT-5.2 was dramatic. Practitioners who tried Codex with earlier models and had poor experiences may not realize how much it has improved. One commenter explicitly noted trying Codex months ago and finding it a &ldquo;huge letdown,&rdquo; while another who returned more recently found it substantially better.</p>
+<p><strong>Mac-only Desktop App.</strong> Launching a desktop app only on macOS was noted as an odd limitation for an AI tool in 2026. Windows support is planned but not yet available.</p>
+<p><strong>UX concerns.</strong> Early adopters on Reddit reported speed issues, coding errors, and undefined wait times before getting results. The Electron-based architecture drew some criticism from the HN community.</p>
+<p><strong>Cloud-first raises privacy concerns.</strong> Codex&rsquo;s architecture runs code in OpenAI&rsquo;s cloud by default, which raises data privacy questions compared to Claude Code&rsquo;s local-first approach.</p>
 <h2 id="codex-vs-claude-code">Codex vs Claude Code</h2>
-<p>The Claude Code vs Codex comparison is one of the most discussed in practitioner communities, because the tools represent fundamentally different design philosophies:</p>
+<p>This remains one of the most discussed comparisons in practitioner communities. The February 2026 updates change the picture significantly:</p>
 <table>
   <thead>
       <tr>
           <th>Dimension</th>
-          <th>OpenAI Codex</th>
+          <th>OpenAI Codex (Feb 2026)</th>
           <th>Claude Code</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td>Execution model</td>
-          <td>Cloud sandbox</td>
-          <td>Local terminal</td>
+          <td>Form factors</td>
+          <td>Desktop App + CLI + IDE extension</td>
+          <td>Terminal CLI + IDE extension</td>
       </tr>
       <tr>
-          <td>Interaction style</td>
-          <td>Submit and review</td>
-          <td>Real-time collaboration</td>
+          <td>Architecture</td>
+          <td>Cloud-first; Electron desktop app</td>
+          <td>Local-first; terminal</td>
       </tr>
       <tr>
-          <td>Speed</td>
-          <td>Slow (5-15 min/task)</td>
-          <td>Fast (seconds to minutes)</td>
+          <td>Multi-agent</td>
+          <td>First-class (worktrees, parallel threads)</td>
+          <td>Sub-agents, agent teams (research preview)</td>
       </tr>
       <tr>
           <td>Model</td>
-          <td>GPT-5.2</td>
-          <td>Claude Opus 4.5/4.6</td>
+          <td>GPT-5.3-Codex</td>
+          <td>Claude Opus 4.6</td>
+      </tr>
+      <tr>
+          <td>Scheduling</td>
+          <td>Automations (cron-like tasks)</td>
+          <td>None built-in</td>
+      </tr>
+      <tr>
+          <td>Skills/Plugins</td>
+          <td>Skills system + remote catalog</td>
+          <td>CLAUDE.md, hooks, MCP, custom commands</td>
+      </tr>
+      <tr>
+          <td>Mid-task steering</td>
+          <td>Yes (steer mode, now default)</td>
+          <td>Yes (interactive by default)</td>
+      </tr>
+      <tr>
+          <td>Interaction style</td>
+          <td>Both async and interactive now</td>
+          <td>Real-time collaboration</td>
       </tr>
       <tr>
           <td>Local context</td>
-          <td>Limited (sandboxed)</td>
+          <td>Limited (sandboxed by default)</td>
           <td>Full (filesystem access)</td>
       </tr>
       <tr>
           <td>Safety model</td>
-          <td>Isolated by default</td>
+          <td>Defense-in-depth sandbox</td>
           <td>Runs with user permissions</td>
       </tr>
       <tr>
-          <td>Extended reasoning</td>
-          <td>Primary feature</td>
-          <td>Available (extended thinking mode)</td>
+          <td>Token efficiency</td>
+          <td>~3x fewer tokens claimed</td>
+          <td>Large context (200K-1M)</td>
       </tr>
       <tr>
           <td>Extensibility</td>
-          <td>Limited</td>
+          <td>Skills, AGENTS.md, automations</td>
           <td>CLAUDE.md, hooks, MCP, sub-agents</td>
-      </tr>
-      <tr>
-          <td>Sub-agents</td>
-          <td>No</td>
-          <td>Built-in (research preview)</td>
       </tr>
   </tbody>
 </table>
-<p>The practitioner consensus is that these tools serve different use cases rather than competing directly:</p>
+<p>The practitioner consensus is shifting. Previously, Codex was clearly the &ldquo;background task&rdquo; tool while Claude Code owned interactive development. With the Desktop App&rsquo;s mid-turn steering, multi-agent parallelism, and automations, Codex now competes more directly:</p>
 <ul>
-<li><strong>Claude Code wins on interactive development</strong> &ndash; tasks where real-time steering, rapid iteration, and local context matter. Most day-to-day coding falls here.</li>
-<li><strong>Codex wins on deep analysis</strong> &ndash; tasks where extended reasoning, sandboxed safety, and background execution matter. Code review, comprehensive testing, and architectural analysis are strong use cases.</li>
+<li><strong>Claude Code still wins on day-to-day interactive coding</strong> where local context, rapid iteration, and the Claude model&rsquo;s first-attempt accuracy matter most</li>
+<li><strong>Codex now uniquely owns multi-agent orchestration</strong> &ndash; running several agents in parallel on isolated worktrees is something no other tool offers</li>
+<li><strong>Codex wins on automated workflows</strong> &ndash; scheduled automations and background execution for recurring development tasks</li>
 </ul>
-<p>Several practitioners use both: Claude Code for implementation and iteration, Codex for review and analysis. This mirrors the broader multi-model trend where different tools serve different phases of the development workflow.</p>
-<h2 id="the-extended-thinking-advantage">The Extended Thinking Advantage</h2>
-<p>Codex&rsquo;s extended thinking mode deserves specific attention because it represents a genuine capability difference, not just a speed-quality tradeoff:</p>
-<p>When Codex spends 5-15 minutes reading and reasoning about a codebase before making changes, it builds a more comprehensive understanding than agents that start editing immediately. This shows up in:</p>
+<p>Several practitioners use both tools for different phases of work, which mirrors the broader multi-model trend.</p>
+<h2 id="pricing-and-access">Pricing and Access</h2>
+<p>Codex is bundled with ChatGPT subscriptions rather than priced separately:</p>
 <ul>
-<li><strong>Fewer cascading errors</strong>: Changes are more likely to account for cross-file dependencies</li>
-<li><strong>Better architectural coherence</strong>: The agent considers the broader design before modifying individual components</li>
-<li><strong>More thorough test coverage</strong>: Generated tests cover more edge cases because the agent has reasoned about the code&rsquo;s behavior more deeply</li>
+<li><strong>Plus</strong>: $20/month (30-150 messages per 5-hour window)</li>
+<li><strong>Pro</strong>: $200/month (300-1,500 messages per 5-hour window)</li>
+<li><strong>Business</strong>: $30/user/month</li>
+<li><strong>Enterprise/Education</strong>: contact sales</li>
+<li><strong>API key option</strong>: usage-based billing for those who prefer it</li>
 </ul>
-<p>The tradeoff is that this deep reasoning is wasted on simple tasks. For a quick bug fix or a straightforward feature addition, 15 minutes of thinking is 14 minutes of overhead. The skill is knowing which tasks benefit from extended reasoning and which need fast iteration.</p>
-<h2 id="the-model-behind-codex">The Model Behind Codex</h2>
-<p>Codex is powered by GPT-5.2, OpenAI&rsquo;s latest model. Practitioner reports on GPT-5.2 reveal a nuanced picture:</p>
-<p><strong>Where GPT-5.2 excels:</strong> Complex reasoning tasks, analysis, and situations where extended thinking compensates for raw ability. Practitioners describe it as strong in specific domains like research, historical context, and recipe generation &ndash; areas where broad knowledge matters more than precise code generation.</p>
-<p><strong>Where GPT-5.2 lags:</strong> Coding tasks requiring precise first-attempt correctness. Multiple practitioners report that Claude Opus models produce correct code on the first attempt more consistently. One user described trying both models and finding that Anthropic&rsquo;s models tend to get it right on the first try, while ChatGPT and Gemini more often have fundamental misunderstandings that require correction.</p>
-<p><strong>Sycophancy concerns:</strong> GPT-5.2 has the most widely reported sycophancy problem among major models. In code review contexts, one practitioner contrasted Claude&rsquo;s direct, critical feedback with GPT&rsquo;s tendency to affirm that everything looks great. For tasks where honest critique matters &ndash; code review, architecture review, debugging &ndash; this personality difference is functionally important.</p>
+<p>OpenAI temporarily included Codex access for free-tier users (a 2-month promotional window), which represents an aggressive growth play. Paid plans receive double rate limits during the promotional period, and additional credits are purchasable when limits are reached.</p>
+<h2 id="scale-and-adoption">Scale and Adoption</h2>
+<p>OpenAI reports over 1 million developers used Codex in the past month, with usage growing 20x since August 2025 and doubling since the GPT-5.2-Codex launch in mid-December 2025.</p>
 <h2 id="where-codex-fits">Where Codex Fits</h2>
 <p>Codex is the strongest choice for:</p>
 <ul>
-<li><strong>Background code analysis</strong> where extended reasoning improves quality and real-time interaction is unnecessary</li>
-<li><strong>Security-conscious organizations</strong> that require sandboxed execution and cannot allow agents to run on developer machines</li>
-<li><strong>Test generation at scale</strong> where the extended thinking mode produces more thorough coverage</li>
-<li><strong>Teams already in the OpenAI ecosystem</strong> who want agentic capabilities without switching providers</li>
-<li><strong>Architectural review</strong> where deep codebase understanding matters more than speed</li>
+<li><strong>Multi-agent parallel development</strong> where git worktree isolation lets you explore alternatives simultaneously</li>
+<li><strong>Automated recurring tasks</strong> using the scheduling and automations system</li>
+<li><strong>Teams already in the OpenAI ecosystem</strong> who want agentic capabilities bundled with ChatGPT</li>
+<li><strong>Background code analysis</strong> where extended reasoning improves quality</li>
+<li><strong>Security-conscious organizations</strong> requiring sandboxed execution</li>
+<li><strong>Cost-sensitive teams</strong> where token efficiency at scale matters</li>
 </ul>
 <p>It is less well-suited for:</p>
 <ul>
-<li><strong>Day-to-day interactive coding</strong> where the submit-and-wait model is too slow</li>
-<li><strong>Rapid iteration cycles</strong> that require real-time steering and quick feedback</li>
-<li><strong>Projects with complex local environments</strong> that are hard to replicate in a sandbox</li>
-<li><strong>Budget-conscious teams</strong> at $200/month per developer</li>
+<li><strong>Developers who prioritize first-attempt code accuracy</strong> where practitioners still give Claude models an edge</li>
+<li><strong>Windows and Linux desktop users</strong> (CLI and IDE extension work, but the Desktop App is Mac-only)</li>
+<li><strong>Teams wanting local-first execution</strong> where sending code to the cloud is unacceptable</li>
+<li><strong>Budget-conscious individuals</strong> &ndash; while the free tier is generous, serious use requires $20-200/month</li>
 </ul>
 <h2 id="the-bigger-picture">The Bigger Picture</h2>
-<p>Codex&rsquo;s design reflects a bet that AI coding will increasingly move toward background, asynchronous execution &ndash; where developers describe what they want and review results, rather than watching an agent work in real time. This is the management model taken to its logical conclusion: you delegate and review rather than pair-program.</p>
-<p>Whether this vision wins depends on how quickly models get reliable enough that review can replace steering. Today, most practitioners still need to redirect agents mid-task frequently enough that real-time interaction matters. As models improve, the balance may shift toward Codex&rsquo;s model.</p>
+<p>The Codex Desktop App represents OpenAI&rsquo;s bet that the future of AI-assisted development is multi-agent orchestration and continuous automation, not just interactive pair programming. The combination of parallel agents on isolated worktrees, a skills system for reusable workflows, and scheduled automations points toward a model where developers manage a team of AI agents rather than working with a single assistant.</p>
+<p>Whether this vision wins depends on whether multi-agent workflows deliver enough value to justify the added complexity. Today, most practitioners still find that a single capable agent (Claude Code, Cursor) handles the majority of their work. But for complex projects with multiple independent workstreams, Codex&rsquo;s parallel execution model is genuinely novel.</p>
 <p>For the broader decision framework, see the <a href="../tools/compare.html">Tool Comparison Matrix</a>. For the interactive alternative, see <a href="../tools/claude-code.html">Claude Code</a>.</p>
 
       </div>
@@ -285,6 +333,11 @@
       
 
       <nav class="article-nav">
+        
+        <a href="../tools/aider.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Aider</span>
+        </a>
         
         
         <a href="../tools/gemini-cli.html" class="article-nav-link article-nav-link--next">
@@ -301,7 +354,18 @@
     <h2 class="toc-title">On this page</h2>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#how-codex-works">How Codex Works</a></li>
+    <li><a href="#the-codex-ecosystem-february-2026">The Codex Ecosystem (February 2026)</a></li>
+    <li><a href="#gpt-53-codex-the-model">GPT-5.3-Codex: The Model</a></li>
+    <li><a href="#codex-desktop-app-multi-agent-orchestration">Codex Desktop App: Multi-Agent Orchestration</a>
+      <ul>
+        <li><a href="#git-worktrees-for-agent-isolation">Git Worktrees for Agent Isolation</a></li>
+        <li><a href="#skills-system">Skills System</a></li>
+        <li><a href="#automations-scheduled-tasks">Automations (Scheduled Tasks)</a></li>
+        <li><a href="#mid-turn-steering">Mid-Turn Steering</a></li>
+        <li><a href="#agentsmd-configuration">AGENTS.md Configuration</a></li>
+      </ul>
+    </li>
+    <li><a href="#security-model">Security Model</a></li>
     <li><a href="#what-practitioners-report">What Practitioners Report</a>
       <ul>
         <li><a href="#strengths">Strengths</a></li>
@@ -309,8 +373,8 @@
       </ul>
     </li>
     <li><a href="#codex-vs-claude-code">Codex vs Claude Code</a></li>
-    <li><a href="#the-extended-thinking-advantage">The Extended Thinking Advantage</a></li>
-    <li><a href="#the-model-behind-codex">The Model Behind Codex</a></li>
+    <li><a href="#pricing-and-access">Pricing and Access</a></li>
+    <li><a href="#scale-and-adoption">Scale and Adoption</a></li>
     <li><a href="#where-codex-fits">Where Codex Fits</a></li>
     <li><a href="#the-bigger-picture">The Bigger Picture</a></li>
   </ul>
@@ -348,7 +412,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 78 pages across 197 topics.</p>
     </div>
   </div>
 </footer>

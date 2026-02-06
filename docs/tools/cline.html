@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cline | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="Open-source VS Code agent with human-in-the-loop approval gates, browser automation, and a thriving fork ecosystem.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Cline">
+  <meta property="og:description" content="Open-source VS Code agent with human-in-the-loop approval gates, browser automation, and a thriving fork ecosystem.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-tools"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../tools/index.html">Tool Landscape</a></li>
+      
+    
+    <li aria-current="page">Cline</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Cline</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-06">
+    February 6, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">7 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/cline.html" class="tag-pill">cline</a>
+  
+  
+  
+  
+  <a href="../tags/vs-code.html" class="tag-pill">vs-code</a>
+  
+  
+  
+  
+  <a href="../tags/agent-workflows.html" class="tag-pill">agent-workflows</a>
+  
+  
+  
+  
+  <a href="../tags/open-source.html" class="tag-pill">open-source</a>
+  
+  
+  
+  
+  <a href="../tags/human-in-the-loop.html" class="tag-pill">human-in-the-loop</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <p>Cline is an open-source VS Code extension that turns large language models into autonomous coding agents. Originally released as &ldquo;Claude Dev,&rdquo; it has grown to over 5 million installs across VS Code, JetBrains, Cursor, and Windsurf. Its defining characteristic is a human-in-the-loop design: the agent proposes actions at every step and waits for your approval before executing. This makes it one of the most transparent and controllable AI coding tools available.</p>
+<p>Unlike Cursor (a standalone IDE) or Claude Code (a terminal agent), Cline is an extension that drops into your existing editor setup. Your keybindings, themes, extensions, and configurations stay intact. This preservation of workflow is a major reason for its adoption &ndash; developers can add agentic AI capabilities without abandoning their carefully tuned environments.</p>
+<h2 id="how-it-works">How It Works</h2>
+<p>Cline operates through multi-step task execution inside VS Code. You describe what you want in natural language, and Cline breaks the task into a sequence of actions: editing files, running terminal commands, automating browser interactions, and calling external tools via MCP. Critically, each action is presented for approval before execution.</p>
+<p>The tool supports two primary modes:</p>
+<ul>
+<li><strong>Plan mode.</strong> Cline creates a detailed action plan before touching any code. You review the plan, adjust it, and then approve execution. This is valuable for complex tasks where you want to validate the approach before the agent starts making changes.</li>
+<li><strong>Act mode.</strong> The agent executes step by step, showing you each proposed action and waiting for approval. This provides fine-grained control over every file edit, command run, and API call.</li>
+</ul>
+<p>Key capabilities include:</p>
+<ul>
+<li><strong>Human-in-the-loop approval gates.</strong> Every action requires explicit approval. You see exactly what Cline intends to do before it does it &ndash; file edits shown as diffs, terminal commands displayed before execution.</li>
+<li><strong>Browser automation.</strong> Cline can launch a browser, navigate to your application, and test for visual bugs or runtime errors. This closes the loop between code generation and verification.</li>
+<li><strong>MCP extensibility.</strong> Connect external tools through the Model Context Protocol. This enables custom integrations &ndash; database queries, API calls, documentation lookups &ndash; without modifying Cline itself.</li>
+<li><strong>Timeline and revert.</strong> Every action is recorded in a timeline. You can step backward through changes and revert to any previous state, providing a safety net for experimental work.</li>
+<li><strong>Model-agnostic.</strong> Bring your own API keys for any major provider: Anthropic, OpenAI, Google, and others. No subscription to Cline itself is required for individual use.</li>
+</ul>
+<h2 id="the-approval-gate-philosophy">The Approval Gate Philosophy</h2>
+<p>Cline&rsquo;s approval-based workflow represents a deliberate design choice about the relationship between human developers and AI agents. Where tools like Claude Code and Codex optimize for autonomous execution &ndash; minimizing the number of times you need to intervene &ndash; Cline optimizes for oversight.</p>
+<p>This philosophy attracts a specific kind of user: developers who want AI assistance but are uncomfortable delegating execution authority. The approval gates mean you never wonder what the agent did while you were not looking. Every change is explicitly sanctioned.</p>
+<p>The tradeoff is speed. Approving each action adds friction. For well-scoped tasks where you trust the agent&rsquo;s judgment, this friction can feel unnecessary. For complex tasks in unfamiliar codebases or security-sensitive environments, the overhead pays for itself in avoided mistakes.</p>
+<h2 id="practitioner-reports">Practitioner Reports</h2>
+<p>Cline&rsquo;s practitioner reception reflects its design tradeoffs. Power users who invest time in configuring their setup report strong results on complex, multi-file tasks. The transparency and control resonate with developers working on production systems where unexpected changes carry real consequences.</p>
+<p>In HN discussions, Cline is frequently compared to Cursor. The consensus is that Cline offers more control and works better for complex multi-file tasks, while Cursor provides a more polished and immediately usable experience. One practitioner framework captured the distinction well: Cline is an extension that preserves your setup; Cursor is a separate IDE that replaces it.</p>
+<p>The BYOK (bring your own key) model means API costs can add up quickly on complex tasks, since multi-step agents consume more tokens than simple completion tools. Several users note that cost management requires attention &ndash; running Opus-class models through Cline on large tasks generates substantial bills.</p>
+<p>The tool rewards deliberate users who think carefully about task decomposition and model selection. It can frustrate developers who want a one-click experience with minimal configuration.</p>
+<h2 id="the-cline-fork-ecosystem">The Cline Fork Ecosystem</h2>
+<p>One of the most notable developments in the AI coding tool space is the fragmentation of the Cline ecosystem into specialized forks. Two major variants have emerged:</p>
+<p><strong>Roo Code</strong> extends Cline with multi-agent capabilities and role-driven execution. Rather than a single agent handling all tasks, Roo Code can orchestrate multiple specialized agents &ndash; one for planning, another for implementation, a third for testing. This parallels the multi-agent trend seen in Claude Code&rsquo;s swarm feature, but implemented as a VS Code extension. Practitioners describe using Roo Code&rsquo;s &ldquo;Orchestrator&rdquo; mode, where the tool breaks tasks into sub-tasks and delegates them to specialized roles.</p>
+<p><strong>Kilo Code</strong> represents another fork with its own direction, contributing to an ecosystem where the core Cline platform has spawned multiple specialized variants.</p>
+<p>This forking pattern mirrors broader trends in open-source AI tools: a successful core project splits into variants that explore different tradeoffs around autonomy, control, and specialization. The Cline ecosystem demonstrates that the space is far from settled on what the right level of agent autonomy should be.</p>
+<h2 id="where-cline-fits-in-the-landscape">Where Cline Fits in the Landscape</h2>
+<p><strong>Choose Cline when:</strong></p>
+<ul>
+<li>You want maximum transparency and control over agent actions</li>
+<li>You work in VS Code and do not want to switch editors</li>
+<li>You need browser automation for testing visual output</li>
+<li>You want MCP extensibility for custom tool integration</li>
+<li>You value the ability to revert any action through the timeline</li>
+</ul>
+<p><strong>Consider alternatives when:</strong></p>
+<ul>
+<li>You want minimal friction and fast autonomous execution (Claude Code, Codex CLI)</li>
+<li>You prefer a standalone AI-native IDE experience (Cursor, Windsurf)</li>
+<li>You want terminal-based workflows (Claude Code, Aider)</li>
+<li>You find approval gates too slow for your workflow</li>
+</ul>
+<h2 id="compared-to-cursor">Compared to Cursor</h2>
+<p>This is the most common comparison in practitioner discussions. Both operate in the IDE space, but they represent different design philosophies:</p>
+<p>Cline is an <strong>extension</strong> &ndash; it adds agentic capabilities to VS Code while preserving your existing environment. Every action requires approval. The focus is on transparency and control.</p>
+<p>Cursor is a <strong>standalone IDE</strong> &ndash; a fork of VS Code rebuilt around AI. It features inline completions, fast autonomous execution, and a polished visual experience. The focus is on speed and seamless integration.</p>
+<p>Cline tends to outperform Cursor on complex, multi-file tasks where careful step-by-step execution matters. Cursor tends to outperform Cline on rapid iteration and simple tasks where the overhead of approval gates adds unnecessary friction.</p>
+<h2 id="compared-to-claude-code">Compared to Claude Code</h2>
+<p>Cline and Claude Code solve similar problems through different interfaces. Cline is visual and IDE-based; Claude Code is terminal-based. Both support agentic workflows where the AI reads files, runs commands, and iterates on failures.</p>
+<p>The key philosophical difference is control. Cline&rsquo;s approval gates give you explicit veto power over every action. Claude Code runs more autonomously, though it respects permission boundaries and will ask before potentially destructive operations.</p>
+<p>Developers who spend their day in VS Code tend to prefer Cline. Those who live in the terminal gravitate toward Claude Code. Both benefit from well-written project documentation &ndash; CLAUDE.md for Claude Code, and equivalent context files for Cline.</p>
+<h2 id="pricing">Pricing</h2>
+<p>The Cline extension itself is free for individual use under an open-source license. You pay only for API inference through your own keys (BYOK model).</p>
+<p>For teams, Cline offers a collaboration plan that was free through Q1 2026, transitioning to $20 per user per month. The first 10 seats remain free permanently, making it accessible for small teams.</p>
+<p>This pricing structure &ndash; free tool, pay-per-token API costs &ndash; means your total spend scales with usage intensity rather than headcount. Light users pay very little; heavy users of capable models can see significant bills.</p>
+<h2 id="practical-tips">Practical Tips</h2>
+<ol>
+<li>
+<p><strong>Use Plan mode for complex tasks.</strong> Review the agent&rsquo;s proposed approach before any code is modified. This catches misunderstandings early and saves tokens.</p>
+</li>
+<li>
+<p><strong>Configure MCP tools for your stack.</strong> Database queries, API documentation, and deployment tools can all be exposed through MCP, giving Cline richer context.</p>
+</li>
+<li>
+<p><strong>Monitor API costs.</strong> Multi-step agentic workflows consume more tokens than autocomplete. Track your spending, especially when using frontier models.</p>
+</li>
+<li>
+<p><strong>Leverage the timeline for experiments.</strong> Cline&rsquo;s revert capability makes it safe to try aggressive changes. If the result is poor, roll back to a known good state.</p>
+</li>
+<li>
+<p><strong>Consider Roo Code for multi-agent workflows.</strong> If you find yourself breaking tasks into subtasks manually, the orchestrator pattern in Roo Code may automate that decomposition.</p>
+</li>
+<li>
+<p><strong>Start with approval gates on, then relax.</strong> New users benefit from reviewing every action. As you build trust with the tool on your codebase, you can approve routine actions more quickly.</p>
+</li>
+</ol>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../tools/windsurf.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Windsurf</span>
+        </a>
+        
+        
+        <a href="../tools/aider.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Aider</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#how-it-works">How It Works</a></li>
+    <li><a href="#the-approval-gate-philosophy">The Approval Gate Philosophy</a></li>
+    <li><a href="#practitioner-reports">Practitioner Reports</a></li>
+    <li><a href="#the-cline-fork-ecosystem">The Cline Fork Ecosystem</a></li>
+    <li><a href="#where-cline-fits-in-the-landscape">Where Cline Fits in the Landscape</a></li>
+    <li><a href="#compared-to-cursor">Compared to Cursor</a></li>
+    <li><a href="#compared-to-claude-code">Compared to Claude Code</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#practical-tips">Practical Tips</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 78 pages across 197 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Human-in-the-Loop on AI Best Practices Knowledge Base</title>
+    <link>/tags/human-in-the-loop.html</link>
+    <description>Recent content in Human-in-the-Loop on AI Best Practices Knowledge Base</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/human-in-the-loop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cline</title>
+      <link>/tools/cline.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tools/cline.html</guid>
+      <description>&lt;p&gt;Cline is an open-source VS Code extension that turns large language models into autonomous coding agents. Originally released as &amp;ldquo;Claude Dev,&amp;rdquo; it has grown to over 5 million installs across VS Code, JetBrains, Cursor, and Windsurf. Its defining characteristic is a human-in-the-loop design: the agent proposes actions at every step and waits for your approval before executing. This makes it one of the most transparent and controllable AI coding tools available.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

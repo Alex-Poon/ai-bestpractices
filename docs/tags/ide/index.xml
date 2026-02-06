@@ -6,7 +6,7 @@
     <description>Recent content in Ide on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/ide/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Claude Code gets native LSP support</title>
@@ -14,6 +14,13 @@
       <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
       <guid>/sources/2025-12-22-claude-code-lsp-support.html</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Anthropic added native Language Server Protocol (LSP) support to Claude Code, enabling the CLI-based agent to integrate with language servers for improved code understanding, navigation, and analysis. The feature was announced through Claude Code&amp;rsquo;s changelog and surfaced via a plugin system where users can discover and install LSP integrations.&lt;/p&gt;&#xA;&lt;p&gt;LSP support represents a significant step in making CLI-based AI coding agents competitive with IDE-based tools like Cursor. Language servers provide structured information about code: type definitions, references, diagnostics, and refactoring capabilities. By connecting Claude Code to these servers, the agent gains access to the same code intelligence that powers IDE features, without requiring a full IDE environment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Windsurf</title>
+      <link>/tools/windsurf.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tools/windsurf.html</guid>
+      <description>&lt;p&gt;Windsurf is a full AI-native IDE built by Codeium. Unlike extensions that bolt AI onto existing editors, Windsurf was designed from the ground up around AI-first workflows. Its Cascade agent plans multi-step edits, calls tools, and maintains deep repository context. The tool positions itself as the primary alternative to Cursor, competing on context handling, pricing, and enterprise security features.&lt;/p&gt;&#xA;&lt;p&gt;The core technical differentiator is context. Windsurf uses a RAG-based context engine that maintains an effective working context of approximately 200,000 tokens &amp;ndash; substantially larger than the practical context most other IDE-based agents achieve. This makes a meaningful difference on large codebases where the agent needs awareness of distant architectural decisions, shared types, and cross-module dependencies.&lt;/p&gt;</description>
     </item>
     <item>
       <title>2026: The Year the IDE Died (Steve Yegge and Gene Kim)</title>

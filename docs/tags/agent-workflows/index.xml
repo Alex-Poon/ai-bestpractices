@@ -44,6 +44,13 @@
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;The Agentic AI Handbook provides a comprehensive taxonomy of production-ready patterns for building agentic AI systems. Its core definition frames an agent as an LLM wrapped in a loop that can observe state, call tools, record results, and decide when it is done. The handbook organizes patterns into eight categories covering orchestration and control, tool use, context and memory, feedback loops, UX and collaboration, reliability and evaluation, learning and adaptation, and security and safety.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Cline</title>
+      <link>/tools/cline.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tools/cline.html</guid>
+      <description>&lt;p&gt;Cline is an open-source VS Code extension that turns large language models into autonomous coding agents. Originally released as &amp;ldquo;Claude Dev,&amp;rdquo; it has grown to over 5 million installs across VS Code, JetBrains, Cursor, and Windsurf. Its defining characteristic is a human-in-the-loop design: the agent proposes actions at every step and waits for your approval before executing. This makes it one of the most transparent and controllable AI coding tools available.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Coding with LLMs in 2026: The Model Matters More Than the Prompts</title>
       <link>/sources/2026-01-18-model-matters-more-than-prompts.html</link>
       <pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>

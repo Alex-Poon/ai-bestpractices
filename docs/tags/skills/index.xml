@@ -16,6 +16,13 @@
       <description>&lt;p&gt;In early 2026, Anthropic published a study examining how AI coding assistance affects developer skill development. The study became one of the most intensely debated pieces of AI research in the developer community, generating over 346 comments on Hacker News. The reaction was notable not for the usual pro/anti-AI polarization but for the depth of personal reflection it provoked &amp;ndash; developers grappling honestly with what they had already noticed happening to their own abilities.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Gemini CLI</title>
+      <link>/tools/gemini-cli.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tools/gemini-cli.html</guid>
+      <description>&lt;p&gt;Gemini CLI is Google&amp;rsquo;s terminal-based coding agent, powered by Gemini models. It offers a similar interaction model to Claude Code &amp;ndash; describe a task in natural language, and the agent reads files, generates code, and iterates &amp;ndash; but draws on Google&amp;rsquo;s model family and ecosystem. It is notable for its generous free tier, massive context windows, a sophisticated memory system, an agent skills framework, and the polarized practitioner reception that consistently separates benchmark performance from real-world experience. As of February 2026, it is at v0.27.0 with rapid weekly releases.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Claude Skill for Terraform/OpenTofu</title>
       <link>/sources/2026-01-19-terraform-skill-claude.html</link>
       <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>

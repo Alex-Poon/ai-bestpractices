@@ -47,6 +47,9 @@
     <loc>/practices/harness-engineering.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tools/models.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/practices/index.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -173,8 +176,20 @@
     <loc>/sources/2025-12-18-two-kinds-vibe-coding.html</loc>
     <lastmod>2025-12-18T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tools/aider.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tools/cline.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/sources/2026-02-02-vibe-coding-killing-open-source.html</loc>
     <lastmod>2026-02-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tools/windsurf.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tools/kiro.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/sources/2026-01-04-llm-coding-workflow-2026.html</loc>
     <lastmod>2026-01-04T00:00:00+00:00</lastmod>
@@ -272,6 +287,9 @@
     <loc>/tags/ai-skepticism.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tags/aider.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/amp-code.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -279,6 +297,9 @@
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/autonomy.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/aws.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/beginner.html</loc>
@@ -296,6 +317,9 @@
     <loc>/tags/career.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tags/cascade.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/case-study.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -308,7 +332,13 @@
     <loc>/tags/cli.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tags/cline.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/code-review.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/codeium.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/codex.html</loc>
@@ -395,6 +425,9 @@
     <loc>/tags/engineering-identity.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tags/enterprise.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/expert-techniques.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -413,6 +446,9 @@
     <loc>/tags/getting-started.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tags/git.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/google.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -420,6 +456,12 @@
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/honest-assessment.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/human-in-the-loop.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/ide.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/ide-tools.html</loc>
@@ -443,6 +485,9 @@
     <loc>/tags/karpathy.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tags/kiro.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/learning.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -461,7 +506,13 @@
     <loc>/tags/mcp.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tags/memory.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/mistral.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/model-agnostic.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/model-quality.html</loc>
@@ -470,7 +521,13 @@
     <loc>/tags/model-releases.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tags/model-routing.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/model-selection.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/models.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/multi-agent.html</loc>
@@ -539,6 +596,9 @@
     <loc>/tags/skills.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tags/spec-driven.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/sustainability.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -549,6 +609,9 @@
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/task-scoping.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/terminal.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/test-design.html</loc>
@@ -573,6 +636,12 @@
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/vibe-coding.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/vs-code.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/windsurf.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/workflow.html</loc>
@@ -768,9 +837,6 @@
     <lastmod>2025-12-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/code-intelligence.html</loc>
-    <lastmod>2025-12-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/ide.html</loc>
     <lastmod>2025-12-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/lsp.html</loc>

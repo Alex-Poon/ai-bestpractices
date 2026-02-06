@@ -1,6 +1,6 @@
 ---
 title: "Tool Landscape"
-description: "The AI coding tools practitioners actually use — Claude Code, Cursor, Amp, Copilot, and the MCP ecosystem."
+description: "The AI coding tools practitioners actually use — CLI agents, IDE integrations, multi-model platforms, and the MCP ecosystem."
 weight: 20
 ---
 
@@ -13,15 +13,34 @@ Rather than ranking tools, this section profiles each major player based on prac
 The most important distinction is between **autocomplete** tools (inline suggestions as you type) and **agentic** tools (autonomous task execution with file editing, command running, and iterative error correction). Some tools offer both; the question is which mode is first-class.
 
 - **Autocomplete-first**: GitHub Copilot
-- **Agentic-first**: Claude Code, Amp Code
-- **Hybrid**: Cursor (both modes as first-class features)
+- **Agentic-first**: Claude Code, Gemini CLI, Aider, OpenAI Codex, Amp Code
+- **Hybrid**: Cursor, Windsurf, Cline, Kiro (IDE-based with both inline and agentic modes)
 
-## What Is Covered Here
+## CLI-First Agents
 
-- [Claude Code](/tools/claude-code.html) -- Anthropic's CLI-first agent, with deep dives on swarms, LSP support, and AGENTS.md
-- [Cursor](/tools/cursor.html) -- The AI-native IDE fork of VS Code
-- [Amp Code](/tools/amp.html) -- Sourcegraph's multi-model coding agent
-- [GitHub Copilot](/tools/copilot.html) -- The original AI coding assistant
-- [The MCP Ecosystem](/tools/mcp-ecosystem.html) -- Model Context Protocol and the interoperability layer emerging around it
+Terminal-native tools that run in your shell, operate on your codebase directly, and integrate with Unix workflows. Preferred by developers who want maximum control and scriptability.
 
-For a decision framework covering pricing, extensibility, and integration approach, see the [Practitioner's Tool Comparison](/tools/). For a deeper treatment of multi-model routing, see [The Multi-Model Agent Landscape](/tools/amp.html).
+- [Claude Code](/tools/claude-code.html) -- Anthropic's agentic CLI, with support for swarms, LSP integration, and AGENTS.md configuration
+- [Gemini CLI](/tools/gemini-cli.html) -- Google's open-source terminal agent powered by Gemini models
+- [Aider](/tools/aider.html) -- Open-source terminal agent supporting dozens of models via a bring-your-own-key approach
+- [OpenAI Codex](/tools/codex.html) -- OpenAI's CLI agent with sandboxed execution and code reasoning
+
+## IDE-Based Tools
+
+Editors and extensions that embed AI directly into your development environment. These provide inline completions, chat panels, and increasingly autonomous agent modes within a visual interface.
+
+- [Cursor](/tools/cursor.html) -- AI-native IDE forked from VS Code, combining autocomplete, chat, and agentic editing
+- [GitHub Copilot](/tools/copilot.html) -- The original AI coding assistant, now expanding from autocomplete into agentic workflows
+- [Cline](/tools/cline.html) -- VS Code extension that turns your editor into an autonomous coding agent
+- [Windsurf](/tools/windsurf.html) -- AI-native IDE from Codeium with deep editor integration and agentic flows
+- [Kiro](/tools/kiro.html) -- AWS-backed IDE that uses specs and structured requirements to drive agent behavior
+
+## Multi-Model Platforms
+
+- [Amp Code](/tools/amp.html) -- Sourcegraph's multi-model coding agent that routes tasks across providers
+
+## Cross-Cutting Topics
+
+- [Model Deep Dive](/tools/models.html) -- Which model works best for which task, and how to think about model selection for coding
+- [Tool Comparison](/tools/compare.html) -- Side-by-side decision framework covering pricing, extensibility, and integration approach
+- [The MCP Ecosystem](/tools/mcp-ecosystem.html) -- Model Context Protocol and the interoperability layer emerging around AI tools

@@ -3,12 +3,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gemini CLI | AI Best Practices Knowledge Base</title>
-  <meta name="description" content="Google&#39;s entry into the AI coding agent space — what practitioners think of its approach.">
+  <meta name="description" content="Google&#39;s entry into the AI coding agent space — memory system, agent skills, and practitioner reception.">
   <meta name="color-scheme" content="dark light">
 
   
   <meta property="og:title" content="Gemini CLI">
-  <meta property="og:description" content="Google&#39;s entry into the AI coding agent space — what practitioners think of its approach.">
+  <meta property="og:description" content="Google&#39;s entry into the AI coding agent space — memory system, agent skills, and practitioner reception.">
   <meta property="og:type" content="article">
 
   
@@ -113,7 +113,7 @@
 
   
 
-  <span class="meta-reading-time">6 min read</span>
+  <span class="meta-reading-time">9 min read</span>
 
   
 
@@ -153,23 +153,94 @@
   <a href="../tags/cli.html" class="tag-pill">cli</a>
   
   
+  
+  
+  <a href="../tags/memory.html" class="tag-pill">memory</a>
+  
+  
+  
+  
+  <a href="../tags/skills.html" class="tag-pill">skills</a>
+  
+  
 </div>
 
 
       </header>
 
       <div class="article-content">
-        <p>Gemini CLI is Google&rsquo;s terminal-based coding agent, powered by Gemini models. It offers a similar interaction model to Claude Code &ndash; describe a task in natural language, and the agent reads files, generates code, and iterates &ndash; but draws on Google&rsquo;s model family and ecosystem. It is notable for its generous free tier, massive context windows, and the polarized practitioner reception that consistently separates benchmark performance from real-world experience.</p>
+        <p>Gemini CLI is Google&rsquo;s terminal-based coding agent, powered by Gemini models. It offers a similar interaction model to Claude Code &ndash; describe a task in natural language, and the agent reads files, generates code, and iterates &ndash; but draws on Google&rsquo;s model family and ecosystem. It is notable for its generous free tier, massive context windows, a sophisticated memory system, an agent skills framework, and the polarized practitioner reception that consistently separates benchmark performance from real-world experience. As of February 2026, it is at v0.27.0 with rapid weekly releases.</p>
 <h2 id="what-gemini-cli-offers">What Gemini CLI Offers</h2>
-<p><strong>Free tier access.</strong> Through Google&rsquo;s AI Studio, Gemini CLI provides a free tier that makes it one of the most accessible coding agents available. For developers who want to experiment with agentic coding without committing to a $100-200/month subscription, this is a meaningful advantage. The free tier has rate limits, but for personal projects and learning, it works.</p>
+<p><strong>Free tier access.</strong> Through Google&rsquo;s AI Studio, Gemini CLI provides roughly 1,500 requests per day with Gemini 2.5 Pro at no cost. For developers who want to experiment with agentic coding without committing to a $100-200/month subscription, this is a meaningful advantage.</p>
 <p><strong>Model variety.</strong> Gemini CLI gives access to the full Gemini model family:</p>
 <ul>
 <li><strong>Gemini 3 Pro</strong>: Google&rsquo;s flagship model, competitive on benchmarks with Claude Opus and GPT-5.2</li>
-<li><strong>Gemini 3 Flash</strong>: A fast, cost-efficient variant that practitioners praise for routine tasks. One commenter described it as a strong model at a fraction of the frontier cost, noting the value of distilled models for everyday work.</li>
+<li><strong>Gemini 3 Flash</strong>: A fast, cost-efficient variant that practitioners praise for routine tasks. One commenter described it as a strong model at a fraction of the frontier cost.</li>
 <li><strong>Gemini 3 Ultra</strong>: The largest variant, used for complex reasoning tasks</li>
 </ul>
 <p><strong>Massive context windows.</strong> Gemini 3 supports context windows up to 2 million tokens &ndash; significantly larger than competitors. For codebases that exceed what other agents can hold in context, this is a structural advantage. Practitioners working with very large monorepos or extensive documentation sets report that the larger context window reduces the need for context management gymnastics.</p>
-<p><strong>Multilingual strength.</strong> Google&rsquo;s training data advantages show in multilingual performance. Practitioners working with non-English documentation, code comments in multiple languages, or internationalized applications report strong results. One commenter described Gemini as the most fluent in human languages of any model over a multi-year observation period.</p>
+<p><strong>Multilingual strength.</strong> Google&rsquo;s training data advantages show in multilingual performance. Practitioners working with non-English documentation, code comments in multiple languages, or internationalized applications report strong results.</p>
+<h2 id="memory-and-persistence-system">Memory and Persistence System</h2>
+<p>Gemini CLI has developed one of the most granular memory systems among coding agents, built around hierarchical GEMINI.md files, a cross-session memory tool, and conversation branching.</p>
+<h3 id="geminimd-hierarchical-context-files">GEMINI.md: Hierarchical Context Files</h3>
+<p>Gemini CLI loads context files from multiple locations, concatenating them and sending the combined content with every prompt:</p>
+<ol>
+<li><strong>Global</strong>: <code>~/.gemini/GEMINI.md</code> &ndash; default instructions for all projects</li>
+<li><strong>Project</strong>: Current directory plus every parent directory up to the <code>.git</code> root</li>
+<li><strong>Subdirectories</strong>: Scans child directories (up to 200) for component-specific instructions, respecting <code>.gitignore</code> and <code>.geminiignore</code></li>
+</ol>
+<p>This three-tier hierarchy is more granular than Claude Code&rsquo;s CLAUDE.md, which uses a simpler two-tier system (project root plus user-level settings). Each subdirectory can carry its own context, so a monorepo with distinct components can have tailored instructions per component.</p>
+<p><strong>Configurable filenames.</strong> Gemini CLI can be configured to read AGENTS.md, CLAUDE.md, or any custom filename, making it interoperable with instruction files written for other tools.</p>
+<p><strong>Modular imports.</strong> GEMINI.md files support <code>@file.md</code> syntax to import content from other files. Imports can be nested (up to 5 levels deep), with circular import detection and graceful handling of missing files. This lets teams build modular instruction sets &ndash; a shared style guide, component-specific rules, and personal preferences &ndash; composed into a single context.</p>
+<p><strong>Memory commands:</strong></p>
+<ul>
+<li><code>/memory show</code> &ndash; displays the full concatenated content of all loaded context files, providing transparency into exactly what the model sees</li>
+<li><code>/memory refresh</code> &ndash; re-scans and reloads all GEMINI.md files</li>
+<li><code>/memory add &lt;text&gt;</code> &ndash; appends text to <code>~/.gemini/GEMINI.md</code> persistently</li>
+</ul>
+<h3 id="save_memory-cross-session-persistence">save_memory: Cross-Session Persistence</h3>
+<p>The <code>save_memory</code> tool is an AI-callable tool (not just a slash command) that appends facts to the global GEMINI.md under a <code>## Gemini Added Memories</code> section. The agent can proactively save insights it discovers during a session &ndash; project preferences, architectural decisions, debugging patterns &ndash; for use in future sessions.</p>
+<p>A key difference from Claude Code: Gemini CLI&rsquo;s <code>save_memory</code> writes to the global GEMINI.md by default, meaning memories are shared across all projects. Claude Code&rsquo;s auto-memory is project-scoped, keeping memories isolated per project. Both approaches have tradeoffs &ndash; global memory avoids re-learning preferences, while project-scoped memory prevents cross-project contamination.</p>
+<h3 id="session-management">Session Management</h3>
+<p>Gemini CLI offers sophisticated session handling:</p>
+<ul>
+<li><strong>Automatic saving</strong>: All sessions are saved in the background since v0.20.0</li>
+<li><strong>Conversation branching</strong>: <code>/chat save &lt;tag&gt;</code> saves the current conversation state, <code>/chat resume &lt;tag&gt;</code> restores it. This enables exploring different approaches from the same starting point.</li>
+<li><strong>CLI resume</strong>: <code>gemini --resume</code> loads the most recent session; <code>gemini --resume &lt;UUID&gt;</code> resumes a specific session</li>
+<li><strong>Session browser</strong>: <code>/resume</code> opens an interactive session picker</li>
+<li><strong>History navigation</strong>: <code>/back</code> moves backward through conversation history; <code>/rewind</code> (new in v0.27.0) provides more granular history navigation</li>
+<li><strong>Auto-cleanup</strong>: Configurable retention policies (max age, max count) prevent unbounded session accumulation</li>
+</ul>
+<h3 id="context-window-management">Context Window Management</h3>
+<p>The 1-million-token context window of Gemini 2.5 Pro (5x larger than Claude&rsquo;s 200K) changes context management fundamentally. Compression kicks in at a configurable threshold (default 50% of context used), using summarization rather than deletion. Tool output truncation and experimental JIT (Just-In-Time) context loading provide additional controls for managing very large sessions.</p>
+<h2 id="agent-skills">Agent Skills</h2>
+<p>Agent Skills, promoted to stable in v0.27.0, are self-contained directories that package instructions and assets into discoverable capabilities. The model autonomously decides when to activate a skill based on the user&rsquo;s request.</p>
+<h3 id="how-skills-work">How Skills Work</h3>
+<ol>
+<li>Skill metadata is injected into the system prompt (lightweight footprint)</li>
+<li>The model identifies a matching task and calls <code>activate_skill</code></li>
+<li>A user confirmation prompt shows skill details</li>
+<li>Upon approval, the full <code>SKILL.md</code> content and folder structure load into context</li>
+<li>The model prioritizes skill guidance for the remainder of the session</li>
+</ol>
+<p>This on-demand loading avoids the token waste of always including all instructions &ndash; skills only consume context when relevant.</p>
+<h3 id="skill-discovery-tiers">Skill Discovery Tiers</h3>
+<p>Skills are discovered in precedence order:</p>
+<ol>
+<li><strong>Workspace skills</strong> (<code>.gemini/skills/</code>) &ndash; shared via version control</li>
+<li><strong>User skills</strong> (<code>~/.gemini/skills/</code>) &ndash; personal, cross-workspace</li>
+<li><strong>Extension skills</strong> &ndash; bundled within installed extensions</li>
+</ol>
+<h3 id="built-in-skills">Built-in Skills</h3>
+<ul>
+<li><strong>skill-creator</strong> &ndash; helps create new skills</li>
+<li><strong>pr-creator</strong> &ndash; pull request creation workflow</li>
+<li><strong>Generalist agent</strong> &ndash; task routing for multi-step workflows</li>
+</ul>
+<h3 id="management">Management</h3>
+<p>Install from repositories, directories, or <code>.skill</code> files via <code>gemini skills install</code>. Toggle with <code>/skills disable</code> and <code>/skills enable</code>. Link local skills with <code>/skills link &lt;path&gt;</code>.</p>
+<h2 id="subagents-experimental">Subagents (Experimental)</h2>
+<p>Gemini CLI supports experimental subagent capabilities (enabled via <code>experimental.enableAgents</code>). Subagents use JSON schema for input specifications and are tracked by an AgentRegistry. As of v0.27.0, the architecture has been refactored to &ldquo;one tool per agent.&rdquo; Note: subagents currently require YOLO mode (auto-approve all tool calls), which limits their use in production contexts.</p>
 <h2 id="what-practitioners-report">What Practitioners Report</h2>
 <p>Community reception of Gemini CLI is more polarized than for any other tool in this space. The split between benchmark performance and real-world experience is a recurring theme.</p>
 <h3 id="positive-experiences">Positive Experiences</h3>
@@ -177,15 +248,16 @@
 <ul>
 <li><strong>Kubernetes and infrastructure</strong>: One user described setting up k8s clusters with Gemini as a nearly spotless experience.</li>
 <li><strong>Algorithm exploration</strong>: Practitioners using Gemini for exploring programming ideas and algorithms report strong results, with one commenter saying they were close to cancelling competing subscriptions.</li>
-<li><strong>Cost-efficient routine work</strong>: For tasks that do not require frontier-level reasoning, Gemini Flash models offer strong output at significantly lower cost. Practitioners paying per token report getting substantially more output for less money.</li>
+<li><strong>Cost-efficient routine work</strong>: For tasks that do not require frontier-level reasoning, Gemini Flash models offer strong output at significantly lower cost.</li>
+<li><strong>Context window advantage</strong>: The 1M-2M token context is praised for handling large codebases without aggressive truncation.</li>
 </ul>
 <h3 id="negative-experiences">Negative Experiences</h3>
 <p>The criticisms are persistent and specific:</p>
 <ul>
-<li><strong>Hallucination frequency</strong>: Despite leading on multiple benchmarks, practitioners consistently report that Gemini produces confident but incorrect output more frequently than Claude or GPT. One user described it as hallucinating nonsense more than alternatives despite its benchmark performance. Another reported memory issues and hallucination specifically in the CLI coding tool.</li>
-<li><strong>The benchmark gap</strong>: The most common complaint is that benchmark scores do not match real-world experience. The community views this as evidence that Gemini may be optimized for benchmark performance at the expense of practical reliability. One commenter described benchmarks as not having been a good measure of competence for some time.</li>
-<li><strong>Inconsistency</strong>: Experiences vary widely between users and tasks. Some find Gemini exceptional; others find it unusable for the same category of work. One commenter observed that varied experiences across practitioners suggest different human thinking styles align with different models.</li>
-<li><strong>Scope creep toward defaults</strong>: Like other models, Gemini tends to push implementations toward common patterns. One practitioner asked for December sales data and received all December sales rather than the most recent &ndash; the kind of interpretation error that reflects statistical reasoning rather than practical understanding.</li>
+<li><strong>Hallucination frequency</strong>: Despite leading on multiple benchmarks, practitioners consistently report that Gemini produces confident but incorrect output more frequently than Claude or GPT. One user described memory issues and hallucination specifically in the CLI coding tool.</li>
+<li><strong>The benchmark gap</strong>: The most common complaint is that benchmark scores do not match real-world experience. One commenter described benchmarks as not a good measure of competence.</li>
+<li><strong>Inconsistency</strong>: Experiences vary widely between users and tasks. One commenter observed that varied experiences suggest different thinking styles align with different models.</li>
+<li><strong>Rapid release cadence</strong>: Weekly releases mean features evolve quickly but can introduce instability.</li>
 </ul>
 <h2 id="gemini-cli-vs-claude-code">Gemini CLI vs Claude Code</h2>
 <p>The most natural comparison is with Claude Code, as both are CLI-first agentic tools:</p>
@@ -205,64 +277,84 @@
       </tr>
       <tr>
           <td>Free tier</td>
-          <td>Yes (AI Studio)</td>
+          <td>Yes (~1,500 req/day)</td>
           <td>No</td>
       </tr>
       <tr>
           <td>Max context window</td>
           <td>2M tokens</td>
-          <td>1M tokens (Opus 4.6 beta)</td>
+          <td>1M tokens (Opus 4.6)</td>
       </tr>
       <tr>
-          <td>AGENTS.md / project files</td>
-          <td>Limited</td>
-          <td>Native (CLAUDE.md)</td>
+          <td>Memory system</td>
+          <td>3-tier GEMINI.md + save_memory + imports</td>
+          <td>2-tier CLAUDE.md + auto-memory</td>
       </tr>
       <tr>
-          <td>Sub-agents / swarms</td>
+          <td>Memory scope</td>
+          <td>Global by default</td>
+          <td>Per-project by default</td>
+      </tr>
+      <tr>
+          <td>Agent Skills</td>
+          <td>Yes (stable, on-demand loading)</td>
+          <td>No equivalent</td>
+      </tr>
+      <tr>
+          <td>Session branching</td>
+          <td>/chat save/resume with named tags</td>
           <td>No</td>
+      </tr>
+      <tr>
+          <td>Sub-agents</td>
+          <td>Experimental (requires YOLO mode)</td>
           <td>Built-in (research preview)</td>
       </tr>
       <tr>
           <td>MCP support</td>
-          <td>No</td>
+          <td>Yes</td>
           <td>Native</td>
       </tr>
       <tr>
-          <td>LSP support</td>
-          <td>No</td>
-          <td>Plugin-based</td>
+          <td>Hooks</td>
+          <td>Extensive lifecycle hooks</td>
+          <td>Extensive</td>
       </tr>
       <tr>
-          <td>Hooks and extensibility</td>
-          <td>Limited</td>
-          <td>Extensive</td>
+          <td>Approval modes</td>
+          <td>default, auto_edit, yolo</td>
+          <td>default, auto, yolo equivalent</td>
+      </tr>
+      <tr>
+          <td>Sandboxing</td>
+          <td>Docker-based, auto in YOLO mode</td>
+          <td>None built-in</td>
       </tr>
   </tbody>
 </table>
-<p>The feature gap is significant. Claude Code offers a substantially richer harness &ndash; project files, hooks, sub-agents, MCP servers, LSP plugins &ndash; that compounds in value for long-term projects. Gemini CLI is a simpler tool that relies more heavily on the raw model and less on surrounding infrastructure.</p>
-<p>Practitioners who switch between both tools report that Claude Code produces more consistently correct output on coding tasks, while Gemini CLI offers advantages on cost, context window size, and specific non-coding tasks like documentation and research.</p>
+<p>The feature gap that existed when these tools first launched has narrowed significantly. Gemini CLI&rsquo;s memory system, skills framework, and session management now rival or exceed Claude Code&rsquo;s surrounding infrastructure in several areas. Claude Code retains advantages in model quality for coding tasks, per-project memory isolation, and mature sub-agent orchestration.</p>
+<p>Practitioners who switch between both tools report that Claude Code produces more consistently correct output on coding tasks, while Gemini CLI offers advantages on cost, context window size, memory granularity, and specific non-coding tasks like documentation and research.</p>
 <h2 id="the-benchmark-debate">The Benchmark Debate</h2>
 <p>Gemini&rsquo;s relationship with benchmarks is a case study in why practitioners should not rely on benchmark scores for tool selection:</p>
 <p><strong>Gemini frequently leads on public benchmarks.</strong> Google&rsquo;s models have topped leaderboards on coding benchmarks, math reasoning, and multimodal tasks at various points.</p>
 <p><strong>Practitioners consistently report a gap.</strong> Across the threads analyzed, more commenters report disappointing real-world results with Gemini than for Claude or GPT, despite Gemini&rsquo;s benchmark leadership. The pattern is persistent enough that multiple commenters have described it as evidence of benchmark optimization that does not translate to practical use.</p>
-<p><strong>The open-weight ecosystem adds complexity.</strong> Open-weight models based on Gemini architectures (and competitors like Kimi K2 and Qwen) may top benchmarks while exhibiting worse real-world behavior. One practitioner noted that a model topping open-source benchmarks produced more nonsensical output than its competitors, advising that practitioners must test their own use cases rather than trusting leaderboards.</p>
 <p>This does not mean Gemini is a bad model. It means that the gap between benchmark performance and practitioner experience is wider for Gemini than for competitors &ndash; something to factor into any evaluation.</p>
 <h2 id="where-gemini-cli-fits">Where Gemini CLI Fits</h2>
 <p>Gemini CLI is the strongest choice for:</p>
 <ul>
 <li><strong>Budget-conscious developers</strong> who want agentic workflows without $100-200/month subscriptions</li>
 <li><strong>Very large codebase work</strong> where the 2M token context window provides a real advantage</li>
+<li><strong>Teams wanting sophisticated memory systems</strong> with hierarchical context, modular imports, and conversation branching</li>
+<li><strong>Reusable workflow packaging</strong> through the Agent Skills system</li>
 <li><strong>Google ecosystem teams</strong> already using GCP, Vertex AI, or other Google services</li>
-<li><strong>Experimentation and learning</strong> where the free tier removes the barrier to trying agentic coding</li>
 <li><strong>Multi-model strategies</strong> where Gemini serves as one tool alongside Claude Code or Cursor for cross-validation</li>
 </ul>
 <p>It is less well-suited for:</p>
 <ul>
 <li><strong>Production workflows</strong> where consistent reliability matters more than cost or context size</li>
-<li><strong>Teams wanting deep extensibility</strong> through project files, hooks, and sub-agent orchestration</li>
 <li><strong>Complex multi-file refactors</strong> where practitioners report Claude Code producing more reliable results</li>
 <li><strong>Use cases requiring precise factual accuracy</strong> where hallucination risk is not acceptable</li>
+<li><strong>Teams wanting mature sub-agent orchestration</strong> (Gemini CLI&rsquo;s subagents still require YOLO mode)</li>
 </ul>
 <h2 id="the-multi-model-angle">The Multi-Model Angle</h2>
 <p>Many experienced practitioners use Gemini not as their primary tool but as part of a multi-model strategy. Gemini&rsquo;s different failure modes make it a useful cross-check against Claude and GPT outputs. When two models agree, confidence increases. When they disagree, the discrepancy points to areas needing human review.</p>
@@ -296,6 +388,23 @@
     <nav id="TableOfContents">
   <ul>
     <li><a href="#what-gemini-cli-offers">What Gemini CLI Offers</a></li>
+    <li><a href="#memory-and-persistence-system">Memory and Persistence System</a>
+      <ul>
+        <li><a href="#geminimd-hierarchical-context-files">GEMINI.md: Hierarchical Context Files</a></li>
+        <li><a href="#save_memory-cross-session-persistence">save_memory: Cross-Session Persistence</a></li>
+        <li><a href="#session-management">Session Management</a></li>
+        <li><a href="#context-window-management">Context Window Management</a></li>
+      </ul>
+    </li>
+    <li><a href="#agent-skills">Agent Skills</a>
+      <ul>
+        <li><a href="#how-skills-work">How Skills Work</a></li>
+        <li><a href="#skill-discovery-tiers">Skill Discovery Tiers</a></li>
+        <li><a href="#built-in-skills">Built-in Skills</a></li>
+        <li><a href="#management">Management</a></li>
+      </ul>
+    </li>
+    <li><a href="#subagents-experimental">Subagents (Experimental)</a></li>
     <li><a href="#what-practitioners-report">What Practitioners Report</a>
       <ul>
         <li><a href="#positive-experiences">Positive Experiences</a></li>
@@ -341,7 +450,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 78 pages across 197 topics.</p>
     </div>
   </div>
 </footer>

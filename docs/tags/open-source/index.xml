@@ -16,6 +16,20 @@
       <description>&lt;h2 id=&#34;the-question&#34;&gt;The Question&lt;/h2&gt;&#xA;&lt;p&gt;Open source software has been the bedrock of modern computing for decades. Linux runs the cloud, Apache and Nginx serve the web, React and Vue power the frontend, and tens of thousands of libraries form the invisible infrastructure of every application we use. The people who built and maintained this commons did so for a complex mix of reasons: personal satisfaction, reputation building, community belonging, and the belief that shared code makes everyone better off.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Aider</title>
+      <link>/tools/aider.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tools/aider.html</guid>
+      <description>&lt;p&gt;Aider is an open-source, terminal-based AI pair programming tool released under the MIT license. It operates through a chat interface where you describe changes in natural language and Aider edits files directly, staging and committing them with descriptive messages. It represents the fully open alternative to proprietary CLI agents like Claude Code and Codex CLI &amp;ndash; you bring your own API keys, choose your own models, and pay nothing beyond inference costs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cline</title>
+      <link>/tools/cline.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tools/cline.html</guid>
+      <description>&lt;p&gt;Cline is an open-source VS Code extension that turns large language models into autonomous coding agents. Originally released as &amp;ldquo;Claude Dev,&amp;rdquo; it has grown to over 5 million installs across VS Code, JetBrains, Cursor, and Windsurf. Its defining characteristic is a human-in-the-loop design: the agent proposes actions at every step and waits for your approval before executing. This makes it one of the most transparent and controllable AI coding tools available.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>How Vibe Coding Is Killing Open Source</title>
       <link>/sources/2026-02-02-vibe-coding-killing-open-source.html</link>
       <pubDate>Mon, 02 Feb 2026 00:00:00 +0000</pubDate>

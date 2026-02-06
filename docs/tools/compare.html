@@ -113,7 +113,7 @@
 
   
 
-  <span class="meta-reading-time">11 min read</span>
+  <span class="meta-reading-time">19 min read</span>
 
   
 
@@ -155,109 +155,201 @@
 
       <div class="article-content">
         <p>Choosing an AI coding tool in early 2026 is less about finding the objectively best option and more about understanding which tradeoffs match your workflow. Every tool has vocal advocates and equally vocal critics. The comparison below is drawn entirely from practitioner reports in community discussions &ndash; not from vendor marketing or benchmark claims.</p>
-<h2 id="the-comparison-matrix">The Comparison Matrix</h2>
+<p>The market has bifurcated into three categories: <strong>terminal-based agents</strong> (Claude Code, Aider, Gemini CLI, Codex CLI), <strong>AI-native IDEs</strong> (Cursor, Windsurf, Kiro), and <strong>IDE extensions</strong> (Copilot, Cline, Amp). Each category implies different assumptions about how developers want to work.</p>
+<h2 id="comparison-matrix-cli--terminal-tools">Comparison Matrix: CLI / Terminal Tools</h2>
 <table>
   <thead>
       <tr>
           <th></th>
           <th><strong>Claude Code</strong></th>
-          <th><strong>Cursor</strong></th>
-          <th><strong>GitHub Copilot</strong></th>
-          <th><strong>Amp Code</strong></th>
-          <th><strong>Gemini CLI</strong></th>
           <th><strong>OpenAI Codex</strong></th>
+          <th><strong>Gemini CLI</strong></th>
+          <th><strong>Aider</strong></th>
       </tr>
   </thead>
   <tbody>
       <tr>
           <td><strong>Approach</strong></td>
           <td>Agent (CLI-first)</td>
-          <td>Hybrid (IDE-first)</td>
-          <td>Autocomplete-first</td>
-          <td>Agent (multi-model)</td>
+          <td>Agent (desktop + CLI + cloud)</td>
           <td>Agent (CLI)</td>
-          <td>Agent (cloud sandbox)</td>
-      </tr>
-      <tr>
-          <td><strong>Interface</strong></td>
-          <td>Terminal</td>
-          <td>VS Code fork</td>
-          <td>IDE extension</td>
-          <td>CLI + VS Code + JetBrains</td>
-          <td>Terminal</td>
-          <td>CLI / web</td>
+          <td>Pair programmer (CLI)</td>
       </tr>
       <tr>
           <td><strong>Model support</strong></td>
           <td>Anthropic only</td>
-          <td>Multi-model (user-selected)</td>
-          <td>OpenAI (primarily)</td>
-          <td>Multi-model (auto-routed)</td>
-          <td>Google Gemini</td>
           <td>OpenAI (GPT-5.x)</td>
+          <td>Google Gemini</td>
+          <td>Model-agnostic (any provider)</td>
+      </tr>
+      <tr>
+          <td><strong>Open source</strong></td>
+          <td>No</td>
+          <td>CLI is open source</td>
+          <td>Yes (Apache 2.0)</td>
+          <td>Yes (MIT)</td>
       </tr>
       <tr>
           <td><strong>Pricing</strong></td>
           <td>$100-200/mo (Max plans)</td>
-          <td>$20/mo + usage tiers</td>
-          <td>$10-19/mo</td>
-          <td>Pay-as-you-go (no markup)</td>
-          <td>Free tier + API pricing</td>
-          <td>$200/mo (Pro) or API</td>
+          <td>Bundled with ChatGPT ($20-200/mo)</td>
+          <td>Free tier (1500 req/day) + API</td>
+          <td>Free (BYOK, pay API costs)</td>
       </tr>
       <tr>
-          <td><strong>Autocomplete</strong></td>
-          <td>No</td>
-          <td>Yes (Tab)</td>
-          <td>Yes (primary feature)</td>
-          <td>No (dropped Jan 2026)</td>
-          <td>No</td>
+          <td><strong>Multi-agent</strong></td>
+          <td>Built-in (sub-agents, teams)</td>
+          <td>First-class (git worktrees, parallel threads)</td>
+          <td>Experimental (subagents)</td>
           <td>No</td>
       </tr>
       <tr>
-          <td><strong>AGENTS.md / CLAUDE.md</strong></td>
+          <td><strong>Context config</strong></td>
+          <td>CLAUDE.md (native)</td>
+          <td>AGENTS.md (native)</td>
+          <td>GEMINI.md (hierarchical, 3-tier)</td>
+          <td>Git-native (auto repo map)</td>
+      </tr>
+      <tr>
+          <td><strong>Memory / persistence</strong></td>
+          <td>Per-project auto-memory</td>
+          <td>Skills system + automations</td>
+          <td>save_memory tool + session resume</td>
+          <td>Git commit history</td>
+      </tr>
+      <tr>
+          <td><strong>Context window</strong></td>
+          <td>200K tokens</td>
+          <td>Varies by model</td>
+          <td>1M tokens (Gemini 2.5 Pro)</td>
+          <td>Varies by model</td>
+      </tr>
+      <tr>
+          <td><strong>MCP support</strong></td>
           <td>Native</td>
-          <td>.cursorrules</td>
           <td>Limited</td>
-          <td>Native</td>
-          <td>Limited</td>
-          <td>Limited</td>
-      </tr>
-      <tr>
-          <td><strong>Sub-agents / swarms</strong></td>
-          <td>Built-in (research preview)</td>
-          <td>No</td>
-          <td>No</td>
-          <td>Built-in</td>
-          <td>No</td>
+          <td>Yes</td>
           <td>No</td>
       </tr>
       <tr>
           <td><strong>LSP support</strong></td>
           <td>Plugin-based (Dec 2025)</td>
-          <td>Native (via VS Code)</td>
-          <td>Native (via IDE)</td>
-          <td>Partial</td>
           <td>No</td>
-          <td>No</td>
-      </tr>
-      <tr>
-          <td><strong>MCP support</strong></td>
-          <td>Native</td>
-          <td>Partial</td>
-          <td>No</td>
-          <td>Partial</td>
           <td>No</td>
           <td>No</td>
       </tr>
       <tr>
           <td><strong>Editor lock-in</strong></td>
           <td>None (terminal)</td>
-          <td>VS Code only</td>
-          <td>Broad (VS Code, JetBrains, Neovim+)</td>
-          <td>Low (CLI + IDE plugins)</td>
+          <td>None (terminal/desktop)</td>
           <td>None (terminal)</td>
-          <td>None</td>
+          <td>None (terminal)</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="comparison-matrix-ide-tools">Comparison Matrix: IDE Tools</h2>
+<table>
+  <thead>
+      <tr>
+          <th></th>
+          <th><strong>Cursor</strong></th>
+          <th><strong>Windsurf</strong></th>
+          <th><strong>Copilot</strong></th>
+          <th><strong>Cline</strong></th>
+          <th><strong>Amp Code</strong></th>
+          <th><strong>Kiro</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Approach</strong></td>
+          <td>Hybrid (IDE-first)</td>
+          <td>AI-native IDE</td>
+          <td>Autocomplete-first</td>
+          <td>Agent (VS Code extension)</td>
+          <td>Agent (multi-model)</td>
+          <td>Spec-driven IDE</td>
+      </tr>
+      <tr>
+          <td><strong>Model support</strong></td>
+          <td>Multi-model (user-selected)</td>
+          <td>Multi-model (hosted)</td>
+          <td>OpenAI + others</td>
+          <td>Model-agnostic (BYOK)</td>
+          <td>Multi-model (auto-routed)</td>
+          <td>Multi-model (AWS)</td>
+      </tr>
+      <tr>
+          <td><strong>Open source</strong></td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+          <td>Yes (Apache 2.0)</td>
+          <td>No</td>
+          <td>No</td>
+      </tr>
+      <tr>
+          <td><strong>Pricing</strong></td>
+          <td>$20/mo Pro, $40/mo Business</td>
+          <td>$15/mo Pro, $30/mo Teams</td>
+          <td>$10-19/mo</td>
+          <td>Free (BYOK, pay API costs)</td>
+          <td>Free tier (~$10/day credits) + paid</td>
+          <td>Free preview tier</td>
+      </tr>
+      <tr>
+          <td><strong>Autocomplete</strong></td>
+          <td>Yes (Tab)</td>
+          <td>Yes (Tab + Supercomplete)</td>
+          <td>Yes (primary feature)</td>
+          <td>No</td>
+          <td>No</td>
+          <td>Yes</td>
+      </tr>
+      <tr>
+          <td><strong>Agent mode</strong></td>
+          <td>Composer/Agent mode</td>
+          <td>Cascade agent</td>
+          <td>Copilot Workspace</td>
+          <td>Full autonomous agent</td>
+          <td>Named agent roles</td>
+          <td>Spec-to-code agent</td>
+      </tr>
+      <tr>
+          <td><strong>Context config</strong></td>
+          <td>.cursorrules</td>
+          <td>Built-in RAG (~200K effective)</td>
+          <td>Limited</td>
+          <td>MCP extensible</td>
+          <td>AGENTS.md (native)</td>
+          <td>Spec files (requirements-driven)</td>
+      </tr>
+      <tr>
+          <td><strong>Multi-agent</strong></td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No (but Roo Code fork adds this)</td>
+          <td>Built-in (Oracle, Librarian, Search)</td>
+          <td>Multi-repo awareness</td>
+      </tr>
+      <tr>
+          <td><strong>MCP support</strong></td>
+          <td>Partial</td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>Yes (native)</td>
+          <td>Partial</td>
+          <td>No</td>
+      </tr>
+      <tr>
+          <td><strong>Editor support</strong></td>
+          <td>VS Code only</td>
+          <td>Standalone IDE</td>
+          <td>VS Code, JetBrains, Neovim+</td>
+          <td>VS Code, JetBrains, Cursor, Windsurf</td>
+          <td>CLI + VS Code + JetBrains</td>
+          <td>Standalone IDE + CLI</td>
       </tr>
   </tbody>
 </table>
@@ -268,7 +360,7 @@
 <ul>
 <li>Practitioners consistently report that Claude Code produces correct output more often on the first attempt than competitors. One user summarized the experience as working from a perspective where things simply function as expected.</li>
 <li>Deep extensibility through CLAUDE.md project files, custom hooks, sub-agents, and MCP server integrations. The harness around the model is what separates it from raw API access.</li>
-<li>Multi-agent orchestration (swarms) enables parallel task execution, with each sub-agent getting a fresh context window.</li>
+<li>Multi-agent orchestration (teams) enables parallel task execution, with each sub-agent getting a fresh context window.</li>
 <li>Co-development advantage: Anthropic builds both the model and the client, using telemetry from Claude Code sessions to improve model behavior. As one commenter noted, Anthropic is positioned to develop the harness and model in tandem.</li>
 </ul>
 <p><strong>Key weaknesses:</strong></p>
@@ -316,59 +408,147 @@
 <p><strong>Approach:</strong> Multi-model agentic coding. Amp automatically routes different task types (planning, implementation, review, search) to the model best suited for each, drawing from Anthropic, OpenAI, and Google simultaneously.</p>
 <p><strong>Key strengths:</strong></p>
 <ul>
-<li>Multi-model routing means each subtask goes to the strongest available model. Planning might go to GPT-5.2, implementation to Claude Opus, review to Gemini.</li>
+<li>Named agent roles route each subtask to a specialized model: Smart (Opus 4.6) for main coding, Rush (Haiku 4.5) for quick tasks, Deep (GPT-5.2 Codex) for reasoning, Oracle (GPT-5.2) for planning, Librarian (Sonnet 4.5) for research, and Search (Gemini 3 Flash) for codebase retrieval.</li>
 <li>No rate limits or throttling &ndash; you pay for what you use but never hit a ceiling.</li>
 <li>Strong code search via Sourcegraph&rsquo;s backend, including cross-repository search for usage patterns.</li>
 <li>The &ldquo;Oracle&rdquo; second-opinion feature catches planning mistakes that single-model tools miss.</li>
+<li>Free tier provides roughly $10/day in ad-supported credits, making it accessible without upfront cost.</li>
 </ul>
 <p><strong>Key weaknesses:</strong></p>
 <ul>
 <li>Cost unpredictability is the most cited weakness. Heavy sessions during complex refactors can produce surprising bills, with power users reporting monthly spend exceeding $1,000.</li>
 <li>Debugging quality issues is harder when multiple models are involved &ndash; which model in the chain caused the problem?</li>
-<li>Dependency on external model providers creates risk if any provider changes performance or pricing.</li>
+<li>Amp switched primary models three times in three months (Sonnet 4.5 to Gemini 3 Pro to Opus 4.5 to Opus 4.6), demonstrating both agility and instability in the developer experience.</li>
 <li>The strategic question of defensibility: if the value is orchestrating third-party models, what prevents those providers from building their own orchestration?</li>
 </ul>
+<p><strong>Key insight from Amp&rsquo;s data:</strong> Their &ldquo;off-the-rails cost&rdquo; metric &ndash; measuring spend wasted on bad outputs &ndash; showed Opus 4.5 wasting only 2.4% vs. Gemini 3 Pro at 17.8%. A model&rsquo;s worst-case behavior matters as much as its best-case capability.</p>
 <p><strong>Best for:</strong> Practitioners who want the best model for each task type and are comfortable with variable costs. Strongest for teams doing complex work across large codebases where the Sourcegraph code search provides an edge.</p>
 <h3 id="gemini-cli">Gemini CLI</h3>
-<p><strong>Approach:</strong> Google&rsquo;s entry into CLI-based coding agents. Uses Gemini models (particularly Gemini 3 and Flash variants) with a terminal interface similar to Claude Code&rsquo;s.</p>
+<p><strong>Approach:</strong> Google&rsquo;s open-source CLI-based coding agent. Uses Gemini models with a terminal interface and a rapidly evolving feature set (weekly releases, currently at v0.27.0).</p>
 <p><strong>Key strengths:</strong></p>
 <ul>
-<li>Generous free tier through Google&rsquo;s AI Studio, making it accessible for experimentation and personal projects without subscription costs.</li>
-<li>Flash models offer strong cost efficiency for routine tasks. Practitioners using pay-per-token pricing report getting more output for less money compared to frontier models.</li>
-<li>Gemini 3&rsquo;s large context window (up to 2M tokens) handles very large codebases without the context management gymnastics required by smaller windows.</li>
-<li>Multilingual capability is strong &ndash; practitioners working across multiple programming languages or with non-English documentation report good results.</li>
+<li>Generous free tier through Google&rsquo;s AI Studio (1500 requests/day with Gemini 2.5 Pro), making it accessible for experimentation without subscription costs.</li>
+<li>The most granular context configuration of any CLI agent: GEMINI.md files load from three tiers (global, project, subdirectory) with modular <code>@file.md</code> imports and configurable filenames that can read AGENTS.md or CLAUDE.md files natively.</li>
+<li>Cross-session memory via <code>save_memory</code> tool and <code>/memory add</code> command. Session branching with <code>/chat save</code> and <code>/chat resume</code> enables exploring different approaches without losing state.</li>
+<li>Gemini&rsquo;s 1M-token context window handles very large codebases without the context management gymnastics required by smaller windows.</li>
+<li>Agent Skills system packages reusable workflows into discoverable capabilities that the model activates on demand, avoiding wasted tokens on unused instructions.</li>
 </ul>
 <p><strong>Key weaknesses:</strong></p>
 <ul>
 <li>Hallucination remains a persistent concern. Despite strong benchmark performance, practitioners report Gemini producing confident but incorrect output more frequently than Claude. One user described bad luck with memory issues and hallucination in the CLI tool specifically.</li>
 <li>The gap between benchmark scores and real-world experience is wider for Gemini than for competitors. Practitioners consistently note that benchmark leadership does not translate to consistent practical superiority.</li>
-<li>The CLI tool itself is less mature than Claude Code, with fewer extensibility features (no equivalent to CLAUDE.md, limited MCP support, no sub-agent orchestration).</li>
-<li>Practitioner community and ecosystem are smaller, meaning fewer shared configurations, skills, and third-party integrations.</li>
+<li>The rapid weekly release cadence means features evolve quickly but can introduce instability.</li>
+<li>Subagent support requires YOLO mode (auto-approves all tool calls), which is a concern for production use.</li>
 </ul>
 <p><strong>Best for:</strong> Budget-conscious developers who want agent-style workflows at lower cost, teams already invested in Google&rsquo;s ecosystem, and use cases where the massive context window provides an advantage (very large codebases, extensive documentation ingestion).</p>
 <h3 id="openai-codex">OpenAI Codex</h3>
-<p><strong>Approach:</strong> Cloud-sandboxed agentic coding. Codex runs tasks in isolated environments, reading code and executing changes without direct access to your local machine. It operates more like an outsourced task than a pair programmer &ndash; you provide specs, it returns results.</p>
+<p><strong>Approach:</strong> Multi-surface agentic coding spanning a Desktop App (macOS, launched Feb 2026), CLI, and IDE extension. The Desktop App introduces multi-agent orchestration with git worktrees, a skills system, and scheduled automations.</p>
 <p><strong>Key strengths:</strong></p>
 <ul>
-<li>GPT-5.2 in extended thinking mode produces strong results on complex planning and analysis tasks. One practitioner described it as winning by a comfortable margin in extended thinking mode compared to alternatives.</li>
-<li>The sandboxed execution model provides safety &ndash; Codex cannot accidentally modify files outside its scope or run destructive commands on your machine.</li>
-<li>Well-suited for background tasks: code analysis, test generation, documentation, and other work that benefits from extended reasoning without real-time interaction.</li>
-<li>Familiarity for teams already using OpenAI&rsquo;s ecosystem and API.</li>
+<li>The Desktop App enables running multiple agents in parallel on isolated git worktrees &ndash; each agent gets an independent copy of the code, eliminating merge conflicts during simultaneous exploration of architectural alternatives.</li>
+<li>Skills system stores reusable instruction sets (repo-level <code>.agents/skills/</code> or global <code>~/.codex/skills/</code>), with a remote catalog for sharing skills across teams.</li>
+<li>Automations run skills on user-defined schedules &ndash; essentially AI agents on a cronjob for tasks like daily issue triage, CI failure summarization, or release brief generation.</li>
+<li>GPT-5.3-Codex model claims 25% faster performance than 5.2, with strong benchmark scores on SWE-Bench Pro (56.8%) and Terminal-Bench 2.0 (77.3%).</li>
+<li>Bundled with ChatGPT subscriptions, making it accessible to existing OpenAI users without additional cost.</li>
 </ul>
 <p><strong>Key weaknesses:</strong></p>
 <ul>
-<li>The outsourcing model means no real-time redirection. Unlike Claude Code where you can steer the agent mid-task, Codex delivers a finished result. One commenter captured the distinction: Codex operates as an outsourcing setup with specifications in and results out, while Claude Code functions more as a pair programmer.</li>
-<li>Significantly slower than interactive agents. Extended thinking mode can take 5-15 minutes per task, making it impractical for iterative development.</li>
-<li>Context management is less transparent than CLI tools where you can see exactly what the agent reads and writes.</li>
-<li>The sandboxed environment can miss local project context (custom build tools, environment variables, local dependencies) that CLI agents pick up naturally.</li>
+<li>Mac-only Desktop App at launch felt limiting for a 2026 AI tool. Windows support is coming but not yet available.</li>
+<li>Early adopters reported speed issues, coding errors, and lack of contextual understanding. Some practitioners still find Claude Code produces more production-ready code with less rework.</li>
+<li>Cloud-first architecture raises data privacy concerns compared to Claude Code&rsquo;s local-first approach.</li>
+<li>UX criticized for undefined wait times before returning results.</li>
 </ul>
-<p><strong>Best for:</strong> Teams that want AI coding as a background process &ndash; submit tasks, review results later. Strongest for code analysis, large-scale test generation, and situations where the safety of sandboxed execution outweighs the benefits of real-time interaction.</p>
+<p><strong>Best for:</strong> Teams that want multi-agent orchestration with git isolation, scheduled autonomous tasks, and are already in the OpenAI/ChatGPT ecosystem. The automations feature is unique among all tools for enabling continuous background AI work.</p>
+<h3 id="aider">Aider</h3>
+<p><strong>Approach:</strong> Open-source, terminal-based AI pair programmer. MIT-licensed, model-agnostic, and git-native. Works in your terminal alongside your existing development tools without requiring any new editor or environment.</p>
+<p><strong>Key strengths:</strong></p>
+<ul>
+<li>True model flexibility: works with Anthropic, OpenAI, Gemini, Groq, xAI, DeepSeek, OpenRouter, and local models via Ollama or LM Studio. No vendor lock-in whatsoever.</li>
+<li>Git-native workflow: automatically creates commits with descriptive messages, works on branches, and generates clean diffs. Changes are always reversible through standard git operations.</li>
+<li>Builds an internal map of the entire codebase for context, then edits files directly based on chat instructions. Runs linters and tests on generated code and can auto-fix problems.</li>
+<li>Zero subscription cost &ndash; you only pay for API calls to whatever model provider you choose (roughly $0.007 per file processed). No middleman markup.</li>
+<li>Voice command support and top SWE-Bench scores on real-world GitHub issues from projects like Django and scikit-learn.</li>
+</ul>
+<p><strong>Key weaknesses:</strong></p>
+<ul>
+<li>CLI-only with no GUI or visual diff interface. You need to be comfortable working entirely in the terminal.</li>
+<li>Less capable than Claude Code for deep reasoning and large architectural changes &ndash; the model-agnostic approach means you get whatever your chosen model provides, without the co-optimized harness that Anthropic builds around Claude Code.</li>
+<li>Smaller community and ecosystem compared to tools backed by major companies. Fewer shared configurations and third-party integrations.</li>
+<li>HN sentiment was mixed: praised for structured refactors but some practitioners found reliability inconsistent depending on model choice.</li>
+</ul>
+<p><strong>Best for:</strong> Senior engineers who live in the terminal, want full model flexibility without vendor lock-in, and value git-native workflows. The strongest choice for developers who want to bring their own models (including local/air-gapped) and pay only for what they use.</p>
+<h3 id="cline">Cline</h3>
+<p><strong>Approach:</strong> Open-source VS Code extension that turns LLMs into autonomous coding agents with human-in-the-loop approval gates. Formerly known as &ldquo;Claude Dev,&rdquo; now with over 5 million installs across VS Code, JetBrains, Cursor, and Windsurf.</p>
+<p><strong>Key strengths:</strong></p>
+<ul>
+<li>Human-in-the-loop design with approval gates at every step &ndash; you see and approve each action before it executes. Plan &amp; Act mode creates a detailed action plan before writing any code.</li>
+<li>Browser automation for testing visual bugs and runtime issues &ndash; the agent can interact with a browser to verify its own changes.</li>
+<li>Full MCP extensibility for custom tool integration, plus timeline and revert functionality for rolling back changes.</li>
+<li>Model-agnostic (BYOK): bring your own API keys from any provider. The extension itself is free; you pay only for inference.</li>
+<li>Spawned a thriving ecosystem including Roo Code (adds multi-agent role-driven execution) and Kilo Code, showing the community&rsquo;s appetite for different autonomy/control tradeoffs.</li>
+</ul>
+<p><strong>Key weaknesses:</strong></p>
+<ul>
+<li>API costs can add up quickly during complex multi-file tasks, since every approval step involves additional model calls.</li>
+<li>Requires more setup and configuration than Cursor &ndash; wins over Cursor on transparency and complex multi-file tasks, but loses on polish and immediate usability.</li>
+<li>The Cline ecosystem is fragmenting: choosing between Cline, Roo Code, and Kilo Code adds decision overhead.</li>
+<li>Lower HN mention volume (2 mentions) suggests less mainstream adoption compared to the major tools, despite the high install count.</li>
+</ul>
+<p><strong>Best for:</strong> Developers who want maximum transparency and control over autonomous coding agents within VS Code. The strongest choice for teams that prioritize understanding exactly what the AI is doing at each step, and for those who want MCP extensibility without paying subscription fees.</p>
+<h3 id="windsurf">Windsurf</h3>
+<p><strong>Approach:</strong> AI-native IDE built from scratch around an AI-first philosophy. Not a VS Code fork &ndash; a standalone editor with its own Cascade agent, deep codebase indexing, and one-click deploy capabilities.</p>
+<p><strong>Key strengths:</strong></p>
+<ul>
+<li>RAG-based context engine with roughly 200K-token effective context through automatic indexing, significantly better than Cursor&rsquo;s practical context range for large codebases. Windsurf automatically selects relevant context rather than requiring manual file inclusion.</li>
+<li>Cascade agent plans multi-step edits, calls tools, and uses deep repository context. In-editor live previews for frontend development and one-click Netlify deploys via tool calls.</li>
+<li>25% cheaper than Cursor at every pricing tier: $15/mo Pro vs. $20, $30/mo Teams vs. $40.</li>
+<li>Enterprise-ready with SOC 2 Type II, FedRAMP High authorization, and zero data retention defaults for Teams and Enterprise tiers.</li>
+<li>MCP server support for custom tool integrations.</li>
+</ul>
+<p><strong>Key weaknesses:</strong></p>
+<ul>
+<li>Slightly slower than Cursor in benchmarks (15 seconds vs. 12 seconds for generation, 5 seconds vs. 3 seconds for apply). Speed matters for developer experience during iterative work.</li>
+<li>Smaller extension ecosystem and community compared to Cursor&rsquo;s VS Code heritage.</li>
+<li>HN sentiment was sparse (4 mentions), suggesting the tool is still building mainstream developer awareness.</li>
+<li>One practitioner bluntly assessed the competitive landscape: Cursor is still considered better for the majority of individual developers due to speed and ecosystem advantages.</li>
+</ul>
+<p><strong>Best for:</strong> Teams working on large, complex codebases where automatic context selection matters more than raw speed. The strongest choice for enterprises that need FedRAMP/SOC 2 compliance and want an AI-native IDE at a lower price point than Cursor.</p>
+<h3 id="kiro">Kiro</h3>
+<p><strong>Approach:</strong> AWS&rsquo;s spec-driven AI IDE. Went GA in November 2025. Designed around a structured development workflow: you describe requirements in natural language, and Kiro outputs user stories, technical design docs, and coding task lists before writing any code.</p>
+<p><strong>Key strengths:</strong></p>
+<ul>
+<li>Spec-driven development enforces structure: requirements flow into specs, which flow into code, documentation, and tests. This is the explicit anti-vibe-coding approach.</li>
+<li>Persistent context memory across sessions &ndash; the agent remembers PR feedback and applies lessons to future work, learning from your team&rsquo;s patterns over time.</li>
+<li>Multi-repo awareness for unified cross-repo tasks, which is rare among AI coding tools.</li>
+<li>Property-based testing extracts requirements from specs and tests with hundreds of random cases, going beyond typical unit test generation.</li>
+<li>Enterprise management via AWS IAM Identity Center, making it a natural fit for organizations already on AWS infrastructure.</li>
+<li>Full CLI with agent capabilities alongside the IDE, providing flexibility in interaction mode.</li>
+</ul>
+<p><strong>Key weaknesses:</strong></p>
+<ul>
+<li>Still relatively new compared to Cursor and Windsurf, with less practitioner data available.</li>
+<li>The spec-driven approach adds overhead that may feel bureaucratic for small tasks or rapid prototyping &ndash; the structure is a feature for production code but a cost for exploration.</li>
+<li>Limited HN discussion (4 mentions), though sentiment was cautiously positive with practitioners noting the distinctive philosophy.</li>
+<li>Pricing details remain unclear beyond a free preview tier.</li>
+</ul>
+<p><strong>Best for:</strong> Enterprise teams that want structured, spec-driven AI development with AWS integration. The strongest choice for organizations where code quality governance and audit trails matter more than speed of generation, and where the spec-first approach aligns with existing software development practices.</p>
+<h2 id="also-worth-knowing">Also Worth Knowing</h2>
+<p>The tools above represent the primary competitive landscape, but several others serve important niches:</p>
+<p><strong>Continue.dev</strong> &ndash; Open-source VS Code/JetBrains extension with maximum model flexibility, including fully local and air-gapped deployment via Ollama. The privacy-first choice for teams that cannot send code to external APIs.</p>
+<p><strong>Amazon Q Developer</strong> &ndash; AWS&rsquo;s rebranded AI coding assistant (formerly CodeWhisperer) with deep AWS service integration and a transformation agent for major version upgrades (e.g., Java 8 to 17). Best for AWS-heavy teams.</p>
+<p><strong>JetBrains AI Assistant + Junie</strong> &ndash; Built into JetBrains IDEs, leveraging their deep code intelligence (PSI system). Valued by JetBrains loyalists, though practitioners report it struggles with complex tasks compared to dedicated agents.</p>
+<p><strong>Replit Agent</strong> &ndash; Cloud-based autonomous development environment. Agent 3 handles entire development cycles including deployment, with 200-minute autonomous work sessions. Targets beginners and rapid prototypers rather than professional development workflows.</p>
+<p><strong>Devin (Cognition)</strong> &ndash; Fully autonomous AI software engineer that works asynchronously. You assign tasks, it returns PRs. Reports a 67% merge rate (up from 34% a year ago), but independent testing showed failures on 14 of 20 tasks. At roughly $500/month, it occupies a distinct niche for well-defined, scoped tasks like migrations and vulnerability fixes.</p>
+<p><strong>Augment Code</strong> &ndash; Enterprise-focused assistant with a 200K-token context engine and strong security certifications (SOC 2 Type II + ISO/IEC 42001). Uses Claude Sonnet 4.5 as its default model.</p>
+<p><strong>Zed AI</strong> &ndash; Performance-first editor built in Rust with GPU rendering at roughly 120 FPS. Its Zeta Edit Prediction model predicts your next edit (not just next token) and runs locally for free. Attracts developers who value raw speed and want an alternative to Electron-based editors.</p>
 <h2 id="decision-framework">Decision Framework</h2>
 <p>Rather than asking &ldquo;which tool is best,&rdquo; ask these questions:</p>
 <h3 id="1-what-is-your-primary-interaction-mode">1. What is your primary interaction mode?</h3>
-<p>If you want <strong>inline suggestions while coding</strong>, start with Copilot or Cursor.
-If you want <strong>autonomous task execution</strong>, start with Claude Code, Amp, or Codex.
-If you want <strong>both</strong>, Cursor is the only tool that treats both as first-class features.</p>
+<p>If you want <strong>inline suggestions while coding</strong>, start with Copilot, Cursor, or Windsurf.
+If you want <strong>autonomous task execution</strong>, start with Claude Code, Amp, Codex, or Aider.
+If you want <strong>both in one tool</strong>, Cursor and Windsurf treat both as first-class features.
+If you want <strong>spec-driven structured development</strong>, Kiro is the only tool designed around that workflow.
+If you want <strong>maximum control over agent actions</strong>, Cline&rsquo;s approval gates are the most transparent.</p>
 <h3 id="2-what-is-your-budget">2. What is your budget?</h3>
 <table>
   <thead>
@@ -379,27 +559,34 @@ If you want <strong>both</strong>, Cursor is the only tool that treats both as f
   </thead>
   <tbody>
       <tr>
+          <td>Free / minimal</td>
+          <td>Aider (BYOK), Cline (BYOK), Gemini CLI (free tier), Amp (ad-supported credits)</td>
+      </tr>
+      <tr>
           <td>$10-20/month</td>
-          <td>Copilot, Gemini CLI (free tier)</td>
+          <td>Copilot, Cursor (Pro), Windsurf (Pro)</td>
       </tr>
       <tr>
           <td>$100-200/month</td>
-          <td>Claude Code (Max), Codex (Pro)</td>
+          <td>Claude Code (Max), Codex (bundled with ChatGPT Pro)</td>
       </tr>
       <tr>
           <td>Variable / pay-as-you-go</td>
-          <td>Amp Code, Gemini CLI (API)</td>
+          <td>Amp Code, Gemini CLI (API), Aider (API costs only)</td>
       </tr>
   </tbody>
 </table>
 <h3 id="3-how-important-is-editor-choice">3. How important is editor choice?</h3>
-<p>If you use <strong>VS Code</strong> exclusively: any tool works.
-If you use <strong>JetBrains</strong>: Copilot, Amp (plugin).
-If you use <strong>Neovim/terminal</strong>: Claude Code, Gemini CLI, Copilot.
-If you use <strong>multiple editors</strong>: Claude Code or Amp (editor-independent).</p>
+<p>If you use <strong>VS Code</strong> exclusively: any tool works (Cursor, Copilot, Cline, Amp, Windsurf).
+If you use <strong>JetBrains</strong>: Copilot, Cline, Amp (plugin), JetBrains AI.
+If you use <strong>Neovim/terminal</strong>: Claude Code, Gemini CLI, Aider, Copilot.
+If you use <strong>multiple editors</strong>: Claude Code, Aider, or Amp (editor-independent).
+If you prefer a <strong>standalone AI-native IDE</strong>: Cursor, Windsurf, or Kiro.</p>
 <h3 id="4-single-model-or-multi-model">4. Single-model or multi-model?</h3>
-<p><strong>Single-model</strong> (Claude Code): Simpler debugging, consistent behavior, but no fallback when the model struggles.
-<strong>Multi-model</strong> (Amp, Cursor with manual switching): Best model for each task type, but harder to debug quality issues. Practitioners who use multiple models in parallel for cross-validation report higher reliability than any single model alone.</p>
+<p><strong>Single-model</strong> (Claude Code, Codex): Simpler debugging, consistent behavior, but no fallback when the model struggles.
+<strong>Multi-model manual</strong> (Cursor, Cline with BYOK): You choose which model handles each task.
+<strong>Multi-model auto-routed</strong> (Amp): The tool picks the best model for each subtask automatically. Amp&rsquo;s data shows this can reduce wasted spend, but debugging quality issues is harder.
+<strong>Model-agnostic</strong> (Aider, Cline): Bring whatever model you want, including local models for air-gapped environments.</p>
 <h3 id="5-how-much-do-you-invest-in-configuration">5. How much do you invest in configuration?</h3>
 <p>Tools reward different levels of configuration investment:</p>
 <table>
@@ -422,25 +609,79 @@ If you use <strong>multiple editors</strong>: Claude Code or Amp (editor-indepen
           <td>Better context, conventions</td>
       </tr>
       <tr>
+          <td>Windsurf</td>
+          <td>Low-moderate (auto-indexing)</td>
+          <td>Good context without manual setup</td>
+      </tr>
+      <tr>
           <td>Claude Code</td>
           <td>High (CLAUDE.md, hooks, MCP, skills)</td>
           <td>Dramatic quality improvement</td>
+      </tr>
+      <tr>
+          <td>Gemini CLI</td>
+          <td>High (GEMINI.md hierarchy, skills, memory)</td>
+          <td>Granular project-level control</td>
       </tr>
       <tr>
           <td>Amp</td>
           <td>Moderate (AGENTS.md)</td>
           <td>Better task routing</td>
       </tr>
+      <tr>
+          <td>Aider</td>
+          <td>Low (git-native, auto repo map)</td>
+          <td>Immediate productivity</td>
+      </tr>
+      <tr>
+          <td>Cline</td>
+          <td>Moderate (MCP tools, approval config)</td>
+          <td>Customized agent behavior</td>
+      </tr>
+      <tr>
+          <td>Kiro</td>
+          <td>Moderate (spec files)</td>
+          <td>Structured, auditable output</td>
+      </tr>
   </tbody>
 </table>
 <p>Practitioners who invest heavily in CLAUDE.md report the single highest-leverage improvement across all tools. One user maintained a document of roughly fifteen thousand tokens containing the project&rsquo;s full context &ndash; use cases, principles, requirements, guardrails &ndash; and injected it into every prompt, reporting that it caused the codebase to converge toward the desired design over time.</p>
+<h3 id="6-open-source-or-proprietary">6. Open source or proprietary?</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Preference</th>
+          <th>Options</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Fully open source</td>
+          <td>Aider (MIT), Cline (Apache 2.0), Gemini CLI (Apache 2.0)</td>
+      </tr>
+      <tr>
+          <td>Open-source CLI</td>
+          <td>Codex CLI (open source, but models are proprietary)</td>
+      </tr>
+      <tr>
+          <td>Proprietary with free tiers</td>
+          <td>Amp, Copilot, Windsurf, Kiro</td>
+      </tr>
+      <tr>
+          <td>Proprietary subscription</td>
+          <td>Claude Code, Cursor</td>
+      </tr>
+  </tbody>
+</table>
 <h2 id="the-practitioner-consensus">The Practitioner Consensus</h2>
 <p>Several patterns emerge consistently across community discussions:</p>
 <p><strong>No single tool wins everywhere.</strong> Different tools suit different workflows, and many practitioners use two or more in combination. The most common pairing is Copilot for in-flow completion plus Claude Code or Amp for complex tasks.</p>
 <p><strong>The harness matters as much as the model.</strong> Switching from one tool to another using the same underlying model often produces dramatically different results. The engineering around context injection, tool integration, and error recovery is where tools differentiate. One user described switching from Copilot to Cursor as a dramatic improvement &ndash; not because the model changed, but because the harness improved how context was managed.</p>
 <p><strong>Models are approaching commodity status.</strong> Multiple commenters observe that the latest models from all major providers are approaching parity for most tasks. The differentiating factor is increasingly about quota, cost, and tooling rather than raw model capability. As one practitioner put it, the real differentiating factor is cost and availability, not model quality.</p>
+<p><strong>Reliability beats peak capability.</strong> Amp&rsquo;s published data on &ldquo;off-the-rails cost&rdquo; reinforces what practitioners observe anecdotally: a model that works reliably is worth more than one that occasionally produces brilliance but wastes significant effort on bad outputs.</p>
+<p><strong>The open-source ecosystem is thriving.</strong> Aider, Cline, and Gemini CLI prove that high-quality AI coding tools do not require proprietary subscriptions. The BYOK model (bring your own API key) lets developers mix and match tools and models without vendor lock-in.</p>
 <p><strong>The landscape changes fast.</strong> Any comparison is a snapshot. Tools that are behind today may leapfrog tomorrow. The most durable investment is learning the underlying skills &ndash; task decomposition, context management, verification &ndash; that transfer across any tool.</p>
-<p>For deeper profiles of individual tools, see: <a href="../tools/claude-code.html">Claude Code</a> | <a href="../tools/cursor.html">Cursor</a> | <a href="../tools/copilot.html">Copilot</a> | <a href="../tools/amp.html">Amp Code</a> | <a href="../tools/gemini-cli.html">Gemini CLI</a> | <a href="../tools/codex.html">OpenAI Codex</a></p>
+<p>For deeper profiles of individual tools, see: <a href="../tools/claude-code.html">Claude Code</a> | <a href="../tools/cursor.html">Cursor</a> | <a href="../tools/copilot.html">Copilot</a> | <a href="../tools/amp.html">Amp Code</a> | <a href="../tools/gemini-cli.html">Gemini CLI</a> | <a href="../tools/codex.html">OpenAI Codex</a> | <a href="../tools/aider.html">Aider</a> | <a href="../tools/cline.html">Cline</a> | <a href="../tools/windsurf.html">Windsurf</a> | <a href="../tools/kiro.html">Kiro</a></p>
 <p>For the MCP interoperability layer that connects across tools, see <a href="../tools/mcp-ecosystem.html">The MCP Ecosystem</a>.</p>
 
       </div>
@@ -469,7 +710,8 @@ If you use <strong>multiple editors</strong>: Claude Code or Amp (editor-indepen
     <h2 class="toc-title">On this page</h2>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#the-comparison-matrix">The Comparison Matrix</a></li>
+    <li><a href="#comparison-matrix-cli--terminal-tools">Comparison Matrix: CLI / Terminal Tools</a></li>
+    <li><a href="#comparison-matrix-ide-tools">Comparison Matrix: IDE Tools</a></li>
     <li><a href="#detailed-profiles">Detailed Profiles</a>
       <ul>
         <li><a href="#claude-code">Claude Code</a></li>
@@ -478,8 +720,13 @@ If you use <strong>multiple editors</strong>: Claude Code or Amp (editor-indepen
         <li><a href="#amp-code">Amp Code</a></li>
         <li><a href="#gemini-cli">Gemini CLI</a></li>
         <li><a href="#openai-codex">OpenAI Codex</a></li>
+        <li><a href="#aider">Aider</a></li>
+        <li><a href="#cline">Cline</a></li>
+        <li><a href="#windsurf">Windsurf</a></li>
+        <li><a href="#kiro">Kiro</a></li>
       </ul>
     </li>
+    <li><a href="#also-worth-knowing">Also Worth Knowing</a></li>
     <li><a href="#decision-framework">Decision Framework</a>
       <ul>
         <li><a href="#1-what-is-your-primary-interaction-mode">1. What is your primary interaction mode?</a></li>
@@ -487,6 +734,7 @@ If you use <strong>multiple editors</strong>: Claude Code or Amp (editor-indepen
         <li><a href="#3-how-important-is-editor-choice">3. How important is editor choice?</a></li>
         <li><a href="#4-single-model-or-multi-model">4. Single-model or multi-model?</a></li>
         <li><a href="#5-how-much-do-you-invest-in-configuration">5. How much do you invest in configuration?</a></li>
+        <li><a href="#6-open-source-or-proprietary">6. Open source or proprietary?</a></li>
       </ul>
     </li>
     <li><a href="#the-practitioner-consensus">The Practitioner Consensus</a></li>
@@ -525,7 +773,7 @@ If you use <strong>multiple editors</strong>: Claude Code or Amp (editor-indepen
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 73 pages across 180 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 78 pages across 197 topics.</p>
     </div>
   </div>
 </footer>

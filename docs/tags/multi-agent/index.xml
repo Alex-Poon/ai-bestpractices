@@ -30,6 +30,13 @@
       <description>&lt;p&gt;Multi-agent patterns involve running multiple AI agents simultaneously on related tasks. They represent the highest-throughput mode of AI-assisted development &amp;ndash; and the most complex. When they work, months of work happen in minutes. When they fail, you get merge conflicts, duplicated effort, and code that no single agent (or human) fully understands.&lt;/p&gt;&#xA;&lt;p&gt;The practice is still emerging. There is no consensus on when multi-agent is worth the overhead versus well-scoped single-agent work. But practitioners are converging on principles that separate productive multi-agent usage from expensive chaos.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>OpenAI Codex</title>
+      <link>/tools/codex.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tools/codex.html</guid>
+      <description>&lt;p&gt;OpenAI Codex has evolved from a single cloud-sandboxed coding agent into a multi-surface ecosystem: a Desktop App for parallel agent orchestration, a CLI for terminal-first workflows, and an IDE extension for in-editor use. The February 2026 launch of the Codex Desktop App and GPT-5.3-Codex model represents a significant expansion of what Codex can do, moving it from a submit-and-review tool to a full multi-agent development environment.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-codex-ecosystem-february-2026&#34;&gt;The Codex Ecosystem (February 2026)&lt;/h2&gt;&#xA;&lt;p&gt;Codex now spans three surfaces, each targeting different workflows:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Agentic Frameworks in 2026: Less Hype, More Autonomy</title>
       <link>/sources/2026-01-06-agentic-frameworks-2026.html</link>
       <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>

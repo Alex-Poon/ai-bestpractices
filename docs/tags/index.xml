@@ -65,6 +65,13 @@
       <description></description>
     </item>
     <item>
+      <title>Aider</title>
+      <link>/tags/aider.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/aider.html</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Amp-Code</title>
       <link>/tags/amp-code.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
@@ -83,6 +90,13 @@
       <link>/tags/autonomy.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/autonomy.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Aws</title>
+      <link>/tags/aws.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/aws.html</guid>
       <description></description>
     </item>
     <item>
@@ -121,6 +135,13 @@
       <description></description>
     </item>
     <item>
+      <title>Cascade</title>
+      <link>/tags/cascade.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/cascade.html</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Case-Study</title>
       <link>/tags/case-study.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
@@ -149,10 +170,24 @@
       <description></description>
     </item>
     <item>
+      <title>Cline</title>
+      <link>/tags/cline.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/cline.html</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Code-Review</title>
       <link>/tags/code-review.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/code-review.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Codeium</title>
+      <link>/tags/codeium.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/codeium.html</guid>
       <description></description>
     </item>
     <item>
@@ -352,6 +387,13 @@
       <description></description>
     </item>
     <item>
+      <title>Enterprise</title>
+      <link>/tags/enterprise.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/enterprise.html</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Expert-Techniques</title>
       <link>/tags/expert-techniques.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
@@ -394,6 +436,13 @@
       <description></description>
     </item>
     <item>
+      <title>Git</title>
+      <link>/tags/git.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/git.html</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Google</title>
       <link>/tags/google.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
@@ -412,6 +461,20 @@
       <link>/tags/honest-assessment.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/honest-assessment.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Human-in-the-Loop</title>
+      <link>/tags/human-in-the-loop.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/human-in-the-loop.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ide</title>
+      <link>/tags/ide.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/ide.html</guid>
       <description></description>
     </item>
     <item>
@@ -464,6 +527,13 @@
       <description></description>
     </item>
     <item>
+      <title>Kiro</title>
+      <link>/tags/kiro.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/kiro.html</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Learning</title>
       <link>/tags/learning.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
@@ -506,10 +576,24 @@
       <description></description>
     </item>
     <item>
+      <title>Memory</title>
+      <link>/tags/memory.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/memory.html</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Mistral</title>
       <link>/tags/mistral.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/mistral.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Model-Agnostic</title>
+      <link>/tags/model-agnostic.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/model-agnostic.html</guid>
       <description></description>
     </item>
     <item>
@@ -527,10 +611,24 @@
       <description></description>
     </item>
     <item>
+      <title>Model-Routing</title>
+      <link>/tags/model-routing.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/model-routing.html</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Model-Selection</title>
       <link>/tags/model-selection.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/model-selection.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Models</title>
+      <link>/tags/models.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/models.html</guid>
       <description></description>
     </item>
     <item>
@@ -688,6 +786,13 @@
       <description></description>
     </item>
     <item>
+      <title>Spec-Driven</title>
+      <link>/tags/spec-driven.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/spec-driven.html</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Sustainability</title>
       <link>/tags/sustainability.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
@@ -706,6 +811,13 @@
       <link>/tags/task-scoping.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/task-scoping.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Terminal</title>
+      <link>/tags/terminal.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/terminal.html</guid>
       <description></description>
     </item>
     <item>
@@ -762,6 +874,20 @@
       <link>/tags/vibe-coding.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/vibe-coding.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vs-Code</title>
+      <link>/tags/vs-code.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/vs-code.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windsurf</title>
+      <link>/tags/windsurf.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/windsurf.html</guid>
       <description></description>
     </item>
     <item>
@@ -1217,13 +1343,6 @@
       <link>/tags/code-intelligence.html</link>
       <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
       <guid>/tags/code-intelligence.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ide</title>
-      <link>/tags/ide.html</link>
-      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>/tags/ide.html</guid>
       <description></description>
     </item>
     <item>

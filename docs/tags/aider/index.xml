@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aider on AI Best Practices Knowledge Base</title>
+    <link>/tags/aider.html</link>
+    <description>Recent content in Aider on AI Best Practices Knowledge Base</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/aider/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aider</title>
+      <link>/tools/aider.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tools/aider.html</guid>
+      <description>&lt;p&gt;Aider is an open-source, terminal-based AI pair programming tool released under the MIT license. It operates through a chat interface where you describe changes in natural language and Aider edits files directly, staging and committing them with descriptive messages. It represents the fully open alternative to proprietary CLI agents like Claude Code and Codex CLI &amp;ndash; you bring your own API keys, choose your own models, and pay nothing beyond inference costs.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
