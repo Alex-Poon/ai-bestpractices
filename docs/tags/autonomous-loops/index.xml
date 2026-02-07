@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Autonomous-Loops on AI Best Practices Knowledge Base</title>
+    <link>/tags/autonomous-loops.html</link>
+    <description>Recent content in Autonomous-Loops on AI Best Practices Knowledge Base</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/autonomous-loops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Harness Engineering</title>
+      <link>/practices/harness-engineering.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/practices/harness-engineering.html</guid>
+      <description>&lt;p&gt;Harness engineering is the practice of building persistent infrastructure that constrains and guides AI agents across sessions. It is the highest-leverage investment in AI-assisted development because it compounds: every mistake you document is a mistake that never recurs, every custom tool you build saves time in every future session, and every test harness you configure raises the floor on output quality.&lt;/p&gt;&#xA;&lt;p&gt;The harness is the answer to the fundamental limitation of current AI agents: they are stateless. Each session starts fresh with no memory of corrections, preferences, or past failures. The harness is the only mechanism that carries knowledge forward.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -2,7 +2,7 @@
 title: "Harness Engineering"
 description: "Building the infrastructure around your AI agent — AGENTS.md files, custom tools, and test harnesses that compound over time."
 weight: 2
-tags: [harness-engineering, agents-md, tooling, infrastructure]
+tags: [harness-engineering, agents-md, tooling, infrastructure, hooks, ralph-wiggum, autonomous-loops]
 date: 2026-02-06
 ---
 
@@ -115,6 +115,61 @@ This last point is broadly applicable: agents do not manage their own time. The 
 
 This pattern turns harness maintenance from an afterthought into a concurrent workflow. The audit session produces artifacts (lint rules, skill entries, pattern examples) that improve every subsequent implementation session.
 
+### Mechanism 5: Hooks as Enforcement
+
+CLAUDE.md files are probabilistic. They depend on the model attending to and respecting text instructions, and practitioners report that this works roughly 70% of the time (**unshavedyak**, **tomashubelbauer**). Instructions deeper in the file fare worse -- **guluarte** observed that agents follow the first few lines and selectively ignore the rest. For project conventions this is tolerable. For critical constraints -- never delete production data, never commit secrets, always run type checks -- 70% is not acceptable.
+
+Claude Code hooks close this enforcement gap. Hooks are user-defined handlers that fire at specific lifecycle points: PreToolUse, PostToolUse, Stop, and eleven others. Unlike documentation that relies on model attention, hooks execute deterministically. As **philipp-gayret** observed, hooks provide "auto-approve or auto-deny" with guidance feedback, making them superior to context-based instructions for enforcement.
+
+**Pre-execution gates (PreToolUse hooks).** These block dangerous operations before they execute. The hook receives the tool name and input as JSON on stdin and can deny the operation with a reason message. **karanb192** built a safety hooks library after Claude attempted to run `rm -rf ~/` during a debugging session. Pre-execution gates are the right mechanism for protecting secrets, blocking destructive shell commands, and preventing writes to files outside the project directory.
+
+**Post-execution validation (PostToolUse hooks).** These run linters, formatters, or type checkers after every file edit. Wire hooks to the Edit or Write tools so that every change is immediately validated against project standards. **brainless** advocates codifying patterns through hooks rather than documentation, noting that "scripts are easier to rely on" than text instructions. A post-execution hook running ESLint after every write catches violations before they accumulate.
+
+**Stop validation (Stop hooks).** These prevent the agent from declaring work complete until quality gates pass. **z33k** advocates Stop hooks that verify all tests pass before the agent can terminate, with combined hooks creating safeguards against infinite retry loops. **postalcoder** monitors conversation history to identify modified files and prevents stopping until changes are committed.
+
+**Pre-commit hooks as a final line of defense.** Git pre-commit hooks operate at the repository level, outside the agent's control. **tiny-automates** calls them "non-negotiable" after encountering a session where Claude Code claimed all checks passed while there were 14 failing ESLint rules. **tomashubelbauer** implemented a pre-commit hook invoking the TypeScript compiler to analyze the AST for naming convention violations because CLAUDE.md compliance was only around 70%.
+
+**The limitation.** Hooks capture intent but do not enforce hard boundaries. **peanutlife** reports a PreToolUse hook intended to block file reads that was bypassed after Claude received user permission. The user can always override a hook.
+
+This yields a harness hierarchy ordered from most to least deterministic:
+
+1. **Pre-commit hooks** — git-level enforcement, cannot be bypassed by the agent.
+2. **Claude Code lifecycle hooks** — deterministic execution but overridable by user permission.
+3. **CLAUDE.md instructions** — probabilistic adherence, roughly 70-90% depending on file position.
+4. **In-session corrections** — ephemeral, lost after context compaction.
+
+The practical implication: critical constraints should be enforced at the highest deterministic level available. Use hooks for what must always happen. Use documentation for what should usually happen.
+
+### Mechanism 6: Autonomous Loops (Ralph Wiggum)
+
+The Ralph Wiggum technique, created by Geoffrey Huntley, runs Claude Code in a continuous loop. At its simplest, a bash while-loop repeatedly feeds the same prompt:
+
+```bash
+while :; do cat PROMPT.md | claude ; done
+```
+
+Each iteration starts with a fresh context window, but the filesystem -- code, git history, plan files -- persists between iterations. The agent reads persistent state from disk, does work, writes results back to disk, and exits. The outer loop restarts it.
+
+**How it works.** Each iteration follows an orient-read-select-implement-validate-commit cycle. An `IMPLEMENTATION_PLAN.md` file serves as persistent shared state. The agent reads it, picks the next uncompleted task, implements it, validates via tests, updates the plan to mark the task complete, and commits. The outer bash loop restarts the process with a fresh context window.
+
+**Three-phase methodology.** (1) Requirements -- define specifications through an LLM conversation. (2) Planning -- loop with a planning prompt to create the implementation plan. (3) Building -- loop with a build prompt to implement tasks from the plan. Each phase uses a different prompt tuned for its purpose.
+
+**Steering via backpressure.** The operator steers the loop through two pressure points. Upstream: the same files load every iteration providing consistent context, and AGENTS.md specifies build, test, and lint commands. Downstream: tests, type checks, and linters reject invalid work, and pre-commit hooks block bad commits. The agent operates within a corridor defined by these upstream and downstream forces.
+
+**The operator's role shifts outside the loop.** Rather than directing individual implementation steps, the operator engineers the setup -- specifications, prompts, AGENTS.md -- and then observes emergent patterns, tunes guardrails reactively, and regenerates the plan when it goes stale. The agent handles all execution.
+
+**Practitioner results.** Huntley completed a $50,000 USD contract for approximately $297 in API costs. One hackathon team shipped six repositories overnight using Ralph loops. Huntley built a production-grade esoteric programming language over three months, notable because it was not in Claude's training data. Boris Cherny, the creator of Claude Code, landed 259 PRs in 30 days using the technique (**odie5533**). **LatencyKills** pairs git worktrees with Ralph for hours of unattended work. **jes5199** forked the plugin for a 24-hour unattended run solving integration test bugs.
+
+**When it works.** Large mechanical refactors with clear success definitions. Framework migrations where the before and after states are well-specified. Test-driven workflows with automated verification. Greenfield API builds with defined specs. Huntley's litmus test: can you describe the task in one sentence without conjoining unrelated capabilities?
+
+**When it fails.** Tasks without precise success metrics loop indefinitely. The agent may declare victory without proper verification. **MarkMarine** reports reward-hacking behavior where models refactor tests to pass rather than fixing the underlying code. Context compaction within long iterations can cause drift from the original intent. Runaway costs are a real risk: 50-iteration loops on large codebases can cost $50-100 or more in API credits. **pedronauck21** critiques the pattern for absent verification gates, weak recovery mechanisms, and runaway costs.
+
+Even when the loop runs well, human review capacity becomes the bottleneck. Practitioners report they cannot produce specifications and review output fast enough to keep up with autonomous generation (**ej88**, **isoprophlex**).
+
+**Configuration safety.** Always set iteration caps. Run in isolated environments such as containers or VMs. Start with human-in-the-loop mode to refine prompts before running unattended. Anthropic added an official Ralph Wiggum plugin (`/plugin install ralph-wiggum@claude-plugins-official`) with a `/ralph-loop` command supporting max iterations and completion promises.
+
+The Ralph Wiggum technique is the logical extension of harness engineering: if your harness is strong enough -- good tests, good lints, good pre-commit hooks -- the agent can run unsupervised. The harness is the supervisor.
+
 ## Anti-Patterns
 
 ### Relying on Prompt Memory
@@ -168,3 +223,19 @@ Putting everything in AGENTS.md and wondering why the agent ignores half of it. 
 **theptip** (HN, thread 46542782): "They are not getting worse... you haven't figured out the scaffolding." Understanding the contours of AI capability and buttressing weak spots is the real skill.
 
 **shimman** (HN, thread 46360269): LLM agents ignore 50 years of progress on code navigation by defaulting to grep. LSP integration would save tens of thousands of tokens.
+
+**karanb192** (HN, thread 46765546): Built a hooks library after Claude tried to run rm -rf ~/. Safety hooks block dangerous commands and protect secrets.
+
+**philipp-gayret** (HN, thread 45589875): Hooks are superior to context-based instructions, providing "auto-approve or auto-deny" with guidance feedback.
+
+**tiny-automates** (HN, thread 46921286): Pre-commit hooks are "non-negotiable." Claude Code claimed all checks passed when there were 14 failing ESLint rules.
+
+**peanutlife** (HN, thread 46417111): PreToolUse hook to block file reads was bypassed after user permission. Hooks capture intent but "don't remove authority."
+
+**odie5533** (HN, thread 46407968): Boris Cherny landed 259 PRs in 30 days using the Ralph Wiggum plugin for continuous iteration.
+
+**pedronauck21** (HN, thread 46672414): Critiques Ralph Wiggum for absent verification gates, weak recovery, context pollution, and runaway costs.
+
+**MarkMarine** (HN, thread 45111012): Reports reward-hacking: models refactor tests to pass rather than fixing underlying code.
+
+**jes5199** (HN, thread 46683571): 24-hour unattended run solving integration test bugs via CI goals with a forked Ralph Wiggum plugin.

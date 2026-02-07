@@ -37,6 +37,13 @@
       <description></description>
     </item>
     <item>
+      <title>Agent-Teams</title>
+      <link>/tags/agent-teams.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/agent-teams.html</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Agent-Workflows</title>
       <link>/tags/agent-workflows.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
@@ -83,6 +90,13 @@
       <link>/tags/autonomous-coding.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/autonomous-coding.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Autonomous-Loops</title>
+      <link>/tags/autonomous-loops.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/autonomous-loops.html</guid>
       <description></description>
     </item>
     <item>
@@ -160,6 +174,13 @@
       <link>/tags/claude-code.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/claude-code.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Claude-Md</title>
+      <link>/tags/claude-md.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/claude-md.html</guid>
       <description></description>
     </item>
     <item>
@@ -300,6 +321,13 @@
       <link>/tags/cursor.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/cursor.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Custom-Agents</title>
+      <link>/tags/custom-agents.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/custom-agents.html</guid>
       <description></description>
     </item>
     <item>
@@ -461,6 +489,13 @@
       <link>/tags/honest-assessment.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/honest-assessment.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hooks</title>
+      <link>/tags/hooks.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/hooks.html</guid>
       <description></description>
     </item>
     <item>
@@ -688,6 +723,13 @@
       <description></description>
     </item>
     <item>
+      <title>Plugins</title>
+      <link>/tags/plugins.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/plugins.html</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Power-Users</title>
       <link>/tags/power-users.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
@@ -727,6 +769,13 @@
       <link>/tags/quality.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/quality.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ralph-Wiggum</title>
+      <link>/tags/ralph-wiggum.html</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/ralph-wiggum.html</guid>
       <description></description>
     </item>
     <item>
@@ -909,13 +958,6 @@
       <link>/tags/working-memory.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/working-memory.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Agent-Teams</title>
-      <link>/tags/agent-teams.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/agent-teams.html</guid>
       <description></description>
     </item>
     <item>
@@ -1357,13 +1399,6 @@
       <link>/tags/lsp.html</link>
       <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
       <guid>/tags/lsp.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Plugins</title>
-      <link>/tags/plugins.html</link>
-      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>/tags/plugins.html</guid>
       <description></description>
     </item>
     <item>

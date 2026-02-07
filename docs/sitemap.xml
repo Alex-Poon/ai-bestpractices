@@ -272,6 +272,9 @@
     <loc>/tags/agent-architecture.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tags/agent-teams.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/agent-workflows.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -294,6 +297,9 @@
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/autonomous-coding.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/autonomous-loops.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/autonomy.html</loc>
@@ -327,6 +333,9 @@
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/claude-code.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/claude-md.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/cli.html</loc>
@@ -387,6 +396,9 @@
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/cursor.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/custom-agents.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/data.html</loc>
@@ -456,6 +468,9 @@
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/honest-assessment.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/hooks.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/human-in-the-loop.html</loc>
@@ -554,6 +569,9 @@
     <loc>/tags/parallel-agents.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tags/plugins.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/power-users.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -570,6 +588,9 @@
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/quality.html</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/ralph-wiggum.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/reasoning.html</loc>
@@ -652,9 +673,6 @@
   </url><url>
     <loc>/tags/working-memory.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/agent-teams.html</loc>
-    <lastmod>2026-02-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/anthropic.html</loc>
     <lastmod>2026-02-05T00:00:00+00:00</lastmod>
@@ -843,9 +861,6 @@
     <lastmod>2025-12-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/lsp.html</loc>
-    <lastmod>2025-12-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/plugins.html</loc>
     <lastmod>2025-12-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/meta-cognition.html</loc>

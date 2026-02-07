@@ -2,7 +2,7 @@
 title: "Context Management"
 description: "Working within and around context window limits — TODO lists, plan files, working memory patterns."
 weight: 6
-tags: [context-management, working-memory, context-window]
+tags: [context-management, working-memory, context-window, memory, claude-md]
 date: 2026-02-06
 ---
 
@@ -66,6 +66,8 @@ Use files on disk to extend the agent's effective memory beyond the context wind
 
 **stevenslade** summarized the fundamental principle: "memory = prompt assembly." All agent memory is just text assembled into prompts. The strategies (sliding window, summarization, RAG, external files) differ in how that assembly happens, but the constraint is the same.
 
+Claude Code's built-in memory system (see Strategy 7) now automates some of these patterns. Auto memory maintains project notes across sessions without manual intervention, and CLAUDE.md files serve as persistent project context loaded at every session start. However, task-specific working memory — TODO files for the current task, plan files for the current approach, state files for multi-agent coordination — remains valuable because it captures ephemeral session state that the persistent memory system is not designed to track.
+
 ### Strategy 3: Context-Efficient Tools
 
 Replace context-heavy operations with context-efficient tools. Every tool output that enters the context window competes with your instructions and conversation for the agent's attention.
@@ -104,6 +106,47 @@ The pattern is analogous to shift handoffs in operations: the outgoing shift bri
 ### Strategy 6: Context Checkpointing
 
 Some practitioners create explicit checkpoints during long sessions. Before undertaking a risky or complex sub-task, have the agent write its current understanding and plan to a file. If the sub-task goes badly and pollutes the context, you can start a new session and restore from the checkpoint rather than losing the entire session's progress.
+
+### Strategy 7: Persistent Memory
+
+The strategies above manage context within and between sessions. Persistent memory systems address a related but distinct problem: carrying knowledge forward across sessions without consuming the active context window. Claude Code's built-in memory architecture is the most mature implementation of this idea, and several community plugins extend it further.
+
+**The three-layer memory architecture:**
+
+**1. CLAUDE.md files (manual, hierarchical).** Markdown files you write that Claude reads at session start. They form a hierarchy from broadest to narrowest scope: managed policy (organization-wide) → user memory (~/.claude/CLAUDE.md, personal preferences for all projects) → project memory (./CLAUDE.md, team-shared via source control) → project rules (.claude/rules/*.md, modular and path-scoped) → project local (./CLAUDE.local.md, personal and auto-gitignored). More specific instructions take precedence over broader ones.
+
+Claude Code reads CLAUDE.md files recursively from the current working directory upward. Parent directory files are loaded in full at launch; child directory files are loaded on demand when Claude reads files in those subtrees. This means a monorepo can have a root CLAUDE.md with global rules and subdirectory files with package-specific overrides.
+
+Modular rules in .claude/rules/ support path-specific scoping via YAML frontmatter with glob patterns — a rule in react.md can be scoped to "src/**/*.tsx" files only, loading only when Claude works with matching files. This reduces context waste from rules irrelevant to the current task.
+
+**2. Auto memory (Claude-generated, persistent).** A directory at ~/.claude/projects/<project>/memory/ where Claude records learnings, patterns, and insights as it works. The first 200 lines of MEMORY.md are loaded into Claude's system prompt every session. Topic files (debugging.md, patterns.md, api-conventions.md) are created as needed and loaded on demand.
+
+This replaces some manual working memory patterns. Instead of maintaining TODO files and handoff documents manually, Claude maintains its own persistent notes — project patterns, debugging insights, architecture notes, and user preferences. The system is automatic: Claude writes to memory files during sessions and reads them back at the start of the next session.
+
+The practical impact on context management: auto memory provides a form of RAG-like retrieval without consuming the active context window for information that is not immediately relevant. The 200-line MEMORY.md cap ensures only the most important notes occupy permanent context space.
+
+**3. Community memory plugins (extended memory).** Third-party plugins go beyond Claude's built-in memory. claude-mem (thedotmack) captures session activity, compresses it with AI, and injects relevant context into future sessions. It uses a three-layer progressive disclosure system for token efficiency — compact index first (~50-100 tokens), timeline context on demand, full observations only when filtered. Local SQLite and Chroma vector storage keep everything on-device. claude-supermemory (supermemoryai) takes a different approach with cloud-based team memory, enabling project knowledge shared across team members. This addresses the collaboration gap where auto memory is per-user. Other tools — Nemp Memory (local JSON), Basic Memory (MCP knowledge system), In Memoria (statistical pattern learning from code structure) — each offer different tradeoffs between simplicity, capability, and privacy.
+
+**How persistent memory changes context management practice:**
+
+- CLAUDE.md files partially replace the need for external working memory (Strategy 2) for project conventions and constraints. Rules that you would previously re-explain every session are now loaded automatically.
+- Auto memory reduces handoff friction (Strategy 5). Instead of manually writing session summaries, Claude maintains its own continuity across sessions.
+- Path-scoped rules (.claude/rules/) help with context budgeting (Strategy 1) by loading rules only when they are relevant to the current files being edited.
+- The hierarchy addresses the massive AGENTS.md anti-pattern: instead of one large file, distribute rules across scoped files that load conditionally.
+
+**Practitioner insights:**
+
+**bcherny** (Anthropic team) recommends keeping CLAUDE.md under approximately 1,000 tokens. His own file is about half that size. He advises breaking instructions into smaller files per subdirectory for lazy loading.
+
+**bonsai_spool** keeps CLAUDE.md under 50 lines with a focused structure: one-line hypothesis or goal, a "Start Here" link to a roadmap file, quick reference commands, a key files table, and an end-of-session protocol.
+
+**pigpop** treats Claude as a short-term contractor in 30-60 minute sessions. He disables auto-compaction because summaries "often remove important details" and keeps context usage under 80%.
+
+**nivertech** reports that auto-memories get written to CLAUDE.md, requiring periodic manual organization to prevent bloat — the memory system needs maintenance just like any external working memory pattern.
+
+**steveklabnik** notes that native memory tools allow Claude to store and consult information outside the context window, enabling persistent knowledge bases without context inflation.
+
+**The residual gap:** Memory systems address knowledge persistence but do not solve context window degradation during active sessions. All the strategies from 1-6 remain essential for managing the active context window within a session. Memory systems reduce the cold-start problem (Strategy 5 handoffs) but cannot prevent the quality degradation that occurs when the active window fills (Strategy 1 short sessions).
 
 ## Anti-Patterns
 
@@ -168,3 +211,13 @@ This means that even with a 200K context window, treating the first 50-80K as yo
 **baby** (HN, thread 46752104): The system produces better results because of clean context windows. Always delegates to subagents for self-contained tasks.
 
 **dmos62** (HN, thread 46812832): Discovered hard performance cliff at 45k tokens. Prefers honest refusals over silent quality degradation.
+
+**bcherny** (HN, thread 46256682): Recommends keeping CLAUDE.md under ~1,000 tokens. Breaks instructions into smaller files per subdirectory for lazy loading.
+
+**bonsai_spool** (HN, thread 46486664): CLAUDE.md under 50 lines: one-line hypothesis/goal, "Start Here" link, quick reference commands, key files table, end-of-session protocol.
+
+**pigpop** (HN, thread 46521933): Treats Claude as a short-term contractor (30-60 minute sessions). Disables auto-compaction because summaries "often remove important details."
+
+**steveklabnik** (HN, thread 45530858): Native memory tools enable persistent knowledge bases outside the context window without context inflation.
+
+**nivertech** (HN, thread 45788866): Auto-memories written to CLAUDE.md require periodic manual organization to prevent bloat.

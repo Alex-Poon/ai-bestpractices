@@ -3,12 +3,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Claude Code Deep Dive | AI Best Practices Knowledge Base</title>
-  <meta name="description" content="Swarms, LSP support, AGENTS.md, benchmarks — everything practitioners need to know.">
+  <meta name="description" content="Hooks, memory, custom agents, plugins, agent teams — everything practitioners need to know about Claude Code&#39;s extensibility platform.">
   <meta name="color-scheme" content="dark light">
 
   
   <meta property="og:title" content="Claude Code Deep Dive">
-  <meta property="og:description" content="Swarms, LSP support, AGENTS.md, benchmarks — everything practitioners need to know.">
+  <meta property="og:description" content="Hooks, memory, custom agents, plugins, agent teams — everything practitioners need to know about Claude Code&#39;s extensibility platform.">
   <meta property="og:type" content="article">
 
   
@@ -113,7 +113,7 @@
 
   
 
-  <span class="meta-reading-time">6 min read</span>
+  <span class="meta-reading-time">19 min read</span>
 
   
 
@@ -145,12 +145,32 @@
   
   
   
-  <a href="../tags/swarms.html" class="tag-pill">swarms</a>
+  <a href="../tags/agent-teams.html" class="tag-pill">agent-teams</a>
   
   
   
   
   <a href="../tags/harness-engineering.html" class="tag-pill">harness-engineering</a>
+  
+  
+  
+  
+  <a href="../tags/hooks.html" class="tag-pill">hooks</a>
+  
+  
+  
+  
+  <a href="../tags/memory.html" class="tag-pill">memory</a>
+  
+  
+  
+  
+  <a href="../tags/plugins.html" class="tag-pill">plugins</a>
+  
+  
+  
+  
+  <a href="../tags/custom-agents.html" class="tag-pill">custom-agents</a>
   
   
 </div>
@@ -161,11 +181,25 @@
       <div class="article-content">
         <p>Claude Code is Anthropic&rsquo;s CLI-first coding agent. It runs in the terminal, takes natural language task descriptions, and executes autonomously &ndash; reading files, running commands, editing code, and iterating on failures. It is single-model (Anthropic&rsquo;s Claude family), available through Claude Max subscriptions at $100-200/month, and focused entirely on agentic workflows with no autocomplete mode.</p>
 <p>What sets Claude Code apart from other agents is its extensibility. It supports CLAUDE.md project files, custom sub-agents, hooks for CI/CD integration, and MCP servers for structured tool access. This page covers the major features and developments that matter to practitioners.</p>
-<h2 id="swarms-multi-agent-orchestration">Swarms: Multi-Agent Orchestration</h2>
+<h2 id="agent-teams-multi-agent-orchestration">Agent Teams: Multi-Agent Orchestration</h2>
 <p>In January 2026, the community discovered that Claude Code contains built-in multi-agent orchestration capabilities. The architecture positions the primary agent as a team lead that can plan work, delegate tasks to specialized sub-agents, and synthesize results. Each sub-agent operates with its own context window, enabling parallel execution of independent tasks.</p>
-<p>The feature includes a TeammateTool, delegate mode for spawning background agents, and a team coordination system with messaging and task ownership. As of the Opus 4.6 release, agent teams became an official research preview in Claude Code 2.1.32, requiring an experimental flag to enable.</p>
-<p>Practitioner reception has been mixed. Some report strong results &ndash; one user described running a full project team of sub-agents managed by a single Opus instance, achieving the best code quality though at roughly 10x the cost. Others express skepticism. Common concerns include the volume of generated code becoming harder to review, and the economics of running multiple LLM agents simultaneously.</p>
+<p>The feature includes a TeammateTool, delegate mode for spawning background agents, and a team coordination system with messaging and task ownership. As of the Opus 4.6 release, agent teams became an official research preview in Claude Code 2.1.32, requiring the <code>CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1</code> environment variable (or equivalent settings.json <code>env</code> configuration) to enable.</p>
+<h3 id="architecture">Architecture</h3>
+<p>Agent Teams follow a Team Lead plus Teammates model. The main Claude Code session acts as the Team Lead, coordinating work across one or more Teammate instances that run as separate processes. Three shared primitives tie them together:</p>
+<ul>
+<li><strong>Task List</strong> &ndash; a shared registry where the lead creates tasks and teammates claim them. Tasks flow through pending, in_progress, and completed states, with optional dependency chains so a teammate can block until prerequisite tasks finish. File locking on claims prevents two teammates from grabbing the same task.</li>
+<li><strong>Mailbox</strong> &ndash; inter-agent messaging. <code>message</code> sends a direct message to one teammate; <code>broadcast</code> sends to all (expensive &ndash; one delivery per teammate). <code>shutdown_request</code> and <code>shutdown_response</code> handle graceful teardown.</li>
+<li><strong>Delegate mode</strong> &ndash; restricts the lead to coordination-only tools, preventing it from doing implementation work that should go to teammates.</li>
+</ul>
+<p>Teammates can run in <strong>plan mode</strong>, where they explore the codebase read-only and propose a plan that the lead must approve before implementation begins. Display modes include in-process (default, all output in the main terminal) and split panes via tmux or iTerm2.</p>
+<h3 id="practitioner-results">Practitioner Results</h3>
+<p>Early adopters have published concrete benchmarks. anupamchugh tested on a FastAPI codebase with 4 agents handling 6 tasks and reported completion in roughly 6 minutes versus 18-20 minutes sequential, with 24 tests passing and zero merge conflicts. Token cost was approximately 4x a single-agent run. sukinai ran 3 parallel agents that committed 34 files with 100 tests passing and no conflicts.</p>
+<p>The critical constraint practitioners have identified is file disjointness. Two teammates editing the same file leads to overwrites &ndash; there is no merge resolution. Successful teams require task decomposition where each agent owns separate files (anupamchugh).</p>
+<p>Anthropic&rsquo;s own demonstration of the architecture involved 16 parallel agents building a C compiler over 2 weeks, consuming 2 billion input tokens at roughly $20,000 in cost. The result was 100,000 lines of Rust passing 99% of compiler test suites.</p>
+<p>Practitioner reception remains mixed. Some report strong results &ndash; one user described running a full project team of sub-agents managed by a single Opus instance, achieving the best code quality though at roughly 10x the cost. Others express skepticism. Common concerns include the volume of generated code becoming harder to review, and the economics of running multiple LLM agents simultaneously.</p>
 <p>The core tension is whether multi-agent coordination genuinely improves output quality or primarily increases token consumption. One HN commenter characterized the approach as &ldquo;function scoping and memory management cosplaying as an org chart.&rdquo; Another argued the architecture is simply built-in sub-agents and that massive external orchestration frameworks were never needed.</p>
+<h3 id="cost-management">Cost Management</h3>
+<p>Teams are session-scoped &ndash; they terminate when the terminal closes. Practical cost controls include using Sonnet for teammates rather than Opus, keeping team size small (3-5 agents), cleaning up idle teammates promptly, and recognizing that active teammates consume tokens even while waiting for tasks. The 4x token multiplier reported by anupamchugh appears representative of small teams; Anthropic&rsquo;s 16-agent compiler project shows costs scaling significantly at larger configurations.</p>
 <p>For more detail on the swarm discovery and community reaction, see the <a href="../sources/2026-01-24-claude-code-swarms.html">source capture</a>.</p>
 <h2 id="agentsmd-and-claudemd">AGENTS.md and CLAUDE.md</h2>
 <p>Claude Code reads CLAUDE.md files from the project root at the start of every session, giving the agent persistent, project-specific context. This approach &ndash; embedding documentation directly in the system prompt &ndash; has proven highly effective.</p>
@@ -189,11 +223,268 @@
 <p>The extended context window is particularly relevant for coding agents. It enables working with entire codebases in a single context, reducing the need for the agent to search and re-read files. One tester validated the capability by searching across all Harry Potter books for spells within a single context window.</p>
 <p>The release coincided with Claude Code 2.1.32, which introduced automatic memory recording and recall during work sessions, and the agent teams research preview discussed above. Rate limits remain a practical constraint &ndash; several practitioners reported that limits on the Pro and Max plans reduce the model&rsquo;s usefulness despite strong output quality.</p>
 <p>For the full release analysis and community reaction, see the <a href="../sources/2026-02-05-claude-opus-4-6.html">source capture</a>.</p>
+<h2 id="hooks-lifecycle-automation">Hooks: Lifecycle Automation</h2>
+<p>Hooks are user-defined handlers that execute at specific lifecycle points in Claude Code&rsquo;s agent loop. Unlike CLAUDE.md instructions &ndash; which the model follows roughly 70% of the time according to practitioners (unshavedyak, tomashubelbauer) &ndash; hooks provide deterministic enforcement. As philipp-gayret observed, hooks are superior to context-based instructions because they &ldquo;auto-approve or auto-deny&rdquo; with guidance feedback rather than relying on the model&rsquo;s judgment.</p>
+<h3 id="lifecycle-events">Lifecycle Events</h3>
+<p>Claude Code exposes 14 lifecycle events where hooks can be attached:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Event</th>
+          <th>When it fires</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>SessionStart</strong></td>
+          <td>Claude Code session begins</td>
+      </tr>
+      <tr>
+          <td><strong>UserPromptSubmit</strong></td>
+          <td>User sends a message</td>
+      </tr>
+      <tr>
+          <td><strong>PreToolUse</strong></td>
+          <td>Before a tool call executes</td>
+      </tr>
+      <tr>
+          <td><strong>PermissionRequest</strong></td>
+          <td>When a tool needs user approval</td>
+      </tr>
+      <tr>
+          <td><strong>PostToolUse</strong></td>
+          <td>After a tool call succeeds</td>
+      </tr>
+      <tr>
+          <td><strong>PostToolUseFailure</strong></td>
+          <td>After a tool call fails</td>
+      </tr>
+      <tr>
+          <td><strong>Notification</strong></td>
+          <td>Claude sends a desktop notification</td>
+      </tr>
+      <tr>
+          <td><strong>SubagentStart</strong></td>
+          <td>A sub-agent is spawned</td>
+      </tr>
+      <tr>
+          <td><strong>SubagentStop</strong></td>
+          <td>A sub-agent terminates</td>
+      </tr>
+      <tr>
+          <td><strong>Stop</strong></td>
+          <td>Claude finishes its turn</td>
+      </tr>
+      <tr>
+          <td><strong>TeammateIdle</strong></td>
+          <td>A teammate agent becomes idle</td>
+      </tr>
+      <tr>
+          <td><strong>TaskCompleted</strong></td>
+          <td>A task in the shared task list completes</td>
+      </tr>
+      <tr>
+          <td><strong>PreCompact</strong></td>
+          <td>Before context window compaction</td>
+      </tr>
+      <tr>
+          <td><strong>SessionEnd</strong></td>
+          <td>Claude Code session terminates</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="handler-types">Handler Types</h3>
+<p>Each hook uses one of three handler types:</p>
+<ul>
+<li><strong>Command</strong> &ndash; executes a shell script. The most common type. Exit code 0 means success; exit code 2 means a blocking error that halts the agent loop. The hook receives event JSON on stdin and can respond with JSON on stdout.</li>
+<li><strong>Prompt</strong> &ndash; sends a single-turn evaluation to the LLM. Useful for semantic checks that a shell script cannot express, such as verifying that generated code follows project conventions.</li>
+<li><strong>Agent</strong> &ndash; runs a multi-turn, tool-using verification pass. The most powerful but most expensive handler type, suitable for complex validation gates.</li>
+</ul>
+<h3 id="configuration">Configuration</h3>
+<p>Hooks can be defined at multiple levels, from broadest to narrowest scope:</p>
+<ul>
+<li><strong>Managed policy</strong> &ndash; enterprise-wide enforcement</li>
+<li><strong>User</strong> &ndash; <code>~/.claude/settings.json</code> (personal defaults)</li>
+<li><strong>Project</strong> &ndash; <code>.claude/settings.json</code> (team-shared via source control)</li>
+<li><strong>Local</strong> &ndash; <code>.claude/settings.local.json</code> (personal per-repo overrides)</li>
+<li><strong>Plugin hooks</strong> &ndash; bundled with installed plugins</li>
+<li><strong>Skill/agent frontmatter</strong> &ndash; hooks embedded in custom agent definitions</li>
+</ul>
+<p>Matcher patterns support regex filtering by tool name, session event type, or agent type, allowing hooks to fire only for specific tools or contexts.</p>
+<h3 id="protocol">Protocol</h3>
+<p>Hooks communicate via a JSON protocol on stdin and stdout. The hook process receives event details as JSON on stdin and can return JSON on stdout with several control fields:</p>
+<ul>
+<li><code>continue</code> &ndash; whether the agent loop should proceed</li>
+<li><code>stopReason</code> &ndash; message to display if halting</li>
+<li><code>suppressOutput</code> &ndash; hide tool output from the conversation</li>
+<li><code>systemMessage</code> &ndash; inject a system-level message into Claude&rsquo;s context</li>
+</ul>
+<p>For <strong>PreToolUse</strong> hooks specifically, two additional fields enable decision control: <code>permissionDecision</code> (allow, deny, or ask) determines whether the tool call proceeds, and <code>updatedInput</code> can modify the tool&rsquo;s parameters before execution.</p>
+<h3 id="common-patterns">Common Patterns</h3>
+<p><strong>Notification hooks</strong> are the most common first hook practitioners build. Desktop and mobile alerts when Claude stops or needs input keep the developer productive on other tasks while the agent works (rco8786, Jnr, arach).</p>
+<p><strong>Guard rails</strong> prevent destructive commands. karanb192 built a safety hooks library after Claude attempted to run <code>rm -rf ~/</code> during a session. PreToolUse hooks on Bash can match dangerous patterns and deny execution.</p>
+<p><strong>Auto-lint after edits.</strong> PostToolUse hooks on Edit and Write tools can trigger formatters and linters automatically, ensuring every file Claude touches conforms to project standards.</p>
+<p><strong>Stop validation gates.</strong> Stop hooks can prevent Claude from finishing its turn until tests pass, enforcing a &ldquo;green build&rdquo; invariant on every agent response.</p>
+<p><strong>Commit automation.</strong> PostToolUse hooks can auto-commit after changes, maintaining a fine-grained history of agent modifications (adobrawy, mojombo).</p>
+<p><strong>Governance layers.</strong> Enterprise teams use managed hooks for policy enforcement across all developer sessions. ramoz, who created the original hooks feature request, envisioned this governance use case from the start.</p>
+<h3 id="limitations">Limitations</h3>
+<p>PreToolUse hooks can be bypassed when Claude receives explicit user permission &ndash; they capture intent but do not enforce hard security boundaries (peanutlife). Some practitioners report hooks not triggering reliably in all scenarios (colechristensen). Hooks add latency to the agent loop proportional to handler complexity, so lightweight command handlers are preferred for frequently-fired events.</p>
+<h2 id="memory-system">Memory System</h2>
+<p>Claude Code&rsquo;s memory system determines what the agent knows about your project, your preferences, and past interactions. It operates across two dimensions: files you write for Claude (CLAUDE.md files and rules), and files Claude writes for itself (auto memory).</p>
+<h3 id="memory-hierarchy">Memory Hierarchy</h3>
+<p>Memory sources are loaded from broadest to narrowest scope. When instructions conflict, more specific sources take precedence:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Scope</th>
+          <th>Location</th>
+          <th>Shared?</th>
+          <th>Purpose</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Managed policy</strong></td>
+          <td><code>/Library/Application Support/ClaudeCode/CLAUDE.md</code> (macOS)</td>
+          <td>Admin-controlled</td>
+          <td>Enterprise-wide rules</td>
+      </tr>
+      <tr>
+          <td><strong>Project memory</strong></td>
+          <td><code>./CLAUDE.md</code> or <code>./.claude/CLAUDE.md</code></td>
+          <td>Yes (source control)</td>
+          <td>Team conventions, build commands, architecture</td>
+      </tr>
+      <tr>
+          <td><strong>Project rules</strong></td>
+          <td><code>.claude/rules/*.md</code></td>
+          <td>Yes (source control)</td>
+          <td>Modular, topic-specific guidance</td>
+      </tr>
+      <tr>
+          <td><strong>User memory</strong></td>
+          <td><code>~/.claude/CLAUDE.md</code></td>
+          <td>No</td>
+          <td>Personal preferences across all projects</td>
+      </tr>
+      <tr>
+          <td><strong>User rules</strong></td>
+          <td><code>~/.claude/rules/*.md</code></td>
+          <td>No</td>
+          <td>Personal modular rules</td>
+      </tr>
+      <tr>
+          <td><strong>Project local</strong></td>
+          <td><code>./CLAUDE.local.md</code></td>
+          <td>No (auto-gitignored)</td>
+          <td>Personal overrides per project</td>
+      </tr>
+      <tr>
+          <td><strong>Auto memory</strong></td>
+          <td><code>~/.claude/projects/&lt;project&gt;/memory/</code></td>
+          <td>No</td>
+          <td>Claude&rsquo;s automatic learnings</td>
+      </tr>
+  </tbody>
+</table>
+<p>Lookup is recursive from the current working directory upward. Parent CLAUDE.md files are loaded in full at session launch. Child directory CLAUDE.md files are loaded on demand when Claude reads files in those subtrees, scoping guidance to the relevant part of the codebase.</p>
+<h3 id="project-rules">Project Rules</h3>
+<p>The <code>.claude/rules/</code> directory supports modular, topic-specific rule files. Each rule file can include YAML frontmatter with a <code>paths</code> field containing glob patterns, making the rules apply only when Claude works with matching files. This is more maintainable than a single large CLAUDE.md for projects with distinct subsystems or language boundaries.</p>
+<h3 id="claudemd-imports">CLAUDE.md Imports</h3>
+<p>CLAUDE.md files support an <code>@path/to/file</code> import syntax for pulling in content from other files. Imports resolve relative or absolute paths up to a maximum depth of 5 levels. On first use, an approval dialog confirms the import. This enables teams to maintain shared guidance files referenced across multiple projects.</p>
+<h3 id="auto-memory">Auto Memory</h3>
+<p>Claude Code automatically records learnings to <code>~/.claude/projects/&lt;project&gt;/memory/</code>, where the project path is derived from the git root. The primary file, <code>MEMORY.md</code>, has its first 200 lines loaded into the system prompt at the start of every session. Additional topic files (debugging.md, patterns.md, etc.) are loaded on demand when relevant.</p>
+<p>Claude records project patterns, debugging insights, architecture notes, and user preferences. The <code>/memory</code> command provides direct management. To disable auto memory entirely, set <code>CLAUDE_CODE_DISABLE_AUTO_MEMORY=1</code>.</p>
+<h3 id="practitioner-guidance">Practitioner Guidance</h3>
+<p>Sizing recommendations vary but converge on brevity. bcherny from the Anthropic team recommends keeping CLAUDE.md under roughly 1,000 tokens; his own project file is about half that. bonsai_spool suggests under 50 lines with a one-line hypothesis and links to detailed files like ROADMAP.md.</p>
+<p>fazlerocks describes the three-level hierarchy (managed, project, user) working well with specific pattern examples for each scope. hendersoon raises an architectural observation: CLAUDE.md is always loaded into active context, whereas a local RAG approach could be more token-efficient for large knowledge bases. nivertech reports that auto-memories accumulate in CLAUDE.md over time, requiring periodic manual organization to prevent context bloat.</p>
+<h3 id="community-memory-plugins">Community Memory Plugins</h3>
+<p>The ecosystem has produced several memory-enhancement plugins that go beyond the built-in system:</p>
+<p><strong>claude-mem</strong> (thedotmack, 24.6k GitHub stars) captures session activity, compresses it with AI, and injects relevant context into future sessions. It uses three-layer progressive disclosure for token efficiency and stores data locally in SQLite with Chroma vector storage.</p>
+<p><strong>claude-supermemory</strong> (supermemoryai) takes a cloud-based approach, offering team memory where project knowledge is shared across team members. It requires a paid subscription.</p>
+<p>Other approaches include Nemp Memory (local JSON storage), Basic Memory (an MCP-based knowledge system), and In Memoria (statistical pattern learning). The variety reflects an unsettled question about whether memory should be local, cloud-based, vector-indexed, or simply text files.</p>
+<h2 id="custom-agents">Custom Agents</h2>
+<p>Custom agents are markdown files stored in <code>.claude/agents/</code> that define specialized sub-agents with constrained capabilities and focused system prompts. They are one of Claude Code&rsquo;s primary extensibility mechanisms, enabling teams to create purpose-built agents for recurring tasks.</p>
+<h3 id="file-format">File Format</h3>
+<p>Each agent is a markdown file with YAML frontmatter followed by a markdown body that becomes the agent&rsquo;s system prompt:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">test-runner</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;Runs and analyzes test suites&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tools</span>: [<span style="color:#ae81ff">Bash, Read, Glob, Grep]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">model</span>: <span style="color:#ae81ff">claude-sonnet-4-5-20250514</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">permissionMode</span>: <span style="color:#ae81ff">acceptEdits</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">maxTurns</span>: <span style="color:#ae81ff">25</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">memory</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">project</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">You are a testing specialist. Run the project&#39;s test suite,</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">analyze failures, and report results concisely.</span>
+</span></span></code></pre></div><h3 id="scope-and-resolution">Scope and Resolution</h3>
+<p>Agents are resolved with a priority chain: the <code>--agents</code> CLI flag takes highest precedence, followed by <code>.claude/agents/</code> in the project, then <code>~/.claude/agents/</code> for user-level agents, then plugin-bundled agents. When names conflict, the higher-priority source wins.</p>
+<h3 id="tool-restrictions">Tool Restrictions</h3>
+<p>The <code>tools</code> field acts as an allowlist, limiting which tools the agent can use. Alternatively, <code>disallowedTools</code> serves as a denylist. The <code>Task(worker, researcher)</code> syntax restricts which sub-agents can be spawned, preventing uncontrolled agent proliferation.</p>
+<h3 id="permission-modes">Permission Modes</h3>
+<p>Custom agents support several permission modes that control how much autonomy the agent has:</p>
+<ul>
+<li><strong>default</strong> &ndash; standard permission prompts for sensitive operations</li>
+<li><strong>acceptEdits</strong> &ndash; auto-approve file edits but prompt for other operations</li>
+<li><strong>dontAsk</strong> &ndash; suppress most permission prompts</li>
+<li><strong>delegate</strong> &ndash; restrict to coordination tools only (no direct implementation)</li>
+<li><strong>bypassPermissions</strong> &ndash; skip all permission checks (use with caution)</li>
+<li><strong>plan</strong> &ndash; read-only exploration until plan is approved</li>
+</ul>
+<h3 id="persistent-memory">Persistent Memory</h3>
+<p>The <code>memory</code> field with <code>user</code>, <code>project</code>, or <code>local</code> scopes gives sub-agents their own MEMORY.md file, loaded at startup. This allows specialized agents to accumulate knowledge across sessions without polluting the main agent&rsquo;s context.</p>
+<h3 id="execution-modes">Execution Modes</h3>
+<p>Agents can run in the foreground, blocking the main conversation until they complete, or in the background, running concurrently while the main session continues. Ctrl+B sends a running foreground agent to the background.</p>
+<h3 id="practitioner-experience">Practitioner Experience</h3>
+<p>The primary value of custom agents is context isolation. Sub-agents keep investigative work, verbose tool output, and exploratory reasoning out of the main context window, preserving it for higher-level coordination.</p>
+<p>houseworth built specialized sub-agents (house-research, house-git, house-bash) and reported achieving &ldquo;90-95% token reduction on heavy operations&rdquo; by returning condensed summaries instead of raw output. adastra22 uses specialized agents (rust-engineer, test-completeness-checker, code-smell-checker) with explicit delegation instructions in the main CLAUDE.md.</p>
+<p>Not everyone finds elaborate agent definitions necessary. IgorPartola found that simple role prompts work nearly as well as detailed configurations, suggesting diminishing returns on agent specification complexity. necatiozmen maintains the awesome-claude-code-subagents repository with 100+ production-ready agent definitions for common tasks.</p>
+<h2 id="plugin-ecosystem">Plugin Ecosystem</h2>
+<p>Plugins are shareable packages that bundle slash commands, agents, MCP servers, hooks, and LSP servers into installable units. They represent Claude Code&rsquo;s module system &ndash; a way to distribute and compose capabilities across projects and teams.</p>
+<h3 id="structure">Structure</h3>
+<p>A plugin lives in a <code>.claude-plugin/</code> directory with a <code>plugin.json</code> manifest file that declares the plugin&rsquo;s contents:</p>
+<ul>
+<li><code>commands/</code> &ndash; slash commands (invoked with <code>/plugin-name:command</code>)</li>
+<li><code>agents/</code> &ndash; custom agent definitions</li>
+<li><code>skills/</code> &ndash; reusable skill templates</li>
+<li><code>hooks/hooks.json</code> &ndash; lifecycle hooks</li>
+<li><code>.mcp.json</code> &ndash; MCP server configurations</li>
+<li><code>.lsp.json</code> &ndash; Language Server Protocol integrations</li>
+</ul>
+<p>The namespace system (<code>plugin-name:skill-name</code>) prevents conflicts between plugins that might define identically-named components.</p>
+<h3 id="installation-scopes">Installation Scopes</h3>
+<p>Plugins can be installed at four levels:</p>
+<ul>
+<li><strong>User</strong> &ndash; available in all projects (<code>~/.claude/plugins/</code>)</li>
+<li><strong>Project</strong> &ndash; shared via <code>.claude/settings.json</code> (team-wide)</li>
+<li><strong>Local</strong> &ndash; personal per-repo installation</li>
+<li><strong>Managed</strong> &ndash; admin-controlled enterprise deployment</li>
+</ul>
+<p>The <code>/plugin</code> command provides discovery with Discover, Installed, Marketplaces, and Errors tabs for managing the plugin lifecycle.</p>
+<h3 id="ecosystem-scale">Ecosystem Scale</h3>
+<p>The plugin ecosystem has grown rapidly. The official Anthropic marketplace (anthropics/claude-plugins-official, 6.9k GitHub stars) provides LSP plugins for 11 languages and external integrations with GitHub, Linear, Figma, Slack, and Sentry, among others. A community registry at claude-plugins.dev offers CLI installation (<code>npx claude-plugins install &lt;id&gt;</code>) and indexes plugins across Claude Code, Cursor, Codex, and other tools.</p>
+<p>As of early 2026, the ecosystem encompasses 43+ marketplaces with 834+ documented plugins. Notable categories beyond LSP include:</p>
+<ul>
+<li><strong>Memory</strong> &ndash; claude-mem, supermemory (discussed in the Memory System section)</li>
+<li><strong>Workflow automation</strong> &ndash; commit-commands, ralph-loop</li>
+<li><strong>Security</strong> &ndash; security-guidance plugins for vulnerability scanning</li>
+<li><strong>Testing</strong> &ndash; Playwright integration for browser testing</li>
+<li><strong>Design</strong> &ndash; frontend-design, figma-mcp for design-to-code workflows</li>
+</ul>
+<h3 id="practitioner-reception">Practitioner Reception</h3>
+<p>Reception is mixed. jmathai credits Claude Code&rsquo;s plugin system for enabling a tool that would otherwise &ldquo;only exist in my imagination.&rdquo; The low barrier to creating and sharing plugins has produced a rapid proliferation of community contributions.</p>
+<p>Critics raise legitimate concerns. arianvanp argues the system lacks lock files and dependency management, creating risks for reproducible environments. JoshGlazebrook reports configuration fatigue from the expanding surface area of &ldquo;agents, sub agents, skills, claude.md, agents.md, rules, hooks.&rdquo; And anonzzzies argues that vanilla Claude Code with basic MCP consistently outperforms heavily customized setups, suggesting the ecosystem may be solving problems that simpler approaches handle adequately.</p>
 <h2 id="practical-tips">Practical Tips</h2>
 <p>Based on practitioner reports across the sources analyzed:</p>
 <ol>
 <li>
-<p><strong>Invest in CLAUDE.md early.</strong> The single highest-leverage action for Claude Code users. Document build commands, architecture rules, and known mistakes. Review and prune weekly.</p>
+<p><strong>Invest in CLAUDE.md early.</strong> The single highest-leverage action for Claude Code users. Document build commands, architecture rules, and known mistakes. Keep it under 1,000 tokens (bcherny) and review weekly.</p>
+</li>
+<li>
+<p><strong>Start with notification hooks.</strong> The easiest entry point to the hooks system. Get alerts when Claude stops or needs input, then graduate to guard rails and auto-lint hooks as you identify failure patterns.</p>
 </li>
 <li>
 <p><strong>Use extended thinking for planning, standard mode for implementation.</strong> This is manual multi-model routing within a single tool and can improve both quality and cost efficiency.</p>
@@ -202,15 +493,46 @@
 <p><strong>Run <code>claude update</code> regularly.</strong> Harness bugs are real and get fixed quickly. Staying on the latest version avoids known regressions.</p>
 </li>
 <li>
-<p><strong>Start with single-agent workflows.</strong> Swarms are powerful but expensive and harder to review. Master single-agent task decomposition before adding multi-agent complexity.</p>
+<p><strong>Start with single-agent workflows.</strong> Agent teams are powerful but expensive and harder to review. Master single-agent task decomposition before adding multi-agent complexity. When you do use teams, ensure file-disjoint task assignment.</p>
+</li>
+<li>
+<p><strong>Build custom agents for recurring tasks.</strong> If you run the same investigation or validation pattern repeatedly, wrap it in a custom agent. The context isolation alone saves significant tokens on heavy operations.</p>
 </li>
 <li>
 <p><strong>Set up LSP plugins for your primary language.</strong> The combination of deterministic code intelligence and probabilistic reasoning produces better results than either alone. Check claude-plugins.dev for available integrations.</p>
 </li>
 <li>
+<p><strong>Resist over-customization.</strong> The plugin and configuration surface area is large. Start with vanilla Claude Code plus CLAUDE.md and add complexity only when you hit a concrete pain point. Several practitioners report that simpler setups outperform heavily customized ones.</p>
+</li>
+<li>
 <p><strong>Monitor your own quality metrics.</strong> Do not rely solely on vendor claims. Track success rates on your actual tasks over time, even if informally.</p>
 </li>
 </ol>
+<h2 id="evidence">Evidence</h2>
+<p>Practitioner quotes supporting the analysis above:</p>
+<blockquote>
+<p>&ldquo;auto-approve or auto-deny with guidance feedback&rdquo; &ndash; philipp-gayret, on why hooks are superior to CLAUDE.md instructions for enforcement</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;90-95% token reduction on heavy operations&rdquo; &ndash; houseworth, on the impact of specialized sub-agents returning condensed summaries</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;only exist in my imagination&rdquo; &ndash; jmathai, on what Claude Code&rsquo;s plugin system enabled them to build</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;agents, sub agents, skills, claude.md, agents.md, rules, hooks&rdquo; &ndash; JoshGlazebrook, on configuration fatigue from Claude Code&rsquo;s expanding surface area</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;function scoping and memory management cosplaying as an org chart&rdquo; &ndash; anonymous HN commenter, on whether multi-agent coordination adds genuine value</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;Claude tried to run rm -rf ~/&rdquo; &ndash; karanb192, on the incident that motivated building a safety hooks library</p>
+</blockquote>
+<p>anupamchugh&rsquo;s agent team benchmark: 4 agents, 6 tasks, ~6 minutes versus 18-20 minutes sequential, 24 tests passing, zero conflicts, approximately 4x token cost.</p>
+<p>sukinai&rsquo;s parallel agent test: 3 agents, 34 files committed, 100 tests passing, zero conflicts.</p>
+<p>Anthropic&rsquo;s C compiler demonstration: 16 parallel agents, 2 weeks, 2 billion input tokens, ~$20,000 cost, 100,000 lines of Rust, 99% of compiler test suites passing.</p>
+<p>bcherny (Anthropic) on CLAUDE.md sizing: keep it under roughly 1,000 tokens. His own project file is about half that.</p>
+<p>unshavedyak and tomashubelbauer on CLAUDE.md compliance: instructions are followed approximately 70% of the time, motivating deterministic enforcement via hooks.</p>
 
       </div>
 
@@ -233,12 +555,58 @@
     <h2 class="toc-title">On this page</h2>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#swarms-multi-agent-orchestration">Swarms: Multi-Agent Orchestration</a></li>
+    <li><a href="#agent-teams-multi-agent-orchestration">Agent Teams: Multi-Agent Orchestration</a>
+      <ul>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#practitioner-results">Practitioner Results</a></li>
+        <li><a href="#cost-management">Cost Management</a></li>
+      </ul>
+    </li>
     <li><a href="#agentsmd-and-claudemd">AGENTS.md and CLAUDE.md</a></li>
     <li><a href="#native-lsp-support">Native LSP Support</a></li>
     <li><a href="#benchmark-tracking-and-reliability">Benchmark Tracking and Reliability</a></li>
     <li><a href="#opus-46-capabilities">Opus 4.6 Capabilities</a></li>
+    <li><a href="#hooks-lifecycle-automation">Hooks: Lifecycle Automation</a>
+      <ul>
+        <li><a href="#lifecycle-events">Lifecycle Events</a></li>
+        <li><a href="#handler-types">Handler Types</a></li>
+        <li><a href="#configuration">Configuration</a></li>
+        <li><a href="#protocol">Protocol</a></li>
+        <li><a href="#common-patterns">Common Patterns</a></li>
+        <li><a href="#limitations">Limitations</a></li>
+      </ul>
+    </li>
+    <li><a href="#memory-system">Memory System</a>
+      <ul>
+        <li><a href="#memory-hierarchy">Memory Hierarchy</a></li>
+        <li><a href="#project-rules">Project Rules</a></li>
+        <li><a href="#claudemd-imports">CLAUDE.md Imports</a></li>
+        <li><a href="#auto-memory">Auto Memory</a></li>
+        <li><a href="#practitioner-guidance">Practitioner Guidance</a></li>
+        <li><a href="#community-memory-plugins">Community Memory Plugins</a></li>
+      </ul>
+    </li>
+    <li><a href="#custom-agents">Custom Agents</a>
+      <ul>
+        <li><a href="#file-format">File Format</a></li>
+        <li><a href="#scope-and-resolution">Scope and Resolution</a></li>
+        <li><a href="#tool-restrictions">Tool Restrictions</a></li>
+        <li><a href="#permission-modes">Permission Modes</a></li>
+        <li><a href="#persistent-memory">Persistent Memory</a></li>
+        <li><a href="#execution-modes">Execution Modes</a></li>
+        <li><a href="#practitioner-experience">Practitioner Experience</a></li>
+      </ul>
+    </li>
+    <li><a href="#plugin-ecosystem">Plugin Ecosystem</a>
+      <ul>
+        <li><a href="#structure">Structure</a></li>
+        <li><a href="#installation-scopes">Installation Scopes</a></li>
+        <li><a href="#ecosystem-scale">Ecosystem Scale</a></li>
+        <li><a href="#practitioner-reception">Practitioner Reception</a></li>
+      </ul>
+    </li>
     <li><a href="#practical-tips">Practical Tips</a></li>
+    <li><a href="#evidence">Evidence</a></li>
   </ul>
 </nav>
   </div>
@@ -274,7 +642,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 78 pages across 198 topics.</p>
+      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 78 pages across 203 topics.</p>
     </div>
   </div>
 </footer>
