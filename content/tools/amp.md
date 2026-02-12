@@ -69,7 +69,7 @@ This illustrates the multi-model thesis in microcosm: using a smaller, specializ
 
 ## Key Features Beyond Routing
 
-**Parallel sub-agents.** Amp can spawn multiple independent agents on subtasks simultaneously, similar to Claude Code's swarm feature but available earlier and with multi-model flexibility.
+**Parallel sub-agents.** Amp can spawn multiple independent agents on subtasks simultaneously, similar to Claude Code's agent teams feature but available earlier and with multi-model flexibility.
 
 **AGENTS.md support.** Like Claude Code's CLAUDE.md, Amp reads project-level instruction files for persistent context. See [Harness Engineering](/practices/harness-engineering.html).
 

@@ -106,14 +106,14 @@
         <h1 class="article-title">Task Scoping</h1>
         <div class="meta-bar">
   
-  <time class="meta-date" datetime="2026-02-06">
-    February 6, 2026
+  <time class="meta-date" datetime="2026-02-12">
+    February 12, 2026
   </time>
   
 
   
 
-  <span class="meta-reading-time">10 min read</span>
+  <span class="meta-reading-time">11 min read</span>
 
   
 
@@ -204,6 +204,11 @@
 <li><strong>Large (L)</strong>: Multi-file changes requiring coordination. A few hours. Examples: add a new feature with UI, API, and tests. Should probably be broken into M-sized subtasks.</li>
 <li><strong>Extra Large (XL)</strong>: Architectural changes spanning the system. Should always be decomposed before delegation.</li>
 </ul>
+<h3 id="when-agents-change-the-scope-itself">When Agents Change the Scope Itself</h3>
+<p>A provocative counterpoint to careful scoping comes from practitioners who argue that agents have shifted what constitutes a reasonable task. The &ldquo;coding agents replaced frameworks&rdquo; thesis holds that agents enable purpose-built solutions for each problem rather than conforming to framework conventions, effectively expanding what counts as a single delegatable task.</p>
+<p><strong>peteforde</strong> described six months using agents for embedded circuit design and CAD work, abandoning external libraries entirely in favor of agent-generated purpose-built wrappers. In this model, what was previously a multi-step task (choose library, learn API, integrate) collapses into a single prompt.</p>
+<p>The HN discussion pushed back hard. <strong>rglover</strong> warned that developers leaning heavily on agent-generated code face a reckoning when limitations surface. <strong>avidiax</strong> called framework-free agent output &ldquo;bespoke square wheels without a maintenance plan.&rdquo; <strong>HarHarVeryFunny</strong> noted that LLMs actually perform better generating code within familiar frameworks because of training data distribution.</p>
+<p>The practical resolution: agents can expand task scope for throwaway or prototype work where long-term maintenance is not a concern. For production codebases, the four properties of a well-scoped task still apply &ndash; but the boundary of what an agent can handle in a single task is growing as models improve. The discipline is recognizing which category your current task falls into.</p>
 <h3 id="batch-related-leaf-tasks">Batch Related Leaf Tasks</h3>
 <p>If you have five similar transformations across different files &ndash; updating an API call pattern, adding error handling to a set of functions &ndash; batch them into one agent task with clear examples. Agents handle repetitive work well when given a pattern to follow. The key is that the tasks must truly be independent and follow the same pattern.</p>
 <h3 id="the-contractor-heuristic">The Contractor Heuristic</h3>
@@ -241,6 +246,9 @@
 <p><strong>joshuaisaact</strong> (HN, thread 46752037): Frames agents as stateless functions with a limited heap that degrades in quality as it fills. Clean task boundaries keep the heap manageable.</p>
 <p><strong>predkambrij</strong> (HN, thread 46319727): Finding the right effort level for prompt-writing is an art. The balance between providing enough context and over-specifying shifts with experience.</p>
 <p><strong>SenHeng</strong> (HN, thread 46797366): Models gravitate toward common patterns regardless of what you asked for. Built a simple expenses app; AI kept inserting double-entry bookkeeping.</p>
+<p><strong>peteforde</strong> (HN, thread 46923543): Six months using agents for embedded circuit design, abandoning external libraries for agent-generated purpose-built wrappers. Agents expand what constitutes a single delegatable task.</p>
+<p><strong>rglover</strong> (HN, thread 46923543): Developers leaning on AI-generated code face a reckoning when limitations surface. Real building experience reveals problems agents miss.</p>
+<p><strong>HarHarVeryFunny</strong> (HN, thread 46923543): LLMs perform better generating code within familiar frameworks because of training data distribution &ndash; a pragmatic reason to keep frameworks even with agents.</p>
 
       </div>
 
@@ -279,6 +287,7 @@
         <li><a href="#separate-planning-from-execution">Separate Planning from Execution</a></li>
         <li><a href="#write-the-spec-delegate-the-implementation">Write the Spec, Delegate the Implementation</a></li>
         <li><a href="#use-t-shirt-sizing">Use T-Shirt Sizing</a></li>
+        <li><a href="#when-agents-change-the-scope-itself">When Agents Change the Scope Itself</a></li>
         <li><a href="#batch-related-leaf-tasks">Batch Related Leaf Tasks</a></li>
         <li><a href="#the-contractor-heuristic">The Contractor Heuristic</a></li>
       </ul>
@@ -330,7 +339,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 78 pages across 203 topics.</p>
+      <p>Built with Hugo. Synthesized from 38 HN discussions and 6,000+ practitioner comments. 84 pages across 205 topics.</p>
     </div>
   </div>
 </footer>

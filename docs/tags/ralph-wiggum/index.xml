@@ -6,12 +6,12 @@
     <description>Recent content in Ralph-Wiggum on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/ralph-wiggum/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Harness Engineering</title>
       <link>/practices/harness-engineering.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/practices/harness-engineering.html</guid>
       <description>&lt;p&gt;Harness engineering is the practice of building persistent infrastructure that constrains and guides AI agents across sessions. It is the highest-leverage investment in AI-assisted development because it compounds: every mistake you document is a mistake that never recurs, every custom tool you build saves time in every future session, and every test harness you configure raises the floor on output quality.&lt;/p&gt;&#xA;&lt;p&gt;The harness is the answer to the fundamental limitation of current AI agents: they are stateless. Each session starts fresh with no memory of corrections, preferences, or past failures. The harness is the only mechanism that carries knowledge forward.&lt;/p&gt;</description>
     </item>

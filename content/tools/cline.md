@@ -49,7 +49,7 @@ The tool rewards deliberate users who think carefully about task decomposition a
 
 One of the most notable developments in the AI coding tool space is the fragmentation of the Cline ecosystem into specialized forks. Two major variants have emerged:
 
-**Roo Code** extends Cline with multi-agent capabilities and role-driven execution. Rather than a single agent handling all tasks, Roo Code can orchestrate multiple specialized agents -- one for planning, another for implementation, a third for testing. This parallels the multi-agent trend seen in Claude Code's swarm feature, but implemented as a VS Code extension. Practitioners describe using Roo Code's "Orchestrator" mode, where the tool breaks tasks into sub-tasks and delegates them to specialized roles.
+**Roo Code** extends Cline with multi-agent capabilities and role-driven execution. Rather than a single agent handling all tasks, Roo Code can orchestrate multiple specialized agents -- one for planning, another for implementation, a third for testing. This parallels the multi-agent trend seen in Claude Code's agent teams feature, but implemented as a VS Code extension. Practitioners describe using Roo Code's "Orchestrator" mode, where the tool breaks tasks into sub-tasks and delegates them to specialized roles.
 
 **Kilo Code** represents another fork with its own direction, contributing to an ecosystem where the core Cline platform has spawned multiple specialized variants.
 

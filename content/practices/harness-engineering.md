@@ -3,7 +3,7 @@ title: "Harness Engineering"
 description: "Building the infrastructure around your AI agent — AGENTS.md files, custom tools, and test harnesses that compound over time."
 weight: 2
 tags: [harness-engineering, agents-md, tooling, infrastructure, hooks, ralph-wiggum, autonomous-loops]
-date: 2026-02-06
+date: 2026-02-12
 ---
 
 Harness engineering is the practice of building persistent infrastructure that constrains and guides AI agents across sessions. It is the highest-leverage investment in AI-assisted development because it compounds: every mistake you document is a mistake that never recurs, every custom tool you build saves time in every future session, and every test harness you configure raises the floor on output quality.
@@ -17,6 +17,20 @@ The harness is everything around the model that shapes its behavior for your spe
 As **tptacek** observed, "there's no such thing as a frontier agent" -- while frontier models require massive resources, any developer can build a competitive agent harness. The moat is in engineering, not model access. **jackfranklyn** drew the distinction more precisely: the core agent loop (model plus tools plus system prompt) can be built in 200 lines, but "the production version captures the paperwork" -- TODO injection, context cleanup, subagent management, and error recovery are boring but load-bearing features.
 
 **NitpickLawyer** identified Anthropic's specific advantage: co-development of model and harness, using telemetry from the client to improve model behavior. But the local harness -- your AGENTS.md, your tools, your test scripts -- is where individual practitioners gain their edge.
+
+## The Edit Format Is a Harness Component
+
+The most striking recent validation of harness-over-model thinking comes from **Can Boluk**, who improved coding performance across 16 models in a single afternoon by changing nothing but the edit format -- the mechanism by which model intent gets translated into actual file changes.
+
+Most current harnesses force models to reproduce existing code verbatim in order to specify what they want to change. Patch-based formats require exact line reproduction. String replacement approaches demand character-for-character matching including whitespace. Both introduce a failure mode unrelated to the model's actual comprehension: the mechanical task of faithfully copying code it has already read.
+
+Boluk's solution, hashline, annotates each line of code with a short content hash. The model references lines by tag instead of reproducing them. The results across 180 React codebase mutation tasks were dramatic: Grok Code Fast 1 went from 6.7% to 68.3% -- a tenfold improvement from a harness change alone. MiniMax doubled its success rate. Grok 4 cut output token usage by 61% while maintaining accuracy. Even strong performers like Gemini 3 Flash gained measurably.
+
+This aligns with earlier findings. JetBrains' Diff-XYZ benchmark found no single edit format dominates across all models. Aider's benchmarks showed format alone could swing GPT-4 Turbo from 26% to 59%. Cursor invested in training a dedicated 70B parameter model just to merge edits -- an enormous resource commitment to work around what is fundamentally a harness problem.
+
+The practical implication: when evaluating model performance on coding tasks, a significant fraction of what looks like model capability is actually harness quality. An 8% improvement from a better edit format delivers value comparable to a major model upgrade at zero training cost. As Boluk put it, "You're blaming the pilot for the landing gear."
+
+Vendors have no incentive to optimize harnesses for competitor models -- only open-source approaches benefit the full ecosystem. This makes edit format engineering one of the highest-leverage areas where individual practitioners and open-source tooling can outperform vendor defaults.
 
 ## Why the Harness Matters More Than the Prompt
 
@@ -90,6 +104,14 @@ Some constraints are better enforced through tooling than documentation. Purpose
 **Pre-commit validators.** Scripts that check agent output against project constraints before it reaches human review. **theshrike79** advocated using impersonal tooling (linters, formatters, editorconfig) to constrain AI output: "If the CI computer says no, the agent fixes it without complaint."
 
 **Context assemblers.** Scripts that gather relevant context (related files, interface definitions, recent changes) and present it in a single well-organized input.
+
+### Enterprise-Scale Tool Harnesses
+
+Stripe's Minions system provides the clearest example of how far purpose-built tooling can go. Their autonomous coding agents integrate with over 400 internal tools via MCP, including documentation search, build status monitoring, and code intelligence services accessed through an internal MCP server called Toolshed. Each agent run gets an isolated developer environment with the full codebase pre-loaded, spinning up in about 10 seconds.
+
+The key design principle: agent tooling should mirror human developer tooling. As **Alistair Gray** of Stripe observed, "If it's good for humans, it's good for LLMs, too." Rather than building separate agent-specific infrastructure, Stripe extended existing developer tools to be agent-accessible. This reduces maintenance overhead and ensures agents benefit from the same tooling investments that serve human engineers.
+
+Their layered feedback loop exemplifies harness-as-enforcement at scale: local linting runs in under 5 seconds on each push, CI selectively runs relevant tests from a suite of over 3 million, automated fixes apply where available, and agents are limited to two CI rounds maximum. The harness imposes the time and cost budgets that agents cannot manage themselves.
 
 ### Design Principles for Agent Tools
 
@@ -239,3 +261,7 @@ Putting everything in AGENTS.md and wondering why the agent ignores half of it. 
 **MarkMarine** (HN, thread 45111012): Reports reward-hacking: models refactor tests to pass rather than fixing underlying code.
 
 **jes5199** (HN, thread 46683571): 24-hour unattended run solving integration test bugs via CI goals with a forked Ralph Wiggum plugin.
+
+**Can Boluk** (blog, 2026-02-12): Improved 16 models at coding by changing only the edit format. Hashline — a line-tagging system — took Grok Code Fast 1 from 6.7% to 68.3%. An 8% harness improvement delivers value comparable to a major model upgrade.
+
+**Alistair Gray** (Stripe blog, 2026-02-10): Stripe Minions integrate 400+ internal tools via MCP. Agent tooling mirrors human tooling: "If it's good for humans, it's good for LLMs, too."

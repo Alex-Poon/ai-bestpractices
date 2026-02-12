@@ -80,6 +80,10 @@ The Desktop App uses defense-in-depth security: approval policies, command safet
 
 **Token efficiency.** OpenAI claims roughly 3x fewer tokens for equivalent tasks compared to competitors, which matters for cost-conscious teams at scale.
 
+**Price is a genuine advantage.** The $20/month Plus subscription that includes Codex is repeatedly cited as excellent value (mercutio2, Feb 2026). For users already on ChatGPT Plus, Codex is zero additional cost -- compared to Anthropic's Max plan needed for comparable Claude Code usage.
+
+**Open-source CLI generates trust.** The Codex CLI was rewritten from TypeScript to Rust (codex-rs) and is fully open source, drawing praise for transparency and learning opportunities (benatkin, Feb 2026). OpenAI explicitly supports third-party agents using their subscription, contrasting with Anthropic's ban on third-party agents like OpenCode (2001zhaozhao, Feb 2026).
+
 ### Weaknesses
 
 **Quality still trails Claude Code for some users.** Several practitioners report that Claude models produce correct code on the first attempt more consistently, with one noting roughly 30% less rework. The gap has narrowed with GPT-5.2+, but it persists in reports from users who have tried both recently.
@@ -89,6 +93,10 @@ The Desktop App uses defense-in-depth security: approval policies, command safet
 **Mac-only Desktop App.** Launching a desktop app only on macOS was noted as an odd limitation for an AI tool in 2026. Windows support is planned but not yet available.
 
 **UX concerns.** Early adopters on Reddit reported speed issues, coding errors, and undefined wait times before getting results. The Electron-based architecture drew some criticism from the HN community.
+
+**Desktop app has serious UX issues.** teaearlgraycold reports "insane performance issues" (Feb 2026). jtrn's detailed review is harsh: "slow and stupid," "does not do proper research," "does not follow instructions" (Feb 2026). The single-window Electron design drew criticism -- mns asks why OpenAI "can't use their own AI" to build a native app.
+
+**Context truncation is a silent bug.** Since v0.56.0, Codex silently truncates MCP tool outputs at ~10 KiB, breaking retrieval plugins and large code diffs (sascha_heyer, Feb 2026). This is particularly problematic because it fails silently, meaning developers may not realize their agent is working with incomplete context.
 
 **Cloud-first raises privacy concerns.** Codex's architecture runs code in OpenAI's cloud by default, which raises data privacy questions compared to Claude Code's local-first approach.
 
@@ -116,6 +124,10 @@ The practitioner consensus is shifting. Previously, Codex was clearly the "backg
 - **Claude Code still wins on day-to-day interactive coding** where local context, rapid iteration, and the Claude model's first-attempt accuracy matter most
 - **Codex now uniquely owns multi-agent orchestration** -- running several agents in parallel on isolated worktrees is something no other tool offers
 - **Codex wins on automated workflows** -- scheduled automations and background execution for recurring development tasks
+
+Market share data adds context: Claude Code overtook Cursor as the most popular coding agent in GitHub repos, based on an analysis of 802K merged PRs (aleyan, Feb 2026). logicallee warns that stellar online reports about AI coding agents "are mostly about Claude Code" -- suggesting Codex may disappoint those expecting parity.
+
+The third-party agent ecosystem is a significant differentiator. OpenAI supports tools like OpenCode using their subscription; Anthropic banned them. 2001zhaozhao called this "a walled-garden move," and it benefits Codex's perception among open-source-minded practitioners who value ecosystem openness.
 
 Several practitioners use both tools for different phases of work, which mirrors the broader multi-model trend.
 

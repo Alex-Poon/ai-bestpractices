@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GLM-5: Targeting complex systems engineering and long-horizon agentic tasks | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="GLM-5: Targeting complex systems engineering and long-horizon agentic tasks">
+  <meta property="og:description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-sources"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../sources/index.html">Sources</a></li>
+      
+    
+    <li aria-current="page">GLM-5: Targeting complex systems engineering and long-horizon agentic tasks</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">GLM-5: Targeting complex systems engineering and long-horizon agentic tasks</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-11">
+    February 11, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">4 min read</span>
+
+  
+  <span class="tier-badge tier-badge--2">Tier 2</span>
+  
+
+  <div class="meta-links">
+    
+    <a href="https://z.ai/blog/glm-5" class="meta-link" target="_blank" rel="noopener">Source &#8599;</a>
+    
+    
+    
+    <a href="https://news.ycombinator.com/item?id=46974853" class="meta-link" target="_blank" rel="noopener">HN &#8599;</a>
+    
+    
+  </div>
+
+  
+  <span class="meta-stat">407 points</span>
+  
+  
+  
+  <span class="meta-stat">483 comments</span>
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/model-release.html" class="tag-pill">model-release</a>
+  
+  
+  
+  
+  <a href="../tags/china-ai.html" class="tag-pill">china-ai</a>
+  
+  
+  
+  
+  <a href="../tags/agentic-vision.html" class="tag-pill">agentic-vision</a>
+  
+  
+  
+  
+  <a href="../tags/benchmarks.html" class="tag-pill">benchmarks</a>
+  
+  
+  
+  
+  <a href="../tags/open-source-ai.html" class="tag-pill">open-source-ai</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <h2 id="summary">Summary</h2>
+<p>Zhipu AI (Z.ai) released GLM-5, an open-weight mixture-of-experts model with 744 billion total parameters and 40 billion active parameters, licensed under MIT. The model targets what Z.ai calls &ldquo;agentic engineering&rdquo; — complex, multi-stage systems tasks that require autonomous decomposition of requirements, long-horizon planning, and sustained context coherence across extended workflows.</p>
+<p>GLM-5 scales up from its predecessor GLM-4.7 (368B parameters) with pre-training expanded from 23 trillion to 28.5 trillion tokens. On agentic benchmarks like Vending Bench 2, it claims the top position among open-source models and approaches the performance of proprietary frontier models like Claude Opus 4.5 and GPT-5.2 on reasoning, coding, and long-horizon task execution.</p>
+<p>A notable technical contribution is SLIME, an open-source asynchronous reinforcement learning training framework that Z.ai also released under MIT license. SLIME addresses a key bottleneck in RL training: rollout generation, which typically consumes over 90% of training time. Their Active Partial Rollouts (APRIL) strategy tackles the long-tail efficiency problem, significantly accelerating the iteration cycle for complex agentic tasks. This framework was also used behind GLM-4.5, 4.6, and 4.7.</p>
+<p>The model is available through OpenRouter, Ollama, and Hugging Face. The release positions Z.ai as a leading force in open-weight AI, continuing the trajectory established by DeepSeek in demonstrating that Chinese labs can produce frontier-competitive models with open licensing. Early user reports suggest the model performs well for focused coding tasks at competitive pricing, though some users note it still requires more instruction clarity compared to proprietary alternatives and may lag in custom tool-calling scenarios.</p>
+<h2 id="key-insights">Key Insights</h2>
+<ul>
+<li><strong>Open-weight models closing the gap</strong>: GLM-5 demonstrates that the performance delta between open-source and proprietary frontier models continues to narrow, particularly on agentic and coding benchmarks</li>
+<li><strong>RL infrastructure matters more than compute</strong>: The open-sourcing of SLIME suggests that reinforcement learning training infrastructure, not just pre-training scale, is becoming the key differentiator in model quality</li>
+<li><strong>Benchmark skepticism persists</strong>: HN commenters noted that GLM-5 benchmarks compare against previous-generation models (Opus 4.5, GPT-5.2) and that open-weight models consistently show benchmark-to-practice gaps</li>
+<li><strong>Self-hosting independence</strong>: The MIT license and availability on Ollama make GLM-5 attractive for teams wanting to run AI locally without dependence on proprietary API providers</li>
+<li><strong>User preferences approaching saturation</strong>: Some commenters observed diminishing perceptual returns between model generations, suggesting user needs may be plateauing</li>
+</ul>
+<h2 id="notable-quotes">Notable Quotes</h2>
+<blockquote>
+<p>&ldquo;Training infrastructure compounds&rdquo; — jfaganel99 on why open-sourcing SLIME matters more than benchmarks</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;Benchmarks are temporary&rdquo; — jfaganel99</p>
+</blockquote>
+<h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
+<p><strong>jfaganel99</strong> argued that the most underappreciated aspect of the release is SLIME, the open-source RL training framework. Claimed the real gap between frontier and non-frontier models lies in RL infrastructure rather than pre-training compute. Noted that the APRIL strategy for rollout efficiency is a genuine systems contribution, and that both the model and training infra being MIT-licensed matters more than benchmark margins.</p>
+<p><strong>simonw</strong> tested GLM-5 via OpenRouter with an SVG generation task, getting mixed results — a well-rendered pelican but a poor bicycle frame. Shared results via GitHub gist.</p>
+<p><strong>NiloCK</strong> reflected on the trajectory of open-weight models, observing that even N-2 generation models are beginning to satisfy user preferences. Noted that Opus 4.6 was not a perceptible leap over 4.5 in their workflows, despite being objectively better. Suggested open-weight alternatives benefiting from distillation will inevitably catch up as user needs saturate.</p>
+<p><strong>mythz</strong> highlighted the significance of Chinese open-source AI for self-hosted inference, noting that while self-hosting does not make financial sense given current API pricing, the independence from proprietary providers has value. Observed macOS is currently the best consumer platform for running large local models.</p>
+<blockquote>
+<p><strong>mythz</strong> (separate comment): Also flagged MiniMax M2.5 as a strong general-purpose alternative, noting GLM-5 is better at coding but MiniMax wins on speed and tool-calling support.</p>
+</blockquote>
+<p><strong>Aurornis</strong> expressed benchmark skepticism, noting GLM-5 compares against last-generation models (Opus 4.5, GPT-5.2) rather than current competitors. Observed a pattern of open-weight models showing impressive benchmarks but underperforming in actual use.</p>
+<p><strong>justinparus</strong> shared hands-on experience with GLM-4.7, finding it comparable to Sonnet but requiring more instruction clarity. Uses it for well-defined smaller tasks where pricing is advantageous, while reserving Anthropic models for larger complex changes.</p>
+<p><strong>2001zhaozhao</strong> praised GLM-4.7-Flash as the first local coding model that felt genuinely useful, comparing its intelligence to Claude 4.5 Haiku at a similar parameter size. Found its reasoning traces clear and interpretable, and reported it outperforms Devstral 2 Small and Qwen-Coder-Next locally.</p>
+<p><strong>pcwelder</strong> tested GLM-5 on OpenRouter and found it performed poorly on their custom tool-calling benchmark, noting it could not follow a custom tool-calling format at all.</p>
+<p><strong>tosh</strong> revealed that the &ldquo;pony-alpha&rdquo; model previously available on OpenRouter was actually GLM-5 in disguise, linking to confirmation from Z.ai.</p>
+<p><strong>knbknb</strong> tested factual accuracy, finding GLM-4.7 confidently gave a wrong answer about a jq function name and persisted even when corrected. GLM-5 answered correctly in the chat interface but the API returned rate-limiting errors.</p>
+<p><strong>dev_l1x_be</strong> asked about practical usage, noting that previous GLM models restricted basic system engineering tasks like SSH.</p>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../sources/2026-02-10-stripe-minions-agentic-coding.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Stripe Minions – End to end agentic coding</span>
+        </a>
+        
+        
+        <a href="../sources/2026-02-11-claude-code-dumbed-down.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Claude Code is being dumbed down?</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#key-insights">Key Insights</a></li>
+    <li><a href="#notable-quotes">Notable Quotes</a></li>
+    <li><a href="#hn-discussion-highlights">HN Discussion Highlights</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Synthesized from 38 HN discussions and 6,000+ practitioner comments. 84 pages across 205 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beyond agentic coding | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Beyond agentic coding">
+  <meta property="og:description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-sources"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../sources/index.html">Sources</a></li>
+      
+    
+    <li aria-current="page">Beyond agentic coding</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Beyond agentic coding</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-08">
+    February 8, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">4 min read</span>
+
+  
+  <span class="tier-badge tier-badge--2">Tier 2</span>
+  
+
+  <div class="meta-links">
+    
+    <a href="https://haskellforall.com/2026/02/beyond-agentic-coding" class="meta-link" target="_blank" rel="noopener">Source &#8599;</a>
+    
+    
+    
+    <a href="https://news.ycombinator.com/item?id=46930565" class="meta-link" target="_blank" rel="noopener">HN &#8599;</a>
+    
+    
+  </div>
+
+  
+  <span class="meta-stat">266 points</span>
+  
+  
+  
+  <span class="meta-stat">90 comments</span>
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/agentic-patterns.html" class="tag-pill">agentic-patterns</a>
+  
+  
+  
+  
+  <a href="../tags/limitations.html" class="tag-pill">limitations</a>
+  
+  
+  
+  
+  <a href="../tags/future-of-coding.html" class="tag-pill">future-of-coding</a>
+  
+  
+  
+  
+  <a href="../tags/verification.html" class="tag-pill">verification</a>
+  
+  
+  
+  
+  <a href="../tags/code-quality.html" class="tag-pill">code-quality</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <h2 id="summary">Summary</h2>
+<p>This article takes a contrarian position within the AI-assisted development space: rather than celebrating autonomous coding agents, the author argues they fundamentally disrupt the developer flow state and proposes alternative paradigms inspired by &ldquo;calm technology&rdquo; principles. The core thesis is that chat-based agentic interfaces are indirect, slow, and imprecise &ndash; and that the industry should explore AI tools that keep developers close to their code instead of mediating through conversation.</p>
+<p>The author introduces a guiding principle: good tools should keep users in a flow state as long as possible. By this measure, agentic coding fails because developers spend significant time waiting for agent output, lose synchronization with their codebase during autonomous operations, and interact with English-language prompts rather than code directly. They cite research suggesting idle time roughly doubles when using agentic tools, and note that interview candidates using agents sometimes failed to recognize their code produced incorrect results.</p>
+<p>As an alternative vision, the article sketches several &ldquo;calm&rdquo; AI tool concepts. Facet-based project navigation would let developers browse code by semantic meaning rather than file paths. Automated commit refactoring would split messy diffs into logical, reviewable units. File lens tools would allow filtering code by feature domain or even editing in an alternative programming language syntax that gets transpiled back. The author highlights GitHub Copilot&rsquo;s Next Edit Suggestions as an existing example of calm design &ndash; small, unobtrusive suggestions that maintain flow.</p>
+<p>The piece resonated with developers who have experienced the frustration of context-switching between coding and agent management, while also drawing pushback from those who find chat interfaces genuinely productive when used correctly.</p>
+<h2 id="key-insights">Key Insights</h2>
+<ul>
+<li><strong>Flow state as the primary metric</strong>: The author proposes evaluating AI coding tools by whether they maintain or disrupt developer flow, rather than by raw output volume</li>
+<li><strong>Chat interfaces are inherently indirect</strong>: Communicating through natural language adds a translation layer between intent and code, introducing imprecision and latency</li>
+<li><strong>Mental model desynchronization</strong>: The biggest risk of autonomous agents is not bad code but the developer losing track of what their codebase actually contains</li>
+<li><strong>Calm technology alternatives exist</strong>: Semantic navigation, automated commit organization, and language-transpiling lenses could deliver AI benefits without flow disruption</li>
+<li><strong>Inline suggestions as proven calm design</strong>: Copilot&rsquo;s Next Edit Suggestions demonstrate that AI assistance can be bite-sized and unobtrusive rather than autonomous and disruptive</li>
+</ul>
+<h2 id="notable-quotes">Notable Quotes</h2>
+<blockquote>
+<p>&ldquo;a sufficient shift in quantity produces a phase shift in quality&rdquo; &ndash; andai, on how faster LLM inference changes the interaction paradigm</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;You get a diff with no context for why it went that direction&rdquo; &ndash; matheus-rr, on the review challenge of agent-generated code</p>
+</blockquote>
+<h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
+<p>The 90-comment thread was notably more aligned with the article than typical HN discussions, with many commenters sharing similar frustrations about agentic workflows.</p>
+<p><strong>WilcoKruijer</strong> proposed that AI code review tools should focus on organizing changes into logical, reviewable segments rather than performing autonomous reviews &ndash; reducing human burden while maintaining quality oversight.</p>
+<blockquote>
+<p><strong>wazHFsRy</strong> described using an agent to generate &ldquo;review plans&rdquo; that organize code changes with suggested review ordering and dependency diagrams, finding this simple structural aid more valuable than autonomous review.</p>
+</blockquote>
+<p><strong>andai</strong> explored whether LLM latency is the root problem, noting that faster providers create a qualitatively different experience. However, they identified mental model desynchronization as the deeper issue regardless of speed. Their preferred approach: manually directing rapid incremental edits rather than autonomous agent operation.</p>
+<blockquote>
+<p><strong>rubenflamshep</strong> echoed the synchronization concern, describing frequent disorientation when managing multiple Claude sessions and finding it easier to work across two different projects than two features in one project.</p>
+</blockquote>
+<p><strong>Insanity</strong> praised the article while noting the title was misleading (it was on the Haskell for All blog but had nothing to do with Haskell). They predicted AI coding will evolve toward the calm technology vision described, comparing current tools to the MS-DOS era.</p>
+<blockquote>
+<p><strong>josephcsible</strong> clarified that &ldquo;Haskell for All&rdquo; is simply the blog name, not a claim about the article&rsquo;s content.</p>
+</blockquote>
+<p><strong>kstenerud</strong> pushed back, arguing that critics of chat interfaces often fail to leverage their strengths. They described a workflow of conversing with LLMs to develop designs and plans before deploying agents, finding this particularly effective with Claude.</p>
+<p><strong>matheus-rr</strong> highlighted the review problem with agent-generated code: unlike human developers who leave explanatory trails through commit messages and PR descriptions, agents produce diffs without documenting their reasoning.</p>
+<p><strong>eigenblake</strong> proposed a concrete implementation of the article&rsquo;s vision: color-coding function names and variable types based on hashes to create a visual &ldquo;mipmap&rdquo; of code structure, readable at a glance without parsing individual identifiers.</p>
+<p><strong>cess11</strong> agreed with the article&rsquo;s assessment, noting that interview candidates using agentic tools often achieved only superficial understanding, and that chat is the least interesting interface to LLMs.</p>
+<p><strong>tossandthrow</strong> offered a counterpoint, noting they strongly prefer chat interfaces over inline AI suggestions because inline completions disruptively move the text they are reading.</p>
+<p><strong>agnishom</strong> suggested the HN title should be revised to &ldquo;Calm Technology - Beyond Agentic Coding&rdquo; to better capture the article&rsquo;s thesis.</p>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../sources/2026-02-07-coding-agents-replaced-frameworks.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Coding agents have replaced every framework I used</span>
+        </a>
+        
+        
+        <a href="../sources/2026-02-10-stripe-minions-agentic-coding.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">Stripe Minions – End to end agentic coding</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#key-insights">Key Insights</a></li>
+    <li><a href="#notable-quotes">Notable Quotes</a></li>
+    <li><a href="#hn-discussion-highlights">HN Discussion Highlights</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Synthesized from 38 HN discussions and 6,000+ practitioner comments. 84 pages across 205 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

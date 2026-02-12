@@ -6,8 +6,50 @@
     <description>Recent content in Sources on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/sources/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I Improved 15 LLMs at Coding in One Afternoon. Only the Harness Changed.</title>
+      <link>/sources/2026-02-12-harness-problem-hashline.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-02-12-harness-problem-hashline.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Can Boluk argues that the biggest bottleneck in LLM-assisted coding is not the model itself but the harness — the layer that translates a model&amp;rsquo;s intent into actual file edits. Most current edit mechanisms force models to reproduce existing code verbatim in order to specify what they want to change, and this reproduction step is where things break down. Patch-based formats (used by OpenAI&amp;rsquo;s Codex ecosystem) suffer catastrophic failure rates on non-Codex models, with some models failing nearly half their edit attempts. String replacement approaches (used by Claude Code and Gemini CLI) require exact character-for-character matching including whitespace, leading to frequent &amp;ldquo;string not found&amp;rdquo; errors. Cursor addressed this by training a dedicated 70B parameter model just to merge edits — an enormous investment that sidesteps rather than solves the underlying problem.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude Code is being dumbed down?</title>
+      <link>/sources/2026-02-11-claude-code-dumbed-down.html</link>
+      <pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-02-11-claude-code-dumbed-down.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;A blog post from SymmetryBreak criticizes Anthropic for reducing transparency in Claude Code version 2.1.20. The update replaced detailed file-level information during agent operations with vague summaries — instead of showing which specific files were read or which patterns were searched, the tool now displays generic messages like &amp;ldquo;Read 3 files&amp;rdquo; or &amp;ldquo;Searched for 1 pattern.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;The author argues this represents a classic product management anti-pattern: stripping useful information under the banner of simplification. Multiple GitHub issues document user complaints about the change, but the response from Anthropic was to point users toward &amp;ldquo;verbose mode&amp;rdquo; as a workaround. The author finds this inadequate — verbose mode dumps excessive debug output including full file contents and sub-agent transcripts, creating a binary choice between too little and too much information.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GLM-5: Targeting complex systems engineering and long-horizon agentic tasks</title>
+      <link>/sources/2026-02-11-glm5-agentic-engineering.html</link>
+      <pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-02-11-glm5-agentic-engineering.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Zhipu AI (Z.ai) released GLM-5, an open-weight mixture-of-experts model with 744 billion total parameters and 40 billion active parameters, licensed under MIT. The model targets what Z.ai calls &amp;ldquo;agentic engineering&amp;rdquo; — complex, multi-stage systems tasks that require autonomous decomposition of requirements, long-horizon planning, and sustained context coherence across extended workflows.&lt;/p&gt;&#xA;&lt;p&gt;GLM-5 scales up from its predecessor GLM-4.7 (368B parameters) with pre-training expanded from 23 trillion to 28.5 trillion tokens. On agentic benchmarks like Vending Bench 2, it claims the top position among open-source models and approaches the performance of proprietary frontier models like Claude Opus 4.5 and GPT-5.2 on reasoning, coding, and long-horizon task execution.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Stripe Minions – End to end agentic coding</title>
+      <link>/sources/2026-02-10-stripe-minions-agentic-coding.html</link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-02-10-stripe-minions-agentic-coding.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Stripe built a custom internal coding agent system called Minions that handles end-to-end task completion with no human involvement during execution. Over a thousand pull requests per week at Stripe are entirely produced by minions — no human-written code — though every PR still undergoes human review before merging. The system was purpose-built because off-the-shelf agentic tools could not handle Stripe&amp;rsquo;s unique constraints: a codebase spanning hundreds of millions of lines, specialized stacks including Ruby with Sorbet typing, hundreds of proprietary internal libraries unfamiliar to any pretrained model, and the operational stakes of code that processes over a trillion dollars in annual payment volume.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Beyond agentic coding</title>
+      <link>/sources/2026-02-08-beyond-agentic-coding.html</link>
+      <pubDate>Sun, 08 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-02-08-beyond-agentic-coding.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This article takes a contrarian position within the AI-assisted development space: rather than celebrating autonomous coding agents, the author argues they fundamentally disrupt the developer flow state and proposes alternative paradigms inspired by &amp;ldquo;calm technology&amp;rdquo; principles. The core thesis is that chat-based agentic interfaces are indirect, slow, and imprecise &amp;ndash; and that the industry should explore AI tools that keep developers close to their code instead of mediating through conversation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Coding agents have replaced every framework I used</title>
+      <link>/sources/2026-02-07-coding-agents-replaced-frameworks.html</link>
+      <pubDate>Sat, 07 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-02-07-coding-agents-replaced-frameworks.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;The author argues that AI coding agents have fundamentally changed how they approach software development, to the point where traditional frameworks feel unnecessary. Rather than pulling in large dependency trees and conforming to opinionated architectures, they now ask agents to generate purpose-built code tailored to specific problems. The result, they claim, is a return to genuine engineering thinking &amp;ndash; choosing the right approach for each situation rather than defaulting to whatever framework is popular.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Claude Opus 4.6</title>
       <link>/sources/2026-02-05-claude-opus-4-6.html</link>

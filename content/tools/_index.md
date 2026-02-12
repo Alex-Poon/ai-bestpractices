@@ -20,7 +20,7 @@ The most important distinction is between **autocomplete** tools (inline suggest
 
 Terminal-native tools that run in your shell, operate on your codebase directly, and integrate with Unix workflows. Preferred by developers who want maximum control and scriptability.
 
-- [Claude Code](/tools/claude-code.html) -- Anthropic's agentic CLI, with support for swarms, LSP integration, and AGENTS.md configuration
+- [Claude Code](/tools/claude-code.html) -- Anthropic's agentic CLI, with agent teams, hooks, memory, plugins, LSP integration, and AGENTS.md configuration
 - [Gemini CLI](/tools/gemini-cli.html) -- Google's open-source terminal agent powered by Gemini models
 - [Aider](/tools/aider.html) -- Open-source terminal agent supporting dozens of models via a bring-your-own-key approach
 - [OpenAI Codex](/tools/codex.html) -- OpenAI's CLI agent with sandboxed execution and code reasoning

@@ -6,8 +6,15 @@
     <description>Recent content in Service-Quality on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/service-quality/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude Code is being dumbed down?</title>
+      <link>/sources/2026-02-11-claude-code-dumbed-down.html</link>
+      <pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-02-11-claude-code-dumbed-down.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;A blog post from SymmetryBreak criticizes Anthropic for reducing transparency in Claude Code version 2.1.20. The update replaced detailed file-level information during agent operations with vague summaries — instead of showing which specific files were read or which patterns were searched, the tool now displays generic messages like &amp;ldquo;Read 3 files&amp;rdquo; or &amp;ldquo;Searched for 1 pattern.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;The author argues this represents a classic product management anti-pattern: stripping useful information under the banner of simplification. Multiple GitHub issues document user complaints about the change, but the response from Anthropic was to point users toward &amp;ldquo;verbose mode&amp;rdquo; as a workaround. The author finds this inadequate — verbose mode dumps excessive debug output including full file contents and sub-agent transcripts, creating a binary choice between too little and too much information.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Tell HN: Claude Has Had 57 Incidents in the Past 3 Months</title>
       <link>/sources/2026-02-04-claude-57-incidents-3-months.html</link>

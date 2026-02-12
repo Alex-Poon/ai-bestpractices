@@ -6,8 +6,22 @@
     <description>Recent content in Future-of-Coding on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/future-of-coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Beyond agentic coding</title>
+      <link>/sources/2026-02-08-beyond-agentic-coding.html</link>
+      <pubDate>Sun, 08 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-02-08-beyond-agentic-coding.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This article takes a contrarian position within the AI-assisted development space: rather than celebrating autonomous coding agents, the author argues they fundamentally disrupt the developer flow state and proposes alternative paradigms inspired by &amp;ldquo;calm technology&amp;rdquo; principles. The core thesis is that chat-based agentic interfaces are indirect, slow, and imprecise &amp;ndash; and that the industry should explore AI tools that keep developers close to their code instead of mediating through conversation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Coding agents have replaced every framework I used</title>
+      <link>/sources/2026-02-07-coding-agents-replaced-frameworks.html</link>
+      <pubDate>Sat, 07 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-02-07-coding-agents-replaced-frameworks.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;The author argues that AI coding agents have fundamentally changed how they approach software development, to the point where traditional frameworks feel unnecessary. Rather than pulling in large dependency trees and conforming to opinionated architectures, they now ask agents to generate purpose-built code tailored to specific problems. The result, they claim, is a return to genuine engineering thinking &amp;ndash; choosing the right approach for each situation rather than defaulting to whatever framework is popular.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>2026: The Year the IDE Died (Steve Yegge and Gene Kim)</title>
       <link>/sources/2025-12-10-year-ide-died.html</link>

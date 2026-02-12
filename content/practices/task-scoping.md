@@ -3,7 +3,7 @@ title: "Task Scoping"
 description: "The dominant skill in agent-assisted development — breaking work into right-sized chunks that agents can execute reliably."
 weight: 1
 tags: [task-scoping, fundamentals, workflow]
-date: 2026-02-06
+date: 2026-02-12
 ---
 
 Task scoping is the dominant skill in AI-assisted development. It determines whether your interaction with an agent produces usable output in minutes or wasted effort measured in hours. Every practitioner who has moved past the honeymoon phase identifies decomposition -- not prompting, not model selection -- as the discipline that matters most.
@@ -79,6 +79,16 @@ As **conception** observed, the pattern is like onboarding a junior developer: "
 - **Large (L)**: Multi-file changes requiring coordination. A few hours. Examples: add a new feature with UI, API, and tests. Should probably be broken into M-sized subtasks.
 - **Extra Large (XL)**: Architectural changes spanning the system. Should always be decomposed before delegation.
 
+### When Agents Change the Scope Itself
+
+A provocative counterpoint to careful scoping comes from practitioners who argue that agents have shifted what constitutes a reasonable task. The "coding agents replaced frameworks" thesis holds that agents enable purpose-built solutions for each problem rather than conforming to framework conventions, effectively expanding what counts as a single delegatable task.
+
+**peteforde** described six months using agents for embedded circuit design and CAD work, abandoning external libraries entirely in favor of agent-generated purpose-built wrappers. In this model, what was previously a multi-step task (choose library, learn API, integrate) collapses into a single prompt.
+
+The HN discussion pushed back hard. **rglover** warned that developers leaning heavily on agent-generated code face a reckoning when limitations surface. **avidiax** called framework-free agent output "bespoke square wheels without a maintenance plan." **HarHarVeryFunny** noted that LLMs actually perform better generating code within familiar frameworks because of training data distribution.
+
+The practical resolution: agents can expand task scope for throwaway or prototype work where long-term maintenance is not a concern. For production codebases, the four properties of a well-scoped task still apply -- but the boundary of what an agent can handle in a single task is growing as models improve. The discipline is recognizing which category your current task falls into.
+
 ### Batch Related Leaf Tasks
 
 If you have five similar transformations across different files -- updating an API call pattern, adding error handling to a set of functions -- batch them into one agent task with clear examples. Agents handle repetitive work well when given a pattern to follow. The key is that the tasks must truly be independent and follow the same pattern.
@@ -152,3 +162,9 @@ The technique of manufacturing task boundaries where none naturally exist is gen
 **predkambrij** (HN, thread 46319727): Finding the right effort level for prompt-writing is an art. The balance between providing enough context and over-specifying shifts with experience.
 
 **SenHeng** (HN, thread 46797366): Models gravitate toward common patterns regardless of what you asked for. Built a simple expenses app; AI kept inserting double-entry bookkeeping.
+
+**peteforde** (HN, thread 46923543): Six months using agents for embedded circuit design, abandoning external libraries for agent-generated purpose-built wrappers. Agents expand what constitutes a single delegatable task.
+
+**rglover** (HN, thread 46923543): Developers leaning on AI-generated code face a reckoning when limitations surface. Real building experience reveals problems agents miss.
+
+**HarHarVeryFunny** (HN, thread 46923543): LLMs perform better generating code within familiar frameworks because of training data distribution -- a pragmatic reason to keep frameworks even with agents.

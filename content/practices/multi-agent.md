@@ -1,9 +1,9 @@
 ---
 title: "Multi-Agent Patterns"
-description: "Running parallel agents, swarms, and team-based workflows — when it works and when it doesn't."
+description: "Running parallel agents, agent teams, and team-based workflows — when it works and when it doesn't."
 weight: 7
-tags: [multi-agent, parallel, swarms, orchestration]
-date: 2026-02-06
+tags: [multi-agent, parallel, agent-teams, orchestration]
+date: 2026-02-12
 ---
 
 Multi-agent patterns involve running multiple AI agents simultaneously on related tasks. They represent the highest-throughput mode of AI-assisted development -- and the most complex. When they work, months of work happen in minutes. When they fail, you get merge conflicts, duplicated effort, and code that no single agent (or human) fully understands.
@@ -110,6 +110,16 @@ When a monolithic failure cannot be easily decomposed into independent tasks, us
 
 Nicholas Carlini's compiler project demonstrated this: when a single monolithic failure appeared (compiling the Linux kernel), all 16 agents independently discovered the same bug. The solution was using GCC as an oracle to binary-search for the specific compilation unit causing the failure, converting one opaque problem into many scoped tasks.
 
+### Pattern 6: Enterprise Autonomous Agents
+
+At the far end of the multi-agent spectrum, Stripe's Minions system demonstrates what enterprise-scale autonomous agents look like when backed by sufficient infrastructure. Over a thousand pull requests per week are entirely produced by agents with no human-written code, though every PR undergoes human review before merging. Engineers trigger minion runs from Slack, CLI, web interfaces, or internal tools, and the system produces a reviewed PR with no interaction in between.
+
+The architecture was purpose-built because off-the-shelf agents could not handle Stripe's constraints: hundreds of millions of lines of code, proprietary libraries unknown to any pretrained model, and the operational stakes of processing over a trillion dollars annually. Each agent gets an isolated developer environment with the full codebase pre-loaded, accesses 400+ internal tools via MCP, and operates within a layered feedback loop of linting, selective CI, and automated fixes.
+
+Engineers frequently run multiple minion tasks in parallel, finding the system especially valuable during on-call rotations for resolving many small issues quickly. This maps to Pattern 1 (independent parallel tasks) but with enterprise-grade infrastructure handling the coordination that individual practitioners manage manually.
+
+The pattern validates two principles: first, that autonomous agents can be production-viable at scale when the harness is strong enough (see [harness engineering](../harness-engineering.html)). Second, that human review remains the hard bottleneck even at enterprise scale -- Stripe kept humans in the review loop despite the agent handling everything else end-to-end.
+
 ## The Coordination Tax
 
 Multi-agent patterns come with overhead that single-agent work avoids. The coordination tax must be lower than the parallelism benefit, or multi-agent is net negative.
@@ -117,6 +127,12 @@ Multi-agent patterns come with overhead that single-agent work avoids. The coord
 ### Merge conflicts
 
 **nulone** identified merge cost as the killer of multi-agent approaches. When agents modify the same files, resolving conflicts is expensive and error-prone. The solution: design task boundaries around file ownership, not logical decomposition.
+
+### Mental model desynchronization
+
+The "beyond agentic coding" critique highlights a coordination cost specific to autonomous agents: developers lose track of what their codebase actually contains. With a single agent, this is manageable -- you review one stream of changes. With multiple agents operating concurrently, desynchronization compounds. As **matheus-rr** observed, with agent-generated code "you get a diff with no context for why it went that direction." Multiply that across several agents and the review burden grows non-linearly.
+
+**rubenflamshep** described frequent disorientation when managing multiple Claude sessions, finding it easier to work across two different projects than two features in one project. This suggests that the cognitive overhead of multi-agent is not just about code conflicts but about maintaining a mental model across concurrent streams of autonomous change.
 
 ### The review bottleneck
 
@@ -203,3 +219,9 @@ Multi-agent output requires more verification effort, not less. Each agent produ
 **asimeqi** (HN, thread 46761700): Can barely keep up with one instance of Claude Code. Asks what people are programming that needs 10 agents.
 
 **baby** (HN, thread 46752104): Always delegates self-contained tasks to subagents. Coordination via dependency graph. Better results because of clean context windows.
+
+**Stripe Minions** (Stripe blog, 2026-02-10): Over 1,000 PRs per week from autonomous agents, zero human-written code, full human review. 400+ MCP tools, isolated devboxes, layered CI feedback. Enterprise-scale autonomous multi-agent validated by trillion-dollar operational stakes.
+
+**matheus-rr** (HN, thread 46930565): Agent-generated diffs lack context for why they went in a particular direction, making review harder. A coordination cost that scales with number of agents.
+
+**rubenflamshep** (HN, thread 46930565): Describes disorientation when managing multiple Claude sessions. Easier to work across two different projects than two features in one project.

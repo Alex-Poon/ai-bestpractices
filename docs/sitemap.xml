@@ -2,22 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/tools/claude-code.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/sources/2026-02-12-harness-problem-hashline.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/debates/is-it-getting-worse.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/landscape/model-releases-2026.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/practices/task-scoping.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/sources/2026-02-11-claude-code-dumbed-down.html</loc>
+    <lastmod>2026-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/sources/2026-02-11-glm5-agentic-engineering.html</loc>
+    <lastmod>2026-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/sources/2026-02-10-stripe-minions-agentic-coding.html</loc>
+    <lastmod>2026-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/sources/2026-02-08-beyond-agentic-coding.html</loc>
+    <lastmod>2026-02-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/sources/2026-02-07-coding-agents-replaced-frameworks.html</loc>
+    <lastmod>2026-02-07T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/evidence/carlini-compiler.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tools/claude-code.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/debates/is-it-getting-worse.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/landscape/model-releases-2026.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/voices/power-users.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/practices/task-scoping.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/guide/core-loop.html</loc>
@@ -35,6 +53,15 @@
     <loc>/sources/2026-01-29-claude-code-benchmarks.html</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/practices/harness-engineering.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tools/models.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/practices/index.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/evidence/hashimoto-journey.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -42,15 +69,6 @@
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/guide/getting-started.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/practices/harness-engineering.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tools/models.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/practices/index.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/landscape/adoption-curve.html</loc>
@@ -71,6 +89,9 @@
     <loc>/sources/2026-01-08-claude-code-200-lines.html</loc>
     <lastmod>2026-01-08T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/debates/index.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tools/amp.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -78,9 +99,6 @@
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/landscape/costs-and-tradeoffs.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/debates/index.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/debates/junior-skills.html</loc>
@@ -107,10 +125,10 @@
     <loc>/sources/2026-01-06-opus-4-5-agent-experience.html</loc>
     <lastmod>2026-01-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/voices/builders.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/debates/engineering-vs-programming.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/voices/builders.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tools/copilot.html</loc>
@@ -155,13 +173,13 @@
     <loc>/sources/2026-01-21-agentic-ai-handbook.html</loc>
     <lastmod>2026-01-21T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/practices/multi-agent.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tools/gemini-cli.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/debates/open-source-impact.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/practices/multi-agent.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/voices/index.html</loc>
@@ -195,7 +213,7 @@
     <lastmod>2026-01-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tools/index.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/sources/2026-02-04-claude-57-incidents-3-months.html</loc>
     <lastmod>2026-02-04T00:00:00+00:00</lastmod>
@@ -216,7 +234,7 @@
     <lastmod>2026-01-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/landscape/index.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/evidence/index.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
@@ -234,7 +252,7 @@
     <lastmod>2025-12-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/sources/index.html</loc>
-    <lastmod>2026-02-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/sources/2026-02-01-state-of-ai-2026.html</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
@@ -260,6 +278,192 @@
     <loc>/sources/2026-01-19-terraform-skill-claude.html</loc>
     <lastmod>2026-01-19T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tags/agent-teams.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/agent-workflows.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/agents-md.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/index.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/autonomous-loops.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/benchmarks.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/career.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/claude-code.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/code-quality.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/comparison.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/costs.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/custom-agents.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/deepseek.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/degradation.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/developer-role.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/edit-formats.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/engineering-identity.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/fundamentals.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/gemini.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/harness-engineering.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/hooks.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/infrastructure.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/llama.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/management-analogy.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/memory.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/mistral.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/model-agnostic.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/model-quality.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/model-releases.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/model-selection.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/models.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/multi-agent.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/orchestration.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/parallel.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/plugins.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/ralph-wiggum.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/reasoning.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/reliability.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/index.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/task-scoping.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/tool-calling.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/tooling.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/workflow.html</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/agentic-vision.html</loc>
+    <lastmod>2026-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/anthropic.html</loc>
+    <lastmod>2026-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/china-ai.html</loc>
+    <lastmod>2026-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/developer-experience.html</loc>
+    <lastmod>2026-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/model-degradation.html</loc>
+    <lastmod>2026-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/model-release.html</loc>
+    <lastmod>2026-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/open-source-ai.html</loc>
+    <lastmod>2026-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/service-quality.html</loc>
+    <lastmod>2026-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/autonomous-coding.html</loc>
+    <lastmod>2026-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/coding-agents.html</loc>
+    <lastmod>2026-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/enterprise.html</loc>
+    <lastmod>2026-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/production-engineering.html</loc>
+    <lastmod>2026-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/agentic-patterns.html</loc>
+    <lastmod>2026-02-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/future-of-coding.html</loc>
+    <lastmod>2026-02-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/limitations.html</loc>
+    <lastmod>2026-02-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/verification.html</loc>
+    <lastmod>2026-02-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/developer-workflows.html</loc>
+    <lastmod>2026-02-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/frameworks.html</loc>
+    <lastmod>2026-02-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/practitioner-insights.html</loc>
+    <lastmod>2026-02-07T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/adoption.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -270,18 +474,6 @@
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/agent-architecture.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/agent-teams.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/agent-workflows.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/agents-md.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/index.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/ai-economics.html</loc>
@@ -296,12 +488,6 @@
     <loc>/tags/amp-code.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/autonomous-coding.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/autonomous-loops.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/autonomy.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -311,16 +497,10 @@
     <loc>/tags/beginner.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/benchmarks.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/brain-atrophy.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/builders.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/career.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/cascade.html</loc>
@@ -330,9 +510,6 @@
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/changed-minds.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/claude-code.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/claude-md.html</loc>
@@ -362,9 +539,6 @@
     <loc>/tags/community-discussion.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/comparison.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/context-engineering.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -389,16 +563,10 @@
     <loc>/tags/cost-optimization.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/costs.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/criticism.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/cursor.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/custom-agents.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/data.html</loc>
@@ -410,19 +578,7 @@
     <loc>/tags/decision-making.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/deepseek.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/degradation.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/delegation.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/developer-experience.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/developer-role.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/drift.html</loc>
@@ -434,12 +590,6 @@
     <loc>/tags/education.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/engineering-identity.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/enterprise.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/expert-techniques.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -447,12 +597,6 @@
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/failure-modes.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/fundamentals.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/gemini.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/getting-started.html</loc>
@@ -464,13 +608,7 @@
     <loc>/tags/google.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/harness-engineering.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/honest-assessment.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/hooks.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/human-in-the-loop.html</loc>
@@ -483,9 +621,6 @@
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/industry-trends.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/infrastructure.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/instructions.html</loc>
@@ -509,43 +644,10 @@
     <loc>/tags/learning-curve.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/limitations.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/llama.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/management-analogy.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/mcp.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/memory.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/mistral.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/model-agnostic.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/model-quality.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/model-releases.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/model-routing.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/model-selection.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/models.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/multi-agent.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/multi-model.html</loc>
@@ -560,22 +662,10 @@
     <loc>/tags/openai.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/orchestration.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/parallel.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/parallel-agents.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/plugins.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/power-users.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/practitioner-insights.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/pricing.html</loc>
@@ -588,15 +678,6 @@
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/quality.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/ralph-wiggum.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/reasoning.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/reliability.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/research.html</loc>
@@ -626,15 +707,6 @@
     <loc>/tags/sustainability.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/swarms.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/index.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/task-scoping.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/terminal.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -647,16 +719,10 @@
     <loc>/tags/tool-comparison.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/tooling.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/toolmakers.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/tools.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/verification.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/vibe-coding.html</loc>
@@ -668,14 +734,8 @@
     <loc>/tags/windsurf.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/workflow.html</loc>
-    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/working-memory.html</loc>
     <lastmod>2026-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/anthropic.html</loc>
-    <lastmod>2026-02-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/claude.html</loc>
     <lastmod>2026-02-05T00:00:00+00:00</lastmod>
@@ -689,20 +749,8 @@
     <loc>/tags/meta.html</loc>
     <lastmod>2026-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/model-release.html</loc>
-    <lastmod>2026-02-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/open-source-ai.html</loc>
-    <lastmod>2026-02-05T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/opus.html</loc>
     <lastmod>2026-02-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/service-quality.html</loc>
-    <lastmod>2026-02-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/agentic-vision.html</loc>
-    <lastmod>2026-02-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/developer-tools.html</loc>
     <lastmod>2026-02-03T00:00:00+00:00</lastmod>
@@ -728,9 +776,6 @@
     <loc>/tags/ai-landscape.html</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/china-ai.html</loc>
-    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/coding-tools.html</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -740,9 +785,6 @@
     <loc>/tags/scaling-laws.html</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/code-quality.html</loc>
-    <lastmod>2026-01-30T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/productivity.html</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
@@ -750,9 +792,6 @@
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/evaluation.html</loc>
-    <lastmod>2026-01-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/model-degradation.html</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/next-js.html</loc>
@@ -770,17 +809,14 @@
     <loc>/tags/tool-routing.html</loc>
     <lastmod>2026-01-25T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tags/swarms.html</loc>
+    <lastmod>2026-01-24T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/sdlc.html</loc>
     <lastmod>2026-01-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/workflow-template.html</loc>
     <lastmod>2026-01-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/agentic-patterns.html</loc>
-    <lastmod>2026-01-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/production-engineering.html</loc>
-    <lastmod>2026-01-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/security.html</loc>
     <lastmod>2026-01-21T00:00:00+00:00</lastmod>
@@ -818,13 +854,7 @@
     <loc>/tags/ai-coding-tools.html</loc>
     <lastmod>2026-01-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/coding-agents.html</loc>
-    <lastmod>2026-01-08T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/demystification.html</loc>
-    <lastmod>2026-01-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/tool-calling.html</loc>
     <lastmod>2026-01-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/agentic-frameworks.html</loc>
@@ -865,12 +895,6 @@
   </url><url>
     <loc>/tags/meta-cognition.html</loc>
     <lastmod>2025-12-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/developer-workflows.html</loc>
-    <lastmod>2025-12-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/future-of-coding.html</loc>
-    <lastmod>2025-12-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/open-source-models.html</loc>
     <lastmod>2025-12-02T00:00:00+00:00</lastmod>

@@ -106,14 +106,14 @@
         <h1 class="article-title">Model Releases in 2026</h1>
         <div class="meta-bar">
   
-  <time class="meta-date" datetime="2026-02-06">
-    February 6, 2026
+  <time class="meta-date" datetime="2026-02-12">
+    February 12, 2026
   </time>
   
 
   
 
-  <span class="meta-reading-time">5 min read</span>
+  <span class="meta-reading-time">6 min read</span>
 
   
 
@@ -195,6 +195,11 @@
 <p>Mistral released a new generation of open-source multimodal models under Apache 2.0. The lineup spans 3B to 14B dense models plus Mistral Large 3, a mixture-of-experts model with 41B active parameters from a 675B total pool. All models handle text, images, and 40+ languages natively.</p>
 <p>The 3B model is notable for running in a web browser via WebGPU &mdash; a 3GB download that requires no server infrastructure. <strong>barrell</strong> on HN praised Mistral models in production as more reliable and cost-effective than GPT-5 for formatting tasks. The release was technically significant but overshadowed by DeepSeek 3.2 launching the same day.</p>
 <p>Mistral Large 3 uses a DeepSeek V2-style architecture, which some commenters noted Mistral did not prominently acknowledge. The European AI company&rsquo;s return to Apache 2.0 licensing was welcomed after a period of more restrictive releases. (<a href="../sources/2025-12-02-mistral-3-models.html">Source</a>)</p>
+<h2 id="glm-5-chinese-open-weight-agentic-model-february-2026">GLM-5: Chinese Open-Weight Agentic Model (February 2026)</h2>
+<p>Zhipu AI (Z.ai) released GLM-5, a 744 billion parameter mixture-of-experts model (40B active) under MIT license. The model is notable for being the first major Chinese open-weight release to explicitly target agentic engineering &ndash; complex, multi-stage systems tasks requiring autonomous planning and sustained context coherence across extended workflows.</p>
+<p>GLM-5 scaled up from GLM-4.7 with pre-training expanded to 28.5 trillion tokens. On agentic benchmarks it claims the top position among open-source models and approaches the performance of proprietary frontier models. Alongside the model, Z.ai released SLIME, an open-source asynchronous reinforcement learning training framework that addresses the rollout generation bottleneck consuming over 90% of RL training time.</p>
+<p>The release continues the trajectory established by DeepSeek: Chinese labs competing through efficiency innovation and open licensing rather than raw compute advantage. <strong>NiloCK</strong> observed that user preferences are approaching saturation &ndash; even models that are one or two generations behind the frontier are beginning to feel adequate for many workflows. <strong>Aurornis</strong> expressed benchmark skepticism, noting GLM-5 compares against previous-generation models rather than current competitors. Early practitioner testing showed mixed results: capable for focused coding tasks at competitive pricing, but tool-calling reliability remains a gap compared to proprietary alternatives.</p>
+<p>The model is available through OpenRouter, Ollama, and Hugging Face &ndash; making it immediately accessible for both API and self-hosted use. (<a href="../sources/2026-02-11-glm5-agentic-engineering.html">Source</a>)</p>
 <h2 id="what-the-release-pace-means-for-practitioners">What the Release Pace Means for Practitioners</h2>
 <p>The key takeaway is not which model is best this week. It is that the competitive cycle has shortened to the point where any specific model advantage is ephemeral. GPT-5.3 Codex launched 35 minutes after Opus 4.6 and claimed higher benchmark scores.</p>
 <p>For practitioners, this argues for:</p>
@@ -231,6 +236,7 @@
     <li><a href="#deepseek-training-efficiency-as-strategy">DeepSeek: Training Efficiency as Strategy</a></li>
     <li><a href="#llama-4-ten-months-of-stagnation">Llama 4: Ten Months of Stagnation</a></li>
     <li><a href="#mistral-3-family-december-2025">Mistral 3 Family (December 2025)</a></li>
+    <li><a href="#glm-5-chinese-open-weight-agentic-model-february-2026">GLM-5: Chinese Open-Weight Agentic Model (February 2026)</a></li>
     <li><a href="#what-the-release-pace-means-for-practitioners">What the Release Pace Means for Practitioners</a></li>
   </ul>
 </nav>
@@ -267,7 +273,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 78 pages across 203 topics.</p>
+      <p>Built with Hugo. Synthesized from 38 HN discussions and 6,000+ practitioner comments. 84 pages across 205 topics.</p>
     </div>
   </div>
 </footer>

@@ -6,8 +6,428 @@
     <description>Recent content in Tags on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Agent-Teams</title>
+      <link>/tags/agent-teams.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/agent-teams.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agent-Workflows</title>
+      <link>/tags/agent-workflows.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/agent-workflows.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agents-Md</title>
+      <link>/tags/agents-md.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/agents-md.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Autonomous-Loops</title>
+      <link>/tags/autonomous-loops.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/autonomous-loops.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Benchmarks</title>
+      <link>/tags/benchmarks.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/benchmarks.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Career</title>
+      <link>/tags/career.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/career.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Claude-Code</title>
+      <link>/tags/claude-code.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/claude-code.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Code-Quality</title>
+      <link>/tags/code-quality.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/code-quality.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Comparison</title>
+      <link>/tags/comparison.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/comparison.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Costs</title>
+      <link>/tags/costs.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/costs.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Custom-Agents</title>
+      <link>/tags/custom-agents.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/custom-agents.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Deepseek</title>
+      <link>/tags/deepseek.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/deepseek.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Degradation</title>
+      <link>/tags/degradation.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/degradation.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Developer-Role</title>
+      <link>/tags/developer-role.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/developer-role.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Edit-Formats</title>
+      <link>/tags/edit-formats.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/edit-formats.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Engineering-Identity</title>
+      <link>/tags/engineering-identity.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/engineering-identity.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fundamentals</title>
+      <link>/tags/fundamentals.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/fundamentals.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gemini</title>
+      <link>/tags/gemini.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/gemini.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Harness-Engineering</title>
+      <link>/tags/harness-engineering.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/harness-engineering.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hooks</title>
+      <link>/tags/hooks.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/hooks.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Infrastructure</title>
+      <link>/tags/infrastructure.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/infrastructure.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Llama</title>
+      <link>/tags/llama.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/llama.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Management-Analogy</title>
+      <link>/tags/management-analogy.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/management-analogy.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Memory</title>
+      <link>/tags/memory.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/memory.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mistral</title>
+      <link>/tags/mistral.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/mistral.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Model-Agnostic</title>
+      <link>/tags/model-agnostic.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/model-agnostic.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Model-Quality</title>
+      <link>/tags/model-quality.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/model-quality.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Model-Releases</title>
+      <link>/tags/model-releases.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/model-releases.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Model-Selection</title>
+      <link>/tags/model-selection.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/model-selection.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Models</title>
+      <link>/tags/models.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/models.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Multi-Agent</title>
+      <link>/tags/multi-agent.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/multi-agent.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Orchestration</title>
+      <link>/tags/orchestration.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/orchestration.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Parallel</title>
+      <link>/tags/parallel.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/parallel.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Plugins</title>
+      <link>/tags/plugins.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/plugins.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ralph-Wiggum</title>
+      <link>/tags/ralph-wiggum.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/ralph-wiggum.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reasoning</title>
+      <link>/tags/reasoning.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/reasoning.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reliability</title>
+      <link>/tags/reliability.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/reliability.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Task-Scoping</title>
+      <link>/tags/task-scoping.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/task-scoping.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tool-Calling</title>
+      <link>/tags/tool-calling.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/tool-calling.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tooling</title>
+      <link>/tags/tooling.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/tooling.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Workflow</title>
+      <link>/tags/workflow.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/workflow.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agentic-Vision</title>
+      <link>/tags/agentic-vision.html</link>
+      <pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/agentic-vision.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Anthropic</title>
+      <link>/tags/anthropic.html</link>
+      <pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/anthropic.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>China-Ai</title>
+      <link>/tags/china-ai.html</link>
+      <pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/china-ai.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Developer-Experience</title>
+      <link>/tags/developer-experience.html</link>
+      <pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/developer-experience.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Model-Degradation</title>
+      <link>/tags/model-degradation.html</link>
+      <pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/model-degradation.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Model-Release</title>
+      <link>/tags/model-release.html</link>
+      <pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/model-release.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Open-Source-Ai</title>
+      <link>/tags/open-source-ai.html</link>
+      <pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/open-source-ai.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Service-Quality</title>
+      <link>/tags/service-quality.html</link>
+      <pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/service-quality.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Autonomous-Coding</title>
+      <link>/tags/autonomous-coding.html</link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/autonomous-coding.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Coding-Agents</title>
+      <link>/tags/coding-agents.html</link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/coding-agents.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Enterprise</title>
+      <link>/tags/enterprise.html</link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/enterprise.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Production-Engineering</title>
+      <link>/tags/production-engineering.html</link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/production-engineering.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agentic-Patterns</title>
+      <link>/tags/agentic-patterns.html</link>
+      <pubDate>Sun, 08 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/agentic-patterns.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Future-of-Coding</title>
+      <link>/tags/future-of-coding.html</link>
+      <pubDate>Sun, 08 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/future-of-coding.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Limitations</title>
+      <link>/tags/limitations.html</link>
+      <pubDate>Sun, 08 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/limitations.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Verification</title>
+      <link>/tags/verification.html</link>
+      <pubDate>Sun, 08 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/verification.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Developer-Workflows</title>
+      <link>/tags/developer-workflows.html</link>
+      <pubDate>Sat, 07 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/developer-workflows.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Frameworks</title>
+      <link>/tags/frameworks.html</link>
+      <pubDate>Sat, 07 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/frameworks.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Practitioner-Insights</title>
+      <link>/tags/practitioner-insights.html</link>
+      <pubDate>Sat, 07 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/practitioner-insights.html</guid>
+      <description></description>
+    </item>
     <item>
       <title>Adoption</title>
       <link>/tags/adoption.html</link>
@@ -34,27 +454,6 @@
       <link>/tags/agent-architecture.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/agent-architecture.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Agent-Teams</title>
-      <link>/tags/agent-teams.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/agent-teams.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Agent-Workflows</title>
-      <link>/tags/agent-workflows.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/agent-workflows.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Agents-Md</title>
-      <link>/tags/agents-md.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/agents-md.html</guid>
       <description></description>
     </item>
     <item>
@@ -86,20 +485,6 @@
       <description></description>
     </item>
     <item>
-      <title>Autonomous-Coding</title>
-      <link>/tags/autonomous-coding.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/autonomous-coding.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Autonomous-Loops</title>
-      <link>/tags/autonomous-loops.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/autonomous-loops.html</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Autonomy</title>
       <link>/tags/autonomy.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
@@ -121,13 +506,6 @@
       <description></description>
     </item>
     <item>
-      <title>Benchmarks</title>
-      <link>/tags/benchmarks.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/benchmarks.html</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Brain-Atrophy</title>
       <link>/tags/brain-atrophy.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
@@ -139,13 +517,6 @@
       <link>/tags/builders.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/builders.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Career</title>
-      <link>/tags/career.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/career.html</guid>
       <description></description>
     </item>
     <item>
@@ -167,13 +538,6 @@
       <link>/tags/changed-minds.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/changed-minds.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Claude-Code</title>
-      <link>/tags/claude-code.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/claude-code.html</guid>
       <description></description>
     </item>
     <item>
@@ -240,13 +604,6 @@
       <description></description>
     </item>
     <item>
-      <title>Comparison</title>
-      <link>/tags/comparison.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/comparison.html</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Context-Engineering</title>
       <link>/tags/context-engineering.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
@@ -303,13 +660,6 @@
       <description></description>
     </item>
     <item>
-      <title>Costs</title>
-      <link>/tags/costs.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/costs.html</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Criticism</title>
       <link>/tags/criticism.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
@@ -321,13 +671,6 @@
       <link>/tags/cursor.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/cursor.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Custom-Agents</title>
-      <link>/tags/custom-agents.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/custom-agents.html</guid>
       <description></description>
     </item>
     <item>
@@ -352,38 +695,10 @@
       <description></description>
     </item>
     <item>
-      <title>Deepseek</title>
-      <link>/tags/deepseek.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/deepseek.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Degradation</title>
-      <link>/tags/degradation.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/degradation.html</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Delegation</title>
       <link>/tags/delegation.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/delegation.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Developer-Experience</title>
-      <link>/tags/developer-experience.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/developer-experience.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Developer-Role</title>
-      <link>/tags/developer-role.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/developer-role.html</guid>
       <description></description>
     </item>
     <item>
@@ -408,20 +723,6 @@
       <description></description>
     </item>
     <item>
-      <title>Engineering-Identity</title>
-      <link>/tags/engineering-identity.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/engineering-identity.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Enterprise</title>
-      <link>/tags/enterprise.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/enterprise.html</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Expert-Techniques</title>
       <link>/tags/expert-techniques.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
@@ -440,20 +741,6 @@
       <link>/tags/failure-modes.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/failure-modes.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Fundamentals</title>
-      <link>/tags/fundamentals.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/fundamentals.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Gemini</title>
-      <link>/tags/gemini.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/gemini.html</guid>
       <description></description>
     </item>
     <item>
@@ -478,24 +765,10 @@
       <description></description>
     </item>
     <item>
-      <title>Harness-Engineering</title>
-      <link>/tags/harness-engineering.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/harness-engineering.html</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Honest-Assessment</title>
       <link>/tags/honest-assessment.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/honest-assessment.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Hooks</title>
-      <link>/tags/hooks.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/hooks.html</guid>
       <description></description>
     </item>
     <item>
@@ -524,13 +797,6 @@
       <link>/tags/industry-trends.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/industry-trends.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Infrastructure</title>
-      <link>/tags/infrastructure.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/infrastructure.html</guid>
       <description></description>
     </item>
     <item>
@@ -583,27 +849,6 @@
       <description></description>
     </item>
     <item>
-      <title>Limitations</title>
-      <link>/tags/limitations.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/limitations.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Llama</title>
-      <link>/tags/llama.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/llama.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Management-Analogy</title>
-      <link>/tags/management-analogy.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/management-analogy.html</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Mcp</title>
       <link>/tags/mcp.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
@@ -611,66 +856,10 @@
       <description></description>
     </item>
     <item>
-      <title>Memory</title>
-      <link>/tags/memory.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/memory.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Mistral</title>
-      <link>/tags/mistral.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/mistral.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Model-Agnostic</title>
-      <link>/tags/model-agnostic.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/model-agnostic.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Model-Quality</title>
-      <link>/tags/model-quality.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/model-quality.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Model-Releases</title>
-      <link>/tags/model-releases.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/model-releases.html</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Model-Routing</title>
       <link>/tags/model-routing.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/model-routing.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Model-Selection</title>
-      <link>/tags/model-selection.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/model-selection.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Models</title>
-      <link>/tags/models.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/models.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Multi-Agent</title>
-      <link>/tags/multi-agent.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/multi-agent.html</guid>
       <description></description>
     </item>
     <item>
@@ -702,20 +891,6 @@
       <description></description>
     </item>
     <item>
-      <title>Orchestration</title>
-      <link>/tags/orchestration.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/orchestration.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Parallel</title>
-      <link>/tags/parallel.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/parallel.html</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Parallel-Agents</title>
       <link>/tags/parallel-agents.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
@@ -723,24 +898,10 @@
       <description></description>
     </item>
     <item>
-      <title>Plugins</title>
-      <link>/tags/plugins.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/plugins.html</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Power-Users</title>
       <link>/tags/power-users.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/power-users.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Practitioner-Insights</title>
-      <link>/tags/practitioner-insights.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/practitioner-insights.html</guid>
       <description></description>
     </item>
     <item>
@@ -769,27 +930,6 @@
       <link>/tags/quality.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/quality.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ralph-Wiggum</title>
-      <link>/tags/ralph-wiggum.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/ralph-wiggum.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Reasoning</title>
-      <link>/tags/reasoning.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/reasoning.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Reliability</title>
-      <link>/tags/reliability.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/reliability.html</guid>
       <description></description>
     </item>
     <item>
@@ -856,20 +996,6 @@
       <description></description>
     </item>
     <item>
-      <title>Swarms</title>
-      <link>/tags/swarms.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/swarms.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Task-Scoping</title>
-      <link>/tags/task-scoping.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/task-scoping.html</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Terminal</title>
       <link>/tags/terminal.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
@@ -898,13 +1024,6 @@
       <description></description>
     </item>
     <item>
-      <title>Tooling</title>
-      <link>/tags/tooling.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/tooling.html</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Toolmakers</title>
       <link>/tags/toolmakers.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
@@ -916,13 +1035,6 @@
       <link>/tags/tools.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/tools.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Verification</title>
-      <link>/tags/verification.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/verification.html</guid>
       <description></description>
     </item>
     <item>
@@ -947,24 +1059,10 @@
       <description></description>
     </item>
     <item>
-      <title>Workflow</title>
-      <link>/tags/workflow.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/workflow.html</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Working-Memory</title>
       <link>/tags/working-memory.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/working-memory.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Anthropic</title>
-      <link>/tags/anthropic.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/anthropic.html</guid>
       <description></description>
     </item>
     <item>
@@ -996,38 +1094,10 @@
       <description></description>
     </item>
     <item>
-      <title>Model-Release</title>
-      <link>/tags/model-release.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/model-release.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Open-Source-Ai</title>
-      <link>/tags/open-source-ai.html</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/open-source-ai.html</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Opus</title>
       <link>/tags/opus.html</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/tags/opus.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Service-Quality</title>
-      <link>/tags/service-quality.html</link>
-      <pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/service-quality.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Agentic-Vision</title>
-      <link>/tags/agentic-vision.html</link>
-      <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/agentic-vision.html</guid>
       <description></description>
     </item>
     <item>
@@ -1087,13 +1157,6 @@
       <description></description>
     </item>
     <item>
-      <title>China-Ai</title>
-      <link>/tags/china-ai.html</link>
-      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/china-ai.html</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Coding-Tools</title>
       <link>/tags/coding-tools.html</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
@@ -1115,13 +1178,6 @@
       <description></description>
     </item>
     <item>
-      <title>Code-Quality</title>
-      <link>/tags/code-quality.html</link>
-      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/code-quality.html</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Productivity</title>
       <link>/tags/productivity.html</link>
       <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
@@ -1140,13 +1196,6 @@
       <link>/tags/evaluation.html</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
       <guid>/tags/evaluation.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Model-Degradation</title>
-      <link>/tags/model-degradation.html</link>
-      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/model-degradation.html</guid>
       <description></description>
     </item>
     <item>
@@ -1185,6 +1234,13 @@
       <description></description>
     </item>
     <item>
+      <title>Swarms</title>
+      <link>/tags/swarms.html</link>
+      <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/swarms.html</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Sdlc</title>
       <link>/tags/sdlc.html</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
@@ -1196,20 +1252,6 @@
       <link>/tags/workflow-template.html</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
       <guid>/tags/workflow-template.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Agentic-Patterns</title>
-      <link>/tags/agentic-patterns.html</link>
-      <pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/agentic-patterns.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Production-Engineering</title>
-      <link>/tags/production-engineering.html</link>
-      <pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/production-engineering.html</guid>
       <description></description>
     </item>
     <item>
@@ -1297,24 +1339,10 @@
       <description></description>
     </item>
     <item>
-      <title>Coding-Agents</title>
-      <link>/tags/coding-agents.html</link>
-      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/coding-agents.html</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Demystification</title>
       <link>/tags/demystification.html</link>
       <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
       <guid>/tags/demystification.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tool-Calling</title>
-      <link>/tags/tool-calling.html</link>
-      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/tool-calling.html</guid>
       <description></description>
     </item>
     <item>
@@ -1406,20 +1434,6 @@
       <link>/tags/meta-cognition.html</link>
       <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
       <guid>/tags/meta-cognition.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Developer-Workflows</title>
-      <link>/tags/developer-workflows.html</link>
-      <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>/tags/developer-workflows.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Future-of-Coding</title>
-      <link>/tags/future-of-coding.html</link>
-      <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>/tags/future-of-coding.html</guid>
       <description></description>
     </item>
     <item>

@@ -6,12 +6,12 @@
     <description>Recent content in Fundamentals on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/fundamentals/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Task Scoping</title>
       <link>/practices/task-scoping.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/practices/task-scoping.html</guid>
       <description>&lt;p&gt;Task scoping is the dominant skill in AI-assisted development. It determines whether your interaction with an agent produces usable output in minutes or wasted effort measured in hours. Every practitioner who has moved past the honeymoon phase identifies decomposition &amp;ndash; not prompting, not model selection &amp;ndash; as the discipline that matters most.&lt;/p&gt;&#xA;&lt;p&gt;The core insight is deceptively simple: AI agents execute well-bounded tasks reliably and open-ended tasks poorly. Your job is to turn open-ended work into a series of bounded tasks. This is fundamentally the same skill as delegating to a junior developer, with one critical difference: the agent never learns from the previous session.&lt;/p&gt;</description>
     </item>

@@ -6,14 +6,28 @@
     <description>Recent content in Benchmarks on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/benchmarks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I Improved 15 LLMs at Coding in One Afternoon. Only the Harness Changed.</title>
+      <link>/sources/2026-02-12-harness-problem-hashline.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-02-12-harness-problem-hashline.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Can Boluk argues that the biggest bottleneck in LLM-assisted coding is not the model itself but the harness — the layer that translates a model&amp;rsquo;s intent into actual file edits. Most current edit mechanisms force models to reproduce existing code verbatim in order to specify what they want to change, and this reproduction step is where things break down. Patch-based formats (used by OpenAI&amp;rsquo;s Codex ecosystem) suffer catastrophic failure rates on non-Codex models, with some models failing nearly half their edit attempts. String replacement approaches (used by Claude Code and Gemini CLI) require exact character-for-character matching including whitespace, leading to frequent &amp;ldquo;string not found&amp;rdquo; errors. Cursor addressed this by training a dedicated 70B parameter model just to merge edits — an enormous investment that sidesteps rather than solves the underlying problem.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Is AI-Assisted Coding Getting Worse?</title>
       <link>/debates/is-it-getting-worse.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/debates/is-it-getting-worse.html</guid>
       <description>&lt;h2 id=&#34;the-question&#34;&gt;The Question&lt;/h2&gt;&#xA;&lt;p&gt;Few topics generate more heat in developer communities than the question of whether AI coding tools are getting worse over time. The complaint surfaces constantly: tasks that worked last month now require more prompting, models seem to lose coherence during US business hours, and context windows that once felt adequate now collapse under normal workloads.&lt;/p&gt;&#xA;&lt;p&gt;The stakes are real. Developers are paying $125-400+ per month for AI coding tools and building workflows around model capabilities they believe were promised. When those capabilities seem to fluctuate &amp;ndash; or quietly degrade &amp;ndash; trust erodes. And in a market where providers compete fiercely for developer loyalty, the perception of degradation can be as damaging as actual degradation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GLM-5: Targeting complex systems engineering and long-horizon agentic tasks</title>
+      <link>/sources/2026-02-11-glm5-agentic-engineering.html</link>
+      <pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-02-11-glm5-agentic-engineering.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Zhipu AI (Z.ai) released GLM-5, an open-weight mixture-of-experts model with 744 billion total parameters and 40 billion active parameters, licensed under MIT. The model targets what Z.ai calls &amp;ldquo;agentic engineering&amp;rdquo; — complex, multi-stage systems tasks that require autonomous decomposition of requirements, long-horizon planning, and sustained context coherence across extended workflows.&lt;/p&gt;&#xA;&lt;p&gt;GLM-5 scales up from its predecessor GLM-4.7 (368B parameters) with pre-training expanded from 23 trillion to 28.5 trillion tokens. On agentic benchmarks like Vending Bench 2, it claims the top position among open-source models and approaches the performance of proprietary frontier models like Claude Opus 4.5 and GPT-5.2 on reasoning, coding, and long-horizon task execution.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Claude Opus 4.6</title>

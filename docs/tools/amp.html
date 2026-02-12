@@ -292,7 +292,7 @@
 <p>When Amp switched their Search subagent from Claude Haiku 4.5 to Gemini 3 Flash, they saw dramatic improvements: 3x faster overall search completion, 8 parallel tool calls per iteration (versus roughly 2.5 for Haiku), and 3 turns to complete a search versus 9 turns for Haiku. Gemini 3 Flash&rsquo;s advantage came from superior parallel tool calling and the ability to conclude searches early when good results were found.</p>
 <p>This illustrates the multi-model thesis in microcosm: using a smaller, specialized model for a specific subtask produced better results than using a larger, more capable model that was not optimized for that particular function.</p>
 <h2 id="key-features-beyond-routing">Key Features Beyond Routing</h2>
-<p><strong>Parallel sub-agents.</strong> Amp can spawn multiple independent agents on subtasks simultaneously, similar to Claude Code&rsquo;s swarm feature but available earlier and with multi-model flexibility.</p>
+<p><strong>Parallel sub-agents.</strong> Amp can spawn multiple independent agents on subtasks simultaneously, similar to Claude Code&rsquo;s agent teams feature but available earlier and with multi-model flexibility.</p>
 <p><strong>AGENTS.md support.</strong> Like Claude Code&rsquo;s CLAUDE.md, Amp reads project-level instruction files for persistent context. See <a href="../practices/harness-engineering.html">Harness Engineering</a>.</p>
 <p><strong>No autocomplete.</strong> Amp dropped inline autocomplete entirely in January 2026 to focus exclusively on agentic workflows. This was a deliberate product decision reflecting the belief that autocomplete and agentic modes require different design tradeoffs.</p>
 <p><strong>Cross-repository search.</strong> The Librarian feature uses code intelligence from Sourcegraph&rsquo;s platform to search public repositories for usage patterns and documentation &ndash; a capability that leverages Sourcegraph&rsquo;s existing infrastructure.</p>
@@ -351,9 +351,9 @@
         </a>
         
         
-        <a href="../tools/models.html" class="article-nav-link article-nav-link--next">
+        <a href="../tools/cursor.html" class="article-nav-link article-nav-link--next">
           <span class="article-nav-direction">Next</span>
-          <span class="article-nav-title">Model Deep Dive</span>
+          <span class="article-nav-title">Cursor</span>
         </a>
         
       </nav>
@@ -417,7 +417,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 78 pages across 203 topics.</p>
+      <p>Built with Hugo. Synthesized from 38 HN discussions and 6,000+ practitioner comments. 84 pages across 205 topics.</p>
     </div>
   </div>
 </footer>

@@ -6,8 +6,15 @@
     <description>Recent content in Autonomous-Coding on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/autonomous-coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stripe Minions – End to end agentic coding</title>
+      <link>/sources/2026-02-10-stripe-minions-agentic-coding.html</link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-02-10-stripe-minions-agentic-coding.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Stripe built a custom internal coding agent system called Minions that handles end-to-end task completion with no human involvement during execution. Over a thousand pull requests per week at Stripe are entirely produced by minions — no human-written code — though every PR still undergoes human review before merging. The system was purpose-built because off-the-shelf agentic tools could not handle Stripe&amp;rsquo;s unique constraints: a codebase spanning hundreds of millions of lines, specialized stacks including Ruby with Sorbet typing, hundreds of proprietary internal libraries unfamiliar to any pretrained model, and the operational stakes of code that processes over a trillion dollars in annual payment volume.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Case Study: Building a C Compiler with AI Agents</title>
       <link>/evidence/carlini-compiler.html</link>

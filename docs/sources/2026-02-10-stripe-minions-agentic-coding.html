@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stripe Minions – End to end agentic coding | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Stripe Minions – End to end agentic coding">
+  <meta property="og:description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-sources"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../sources/index.html">Sources</a></li>
+      
+    
+    <li aria-current="page">Stripe Minions – End to end agentic coding</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Stripe Minions – End to end agentic coding</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-10">
+    February 10, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">3 min read</span>
+
+  
+  <span class="tier-badge tier-badge--2">Tier 2</span>
+  
+
+  <div class="meta-links">
+    
+    <a href="https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents" class="meta-link" target="_blank" rel="noopener">Source &#8599;</a>
+    
+    
+    
+    <a href="https://news.ycombinator.com/item?id=46959177" class="meta-link" target="_blank" rel="noopener">HN &#8599;</a>
+    
+    
+  </div>
+
+  
+  <span class="meta-stat">5 points</span>
+  
+  
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/enterprise.html" class="tag-pill">enterprise</a>
+  
+  
+  
+  
+  <a href="../tags/agent-workflows.html" class="tag-pill">agent-workflows</a>
+  
+  
+  
+  
+  <a href="../tags/autonomous-coding.html" class="tag-pill">autonomous-coding</a>
+  
+  
+  
+  
+  <a href="../tags/production-engineering.html" class="tag-pill">production-engineering</a>
+  
+  
+  
+  
+  <a href="../tags/coding-agents.html" class="tag-pill">coding-agents</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <h2 id="summary">Summary</h2>
+<p>Stripe built a custom internal coding agent system called Minions that handles end-to-end task completion with no human involvement during execution. Over a thousand pull requests per week at Stripe are entirely produced by minions — no human-written code — though every PR still undergoes human review before merging. The system was purpose-built because off-the-shelf agentic tools could not handle Stripe&rsquo;s unique constraints: a codebase spanning hundreds of millions of lines, specialized stacks including Ruby with Sorbet typing, hundreds of proprietary internal libraries unfamiliar to any pretrained model, and the operational stakes of code that processes over a trillion dollars in annual payment volume.</p>
+<p>The architecture is built on a customized fork of Block&rsquo;s Goose coding agent. Minions integrate with MCP (Model Context Protocol) for function calling across more than 400 internal tools. Each agent run gets an isolated &ldquo;devbox&rdquo; — a pre-warmed developer environment that spins up in about 10 seconds with the full Stripe codebase pre-loaded. An internal MCP server called Toolshed provides access to documentation, build statuses, and code intelligence services.</p>
+<p>A typical workflow starts from a Slack message and ends with a pull request that passes CI and is ready for human review, with no interaction in between. Engineers can also trigger minions from a CLI, web interface, or directly within internal tools like documentation platforms and ticketing systems. The system implements a layered feedback loop: local linting runs in under 5 seconds on each push, CI selectively runs relevant tests from Stripe&rsquo;s suite of over 3 million tests, automated fixes apply where available, and minions attempt manual fixes otherwise. To balance speed and cost, agents are limited to two CI rounds maximum.</p>
+<p>Stripe found that aligning agent tooling with human developer tooling was key — if a tool works well for human engineers, it works well for agents too. Engineers frequently run multiple minion tasks in parallel, finding the system especially valuable during on-call rotations for resolving many small issues quickly.</p>
+<h2 id="key-insights">Key Insights</h2>
+<ul>
+<li><strong>Scale of autonomous code production is remarkable.</strong> Over 1,000 PRs per week with zero human-written code, but full human review, demonstrates that unattended agents can be production-viable at enterprise scale when paired with proper guardrails.</li>
+<li><strong>Custom builds are necessary for complex codebases.</strong> Off-the-shelf agents failed Stripe&rsquo;s constraints — proprietary libraries, specialized type systems, and trillion-dollar operational stakes required a purpose-built system with deep internal tool integration.</li>
+<li><strong>MCP as the integration layer.</strong> With 400+ tools accessible via MCP, Stripe&rsquo;s architecture validates the protocol as a practical standard for connecting agents to enterprise infrastructure at scale.</li>
+<li><strong>Shift feedback left.</strong> The layered testing approach (5-second linting, selective CI, two-round limit) balances thoroughness against cost and speed — a practical pattern for any team deploying autonomous agents.</li>
+<li><strong>Agent-human tool alignment.</strong> Building agent workflows on the same infrastructure human developers use reduces maintenance overhead and ensures agents benefit from existing tooling investments.</li>
+</ul>
+<h2 id="notable-quotes">Notable Quotes</h2>
+<blockquote>
+<p>&ldquo;If it&rsquo;s good for humans, it&rsquo;s good for LLMs, too.&rdquo; — Alistair Gray, Stripe</p>
+</blockquote>
+<h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
+<p>No comments at time of capture. Post submitted by <strong>lockranore2</strong> with 5 points.</p>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../sources/2026-02-08-beyond-agentic-coding.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Beyond agentic coding</span>
+        </a>
+        
+        
+        <a href="../sources/2026-02-11-glm5-agentic-engineering.html" class="article-nav-link article-nav-link--next">
+          <span class="article-nav-direction">Next</span>
+          <span class="article-nav-title">GLM-5: Targeting complex systems engineering and long-horizon agentic tasks</span>
+        </a>
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#key-insights">Key Insights</a></li>
+    <li><a href="#notable-quotes">Notable Quotes</a></li>
+    <li><a href="#hn-discussion-highlights">HN Discussion Highlights</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Synthesized from 38 HN discussions and 6,000+ practitioner comments. 84 pages across 205 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>

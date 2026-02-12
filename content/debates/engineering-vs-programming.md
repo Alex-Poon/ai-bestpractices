@@ -3,7 +3,7 @@ title: "Engineering vs. Programming: Is This 'Real' Development?"
 description: "The identity question — does managing AI agents count as engineering, or is something fundamental being lost?"
 weight: 4
 tags: [engineering-identity, career, developer-role, management-analogy]
-date: 2026-02-06
+date: 2026-02-12
 related_debates: ["/debates/junior-skills", "/debates/brain-atrophy"]
 ---
 
@@ -51,6 +51,8 @@ Advocates argue that what's being lost isn't engineering but merely one form of 
 
 This perspective holds that system design, data modeling, architecture, and understanding user needs are the real engineering work. Writing code is the translation step -- important, but not the creative core. AI handles the translation while humans do the engineering that actually matters.
 
+A February 2026 blog post arguing that coding agents have replaced traditional frameworks took this argument further. The author described daily workflows where agents generate purpose-built code tailored to specific problems, eliminating the need for opinionated framework architectures entirely. Instead of adapting to a framework's conventions, the developer makes first-principles decisions about data flow and system design -- and lets the agent handle implementation. The post framed this as software engineering "coming back" -- a return to understanding and controlling the entire stack rather than deferring to framework conventions. **eqvinox** pushed back on the idea that typing code was ever the hard part, arguing that the real exhaustion comes from coordination, alignment, code review, and conceptual design. But the article's core claim -- that agents free developers to focus on genuine engineering decisions rather than framework boilerplate -- resonated with the builder camp. ([Source](/sources/2026-02-07-coding-agents-replaced-frameworks.html))
+
 The emerging role of "AI-augmented engineer" combines traditional engineering skills with new capabilities: orchestration of AI agents, context management, verification design, and prompt engineering. One commenter compared this to the DevOps movement -- it requires education and culture change, but represents a genuine evolution of the profession rather than its elimination.
 
 > "How to make mixed AI-human teams successful is an unexplored area." -- virgilp
@@ -68,6 +70,8 @@ After all, nobody argues that writing C instead of assembly makes you less of an
 ### The Craft Argument
 
 The opposing camp argues that there's something qualitatively different about this particular abstraction step. Previous advances (compilers, frameworks, libraries) still required the developer to think in code. AI-assisted development can bypass code-level thinking entirely -- and that's where the danger lies.
+
+The "coding agents replaced frameworks" discussion (Feb 2026) surfaced strong counterarguments. **rglover** warned that developers leaning heavily on AI-generated code face a reckoning when limitations surface, calling it "a brutal rude awakening." **avidiax** dismissed the anti-framework stance as producing "bespoke square wheels without a maintenance plan" -- framework familiarity makes developers hireable and codebases maintainable. **pixelat3d** argued against having AI re-implement framework functionality without battle-testing, ecosystem support, or shared terminology that enables team communication. And **HarHarVeryFunny** made a pragmatic observation: LLMs actually perform better generating code within familiar frameworks because of training data distribution, suggesting a practical reason to keep frameworks even in an AI-augmented workflow.
 
 > "I got into programming because I like programming." -- ryandrake
 
@@ -123,6 +127,8 @@ This developer uses Opus on a 50,000-line Django project and finds that the shif
 
 Another developer observes that modern AI-assisted development has the qualities of perpetual meetings: constant review, constant communication about intent, constant supervision. The solitary, focused, creative work that attracted many to engineering has been replaced by a social, supervisory role that not everyone finds fulfilling.
 
+A "Beyond Agentic Coding" article (Feb 2026) formalized this frustration with a concrete principle: good tools should keep users in a flow state as long as possible. By this measure, chat-based agentic interfaces fail because developers spend significant time waiting for agent output, lose synchronization with their codebase during autonomous operations, and interact with English-language prompts rather than code directly. **rubenflamshep** described frequent disorientation when managing multiple Claude sessions. **matheus-rr** highlighted the review challenge: unlike human developers who leave explanatory trails through commit messages and PR descriptions, agents produce diffs without documenting their reasoning. The article proposed "calm technology" alternatives -- semantic navigation, automated commit organization, and inline suggestions -- that deliver AI benefits without the flow disruption that makes developers feel like managers rather than engineers. ([Source](/sources/2026-02-08-beyond-agentic-coding.html))
+
 ## Where It Stands
 
 This debate may be unresolvable because it ultimately rests on values rather than evidence:
@@ -144,3 +150,4 @@ This debate may be unresolvable because it ultimately rests on values rather tha
 - **Can new forms of craft emerge around AI orchestration?** Some developers already find deep satisfaction in designing prompts, building verification systems, and engineering context management strategies. Whether this becomes a recognized craft with its own traditions and standards is an open question.
 - **What happens to developers who can't or won't adapt?** The history of technology is littered with displaced craftspeople. Whether the transition creates a new underclass of unemployable programmers or opens pathways to adjacent roles will depend on market dynamics and individual adaptability.
 - **Does the builder/coder split predict career outcomes?** If builders thrive and coders struggle in the AI era, this may reshape who enters the profession and what computer science education looks like. The long-term consequences for the field's intellectual diversity and innovation capacity are unknown.
+- **Will agent-first workflows make frameworks obsolete or more essential?** If agents can generate purpose-built code for each problem, the value proposition of opinionated frameworks changes. But frameworks also provide shared vocabulary, battle-tested patterns, and team onboarding -- benefits that bespoke agent-generated code cannot easily replicate.

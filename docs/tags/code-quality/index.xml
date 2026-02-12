@@ -6,8 +6,22 @@
     <description>Recent content in Code-Quality on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/code-quality/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I Improved 15 LLMs at Coding in One Afternoon. Only the Harness Changed.</title>
+      <link>/sources/2026-02-12-harness-problem-hashline.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-02-12-harness-problem-hashline.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Can Boluk argues that the biggest bottleneck in LLM-assisted coding is not the model itself but the harness — the layer that translates a model&amp;rsquo;s intent into actual file edits. Most current edit mechanisms force models to reproduce existing code verbatim in order to specify what they want to change, and this reproduction step is where things break down. Patch-based formats (used by OpenAI&amp;rsquo;s Codex ecosystem) suffer catastrophic failure rates on non-Codex models, with some models failing nearly half their edit attempts. String replacement approaches (used by Claude Code and Gemini CLI) require exact character-for-character matching including whitespace, leading to frequent &amp;ldquo;string not found&amp;rdquo; errors. Cursor addressed this by training a dedicated 70B parameter model just to merge edits — an enormous investment that sidesteps rather than solves the underlying problem.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Beyond agentic coding</title>
+      <link>/sources/2026-02-08-beyond-agentic-coding.html</link>
+      <pubDate>Sun, 08 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-02-08-beyond-agentic-coding.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This article takes a contrarian position within the AI-assisted development space: rather than celebrating autonomous coding agents, the author argues they fundamentally disrupt the developer flow state and proposes alternative paradigms inspired by &amp;ldquo;calm technology&amp;rdquo; principles. The core thesis is that chat-based agentic interfaces are indirect, slow, and imprecise &amp;ndash; and that the industry should explore AI tools that keep developers close to their code instead of mediating through conversation.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>How AI assistance impacts the formation of coding skills</title>
       <link>/sources/2026-01-30-ai-assistance-coding-skills.html</link>

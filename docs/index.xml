@@ -6,8 +6,78 @@
     <description>Recent content in AI Best Practices on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude Code Deep Dive</title>
+      <link>/tools/claude-code.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tools/claude-code.html</guid>
+      <description>&lt;p&gt;Claude Code is Anthropic&amp;rsquo;s CLI-first coding agent. It runs in the terminal, takes natural language task descriptions, and executes autonomously &amp;ndash; reading files, running commands, editing code, and iterating on failures. It is single-model (Anthropic&amp;rsquo;s Claude family), available through Claude Max subscriptions at $100-200/month, and focused entirely on agentic workflows with no autocomplete mode.&lt;/p&gt;&#xA;&lt;p&gt;What sets Claude Code apart from other agents is its extensibility. It supports CLAUDE.md project files, custom sub-agents, hooks for CI/CD integration, and MCP servers for structured tool access. This page covers the major features and developments that matter to practitioners.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I Improved 15 LLMs at Coding in One Afternoon. Only the Harness Changed.</title>
+      <link>/sources/2026-02-12-harness-problem-hashline.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-02-12-harness-problem-hashline.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Can Boluk argues that the biggest bottleneck in LLM-assisted coding is not the model itself but the harness — the layer that translates a model&amp;rsquo;s intent into actual file edits. Most current edit mechanisms force models to reproduce existing code verbatim in order to specify what they want to change, and this reproduction step is where things break down. Patch-based formats (used by OpenAI&amp;rsquo;s Codex ecosystem) suffer catastrophic failure rates on non-Codex models, with some models failing nearly half their edit attempts. String replacement approaches (used by Claude Code and Gemini CLI) require exact character-for-character matching including whitespace, leading to frequent &amp;ldquo;string not found&amp;rdquo; errors. Cursor addressed this by training a dedicated 70B parameter model just to merge edits — an enormous investment that sidesteps rather than solves the underlying problem.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Is AI-Assisted Coding Getting Worse?</title>
+      <link>/debates/is-it-getting-worse.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/debates/is-it-getting-worse.html</guid>
+      <description>&lt;h2 id=&#34;the-question&#34;&gt;The Question&lt;/h2&gt;&#xA;&lt;p&gt;Few topics generate more heat in developer communities than the question of whether AI coding tools are getting worse over time. The complaint surfaces constantly: tasks that worked last month now require more prompting, models seem to lose coherence during US business hours, and context windows that once felt adequate now collapse under normal workloads.&lt;/p&gt;&#xA;&lt;p&gt;The stakes are real. Developers are paying $125-400+ per month for AI coding tools and building workflows around model capabilities they believe were promised. When those capabilities seem to fluctuate &amp;ndash; or quietly degrade &amp;ndash; trust erodes. And in a market where providers compete fiercely for developer loyalty, the perception of degradation can be as damaging as actual degradation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Model Releases in 2026</title>
+      <link>/landscape/model-releases-2026.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/landscape/model-releases-2026.html</guid>
+      <description>&lt;p&gt;The first weeks of 2026 have seen an extraordinary density of model releases. The pace itself is informative: frontier model competition has intensified to the point where simultaneous launches are the norm rather than the exception. Here is what has shipped and what it means for practitioners.&lt;/p&gt;&#xA;&lt;h2 id=&#34;claude-opus-46-february-2026&#34;&gt;Claude Opus 4.6 (February 2026)&lt;/h2&gt;&#xA;&lt;p&gt;Anthropic&amp;rsquo;s latest flagship arrived with a 1M-token context window in beta &amp;mdash; the first at the Opus tier. Benchmark results placed it at the top of Terminal-Bench 2.0 for agentic coding and Humanity&amp;rsquo;s Last Exam for complex reasoning.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Task Scoping</title>
+      <link>/practices/task-scoping.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/practices/task-scoping.html</guid>
+      <description>&lt;p&gt;Task scoping is the dominant skill in AI-assisted development. It determines whether your interaction with an agent produces usable output in minutes or wasted effort measured in hours. Every practitioner who has moved past the honeymoon phase identifies decomposition &amp;ndash; not prompting, not model selection &amp;ndash; as the discipline that matters most.&lt;/p&gt;&#xA;&lt;p&gt;The core insight is deceptively simple: AI agents execute well-bounded tasks reliably and open-ended tasks poorly. Your job is to turn open-ended work into a series of bounded tasks. This is fundamentally the same skill as delegating to a junior developer, with one critical difference: the agent never learns from the previous session.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude Code is being dumbed down?</title>
+      <link>/sources/2026-02-11-claude-code-dumbed-down.html</link>
+      <pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-02-11-claude-code-dumbed-down.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;A blog post from SymmetryBreak criticizes Anthropic for reducing transparency in Claude Code version 2.1.20. The update replaced detailed file-level information during agent operations with vague summaries — instead of showing which specific files were read or which patterns were searched, the tool now displays generic messages like &amp;ldquo;Read 3 files&amp;rdquo; or &amp;ldquo;Searched for 1 pattern.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;The author argues this represents a classic product management anti-pattern: stripping useful information under the banner of simplification. Multiple GitHub issues document user complaints about the change, but the response from Anthropic was to point users toward &amp;ldquo;verbose mode&amp;rdquo; as a workaround. The author finds this inadequate — verbose mode dumps excessive debug output including full file contents and sub-agent transcripts, creating a binary choice between too little and too much information.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GLM-5: Targeting complex systems engineering and long-horizon agentic tasks</title>
+      <link>/sources/2026-02-11-glm5-agentic-engineering.html</link>
+      <pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-02-11-glm5-agentic-engineering.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Zhipu AI (Z.ai) released GLM-5, an open-weight mixture-of-experts model with 744 billion total parameters and 40 billion active parameters, licensed under MIT. The model targets what Z.ai calls &amp;ldquo;agentic engineering&amp;rdquo; — complex, multi-stage systems tasks that require autonomous decomposition of requirements, long-horizon planning, and sustained context coherence across extended workflows.&lt;/p&gt;&#xA;&lt;p&gt;GLM-5 scales up from its predecessor GLM-4.7 (368B parameters) with pre-training expanded from 23 trillion to 28.5 trillion tokens. On agentic benchmarks like Vending Bench 2, it claims the top position among open-source models and approaches the performance of proprietary frontier models like Claude Opus 4.5 and GPT-5.2 on reasoning, coding, and long-horizon task execution.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Stripe Minions – End to end agentic coding</title>
+      <link>/sources/2026-02-10-stripe-minions-agentic-coding.html</link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-02-10-stripe-minions-agentic-coding.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Stripe built a custom internal coding agent system called Minions that handles end-to-end task completion with no human involvement during execution. Over a thousand pull requests per week at Stripe are entirely produced by minions — no human-written code — though every PR still undergoes human review before merging. The system was purpose-built because off-the-shelf agentic tools could not handle Stripe&amp;rsquo;s unique constraints: a codebase spanning hundreds of millions of lines, specialized stacks including Ruby with Sorbet typing, hundreds of proprietary internal libraries unfamiliar to any pretrained model, and the operational stakes of code that processes over a trillion dollars in annual payment volume.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Beyond agentic coding</title>
+      <link>/sources/2026-02-08-beyond-agentic-coding.html</link>
+      <pubDate>Sun, 08 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-02-08-beyond-agentic-coding.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This article takes a contrarian position within the AI-assisted development space: rather than celebrating autonomous coding agents, the author argues they fundamentally disrupt the developer flow state and proposes alternative paradigms inspired by &amp;ldquo;calm technology&amp;rdquo; principles. The core thesis is that chat-based agentic interfaces are indirect, slow, and imprecise &amp;ndash; and that the industry should explore AI tools that keep developers close to their code instead of mediating through conversation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Coding agents have replaced every framework I used</title>
+      <link>/sources/2026-02-07-coding-agents-replaced-frameworks.html</link>
+      <pubDate>Sat, 07 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/sources/2026-02-07-coding-agents-replaced-frameworks.html</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;The author argues that AI coding agents have fundamentally changed how they approach software development, to the point where traditional frameworks feel unnecessary. Rather than pulling in large dependency trees and conforming to opinionated architectures, they now ask agents to generate purpose-built code tailored to specific problems. The result, they claim, is a return to genuine engineering thinking &amp;ndash; choosing the right approach for each situation rather than defaulting to whatever framework is popular.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Case Study: Building a C Compiler with AI Agents</title>
       <link>/evidence/carlini-compiler.html</link>
@@ -16,39 +86,11 @@
       <description>&lt;p&gt;Nicholas Carlini set out to answer a simple question: can you build real, production-grade software using nothing but parallel AI agents? The result was a 100,000-line Rust-based C compiler, produced by 16 parallel Claude instances over two weeks, that passed 99% of the GCC torture test suite and compiled the Linux 6.9 kernel across x86, ARM, and RISC-V architectures.&lt;/p&gt;&#xA;&lt;p&gt;The compiler itself is impressive. But the lasting value of this experiment lies in what it revealed about how autonomous agents succeed and fail at scale &amp;ndash; and why the infrastructure surrounding the agents matters more than the agents themselves.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Claude Code Deep Dive</title>
-      <link>/tools/claude-code.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tools/claude-code.html</guid>
-      <description>&lt;p&gt;Claude Code is Anthropic&amp;rsquo;s CLI-first coding agent. It runs in the terminal, takes natural language task descriptions, and executes autonomously &amp;ndash; reading files, running commands, editing code, and iterating on failures. It is single-model (Anthropic&amp;rsquo;s Claude family), available through Claude Max subscriptions at $100-200/month, and focused entirely on agentic workflows with no autocomplete mode.&lt;/p&gt;&#xA;&lt;p&gt;What sets Claude Code apart from other agents is its extensibility. It supports CLAUDE.md project files, custom sub-agents, hooks for CI/CD integration, and MCP servers for structured tool access. This page covers the major features and developments that matter to practitioners.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Is AI-Assisted Coding Getting Worse?</title>
-      <link>/debates/is-it-getting-worse.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/debates/is-it-getting-worse.html</guid>
-      <description>&lt;h2 id=&#34;the-question&#34;&gt;The Question&lt;/h2&gt;&#xA;&lt;p&gt;Few topics generate more heat in developer communities than the question of whether AI coding tools are getting worse over time. The complaint surfaces constantly: tasks that worked last month now require more prompting, models seem to lose coherence during US business hours, and context windows that once felt adequate now collapse under normal workloads.&lt;/p&gt;&#xA;&lt;p&gt;The stakes are real. Developers are paying $125-400+ per month for AI coding tools and building workflows around model capabilities they believe were promised. When those capabilities seem to fluctuate &amp;ndash; or quietly degrade &amp;ndash; trust erodes. And in a market where providers compete fiercely for developer loyalty, the perception of degradation can be as damaging as actual degradation.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Model Releases in 2026</title>
-      <link>/landscape/model-releases-2026.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/landscape/model-releases-2026.html</guid>
-      <description>&lt;p&gt;The first weeks of 2026 have seen an extraordinary density of model releases. The pace itself is informative: frontier model competition has intensified to the point where simultaneous launches are the norm rather than the exception. Here is what has shipped and what it means for practitioners.&lt;/p&gt;&#xA;&lt;h2 id=&#34;claude-opus-46-february-2026&#34;&gt;Claude Opus 4.6 (February 2026)&lt;/h2&gt;&#xA;&lt;p&gt;Anthropic&amp;rsquo;s latest flagship arrived with a 1M-token context window in beta &amp;mdash; the first at the Opus tier. Benchmark results placed it at the top of Terminal-Bench 2.0 for agentic coding and Humanity&amp;rsquo;s Last Exam for complex reasoning.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Power Users</title>
       <link>/voices/power-users.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/voices/power-users.html</guid>
       <description>&lt;p&gt;These are developers who use AI coding tools daily, have developed sophisticated workflows, and share their techniques with concrete detail. They are not cheerleaders &amp;ndash; most have strong opinions about what works and what does not.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;the-context-engineer&#34;&gt;The context engineer&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;energy123&lt;/strong&gt; maintains a single markdown file of roughly 15,000 tokens containing his project&amp;rsquo;s entire world model &amp;ndash; use cases, principles, requirements, guardrails, and ambiguity resolutions. This file gets injected into every prompt. Over time, repeated inferences cause the codebase to converge toward the intended design rather than drifting into defaults. He notes this level of investment only pays off for long-lived, important projects.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Task Scoping</title>
-      <link>/practices/task-scoping.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/practices/task-scoping.html</guid>
-      <description>&lt;p&gt;Task scoping is the dominant skill in AI-assisted development. It determines whether your interaction with an agent produces usable output in minutes or wasted effort measured in hours. Every practitioner who has moved past the honeymoon phase identifies decomposition &amp;ndash; not prompting, not model selection &amp;ndash; as the discipline that matters most.&lt;/p&gt;&#xA;&lt;p&gt;The core insight is deceptively simple: AI agents execute well-bounded tasks reliably and open-ended tasks poorly. Your job is to turn open-ended work into a series of bounded tasks. This is fundamentally the same skill as delegating to a junior developer, with one critical difference: the agent never learns from the previous session.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Core Loop</title>
@@ -79,6 +121,20 @@
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;MarginLab launched a daily benchmark tracker for Claude Code performance, measuring the CLI tool against a curated subset of SWE-Bench-Pro tasks using the Opus 4.5 model. The tracker was created in response to widespread community concerns about silent model degradation, where users noticed performance fluctuations but had no systematic way to measure or verify them.&lt;/p&gt;&#xA;&lt;p&gt;The methodology involves running 50 daily evaluations against SWE-Bench-Pro tasks without custom harnesses, then aggregating results over 7-day and 30-day windows for statistical reliability. Statistical significance is determined using Bernoulli modeling with 95% confidence intervals. At the time of the HN discussion, the tracker showed a daily pass rate of 48%, a 7-day aggregate of 53%, and a 30-day aggregate of 53%, compared against a historical baseline of 58%.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Harness Engineering</title>
+      <link>/practices/harness-engineering.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/practices/harness-engineering.html</guid>
+      <description>&lt;p&gt;Harness engineering is the practice of building persistent infrastructure that constrains and guides AI agents across sessions. It is the highest-leverage investment in AI-assisted development because it compounds: every mistake you document is a mistake that never recurs, every custom tool you build saves time in every future session, and every test harness you configure raises the floor on output quality.&lt;/p&gt;&#xA;&lt;p&gt;The harness is the answer to the fundamental limitation of current AI agents: they are stateless. Each session starts fresh with no memory of corrections, preferences, or past failures. The harness is the only mechanism that carries knowledge forward.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Model Deep Dive</title>
+      <link>/tools/models.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/tools/models.html</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;./practices/model-selection.html&#34;&gt;model selection&lt;/a&gt; practice page covers the principles. This page is the complement &amp;ndash; what each model actually feels like to use, based on 800+ practitioner reports gathered from Hacker News discussions and targeted Algolia searches. Specs and pricing live in the &lt;a href=&#34;#compact-reference&#34;&gt;compact reference&lt;/a&gt; at the bottom.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-practitioners-describe-these-models&#34;&gt;How Practitioners Describe These Models&lt;/h2&gt;&#xA;&lt;p&gt;Before the deep dives, the metaphors practitioners reach for:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Claude Code (Opus):&lt;/strong&gt; &amp;ldquo;A shitty, but very fast and very knowledgeable junior developer&amp;rdquo; requiring constant supervision (msikora). Required over a month to reach baseline productivity.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Codex CLI (GPT-5.2):&lt;/strong&gt; &amp;ldquo;Felt like working with a peer&amp;rdquo; for the first time in 20+ years of development (dudeinhawaii). Also: &amp;ldquo;an outsourced consultant who refuses to say I can&amp;rsquo;t do that&amp;rdquo; (theshrike79).&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;GPT-5.2:&lt;/strong&gt; &amp;ldquo;Rude and cold&amp;rdquo; but strict instruction-following (jorl17). Hallucinating CLI utilities and non-existent features is a recurring pattern (heavyset_go).&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Gemini 3:&lt;/strong&gt; &amp;ldquo;Biased toward action and uncontrollable&amp;rdquo; (mmaunder). Fast for agent loops but generates a &amp;ldquo;fog of code&amp;rdquo; where developers struggle to understand what was generated (sottol).&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;o3/o3-pro:&lt;/strong&gt; &amp;ldquo;o3 for thinking, Claude for doing&amp;rdquo; &amp;ndash; the dominant practitioner workflow. One-shots problems other models fail on, but 10-15 minute response times make interactive use impractical.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;claude-family-anthropic&#34;&gt;Claude Family (Anthropic)&lt;/h2&gt;&#xA;&lt;p&gt;The defining split in the Claude family is philosophical: &lt;strong&gt;Opus 4.5 is a guided pair programmer&lt;/strong&gt;; &lt;strong&gt;Opus 4.6 is an autonomous agent&lt;/strong&gt;. This isn&amp;rsquo;t just marketing &amp;ndash; practitioners experience them as fundamentally different tools. One developer chose Opus 4.5 specifically because it aligns with their personal thinking style, contrasting it with Gemini 3&amp;rsquo;s habit of bleeding reasoning into code comments and GPT-5.2&amp;rsquo;s rigid, convention-bound style (jorl17, Dec 2025). That alignment &amp;ndash; the model &lt;em&gt;feeling&lt;/em&gt; like it thinks the way you do &amp;ndash; drives Claude loyalty more than benchmarks.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Case Study: Hashimoto&#39;s AI Adoption Journey</title>
       <link>/evidence/hashimoto-journey.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
@@ -98,20 +154,6 @@
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/guide/getting-started.html</guid>
       <description>&lt;p&gt;You have read about the &lt;a href=&#34;core-loop.html&#34;&gt;core loop&lt;/a&gt;. Now it is time to put it into practice. This page covers the concrete steps for your first week with AI coding tools &amp;ndash; which tool to pick, what to try first, which mistakes to avoid, and what &amp;ldquo;working&amp;rdquo; actually looks like.&lt;/p&gt;&#xA;&lt;p&gt;The goal is not mastery. The goal is calibration: developing an accurate sense of what AI agents handle well and where they fall apart. That calibration is the foundation everything else builds on, and there is no shortcut to it except doing real work.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Harness Engineering</title>
-      <link>/practices/harness-engineering.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/practices/harness-engineering.html</guid>
-      <description>&lt;p&gt;Harness engineering is the practice of building persistent infrastructure that constrains and guides AI agents across sessions. It is the highest-leverage investment in AI-assisted development because it compounds: every mistake you document is a mistake that never recurs, every custom tool you build saves time in every future session, and every test harness you configure raises the floor on output quality.&lt;/p&gt;&#xA;&lt;p&gt;The harness is the answer to the fundamental limitation of current AI agents: they are stateless. Each session starts fresh with no memory of corrections, preferences, or past failures. The harness is the only mechanism that carries knowledge forward.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Model Deep Dive</title>
-      <link>/tools/models.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tools/models.html</guid>
-      <description>&lt;p&gt;The &lt;a href=&#34;./practices/model-selection.html&#34;&gt;model selection&lt;/a&gt; practice page covers the principles. This page is the complement &amp;ndash; what each model actually feels like to use, based on 800+ practitioner reports gathered from Hacker News discussions and targeted Algolia searches. Specs and pricing live in the &lt;a href=&#34;#compact-reference&#34;&gt;compact reference&lt;/a&gt; at the bottom.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-practitioners-describe-these-models&#34;&gt;How Practitioners Describe These Models&lt;/h2&gt;&#xA;&lt;p&gt;Before the deep dives, the metaphors practitioners reach for:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Claude Code (Opus):&lt;/strong&gt; &amp;ldquo;A shitty, but very fast and very knowledgeable junior developer&amp;rdquo; requiring constant supervision (msikora). Required over a month to reach baseline productivity.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Codex CLI (GPT-5.2):&lt;/strong&gt; &amp;ldquo;Felt like working with a peer&amp;rdquo; for the first time in 20+ years of development (dudeinhawaii). Also: &amp;ldquo;an outsourced consultant who refuses to say I can&amp;rsquo;t do that&amp;rdquo; (theshrike79).&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;GPT-5.2:&lt;/strong&gt; &amp;ldquo;Rude and cold&amp;rdquo; but strict instruction-following (jorl17). Hallucinating CLI utilities and non-existent features is a recurring pattern (heavyset_go).&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Gemini 3:&lt;/strong&gt; &amp;ldquo;Biased toward action and uncontrollable&amp;rdquo; (mmaunder). Fast for agent loops but generates a &amp;ldquo;fog of code&amp;rdquo; where developers struggle to understand what was generated (sottol).&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;o3/o3-pro:&lt;/strong&gt; &amp;ldquo;o3 for thinking, Claude for doing&amp;rdquo; &amp;ndash; the dominant practitioner workflow. One-shots problems other models fail on, but 10-15 minute response times make interactive use impractical.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;claude-family-anthropic&#34;&gt;Claude Family (Anthropic)&lt;/h2&gt;&#xA;&lt;p&gt;The defining split in the Claude family is philosophical: &lt;strong&gt;Opus 4.5 is a guided pair programmer&lt;/strong&gt;; &lt;strong&gt;Opus 4.6 is an autonomous agent&lt;/strong&gt;. This isn&amp;rsquo;t just marketing &amp;ndash; practitioners experience them as fundamentally different tools. One developer chose Opus 4.5 specifically because it aligns with their personal thinking style, contrasting it with Gemini 3&amp;rsquo;s habit of bleeding reasoning into code comments and GPT-5.2&amp;rsquo;s rigid, convention-bound style (jorl17, Dec 2025). That alignment &amp;ndash; the model &lt;em&gt;feeling&lt;/em&gt; like it thinks the way you do &amp;ndash; drives Claude loyalty more than benchmarks.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Adoption Curve</title>
@@ -233,18 +275,18 @@
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Burke Holland wrote an enthusiastic account of his experience using Claude&amp;rsquo;s Opus 4.5 model, arguing it represents a fundamental shift in AI agent capabilities that goes beyond anything he had previously experienced. His central claim is that Opus 4.5 delivers on promises that earlier AI coding agents could not fulfill, particularly around autonomous problem-solving and first-attempt success rates.&lt;/p&gt;&#xA;&lt;p&gt;Holland completed four substantial projects in rapid succession: an image conversion utility, a video editor, a social media automation app, and a route optimization tool. He highlighted the model&amp;rsquo;s ability to handle full-stack development spanning frontend, backend, authentication, database integration, and cloud infrastructure &amp;ndash; areas that had traditionally been weak points for AI agents.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Engineering vs. Programming: Is This &#39;Real&#39; Development?</title>
+      <link>/debates/engineering-vs-programming.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/debates/engineering-vs-programming.html</guid>
+      <description>&lt;h2 id=&#34;the-question&#34;&gt;The Question&lt;/h2&gt;&#xA;&lt;p&gt;Something uncomfortable is happening to the developer identity. Tools that were supposed to make programming more productive are instead making some developers feel like they&amp;rsquo;re not programming at all. When your day consists of writing prompts, reviewing AI output, and shepherding agents through tasks, the question becomes unavoidable: is this still engineering?&lt;/p&gt;&#xA;&lt;p&gt;The tension runs deep because it touches on why people entered the field. Some developers are in it to build things &amp;ndash; shipping products, solving user problems, creating value. For them, AI is a superpower that eliminates the tedious translation between intent and implementation. Others are in it because they love the craft of programming itself &amp;ndash; the elegance of a well-structured algorithm, the satisfaction of making something work through direct understanding. For them, AI threatens the very activity that makes the work meaningful.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Builders</title>
       <link>/voices/builders.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/voices/builders.html</guid>
       <description>&lt;p&gt;These are the people building the coding agents, harnesses, and infrastructure that everyone else uses. Their perspective is shaped by implementation reality: what actually works at scale, what breaks in production, and what the architecture looks like from the inside.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;the-moat-analyst&#34;&gt;The moat analyst&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;tptacek&lt;/strong&gt; argues that there is no such thing as a frontier agent. While frontier models require massive resources to train, any proficient developer could build a competitive coding agent. The moat, if it exists, is in the engineering of the harness &amp;ndash; not in model access. This reframes the competitive landscape: agents are democratizable in a way that models are not.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Engineering vs. Programming: Is This &#39;Real&#39; Development?</title>
-      <link>/debates/engineering-vs-programming.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/debates/engineering-vs-programming.html</guid>
-      <description>&lt;h2 id=&#34;the-question&#34;&gt;The Question&lt;/h2&gt;&#xA;&lt;p&gt;Something uncomfortable is happening to the developer identity. Tools that were supposed to make programming more productive are instead making some developers feel like they&amp;rsquo;re not programming at all. When your day consists of writing prompts, reviewing AI output, and shepherding agents through tasks, the question becomes unavoidable: is this still engineering?&lt;/p&gt;&#xA;&lt;p&gt;The tension runs deep because it touches on why people entered the field. Some developers are in it to build things &amp;ndash; shipping products, solving user problems, creating value. For them, AI is a superpower that eliminates the tedious translation between intent and implementation. Others are in it because they love the craft of programming itself &amp;ndash; the elegance of a well-structured algorithm, the satisfaction of making something work through direct understanding. For them, AI threatens the very activity that makes the work meaningful.&lt;/p&gt;</description>
     </item>
     <item>
       <title>GitHub Copilot</title>
@@ -345,6 +387,13 @@
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;The Agentic AI Handbook provides a comprehensive taxonomy of production-ready patterns for building agentic AI systems. Its core definition frames an agent as an LLM wrapped in a loop that can observe state, call tools, record results, and decide when it is done. The handbook organizes patterns into eight categories covering orchestration and control, tool use, context and memory, feedback loops, UX and collaboration, reliability and evaluation, learning and adaptation, and security and safety.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Multi-Agent Patterns</title>
+      <link>/practices/multi-agent.html</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/practices/multi-agent.html</guid>
+      <description>&lt;p&gt;Multi-agent patterns involve running multiple AI agents simultaneously on related tasks. They represent the highest-throughput mode of AI-assisted development &amp;ndash; and the most complex. When they work, months of work happen in minutes. When they fail, you get merge conflicts, duplicated effort, and code that no single agent (or human) fully understands.&lt;/p&gt;&#xA;&lt;p&gt;The practice is still emerging. There is no consensus on when multi-agent is worth the overhead versus well-scoped single-agent work. But practitioners are converging on principles that separate productive multi-agent usage from expensive chaos.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Gemini CLI</title>
       <link>/tools/gemini-cli.html</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
@@ -357,13 +406,6 @@
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/debates/open-source-impact.html</guid>
       <description>&lt;h2 id=&#34;the-question&#34;&gt;The Question&lt;/h2&gt;&#xA;&lt;p&gt;Open source software has been the bedrock of modern computing for decades. Linux runs the cloud, Apache and Nginx serve the web, React and Vue power the frontend, and tens of thousands of libraries form the invisible infrastructure of every application we use. The people who built and maintained this commons did so for a complex mix of reasons: personal satisfaction, reputation building, community belonging, and the belief that shared code makes everyone better off.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Multi-Agent Patterns</title>
-      <link>/practices/multi-agent.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/practices/multi-agent.html</guid>
-      <description>&lt;p&gt;Multi-agent patterns involve running multiple AI agents simultaneously on related tasks. They represent the highest-throughput mode of AI-assisted development &amp;ndash; and the most complex. When they work, months of work happen in minutes. When they fail, you get merge conflicts, duplicated effort, and code that no single agent (or human) fully understands.&lt;/p&gt;&#xA;&lt;p&gt;The practice is still emerging. There is no consensus on when multi-agent is worth the overhead versus well-scoped single-agent work. But practitioners are converging on principles that separate productive multi-agent usage from expensive chaos.&lt;/p&gt;</description>
     </item>
     <item>
       <title>OpenAI Codex</title>

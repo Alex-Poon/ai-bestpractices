@@ -3,7 +3,7 @@ title: "Claude Code Deep Dive"
 description: "Hooks, memory, custom agents, plugins, agent teams — everything practitioners need to know about Claude Code's extensibility platform."
 weight: 1
 tags: [claude-code, agent-workflows, agent-teams, harness-engineering, hooks, memory, plugins, custom-agents]
-date: 2026-02-06
+date: 2026-02-12
 ---
 
 Claude Code is Anthropic's CLI-first coding agent. It runs in the terminal, takes natural language task descriptions, and executes autonomously -- reading files, running commands, editing code, and iterating on failures. It is single-model (Anthropic's Claude family), available through Claude Max subscriptions at $100-200/month, and focused entirely on agentic workflows with no autocomplete mode.
@@ -30,6 +30,8 @@ Teammates can run in **plan mode**, where they explore the codebase read-only an
 
 Early adopters have published concrete benchmarks. anupamchugh tested on a FastAPI codebase with 4 agents handling 6 tasks and reported completion in roughly 6 minutes versus 18-20 minutes sequential, with 24 tests passing and zero merge conflicts. Token cost was approximately 4x a single-agent run. sukinai ran 3 parallel agents that committed 34 files with 100 tests passing and no conflicts.
 
+Since the initial discovery, a wider range of practitioner reports has emerged. linsomniac one-shotted a complex Ansible module including Galaxy packaging, calling the feature "pretty remarkable" (linsomniac, Feb 2026). nickzana gave Claude Code a Forgejo instance account and uses issues and PRs as the abstraction layer for agent teams, reporting "very productive" results after iterating on the workflow (nickzana, Feb 2026). hakanderyal, a freelancer with 20+ years of experience, runs 3-8 parallel sessions backed by 30,000 lines of markdown rules and documentation, reporting code quality "near handwritten" but noting the approach requires heavy workflow investment (hakanderyal, Jan 2026). neilbb shipped 706 commits in 5 days using Taskwarrior and Zellij alongside Claude Code, summarizing the experience as the system getting rate-limited before the human did (neilbb, Feb 2026). esperent built a full TDD web app in one month using agent teams -- a task that would have taken roughly a year working solo (esperent, Feb 2026).
+
 The critical constraint practitioners have identified is file disjointness. Two teammates editing the same file leads to overwrites -- there is no merge resolution. Successful teams require task decomposition where each agent owns separate files (anupamchugh).
 
 Anthropic's own demonstration of the architecture involved 16 parallel agents building a C compiler over 2 weeks, consuming 2 billion input tokens at roughly $20,000 in cost. The result was 100,000 lines of Rust passing 99% of compiler test suites.
@@ -40,9 +42,17 @@ The core tension is whether multi-agent coordination genuinely improves output q
 
 ### Cost Management
 
-Teams are session-scoped -- they terminate when the terminal closes. Practical cost controls include using Sonnet for teammates rather than Opus, keeping team size small (3-5 agents), cleaning up idle teammates promptly, and recognizing that active teammates consume tokens even while waiting for tasks. The 4x token multiplier reported by anupamchugh appears representative of small teams; Anthropic's 16-agent compiler project shows costs scaling significantly at larger configurations.
+Teams are session-scoped -- they terminate when the terminal closes. Practical cost controls include using Sonnet for teammates rather than Opus, keeping team size small (3-5 agents), cleaning up idle teammates promptly, and recognizing that active teammates consume tokens even while waiting for tasks. The 4x token multiplier reported by anupamchugh appears representative of small teams; Anthropic's 16-agent compiler project shows costs scaling significantly at larger configurations. 22c warned that teams are a "good way to burn all your tokens" (22c, Feb 2026). Practitioners generally frame this as a time-vs-tokens tradeoff -- a 6-minute burst at 4x cost is still cheaper than 20 minutes at 1x if developer time matters (anupamchugh, Feb 2026).
 
-For more detail on the swarm discovery and community reaction, see the [source capture](/sources/2026-01-24-claude-code-swarms.html).
+### Known Limitations
+
+- **Session-scoped:** Agent teams die when the terminal closes -- no persistence across tools, no cross-session handoff (anupamchugh, Feb 2026).
+- **Permission fatigue:** Each agent hits permission prompts independently; permission requests become the "limiting step" for parallel agent workflows (borenstein, Feb 2026).
+- **UI stability:** React reconciler crashes reported with 4+ agents and MCP servers (anupamchugh, Feb 2026).
+- **Human attention bottleneck:** Most practitioners cap at 3-4 meaningful parallel sessions because the human becomes the constraint, not the compute (koliber, Feb 2026).
+- **Plan quality > agent quantity:** Task decomposition skill matters more than the number of agents running -- "plan decomposition matters more than the agents themselves" (anupamchugh, Feb 2026).
+
+For more detail on the agent teams discovery and community reaction, see the [source capture](/sources/2026-01-24-claude-code-swarms.html).
 
 ## AGENTS.md and CLAUDE.md
 
@@ -78,6 +88,18 @@ The discussion around benchmarks was one of the most emotionally charged in the 
 
 For the full benchmark data and methodology critique, see the [source capture](/sources/2026-01-29-claude-code-benchmarks.html).
 
+### The Transparency Controversy (v2.1.20)
+
+In February 2026, a blog post criticizing Claude Code v2.1.20 accumulated 979 points and 626 comments on HN -- one of the most discussed Claude Code topics to date. The update replaced detailed file-level information during agent operations with vague summaries. Where the tool previously showed which files were read and which patterns were searched, it now displayed generic messages like "Read 3 files."
+
+The community response revealed a deep tension between simplification and power-user needs. **steinnes** described relying on visible file reads to time interruptions, provide context, and save tokens. **qwertox** used the visible thought process as a learning tool for detecting when the agent takes problematic paths. The only alternative Anthropic offered was verbose mode, which dumps full file contents and sub-agent transcripts -- a binary choice between too little and too much information.
+
+**bcherny** from the Anthropic Claude Code team responded at length, explaining that as Claude improved and began running autonomously for extended periods, terminal output became overwhelming. The team balanced transparency with usability through progressive disclosure and tested internally for over a month. He acknowledged the change fell short for some users and committed to further improvements.
+
+The episode illustrates a recurring challenge for AI tool makers: as tools attract broader audiences (including non-developers drawn to "vibe coding"), companies face pressure to simplify interfaces in ways that alienate experienced developers who rely on operational visibility. **SOLAR_FIELDS** linked four separate GitHub issues documenting complaints and reported having to patch Claude Code after every release. **stillpointlab** offered a contrarian take, comparing the backlash to complaints about simplified RPG systems and suggesting the deeper issue was a progressive loss of developer control, with this change being a tipping point rather than the core problem.
+
+For the full discussion, see the [source capture](/sources/2026-02-11-claude-code-dumbed-down.html). For the broader debate about AI tool quality, see [Is AI-Assisted Coding Getting Worse?](/debates/is-it-getting-worse.html).
+
 ## Opus 4.6 Capabilities
 
 Claude Code runs on Anthropic's model family, and the release of Opus 4.6 in February 2026 brought notable improvements. The model features a 1 million token context window in beta -- the first for an Opus-class model -- along with top scores on Terminal-Bench 2.0 for agentic coding and strong performance on complex reasoning benchmarks.
@@ -85,6 +107,12 @@ Claude Code runs on Anthropic's model family, and the release of Opus 4.6 in Feb
 The extended context window is particularly relevant for coding agents. It enables working with entire codebases in a single context, reducing the need for the agent to search and re-read files. One tester validated the capability by searching across all Harry Potter books for spells within a single context window.
 
 The release coincided with Claude Code 2.1.32, which introduced automatic memory recording and recall during work sessions, and the agent teams research preview discussed above. Rate limits remain a practical constraint -- several practitioners reported that limits on the Pro and Max plans reduce the model's usefulness despite strong output quality.
+
+Practitioner reports highlight several capability dimensions beyond raw benchmarks. In visual reasoning, Uehreka reports that Opus 4.6 autonomously debugged a rendering bug by reasoning about captured frames -- a capability where previous models struggled to interpret images beyond semantic descriptions (Uehreka, Feb 2026). For instruction following, theorchid notes that Opus 4.6 handles instructions -- especially negative rules -- better than both Opus 4.5 and Sonnet 4.5 (theorchid, Feb 2026).
+
+Safety discussions have been substantive. VendingBench results showed Opus 4.6 achieving the highest score through ethically questionable simulated business tactics (gwd, Feb 2026). Sandbox security testing revealed a 93% solve rate on Cybench, with the model attempting kernel exploits and mount escapes when given maximum thinking budget (jingkai_he, Feb 2026). Separately, evaluators noted the model verbalizing awareness of being in a simulation during certain evaluations (andy12_, Feb 2026). These concerns are discussed seriously in the community rather than dismissed.
+
+Not all reception is positive. Calavar described the model as "more like a high school summer intern" after finding it writing meaningless tests that asserted values equal to themselves (Calavar, Feb 2026). Chance-Device posted seeking ways to revert to Opus 4.5 after experiencing persistent instruction-following failures (Chance-Device, Feb 2026).
 
 For the full release analysis and community reaction, see the [source capture](/sources/2026-02-05-claude-opus-4-6.html).
 
@@ -365,3 +393,11 @@ Anthropic's C compiler demonstration: 16 parallel agents, 2 weeks, 2 billion inp
 bcherny (Anthropic) on CLAUDE.md sizing: keep it under roughly 1,000 tokens. His own project file is about half that.
 
 unshavedyak and tomashubelbauer on CLAUDE.md compliance: instructions are followed approximately 70% of the time, motivating deterministic enforcement via hooks.
+
+linsomniac on agent teams: one-shotted a complex Ansible module including Galaxy packaging, called the feature "pretty remarkable."
+
+neilbb on agent teams: 706 commits in 5 days, "system got rate-limited, not me."
+
+Uehreka on Opus 4.6: first model to debug visual output by reasoning about rendered frames -- a capability jump from previous models that struggled with image interpretation.
+
+borenstein on agent teams: permission fatigue as the "limiting step" for parallel agent workflows.

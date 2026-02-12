@@ -6,12 +6,12 @@
     <description>Recent content in Mistral on AI Best Practices Knowledge Base</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/mistral/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Model Releases in 2026</title>
       <link>/landscape/model-releases-2026.html</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
       <guid>/landscape/model-releases-2026.html</guid>
       <description>&lt;p&gt;The first weeks of 2026 have seen an extraordinary density of model releases. The pace itself is informative: frontier model competition has intensified to the point where simultaneous launches are the norm rather than the exception. Here is what has shipped and what it means for practitioners.&lt;/p&gt;&#xA;&lt;h2 id=&#34;claude-opus-46-february-2026&#34;&gt;Claude Opus 4.6 (February 2026)&lt;/h2&gt;&#xA;&lt;p&gt;Anthropic&amp;rsquo;s latest flagship arrived with a 1M-token context window in beta &amp;mdash; the first at the Opus tier. Benchmark results placed it at the top of Terminal-Bench 2.0 for agentic coding and Humanity&amp;rsquo;s Last Exam for complex reasoning.&lt;/p&gt;</description>
     </item>

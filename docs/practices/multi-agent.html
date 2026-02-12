@@ -3,12 +3,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Multi-Agent Patterns | AI Best Practices Knowledge Base</title>
-  <meta name="description" content="Running parallel agents, swarms, and team-based workflows — when it works and when it doesn&#39;t.">
+  <meta name="description" content="Running parallel agents, agent teams, and team-based workflows — when it works and when it doesn&#39;t.">
   <meta name="color-scheme" content="dark light">
 
   
   <meta property="og:title" content="Multi-Agent Patterns">
-  <meta property="og:description" content="Running parallel agents, swarms, and team-based workflows — when it works and when it doesn&#39;t.">
+  <meta property="og:description" content="Running parallel agents, agent teams, and team-based workflows — when it works and when it doesn&#39;t.">
   <meta property="og:type" content="article">
 
   
@@ -106,14 +106,14 @@
         <h1 class="article-title">Multi-Agent Patterns</h1>
         <div class="meta-bar">
   
-  <time class="meta-date" datetime="2026-02-06">
-    February 6, 2026
+  <time class="meta-date" datetime="2026-02-12">
+    February 12, 2026
   </time>
   
 
   
 
-  <span class="meta-reading-time">10 min read</span>
+  <span class="meta-reading-time">12 min read</span>
 
   
 
@@ -145,7 +145,7 @@
   
   
   
-  <a href="../tags/swarms.html" class="tag-pill">swarms</a>
+  <a href="../tags/agent-teams.html" class="tag-pill">agent-teams</a>
   
   
   
@@ -230,10 +230,18 @@
 <li>Assign independent tasks to separate agents.</li>
 </ol>
 <p>Nicholas Carlini&rsquo;s compiler project demonstrated this: when a single monolithic failure appeared (compiling the Linux kernel), all 16 agents independently discovered the same bug. The solution was using GCC as an oracle to binary-search for the specific compilation unit causing the failure, converting one opaque problem into many scoped tasks.</p>
+<h3 id="pattern-6-enterprise-autonomous-agents">Pattern 6: Enterprise Autonomous Agents</h3>
+<p>At the far end of the multi-agent spectrum, Stripe&rsquo;s Minions system demonstrates what enterprise-scale autonomous agents look like when backed by sufficient infrastructure. Over a thousand pull requests per week are entirely produced by agents with no human-written code, though every PR undergoes human review before merging. Engineers trigger minion runs from Slack, CLI, web interfaces, or internal tools, and the system produces a reviewed PR with no interaction in between.</p>
+<p>The architecture was purpose-built because off-the-shelf agents could not handle Stripe&rsquo;s constraints: hundreds of millions of lines of code, proprietary libraries unknown to any pretrained model, and the operational stakes of processing over a trillion dollars annually. Each agent gets an isolated developer environment with the full codebase pre-loaded, accesses 400+ internal tools via MCP, and operates within a layered feedback loop of linting, selective CI, and automated fixes.</p>
+<p>Engineers frequently run multiple minion tasks in parallel, finding the system especially valuable during on-call rotations for resolving many small issues quickly. This maps to Pattern 1 (independent parallel tasks) but with enterprise-grade infrastructure handling the coordination that individual practitioners manage manually.</p>
+<p>The pattern validates two principles: first, that autonomous agents can be production-viable at scale when the harness is strong enough (see <a href="../harness-engineering.html">harness engineering</a>). Second, that human review remains the hard bottleneck even at enterprise scale &ndash; Stripe kept humans in the review loop despite the agent handling everything else end-to-end.</p>
 <h2 id="the-coordination-tax">The Coordination Tax</h2>
 <p>Multi-agent patterns come with overhead that single-agent work avoids. The coordination tax must be lower than the parallelism benefit, or multi-agent is net negative.</p>
 <h3 id="merge-conflicts">Merge conflicts</h3>
 <p><strong>nulone</strong> identified merge cost as the killer of multi-agent approaches. When agents modify the same files, resolving conflicts is expensive and error-prone. The solution: design task boundaries around file ownership, not logical decomposition.</p>
+<h3 id="mental-model-desynchronization">Mental model desynchronization</h3>
+<p>The &ldquo;beyond agentic coding&rdquo; critique highlights a coordination cost specific to autonomous agents: developers lose track of what their codebase actually contains. With a single agent, this is manageable &ndash; you review one stream of changes. With multiple agents operating concurrently, desynchronization compounds. As <strong>matheus-rr</strong> observed, with agent-generated code &ldquo;you get a diff with no context for why it went that direction.&rdquo; Multiply that across several agents and the review burden grows non-linearly.</p>
+<p><strong>rubenflamshep</strong> described frequent disorientation when managing multiple Claude sessions, finding it easier to work across two different projects than two features in one project. This suggests that the cognitive overhead of multi-agent is not just about code conflicts but about maintaining a mental model across concurrent streams of autonomous change.</p>
 <h3 id="the-review-bottleneck">The review bottleneck</h3>
 <p><strong>czhu12</strong> noted that when Claude generates copious code across many agents, it becomes much harder to review than small snippets one at a time. <strong>zmmmmm</strong> formalized this: &ldquo;We can only produce code as fast as responsibility-takers can execute due diligence.&rdquo; Human review capacity is the hard ceiling on multi-agent throughput.</p>
 <h3 id="orchestration-overhead">Orchestration overhead</h3>
@@ -281,6 +289,9 @@
 <p><strong>zmmmmm</strong> (HN, thread 46748947): We can only produce code as fast as responsibility-takers can execute due diligence. Review caps output at human review rates.</p>
 <p><strong>asimeqi</strong> (HN, thread 46761700): Can barely keep up with one instance of Claude Code. Asks what people are programming that needs 10 agents.</p>
 <p><strong>baby</strong> (HN, thread 46752104): Always delegates self-contained tasks to subagents. Coordination via dependency graph. Better results because of clean context windows.</p>
+<p><strong>Stripe Minions</strong> (Stripe blog, 2026-02-10): Over 1,000 PRs per week from autonomous agents, zero human-written code, full human review. 400+ MCP tools, isolated devboxes, layered CI feedback. Enterprise-scale autonomous multi-agent validated by trillion-dollar operational stakes.</p>
+<p><strong>matheus-rr</strong> (HN, thread 46930565): Agent-generated diffs lack context for why they went in a particular direction, making review harder. A coordination cost that scales with number of agents.</p>
+<p><strong>rubenflamshep</strong> (HN, thread 46930565): Describes disorientation when managing multiple Claude sessions. Easier to work across two different projects than two features in one project.</p>
 
       </div>
 
@@ -318,11 +329,13 @@
         <li><a href="#pattern-3-domain-specialized-teams">Pattern 3: Domain-Specialized Teams</a></li>
         <li><a href="#pattern-4-generator-reviewer-pipeline">Pattern 4: Generator-Reviewer Pipeline</a></li>
         <li><a href="#pattern-5-oracle-based-decomposition">Pattern 5: Oracle-Based Decomposition</a></li>
+        <li><a href="#pattern-6-enterprise-autonomous-agents">Pattern 6: Enterprise Autonomous Agents</a></li>
       </ul>
     </li>
     <li><a href="#the-coordination-tax">The Coordination Tax</a>
       <ul>
         <li><a href="#merge-conflicts">Merge conflicts</a></li>
+        <li><a href="#mental-model-desynchronization">Mental model desynchronization</a></li>
         <li><a href="#the-review-bottleneck">The review bottleneck</a></li>
         <li><a href="#orchestration-overhead">Orchestration overhead</a></li>
         <li><a href="#diminishing-returns-at-scale">Diminishing returns at scale</a></li>
@@ -375,7 +388,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Synthesized from 32 HN discussions and 6,000+ practitioner comments. 78 pages across 203 topics.</p>
+      <p>Built with Hugo. Synthesized from 38 HN discussions and 6,000+ practitioner comments. 84 pages across 205 topics.</p>
     </div>
   </div>
 </footer>

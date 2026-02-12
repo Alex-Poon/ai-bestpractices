@@ -3,7 +3,7 @@ title: "Model Releases in 2026"
 description: "Claude 4.6, Gemini 3, DeepSeek, Llama 4, Mistral 3 — the rapidly evolving model landscape."
 weight: 1
 tags: [model-releases, claude-code, gemini, llama, mistral, deepseek]
-date: 2026-02-06
+date: 2026-02-12
 ---
 
 The first weeks of 2026 have seen an extraordinary density of model releases. The pace itself is informative: frontier model competition has intensified to the point where simultaneous launches are the norm rather than the exception. Here is what has shipped and what it means for practitioners.
@@ -57,6 +57,16 @@ Mistral released a new generation of open-source multimodal models under Apache 
 The 3B model is notable for running in a web browser via WebGPU --- a 3GB download that requires no server infrastructure. **barrell** on HN praised Mistral models in production as more reliable and cost-effective than GPT-5 for formatting tasks. The release was technically significant but overshadowed by DeepSeek 3.2 launching the same day.
 
 Mistral Large 3 uses a DeepSeek V2-style architecture, which some commenters noted Mistral did not prominently acknowledge. The European AI company's return to Apache 2.0 licensing was welcomed after a period of more restrictive releases. ([Source](/sources/2025-12-02-mistral-3-models.html))
+
+## GLM-5: Chinese Open-Weight Agentic Model (February 2026)
+
+Zhipu AI (Z.ai) released GLM-5, a 744 billion parameter mixture-of-experts model (40B active) under MIT license. The model is notable for being the first major Chinese open-weight release to explicitly target agentic engineering -- complex, multi-stage systems tasks requiring autonomous planning and sustained context coherence across extended workflows.
+
+GLM-5 scaled up from GLM-4.7 with pre-training expanded to 28.5 trillion tokens. On agentic benchmarks it claims the top position among open-source models and approaches the performance of proprietary frontier models. Alongside the model, Z.ai released SLIME, an open-source asynchronous reinforcement learning training framework that addresses the rollout generation bottleneck consuming over 90% of RL training time.
+
+The release continues the trajectory established by DeepSeek: Chinese labs competing through efficiency innovation and open licensing rather than raw compute advantage. **NiloCK** observed that user preferences are approaching saturation -- even models that are one or two generations behind the frontier are beginning to feel adequate for many workflows. **Aurornis** expressed benchmark skepticism, noting GLM-5 compares against previous-generation models rather than current competitors. Early practitioner testing showed mixed results: capable for focused coding tasks at competitive pricing, but tool-calling reliability remains a gap compared to proprietary alternatives.
+
+The model is available through OpenRouter, Ollama, and Hugging Face -- making it immediately accessible for both API and self-hosted use. ([Source](/sources/2026-02-11-glm5-agentic-engineering.html))
 
 ## What the Release Pace Means for Practitioners
 

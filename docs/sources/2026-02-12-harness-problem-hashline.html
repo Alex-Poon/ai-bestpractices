@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>I Improved 15 LLMs at Coding in One Afternoon. Only the Harness Changed. | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="I Improved 15 LLMs at Coding in One Afternoon. Only the Harness Changed.">
+  <meta property="og:description" content="What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-sources"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="../index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="guide" href="../guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="../practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="../debates/index.html">Debates</a>
+      <a class="nav-link" data-section="tools" href="../tools/index.html">Tools</a>
+      <a class="nav-link" data-section="evidence" href="../evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="../voices/index.html">Voices</a>
+      <a class="nav-link" data-section="sources" href="../sources/index.html">Sources</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../index.html">Home</a></li>
+    
+      
+    
+      
+        <li><a href="../sources/index.html">Sources</a></li>
+      
+    
+    <li aria-current="page">I Improved 15 LLMs at Coding in One Afternoon. Only the Harness Changed.</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">I Improved 15 LLMs at Coding in One Afternoon. Only the Harness Changed.</h1>
+        <div class="meta-bar">
+  
+  <time class="meta-date" datetime="2026-02-12">
+    February 12, 2026
+  </time>
+  
+
+  
+
+  <span class="meta-reading-time">3 min read</span>
+
+  
+  <span class="tier-badge tier-badge--1">Tier 1</span>
+  
+
+  <div class="meta-links">
+    
+    <a href="https://blog.can.ac/2026/02/12/the-harness-problem/" class="meta-link" target="_blank" rel="noopener">Source &#8599;</a>
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+        
+<div class="tag-pills">
+  
+  
+  
+  <a href="../tags/harness-engineering.html" class="tag-pill">harness-engineering</a>
+  
+  
+  
+  
+  <a href="../tags/edit-formats.html" class="tag-pill">edit-formats</a>
+  
+  
+  
+  
+  <a href="../tags/benchmarks.html" class="tag-pill">benchmarks</a>
+  
+  
+  
+  
+  <a href="../tags/code-quality.html" class="tag-pill">code-quality</a>
+  
+  
+  
+  
+  <a href="../tags/tool-calling.html" class="tag-pill">tool-calling</a>
+  
+  
+  
+  
+  <a href="../tags/model-agnostic.html" class="tag-pill">model-agnostic</a>
+  
+  
+</div>
+
+
+      </header>
+
+      <div class="article-content">
+        <h2 id="summary">Summary</h2>
+<p>Can Boluk argues that the biggest bottleneck in LLM-assisted coding is not the model itself but the harness — the layer that translates a model&rsquo;s intent into actual file edits. Most current edit mechanisms force models to reproduce existing code verbatim in order to specify what they want to change, and this reproduction step is where things break down. Patch-based formats (used by OpenAI&rsquo;s Codex ecosystem) suffer catastrophic failure rates on non-Codex models, with some models failing nearly half their edit attempts. String replacement approaches (used by Claude Code and Gemini CLI) require exact character-for-character matching including whitespace, leading to frequent &ldquo;string not found&rdquo; errors. Cursor addressed this by training a dedicated 70B parameter model just to merge edits — an enormous investment that sidesteps rather than solves the underlying problem.</p>
+<p>Boluk&rsquo;s proposed solution is hashline, a tagging system where every line of code shown to the model gets annotated with a short 2-3 character content hash. Instead of reproducing lines of code, the model references these stable identifiers (e.g., &ldquo;replace line 22:f1 with&hellip;&rdquo;). If the underlying file changes between reads, the hash no longer matches, which prevents silent corruption. This approach separates the task of understanding what to change from the mechanical task of reproducing existing text.</p>
+<p>The benchmarks are striking. Across 16 models tested on 180 React codebase mutation tasks (operator swaps, boolean flips, off-by-one errors), hashline dramatically improved performance for most models. Grok Code Fast 1 jumped from 6.7% to 68.3% — a tenfold improvement. MiniMax doubled its success rate. Grok 4 cut its output token usage by 61% while maintaining accuracy. Even strong performers like Gemini 3 Flash gained 5-14 percentage points.</p>
+<p>The article contextualizes these findings within the broader ecosystem. JetBrains&rsquo; Diff-XYZ benchmark found no single edit format dominates across all models. Aider&rsquo;s benchmarks showed format alone could swing GPT-4 Turbo from 26% to 59%. Yet vendors have no incentive to optimize harnesses for competitor models — only open-source approaches benefit the full ecosystem. Boluk frames this as the highest-leverage innovation opportunity in LLM coding, arguing that an 8% harness improvement delivers value equivalent to a major model upgrade at zero training cost.</p>
+<h2 id="key-insights">Key Insights</h2>
+<ul>
+<li><strong>The harness is the bottleneck, not the model.</strong> Most coding failures stem from the edit format layer — how models express changes — rather than from task comprehension. Fixing the interface yields gains across all models simultaneously.</li>
+<li><strong>Hashline decouples understanding from reproduction.</strong> By giving each line a short content hash, models reference what to change by tag rather than reproducing code verbatim, eliminating the most common class of edit failures.</li>
+<li><strong>No single edit format wins everywhere.</strong> Patch, string replacement, and hashline each have different failure profiles across models. Benchmarks from JetBrains, Aider, and this article all confirm format choice dramatically affects measured model quality.</li>
+<li><strong>Vendor lock-in distorts the landscape.</strong> Each vendor optimizes harnesses for their own models. Anthropic and Google have actively restricted third-party harness access, meaning open-source is the only path to format improvements that benefit all models.</li>
+<li><strong>Harness gains rival model upgrades.</strong> An 8% improvement from a better edit format delivers comparable value to expensive model training runs, making harness engineering the most cost-effective lever for improving AI coding tools.</li>
+</ul>
+<h2 id="notable-quotes">Notable Quotes</h2>
+<blockquote>
+<p>&ldquo;You&rsquo;re blaming the pilot for the landing gear.&rdquo; — Can Boluk, on attributing edit failures to model quality</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;The harness is the bridge. Burning bridges just means fewer people bother to cross.&rdquo; — Can Boluk</p>
+</blockquote>
+<h2 id="hn-discussion-highlights">HN Discussion Highlights</h2>
+<p>No HN discussion at time of capture.</p>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        <a href="../sources/2026-02-11-claude-code-dumbed-down.html" class="article-nav-link article-nav-link--prev">
+          <span class="article-nav-direction">Previous</span>
+          <span class="article-nav-title">Claude Code is being dumbed down?</span>
+        </a>
+        
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#key-insights">Key Insights</a></li>
+    <li><a href="#notable-quotes">Notable Quotes</a></li>
+    <li><a href="#hn-discussion-highlights">HN Discussion Highlights</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="../guide/index.html">Guide</a></li>
+          <li><a href="../practices/index.html">Practices</a></li>
+          <li><a href="../debates/index.html">Debates</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../tools/index.html">Tools</a></li>
+          <li><a href="../evidence/index.html">Evidence</a></li>
+          <li><a href="../voices/index.html">Voices</a></li>
+          <li><a href="../sources/index.html">Sources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Synthesized from 38 HN discussions and 6,000+ practitioner comments. 84 pages across 205 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+  </body>
+</html>
