@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Changelog | AI Best Practices Knowledge Base</title>
+  <meta name="description" content="What&#39;s new in the AI Best Practices Knowledge Base — a running log of source captures, content updates, and structural changes.">
+  <meta name="color-scheme" content="dark light">
+
+  
+  <meta property="og:title" content="Changelog">
+  <meta property="og:description" content="What&#39;s new in the AI Best Practices Knowledge Base — a running log of source captures, content updates, and structural changes.">
+  <meta property="og:type" content="article">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="./css/style.css">
+
+  
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+</head>
+<body class="section-home"><header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-logo" href="./index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="8" r="2" fill="currentColor"/>
+        <circle cx="7" cy="15" r="2" fill="currentColor"/>
+        <circle cx="17" cy="15" r="2" fill="currentColor"/>
+        <line x1="12" y1="10" x2="7" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="10" x2="17" y2="13" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>AI Best Practices</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" data-section="guide" href="./guide/index.html">Guide</a>
+      <a class="nav-link" data-section="practices" href="./practices/index.html">Practices</a>
+      <a class="nav-link" data-section="debates" href="./debates/index.html">Debates</a>
+      <a class="nav-link" data-section="tools" href="./tools/index.html">Tools</a>
+      <a class="nav-link" data-section="evidence" href="./evidence/index.html">Evidence</a>
+      <a class="nav-link" data-section="voices" href="./voices/index.html">Voices</a>
+      <a class="nav-link" data-section="sources" href="./sources/index.html">Sources</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn" type="button" aria-label="Search" id="searchTrigger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" type="button">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search articles, tools, patterns..." autocomplete="off">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-hint">
+          <span><kbd>Esc</kbd> close</span>
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+          <span><kbd>Enter</kbd> open</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+<div class="page-container">
+  
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="./index.html">Home</a></li>
+    
+      
+    
+    <li aria-current="page">Changelog</li>
+  </ol>
+</nav>
+
+
+
+  <div class="article-layout has-toc">
+    <article class="article">
+      <header class="article-header">
+        <h1 class="article-title">Changelog</h1>
+        <div class="meta-bar">
+  
+
+  
+
+  <span class="meta-reading-time">3 min read</span>
+
+  
+
+  <div class="meta-links">
+    
+    
+    
+    
+  </div>
+
+  
+  
+  
+  
+</div>
+
+        
+
+      </header>
+
+      <div class="article-content">
+        <p>A running record of updates to this knowledge base, from initial launch to the latest source captures.</p>
+<hr>
+<h2 id="february-12-2026">February 12, 2026</h2>
+<p><strong>6 new sources captured, 8 content pages updated (494 → 516 pages)</strong></p>
+<p>New source captures from the past week&rsquo;s HN discussions:</p>
+<ul>
+<li><strong><a href="./sources/2026-02-11-claude-code-dumbed-down.html">Claude Code is being dumbed down?</a></strong> (979 pts, 626 comments) — Community backlash over Claude Code v2.1.20 transparency reductions. Anthropic&rsquo;s bcherny responds. Extends the ongoing degradation debate.</li>
+<li><strong><a href="./sources/2026-02-11-glm5-agentic-engineering.html">GLM-5: Agentic Engineering</a></strong> (407 pts, 483 comments) — First major Chinese model targeting agentic coding. 744B MoE, MIT license, trained on Huawei chips. Introduces SLIME reinforcement learning framework.</li>
+<li><strong><a href="./sources/2026-02-07-coding-agents-replaced-frameworks.html">Coding agents have replaced every framework I used</a></strong> (372 pts, 594 comments) — Practitioner argument that agent-first workflows make traditional frameworks unnecessary. Huge debate in comments.</li>
+<li><strong><a href="./sources/2026-02-08-beyond-agentic-coding.html">Beyond agentic coding</a></strong> (266 pts, 90 comments) — Haskell perspective on limitations of current agentic patterns and what comes next. Raises mental model desynchronization problem.</li>
+<li><strong><a href="./sources/2026-02-12-harness-problem-hashline.html">The Harness Problem / hashline</a></strong> — Can Boluk demonstrates that changing only the edit format (not the model) dramatically improves coding performance across 16 LLMs. Grok Code Fast 1: 6.7% → 68.3%. Key validation of harness engineering thesis.</li>
+<li><strong><a href="./sources/2026-02-10-stripe-minions-agentic-coding.html">Stripe Minions</a></strong> — Stripe&rsquo;s autonomous coding agent system produces 1000+ PRs/week using a Goose fork with 400+ MCP tools and isolated devboxes.</li>
+</ul>
+<p>Content page updates:</p>
+<ul>
+<li><strong>practices/harness-engineering</strong> — Major expansion: new section on edit format as harness component (hashline data), enterprise-scale tool harnesses (Stripe)</li>
+<li><strong>practices/multi-agent</strong> — Enterprise autonomous agent pattern, mental model desynchronization</li>
+<li><strong>practices/task-scoping</strong> — How agents change task scope itself</li>
+<li><strong>debates/is-it-getting-worse</strong> — Claude Code v2.1.20 transparency controversy added</li>
+<li><strong>debates/engineering-vs-programming</strong> — Framework replacement thesis</li>
+<li><strong>tools/claude-code</strong> — Transparency controversy section</li>
+<li><strong>tools/models</strong> — GLM-5 entry</li>
+<li><strong>landscape/model-releases-2026</strong> — GLM-5 timeline entry</li>
+</ul>
+<hr>
+<h2 id="february-7-2026">February 7, 2026</h2>
+<p><strong>Claude Code ecosystem deep dive (494 pages)</strong></p>
+<p>Deep dive into the Claude Code ecosystem: hooks system, memory and auto-memory, Ralph Wiggum plugin, custom agents via <code>.claude/agents/</code>, and plugin architecture. Updated tools/claude-code with comprehensive coverage of the developer experience layer built on top of the core agent loop.</p>
+<hr>
+<h2 id="february-6-2026">February 6, 2026</h2>
+<p><strong>Major restructure: tools deep dive + models rewrite (351 → 494 pages)</strong></p>
+<ul>
+<li>Restructured site from topic-driven to claim-driven architecture</li>
+<li>Added 13 individual tool pages (Claude Code, Cursor, Amp, Copilot, Cline, Codex, Windsurf, Kiro, Aider, Gemini CLI, MCP ecosystem, models, comparison)</li>
+<li>Rewrote models page: experience-first organization with o-series coverage</li>
+<li>Granular model deep dive with variant-level profiles and reasoning configurations</li>
+<li>Added temporal context to model comparisons (which Claude version each HN report tested against)</li>
+<li>Homepage redesign with inline browse-more cards</li>
+<li>Fixed horizontal scroll wrapper for comparison tables</li>
+</ul>
+<p>Research conducted with 13-agent team for parallel tool/model investigation.</p>
+<hr>
+<h2 id="february-6-2026-1">February 6, 2026</h2>
+<p><strong>Complete rebuild: new architecture, dark-first design (32 HN sources → 351 pages)</strong></p>
+<p>Rebuilt the entire site from scratch with a new content architecture:</p>
+<ul>
+<li>7 content sections: guide, practices, debates, tools, landscape, evidence, voices</li>
+<li>32 HN source captures forming the evidence base</li>
+<li>Dark-first design with section-colored accents (blue, green, amber, rose, teal, purple)</li>
+<li>Client-side search via FlexSearch-style search-index.json</li>
+<li>Custom shortcodes: callout, debate-sides, voice-card, provenance</li>
+<li>Section-specific layouts: debates (Side A/B), voices (cards), guide (progress bar)</li>
+<li>Hugo with uglyURLs, relativeURLs, publishDir=docs</li>
+</ul>
+<hr>
+<h2 id="february-5-2026">February 5, 2026</h2>
+<p><strong>Initial launch</strong></p>
+<ul>
+<li>Initialized knowledge base repository</li>
+<li>First batch of source captures: AI adoption journey, Amp Code analysis</li>
+<li>Carlini parallel agents C compiler project (evidence piece)</li>
+<li>Migrated to Hugo static site structure</li>
+</ul>
+
+      </div>
+
+      
+
+      <nav class="article-nav">
+        
+        
+      </nav>
+    </article>
+
+    
+<aside class="toc-sidebar" aria-label="Table of Contents">
+  <div class="toc-container">
+    <h2 class="toc-title">On this page</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#february-12-2026">February 12, 2026</a></li>
+    <li><a href="#february-7-2026">February 7, 2026</a></li>
+    <li><a href="#february-6-2026">February 6, 2026</a></li>
+    <li><a href="#february-6-2026-1">February 6, 2026</a></li>
+    <li><a href="#february-5-2026">February 5, 2026</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+
+
+  </div>
+</div>
+
+    </main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="footer-logo">AI Best Practices</span>
+      <p class="footer-description">What actually works in AI-assisted development — synthesized from 6,000&#43; practitioner comments across 20 major HN discussions.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-section">
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="./guide/index.html">Guide</a></li>
+          <li><a href="./practices/index.html">Practices</a></li>
+          <li><a href="./debates/index.html">Debates</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="./tools/index.html">Tools</a></li>
+          <li><a href="./evidence/index.html">Evidence</a></li>
+          <li><a href="./voices/index.html">Voices</a></li>
+          <li><a href="./sources/index.html">Sources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with Hugo. Synthesized from 38 HN discussions and 6,000+ practitioner comments. 85 pages across 205 topics.</p>
+    </div>
+  </div>
+</footer>
+<script src="./js/main.js" defer></script>
+  </body>
+</html>
