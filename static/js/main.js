@@ -82,6 +82,7 @@
   var searchResults = document.getElementById('searchResults');
   var searchTrigger = document.getElementById('searchTrigger');
   var searchIndex = null;
+  var searchBase = '';
   var activeIdx = -1;
 
   function openSearch() {
@@ -104,12 +105,13 @@
     if (searchIndex) return;
     // Try loading from root-relative path, fallback for file:// protocol
     var indexUrl = (document.querySelector('link[rel="canonical"]') || {}).href;
-    var base = '';
-    var scripts = document.querySelectorAll('script[src*="main.js"]');
-    if (scripts.length) {
-      base = scripts[0].src.replace(/js\/main\.js.*$/, '');
+    if (!searchBase) {
+      var scripts = document.querySelectorAll('script[src*="main.js"]');
+      if (scripts.length) {
+        searchBase = scripts[0].src.replace(/js\/main\.js.*$/, '');
+      }
     }
-    var url = base + 'search-index.json';
+    var url = searchBase + 'search-index.json';
 
     fetch(url).then(function (r) { return r.json(); }).then(function (data) {
       searchIndex = data;
@@ -167,7 +169,8 @@
       var item = r.item;
       var desc = item.desc || '';
       if (desc.length > 120) desc = desc.slice(0, 120) + '...';
-      return '<a class="search-result" href="' + item.url + '" data-idx="' + i + '">' +
+      var resultUrl = searchBase ? searchBase + item.url.replace(/^\//, '') : item.url;
+      return '<a class="search-result" href="' + resultUrl + '" data-idx="' + i + '">' +
         '<div class="search-result-section">' + (item.section || '') + '</div>' +
         '<div class="search-result-title">' + escapeHtml(item.title) + '</div>' +
         (desc ? '<div class="search-result-excerpt">' + escapeHtml(desc) + '</div>' : '') +

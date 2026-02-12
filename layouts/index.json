@@ -1,4 +1,4 @@
 {{- $pages := where site.RegularPages "Kind" "page" -}}
 [{{ range $i, $p := $pages }}{{ if $i }},{{ end }}
-{"title":{{ $p.Title | jsonify }},"url":{{ $p.RelPermalink | jsonify }},"section":{{ ($p.Section | default "home") | jsonify }},"desc":{{ (default "" $p.Description) | truncate 200 | jsonify }},"content":{{ $p.Plain | truncate 400 | jsonify }},"tags":{{ (default (slice) $p.Params.tags) | jsonify }}}
+{"title":{{ $p.Title | jsonify }},"url":{{ $p.RelPermalink | relURL | jsonify }},"section":{{ ($p.Section | default "home") | jsonify }},"desc":{{ (default "" $p.Description) | truncate 200 | jsonify }},"content":{{ $p.Plain | truncate 400 | jsonify }},"tags":{{ (default (slice) $p.Params.tags) | jsonify }}}
 {{- end }}]
