@@ -20,11 +20,12 @@
           {{ with site.GetPage "/evidence" }}<li><a href="{{ .RelPermalink }}">Evidence</a></li>{{ end }}
           {{ with site.GetPage "/voices" }}<li><a href="{{ .RelPermalink }}">Voices</a></li>{{ end }}
           {{ with site.GetPage "/sources" }}<li><a href="{{ .RelPermalink }}">Sources</a></li>{{ end }}
+          {{ with site.GetPage "/changelog" }}<li><a href="{{ .RelPermalink }}">Changelog</a></li>{{ end }}
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Synthesized from {{ len (where site.RegularPages "Section" "sources") }} HN discussions and 6,000+ practitioner comments. {{ len site.RegularPages }} pages across {{ len site.Taxonomies.tags }} topics.</p>
+      <p>Built with Hugo. Synthesized from {{ len (where site.RegularPages "Section" "sources") }} HN discussions and 6,000+ practitioner comments. {{ len site.RegularPages }} pages across {{ len site.Taxonomies.tags }} topics. Last updated {{ (index (site.RegularPages.ByDate.Reverse) 0).Date.Format "January 2, 2006" }}.</p>
     </div>
   </div>
 </footer>

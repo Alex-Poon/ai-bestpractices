@@ -105,7 +105,7 @@
 
   
 
-  <span class="meta-reading-time">3 min read</span>
+  <span class="meta-reading-time">4 min read</span>
 
   
 
@@ -127,69 +127,61 @@
       </header>
 
       <div class="article-content">
-        <p>A running record of updates to this knowledge base, from initial launch to the latest source captures.</p>
+        <p>A running record of how this knowledge base evolves. Each entry captures what was added, what changed, and why it matters.</p>
 <hr>
 <h2 id="february-12-2026">February 12, 2026</h2>
-<p><strong>6 new sources captured, 8 content pages updated (494 → 516 pages)</strong></p>
-<p>New source captures from the past week&rsquo;s HN discussions:</p>
+<p><strong>Big batch: 6 new sources and a harness engineering revelation</strong></p>
+<p>This week&rsquo;s HN frontpage was packed with AI coding debate. We captured the highlights and wove them into the existing content.</p>
+<p>The standout find is Can Boluk&rsquo;s &ldquo;The Harness Problem&rdquo; — a hands-on demonstration that changing only the <em>edit format</em> (not the model) dramatically improved coding performance across 16 LLMs. Grok Code Fast 1 went from 6.7% to 68.3% with the same model. This is the strongest validation yet of the harness-engineering thesis that anchors our practices section, and it got a major integration into that page.</p>
+<p>Meanwhile, the community had a meltdown over Claude Code v2.1.20 reducing transparency (979 pts, 626 comments). We added that to the degradation debate and the Claude Code tool page. GLM-5 dropped as the first major Chinese model specifically targeting agentic coding — MIT licensed, trained on Huawei chips, 744B parameters. That went into models and the landscape timeline.</p>
+<p><strong>New sources:</strong></p>
 <ul>
-<li><strong><a href="./sources/2026-02-11-claude-code-dumbed-down.html">Claude Code is being dumbed down?</a></strong> (979 pts, 626 comments) — Community backlash over Claude Code v2.1.20 transparency reductions. Anthropic&rsquo;s bcherny responds. Extends the ongoing degradation debate.</li>
-<li><strong><a href="./sources/2026-02-11-glm5-agentic-engineering.html">GLM-5: Agentic Engineering</a></strong> (407 pts, 483 comments) — First major Chinese model targeting agentic coding. 744B MoE, MIT license, trained on Huawei chips. Introduces SLIME reinforcement learning framework.</li>
-<li><strong><a href="./sources/2026-02-07-coding-agents-replaced-frameworks.html">Coding agents have replaced every framework I used</a></strong> (372 pts, 594 comments) — Practitioner argument that agent-first workflows make traditional frameworks unnecessary. Huge debate in comments.</li>
-<li><strong><a href="./sources/2026-02-08-beyond-agentic-coding.html">Beyond agentic coding</a></strong> (266 pts, 90 comments) — Haskell perspective on limitations of current agentic patterns and what comes next. Raises mental model desynchronization problem.</li>
-<li><strong><a href="./sources/2026-02-12-harness-problem-hashline.html">The Harness Problem / hashline</a></strong> — Can Boluk demonstrates that changing only the edit format (not the model) dramatically improves coding performance across 16 LLMs. Grok Code Fast 1: 6.7% → 68.3%. Key validation of harness engineering thesis.</li>
-<li><strong><a href="./sources/2026-02-10-stripe-minions-agentic-coding.html">Stripe Minions</a></strong> — Stripe&rsquo;s autonomous coding agent system produces 1000+ PRs/week using a Goose fork with 400+ MCP tools and isolated devboxes.</li>
+<li><strong><a href="./sources/2026-02-11-claude-code-dumbed-down.html">Claude Code is being dumbed down?</a></strong> (979 pts, 626 comments) — Community backlash over Claude Code v2.1.20 transparency reductions. Anthropic&rsquo;s bcherny responds.</li>
+<li><strong><a href="./sources/2026-02-11-glm5-agentic-engineering.html">GLM-5: Agentic Engineering</a></strong> (407 pts, 483 comments) — First major Chinese model targeting agentic coding. MIT license, Huawei chips, SLIME RL framework.</li>
+<li><strong><a href="./sources/2026-02-07-coding-agents-replaced-frameworks.html">Coding agents have replaced every framework I used</a></strong> (372 pts, 594 comments) — Agent-first workflows making frameworks unnecessary. Massive debate.</li>
+<li><strong><a href="./sources/2026-02-08-beyond-agentic-coding.html">Beyond agentic coding</a></strong> (266 pts, 90 comments) — What comes after agentic coding? Mental model desynchronization problem.</li>
+<li><strong><a href="./sources/2026-02-12-harness-problem-hashline.html">The Harness Problem / hashline</a></strong> — Edit format benchmarks across 16 models. The harness matters more than the model.</li>
+<li><strong><a href="./sources/2026-02-10-stripe-minions-agentic-coding.html">Stripe Minions</a></strong> — 1000+ PRs/week from autonomous agents at Stripe. 400+ MCP tools, isolated devboxes.</li>
 </ul>
-<p>Content page updates:</p>
+<p><strong>Pages updated:</strong></p>
 <ul>
-<li><strong>practices/harness-engineering</strong> — Major expansion: new section on edit format as harness component (hashline data), enterprise-scale tool harnesses (Stripe)</li>
-<li><strong>practices/multi-agent</strong> — Enterprise autonomous agent pattern, mental model desynchronization</li>
-<li><strong>practices/task-scoping</strong> — How agents change task scope itself</li>
-<li><strong>debates/is-it-getting-worse</strong> — Claude Code v2.1.20 transparency controversy added</li>
+<li><strong>practices/harness-engineering</strong> — Major expansion with hashline data and enterprise harness patterns (Stripe)</li>
+<li><strong>practices/multi-agent</strong> — Enterprise autonomous agents, mental model desynchronization</li>
+<li><strong>practices/task-scoping</strong> — How agents reshape what counts as a reasonable task</li>
+<li><strong>debates/is-it-getting-worse</strong> — Claude Code v2.1.20 controversy</li>
 <li><strong>debates/engineering-vs-programming</strong> — Framework replacement thesis</li>
-<li><strong>tools/claude-code</strong> — Transparency controversy section</li>
+<li><strong>tools/claude-code</strong> — New transparency controversy section</li>
 <li><strong>tools/models</strong> — GLM-5 entry</li>
-<li><strong>landscape/model-releases-2026</strong> — GLM-5 timeline entry</li>
+<li><strong>landscape/model-releases-2026</strong> — GLM-5 on the timeline</li>
 </ul>
 <hr>
 <h2 id="february-7-2026">February 7, 2026</h2>
-<p><strong>Claude Code ecosystem deep dive (494 pages)</strong></p>
-<p>Deep dive into the Claude Code ecosystem: hooks system, memory and auto-memory, Ralph Wiggum plugin, custom agents via <code>.claude/agents/</code>, and plugin architecture. Updated tools/claude-code with comprehensive coverage of the developer experience layer built on top of the core agent loop.</p>
+<p><strong>Claude Code gets the deep-dive treatment</strong></p>
+<p>We went deep on the Claude Code ecosystem — not just the core agent loop, but everything built on top of it. The hooks system that lets you run shell commands on tool events. Auto-memory that persists context across sessions. Ralph Wiggum (yes, really) as a plugin example. Custom agents via <code>.claude/agents/</code>. The full plugin architecture.</p>
+<p>The tools/claude-code page went from a surface-level overview to the most comprehensive Claude Code reference we know of outside Anthropic&rsquo;s own docs.</p>
 <hr>
 <h2 id="february-6-2026">February 6, 2026</h2>
-<p><strong>Major restructure: tools deep dive + models rewrite (351 → 494 pages)</strong></p>
-<ul>
-<li>Restructured site from topic-driven to claim-driven architecture</li>
-<li>Added 13 individual tool pages (Claude Code, Cursor, Amp, Copilot, Cline, Codex, Windsurf, Kiro, Aider, Gemini CLI, MCP ecosystem, models, comparison)</li>
-<li>Rewrote models page: experience-first organization with o-series coverage</li>
-<li>Granular model deep dive with variant-level profiles and reasoning configurations</li>
-<li>Added temporal context to model comparisons (which Claude version each HN report tested against)</li>
-<li>Homepage redesign with inline browse-more cards</li>
-<li>Fixed horizontal scroll wrapper for comparison tables</li>
-</ul>
-<p>Research conducted with 13-agent team for parallel tool/model investigation.</p>
+<p><strong>The big restructure: 13 tool pages and a models overhaul</strong></p>
+<p>This was the day the site went from &ldquo;pretty good collection&rdquo; to &ldquo;comprehensive reference.&rdquo; We added 13 individual tool deep-dive pages covering every major AI coding tool: Claude Code, Cursor, Amp, Copilot, Cline, Codex, Windsurf, Kiro, Aider, Gemini CLI, MCP ecosystem, plus a models comparison and a head-to-head comparison matrix.</p>
+<p>The models page got completely rewritten with an experience-first organization, variant-level profiles, reasoning configurations, and temporal context showing which Claude version each HN report was testing against. Research was conducted with a 13-agent team running parallel investigations.</p>
+<p>Site went from 351 to 494 pages. Homepage got a redesign with inline browse-more cards.</p>
 <hr>
-<h2 id="february-6-2026-1">February 6, 2026</h2>
-<p><strong>Complete rebuild: new architecture, dark-first design (32 HN sources → 351 pages)</strong></p>
-<p>Rebuilt the entire site from scratch with a new content architecture:</p>
+<h2 id="february-6-2026-earlier">February 6, 2026 (earlier)</h2>
+<p><strong>Complete rebuild from scratch</strong></p>
+<p>The original structure wasn&rsquo;t working. We tore it down and rebuilt with a new content architecture designed around how practitioners actually think about AI coding:</p>
 <ul>
 <li>7 content sections: guide, practices, debates, tools, landscape, evidence, voices</li>
-<li>32 HN source captures forming the evidence base</li>
-<li>Dark-first design with section-colored accents (blue, green, amber, rose, teal, purple)</li>
-<li>Client-side search via FlexSearch-style search-index.json</li>
-<li>Custom shortcodes: callout, debate-sides, voice-card, provenance</li>
-<li>Section-specific layouts: debates (Side A/B), voices (cards), guide (progress bar)</li>
-<li>Hugo with uglyURLs, relativeURLs, publishDir=docs</li>
+<li>32 HN source captures as the evidence base</li>
+<li>Dark-first design with section-colored accents</li>
+<li>Client-side search (no external dependencies)</li>
+<li>Custom shortcodes for debates (Side A/B), voice cards, callouts, and provenance tracking</li>
+<li>Hugo with uglyURLs and relativeURLs for maximum portability</li>
 </ul>
 <hr>
 <h2 id="february-5-2026">February 5, 2026</h2>
-<p><strong>Initial launch</strong></p>
-<ul>
-<li>Initialized knowledge base repository</li>
-<li>First batch of source captures: AI adoption journey, Amp Code analysis</li>
-<li>Carlini parallel agents C compiler project (evidence piece)</li>
-<li>Migrated to Hugo static site structure</li>
-</ul>
+<p><strong>Day one</strong></p>
+<p>Initialized the knowledge base. First batch of source captures: the AI adoption journey article, Amp Code analysis, and Carlini&rsquo;s parallel-agents C compiler project. Migrated to Hugo static site structure.</p>
+<p>Everything starts somewhere.</p>
 
       </div>
 
@@ -210,7 +202,7 @@
     <li><a href="#february-12-2026">February 12, 2026</a></li>
     <li><a href="#february-7-2026">February 7, 2026</a></li>
     <li><a href="#february-6-2026">February 6, 2026</a></li>
-    <li><a href="#february-6-2026-1">February 6, 2026</a></li>
+    <li><a href="#february-6-2026-earlier">February 6, 2026 (earlier)</a></li>
     <li><a href="#february-5-2026">February 5, 2026</a></li>
   </ul>
 </nav>
@@ -243,11 +235,12 @@
           <li><a href="./evidence/index.html">Evidence</a></li>
           <li><a href="./voices/index.html">Voices</a></li>
           <li><a href="./sources/index.html">Sources</a></li>
+          <li><a href="./changelog.html">Changelog</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Built with Hugo. Synthesized from 38 HN discussions and 6,000+ practitioner comments. 85 pages across 205 topics.</p>
+      <p>Built with Hugo. Synthesized from 38 HN discussions and 6,000+ practitioner comments. 85 pages across 205 topics. Last updated February 12, 2026.</p>
     </div>
   </div>
 </footer>

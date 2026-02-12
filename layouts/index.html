@@ -43,6 +43,32 @@
     </div>
   </section>
 
+  {{/* What's New — from changelog frontmatter */}}
+  {{ $changelog := site.GetPage "/changelog" }}
+  {{ if and $changelog $changelog.Params.updates }}
+  <section class="home-section whats-new">
+    <div class="whats-new-header">
+      <h2 class="home-section-title">What's New</h2>
+      <a href="{{ $changelog.RelPermalink }}" class="whats-new-changelog-link">Full timeline &rarr;</a>
+    </div>
+    <div class="whats-new-list">
+      {{ range first 3 $changelog.Params.updates }}
+      <div class="whats-new-entry">
+        <div class="whats-new-entry-header">
+          <time class="whats-new-date">{{ (time .date).Format "Jan 2" }}</time>
+          <span class="whats-new-headline">{{ .headline }}</span>
+        </div>
+        <ul class="whats-new-details">
+          {{ range .details }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
   {{/* Practices */}}
   {{ $practices := (site.GetPage "/practices").RegularPages }}
   {{ if $practices }}
